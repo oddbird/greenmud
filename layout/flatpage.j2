@@ -1,0 +1,7 @@
+{% extends 'base.j2' %}
+
+{% block main %}
+  {% filter markdown|typogrify %}
+  {% block pagecontent %}{% endblock pagecontent %}
+  {% endfilter %}
+{% endblock main %}
