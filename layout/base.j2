@@ -6,7 +6,7 @@
   <meta charset="utf-8">
 
   <!-- Page Info -->
-  <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+  <title>{% block title %}{{ resource.meta.novel }}{% endblock %}</title>
   <meta name="description" content="{{ resource.meta.description }}">
 
   <!-- Site Info -->
@@ -59,37 +59,15 @@
 <body id="greengreenmud-com">
 {% block body %}
 
-  <a href="#" id="toggle">toggle controls</a>
+  <h1 role="banner"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
 
-  <div class="controls before">
-  {% block header -%}
-
-    <h1 role="banner"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
-
-    <nav class="crumb" role="navigation">
-      <h2 class="navhead">Breadcrumb Navigation</h2>
-      {% block crumb -%}{%- endblock crumb %}
-    </nav>
-
-  {%- endblock %}
-  </div>
-
-  <section id="main" role="main" class="chapter {{ resource.meta.chapterno }}">
+  <section id="main" role="main">
   {% block main %}{% endblock main %}
   </section>
 
-  <div class="controls after">
-    <footer role="contentinfo">
-      [cc] 2011 <a href="http://eric.andmeyer.com">Eric A Meyer</a>
-    </footer>
-    <nav class="page">
-      <h2 class="navhead">Page Navigation</h2>
-      <ul>
-        <li class="prev"><a href="#">Previous</a></li>
-        <li class="next"><a href="#">Next</a></li>
-      </ul>
-    </nav>
-  </div>
+  <footer role="contentinfo">
+    [cc] 2011 <a href="http://eric.andmeyer.com">Eric A Meyer</a>
+  </footer>
 
 {% endblock body%}
 
