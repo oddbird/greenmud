@@ -1,5 +1,16 @@
-{% macro render_page(res) %}
-<div id="{{ res.page_slug }}" class="page">
-  {{ res.content|markdown|typogrify }}
-</div>
+{% macro render_pages(pages) %}
+{% for page in pages %}
+  {% refer to site.content.resource_from_relative_path(page.url).url as res %}
+  <div id="{{ res.slug }}" class="page">
+    {% if res.chaptertitle -%}
+      <h2>{{ res.chaptertitle }}</h2>
+    {%- elif res.title or res.hidden -%}
+      <h3 {% if res.hidden %}class="hidden"{% endif %}>{{ res.title or res.hidden }}</h3>
+    {%- endif %}
+
+    {% if res.content %}
+      {{ res.content|markdown|typogrify }}
+    {% endif %}
+  </div>
+{% endfor %}
 {% endmacro %}

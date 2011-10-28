@@ -3,9 +3,12 @@ extends: novel/base_novel.j2
 default_block: main
 title: Dancing Without Architecture
 description: Dancing Without Architecture.
-prev_url: /frontmatter/
-next_url: /
+prev_url: /
+next_url: /dancing/in-which-jj/
+pages:
+    - url: dancing/_title.html
+    - url: dancing/_epigraph.html
 ---
 
-{% include "dancing/_title.html" %}
-{% include "dancing/_epigraph.html" %}
+{% from "novel/macros.j2" import render_pages with context %}
+{{ render_pages(resource.meta.pages) }}

@@ -10,8 +10,9 @@
 
   <h1 role="banner"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
 
+  {% if node.meta.book or node.meta.chapter -%}
   <nav class="breadcrumb" role="navigation">
-    <h2 class="navhead">Breadcrumb Navigation</h2>
+    <h2 class="hidden">Breadcrumb Navigation</h2>
     <ul class="crumb-list">
       {% if node.meta.book -%}
         <li class="crumb">
@@ -23,19 +24,26 @@
       {%- endif %}
     </ul>
   </nav>
+  {%- endif %}
 
 {%- endblock %}
 </div>
 
 <section id="main" role="main" class="chapter {{ resource.meta.chapter_slug }}">
-  {% filter markdown|typogrify %}{% block main %}{% endblock main %}{% endfilter %}
+  {% block main %}{% endblock main %}
 </section>
 
 <div class="controls after">
   <nav class="page">
-    <h2 class="navhead">Page Navigation</h2>
+    <h2 class="hidden">Page Navigation</h2>
     <ul>
-      <li class="prev"><a href="{{ resource.meta.prev_url or '#' }}">Previous</a></li>
+      <li class="prev">
+        {%- if resource.meta.prev_url -%}
+          <a href="{{ resource.meta.prev_url }}">Previous</a>
+        {%- else -%}
+          <span>No Previous</span>
+        {%- endif -%}
+      </li>
       <li class="next"><a href="{{ resource.meta.next_url or '#' }}">Next</a></li>
     </ul>
   </nav>
