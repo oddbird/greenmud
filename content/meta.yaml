@@ -1,1 +1,5 @@
+extends: novel/base_novel.j2
+default_block: main
+
+book_slug: greenmud
 chapter_slug: frontmatter

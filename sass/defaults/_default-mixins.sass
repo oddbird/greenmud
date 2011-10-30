@@ -1,0 +1,25 @@
+// Imports -------------------------------------------------------------------
+
+@import ../settings/settings
+@import ../helpers/helpers
+
+/* Links ---------------------------------------------------------------------
+
+$link   :   "&:link, &:visited"
+$focus  :   "&:focus, &:hover, &:active"
+
+$alink  :   "a:link, a:visited"
+$afocus  :   "a:focus, a:hover, a:active"
+
+=focus-default
+  outline: thin dotted $accent
+
+=no-style-link
+  &:link, &:visited, &:focus, &:hover, &:active
+    color: inherit
+
+/* Lists ---------------------------------------------------------------------
+
+=no-style-list
+  +reset-box-model
+  +no-bullets

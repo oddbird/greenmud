@@ -8,45 +8,37 @@
 <div class="controls before">
 {% block header -%}
 
-  <h1 role="banner"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
+  <header id="location">
+    <h1 role="banner"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
 
-  {% if node.meta.book or node.meta.chapter -%}
-  <nav class="breadcrumb" role="navigation">
-    <h2 class="hidden">Breadcrumb Navigation</h2>
-    <ul class="crumb-list">
-      {% if node.meta.book -%}
-        <li class="crumb">
-          <a href="/{{ node.meta.book_slug }}/">{{ node.meta.book }}</a>
-        </li>
-      {%- endif %}
-      {% if node.meta.chapter -%}
-        <li class="crumb"><a href="../{{ node.meta.chapter_slug }}/">{{ node.meta.chapter }}</a></li>
-      {%- endif %}
-    </ul>
-  </nav>
-  {%- endif %}
+    {% if node.meta.book or node.meta.chapter -%}
+    <nav class="breadcrumb" role="navigation">
+      <h2 class="hidden">Breadcrumb Navigation</h2>
+      <ul class="crumb-list">
+        {% if node.meta.book -%}
+          <li class="crumb">
+            <a href="/{{ node.meta.book_slug }}/">{{ node.meta.book }}</a>
+          </li>
+        {%- endif %}
+        {% if node.meta.chapter -%}
+          <li class="crumb"><a href="../{{ node.meta.chapter_slug }}/">{{ node.meta.chapter }}</a></li>
+        {%- endif %}
+      </ul>
+    </nav>
+    {%- endif %}
+  </header>
+
+  {% include "novel/_page_nav.j2" %}
 
 {%- endblock %}
 </div>
 
-<section id="main" role="main" class="chapter {{ resource.meta.chapter_slug }}">
+<section id="main" role="main" class="chapter {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }}">
   {% block main %}{% endblock main %}
 </section>
 
 <div class="controls after">
-  <nav class="page">
-    <h2 class="hidden">Page Navigation</h2>
-    <ul>
-      <li class="prev">
-        {%- if resource.meta.prev_url -%}
-          <a href="{{ resource.meta.prev_url }}">Previous</a>
-        {%- else -%}
-          <span>No Previous</span>
-        {%- endif -%}
-      </li>
-      <li class="next"><a href="{{ resource.meta.next_url or '#' }}">Next</a></li>
-    </ul>
-  </nav>
+  {% include "novel/_page_nav.j2" %}
   <footer role="contentinfo">
     [cc] 2011 <a href="http://eric.andmeyer.com">Eric A Meyer</a>
   </footer>

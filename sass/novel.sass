@@ -1,0 +1,105 @@
+// Imports -------------------------------------------------------------------
+
+@import defaults/defaults
+
+// UI ------------------------------------------------------------------------
+
+#toggle
+  #{$link}
+    +opacity(.125)
+    +transition(opacity 300ms)
+    +replace-text('ui/bookmark.png')
+    position: fixed
+    top: 0
+    right: 0
+    width: rhythm(1.5)
+    height: rhythm(1.5)
+    background-color: rgba($base,.9)
+    z-index: 900
+  &.active
+    +opacity(1)
+
+.controls
+  +adjust-font-size-to(14px)
+  +stretch-x
+  +opacity(0)
+  +transition(opacity 300ms)
+  +clearfix
+  position: fixed
+  padding: rhythm(.25,14px)
+  background-color: rgba($base,.9)
+  color: $lightest
+  z-index: -1
+  &.before
+    top: 0
+    padding-right: rhythm(1.5,14px)
+  &.after
+    bottom: 0
+  &.active
+    +opacity(1)
+    z-index: 800
+
+  a
+    #{$link}
+      color: $lighter
+    #{$focus}
+      color: $blue-lighter
+
+// navigation ----------------------------------------------------------------
+
+.pagenav
+  +float(right)
+  ul
+    +no-style-list
+  li
+    +float(left)
+  a
+    #{$link}
+      +opacity(.75)
+      +transition(opacity 300ms)
+      display: block
+      width: rhythm(1,14px)
+      height: rhythm(1,14px)
+      &[href="#"]
+        +opacity(.25)
+    #{$focus}
+      +opacity(1)
+
+.prev
+  span, a
+    +replace-text('ui/arrow_left.png')
+
+.next
+  a
+    #{$link}
+      +replace-text('ui/arrow_right.png')
+
+// breadcrumb ----------------------------------------------------------------
+
+#location
+  +stretch(rhythm(.25,14px),rhythm(4,14px),rhythm(.25,14px),rhythm(.25,14px))
+
+h1, .breadcrumb
+  +inline-block
+  margin: 0
+  padding: 0
+
+.breadcrumb
+  +inline-block-list
+  .crumb
+    &::before
+      content: ' » '
+
+// pages ---------------------------------------------------------------------
+
+=pageindex()
+  @for $i from 1 through 100
+    &:nth-child(#{101 - $i})
+      z-index: $i
+
+.page
+  //+stretch
+  +pageindex
+  padding: rhythm(2) 0
+  //background: white
+  overflow: scroll

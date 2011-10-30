@@ -1,6 +1,27 @@
+function toggleControls(toggle,controls) {
+  var doToggle = function() {
+    $(controls).toggleClass('active');
+    $(toggle).toggleClass('active');
+    return false;
+  }
+  //doToggle();
+  $(toggle).click(doToggle);
+}
+
+function bodyHeight(element) {
+  var updateHeight = function (target) {
+    $(target).css('height', $(window).height());
+  };
+  updateHeight(element);
+  $(window).resize(function () {
+    $.doTimeout(250, function () {
+      updateHeight(element);
+    });
+  });
+}
+
 $(function() {
-    $('#hcard-client-name .email').defuscate();
-    $('input[placeholder], textarea[placeholder]').placeholder();
-    $('.details:not(html)').html5accordion('.summary');
-    $('#messages').messages({handleAjax: true});
+  $('input[placeholder], textarea[placeholder]').placeholder();
+  toggleControls('#toggle','.controls');
+  bodyHeight('body');
 });

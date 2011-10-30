@@ -40,13 +40,16 @@
   <link rel="apple-touch-icon-precomposed" href="{{ media_url('images/favicons/apple-touch-icon-precomposed.png') }}">
 
   <!-- Styles -->
-
-  {% block styles %}
-  {# <link rel="stylesheet" href="{{ media_url('css/binding.css') }}" /> #}
+  {% block styles -%}
+  <link rel="stylesheet" href="{{ media_url('css/novel.css') }}" />
+  {% if resource.meta.extra_styles -%}
+  {%- set style_url = 'css/' + resource.meta.extra_styles -%}
+  <link rel="stylesheet" href="{{ media_url(style_url) }}" />
+  {% endif %}
   {% endblock styles %}
 
   <!-- Modernizr -->
-  {% block headjs %}
+  {% block headjs -%}
   <script src="{{ media_url('js/modernizr.js') }}"></script>
   <script src="{{ media_url('js/modernizr.selectors.js') }}"></script>
   <script src="{{ media_url('js/elem-details.js') }}"></script>
