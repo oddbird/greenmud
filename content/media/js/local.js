@@ -28,6 +28,42 @@ var GM = (function (GM, $) {
         });
     };
 
+    GM.pageTurning = function () {
+        var prev = $('.controls .pagenav .prev a'),
+            next = $('.controls .pagenav .next a'),
+            pages = $('#main .page'),
+            turnToPage = function (element) {
+                pages.removeClass('active-page prev-page next-page');
+                element.addClass('active-page');
+                element.next('.page').addClass('next-page');
+                element.prev('.page').addClass('prev-page');
+
+                prev.add(next).removeClass('active');
+                if (pages.filter('.prev-page').length) {
+                    prev.addClass('active');
+                }
+                if (pages.filter('.next-page').length) {
+                    next.addClass('active');
+                }
+            };
+
+        turnToPage(pages.first());
+
+        prev.click(function () {
+            if (pages.filter('.prev-page').length) {
+                turnToPage(pages.filter('.prev-page'));
+                return false;
+            }
+        });
+
+        next.click(function () {
+            if (pages.filter('.next-page').length) {
+                turnToPage(pages.filter('.next-page'));
+                return false;
+            }
+        });
+    };
+
     return GM;
 
 }(GM || {}, jQuery));
