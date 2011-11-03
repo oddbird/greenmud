@@ -1,27 +1,33 @@
-function toggleControls(toggle,controls) {
-  var doToggle = function() {
-    $(controls).toggleClass('active');
-    $(toggle).toggleClass('active');
-    return false;
-  }
-  //doToggle();
-  $(toggle).click(doToggle);
-}
+/*jslint    browser:    true,
+            indent:     4 */
+/*global    jQuery */
 
-function bodyHeight(element) {
-  var updateHeight = function (target) {
-    $(target).css('height', $(window).height());
-  };
-  updateHeight(element);
-  $(window).resize(function () {
-    $.doTimeout(250, function () {
-      updateHeight(element);
-    });
-  });
-}
+var GM = (function (GM, $) {
 
-$(function() {
-  $('input[placeholder], textarea[placeholder]').placeholder();
-  toggleControls('#toggle','.controls');
-  bodyHeight('body');
-});
+    'use strict';
+
+    GM.toggleControls = function (toggle, controls) {
+        var doToggle = function () {
+            $(controls).toggleClass('active');
+            $(toggle).toggleClass('active');
+            return false;
+        };
+
+        $(toggle).click(doToggle);
+    };
+
+    GM.bodyHeight = function (element) {
+        var updateHeight = function (target) {
+            $(target).css('height', $(window).height());
+        };
+        updateHeight(element);
+        $(window).resize(function () {
+            $.doTimeout(250, function () {
+                updateHeight(element);
+            });
+        });
+    };
+
+    return GM;
+
+}(GM || {}, jQuery));
