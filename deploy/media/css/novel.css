@@ -881,7 +881,7 @@ h1, .breadcrumb { *display: inline; }
 .breadcrumb li { *display: inline; }
 .breadcrumb .crumb::before { content: " » "; }
 
-.page { position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: none; padding: 3em 0; background: white; overflow-y: scroll; }
+.page { position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: none; padding: 3em 0; background: white; }
 .page:nth-child(100) { z-index: 1; }
 .page:nth-child(99) { z-index: 2; }
 .page:nth-child(98) { z-index: 3; }
@@ -986,3 +986,5 @@ h1, .breadcrumb { *display: inline; }
 .prev-page, .active-page, .next-page { -moz-transition: all 800ms; -webkit-transition: all 800ms; -o-transition: all 800ms; transition: all 800ms; display: block; }
 
 .prev-page { -moz-transform: translate(-100%, 0); -webkit-transform: translate(-100%, 0); -o-transform: translate(-100%, 0); -ms-transform: translate(-100%, 0); transform: translate(-100%, 0); }
+
+.active-page { overflow-y: auto; }

@@ -3,9 +3,9 @@
 <title>{% block title %}{{ resource.meta.title }} | {{ super() }}{% endblock %}</title>
 
 {% block body %}
-<a href="#" id="toggle">toggle controls</a>
+<a href="#" id="toggle" class="active">toggle controls</a>
 
-<div class="controls before">
+<div class="controls before active">
 {% block header -%}
 
   <header id="location">
@@ -37,7 +37,7 @@
   {% block main %}{% endblock main %}
 </section>
 
-<div class="controls after">
+<div class="controls after active">
   {% include "novel/_page_nav.j2" %}
   <footer role="contentinfo">
     [cc] 2011 <a href="http://eric.andmeyer.com">Eric A Meyer</a>
