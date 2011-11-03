@@ -108,6 +108,7 @@ h1, .breadcrumb
   display: none
   padding: rhythm(2) 0
   background: white
+  overflow-y: auto
 
 .prev-page, .active-page, .next-page
   +transition(all 800ms)
@@ -115,6 +116,3 @@ h1, .breadcrumb
 
 .prev-page
   +translate(- 100%,0)
-
-.active-page
-  overflow-y: auto
