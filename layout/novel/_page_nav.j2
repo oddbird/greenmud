@@ -2,8 +2,10 @@
   <h2 class="hidden">Page Navigation</h2>
   <ul>
     <li class="prev">
-      <a href="{{ resource.meta.prev_url or '#' }}">Previous</a>
+      <a {% if resource.meta.prev_url %}href="{{ resource.meta.prev_url }}"{% endif %}>Previous</a>
     </li>
-    <li class="next"><a href="{{ resource.meta.next_url or '#' }}">Next</a></li>
+    <li class="next">
+      <a {% if resource.meta.next_url %}href="{{ resource.meta.prev_url }}"{% endif %}>Next</a>
+    </li>
   </ul>
 </nav>

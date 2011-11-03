@@ -54,16 +54,21 @@
   li
     +float(left)
   a
+    +transition(opacity 300ms)
+    +opacity(.25)
+    display: block
+    width: rhythm(1,14px)
+    height: rhythm(1,14px)
     #{$link}
       +opacity(.75)
-      +transition(opacity 300ms)
-      display: block
-      width: rhythm(1,14px)
-      height: rhythm(1,14px)
-      &[href="#"]
-        +opacity(.25)
-    #{$focus}
-      +opacity(1)
+    &[href]
+      #{$focus}
+        +opacity(1)
+    &.active
+      +opacity(.75)
+      #{$focus}
+        +opacity(1)
+        cursor: pointer
 
 .prev
   span, a
@@ -98,8 +103,17 @@ h1, .breadcrumb
       z-index: $i
 
 .page
-  //+stretch
+  +stretch
   +pageindex
+  display: none
   padding: rhythm(2) 0
-  //background: white
-  overflow: scroll
+  background: white
+  overflow-y: scroll
+
+.prev-page, .active-page, .next-page
+  +transition(all 800ms)
+  display: block
+
+.prev-page
+  +translate(- 100%,0)
+

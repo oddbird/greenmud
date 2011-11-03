@@ -861,9 +861,11 @@ tfoot { font-size: 0.875em; line-height: 1.714em; }
 .pagenav ul { margin: 0; padding: 0; border: 0; list-style: none; }
 .pagenav ul li { list-style-image: none; list-style-type: none; margin-left: 0px; }
 .pagenav li { display: inline; float: left; }
-.pagenav a:link, .pagenav a:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; -moz-transition: opacity 300ms; -webkit-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; display: block; width: 1.714em; height: 1.714em; }
-.pagenav a:link[href="#"], .pagenav a:visited[href="#"] { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; }
-.pagenav a:focus, .pagenav a:hover, .pagenav a:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+.pagenav a { -moz-transition: opacity 300ms; -webkit-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; display: block; width: 1.714em; height: 1.714em; }
+.pagenav a:link, .pagenav a:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; }
+.pagenav a[href]:focus, .pagenav a[href]:hover, .pagenav a[href]:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+.pagenav a.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; }
+.pagenav a.active:focus, .pagenav a.active:hover, .pagenav a.active:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; cursor: pointer; }
 
 .prev span, .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
 
@@ -879,7 +881,7 @@ h1, .breadcrumb { *display: inline; }
 .breadcrumb li { *display: inline; }
 .breadcrumb .crumb::before { content: " » "; }
 
-.page { padding: 3em 0; overflow: scroll; }
+.page { position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: none; padding: 3em 0; background: white; overflow-y: scroll; }
 .page:nth-child(100) { z-index: 1; }
 .page:nth-child(99) { z-index: 2; }
 .page:nth-child(98) { z-index: 3; }
@@ -980,3 +982,7 @@ h1, .breadcrumb { *display: inline; }
 .page:nth-child(3) { z-index: 98; }
 .page:nth-child(2) { z-index: 99; }
 .page:nth-child(1) { z-index: 100; }
+
+.prev-page, .active-page, .next-page { -moz-transition: all 800ms; -webkit-transition: all 800ms; -o-transition: all 800ms; transition: all 800ms; display: block; }
+
+.prev-page { -moz-transform: translate(-100%, 0); -webkit-transform: translate(-100%, 0); -o-transform: translate(-100%, 0); -ms-transform: translate(-100%, 0); transform: translate(-100%, 0); }
