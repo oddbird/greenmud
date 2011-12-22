@@ -4,6 +4,8 @@
 
 // UI ------------------------------------------------------------------------
 
+$uifontsize : $xxsmallpx
+
 #toggle
   #{$link}
     +opacity(.125)
@@ -12,27 +14,27 @@
     position: fixed
     top: 0
     right: 0
-    width: rhythm(1.5)
-    height: rhythm(1.5)
+    width: rhythm(1)
+    height: rhythm(1)
     background-color: rgba($base,.9)
     z-index: 900
   &.active
     +opacity(1)
 
 .controls
-  +adjust-font-size-to(14px)
+  +adjust-font-size-to($uifontsize)
   +stretch-x
   +opacity(0)
   +transition(opacity 300ms)
   +clearfix
   position: fixed
-  padding: rhythm(.25,14px)
+  padding: 0 rhythm(.25,$uifontsize)
   background-color: rgba($base,.9)
   color: $lightest
   z-index: -1
   &.before
     top: 0
-    padding-right: rhythm(1.5,14px)
+    padding-right: rhythm(1,$uifontsize)
   &.after
     bottom: 0
   &.active
@@ -57,8 +59,8 @@
     +transition(opacity 300ms)
     +opacity(.25)
     display: block
-    width: rhythm(1,14px)
-    height: rhythm(1,14px)
+    width: rhythm(1,$uifontsize)
+    height: rhythm(1,$uifontsize)
     #{$link}
       +opacity(.75)
     &[href]
@@ -82,7 +84,7 @@
 // breadcrumb ----------------------------------------------------------------
 
 #location
-  +stretch(rhythm(.25,14px),rhythm(4,14px),rhythm(.25,14px),rhythm(.25,14px))
+  +stretch(0,rhythm(3,$uifontsize),0,rhythm(.25,$uifontsize))
 
 h1, .breadcrumb
   +inline-block

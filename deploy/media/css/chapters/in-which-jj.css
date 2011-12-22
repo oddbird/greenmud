@@ -1,55 +1,11 @@
-/* colors -------------------------------------------------------------------- */
-/* */
-/* base              : black */
-/* blue              : #4040bf */
-/* red               : #bf4040 */
-/* green             : #40bf40 */
-/* yellow            : #dfaf20 */
-/* */
-/* dark              : #595959 */
-/* darker            : #404040 */
-/* darkest           : black */
-/* light             : #a6a6a6 */
-/* lighter           : #cccccc */
-/* lightest          : #f2f2f2 */
-/* */
-/* blue-dark         : #333399 */
-/* blue-darker       : #262673 */
-/* blue-darkest      : #19194d */
-/* blue-light        : #7979d2 */
-/* blue-lighter      : #b3b3e6 */
-/* blue-lightest     : #d9d9f2 */
-/* */
-/* red-dark          : #993333 */
-/* red-darker        : #732626 */
-/* red-darkest       : #4d1919 */
-/* red-light         : #d27979 */
-/* red-lighter       : #e6b3b3 */
-/* red-lightest      : #f2d9d9 */
-/* */
-/* green-dark        : #339933 */
-/* green-darker      : #267326 */
-/* green-darkest     : #194d19 */
-/* green-light       : #79d279 */
-/* green-lighter     : #b3e6b3 */
-/* green-lightest    : #d9f2d9 */
-/* */
-/* yellow-dark       : #9c7b16 */
-/* yellow-darker     : #59460d */
-/* yellow-darkest    : #2d2306 */
-/* yellow-light      : #e9c763 */
-/* yellow-lighter    : #f2dfa6 */
-/* yellow-lightest   : #f9efd2 */
-@font-face { font-family: "GreenMudRegular"; src: url('../../fonts/greenmud-webfont.eot'); src: url('../../fonts/greenmud-webfont.eot?iefix') format('eot'), url('../../fonts/greenmud-webfont.woff') format('woff'), url('../../fonts/greenmud-webfont.ttf') format('truetype'), url('../../fonts/greenmud-webfont.svg#GreenMudRegular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/GreenMudJJ-Regular.otf') format('opentype'); font-weight: normal; font-style: normal; }
 
 /* Typography ---------------------------------------------------------------- */
-.serif, .jj { font-family: serif; }
+.serif, .jj { font-family: "GreenMudJJRegular", serif; }
 
 .sans, .susy { font-family: sans-serif; }
 
 .mono, .narrator { font-family: monospace, sans-serif; }
-
-.caps, .allcaps, .smallcaps { letter-spacing: 0.1em; }
 
 .allcaps { text-transform: uppercase; }
 
@@ -740,5 +696,5 @@
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
-.pagewrap { *zoom: 1; margin: auto; width: 73em; max-width: 100%; }
+.pagewrap { *zoom: 1; margin: auto; width: 36.5em; max-width: 100%; }
 .pagewrap:after { content: ""; display: table; clear: both; }
