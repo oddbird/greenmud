@@ -12,7 +12,23 @@ blog/sad-post.html: [blog.j2, base.j2, analytics.j2]
 dancing/_epigraph.html: [novel/base_novel.j2, base.j2, novel/_page_nav.j2]
 dancing/_title.html: [novel/base_novel.j2, base.j2, novel/_page_nav.j2]
 dancing/in-which-jj/_title.html: [novel/base_novel.j2, base.j2, novel/_page_nav.j2]
-dancing/in-which-jj/index.html: [novel/macros.j2, base.j2, novel/base_novel.j2, novel/_page_nav.j2]
+dancing/in-which-jj/index.html: [dancing/in-which-jj/pages/_his-heart-was-gold.html,
+  dancing/in-which-jj/pages/_hum-hummed-the-clouds.html, dancing/in-which-jj/_title.html,
+  dancing/in-which-jj/pages/_it-came-hard-that-thursday-rain.html, dancing/in-which-jj/pages/_shadows.html,
+  novel/base_novel.j2, dancing/in-which-jj/pages/_the-family-came-around-that-christmas.html,
+  dancing/in-which-jj/pages/_scribble.html, dancing/in-which-jj/pages/_but-the-rain-kept-falling.html,
+  dancing/in-which-jj/pages/_the-park-bench-sings.html, dancing/in-which-jj/pages/_once-upon-a-sunday.html,
+  novel/macros.j2, dancing/in-which-jj/pages/_his-shirt-is-wet.html, dancing/in-which-jj/pages/_there-were-cars-on-the-highway.html,
+  dancing/in-which-jj/pages/_jj-thought-maybe-he-ought.html, dancing/in-which-jj/pages/_a-winter-wonderland-dinner.html,
+  base.j2, dancing/in-which-jj/pages/_the-snow-below.html, dancing/in-which-jj/pages/_jj-slept-the-whole-night-through.html,
+  dancing/in-which-jj/pages/_it-doesnt-rain-every-day.html, dancing/in-which-jj/pages/_at-the-bookstore-on-wednesday.html,
+  novel/_page_nav.j2, dancing/in-which-jj/pages/_he-didnt-buy-anything.html, dancing/in-which-jj/pages/_it-was-friday-already.html,
+  dancing/in-which-jj/pages/_johnny-john-went-sitting.html, dancing/in-which-jj/pages/_monday-clear-skies.html,
+  dancing/in-which-jj/pages/_jj-watched-some-tv.html, dancing/in-which-jj/pages/_jjs-aunt-was-on-the-phone.html,
+  dancing/in-which-jj/pages/_happy-birthday.html, dancing/in-which-jj/pages/_the-birds-outside.html,
+  dancing/in-which-jj/pages/_the-ice-was-thick.html, dancing/in-which-jj/pages/_what-a-day.html,
+  dancing/in-which-jj/pages/_what-a-bore.html, dancing/in-which-jj/pages/_like-the-road-to-somewheresville.html,
+  dancing/in-which-jj/pages/_shadow-shadow-park-and-shadow.html, dancing/in-which-jj/pages/_merry-go-round-and-round.html]
 dancing/in-which-jj/pages/_a-winter-wonderland-dinner.html: [novel/base_novel.j2,
   base.j2, novel/_page_nav.j2]
 dancing/in-which-jj/pages/_at-the-bookstore-on-wednesday.html: [novel/base_novel.j2,
