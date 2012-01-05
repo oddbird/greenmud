@@ -17,6 +17,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/GreenMudJJ-Regular.otf') format('opentype'); font-weight: normal; font-style: normal; }
 
+@font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/GreenMudJJ-Italic.otf') format('opentype'); font-weight: normal; font-style: italic; }
+
 /* Typography ---------------------------------------------------------------- */
 .serif, .jj { font-family: "GreenMudJJRegular", serif; }
 
