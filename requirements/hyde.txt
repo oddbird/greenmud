@@ -1,0 +1,9 @@
+Jinja2==2.6
+Markdown==2.1.0
+PyYAML==3.10
+Pygments==1.4
+argparse==1.2.1
+commando==0.1.2a
+hyde==0.8.4
+smartypants==1.6.0.3
+typogrify-hyde==1.0.1a
