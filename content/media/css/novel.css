@@ -20,11 +20,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/GreenMudJJ-Italic.otf') format('opentype'); font-weight: normal; font-style: italic; }
 
 /* Typography ---------------------------------------------------------------- */
-.serif, .jj { font-family: "GreenMudJJRegular", serif; }
+.serif, .jj, .susy, .narrator { font-family: "GreenMudJJRegular", serif; }
 
-.sans, .susy { font-family: sans-serif; }
+.sans { font-family: sans-serif; }
 
-.mono, pre, code, tt, .narrator, body { font-family: monospace, sans-serif; }
+.mono, body, pre, code, tt { font-family: monospace, sans-serif; }
 
 .allcaps, caption { text-transform: uppercase; }
 
@@ -716,13 +716,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
 /* Root ---------------------------------------------------------------------- */
-body { font-size: 200%; line-height: 1.25em; }
+body { font-size: 175%; line-height: 1.25em; }
 
-html > body { font-size: 32px; }
+html > body { font-size: 28px; }
 
 html { font-size-adjust: 0.4; font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 40%; -ms-text-size-adjust: 40%; }
 
-body { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(204, 204, 204, 0.25)), color-stop(5%, rgba(204, 204, 204, 0))); background-image: -webkit-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -ms-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); -moz-background-size: 100% 40px; -webkit-background-size: 100% 40px; -o-background-size: 100% 40px; background-size: 100% 40px; background-position: left top; position: relative; color: black; }
+body { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(204, 204, 204, 0.25)), color-stop(5%, rgba(204, 204, 204, 0))); background-image: -webkit-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -ms-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); -moz-background-size: 100% 35px; -webkit-background-size: 100% 35px; -o-background-size: 100% 35px; background-size: 100% 35px; background-position: left top; position: relative; color: black; }
 
 /* Selected Text ------------------------------------------------------------- */
 ::-webkit-selection { color: black; background: #7979d2; text-shadow: none; }
@@ -755,7 +755,7 @@ del { text-decoration: line-through; }
 
 mark { background: #ffff99; background-color: rgba(255, 255, 0, 0.5); text-shadow: none; }
 
-small { font-size: 0.375em; line-height: 3.333em; }
+small { font-size: 0.429em; line-height: 2.917em; }
 
 q { font-style: italic; }
 q em { font-style: normal; }
@@ -801,17 +801,18 @@ th, thead th { font-weight: bold; }
 
 th, td, caption { padding: 0.625em; text-align: left; font-weight: normal; }
 
-table, th { border-bottom-style: solid; border-bottom-width: 0.031em; padding-bottom: 0.594em; }
+table, th { border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 0.589em; }
 
-tfoot { font-size: 0.438em; line-height: 2.857em; }
+tfoot { font-size: 0.5em; line-height: 2.5em; }
 
 #toggle:link, #toggle:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=13); opacity: 0.125; -moz-transition: opacity 300ms; -webkit-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; position: fixed; top: 0; right: 0; width: 1.25em; height: 1.25em; background-color: rgba(0, 0, 0, 0.9); z-index: 900; }
 #toggle.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 
-.controls { font-size: 0.512em; line-height: 2.441em; position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 300ms; -webkit-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; overflow: hidden; *zoom: 1; position: fixed; padding: 0 0.61em; background-color: rgba(0, 0, 0, 0.9); color: #f2f2f2; z-index: -1; }
+.controls { font-size: 0.512em; line-height: 2.441em; position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 400ms; -webkit-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; padding: 0 0.61em; background-color: rgba(0, 0, 0, 0.9); color: #f2f2f2; z-index: 800; }
+.controls:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; }
 .controls.before { top: 0; padding-right: 2.441em; }
 .controls.after { bottom: 0; }
-.controls.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; z-index: 800; }
+.controls.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 .controls a:link, .controls a:visited { color: #cccccc; }
 .controls a:focus, .controls a:hover, .controls a:active { color: #b3b3e6; }
 
@@ -943,4 +944,4 @@ h1, .breadcrumb { *display: inline; }
 
 .prev-page, .active-page, .next-page { -moz-transition: all 800ms; -webkit-transition: all 800ms; -o-transition: all 800ms; transition: all 800ms; display: block; }
 
-.prev-page { -moz-transform: translate(-100%, 0); -webkit-transform: translate(-100%, 0); -o-transform: translate(-100%, 0); -ms-transform: translate(-100%, 0); transform: translate(-100%, 0); }
+.prev-page { -moz-transform: translate(-100%, 0); -webkit-transform: translate(-100%, 0); -o-transform: translate(-100%, 0); -ms-transform: translate(-100%, 0); transform: translate(-100%, 0); overflow: hidden; }

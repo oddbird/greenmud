@@ -3,11 +3,11 @@
 @font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/GreenMudJJ-Italic.otf') format('opentype'); font-weight: normal; font-style: italic; }
 
 /* Typography ---------------------------------------------------------------- */
-.serif, .jj { font-family: "GreenMudJJRegular", serif; }
+.serif, .jj, .susy, .narrator { font-family: "GreenMudJJRegular", serif; }
 
-.sans, .susy { font-family: sans-serif; }
+.sans { font-family: sans-serif; }
 
-.mono, .narrator { font-family: monospace, sans-serif; }
+.mono { font-family: monospace, sans-serif; }
 
 .allcaps { text-transform: uppercase; }
 

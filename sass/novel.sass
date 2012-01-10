@@ -25,13 +25,15 @@ $uifontsize : $xxsmallpx
   +adjust-font-size-to($uifontsize)
   +stretch-x
   +opacity(0)
-  +transition(opacity 300ms)
+  +transition(opacity 400ms)
   +clearfix
   position: fixed
   padding: 0 rhythm(.25,$uifontsize)
   background-color: rgba($base,.9)
   color: $lightest
-  z-index: -1
+  z-index: 800
+  &:hover
+    +opacity(.25)
   &.before
     top: 0
     padding-right: rhythm(1,$uifontsize)
@@ -39,7 +41,6 @@ $uifontsize : $xxsmallpx
     bottom: 0
   &.active
     +opacity(1)
-    z-index: 800
 
   a
     #{$link}
@@ -118,3 +119,4 @@ h1, .breadcrumb
 
 .prev-page
   +translate(- 100%,0)
+  overflow: hidden
