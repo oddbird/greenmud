@@ -782,8 +782,6 @@ img, object, embed { vertical-align: top; max-width: 100%; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
 /* Lists --------------------------------------------------------------------- */
-ol, ul, dd { margin-left: 1.25em; }
-
 ol { list-style-type: decimal; }
 
 ul { list-style-type: disc; }
