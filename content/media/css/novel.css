@@ -720,7 +720,7 @@ body { font-size: 175%; line-height: 1.25em; }
 
 html > body { font-size: 28px; }
 
-html { font-size-adjust: 0.4; font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 40%; -ms-text-size-adjust: 40%; }
+html { font-size-adjust: 0.4; font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
 body { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(204, 204, 204, 0.25)), color-stop(5%, rgba(204, 204, 204, 0))); background-image: -webkit-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: -ms-linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); background-image: linear-gradient(bottom, rgba(204, 204, 204, 0.25) 5%, rgba(204, 204, 204, 0) 5%); -moz-background-size: 100% 35px; -webkit-background-size: 100% 35px; -o-background-size: 100% 35px; background-size: 100% 35px; background-position: left top; position: relative; color: black; }
 
