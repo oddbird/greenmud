@@ -89,6 +89,11 @@ h1, .breadcrumb
     &::before
       content: ' » '
 
+// main ----------------------------------------------------------------------
+
+#main
+  +animate(fadeIn)
+
 // pages ---------------------------------------------------------------------
 
 =pageindex()
@@ -100,9 +105,10 @@ h1, .breadcrumb
   +stretch
   +pageindex
   +box-shadow($base 0 0 rhythm())
+  +baseline-grid-background
   display: none
   padding: rhythm(2) 0
-  background: white
+  background-color: white
   overflow-x: hidden
   overflow-y: auto
 
