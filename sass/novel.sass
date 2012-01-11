@@ -99,9 +99,11 @@ h1, .breadcrumb
 .page
   +stretch
   +pageindex
+  +box-shadow($base 0 0 rhythm())
   display: none
   padding: rhythm(2) 0
   background: white
+  overflow-x: hidden
   overflow-y: auto
 
 .prev-page, .active-page, .next-page
@@ -110,4 +112,5 @@ h1, .breadcrumb
 
 .prev-page
   +translate(- 100%,0)
+  margin-left: rhythm(-1)
   overflow: hidden

@@ -1,24 +1,42 @@
 /* Layout --------------------------------------------------------------------
 
-.full
-  display: block
-  float: none
-  width: auto
-
-.half
-  max-width: 50%
-
-.left
-  +float(left)
-  margin:
-    right: 1em
-    bottom: 0.5em
-
-.right
-  +float(right)
-  margin:
-    left: 1em
-    bottom: 0.5em
-
 .hidden
   +gone
+
+/* titlepages ----------------------------------------------------------------
+
+=title($c:$blue-lighter)
+  $c  : rgba($c,$xxxsmall)
+
+  position: relative
+
+  &:before, &:after
+    +stretch-y
+    content: " "
+    left: -300%
+    right: -300%
+    background: $c
+    z-index: -1
+  &:before
+    +rotate(.5deg)
+  &:after
+    +rotate(-.5deg)
+
+.title
+  +full
+  +adjust-font-size-to($largepx)
+  +rhythm(3,2,2,1,$largepx)
+  +title
+  +text-shadow(rgba($white,$xsmall) 0 1px 0)
+  text-align: center
+  b
+    @extend .allcaps
+    &::after
+      content: ": "
+
+.epigraph
+  p
+    +adjust-font-size-to($medpx,1.5)
+    &:last-child
+      font: inherit
+      font-style: normal

@@ -14,4 +14,13 @@ $side-gutter-width  : $gutter-width
 
 // title page ----------------------------------------------------------------
 
-//#titlepage
+#titlepage
+  h2
+    @extend .title
+
+// epigraph ------------------------------------------------------------------
+
+#epigraph
+  @extend .epigraph
+  .content
+    +prefix(3)
