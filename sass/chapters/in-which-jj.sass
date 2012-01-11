@@ -28,6 +28,22 @@ $rain: 'ch01/once-upon-sunday/rain.png'
   100%
     background-position: (- image-width($rain)) 0, (- image-width($rain)*1.5) image-height($rain)
 
++keyframes(pitpotIn)
+  0%
+    +transform(translateY(100px) rotate(0deg))
+    opacity: 0
+  100%
+    +transform(translateY(0) rotate(3deg))
+    opacity: 1
+
++keyframes(pitpotOut)
+  0%
+    +transform(translateY(0) rotate(3deg))
+    opacity: 1
+  100%
+    +transform(translateY(100px) rotate(0deg))
+    opacity: 0
+
 #once-upon-sunday
   +animate(rain,45s,$function:linear,$mode:infinite)
   background: image-url($rain) top left, desaturate($yellow-dark,50) image-url($rain) center
@@ -40,15 +56,15 @@ $rain: 'ch01/once-upon-sunday/rain.png'
     +padding-leader(2)
     +padding-trailer(2)
     position: relative
-    &::before
-      +replace-text('ch01/once-upon-sunday/raindrop.png')
-      +background-size(contain)
-      +stretch-y
-      content: " "
-      display: block
-      left: columns(1,12)
-      width: columns(4,12)
-      z-index: 15
+
+  .raindrop
+    +replace-text('ch01/once-upon-sunday/raindrop.png')
+    +background-size(contain)
+    +stretch-y
+    display: block
+    left: columns(1,12)
+    width: columns(4,12)
+    z-index: 15
 
   i
     background: rgba($yellow-lighter,$small)
@@ -56,11 +72,18 @@ $rain: 'ch01/once-upon-sunday/rain.png'
   .pitpot
     @extend .allcaps
     +adjust-font-size-to($smallpx)
-    +rotate(3deg)
     position: absolute
     bottom: rhythm(2)
     background: rgba($red-light,$small)
     margin: 0 rhythm(-100)
     padding: 0 rhythm(50)
     text-align: center
+
+  &.active-page
+    .raindrop
+      +animate(fadeInDownBig,3s)
+    .pitpot
+      +animate(pitpotIn,2s)
+    i
+      +animate(fadeIn,2s,2s)
 

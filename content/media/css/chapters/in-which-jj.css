@@ -48,9 +48,42 @@
 @keyframes rain { 0% { background-position: 0 -450px, 225px -450px; }
   100% { background-position: -450px 0, -675px 450px; } }
 
+@-webkit-keyframes pitpotIn { 0% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; }
+  100% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; } }
+
+@-moz-keyframes pitpotIn { 0% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; }
+  100% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; } }
+
+@-ms-keyframes pitpotIn { 0% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; }
+  100% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; } }
+
+@-o-keyframes pitpotIn { 0% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; }
+  100% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; } }
+
+@keyframes pitpotIn { 0% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; }
+  100% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; } }
+
+@-webkit-keyframes pitpotOut { 0% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; }
+  100% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
+
+@-moz-keyframes pitpotOut { 0% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; }
+  100% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
+
+@-ms-keyframes pitpotOut { 0% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; }
+  100% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
+
+@-o-keyframes pitpotOut { 0% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; }
+  100% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
+
+@keyframes pitpotOut { 0% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; }
+  100% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
+
 #once-upon-sunday { -moz-animation: rain 45s 0.2s linear infinite; -webkit-animation: rain 45s 0.2s linear infinite; -o-animation: rain 45s 0.2s linear infinite; -ms-animation: rain 45s 0.2s linear infinite; -khtml-animation: rain 45s 0.2s linear infinite; animation: rain 45s 0.2s linear infinite; background: url('../../images/ch01/once-upon-sunday/rain.png?1319146885') top left, #706443 url('../../images/ch01/once-upon-sunday/rain.png?1319146885') center; }
 #once-upon-sunday .content { position: relative; }
 #once-upon-sunday blockquote { padding-left: 42.254%; padding-top: 2.5em; padding-bottom: 2.5em; position: relative; }
-#once-upon-sunday blockquote::before { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../../images/ch01/once-upon-sunday/raindrop.png?1319065580'); background-repeat: no-repeat; background-position: 50% 50%; -moz-background-size: contain; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; position: absolute; top: 0; bottom: 0; content: " "; display: block; left: 7.042%; width: 32.394%; z-index: 15; }
+#once-upon-sunday .raindrop { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../../images/ch01/once-upon-sunday/raindrop.png?1319065580'); background-repeat: no-repeat; background-position: 50% 50%; -moz-background-size: contain; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; position: absolute; top: 0; bottom: 0; display: block; left: 7.042%; width: 32.394%; z-index: 15; }
 #once-upon-sunday i { background: rgba(242, 223, 166, 0.8); }
-#once-upon-sunday .pitpot { font-size: 0.8em; line-height: 1.562em; -moz-transform: rotate(3deg); -webkit-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); position: absolute; bottom: 2.5em; background: rgba(210, 121, 121, 0.8); margin: 0 -125em; padding: 0 62.5em; text-align: center; }
+#once-upon-sunday .pitpot { font-size: 0.8em; line-height: 1.562em; position: absolute; bottom: 2.5em; background: rgba(210, 121, 121, 0.8); margin: 0 -125em; padding: 0 62.5em; text-align: center; }
+#once-upon-sunday.active-page .raindrop { -moz-animation: fadeInDownBig 3s 0.2s ease both; -webkit-animation: fadeInDownBig 3s 0.2s ease both; -o-animation: fadeInDownBig 3s 0.2s ease both; -ms-animation: fadeInDownBig 3s 0.2s ease both; -khtml-animation: fadeInDownBig 3s 0.2s ease both; animation: fadeInDownBig 3s 0.2s ease both; }
+#once-upon-sunday.active-page .pitpot { -moz-animation: pitpotIn 2s 0.2s ease both; -webkit-animation: pitpotIn 2s 0.2s ease both; -o-animation: pitpotIn 2s 0.2s ease both; -ms-animation: pitpotIn 2s 0.2s ease both; -khtml-animation: pitpotIn 2s 0.2s ease both; animation: pitpotIn 2s 0.2s ease both; }
+#once-upon-sunday.active-page i { -moz-animation: fadeIn 2s 2s ease both; -webkit-animation: fadeIn 2s 2s ease both; -o-animation: fadeIn 2s 2s ease both; -ms-animation: fadeIn 2s 2s ease both; -khtml-animation: fadeIn 2s 2s ease both; animation: fadeIn 2s 2s ease both; }
