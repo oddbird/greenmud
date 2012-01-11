@@ -72,6 +72,8 @@ $rain: 'ch01/once-upon-sunday/rain.png'
   .pitpot
     @extend .allcaps
     +adjust-font-size-to($smallpx)
+    +rotate(3deg)
+    +box-shadow($base 0 0 rhythm(1))
     position: absolute
     bottom: rhythm(2)
     background: rgba($red-light,$small)
