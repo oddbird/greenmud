@@ -102,6 +102,7 @@ h1, .breadcrumb
       z-index: $i
 
 .page
+  +opacity(0)
   +stretch
   +pageindex
   +box-shadow($base 0 0 rhythm())
@@ -116,7 +117,11 @@ h1, .breadcrumb
   +transition(all 800ms)
   display: block
 
+.active-page
+  +opacity(1)
+
 .prev-page
+  +opacity(1)
   +translate(- 100%,0)
   margin-left: rhythm(-1)
   overflow: hidden
