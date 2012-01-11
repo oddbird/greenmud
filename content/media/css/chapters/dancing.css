@@ -9,6 +9,8 @@
 
 .mono { font-family: monospace, sans-serif; }
 
+.caps, .allcaps { letter-spacing: 0.05em; }
+
 .allcaps { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }

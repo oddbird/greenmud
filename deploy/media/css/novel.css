@@ -26,6 +26,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .mono, body, pre, code, tt { font-family: monospace, sans-serif; }
 
+.caps, .allcaps, caption { letter-spacing: 0.05em; }
+
 .allcaps, caption { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
