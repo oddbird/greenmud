@@ -45,7 +45,7 @@ $rain: 'ch01/once-upon-sunday/rain.png'
     opacity: 0
 
 #once-upon-sunday
-  +animate(rain,45s,$function:linear,$mode:infinite)
+  +animation(rain 45s .2s linear infinite both)
   background: image-url($rain) top left, desaturate($yellow-dark,50) image-url($rain) center
 
   .content
@@ -83,9 +83,9 @@ $rain: 'ch01/once-upon-sunday/rain.png'
 
   &.active-page
     .raindrop
-      +animate(fadeInDownBig,3s)
+      +animation(fadeInDownBig 6s 2s both)
     .pitpot
-      +animate(pitpotIn,2s)
+      +animation(pitpotIn 2s 8s both)
     i
-      +animate(fadeIn,2s,2s)
+      +animation(fadeIn 4s 10s both)
 
