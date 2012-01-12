@@ -20,7 +20,7 @@
 
 /* titlepages ---------------------------------------------------------------- */
 .title, #titlepage h2 { clear: both; margin-left: 1.639%; margin-right: 1.639%; font-size: 1.563em; line-height: 1.6em; margin-top: 2.4em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 0.8em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
-.title:before, #titlepage h2:before, .title:after, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(179, 179, 230, 0.41); z-index: -1; }
+.title:before, #titlepage h2:before, .title:after, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(153, 153, 255, 0.41); z-index: -1; }
 .title:before, #titlepage h2:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 .title:after, #titlepage h2:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 .title b::after, #titlepage h2 b::after { content: ": "; }
@@ -69,12 +69,12 @@
 @keyframes pitpotOut { 0% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; }
   100% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
 
-#once-upon-sunday { -moz-animation: rain 45s 0.2s linear infinite both; -webkit-animation: rain 45s 0.2s linear infinite both; -ms-animation: rain 45s 0.2s linear infinite both; animation: rain 45s 0.2s linear infinite both; background: url('../../images/ch01/once-upon-sunday/rain.png?1319146885') top left, #706443 url('../../images/ch01/once-upon-sunday/rain.png?1319146885') center; }
+#once-upon-sunday { -moz-animation: rain 45s 0.2s linear infinite both; -webkit-animation: rain 45s 0.2s linear infinite both; -ms-animation: rain 45s 0.2s linear infinite both; animation: rain 45s 0.2s linear infinite both; background: url('../../images/ch01/once-upon-sunday/rain.png?1319146885') top left, #86702d url('../../images/ch01/once-upon-sunday/rain.png?1319146885') center; }
 #once-upon-sunday .content { position: relative; }
 #once-upon-sunday blockquote { padding-left: 42.254%; padding-top: 2.5em; padding-bottom: 2.5em; position: relative; }
 #once-upon-sunday .raindrop { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../../images/ch01/once-upon-sunday/raindrop.png?1319065580'); background-repeat: no-repeat; background-position: 50% 50%; -moz-background-size: contain; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; position: absolute; top: 0; bottom: 0; display: block; left: 7.042%; width: 32.394%; z-index: 15; }
-#once-upon-sunday i { background: rgba(242, 223, 166, 0.8); }
-#once-upon-sunday .pitpot { font-size: 0.8em; line-height: 1.562em; -moz-transform: rotate(3deg); -webkit-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); -moz-box-shadow: black 0 0 1.25em; -webkit-box-shadow: black 0 0 1.25em; -o-box-shadow: black 0 0 1.25em; box-shadow: black 0 0 1.25em; position: absolute; bottom: 2.5em; background: rgba(210, 121, 121, 0.8); margin: 0 -125em; padding: 0 62.5em; text-align: center; }
+#once-upon-sunday i { background: rgba(255, 230, 153, 0.8); }
+#once-upon-sunday .pitpot { font-size: 0.8em; line-height: 1.562em; -moz-transform: rotate(3deg); -webkit-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); -moz-box-shadow: #1a1a1a 0 0 1.25em; -webkit-box-shadow: #1a1a1a 0 0 1.25em; -o-box-shadow: #1a1a1a 0 0 1.25em; box-shadow: #1a1a1a 0 0 1.25em; position: absolute; bottom: 2.5em; background: rgba(255, 77, 77, 0.8); margin: 0 -125em; padding: 0 62.5em; text-align: center; }
 #once-upon-sunday.active-page .raindrop { -moz-animation: fadeInDownBig 6s 2s both; -webkit-animation: fadeInDownBig 6s 2s both; -ms-animation: fadeInDownBig 6s 2s both; animation: fadeInDownBig 6s 2s both; }
 #once-upon-sunday.active-page .pitpot { -moz-animation: pitpotIn 2s 8s both; -webkit-animation: pitpotIn 2s 8s both; -ms-animation: pitpotIn 2s 8s both; animation: pitpotIn 2s 8s both; }
 #once-upon-sunday.active-page i { -moz-animation: fadeIn 4s 10s both; -webkit-animation: fadeIn 4s 10s both; -ms-animation: fadeIn 4s 10s both; animation: fadeIn 4s 10s both; }

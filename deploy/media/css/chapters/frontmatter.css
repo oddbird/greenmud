@@ -20,7 +20,7 @@
 
 /* titlepages ---------------------------------------------------------------- */
 .title { clear: both; margin-left: 1.639%; margin-right: 1.639%; font-size: 1.563em; line-height: 1.6em; margin-top: 2.4em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 0.8em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
-.title:before, .title:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(179, 179, 230, 0.41); z-index: -1; }
+.title:before, .title:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(153, 153, 255, 0.41); z-index: -1; }
 .title:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 .title:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 .title b::after { content: ": "; }
@@ -34,6 +34,8 @@
 .pagewrap:after { content: ""; display: table; clear: both; }
 
 h2, .content { clear: both; margin-left: 1.37%; margin-right: 1.37%; }
+
+#titlepage { background: #ffccf2; }
 
 #contents .content { clear: both; margin-left: 1.37%; margin-right: 1.37%; padding-left: 8.451%; padding-right: 8.451%; }
 #contents .contents { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
