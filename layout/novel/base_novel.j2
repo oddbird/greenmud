@@ -1,6 +1,6 @@
 {% extends 'base.j2' %}
 
-<title>{% block title %}{{ resource.meta.title }} | {{ super() }}{% endblock %}</title>
+<title>{% block title %}{{ super() }}: {{ resource.meta.title }}{% endblock %}</title>
 
 {% block body %}
 <a href="#" id="toggle">toggle controls</a>
