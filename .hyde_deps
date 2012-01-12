@@ -80,8 +80,7 @@ frontmatter/epigraph.html: [novel/base_novel.j2, base.j2]
 frontmatter/index.html: [frontmatter/_copyright.html, frontmatter/_contents.html,
   novel/macros.j2, novel/base_novel.j2, base.j2, frontmatter/_epigraph.html, frontmatter/_title.html]
 frontmatter/title.html: [novel/base_novel.j2, base.j2]
-index.html: [_title.html, novel/_page_nav.j2, novel/macros.j2, _contents.html, novel/base_novel.j2,
-  _copyright.html, base.j2, _epigraph.html]
+index.html: [novel/macros.j2, base.j2, novel/base_novel.j2, novel/_page_nav.j2]
 media/css/chapters/chapter01.css: []
 media/css/chapters/dancing.css: []
 media/css/chapters/frontmatter.css: []
