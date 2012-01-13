@@ -6,6 +6,23 @@ var GM = (function (GM, $) {
 
     'use strict';
 
+    // Store keycode variables for easier readability
+    GM.keycodes = {
+        SPACE: 32,
+        ENTER: 13,
+        TAB: 9,
+        ESC: 27,
+        BACKSPACE: 8,
+        SHIFT: 16,
+        CTRL: 17,
+        ALT: 18,
+        CAPS: 20,
+        LEFT: 37,
+        UP: 38,
+        RIGHT: 39,
+        DOWN: 40
+    };
+
     GM.toggleControls = function (toggle, controls) {
         var doToggle = function () {
             $(controls).toggleClass('active');
@@ -49,17 +66,34 @@ var GM = (function (GM, $) {
 
         turnToPage(pages.first());
 
-        prev.click(function () {
+        prev.click(function (e) {
+            var href = $(this).attr('href');
             if (pages.filter('.prev-page').length) {
                 turnToPage(pages.filter('.prev-page'));
-                return false;
+            } else {
+                window.location = href;
             }
+            e.preventDefault();
         });
 
-        next.click(function () {
+        next.click(function (e) {
+            var href = $(this).attr('href');
             if (pages.filter('.next-page').length) {
                 turnToPage(pages.filter('.next-page'));
-                return false;
+            } else {
+                window.location = href;
+            }
+            e.preventDefault();
+        });
+
+        $(document).keydown(function (e) {
+            if (e.which === GM.keycodes.LEFT) {
+                e.preventDefault();
+                prev.first().click();
+            }
+            if (e.which === GM.keycodes.RIGHT) {
+                e.preventDefault();
+                next.first().click();
             }
         });
     };
