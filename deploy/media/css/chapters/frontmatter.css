@@ -30,21 +30,21 @@
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
-@-webkit-keyframes titlebg { 0% { background-color: #ffcccc; }
-  50% { background-color: #ccffff; }
-  100% { background-color: #ffcccd; } }
+@-webkit-keyframes titlebg { 0% { background-color: #ffccf2; }
+  50% { background-color: #ccffcc; }
+  100% { background-color: #ccffff; } }
 
-@-moz-keyframes titlebg { 0% { background-color: #ffcccc; }
-  50% { background-color: #ccffff; }
-  100% { background-color: #ffcccd; } }
+@-moz-keyframes titlebg { 0% { background-color: #ffccf2; }
+  50% { background-color: #ccffcc; }
+  100% { background-color: #ccffff; } }
 
-@-ms-keyframes titlebg { 0% { background-color: #ffcccc; }
-  50% { background-color: #ccffff; }
-  100% { background-color: #ffcccd; } }
+@-ms-keyframes titlebg { 0% { background-color: #ffccf2; }
+  50% { background-color: #ccffcc; }
+  100% { background-color: #ccffff; } }
 
-@keyframes titlebg { 0% { background-color: #ffcccc; }
-  50% { background-color: #ccffff; }
-  100% { background-color: #ffcccd; } }
+@keyframes titlebg { 0% { background-color: #ffccf2; }
+  50% { background-color: #ccffcc; }
+  100% { background-color: #ccffff; } }
 
 #titlepage { -moz-animation: titlebg 120s linear infinite both; -webkit-animation: titlebg 120s linear infinite both; -ms-animation: titlebg 120s linear infinite both; animation: titlebg 120s linear infinite both; }
 #titlepage .content { -moz-animation: fadeIn 4s 7s both; -webkit-animation: fadeIn 4s 7s both; -ms-animation: fadeIn 4s 7s both; animation: fadeIn 4s 7s both; position: absolute; bottom: 0.625em; left: 0.625em; }

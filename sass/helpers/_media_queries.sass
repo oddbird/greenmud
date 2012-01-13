@@ -1,0 +1,83 @@
+// break points should adjust based on the design. ---------------------------
+  $media-query-width-small: 480px
+  $media-query-height-small: 480px
+
+// large screens -------------------------------------------------------------
+  $media-query-width-large: 1280px
+  $media-query-height-large: 1280px
+
+=width-large
+  // @media (min-width: #{$media-query-width-large})
+  @media (min-width: 1280px)
+    @content
+
+=height-large
+  // @media (min-height: #{$media-query-height-large})
+  @media (min-height: 1280px)
+    @content
+
+// medium screens ------------------------------------------------------------
+  $media-query-width-medium: 960px
+  $media-query-height-medium: 600px
+
+=width-medium
+  // @media (max-width: #{$media-query-width-large} - 1px)
+  @media (max-width: 1279px)
+    @content
+
+=width-medium-only
+  // @media (min-width: $media-query-width-medium) and (max-width: $media-query-width-large - 1px)
+  @media (min-width: 960px) and (max-width: 1279px)
+    @content
+
+=height-medium
+  // @media (max-height: #{$media-query-height-large} - 1px)
+  @media (max-height: 1279px)
+    @content
+
+=height-medium-only
+  // @media (min-height: $media-query-height-medium) and (max-height: $media-query-height-large - 1px)
+  @media (min-height: 600px) and (max-height: 1279px)
+    @content
+
+// small screens -------------------------------------------------------------
+  $media-query-width-small: 480px
+  $media-query-height-small: 480px
+
+=width-small
+  // @media (max-width: #{$media-query-width-medium} - 1px)
+  @media (max-width: 959px)
+    @content
+
+=width-small-only
+  // @media (min-width: #{$media-query-width-small}) and (max-width: #{$media-query-width-medium} - 1px)
+  @media (min-width: 480px) and (max-width: 959px)
+    @content
+
+=height-small
+  // @media (max-height: #{$media-query-height-medium} - 1px)
+  @media (max-height: 599px)
+    @content
+
+=height-small-only
+  // @media (min-height: #{$media-query-height-small}) and (max-height: #{$media-query-height-medium} - 1px)
+  @media (min-height: 480px) and (max-height: 599px)
+    @content
+
+// timy screens --------------------------------------------------------------
+
+=width-tiny
+  // @media (max-width: #{$media-query-width-small} - 1px)
+  @media (max-width: 479px)
+    @content
+
+=height-tiny
+  // @media (max-height: #{$media-query-height-small} - 1px)
+  @media (max-height: 479px)
+    @content
+
+// high resolution screens ---------------------------------------------------
+
+=highres
+  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2)
+    @content
