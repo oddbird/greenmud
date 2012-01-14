@@ -31,6 +31,10 @@ var GM = (function (GM, $) {
         };
 
         $(toggle).click(doToggle);
+
+        if (window.location.hash === '#controls') {
+            doToggle();
+        }
     };
 
     GM.bodyHeight = function (element) {
@@ -71,6 +75,9 @@ var GM = (function (GM, $) {
             if (pages.filter('.prev-page').length) {
                 turnToPage(pages.filter('.prev-page'));
             } else {
+                if ($('#toggle').hasClass('active')) {
+                    href = href + '#controls';
+                }
                 window.location = href;
             }
             e.preventDefault();
@@ -81,6 +88,9 @@ var GM = (function (GM, $) {
             if (pages.filter('.next-page').length) {
                 turnToPage(pages.filter('.next-page'));
             } else {
+                if ($('#toggle').hasClass('active')) {
+                    href = href + '#controls';
+                }
                 window.location = href;
             }
             e.preventDefault();
