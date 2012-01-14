@@ -759,28 +759,27 @@ dt { margin-top: 1.25em; }
   90% { -moz-transform: scale(1.1) rotate(3deg); -webkit-transform: scale(1.1) rotate(3deg); -o-transform: scale(1.1) rotate(3deg); -ms-transform: scale(1.1) rotate(3deg); transform: scale(1.1) rotate(3deg); }
   100% { -moz-transform: scale(1) rotate(0); -webkit-transform: scale(1) rotate(0); -o-transform: scale(1) rotate(0); -ms-transform: scale(1) rotate(0); transform: scale(1) rotate(0); } }
 
-#toggle:link, #toggle:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; left: 0; right: 0; top: 0; height: 2.5em; z-index: 800; }
+#toggle:link, #toggle:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; left: 0; right: 0; top: 0; height: 2.5em; z-index: 875; }
 
-.controls { font-size: 0.512em; line-height: 2.441em; position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 400ms; -webkit-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; padding: 0 0.61em; background-color: rgba(26, 26, 26, 0.9); color: #e6e6e6; z-index: 700; }
-.controls.before { top: 0; }
-.controls.after { bottom: 0; }
-.controls.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; z-index: 900; }
+.controls { font-size: 0.512em; line-height: 2.441em; }
+.controls.before { position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 400ms; -webkit-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; top: 0; padding: 0 0.61em; background-color: rgba(26, 26, 26, 0.9); color: #e6e6e6; z-index: 700; }
+.controls.before.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; z-index: 900; }
 .controls a:link, .controls a:visited { color: #cccccc; }
 .controls a:focus, .controls a:hover, .controls a:active { color: #9999ff; }
 
 .pagenav { display: inline; float: right; }
 .pagenav ul { margin: 0; padding: 0; border: 0; list-style: none; }
 .pagenav ul li { list-style-image: none; list-style-type: none; margin-left: 0px; }
-.pagenav li { display: inline; float: left; }
-.pagenav a { -moz-transition: opacity 300ms; -webkit-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; display: block; width: 2.441em; height: 2.441em; }
-.pagenav a:link, .pagenav a:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; }
-.pagenav a[href]:focus, .pagenav a[href]:hover, .pagenav a[href]:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
-.pagenav a.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; }
-.pagenav a.active:focus, .pagenav a.active:hover, .pagenav a.active:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; cursor: pointer; }
-
-.prev span, .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
-
-.next a:link, .next a:visited { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
+.before .pagenav a { -moz-transition: opacity 300ms; -webkit-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; display: block; width: 2.441em; height: 2.441em; }
+.before .pagenav a:link, .before .pagenav a:visited, .before .pagenav a.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; }
+.before .pagenav a[href]:focus, .before .pagenav a[href]:hover, .before .pagenav a[href]:active, .before .pagenav a.active:focus, .before .pagenav a.active:hover, .before .pagenav a.active:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; cursor: pointer; }
+.before .pagenav .prev, .before .pagenav .next { display: inline; float: left; }
+.before .pagenav .prev span, .before .pagenav .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
+.before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
+.after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; display: block; }
+.after .pagenav [href], .after .pagenav .active { position: absolute; top: 0; bottom: 0; width: 1.25em; z-index: 850; }
+.after .pagenav .prev [href], .after .pagenav .prev .active { left: 0; }
+.after .pagenav .next [href], .after .pagenav .next .active { right: 0; }
 
 #location { position: absolute; top: 0; bottom: 0; left: 0.61em; right: 7.324em; }
 

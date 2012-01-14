@@ -12,26 +12,24 @@ $uifontsize : $xxsmallpx
     +stretch-x
     top: 0
     height: rhythm(2)
-    z-index: 800
+    z-index: 875
 
 .controls
   +adjust-font-size-to($uifontsize)
-  +stretch-x
-  +opacity(0)
-  +transition(opacity 400ms)
-  +clearfix
-  position: fixed
-  padding: 0 rhythm(.25,$uifontsize)
-  background-color: rgba($base,.9)
-  color: $lightest
-  z-index: 700
   &.before
+    +stretch-x
+    +opacity(0)
+    +transition(opacity 400ms)
+    +clearfix
+    position: fixed
     top: 0
-  &.after
-    bottom: 0
-  &.active
-    +opacity(1)
-    z-index: 900
+    padding: 0 rhythm(.25,$uifontsize)
+    background-color: rgba($base,.9)
+    color: $lightest
+    z-index: 700
+    &.active
+      +opacity(1)
+      z-index: 900
 
   a
     #{$link}
@@ -45,33 +43,46 @@ $uifontsize : $xxsmallpx
   +float(right)
   ul
     +no-style-list
-  li
-    +float(left)
-  a
-    +transition(opacity 300ms)
-    +opacity(.25)
-    display: block
-    width: rhythm(1,$uifontsize)
-    height: rhythm(1,$uifontsize)
-    #{$link}
-      +opacity(.75)
-    &[href]
-      #{$focus}
-        +opacity(1)
-    &.active
-      +opacity(.75)
-      #{$focus}
-        +opacity(1)
-        cursor: pointer
 
-.prev
-  span, a
-    +replace-text('ui/arrow_left.png')
+  .before &
+    a
+      +transition(opacity 300ms)
+      +opacity(.25)
+      display: block
+      width: rhythm(1,$uifontsize)
+      height: rhythm(1,$uifontsize)
+      #{$link}, &.active
+        +opacity(.75)
+      &[href], &.active
+        #{$focus}
+          +opacity(1)
+          cursor: pointer
 
-.next
-  a
-    #{$link}
-      +replace-text('ui/arrow_right.png')
+    .prev, .next
+      +float(left)
+    .prev
+      span, a
+        +replace-text('ui/arrow_left.png')
+
+    .next
+      a
+        +replace-text('ui/arrow_right.png')
+
+  .after &
+    a, span
+      +hide-text
+      display: block
+    [href], .active
+      +stretch-y
+      width: rhythm(1)
+      z-index: 850
+
+    .prev
+      [href], .active
+        left: 0
+    .next
+      [href], .active
+        right: 0
 
 // breadcrumb ----------------------------------------------------------------
 
