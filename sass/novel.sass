@@ -23,7 +23,7 @@ $uifontsize : $xxsmallpx
     +clearfix
     position: fixed
     top: 0
-    padding: 0 rhythm(.25,$uifontsize)
+    padding: 0
     background-color: rgba($base,.9)
     color: $lightest
     z-index: 700
@@ -74,7 +74,7 @@ $uifontsize : $xxsmallpx
       display: block
     [href], .active
       +stretch-y
-      width: rhythm(1)
+      width: rhythm(1, $uifontsize)
       z-index: 850
 
     .prev
@@ -87,7 +87,7 @@ $uifontsize : $xxsmallpx
 // breadcrumb ----------------------------------------------------------------
 
 #location
-  +stretch(0,rhythm(3,$uifontsize),0,rhythm(.25,$uifontsize))
+  +stretch(0,rhythm(3,$uifontsize),0,rhythm(1,$uifontsize))
 
 h1, .breadcrumb
   +inline-block
@@ -99,6 +99,19 @@ h1, .breadcrumb
   .crumb
     &::before
       content: ' » '
+
+// tocnav --------------------------------------------------------------------
+
+.tocnav
+  +stretch-y
+  width: rhythm(1,$uifontsize)
+  h2
+    +reset-box-model
+    font: inherit
+  a
+    +replace-text('ui/bookmark.png')
+    display: block
+    width: 100%
 
 // main ----------------------------------------------------------------------
 

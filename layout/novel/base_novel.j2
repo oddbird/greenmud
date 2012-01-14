@@ -30,6 +30,20 @@
 
   {% include "novel/_page_nav.j2" %}
 
+  <nav class="tocnav">
+    <h2 class="tochead"><a href="/#contents" title="Table of Contents">Table of Contents</a></h2>
+
+    {# if node.meta.chapters %}
+    <ol class="toc">
+      {% for tochapter in node.meta.chapters %}
+      {% if tochapter.url %}
+      <li class="tochapter"><a href="{{ tochapter.url }}">{{ tochapter.name }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ol>
+    {% endif #}
+
+  </nav>
 {%- endblock %}
 </div>
 

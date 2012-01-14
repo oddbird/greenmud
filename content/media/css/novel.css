@@ -762,7 +762,7 @@ dt { margin-top: 1.25em; }
 #toggle:link, #toggle:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; left: 0; right: 0; top: 0; height: 2.5em; z-index: 875; }
 
 .controls { font-size: 0.512em; line-height: 2.441em; }
-.controls.before { position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 400ms; -webkit-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; top: 0; padding: 0 0.61em; background-color: rgba(26, 26, 26, 0.9); color: #e6e6e6; z-index: 700; }
+.controls.before { position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 400ms; -webkit-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; top: 0; padding: 0; background-color: rgba(26, 26, 26, 0.9); color: #e6e6e6; z-index: 700; }
 .controls.before.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; z-index: 900; }
 .controls a:link, .controls a:visited { color: #cccccc; }
 .controls a:focus, .controls a:hover, .controls a:active { color: #9999ff; }
@@ -777,11 +777,11 @@ dt { margin-top: 1.25em; }
 .before .pagenav .prev span, .before .pagenav .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
 .before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
 .after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; display: block; }
-.after .pagenav [href], .after .pagenav .active { position: absolute; top: 0; bottom: 0; width: 1.25em; z-index: 850; }
+.after .pagenav [href], .after .pagenav .active { position: absolute; top: 0; bottom: 0; width: 2.441em; z-index: 850; }
 .after .pagenav .prev [href], .after .pagenav .prev .active { left: 0; }
 .after .pagenav .next [href], .after .pagenav .next .active { right: 0; }
 
-#location { position: absolute; top: 0; bottom: 0; left: 0.61em; right: 7.324em; }
+#location { position: absolute; top: 0; bottom: 0; left: 2.441em; right: 7.324em; }
 
 h1, .breadcrumb { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; margin: 0; padding: 0; }
 h1, .breadcrumb { *display: inline; }
@@ -790,6 +790,10 @@ h1, .breadcrumb { *display: inline; }
 .breadcrumb li { list-style-image: none; list-style-type: none; margin-left: 0px; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; white-space: nowrap; }
 .breadcrumb li { *display: inline; }
 .breadcrumb .crumb::before { content: " » "; }
+
+.tocnav { position: absolute; top: 0; bottom: 0; width: 2.441em; }
+.tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }
+.tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
 #main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
 
