@@ -31,20 +31,20 @@
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
 @-webkit-keyframes titlebg { 0% { background-color: #ffccf2; }
-  50% { background-color: #ccffcc; }
-  100% { background-color: #ccffff; } }
+  50% { background-color: #ccffff; }
+  100% { background-color: #ffccf2; } }
 
 @-moz-keyframes titlebg { 0% { background-color: #ffccf2; }
-  50% { background-color: #ccffcc; }
-  100% { background-color: #ccffff; } }
+  50% { background-color: #ccffff; }
+  100% { background-color: #ffccf2; } }
 
 @-ms-keyframes titlebg { 0% { background-color: #ffccf2; }
-  50% { background-color: #ccffcc; }
-  100% { background-color: #ccffff; } }
+  50% { background-color: #ccffff; }
+  100% { background-color: #ffccf2; } }
 
 @keyframes titlebg { 0% { background-color: #ffccf2; }
-  50% { background-color: #ccffcc; }
-  100% { background-color: #ccffff; } }
+  50% { background-color: #ccffff; }
+  100% { background-color: #ffccf2; } }
 
 #titlepage { -moz-animation: titlebg 120s linear infinite both; -webkit-animation: titlebg 120s linear infinite both; -ms-animation: titlebg 120s linear infinite both; animation: titlebg 120s linear infinite both; }
 #titlepage .content { -moz-animation: fadeIn 4s 7s both; -webkit-animation: fadeIn 4s 7s both; -ms-animation: fadeIn 4s 7s both; animation: fadeIn 4s 7s both; position: absolute; bottom: 0.625em; left: 0.625em; }
