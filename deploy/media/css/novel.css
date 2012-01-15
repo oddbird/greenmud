@@ -54,19 +54,19 @@ html > body { font-size: 28px; }
 
 html { font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
-body { position: relative; color: #1a1a1a; }
+body { position: relative; color: #202020; }
 
 /* Selected Text ------------------------------------------------------------- */
-::-webkit-selection { color: black; background: #b30086; text-shadow: none; }
+::-webkit-selection { color: black; background: #bf008f; text-shadow: none; }
 
-::-moz-selection { color: black; background: #b30086; text-shadow: none; }
+::-moz-selection { color: black; background: #bf008f; text-shadow: none; }
 
-::selection { color: black; background: #b30086; text-shadow: none; }
+::selection { color: black; background: #bf008f; text-shadow: none; }
 
 /* Links --------------------------------------------------------------------- */
 a:hover, a:active { outline: none; }
-a:link, a:visited { color: #b30086; text-decoration: none; }
-a:focus, a:hover, a:active { color: #00b300; }
+a:link, a:visited { color: #bf008f; text-decoration: none; }
+a:focus, a:hover, a:active { color: #00bf00; }
 
 /* Inline -------------------------------------------------------------------- */
 cite, em, dfn, address, i { font-style: italic; }
@@ -103,7 +103,7 @@ blockquote { font-style: italic; }
 details { margin-bottom: 1.25em; }
 
 summary { display: inline; cursor: pointer; }
-summary:focus { outline: thin dotted #00b300; }
+summary:focus { outline: thin dotted #00bf00; }
 
 .no-details details > * { display: none; }
 .no-details details summary { display: inline; }
@@ -762,7 +762,7 @@ dt { margin-top: 1.25em; }
 #toggle:link, #toggle:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; left: 0; right: 0; top: 0; height: 2.5em; z-index: 875; }
 
 .controls { font-size: 0.512em; line-height: 2.441em; }
-.controls.before { position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 400ms; -webkit-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; top: 0; padding: 0; background-color: rgba(26, 26, 26, 0.9); color: #e6e6e6; z-index: 700; }
+.controls.before { position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 400ms; -webkit-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; top: 0; padding: 0; background-color: rgba(32, 32, 32, 0.9); color: #dfdfdf; z-index: 700; }
 .controls.before.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; z-index: 900; }
 .controls a:link, .controls a:visited { color: #cccccc; }
 .controls a:focus, .controls a:hover, .controls a:active { color: #9999ff; }
@@ -797,7 +797,7 @@ h1, .breadcrumb { *display: inline; }
 
 #main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
 
-.page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; -moz-box-shadow: #1a1a1a 0 0 1.25em; -webkit-box-shadow: #1a1a1a 0 0 1.25em; -o-box-shadow: #1a1a1a 0 0 1.25em; box-shadow: #1a1a1a 0 0 1.25em; display: none; padding: 2.5em 0; background-color: white; overflow-x: hidden; overflow-y: auto; }
+.page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; display: none; padding: 2.5em 0; background-color: white; overflow-x: hidden; overflow-y: auto; }
 .page:nth-child(100) { z-index: 1; }
 .page:nth-child(99) { z-index: 2; }
 .page:nth-child(98) { z-index: 3; }

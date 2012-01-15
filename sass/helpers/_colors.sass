@@ -1,0 +1,21 @@
+// Tint and Shade for Compass ------------------------------------------------
+
+@function tint($color, $dilution: 50)
+  $white: rgba(255, 255, 255, 1)
+  @if $color == "transparent"
+    $color: rgba(0, 0, 0, 0)
+  @if $dilution < 0 or $dilution > 100
+    @warn "Dilution #{$dilution} must be between 0% and 100%"
+
+  $tint-color: mix($color, $white, 100 - $dilution)
+  @return $tint-color
+
+@function shade($color, $dilution: 50)
+  $black: rgba(0, 0, 0, 1)
+  @if $color == "transparent"
+    $color: rgba(0, 0, 0, 0)
+  @if $dilution < 0 or $dilution > 100
+    @warn "Dilution #{$dilution} must be between 0% and 100%"
+
+  $shade-color: mix($color, $black, 100 - $dilution)
+  @return $shade-color
