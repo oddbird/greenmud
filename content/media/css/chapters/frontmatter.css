@@ -30,7 +30,7 @@
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
-#titlepage .content { -moz-animation: fadeIn 4s 7s both; -webkit-animation: fadeIn 4s 7s both; -ms-animation: fadeIn 4s 7s both; animation: fadeIn 4s 7s both; position: absolute; bottom: 0.625em; left: 0.625em; }
+#titlepage .content { position: absolute; bottom: 0.625em; left: 0.625em; }
 #titlepage p { margin-bottom: 0em; }
 
 h2 { font-size: 1.25em; line-height: 1.25em; padding-top: 9em; padding-left: 430px; background: url('../../images/frontmatter/titlepage/titletree.png?1326358376') no-repeat scroll left top, url('../../images/frontmatter/titlepage/bird.png?1326356657') no-repeat scroll 90% top; text-transform: lowercase; }

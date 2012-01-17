@@ -1,80 +1,115 @@
-// break points should adjust based on the design. ---------------------------
-  $media-query-width-small: 480px
-  $media-query-height-small: 480px
+// All mixins accept $what: [width | height | either | both].
+// break points should adjust based on the design.
 
 // large screens -------------------------------------------------------------
   $media-query-width-large: 1280px
   $media-query-height-large: 1280px
 
-=width-large
-  // @media (min-width: $media-query-width-large)
-  @media (min-width: 1280px)
-    @content
-
-=height-large
-  // @media (min-height: $media-query-height-large)
-  @media (min-height: 1280px)
-    @content
+=large($what: "width")
+  @if $what == "width"
+    // @media (min-width: $media-query-width-large)
+    @media (min-width: 1280px)
+      @content
+  @if $what == "height"
+    // @media (min-height: $media-query-height-large)
+    @media (min-height: 1280px)
+      @content
+  @if $what == "both"
+    @media (min-width: 1280px) and (min-height: 1280px)
+      @content
+  @if $what == "either"
+    @media (min-width: 1280px), (min-height: 1280px)
+      @content
 
 // medium screens ------------------------------------------------------------
   $media-query-width-medium: 960px
   $media-query-height-medium: 600px
 
-=width-medium
-  // @media (min-width: $media-query-width-medium)
-  @media (min-width: 960px)
-    @content
+=medium($what: "width")
+  @if $what == "width"
+    // @media (min-width: $media-query-width-medium)
+    @media (min-width: 960px)
+      @content
+  @if $what == "height"
+    // @media (min-height: $media-query-height-medium)
+    @media (min-height: 600px)
+      @content
+  @if $what == "both"
+    @media (min-width: 960px) and (min-height: 600px)
+      @content
+  @if $what == "either"
+    @media (min-width: 960px), (min-height: 600px)
+      @content
 
-=width-medium-only
-  // @media (min-width: $media-query-width-medium) and (max-width: $media-query-width-large - 1px)
-  @media (min-width: 960px) and (max-width: 1279px)
-    @content
-
-=height-medium
-  // @media (min-height: $media-query-height-medium)
-  @media (min-height: 600px)
-    @content
-
-=height-medium-only
-  // @media (min-height: $media-query-height-medium) and (max-height: $media-query-height-large - 1px)
-  @media (min-height: 600px) and (max-height: 1279px)
-    @content
+=medium-only($what: "width")
+  @if $what == "width"
+    // @media (min-width: $media-query-width-medium) and (max-width: $media-query-width-large - 1px)
+    @media (min-width: 960px) and (max-width: 1279px)
+      @content
+  @if $what == "height"
+    // @media (min-height: $media-query-height-medium) and (max-height: $media-query-height-large - 1px)
+    @media (min-height: 600px) and (max-height: 1279px)
+      @content
+  @if $what == "both"
+    @media (min-width: 960px) and (max-width: 1279px) and (min-height: 600px) and (max-height: 1279px)
+      @content
+  @if $what == "either"
+    @media (min-width: 960px) and (max-width: 1279px), (min-height: 600px) and (max-height: 1279px)
+      @content
 
 // small screens -------------------------------------------------------------
   $media-query-width-small: 480px
   $media-query-height-small: 480px
 
-=width-small
-  // @media (min-width: $media-query-width-small)
-  @media (min-width: 480px)
-    @content
+=small($what: "width")
+  @if $what == "width"
+    // @media (min-width: $media-query-width-small)
+    @media (min-width: 480px)
+      @content
+  @if $what == "height"
+    // @media (min-height: $media-query-height-small)
+    @media (min-height: 480px)
+      @content
+  @if $what == "both"
+    @media (min-width: 480px) and (min-height: 480px)
+      @content
+  @if $what == "either"
+    @media (min-width: 480px), (min-height: 480px)
+      @content
 
-=width-small-only
-  // @media (min-width: $media-query-width-small) and (max-width: $media-query-width-medium - 1px)
-  @media (min-width: 480px) and (max-width: 959px)
-    @content
-
-=height-small
-  // @media (min-height: $media-query-height-small)
-  @media (min-height: 480px)
-    @content
-
-=height-small-only
-  // @media (min-height: #{$media-query-height-small}) and (max-height: $media-query-height-medium - 1px)
-  @media (min-height: 480px) and (max-height: 599px)
-    @content
+=small-only($what: "width")
+  @if $what == "width"
+    // @media (min-width: $media-query-width-small) and (max-width: $media-query-width-medium - 1px)
+    @media (min-width: 480px) and (max-width: 959px)
+      @content
+  @if $what == "height"
+    // @media (min-height: #{$media-query-height-small}) and (max-height: $media-query-height-medium - 1px)
+    @media (min-height: 480px) and (max-height: 599px)
+      @content
+  @if $what == "both"
+    @media (min-width: 480px) and (max-width: 959px) and (min-height: 480px) and (max-height: 599px)
+      @content
+  @if $what == "either"
+    @media (min-width: 480px) and (max-width: 959px), (min-height: 480px) and (max-height: 599px)
+      @content
 
 // timy screens --------------------------------------------------------------
 
-=width-tiny
-  // @media (max-width: $media-query-width-small - 1px)
-  @media (max-width: 479px)
-    @content
-
-=height-tiny
-  // @media (max-height: $media-query-height-small - 1px)
-  @media (max-height: 479px)
-    @content
+=tiny($what: "width")
+  @if $what == "width"
+    // @media (max-width: $media-query-width-small - 1px)
+    @media (max-width: 479px)
+      @content
+  @if $what == "height"
+    // @media (max-height: $media-query-height-small - 1px)
+    @media (max-height: 479px)
+      @content
+  @if $what == "both"
+    @media (max-width: 479px) and (max-height: 479px)
+      @content
+  @if $what == "either"
+    @media (max-width: 479px), (max-height: 479px)
+      @content
 
 // high resolution screens ---------------------------------------------------
 
