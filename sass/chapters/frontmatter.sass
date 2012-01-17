@@ -15,39 +15,6 @@ $bird  : $chimg + 'bird.png'
 
 #titlepage
 
-  .content
-    position: absolute
-    bottom: rhythm(.5)
-    left: rhythm(.5)
-  p
-    +trailer(0)
-
-h2
-  +adjust-font-size-to($medpx,1.25)
-  padding:
-    top: rhythm(floor(image-height($titletree)/$base-line-height) - 1,$medpx)
-    left: image-width($titletree)
-  background: image-url($titletree) no-repeat scroll left top, image-url($bird) no-repeat scroll 90% top
-  text-transform: lowercase
-  span
-    display: block
-    &:nth-child(1)
-    &:nth-child(2)
-      +adjust-font-size-to($normpx + $xxxsmallpx,1)
-      margin-left: rhythm(1,$normpx + $xxxsmallpx)
-    &:nth-child(3)
-      +adjust-font-size-to($normpx + $xxsmallpx,1)
-      margin-left: rhythm(-.5,$normpx + $xxsmallpx)
-    &:nth-child(4)
-      +adjust-font-size-to($normpx + $xsmallpx,1)
-      margin-left: rhythm(2.5,$normpx + $xsmallpx)
-    &:nth-child(5)
-      +adjust-font-size-to($normpx + $xxxsmallpx,1)
-      margin-left: rhythm(4,$normpx + $xxxsmallpx)
-      &::after
-        content: "."
-
-
 
 // copyright -----------------------------------------------------------------
 
