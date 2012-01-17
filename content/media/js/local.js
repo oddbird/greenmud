@@ -32,7 +32,7 @@ var GM = (function (GM, $) {
 
         $(toggle).click(doToggle);
 
-        if (window.location.hash === '#controls') {
+        if (window.location.search === '?controls') {
             doToggle();
         }
     };
@@ -76,7 +76,7 @@ var GM = (function (GM, $) {
                 turnToPage(pages.filter('.prev-page'));
             } else if (href !== undefined) {
                 if ($('#toggle').hasClass('active')) {
-                    href = href + '#controls';
+                    href = href + '?controls';
                 }
                 window.location = href;
             }
@@ -89,7 +89,7 @@ var GM = (function (GM, $) {
                 turnToPage(pages.filter('.next-page'));
             } else if (href !== undefined) {
                 if ($('#toggle').hasClass('active')) {
-                    href = href + '#controls';
+                    href = href + '?controls';
                 }
                 window.location = href;
             }
