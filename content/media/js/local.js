@@ -74,7 +74,7 @@ var GM = (function (GM, $) {
             var href = $(this).attr('href');
             if (pages.filter('.prev-page').length) {
                 turnToPage(pages.filter('.prev-page'));
-            } else {
+            } else if (href !== undefined) {
                 if ($('#toggle').hasClass('active')) {
                     href = href + '#controls';
                 }
@@ -87,7 +87,7 @@ var GM = (function (GM, $) {
             var href = $(this).attr('href');
             if (pages.filter('.next-page').length) {
                 turnToPage(pages.filter('.next-page'));
-            } else {
+            } else if (href !== undefined) {
                 if ($('#toggle').hasClass('active')) {
                     href = href + '#controls';
                 }
