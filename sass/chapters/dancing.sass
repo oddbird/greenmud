@@ -4,7 +4,17 @@
 // defaults ----------------------------------------------------------------
 
 .pagewrap
-  +container
+  +media-container
+  .content
+    +full
+    +pad(1,1)
+
+    +small
+      +full
+      +pad(1,1)
+    +medium
+      +full
+      +pad(1,1)
 
 // title page ----------------------------------------------------------------
 
@@ -14,7 +24,4 @@
 
 // epigraph ------------------------------------------------------------------
 
-#epigraph
-  @extend .epigraph
-  .content
-    +prefix(3)
+// #epigraph

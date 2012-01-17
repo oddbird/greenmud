@@ -16,25 +16,38 @@ $bird  : $chimg + 'bird.png'
 // contents ------------------------------------------------------------------
 
 #contents
-  .pagewrap
-    +container
-  .content
-    +full
-    +pad(1,1,12)
-  .contents
-    +columns(5,10)
-    &:last-child
-      +omega(10)
+  +small-only
+    +adjust-font-size-to($smallpx)
 
   h4
     @extend .allcaps
 
   ol
     +adjust-font-size-to($smallpx)
+    +trailer(1,$smallpx)
+
+  .pagewrap
+    +media-container
+
+  .content
+    +media-full
+    +pad(1,1)
+    +small
+      +pad(1,1)
+    +medium
+      +pad(1,1)
+
+  .contents
+    +small
+      +columns(4,8)
+      &:last-child
+        +omega(8)
+    +medium
+      +columns(5,10)
+      &:last-child
+        +omega(10)
+
 
 // epigraph ------------------------------------------------------------------
 
-#epigraph
-  @extend .epigraph
-  .content
-    +prefix(3)
+// #epigraph

@@ -36,14 +36,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .hidden { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; height: 1px; width: 1px; border: 0; }
 
 /* titlepages ---------------------------------------------------------------- */
-.title { clear: both; margin-left: 2.703%; margin-right: 2.703%; font-size: 1.563em; line-height: 1.6em; margin-top: 2.4em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 0.8em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
+.title { clear: both; margin-left: 2.703%; margin-right: 2.703%; font-size: 1.563em; line-height: 1.6em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
+@media (min-width: 500px) { .title { clear: both; margin-left: 1.639%; margin-right: 1.639%; } }
+@media (min-width: 960px) { .title { clear: both; margin-left: 1.37%; margin-right: 1.37%; } }
 .title:before, .title:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(153, 153, 255, 0.41); z-index: -1; }
 .title:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 .title:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
-.title b::after { content: ": "; }
-
-.epigraph p { font-size: 1.25em; line-height: 1.5em; }
-.epigraph p:last-child { font: inherit; font-style: normal; }
+.title b { font-size: 0.64em; line-height: 1.25em; display: block; }
+@media (min-height: 480px) { .title { margin-top: 1.6em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 1.6em; } }
+@media (min-height: 600px) { .title { margin-top: 2.4em; } }
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
@@ -777,7 +778,9 @@ dt { margin-top: 1.25em; }
 .before .pagenav .prev span, .before .pagenav .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
 .before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
 .after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; display: block; }
-.after .pagenav [href], .after .pagenav .active { position: absolute; top: 0; bottom: 0; width: 2.441em; z-index: 850; }
+.after .pagenav [href], .after .pagenav .active { position: absolute; top: 0; bottom: 0; width: 0.61em; z-index: 850; }
+@media (min-width: 500px) { .after .pagenav [href], .after .pagenav .active { width: 1.221em; } }
+@media (min-width: 960px) { .after .pagenav [href], .after .pagenav .active { width: 2.441em; } }
 .after .pagenav .prev [href], .after .pagenav .prev .active { left: 0; }
 .after .pagenav .next [href], .after .pagenav .next .active { right: 0; }
 
@@ -798,7 +801,7 @@ h1, .breadcrumb { *display: inline; }
 #main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
 @media (max-width: 499px) { #main { font-size: 0.8em; line-height: 1.562em; } }
 
-.page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; display: none; padding: 2.5em 0; background-color: white; overflow-x: hidden; overflow-y: auto; }
+.page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; display: none; padding: 1.25em 0; background-color: white; overflow-x: hidden; overflow-y: auto; }
 .page:nth-child(100) { z-index: 1; }
 .page:nth-child(99) { z-index: 2; }
 .page:nth-child(98) { z-index: 3; }
@@ -899,6 +902,7 @@ h1, .breadcrumb { *display: inline; }
 .page:nth-child(3) { z-index: 98; }
 .page:nth-child(2) { z-index: 99; }
 .page:nth-child(1) { z-index: 100; }
+@media (min-height: 480px) { .page { padding: 2.5em 0; } }
 
 .prev-page, .active-page, .next-page { -moz-transition: all 800ms; -webkit-transition: all 800ms; -o-transition: all 800ms; transition: all 800ms; display: block; }
 

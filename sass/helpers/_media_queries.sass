@@ -1,6 +1,20 @@
 // All mixins accept $what: [width | height | either | both].
 // break points should adjust based on the design.
 
+=media-container
+  +container
+  +small
+    +container
+  +medium
+    +container
+
+=media-full
+  +full
+  +small
+    +full
+  +medium
+    +full
+
 // large screens -------------------------------------------------------------
   $media-query-width-large: 1280px
   $media-query-height-large: 1280px
@@ -71,7 +85,7 @@ $medium-columns: 12
 // small screens -------------------------------------------------------------
   $media-query-width-small: 500px
   $media-query-height-small: 480px
-$small-columns: 8
+$small-columns: 10
 
 =small($what: "width")
   @if $what == width or $what == both
