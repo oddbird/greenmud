@@ -30,33 +30,15 @@
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
-@-webkit-keyframes titlebg { 0% { background-color: #ffe5f8; }
-  50% { background-color: #e5ffff; }
-  100% { background-color: #ffe5f8; } }
-
-@-moz-keyframes titlebg { 0% { background-color: #ffe5f8; }
-  50% { background-color: #e5ffff; }
-  100% { background-color: #ffe5f8; } }
-
-@-ms-keyframes titlebg { 0% { background-color: #ffe5f8; }
-  50% { background-color: #e5ffff; }
-  100% { background-color: #ffe5f8; } }
-
-@keyframes titlebg { 0% { background-color: #ffe5f8; }
-  50% { background-color: #e5ffff; }
-  100% { background-color: #ffe5f8; } }
-
-#titlepage { -moz-animation: titlebg 120s linear infinite both; -webkit-animation: titlebg 120s linear infinite both; -ms-animation: titlebg 120s linear infinite both; animation: titlebg 120s linear infinite both; }
 #titlepage .content { -moz-animation: fadeIn 4s 7s both; -webkit-animation: fadeIn 4s 7s both; -ms-animation: fadeIn 4s 7s both; animation: fadeIn 4s 7s both; position: absolute; bottom: 0.625em; left: 0.625em; }
 #titlepage p { margin-bottom: 0em; }
 
 h2 { font-size: 1.25em; line-height: 1.25em; padding-top: 9em; padding-left: 430px; background: url('../../images/frontmatter/titlepage/titletree.png?1326358376') no-repeat scroll left top, url('../../images/frontmatter/titlepage/bird.png?1326356657') no-repeat scroll 90% top; text-transform: lowercase; }
 h2 span { display: block; }
-h2 span:nth-child(1) { -moz-animation: fadeIn 4s 1s both; -webkit-animation: fadeIn 4s 1s both; -ms-animation: fadeIn 4s 1s both; animation: fadeIn 4s 1s both; }
-h2 span:nth-child(2) { -moz-animation: fadeIn 4s 2s both; -webkit-animation: fadeIn 4s 2s both; -ms-animation: fadeIn 4s 2s both; animation: fadeIn 4s 2s both; font-size: 1.41em; line-height: 0.887em; margin-left: 0.887em; }
-h2 span:nth-child(3) { -moz-animation: fadeIn 4s 3s both; -webkit-animation: fadeIn 4s 3s both; -ms-animation: fadeIn 4s 3s both; animation: fadeIn 4s 3s both; font-size: 1.512em; line-height: 0.827em; margin-left: -0.413em; }
-h2 span:nth-child(4) { -moz-animation: fadeIn 4s 4s both; -webkit-animation: fadeIn 4s 4s both; -ms-animation: fadeIn 4s 4s both; animation: fadeIn 4s 4s both; font-size: 1.64em; line-height: 0.762em; margin-left: 1.905em; }
-h2 span:nth-child(5) { -moz-animation: fadeIn 4s 5s both; -webkit-animation: fadeIn 4s 5s both; -ms-animation: fadeIn 4s 5s both; animation: fadeIn 4s 5s both; font-size: 1.41em; line-height: 0.887em; margin-left: 3.547em; }
+h2 span:nth-child(2) { font-size: 1.41em; line-height: 0.887em; margin-left: 0.887em; }
+h2 span:nth-child(3) { font-size: 1.512em; line-height: 0.827em; margin-left: -0.413em; }
+h2 span:nth-child(4) { font-size: 1.64em; line-height: 0.762em; margin-left: 1.905em; }
+h2 span:nth-child(5) { font-size: 1.41em; line-height: 0.887em; margin-left: 3.547em; }
 h2 span:nth-child(5)::after { content: "."; }
 
 #contents .pagewrap { *zoom: 1; margin: auto; width: 36.5em; max-width: 100%; }
