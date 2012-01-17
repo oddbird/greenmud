@@ -11,7 +11,7 @@ $uifontsize : $xxsmallpx
     +opacity(0)
     +stretch-x
     top: 0
-    height: rhythm(2)
+    height: rhythm(1.25)
     z-index: 875
 
 .controls
@@ -117,6 +117,9 @@ h1, .breadcrumb
 
 #main
   +animation(fadeIn 1s .2s both)
+
+  +tiny
+    +adjust-font-size-to($smallpx)
 
 // pages ---------------------------------------------------------------------
 
