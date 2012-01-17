@@ -19,13 +19,15 @@
 .hidden { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; height: 1px; width: 1px; border: 0; }
 
 /* titlepages ---------------------------------------------------------------- */
-.title { clear: both; margin-left: 2.703%; margin-right: 2.703%; font-size: 1.563em; line-height: 1.6em; margin-top: 0.8em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 0.8em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
+.title { clear: both; margin-left: 2.703%; margin-right: 2.703%; font-size: 1.563em; line-height: 1.6em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
 @media (min-width: 500px) { .title { clear: both; margin-left: 1.639%; margin-right: 1.639%; } }
 @media (min-width: 960px) { .title { clear: both; margin-left: 1.37%; margin-right: 1.37%; } }
 .title:before, .title:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(153, 153, 255, 0.41); z-index: -1; }
 .title:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 .title:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
-.title b::after { content: ": "; }
+.title b { font-size: 0.64em; line-height: 1.25em; display: block; }
+@media (min-height: 480px) { .title { margin-top: 1.6em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 1.6em; } }
+@media (min-height: 600px) { .title { margin-top: 2.4em; } }
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
