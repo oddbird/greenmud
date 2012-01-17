@@ -72,7 +72,6 @@ var GM = (function (GM, $) {
 
         prev.click(function (e) {
             var href = $(this).attr('href');
-            console.log(href);
             if (pages.filter('.prev-page').length) {
                 turnToPage(pages.filter('.prev-page'));
             } else if (href !== undefined) {
