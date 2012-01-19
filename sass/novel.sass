@@ -119,41 +119,12 @@ h1, .breadcrumb
 
 // main ----------------------------------------------------------------------
 
-#main
+.page
   +animation(fadeIn 1s .2s both)
+  +padding-leader(1.5)
 
   +tiny
     +adjust-font-size-to($smallpx)
 
-// pages ---------------------------------------------------------------------
-
-=pageindex()
-  @for $i from 1 through 100
-    &:nth-child(#{101 - $i})
-      z-index: $i
-
-.page
-  +opacity(0)
-  +stretch
-  +pageindex
-  +box-shadow($base 0 0 rhythm())
-  display: none
-  padding: rhythm(1) 0
-  background-color: white
-  overflow-x: hidden
-  overflow-y: auto
-  +small(height)
-    padding: rhythm(2) 0
-
-.prev-page, .active-page, .next-page
-  +transition(all 800ms)
-  display: block
-
-.active-page
-  +opacity(1)
-
-.prev-page
-  +opacity(1)
-  +translate(- 100%,0)
-  margin-left: rhythm(-1)
-  overflow: hidden
+  +small
+    +padding-leader(2)

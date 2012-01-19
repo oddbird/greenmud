@@ -1,15 +1,24 @@
 ---
-title: Front Matter
-description: Front Matter for Into The Green Green Mud
+description: Title Page for Into The Green Green Mud
 voice: narrator
-extra_styles: chapters/frontmatter.css
-next_url: /dancing/
-pages:
-    - url: _title.html
-    - url: _copyright.html
-    - url: _contents.html
-    - url: _epigraph.html
+next_url: copyright.html
+slug: titlepage
 ---
 
-{% from "novel/macros.j2" import render_pages with context %}
-{{ render_pages(resource.meta.pages) }}
+<h2 class="novel-title">
+  <span>Into</span>
+  <span>The</span>
+  <span>Green</span>
+  <span>Green</span>
+  <span>Mud</span>
+</h2>
+
+<p class="tagline">A novel (with pictures)</p>
+
+<p class="byline vcard">
+  by <a href="http://eric.andmeyer.com/" class="fn url">Eric A. Meyer</a>
+</p>
+
+<p class="publisher">
+  <a href="http://www.oddbird.net/">OddBird</a>
+</p>

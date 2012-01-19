@@ -1,6 +1,9 @@
 book: Dancing Without Architecture
 book_slug: dancing
 chapter_slug: frontmatter
+extra_styles: chapters/dancing.css
+voice: narrator
+
 chapters:
     -   name: 'In Which JJ.'
         url: 'in-which-jj/'

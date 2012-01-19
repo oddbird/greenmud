@@ -1,5 +1,7 @@
-extends: novel/base_novel.j2
-default_block: main
+extends: novel/page.j2
+default_block: page
 
 book_slug: greenmud
 chapter_slug: frontmatter
+extra_styles: chapters/frontmatter.css
+voice: narrator

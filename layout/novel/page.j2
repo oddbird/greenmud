@@ -1,0 +1,15 @@
+{% extends 'novel/base_novel.j2' %}
+
+{% block main %}
+  <div id="{{ resource.meta.slug }}" role="main" class="page {{ resource.meta.voice }} {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }}">
+  <div class="pagewrap">
+  <div class="content">
+  {% filter markdown|typogrify -%}
+  {% block page %}
+
+  {% endblock page %}
+  {%- endfilter %}
+  </div>
+  </div>
+  </div>
+{% endblock main %}
