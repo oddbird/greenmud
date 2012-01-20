@@ -16,8 +16,8 @@
     +full
 
 // large screens -------------------------------------------------------------
-  $media-query-width-large: 1280px
-  $media-query-height-large: 1280px
+$media-query-width-large: 1280px
+$media-query-height-large: 900px
 $large-columns: 12
 
 =large($what: "width")
@@ -30,18 +30,18 @@ $large-columns: 12
       @content
   @if $what == "height"
     // @media (min-height: $media-query-height-large)
-    @media (min-height: 1280px)
+    @media (min-height: 1080px)
       @content
   @if $what == "both"
-    @media (min-width: 1280px) and (min-height: 1280px)
+    @media (min-width: 1280px) and (min-height: 900px)
       @content
   @if $what == "either"
-    @media (min-width: 1280px), (min-height: 1280px)
+    @media (min-width: 1280px), (min-height: 900px)
       @content
 
 // medium screens ------------------------------------------------------------
-  $media-query-width-medium: 960px
-  $media-query-height-medium: 600px
+$media-query-width-medium: 960px
+$media-query-height-medium: 480px
 $medium-columns: 12
 
 =medium($what: "width")
@@ -54,13 +54,13 @@ $medium-columns: 12
       @content
   @if $what == "height"
     // @media (min-height: $media-query-height-medium)
-    @media (min-height: 600px)
+    @media (min-height: 480px)
       @content
   @if $what == "both"
-    @media (min-width: 960px) and (min-height: 600px)
+    @media (min-width: 960px) and (min-height: 480px)
       @content
   @if $what == "either"
-    @media (min-width: 960px), (min-height: 600px)
+    @media (min-width: 960px), (min-height: 480px)
       @content
 
 =medium-only($what: "width")
@@ -73,18 +73,18 @@ $medium-columns: 12
       @content
   @if $what == "height"
     // @media (min-height: $media-query-height-medium) and (max-height: $media-query-height-large - 1px)
-    @media (min-height: 600px) and (max-height: 1279px)
+    @media (min-height: 480px) and (max-height: 1279px)
       @content
   @if $what == "both"
-    @media (min-width: 960px) and (max-width: 1279px) and (min-height: 600px) and (max-height: 1279px)
+    @media (min-width: 960px) and (max-width: 1279px) and (min-height: 480px) and (max-height: 899px)
       @content
   @if $what == "either"
-    @media (min-width: 960px) and (max-width: 1279px), (min-height: 600px) and (max-height: 1279px)
+    @media (min-width: 960px) and (max-width: 1279px), (min-height: 480px) and (max-height: 899px)
       @content
 
 // small screens -------------------------------------------------------------
-  $media-query-width-small: 500px
-  $media-query-height-small: 480px
+$media-query-width-small: 500px
+$media-query-height-small: 320px
 $small-columns: 10
 
 =small($what: "width")
@@ -97,13 +97,13 @@ $small-columns: 10
       @content
   @if $what == "height"
     // @media (min-height: $media-query-height-small)
-    @media (min-height: 480px)
+    @media (min-height: 320px)
       @content
   @if $what == "both"
-    @media (min-width: 500px) and (min-height: 480px)
+    @media (min-width: 500px) and (min-height: 320px)
       @content
   @if $what == "either"
-    @media (min-width: 500px), (min-height: 480px)
+    @media (min-width: 500px), (min-height: 320px)
       @content
 
 =small-only($what: "width")
@@ -119,10 +119,10 @@ $small-columns: 10
     @media (min-height: 480px) and (max-height: 599px)
       @content
   @if $what == "both"
-    @media (min-width: 500px) and (max-width: 959px) and (min-height: 500px) and (max-height: 599px)
+    @media (min-width: 500px) and (max-width: 959px) and (min-height: 500px) and (max-height: 479px)
       @content
   @if $what == "either"
-    @media (min-width: 500px) and (max-width: 959px), (min-height: 480px) and (max-height: 599px)
+    @media (min-width: 500px) and (max-width: 959px), (min-height: 480px) and (max-height: 479px)
       @content
 
 // timy screens --------------------------------------------------------------

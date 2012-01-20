@@ -19,31 +19,79 @@
 .hidden { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; height: 1px; width: 1px; border: 0; }
 
 /* titlepages ---------------------------------------------------------------- */
-.title { clear: both; margin-left: 2.703%; margin-right: 2.703%; font-size: 1.563em; line-height: 1.6em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
-@media (min-width: 500px) { .title { clear: both; margin-left: 1.639%; margin-right: 1.639%; } }
-@media (min-width: 960px) { .title { clear: both; margin-left: 1.37%; margin-right: 1.37%; } }
+.title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 1.6em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
+@media (min-width: 500px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 960px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 .title:before, .title:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(153, 153, 255, 0.41); z-index: -1; }
 .title:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 .title:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 .title b { font-size: 0.64em; line-height: 1.25em; display: block; }
-@media (min-height: 480px) { .title { margin-top: 1.6em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 1.6em; } }
-@media (min-height: 600px) { .title { margin-top: 2.4em; } }
+@media (min-height: 320px) { .title { margin-top: 1.6em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 1.6em; } }
+@media (min-height: 480px) { .title { margin-top: 2.4em; } }
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
+@-webkit-keyframes line { 0% { background-position: 1500px bottom; }
+  100% { background-position: 0 bottom; } }
+
+@-moz-keyframes line { 0% { background-position: 1500px bottom; }
+  100% { background-position: 0 bottom; } }
+
+@-ms-keyframes line { 0% { background-position: 1500px bottom; }
+  100% { background-position: 0 bottom; } }
+
+@keyframes line { 0% { background-position: 1500px bottom; }
+  100% { background-position: 0 bottom; } }
+
+@-webkit-keyframes titlebg { 0% { background-color: #ffe5f8; }
+  50% { background-color: #e5e5ff; }
+  100% { background-color: #ffe5f8; } }
+
+@-moz-keyframes titlebg { 0% { background-color: #ffe5f8; }
+  50% { background-color: #e5e5ff; }
+  100% { background-color: #ffe5f8; } }
+
+@-ms-keyframes titlebg { 0% { background-color: #ffe5f8; }
+  50% { background-color: #e5e5ff; }
+  100% { background-color: #ffe5f8; } }
+
+@keyframes titlebg { 0% { background-color: #ffe5f8; }
+  50% { background-color: #e5e5ff; }
+  100% { background-color: #ffe5f8; } }
+
+#titlepage { -moz-animation: titlebg 60s infinite both; -webkit-animation: titlebg 60s infinite both; -ms-animation: titlebg 60s infinite both; animation: titlebg 60s infinite both; background-color: #ffe5f8; }
+#titlepage .novel-title { font-size: 1.563em; line-height: 1.2em; padding-bottom: 2em; padding-left: 0.8em; padding-right: 0.8em; text-transform: lowercase; background-image: url('../../images/frontmatter/titlepage/line.png?1315178709'); background-repeat: repeat-x; background-position: 0 bottom; }
+@media (max-width: 499px) { #titlepage .novel-title { -moz-animation: line 60s infinite both; -webkit-animation: line 60s infinite both; -ms-animation: line 60s infinite both; animation: line 60s infinite both; } }
+#titlepage .green2 { font-weight: 700; }
+#titlepage .byline { padding-left: 1.25em; padding-right: 1.25em; }
+#titlepage .tagline { margin-bottom: 0em; }
+@media (min-width: 500px) { #titlepage { background-image: url('../../images/frontmatter/titlepage/titletree.png?1326358376'); background-repeat: no-repeat; background-position: left 1.875em; }
+  #titlepage .novel-title { margin-top: 2.5em; font: inherit; background-image: none; padding: 0; }
+  #titlepage .novel-title span { display: block; }
+  #titlepage .into { margin-left: 5em; }
+  #titlepage .the { font-size: 1.41em; line-height: 0.887em; margin-left: 4.434em; }
+  #titlepage .green1 { font-size: 1.819em; line-height: 0.687em; margin-left: 2.061em; }
+  #titlepage .green2 { font-size: 2.229em; line-height: 0.561em; margin-top: 0.701em; margin-left: 3.645em; }
+  #titlepage .mud { font-size: 1.41em; line-height: 0.887em; margin-left: 9.311em; }
+  #titlepage .byline { margin-top: 1.25em; } }
+@media (min-width: 960px) { #titlepage .novel-title { margin-left: 10em; }
+  #titlepage .mud { margin-left: 7.981em; }
+  #titlepage .byline { position: absolute; top: 0; right: 0; text-align: right; } }
+@media (min-width: 960px) and (min-height: 480px) { #titlepage .novel-title { margin-top: 11.25em; } }
+
 @media (min-width: 500px) and (max-width: 959px) { #contents { font-size: 0.8em; line-height: 1.562em; } }
 #contents ol { font-size: 0.8em; line-height: 1.562em; margin-bottom: 1.562em; }
-#contents .pagewrap { *zoom: 1; margin: auto; width: 30.5em; max-width: 100%; }
+#contents .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
 #contents .pagewrap:after { content: ""; display: table; clear: both; }
-@media (min-width: 500px) { #contents .pagewrap { *zoom: 1; margin: auto; width: 30.5em; max-width: 100%; }
+@media (min-width: 500px) { #contents .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
   #contents .pagewrap:after { content: ""; display: table; clear: both; } }
-@media (min-width: 960px) { #contents .pagewrap { *zoom: 1; margin: auto; width: 36.5em; max-width: 100%; }
+@media (min-width: 960px) { #contents .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #contents .pagewrap:after { content: ""; display: table; clear: both; } }
-#contents .content { clear: both; margin-left: 1.37%; margin-right: 1.37%; padding-left: 8.219%; padding-right: 8.219%; }
-@media (min-width: 500px) { #contents .content { clear: both; margin-left: 1.639%; margin-right: 1.639%; } }
-@media (min-width: 960px) { #contents .content { clear: both; margin-left: 1.37%; margin-right: 1.37%; } }
-@media (min-width: 500px) { #contents .content { padding-left: 9.836%; padding-right: 9.836%; } }
-@media (min-width: 960px) { #contents .content { padding-left: 8.219%; padding-right: 8.219%; } }
+#contents .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; padding-left: 7.792%; padding-right: 7.792%; }
+@media (min-width: 500px) { #contents .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 960px) { #contents .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+@media (min-width: 500px) { #contents .content { padding-left: 9.231%; padding-right: 9.231%; } }
+@media (min-width: 960px) { #contents .content { padding-left: 7.792%; padding-right: 7.792%; } }
 @media (min-width: 500px) { #contents .contents { display: inline; float: left; width: 48.936%; margin-right: 2.128%; }
   #contents .contents:last-child { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
 @media (min-width: 960px) { #contents .contents { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }

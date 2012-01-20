@@ -3,11 +3,100 @@
 
 // title page ----------------------------------------------------------------
 
-$chimg  : 'frontmatter/titlepage/'
-$titletree  : $chimg + 'titletree.png'
-$bird  : $chimg + 'bird.png'
+$noise      : 'frontmatter/titlepage/noise.png'
+$line       : 'frontmatter/titlepage/line.png'
+$titletree  : 'frontmatter/titlepage/titletree.png'
+$bird       : 'frontmatter/titlepage/bird.png'
 
-// #titlepage
+$the    : $normpx + $xxxsmallpx
+$green1 : $the + $xxxsmallpx
+$green2 : $green1 + $xxxsmallpx
+
++keyframes(line)
+  0%
+    background-position: image-width($line) bottom
+  100%
+    background-position: 0 bottom
+
++keyframes(titlebg)
+  0%
+    background-color: $pink-hint
+  50%
+    background-color: $blue-hint
+  100%
+    background-color: $pink-hint
+
+#titlepage
+  +animation(titlebg 60s infinite both)
+  background-color: $pink-hint
+
+  .novel-title
+    +adjust-font-size-to($largepx,1.5)
+    +padding-trailer(2.5,$largepx)
+    +hpadding(rhythm(1,$largepx))
+    text-transform: lowercase
+    background:
+      image: image-url($line)
+      repeat: repeat-x
+      position: 0 bottom
+    +tiny
+      +animation(line 60s infinite both)
+
+  .green2
+    +bold
+  .byline
+    +hpadding
+  .tagline
+    +trailer(0)
+
+  +small
+    background:
+      image: image-url($titletree)
+      repeat: no-repeat
+      position: left rhythm(1.5)
+
+    .novel-title
+      +leader(2)
+      font: inherit
+      background-image: none
+      padding: 0
+      span
+        display: block
+
+    .into
+      margin-left: rhythm(4)
+    .the
+      +adjust-font-size-to($the,1)
+      margin-left: rhythm(5,$the)
+    .green1
+      +adjust-font-size-to($green1,1)
+      margin-left: rhythm(3,$green1)
+    .green2
+      +adjust-font-size-to($green2,1)
+      +leader(1.25,$green2)
+      margin-left: rhythm(6.5,$green2)
+    .mud
+      +adjust-font-size-to($the,1)
+      margin-left: rhythm(10.5,$the)
+
+    .byline
+      +leader
+
+  +medium
+    .novel-title
+      margin-left: rhythm(8)
+    .mud
+      margin-left: rhythm(9,$the)
+    .byline
+      position: absolute
+      top: 0
+      right: 0
+      text-align: right
+
+  +medium(both)
+    .novel-title
+      +leader(9)
+
 
 // copyright -----------------------------------------------------------------
 

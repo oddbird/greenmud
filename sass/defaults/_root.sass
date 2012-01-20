@@ -12,6 +12,16 @@ body
   position: relative
   color: $base
 
+  +tiny(height)
+    min-height: $media-query-height-small
+
+  +small(height)
+    min-height: $media-query-height-medium
+
+  +medium(height)
+    min-height: $media-query-height-large
+
+
 /* Selected Text -------------------------------------------------------------
 
 =selected-text($color:$alt)
