@@ -27,7 +27,7 @@
 .title:after, #titlepage h2:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 .title b, #titlepage h2 b { font-size: 0.64em; line-height: 1.25em; display: block; }
 @media (min-height: 320px) { .title, #titlepage h2 { margin-top: 1.6em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 1.6em; } }
-@media (min-height: 700px) { .title, #titlepage h2 { margin-top: 2.4em; } }
+@media (min-height: 480px) { .title, #titlepage h2 { margin-top: 2.4em; } }
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
