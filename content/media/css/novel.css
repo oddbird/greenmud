@@ -56,9 +56,6 @@ html > body { font-size: 28px; }
 html { font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
 body { position: relative; color: #202020; }
-@media (max-height: 479px) { body { min-height: 320px; } }
-@media (min-height: 320px) { body { min-height: 480px; } }
-@media (min-height: 480px) { body { min-height: 900px; } }
 
 /* Selected Text ------------------------------------------------------------- */
 ::-webkit-selection { color: black; background: #bf008f; text-shadow: none; }
