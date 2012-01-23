@@ -83,7 +83,7 @@
 #titlepage .into { -moz-animation: fadeIn 2s 1s ease both; -webkit-animation: fadeIn 2s 1s ease both; -ms-animation: fadeIn 2s 1s ease both; animation: fadeIn 2s 1s ease both; font-size: 1.25em; line-height: 1em; display: inline; float: left; margin-left: 7.317%; padding-left: 29.268%; margin-right: 0.2em; }
 #titlepage .the { -moz-animation: fadeIn 2s 2s ease both; -webkit-animation: fadeIn 2s 2s ease both; -ms-animation: fadeIn 2s 2s ease both; animation: fadeIn 2s 2s ease both; font-size: 1.536em; line-height: 0.814em; display: inline; float: left; }
 #titlepage .green1 { -moz-animation: fadeIn 2s 3s ease both; -webkit-animation: fadeIn 2s 3s ease both; -ms-animation: fadeIn 2s 3s ease both; animation: fadeIn 2s 3s ease both; font-size: 1.75em; line-height: 0.714em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-right: 29.268%; text-align: center; }
-#titlepage .green2 { -moz-animation: fadeIn 2s 4s ease both; -webkit-animation: fadeIn 2s 4s ease both; -ms-animation: fadeIn 2s 4s ease both; animation: fadeIn 2s 4s ease both; font-size: 1.964em; line-height: 0.636em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 43.902%; }
+#titlepage .green2 { -moz-animation: fadeIn 2s 4s ease both; -webkit-animation: fadeIn 2s 4s ease both; -ms-animation: fadeIn 2s 4s ease both; animation: fadeIn 2s 4s ease both; font-size: 1.964em; line-height: 0.636em; margin-top: -0.318em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 43.902%; }
 #titlepage .mud { -moz-animation: fadeIn 2s 5s ease both; -webkit-animation: fadeIn 2s 5s ease both; -ms-animation: fadeIn 2s 5s ease both; animation: fadeIn 2s 5s ease both; font-size: 1.25em; line-height: 1em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 58.537%; }
 #titlepage .byline { -moz-animation: fadeIn 3s 6s ease both; -webkit-animation: fadeIn 3s 6s ease both; -ms-animation: fadeIn 3s 6s ease both; animation: fadeIn 3s 6s ease both; clear: both; margin-left: 7.317%; margin-right: 7.317%; }
 @media (min-width: 525px) { #titlepage .byline { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
@@ -91,6 +91,7 @@
 #titlepage .byline p { margin-bottom: 0em; }
 @media (min-height: 350px) { #titlepage .novel-title { -moz-animation: line 75s infinite both; -webkit-animation: line 75s infinite both; -ms-animation: line 75s infinite both; animation: line 75s infinite both; -moz-background-size: auto, 5em auto; -webkit-background-size: auto, 5em auto; -o-background-size: auto, 5em auto; background-size: auto, 5em auto; padding-bottom: 0em; background-image: url('../../images/frontmatter/titlepage/line.png?1327284513'), url('../../images/frontmatter/titlepage/scribble_sm.png?1327188026'); background-repeat: repeat-x, no-repeat; background-position: 0 center, center; }
   #titlepage .green1 { margin-bottom: 2.857em; }
+  #titlepage .green2 { margin-top: 0em; }
   #titlepage .byline { position: absolute; left: 0; right: 0; bottom: 0.625em; }
   #titlepage .byline .wrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
   #titlepage .byline .wrap:after { content: ""; display: table; clear: both; } }
