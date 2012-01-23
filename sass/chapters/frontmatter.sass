@@ -100,6 +100,12 @@ $green2 : $green1 + 6px
     .green1
       +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
 
+    .byline
+      +stretch-x
+      bottom: rhythm(.5)
+      .wrap
+        +container
+
   +small(width)
     .into
       +alpha
@@ -120,6 +126,9 @@ $green2 : $green1 + 6px
 
     .green1
       +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
+
+    .byline
+      +adjust-font-size-to($smallpx)
 
   +medium(height)
     .novel-title
@@ -145,12 +154,6 @@ $green2 : $green1 + 6px
     .mud
       +full
       +prefix(8)
-
-    .byline
-      +stretch-x
-      bottom: rhythm(.5)
-      .wrap
-        +container
 
 
 // copyright -----------------------------------------------------------------

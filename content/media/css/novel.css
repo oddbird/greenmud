@@ -37,14 +37,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* titlepages ---------------------------------------------------------------- */
 .title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 1.6em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; position: relative; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; text-align: center; }
-@media (min-width: 500px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
-@media (min-width: 960px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+@media (min-width: 525px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 980px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 .title:before, .title:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(153, 153, 255, 0.41); z-index: -1; }
 .title:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 .title:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 .title b { font-size: 0.64em; line-height: 1.25em; display: block; }
-@media (min-height: 320px) { .title { margin-top: 1.6em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 1.6em; } }
-@media (min-height: 480px) { .title { margin-top: 2.4em; } }
+@media (min-height: 350px) { .title { margin-top: 1.6em; padding-top: 1.6em; padding-bottom: 1.6em; margin-bottom: 1.6em; } }
+@media (min-height: 490px) { .title { margin-top: 2.4em; } }
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
@@ -53,7 +53,7 @@ body { font-size: 140%; line-height: 1.562em; }
 
 html > body { font-size: 22.4px; }
 
-@media (min-width: 500px) and (min-height: 320px) { body { font-size: 175%; line-height: 1.25em; }
+@media (min-width: 525px) and (min-height: 350px) { body { font-size: 175%; line-height: 1.25em; }
   html > body { font-size: 28px; } }
 html { font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
@@ -941,8 +941,8 @@ dt { margin-top: 1.25em; }
 .before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
 .after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; display: block; }
 .after .pagenav [href], .after .pagenav .active { position: absolute; top: 0; bottom: 0; width: 0.61em; z-index: 850; }
-@media (min-width: 500px) { .after .pagenav [href], .after .pagenav .active { width: 1.221em; } }
-@media (min-width: 960px) { .after .pagenav [href], .after .pagenav .active { width: 2.441em; } }
+@media (min-width: 525px) { .after .pagenav [href], .after .pagenav .active { width: 1.221em; } }
+@media (min-width: 980px) { .after .pagenav [href], .after .pagenav .active { width: 2.441em; } }
 .after .pagenav .prev [href], .after .pagenav .prev .active { left: 0; }
 .after .pagenav .next [href], .after .pagenav .next .active { right: 0; }
 
@@ -960,4 +960,5 @@ h1, .breadcrumb { *display: inline; }
 .tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }
 .tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
-.main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; padding-top: 1.875em; }
+.main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; padding-top: 1.875em; }
+@media (min-height: 700px) { .main { padding-top: 3.75em; } }
