@@ -35,12 +35,12 @@ $green2 : $green1 + 6px
 
 #titlepage
   +animation(titlebg 60s infinite both)
-  +background(linear-gradient(top left, rgba($pink-lighter,$xxxsmall), rgba($pink-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)))
+  +background(linear-gradient(top left, rgba($pink-hint,0), rgba($pink-hint,0) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)))
   background-color: $pink-hint
 
   .content
     background: image-url($strings-left) no-repeat scroll, image-url($strings-right) no-repeat scroll
-      position: - image-width($strings-left), 400%
+      position: - image-width($strings-left), $media-query-width-medium
 
   .novel-title
     +animation(linetiny 75s infinite both)
@@ -160,7 +160,7 @@ $green2 : $green1 + 6px
 
   +medium(both)
     .content
-      background-position: left, right
+      background-position: left, 100%
 
     .novel-title
       background:
