@@ -1,10 +1,10 @@
 {% extends 'novel/base_novel.j2' %}
 
 {% block bodyid %}{{ resource.meta.slug }}{% endblock bodyid %}
-{% block bodyclasses %}page {{ resource.meta.voice }} {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }}{% endblock bodyclasses %}
+{% block bodyclasses %}page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }}{% endblock bodyclasses %}
 
 {% block main %}
-  <div role="main" class="main">
+  <div role="main" class="main {{ resource.meta.voice }}">
   <div class="pagewrap">
   <div class="content">
   {% filter markdown|typogrify -%}
