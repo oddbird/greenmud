@@ -57,7 +57,7 @@ html > body { font-size: 22.4px; }
   html > body { font-size: 28px; } }
 html { font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
-body { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; position: relative; color: #202020; overflow-x: hidden; }
+body { position: relative; color: #202020; overflow-x: hidden; }
 
 /* Selected Text ------------------------------------------------------------- */
 ::-webkit-selection { color: black; background: #bf008f; text-shadow: none; }
@@ -960,5 +960,5 @@ h1, .breadcrumb { *display: inline; }
 .tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }
 .tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
-.main { padding-top: 1.875em; }
+.main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; padding-top: 1.875em; }
 @media (min-height: 320px) { .main { padding-top: 2.5em; } }
