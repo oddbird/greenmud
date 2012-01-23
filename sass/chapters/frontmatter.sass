@@ -48,6 +48,7 @@ $green2 : $green1 + 6px
       text-transform: lowercase
 
     span
+      +transition(all 300ms)
       display: block
 
   .into
@@ -79,12 +80,16 @@ $green2 : $green1 + 6px
       +trailer(0)
 
   +small(height)
-    background-position: 130% 130%
+    background: none
 
     .novel-title
       +animation(line 75s infinite both)
+      +background-size(auto, rhythm(floor(image-height($scribble-sm)/$medpx)) auto)
       +padding-trailer(1)
-      background-position: 0 center
+      background:
+        image: image-url($line), image-url($scribble-sm)
+        repeat: repeat-x, no-repeat
+        position: 0 center, center
 
     .into
       +full
@@ -95,7 +100,7 @@ $green2 : $green1 + 6px
       +float(none)
       margin-left: side-gutter() + gutter()*2
     .green1
-      +trailer(2.5,$green1)
+      +trailer(floor(image-height($scribble-sm)/$medpx),$green1)
 
     .byline
       +stretch-x
@@ -103,27 +108,40 @@ $green2 : $green1 + 6px
       .wrap
         +container
 
-  +medium(height)
-    background: none
-
-    .novel-title
-      background:
-        image: image-url($line), image-url($scribble)
-        repeat: repeat-x, no-repeat
-        position: 0 center, center
-
+  +small(width)
+    .into
+      +alpha
+      +prefix(4)
     .green1
-      +trailer(floor(image-height($scribble)/$base-line-height),$green1)
-
-  +small
+      +full
+      +suffix(2)
     .green2
       +full
-      +prefix(6)
+      +prefix(5)
     .mud
       +full
-      +prefix(7)
+      +prefix(6)
 
-  +medium
+  +small(both)
+    .novel-title
+      +background-size(auto, rhythm(floor(image-height($scribble-sm)/$medpx)) - rhythm(1) auto)
+
+    .green1
+      +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
+
+    .the
+      +prefix(4)
+      margin-left: side-gutter() + gutter()*2
+
+  +medium(height)
+    .novel-title
+      +background-size(auto, rhythm(floor(image-height($scribble)/$medpx)) auto)
+      background-image: image-url($line), image-url($scribble)
+
+    .green1
+      +trailer(floor(image-height($scribble)/$medpx),$green1)
+
+  +medium(both)
     .green2
       +full
       +prefix(7)
