@@ -3,12 +3,11 @@
 
 // title page ----------------------------------------------------------------
 
-$noise        : 'frontmatter/titlepage/noise.png'
-$line         : 'frontmatter/titlepage/line.png'
-$titletree    : 'frontmatter/titlepage/titletree.png'
-$scribble     : 'frontmatter/titlepage/scribble.png'
-$scribble-sm  : 'frontmatter/titlepage/scribble_sm.png'
-$bird         : 'frontmatter/titlepage/bird.png'
+$line           : 'frontmatter/titlepage/line.png'
+$scribble       : 'frontmatter/titlepage/scribble.png'
+$scribble-sm    : 'frontmatter/titlepage/scribble_sm.png'
+$strings-left   : 'frontmatter/titlepage/strings_left.png'
+$strings-right  : 'frontmatter/titlepage/strings_right.png'
 
 $the    : $medpx + 8px
 $green1 : $the + 6px
@@ -38,6 +37,10 @@ $green2 : $green1 + 6px
   +animation(titlebg 60s infinite both)
   +background(linear-gradient(top left, rgba($pink-lighter,$xxxsmall), rgba($pink-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)))
   background-color: $pink-hint
+
+  .content
+    background: image-url($strings-left) no-repeat scroll, image-url($strings-right) no-repeat scroll
+      position: - image-width($strings-left), 400%
 
   .novel-title
     +animation(linetiny 75s infinite both)
@@ -95,8 +98,8 @@ $green2 : $green1 + 6px
       +padding-trailer(0)
       background:
         image: image-url($line), image-url($scribble-sm)
-        repeat: repeat-x, no-repeat
         position: 0 center, center
+        repeat: repeat-x, no-repeat
 
     .green1
       +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
@@ -124,6 +127,11 @@ $green2 : $green1 + 6px
       +prefix(6)
 
   +small(both)
+    .content
+      +transition(background 300ms)
+      background: image-url($strings-left) no-repeat scroll, image-url($strings-right) no-repeat scroll
+        position: - image-width($strings-left), 250%
+
     .novel-title
       +background-size(auto, rhythm(floor(image-height($scribble-sm)/$medpx)) - rhythm(1) auto)
 
@@ -136,7 +144,8 @@ $green2 : $green1 + 6px
   +medium(height)
     .novel-title
       +background-size(auto, rhythm(floor(image-height($scribble)/$medpx)) auto)
-      background-image: image-url($line), image-url($scribble)
+      background:
+        image: image-url($line), image-url($scribble)
 
     .into
       +full
@@ -150,6 +159,14 @@ $green2 : $green1 + 6px
       +trailer(floor(image-height($scribble)/$medpx),$green1)
 
   +medium(both)
+    .content
+      background-position: left, right
+
+    .novel-title
+      background:
+        image: image-url($line), image-url($scribble)
+        position: 0 center, center
+        repeat: repeat-x, no-repeat
 
     .green2
       +full
