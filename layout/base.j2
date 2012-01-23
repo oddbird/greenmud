@@ -58,7 +58,7 @@
   {% block extrahead %}{% endblock %}
 
 </head>
-<body id="greengreenmud-com">
+<body id="{% block bodyid %}greengreenmud-com{% endblock bodyid %}" class="{% block bodyclasses %}{% endblock bodyclasses %}">
 {% block body %}
 
   <h1 role="banner"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>

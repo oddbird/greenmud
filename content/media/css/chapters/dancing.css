@@ -31,12 +31,12 @@
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
-.pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+.pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 500px) { .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
   .pagewrap:after { content: ""; display: table; clear: both; } }
 @media (min-width: 960px) { .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   .pagewrap:after { content: ""; display: table; clear: both; } }
-.pagewrap .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; padding-left: 7.792%; padding-right: 7.792%; }
+.pagewrap .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 14.634%; padding-right: 14.634%; }
 @media (min-width: 500px) { .pagewrap .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; padding-left: 9.231%; padding-right: 9.231%; } }
 @media (min-width: 960px) { .pagewrap .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; padding-left: 7.792%; padding-right: 7.792%; } }

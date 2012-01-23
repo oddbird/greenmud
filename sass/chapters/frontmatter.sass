@@ -3,20 +3,28 @@
 
 // title page ----------------------------------------------------------------
 
-$noise      : 'frontmatter/titlepage/noise.png'
-$line       : 'frontmatter/titlepage/line.png'
-$titletree  : 'frontmatter/titlepage/titletree.png'
-$bird       : 'frontmatter/titlepage/bird.png'
+$noise        : 'frontmatter/titlepage/noise.png'
+$line         : 'frontmatter/titlepage/line.png'
+$titletree    : 'frontmatter/titlepage/titletree.png'
+$scribble     : 'frontmatter/titlepage/scribble.png'
+$scribble-sm  : 'frontmatter/titlepage/scribble_sm.png'
+$bird         : 'frontmatter/titlepage/bird.png'
 
-$the    : $normpx + $xxxsmallpx
-$green1 : $the + $xxxsmallpx
-$green2 : $green1 + $xxxsmallpx
+$the    : $medpx + 8px
+$green1 : $the + 6px
+$green2 : $green1 + 6px
 
-+keyframes(line)
++keyframes(linetiny)
   0%
     background-position: image-width($line) bottom
   100%
     background-position: 0 bottom
+
++keyframes(line)
+  0%
+    background-position: image-width($line) center
+  100%
+    background-position: 0 center
 
 +keyframes(titlebg)
   0%
@@ -28,75 +36,100 @@ $green2 : $green1 + $xxxsmallpx
 
 #titlepage
   +animation(titlebg 60s infinite both)
-  background-color: $pink-hint
+  background: $pink-hint image-url($scribble-sm) no-repeat scroll 120% 130%
 
   .novel-title
-    +adjust-font-size-to($largepx,1.5)
-    +padding-trailer(2.5,$largepx)
-    +hpadding(rhythm(1,$largepx))
-    text-transform: lowercase
-    background:
-      image: image-url($line)
-      repeat: repeat-x
-      position: 0 bottom
-    +tiny
-      +animation(line 60s infinite both)
+    +animation(linetiny 75s infinite both)
+    +padding-trailer(2.5)
+    background: image-url($line) repeat-x scroll 0 bottom
 
+    .wrap
+      +media-container
+      text-transform: lowercase
+
+    span
+      display: block
+
+  .into
+    +adjust-font-size-to($medpx,1)
+    +float(left)
+    +alpha
+    +prefix(2)
+    margin-right: .2em
+  .the
+    +adjust-font-size-to($the,1)
+    +float(left)
+  .green1
+    +adjust-font-size-to($green1,1)
+    +full
+    +suffix(2)
+    text-align: center
   .green2
-    +bold
-  .byline
-    +hpadding
-  .tagline
-    +trailer(0)
+    +adjust-font-size-to($green2,1)
+    +full
+    +prefix(3)
+  .mud
+    +adjust-font-size-to($medpx,1)
+    +full
+    +prefix(4)
 
-  +small
-    background:
-      image: image-url($titletree)
-      repeat: no-repeat
-      position: left rhythm(1.5)
+  .byline
+    +media-full
+    p
+      +trailer(0)
+
+  +small(height)
+    background-position: 130% 130%
 
     .novel-title
-      +leader(2)
-      font: inherit
-      background-image: none
-      padding: 0
-      span
-        display: block
+      +animation(line 75s infinite both)
+      +padding-trailer(1)
+      background-position: 0 center
 
     .into
-      margin-left: rhythm(4)
+      +full
+      +prefix(2)
     .the
-      +adjust-font-size-to($the,1)
-      margin-left: rhythm(5,$the)
+      +full
+      +prefix(2)
+      +float(none)
+      margin-left: side-gutter() + gutter()*2
     .green1
-      +adjust-font-size-to($green1,1)
-      margin-left: rhythm(3,$green1)
-    .green2
-      +adjust-font-size-to($green2,1)
-      +leader(1.25,$green2)
-      margin-left: rhythm(6.5,$green2)
-    .mud
-      +adjust-font-size-to($the,1)
-      margin-left: rhythm(10.5,$the)
+      +trailer(2.5,$green1)
 
     .byline
-      +leader
+      +stretch-x
+      bottom: rhythm(.5)
+      .wrap
+        +container
+
+  +medium(height)
+    background: none
+
+    .novel-title
+      background:
+        image: image-url($line), image-url($scribble)
+        repeat: repeat-x, no-repeat
+        position: 0 center, center
+
+    .green1
+      +trailer(floor(image-height($scribble)/$base-line-height),$green1)
+
+  +small
+    .green2
+      +full
+      +prefix(6)
+    .mud
+      +full
+      +prefix(7)
 
   +medium
-    .novel-title
-      margin-left: rhythm(8)
+    .green2
+      +full
+      +prefix(7)
     .mud
-      margin-left: rhythm(9,$the)
-    .byline
-      position: absolute
-      top: 0
-      right: 0
-      text-align: right
-
-  +medium(both)
-    .novel-title
-      +leader(9)
-
+      +full
+      +prefix(8)
 
 // copyright -----------------------------------------------------------------
 

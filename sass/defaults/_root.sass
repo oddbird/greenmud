@@ -1,6 +1,9 @@
 /* Root ----------------------------------------------------------------------
 
-+establish-baseline
++establish-baseline($smallpx)
++small(both)
+  +establish-baseline
+
 
 html
   font-variant-ligatures: common-ligatures
@@ -9,8 +12,10 @@ html
 
 body
   @extend .mono
+  +animation(fadeIn 1s .2s both)
   position: relative
   color: $base
+  overflow-x: hidden
 
 /* Selected Text -------------------------------------------------------------
 
