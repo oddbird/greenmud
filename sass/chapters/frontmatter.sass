@@ -36,7 +36,8 @@ $green2 : $green1 + 6px
 
 #titlepage
   +animation(titlebg 60s infinite both)
-  +background(linear-gradient(top left, rgba($pink-lighter,$xxxsmall), rgba($pink-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)), $pink-hint image-url($scribble-sm) no-repeat scroll 120% 130%)
+  +background(linear-gradient(top left, rgba($pink-lighter,$xxxsmall), rgba($pink-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)))
+  background-color: $pink-hint
 
   .novel-title
     +animation(linetiny 75s infinite both)
@@ -86,7 +87,6 @@ $green2 : $green1 + 6px
       +trailer(0)
 
   +small(height)
-    +background(linear-gradient(top left, rgba($pink-lighter,$xxxsmall), rgba($pink-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)))
 
     .novel-title
       +animation(line 75s infinite both)
