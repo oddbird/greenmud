@@ -71,21 +71,21 @@ $uifontsize : $xxsmallpx
   .after &
     a, span
       +hide-text
-      display: block
-    [href], .active
       +stretch-y
+      display: block
       width: rhythm(.25, $uifontsize)
       z-index: 850
+
       +small
         width: rhythm(.5, $uifontsize)
       +medium
         width: rhythm(1, $uifontsize)
 
     .prev
-      [href], .active
+      a, span
         left: 0
     .next
-      [href], .active
+      a, span
         right: 0
 
 // breadcrumb ----------------------------------------------------------------
@@ -123,6 +123,7 @@ h1, .breadcrumb
   +animation(fadeIn 1s .2s both)
 
 .page
+  +box-sizing('border-box')
   +opacity(0)
   +clearfix
   +padding-leader(1)

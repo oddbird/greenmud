@@ -939,12 +939,11 @@ dt { margin-top: 1.25em; }
 .before .pagenav .prev, .before .pagenav .next { display: inline; float: left; }
 .before .pagenav .prev span, .before .pagenav .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
 .before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
-.after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; display: block; }
-.after .pagenav [href], .after .pagenav .active { position: absolute; top: 0; bottom: 0; width: 0.61em; z-index: 850; }
-@media (min-width: 525px) { .after .pagenav [href], .after .pagenav .active { width: 1.221em; } }
-@media (min-width: 980px) { .after .pagenav [href], .after .pagenav .active { width: 2.441em; } }
-.after .pagenav .prev [href], .after .pagenav .prev .active { left: 0; }
-.after .pagenav .next [href], .after .pagenav .next .active { right: 0; }
+.after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; position: absolute; top: 0; bottom: 0; display: block; width: 0.61em; z-index: 850; }
+@media (min-width: 525px) { .after .pagenav a, .after .pagenav span { width: 1.221em; } }
+@media (min-width: 980px) { .after .pagenav a, .after .pagenav span { width: 2.441em; } }
+.after .pagenav .prev a, .after .pagenav .prev span { left: 0; }
+.after .pagenav .next a, .after .pagenav .next span { right: 0; }
 
 #location { position: absolute; top: 0; bottom: 0; left: 2.441em; right: 7.324em; }
 
@@ -962,7 +961,7 @@ h1, .breadcrumb { *display: inline; }
 
 .main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
 
-.page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; overflow: hidden; *zoom: 1; padding-top: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; }
+.page { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; overflow: hidden; *zoom: 1; padding-top: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; }
 @media (min-height: 350px) { .page { padding-top: 1.875em; } }
 @media (min-height: 700px) { .page { padding-top: 3.75em; } }
 

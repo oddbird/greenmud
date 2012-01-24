@@ -54,9 +54,9 @@ var GM = (function (GM, $) {
         }
     };
 
-    GM.bodyHeight = function (element) {
+    GM.bodyHeight = function (element, property) {
         var updateHeight = function (target) {
-            $(target).css('height', $(window).height());
+            $(target).css(property, $(window).height());
         };
         updateHeight(element);
         $(window).resize(function () {
