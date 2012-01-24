@@ -55,7 +55,7 @@ html > body { font-size: 22.4px; }
 
 @media (min-width: 525px) and (min-height: 350px) { body { font-size: 175%; line-height: 1.25em; }
   html > body { font-size: 28px; } }
-html { font-variant-ligatures: common-ligatures; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+html { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
 body { position: relative; color: #202020; overflow-x: hidden; }
 
