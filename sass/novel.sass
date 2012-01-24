@@ -121,11 +121,29 @@ h1, .breadcrumb
 
 .main
   +animation(fadeIn 1s .2s both)
-  +transition(padding 300ms)
+
+.page
+  +opacity(0)
+  +clearfix
   +padding-leader(1)
+  +transition(padding 300ms)
+  +box-shadow($base 0 0 rhythm())
 
   +small(height)
     +padding-leader(1.5)
 
   +large(height)
     +padding-leader(3)
+
+.prev-page, .active-page, .next-page
+  +transition(all 800ms)
+
+.active-page
+  +opacity(1)
+
+.prev-page
+  +opacity(1)
+  +translate(- 100%,0)
+  overflow: hidden
+  +small
+    +padding-leader(2)

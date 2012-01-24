@@ -960,6 +960,15 @@ h1, .breadcrumb { *display: inline; }
 .tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }
 .tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
-.main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; padding-top: 1.25em; }
-@media (min-height: 350px) { .main { padding-top: 1.875em; } }
-@media (min-height: 700px) { .main { padding-top: 3.75em; } }
+.main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
+
+.page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; overflow: hidden; *zoom: 1; padding-top: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; }
+@media (min-height: 350px) { .page { padding-top: 1.875em; } }
+@media (min-height: 700px) { .page { padding-top: 3.75em; } }
+
+.prev-page, .active-page, .next-page { -moz-transition: all 800ms; -webkit-transition: all 800ms; -o-transition: all 800ms; transition: all 800ms; }
+
+.active-page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+
+.prev-page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; -moz-transform: translate(-100%, 0); -webkit-transform: translate(-100%, 0); -o-transform: translate(-100%, 0); -ms-transform: translate(-100%, 0); transform: translate(-100%, 0); overflow: hidden; }
+@media (min-width: 525px) { .prev-page { padding-top: 2.5em; } }
