@@ -961,11 +961,9 @@ h1, .breadcrumb { *display: inline; }
 
 .main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
 
-.page { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; overflow: hidden; *zoom: 1; padding-top: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; }
+.page { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; overflow: hidden; *zoom: 1; padding-top: 1.25em; -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; -moz-transition: -moz-transform, padding 300ms; -webkit-transition: -webkit-transform, padding 300ms; -o-transition: -o-transform, padding 300ms; transition: transform, padding 300ms; }
 @media (min-height: 350px) { .page { padding-top: 1.875em; } }
 @media (min-height: 700px) { .page { padding-top: 3.75em; } }
-
-.prev-page, .active-page, .next-page { -moz-transition: all 800ms; -webkit-transition: all 800ms; -o-transition: all 800ms; transition: all 800ms; }
 
 .active-page { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 

@@ -127,17 +127,17 @@ h1, .breadcrumb
   +opacity(0)
   +clearfix
   +padding-leader(1)
-  +transition(padding 300ms)
   +box-shadow($base 0 0 rhythm())
+  -moz-transition: -moz-transform, padding 300ms
+  -webkit-transition: -webkit-transform, padding 300ms
+  -o-transition: -o-transform, padding 300ms
+  transition: transform, padding 300ms
 
   +small(height)
     +padding-leader(1.5)
 
   +large(height)
     +padding-leader(3)
-
-.prev-page, .active-page, .next-page
-  +transition(all 800ms)
 
 .active-page
   +opacity(1)
