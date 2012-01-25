@@ -1,0 +1,3 @@
+#!/bin/bash
+
+hyde serve -d ../greenmud-pages/ -p 8000
