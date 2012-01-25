@@ -110,6 +110,9 @@ $green2 : $green1 + 6px
         +container
 
   +small(width)
+    .content
+      background-position: - image-width($strings-left), 250%
+
     .into
       +alpha
       +prefix(4)
@@ -126,8 +129,6 @@ $green2 : $green1 + 6px
   +small(both)
     .content
       +transition(background 300ms)
-      background: image-url($strings-left) no-repeat scroll, image-url($strings-right) no-repeat scroll
-        position: - image-width($strings-left), 250%
 
     .green1
       +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
