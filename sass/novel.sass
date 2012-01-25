@@ -123,15 +123,16 @@ h1, .breadcrumb
   +animation(fadeIn 1s .2s both)
 
 .page
-  +box-sizing('border-box')
   +opacity(0)
   +clearfix
-  +padding-leader(1)
   +box-shadow($base 0 0 rhythm())
   -moz-transition: -moz-transform, padding 300ms
   -webkit-transition: -webkit-transform, padding 300ms
   -o-transition: -o-transform, padding 300ms
   transition: transform, padding 300ms
+
+.pagewrap
+  +padding-leader(1)
 
   +small(height)
     +padding-leader(1.5)

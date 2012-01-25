@@ -90,7 +90,8 @@
 @media (min-width: 525px) { #titlepage .byline { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #titlepage .byline { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #titlepage .byline p { margin-bottom: 0em; }
-@media (min-height: 350px) { #titlepage .novel-title { -moz-animation: line 75s infinite both; -webkit-animation: line 75s infinite both; -ms-animation: line 75s infinite both; animation: line 75s infinite both; -moz-background-size: auto, 5em auto; -webkit-background-size: auto, 5em auto; -o-background-size: auto, 5em auto; background-size: auto, 5em auto; padding-bottom: 0em; background-image: url('../../images/frontmatter/titlepage/line.png?1327284513'), url('../../images/frontmatter/titlepage/scribble_sm.png?1327188026'); background-position: 0 center, center; background-repeat: repeat-x, no-repeat; }
+@media (min-height: 350px) { #titlepage .novel-title { -moz-animation: line 75s infinite both; -webkit-animation: line 75s infinite both; -ms-animation: line 75s infinite both; animation: line 75s infinite both; padding-bottom: 0em; background-position: 0 center; }
+  #titlepage .novel-title .wrap { -moz-background-size: 5em auto; -webkit-background-size: 5em auto; -o-background-size: 5em auto; background-size: 5em auto; background: url('../../images/frontmatter/titlepage/scribble_sm.png?1327188026') no-repeat scroll center; }
   #titlepage .green1 { margin-bottom: 2.857em; }
   #titlepage .green2 { margin-top: 0em; }
   #titlepage .byline { position: absolute; left: 0; right: 0; bottom: 0.625em; }
@@ -101,15 +102,13 @@
   #titlepage .green2 { clear: both; margin-left: 4.615%; margin-right: 4.615%; padding-left: 46.154%; }
   #titlepage .mud { clear: both; margin-left: 4.615%; margin-right: 4.615%; padding-left: 55.385%; } }
 @media (min-width: 525px) and (min-height: 350px) { #titlepage .content { -moz-transition: background 300ms; -webkit-transition: background 300ms; -o-transition: background 300ms; transition: background 300ms; background: url('../../images/frontmatter/titlepage/strings_left.png?1327305552') no-repeat scroll, url('../../images/frontmatter/titlepage/strings_right.png?1327306277') no-repeat scroll; background-position: -260px, 250%; }
-  #titlepage .novel-title { -moz-background-size: auto, 5em auto; -webkit-background-size: auto, 5em auto; -o-background-size: auto, 5em auto; background-size: auto, 5em auto; }
   #titlepage .green1 { margin-bottom: 2.857em; }
   #titlepage .byline { font-size: 0.8em; line-height: 1.562em; } }
-@media (min-height: 490px) { #titlepage .novel-title { -moz-background-size: auto, 10em auto; -webkit-background-size: auto, 10em auto; -o-background-size: auto, 10em auto; background-size: auto, 10em auto; background-image: url('../../images/frontmatter/titlepage/line.png?1327284513'), url('../../images/frontmatter/titlepage/scribble.png?1327310829'); }
+@media (min-height: 490px) { #titlepage .novel-title .wrap { -moz-background-size: 10em auto; -webkit-background-size: 10em auto; -o-background-size: 10em auto; background-size: 10em auto; background-image: url('../../images/frontmatter/titlepage/scribble.png?1327310829'); }
   #titlepage .into { clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 29.268%; }
   #titlepage .the { clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 29.268%; display: inline; float: none; margin-left: 12.195%; }
   #titlepage .green1 { margin-bottom: 5.714em; } }
 @media (min-width: 980px) and (min-height: 490px) { #titlepage .content { background-position: left, 100%; }
-  #titlepage .novel-title { background-image: url('../../images/frontmatter/titlepage/line.png?1327284513'), url('../../images/frontmatter/titlepage/scribble.png?1327310829'); background-position: 0 center, center; background-repeat: repeat-x, no-repeat; }
   #titlepage .green2 { clear: both; margin-left: 3.896%; margin-right: 3.896%; padding-left: 54.545%; }
   #titlepage .mud { clear: both; margin-left: 3.896%; margin-right: 3.896%; padding-left: 62.338%; } }
 

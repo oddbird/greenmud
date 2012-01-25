@@ -95,12 +95,12 @@ $green2 : $green1 + 6px
 
     .novel-title
       +animation(line 75s infinite both)
-      +background-size(auto, rhythm(floor(image-height($scribble-sm)/$medpx)) - rhythm(1) auto)
       +padding-trailer(0)
-      background:
-        image: image-url($line), image-url($scribble-sm)
-        position: 0 center, center
-        repeat: repeat-x, no-repeat
+      background-position: 0 center
+
+      .wrap
+        +background-size(rhythm(floor(image-height($scribble-sm)/$medpx)) - rhythm(1) auto)
+        background: image-url($scribble-sm) no-repeat scroll center
 
     .green1
       +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
@@ -133,9 +133,6 @@ $green2 : $green1 + 6px
       background: image-url($strings-left) no-repeat scroll, image-url($strings-right) no-repeat scroll
         position: - image-width($strings-left), 250%
 
-    .novel-title
-      +background-size(auto, rhythm(floor(image-height($scribble-sm)/$medpx)) - rhythm(1) auto)
-
     .green1
       +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
 
@@ -144,9 +141,9 @@ $green2 : $green1 + 6px
 
   +medium(height)
     .novel-title
-      +background-size(auto, rhythm(floor(image-height($scribble)/$medpx)) auto)
-      background:
-        image: image-url($line), image-url($scribble)
+      .wrap
+        +background-size(rhythm(floor(image-height($scribble)/$medpx)) auto)
+        background-image: image-url($scribble)
 
     .into
       +full
@@ -162,12 +159,6 @@ $green2 : $green1 + 6px
   +medium(both)
     .content
       background-position: left, 100%
-
-    .novel-title
-      background:
-        image: image-url($line), image-url($scribble)
-        position: 0 center, center
-        repeat: repeat-x, no-repeat
 
     .green2
       +full
