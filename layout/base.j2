@@ -40,11 +40,7 @@
 
   <!-- Styles -->
   {% block styles -%}
-  <link rel="stylesheet" href="{{ media_url('css/novel.css') }}" />
-  {% if resource.meta.extra_styles -%}
-  {%- set style_url = 'css/' + resource.meta.extra_styles -%}
-  <link rel="stylesheet" href="{{ media_url(style_url) }}" />
-  {% endif %}
+  <link rel="stylesheet" href="{{ media_url('css/screen.css') }}" />
   {% endblock styles %}
 
   <!-- Modernizr -->
@@ -61,14 +57,21 @@
 <body id="greengreenmud-com">
 {% block body %}
 
-  <h1 role="banner"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
+  <header role="banner">
+    <h1 class="cover-title"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
+    <h2 class="byline">by <a href="http://eric.andmeyer.com/">Eric A. Meyer</a></h2>
+  </header>
 
-  <section id="main" role="main">
-  {% block main %}{% endblock main %}
-  </section>
+  <div id="main" role="main">
+    {% filter markdown|typogrify -%}
+    {% block main %}
+
+    {% endblock main %}
+    {%- endfilter %}
+  </div>
 
   <footer role="contentinfo">
-    [cc] 2011 <a href="http://eric.andmeyer.com">Eric A Meyer</a>
+    [cc] 2011 <a href="http://eric.andmeyer.com/">Eric A Meyer</a>
   </footer>
 
 {% endblock body%}
