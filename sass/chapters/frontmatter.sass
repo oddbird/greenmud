@@ -53,40 +53,36 @@ $green2 : $green1 + 6px
       text-transform: lowercase
 
     span
+      +animation(fadeIn 3s 3s ease both)
       +transition(all 300ms)
       display: block
 
   .into
-    +animation(fadeIn 2s 1s ease both)
     +adjust-font-size-to($medpx,1)
     +float(left)
     +alpha
     +prefix(2)
     margin-right: .2em
   .the
-    +animation(fadeIn 2s 2s ease both)
     +adjust-font-size-to($the,1)
     +float(left)
   .green1
-    +animation(fadeIn 2s 3s ease both)
     +adjust-font-size-to($green1,1)
     +full
     +suffix(2)
     text-align: center
   .green2
-    +animation(fadeIn 2s 4s ease both)
     +adjust-font-size-to($green2,1)
     +leader(-.5,$green2)
     +full
     +prefix(3)
   .mud
-    +animation(fadeIn 2s 5s ease both)
     +adjust-font-size-to($medpx,1)
     +full
     +prefix(4)
 
   .byline
-    +animation(fadeIn 3s 6s ease both)
+    +animation(fadeIn 3s 4s ease both)
     +media-full
     p
       +trailer(0)
