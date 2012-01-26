@@ -8,7 +8,8 @@ slug        : contents
 ---
 
 <section class="contents">
-<h4><a href="dancing/">Dancing Without Architecture.</a></h4>
+{% filter markdown -%}
+#### [Dancing Without Architecture.](dancing/)
 
 1. [In Which JJ.](dancing/in-which-jj/)
 1. Daymares, Poor Boy.
@@ -23,10 +24,11 @@ slug        : contents
 1. Those Nice Bright Colors.
 1. Into The Green Green Mud.
 1. Given time, silence.
-
+{%- endfilter %}
 </section>
 <section class="contents">
-<h4>This EverAfter Life.</h4>
+{% filter markdown|typogrify -%}
+#### This EverAfter Life.
 
 1. Stranger Than A Sunny Day On The Beach.
 1. Once Upon A Sunday Raining.
@@ -42,5 +44,5 @@ slug        : contents
 1. Whence, From Two.
 1. This Road Full Glittered.
 1. Over Un-Thought Waters.
-
+{%- endfilter %}
 </section>

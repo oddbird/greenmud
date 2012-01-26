@@ -4,11 +4,11 @@
 <div id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} active-page" data-prev="{{ resource.meta.prev_url }}" data-next="{{ resource.meta.next_url }}" data-url="{{ resource.meta.current_url }}">
   <div class="pagewrap">
   <div class="content">
-  {% filter markdown|typogrify -%}
+  {% filter typogrify %}
   {% block page %}
 
   {% endblock page %}
-  {%- endfilter %}
+  {% endfilter %}
   </div>
   </div>
 </div>
