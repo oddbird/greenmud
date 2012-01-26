@@ -172,13 +172,13 @@ $green2 : $green1 + 6px
 // contents ------------------------------------------------------------------
 
 #contents
-  +small-only
-    +adjust-font-size-to($smallpx)
 
   h4
     @extend .allcaps
+    +trailer(.5)
 
   ol
+    +no-style-list
     +adjust-font-size-to($smallpx)
     +trailer(1,$smallpx)
 
@@ -187,21 +187,28 @@ $green2 : $green1 + 6px
 
   .content
     +media-full
-    +pad(1,1)
-    +small
-      +pad(1,1)
-    +medium
-      +pad(1,1)
+    counter-reset: contents
 
   .contents
+    +box-sizing('border-box')
+    +hpadding(rhythm(1))
+
+    li
+      position: relative
+      counter-increment: contents
+      &::before
+        position: absolute
+        right: 100% + gutter()
+        content: counter(contents,decimal) "."
+
     +small
-      +columns(4,8)
-      &:last-child
-        +omega(8)
-    +medium
       +columns(5,10)
       &:last-child
         +omega(10)
+    +medium
+      +columns(6,12)
+      &:last-child
+        +omega(12)
 
 
 // epigraph ------------------------------------------------------------------
