@@ -19,12 +19,9 @@
 .hidden { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; height: 1px; width: 1px; border: 0; }
 
 /* titlepages ---------------------------------------------------------------- */
-.title, #titlepage h2 { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0.8em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -moz-transition: all 300ms; -webkit-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; position: relative; }
+.title, #titlepage h2 { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0.8em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -moz-transition: all 300ms; -webkit-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
 @media (min-width: 525px) { .title, #titlepage h2 { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { .title, #titlepage h2 { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-.title:before, #titlepage h2:before, .title:after, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(153, 153, 255, 0.41); z-index: -1; }
-.title:before, #titlepage h2:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
-.title:after, #titlepage h2:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 .title .wrap, #titlepage h2 .wrap { overflow: hidden; *zoom: 1; }
 .title i, #titlepage h2 i { font-size: 0.64em; line-height: 1.25em; display: block; font-style: normal; }
 @media (min-height: 350px) { .title, #titlepage h2 { margin-top: 1.6em; } }
