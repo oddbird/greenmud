@@ -1,6 +1,55 @@
 // Import --------------------------------------------------------------------
 @import ../defaults/default-mixins
 
+// home page ----------------------------------------------------------------
+
+body.homepage
+
+  #toggle
+    +opacity(.5)
+    background: rgba($yellow-lighter,$xxsmall)
+
+  .after
+    .prev
+      a
+        background: rgba($red-lighter,$xxsmall)
+    .next
+      a
+        background: rgba($green-lighter,$xxsmall)
+
+#home
+  .pagewrap
+    +media-container
+    +padding-leader(2)
+  .content
+    +media-full
+
+  .novel-title
+    +trailer(.5)
+    p
+      +trailer(0)
+    .name
+      +adjust-font-size-to($largepx)
+    .tagline, .byline
+      display: inline
+
+  .read, .support
+    +trailer(.5)
+    a, em
+      display: block
+    span
+      +adjust-font-size-to($smallpx)
+    em
+      @extend .allcaps
+      +adjust-font-size-to($medpx,1)
+      font-style: normal
+
+  .description, .instructions
+    +trailer(.5)
+    p
+      +trailer(0)
+
+
 // title page ----------------------------------------------------------------
 
 $noise          : 'frontmatter/titlepage/noise.png'
