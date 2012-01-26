@@ -24,17 +24,38 @@
 
 .title
   +media-full
-  +adjust-font-size-to($largepx)
-  +rhythm(0,1,1,0,$largepx)
-  +title
+  +adjust-font-size-to($largepx,1)
+  +rhythm(0,1,1,1,$largepx)
   +text-shadow(rgba($white,$xsmall) 0 1px 0)
+  +transition(all 300ms)
   text-align: center
-  b
+  +title
+
+  .wrap
+    +clearfix
+
+  i
     @extend .allcaps
     +adjust-font-size-to($normpx,1,$largepx)
     display: block
+    font-style: normal
 
   +small(height)
-    +rhythm(2,2,2,2,$largepx)
+    +leader(2,$largepx)
   +medium(height)
-    +leader(3,$largepx)
+    +leader(4,$largepx)
+  +large(height)
+    +leader(6,$largepx)
+
+  +small
+    i, .name
+      +columns(5,10)
+    i
+      +padding-leader(.5)
+      font: inherit
+    .name
+      text-transform: uppercase
+      +omega(10)
+    b
+      +adjust-font-size-to($normpx,1.5,$largepx)
+      display: block
