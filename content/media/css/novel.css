@@ -90,7 +90,7 @@ del { text-decoration: line-through; }
 
 mark { background: #ffff99; background-color: rgba(255, 255, 0, 0.5); text-shadow: none; }
 
-small { font-size: 0.429em; line-height: 2.917em; }
+small { font-size: 0.8em; line-height: 1.562em; }
 
 q { font-style: italic; }
 q em { font-style: normal; }
