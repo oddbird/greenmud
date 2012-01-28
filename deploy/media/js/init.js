@@ -13,6 +13,8 @@ var GM = (function (GM, $) {
         // local.js
         GM.toggleControls('#toggle', '.controls');
         GM.bodyHeight('.page', 'min-height');
+
+        // pageturning.js
         GM.pageTurning();
     });
 
