@@ -963,6 +963,7 @@ h1, .breadcrumb { *display: inline; }
 .tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
 .main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
+.js .main { position: relative; overflow: hidden; }
 
 .page { position: absolute; left: 0; right: 0; top: 0; display: none; background: white; }
 .page:nth-child(100) { z-index: 1; }

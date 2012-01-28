@@ -127,6 +127,10 @@ h1, .breadcrumb
 .main
   +animation(fadeIn 1s .2s both)
 
+  .js &
+    position: relative
+    overflow: hidden
+
 // page ----------------------------------------------------------------------
 
 =pageindex()
@@ -147,9 +151,6 @@ h1, .breadcrumb
 
 .prev-page
   +translate(- 100%,0)
-
-// .prev-page, .next-page
-  max-height: 100%
 
 // pagewrap ------------------------------------------------------------------
 
