@@ -125,6 +125,9 @@ var GM = (function (GM, $) {
                     // Store the prev and next page-nav
                     dataContent.data('pagenav', dataControls);
 
+                    // Set min-height of new page to be window height
+                    dataContent.css('min-height', $(window).height());
+
                     // Update the content and store the URL
                     dataContent.addClass('prev-page');
                     $('.active-page').before(dataContent);
@@ -143,6 +146,9 @@ var GM = (function (GM, $) {
                     // Store the prev and next page-nav
                     dataContent.data('pagenav', dataControls);
 
+                    // Set min-height of new page to be window height
+                    dataContent.css('min-height', $(window).height());
+
                     // Update the content and store the URL
                     dataContent.addClass('next-page');
                     $('.active-page').after(dataContent);
@@ -155,6 +161,7 @@ var GM = (function (GM, $) {
             thisPage.addClass('active-page');
             thisPage.prev(pageSelector).addClass('prev-page');
             thisPage.next(pageSelector).addClass('next-page');
+            $('.main').css('height', thisPage.height());
 
             pageControls.each(function () {
                 $(this).find('.pagenav').replaceWith(pageNav.clone());
