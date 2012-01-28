@@ -965,7 +965,7 @@ h1, .breadcrumb { *display: inline; }
 .main { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; }
 .js .main { position: relative; overflow: hidden; }
 
-.page { position: absolute; left: 0; right: 0; top: 0; display: none; background: white; }
+.page { position: absolute; left: 0; right: 0; top: 0; display: none; background: white; overflow-x: hidden; }
 .page:nth-child(100) { z-index: 1; }
 .page:nth-child(99) { z-index: 2; }
 .page:nth-child(98) { z-index: 3; }
