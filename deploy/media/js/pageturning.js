@@ -9,7 +9,6 @@ var GM = (function (GM, $) {
 
     // Based on https://gist.github.com/854622
     GM.pageTurning = function () {
-
         // Check to see if History.js is enabled for our Browser
         if (!History.enabled) {
             return false;
@@ -60,7 +59,12 @@ var GM = (function (GM, $) {
             if (e.which === 2 || e.metaKey) {
                 return true;
             } else if ($(this).parent('li').hasClass('break')) {
-                window.location = $(this).attr('href');
+                if ($('#toggle').hasClass('active')) {
+                    window.location = $(this).attr('href') + '#controls';
+                } else {
+                    window.location = $(this).attr('href');
+                }
+                e.preventDefault();
             } else {
                 if ($('.prev-page').length) {
                     turnToPage($('.prev-page'));
@@ -74,7 +78,12 @@ var GM = (function (GM, $) {
             if (e.which === 2 || e.metaKey) {
                 return true;
             } else if ($(this).parent('li').hasClass('break')) {
-                window.location = $(this).attr('href');
+                if ($('#toggle').hasClass('active')) {
+                    window.location = $(this).attr('href') + '#controls';
+                } else {
+                    window.location = $(this).attr('href');
+                }
+                e.preventDefault();
             } else {
                 if ($('.next-page').length) {
                     turnToPage($('.next-page'));

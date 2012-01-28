@@ -34,6 +34,10 @@ var GM = (function (GM, $) {
             doToggle();
             e.preventDefault();
         });
+
+        if (window.location.hash === '#controls') {
+            doToggle();
+        }
     };
 
     GM.bodyHeight = function (element, property) {
