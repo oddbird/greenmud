@@ -18,8 +18,9 @@ var GM = (function (GM, $) {
         // Prepare Variables
         /* Application Specific Variables */
         var pageSelector = '.page',
-            thisPage = $(pageSelector).addClass('active-page'),
+            thisPage = $(pageSelector),
             pageControls = $('.controls'),
+            stateChange = false,
             // HTML Helper
             documentHtml = function (html) {
 	            // Prepare
@@ -31,53 +32,53 @@ var GM = (function (GM, $) {
                 // Return
                 return result;
             },
-            turnToPage = function (page) {
+            turnToPage = function (page, replaceState) {
                 var state = {},
                     title = page.data('title'),
                     url = page.data('url'),
-                    prevURL = page.data('prev'),
-                    nextURL = page.data('next'),
-                    pageNav = page.data('pagenav');
+                    id = page.attr('id');
 
                 if ($('#toggle').hasClass('active')) { state.controls = true; } else { state.controls = false; }
+                state.title = title;
+                state.url = url;
+                state.id = id;
 
-                $(pageSelector).removeClass('active-page prev-page next-page');
-                page.addClass('active-page');
-                page.prev(pageSelector).addClass('prev-page');
-                page.next(pageSelector).addClass('next-page');
-
-                pageControls.each(function () {
-                    $(this).find('.pagenav').replaceWith(pageNav.clone());
-                });
-
-                document.title = title;
-                $('title').text(title);
-
-                History.pushState(state, title, url);
+                if (replaceState) {
+                    History.replaceState(state, title, url);
+                    if (!stateChange) {
+                        $(window).trigger('statechange');
+                    }
+                } else {
+                    History.pushState(state, title, url);
+                }
             };
 
         // Ajaxify
         pageControls.on('click', '.prev a', function (e) {
+            stateChange = false;
             // Continue as normal for cmd clicks etc
             if (e.which === 2 || e.metaKey) {
                 return true;
             } else if ($(this).parent('li').hasClass('break')) {
                 window.location = $(this).attr('href');
             } else {
-                thisPage = $('.prev-page');
-                turnToPage(thisPage);
+                if ($('.prev-page').length) {
+                    turnToPage($('.prev-page'));
+                }
                 e.preventDefault();
             }
         });
         pageControls.on('click', '.next a', function (e) {
+            stateChange = false;
             // Continue as normal for cmd clicks etc
             if (e.which === 2 || e.metaKey) {
                 return true;
             } else if ($(this).parent('li').hasClass('break')) {
                 window.location = $(this).attr('href');
             } else {
-                thisPage = $('.next-page');
-                turnToPage(thisPage);
+                if ($('.next-page').length) {
+                    turnToPage($('.next-page'));
+                }
                 e.preventDefault();
             }
         });
@@ -96,8 +97,11 @@ var GM = (function (GM, $) {
         // Hook into State Changes
         $(window).on('statechange', function () {
             // Prepare Variables
-            var prev = pageControls.first().find('.pagenav .prev a'),
-                next = pageControls.first().find('.pagenav .next a'),
+            var state = History.getState().data,
+                title = state.title,
+                pageNav,
+                prev,
+                next,
                 preparePrevPage = function (response, textStatus, jqXHR) {
                     // Prepare
                     var data = $(documentHtml(response)),
@@ -114,7 +118,7 @@ var GM = (function (GM, $) {
 
                     // Update the content and store the URL
                     dataContent.addClass('prev-page');
-                    thisPage.before(dataContent);
+                    $('.active-page').before(dataContent);
                 },
                 prepareNextPage = function (response, textStatus, jqXHR) {
                     // Prepare
@@ -132,8 +136,26 @@ var GM = (function (GM, $) {
 
                     // Update the content and store the URL
                     dataContent.addClass('next-page');
-                    thisPage.after(dataContent);
+                    $('.active-page').after(dataContent);
                 };
+
+            stateChange = true;
+            thisPage = $('#' + state.id);
+            pageNav = thisPage.data('pagenav');
+            $(pageSelector).removeClass('active-page prev-page next-page');
+            thisPage.addClass('active-page');
+            thisPage.prev(pageSelector).addClass('prev-page');
+            thisPage.next(pageSelector).addClass('next-page');
+
+            pageControls.each(function () {
+                $(this).find('.pagenav').replaceWith(pageNav.clone());
+            });
+
+            document.title = title;
+            $('title').text(title);
+
+            prev = pageControls.first().find('.pagenav .prev a');
+            next = pageControls.first().find('.pagenav .next a');
 
             if (!(prev.parent('li').hasClass('break')) && prev.attr('href') && !($(pageSelector).filter(function () { return $(this).data('url') === prev.attr('href'); }).length)) {
                 // Ajax Request the Prev Page
@@ -149,7 +171,7 @@ var GM = (function (GM, $) {
 
         thisPage.data('title', $('title').text());
         thisPage.data('pagenav', $('.controls .pagenav').first());
-        $(window).trigger('statechange');
+        turnToPage(thisPage, true);
     };
 
     return GM;
