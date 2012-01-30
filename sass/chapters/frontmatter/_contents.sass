@@ -1,0 +1,41 @@
+// contents ------------------------------------------------------------------
+
+#contents
+
+  h4
+    @extend .allcaps
+    +trailer(.5)
+
+  ol
+    +no-style-list
+    +adjust-font-size-to($smallpx)
+    +trailer(1,$smallpx)
+
+  .pagewrap
+    +media-container
+
+  .content
+    +media-full
+    counter-reset: contents
+
+  .contents
+    +box-sizing('border-box')
+    +hpadding(rhythm(1))
+
+    li
+      position: relative
+      counter-increment: contents
+      &::before
+        +opacity(.5)
+        position: absolute
+        right: 100% + gutter()
+        content: counter(contents,decimal) "."
+
+    +small
+      +columns(5,10)
+      &:last-child
+        +omega(10)
+    +medium
+      +columns(6,12)
+      &:last-child
+        +omega(12)

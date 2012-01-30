@@ -1,0 +1,162 @@
+// title page ----------------------------------------------------------------
+
+$noise          : 'frontmatter/titlepage/noise.png'
+$line           : 'frontmatter/titlepage/line.png'
+$scribble       : 'frontmatter/titlepage/scribble.png'
+$scribble-sm    : 'frontmatter/titlepage/scribble_sm.png'
+$strings-left   : 'frontmatter/titlepage/strings_left.png'
+$strings-right  : 'frontmatter/titlepage/strings_right.png'
+
+$the    : $medpx + 8px
+$green1 : $the + 6px
+$green2 : $green1 + 6px
+
++keyframes(linetiny)
+  0%
+    background-position: image-width($line) bottom
+  100%
+    background-position: 0 bottom
+
++keyframes(line)
+  0%
+    background-position: image-width($line) center
+  100%
+    background-position: 0 center
+
++keyframes(titlebg)
+  0%
+    background-color: $pink-hint
+  50%
+    background-color: $blue-hint
+  100%
+    background-color: $pink-hint
+
+#titlepage
+  +animation(titlebg 60s infinite both)
+  +background(linear-gradient(top left, rgba($pink-hint,0), rgba($pink-hint,0) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)), image-url($noise))
+  background-color: $pink-hint
+
+  .content
+    background: image-url($strings-left) no-repeat scroll, image-url($strings-right) no-repeat scroll
+      position: - image-width($strings-left), $media-query-width-medium
+
+  .novel-title
+    +animation(linetiny 75s infinite both)
+    +padding-trailer(2.5)
+    background: image-url($line) repeat-x scroll 0 bottom
+
+    .wrap
+      +media-container
+      text-transform: lowercase
+
+    span
+      +animation(fadeIn 3s 3s ease both)
+      +transition(all 300ms)
+      display: block
+
+  .into
+    +adjust-font-size-to($medpx,1)
+    +float(left)
+    +alpha
+    +prefix(2)
+    margin-right: .2em
+  .the
+    +adjust-font-size-to($the,1)
+    +float(left)
+  .green1
+    +adjust-font-size-to($green1,1)
+    +full
+    +suffix(2)
+    text-align: center
+  .green2
+    +adjust-font-size-to($green2,1)
+    +leader(-.5,$green2)
+    +full
+    +prefix(3)
+  .mud
+    +adjust-font-size-to($medpx,1)
+    +full
+    +prefix(4)
+
+  .byline
+    +animation(fadeIn 3s 4s ease both)
+    +media-full
+    p
+      +trailer(0)
+
+  +small(height)
+
+    .novel-title
+      +animation(line 75s infinite both)
+      +padding-trailer(0)
+      background-position: 0 center
+
+      .wrap
+        +background-size(rhythm(floor(image-height($scribble-sm)/$medpx)) - rhythm(1) auto)
+        background: image-url($scribble-sm) no-repeat scroll center
+
+    .green1
+      +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
+    .green2
+      +leader(0)
+
+    .byline
+      +stretch-x
+      bottom: rhythm(.5)
+      .wrap
+        +container
+
+  +small(width)
+    .content
+      background-position: - image-width($strings-left), 250%
+
+    .into
+      +alpha
+      +prefix(4)
+    .green1
+      +full
+      +suffix(2)
+    .green2
+      +full
+      +prefix(5)
+    .mud
+      +full
+      +prefix(6)
+
+  +small(both)
+    .content
+      +transition(background 300ms)
+
+    .green1
+      +trailer(floor(image-height($scribble-sm)/$medpx) - 1,$green1)
+
+    .byline
+      +adjust-font-size-to($smallpx)
+
+  +medium(height)
+    .novel-title
+      .wrap
+        +background-size(rhythm(floor(image-height($scribble)/$medpx)) auto)
+        background-image: image-url($scribble)
+
+    .into
+      +full
+      +prefix(2)
+    .the
+      +full
+      +prefix(2)
+      +float(none)
+      margin-left: side-gutter() + gutter()*2
+    .green1
+      +trailer(floor(image-height($scribble)/$medpx),$green1)
+
+  +medium(both)
+    .content
+      background-position: left, 100%
+
+    .green2
+      +full
+      +prefix(7)
+    .mud
+      +full
+      +prefix(8)

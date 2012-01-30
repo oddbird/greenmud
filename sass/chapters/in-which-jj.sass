@@ -1,7 +1,12 @@
 // Import --------------------------------------------------------------------
+
 @import ../defaults/default-mixins
 
-// title page ----------------------------------------------------------------
+// Pages ---------------------------------------------------------------------
+
+@import in-which-jj/once-upon-a-sunday
+
+// Title ---------------------------------------------------------------------
 
 #titlepage
   .pagewrap
@@ -10,112 +15,3 @@
   h2
     @extend .title
     +title($yellow-lighter)
-
-// once-upon-a-sunday ----------------------------------------------------------
-
-$rain: 'ch01/once-upon-sunday/rain.png'
-
-+keyframes(rain)
-  0%
-    background-position: 0 (- image-height($rain)), image-height($rain)*.5 (- image-height($rain))
-  100%
-    background-position: (- image-width($rain)) 0, (- image-width($rain)*1.5) image-height($rain)
-
-+keyframes(pitpotIn)
-  0%
-    +transform(translateY(100px) rotate(0deg))
-    opacity: 0
-  100%
-    +transform(translateY(0) rotate(3deg))
-    opacity: 1
-
-+keyframes(pitpotOut)
-  0%
-    +transform(translateY(0) rotate(3deg))
-    opacity: 1
-  100%
-    +transform(translateY(100px) rotate(0deg))
-    opacity: 0
-
-#once-upon-a-sunday
-  +animation(rain 45s .2s linear infinite both)
-  background: image-url($rain) top left, desaturate($yellow-dark,50) image-url($rain) center
-
-  .pagewrap
-    +media-container
-
-  .content
-    +media-full
-    position: relative
-
-  blockquote
-    +padding-leader(2)
-    position: relative
-    z-index: 5
-
-  .pitpot
-    @extend .allcaps
-    +adjust-font-size-to($smallpx)
-    +rotate(3deg)
-    +box-shadow($base 0 0 rhythm(1))
-    position: absolute
-    top: 0
-    background: rgba($red-light,$small)
-    margin: 0 rhythm(-100)
-    padding: 0 rhythm(50)
-    text-align: center
-
-  +tiny(height)
-    &.active-page
-      i
-        +animation(fadeIn 4s 3s both)
-      .pitpot
-        +animation(pitpotIn 2s both)
-
-  +small-only
-    blockquote
-      +adjust-font-size-to($smallpx)
-
-  +small
-    blockquote
-      +prefix(4,10)
-
-    .raindrop
-      +replace-text('ch01/once-upon-sunday/raindrop.png')
-      +background-size(contain)
-      +stretch-y
-      display: block
-      left: 0
-      width: columns(4,10)
-      z-index: 15
-
-  &.active-page
-    .raindrop
-      +animation(fadeInDownBig 6s 2s both)
-    .pitpot
-      +animation(pitpotIn 2s 8s both)
-
-  +small(height)
-    blockquote
-      +padding-trailer(1)
-
-    .pitpot
-      top: auto
-      bottom: rhythm(2)
-
-  +medium
-    blockquote
-      +prefix(5,12)
-
-    .raindrop
-      left: columns(1,12)
-      width: columns(4,12)
-
-  +medium(height)
-    blockquote
-      +padding-leader(2)
-      +padding-trailer(2)
-
-  i
-    background: rgba($yellow-lighter,$small)
-

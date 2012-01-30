@@ -45,7 +45,7 @@ body.homepage .after .next a { background: rgba(153, 255, 153, 0.512); }
   body.homepage .after .next a { background: rgba(153, 255, 153, 0); }
   body.homepage .after .next a:focus, body.homepage .after .next a:hover, body.homepage .after .next a:active { background: rgba(153, 255, 153, 0.512); } }
 
-#home .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; padding-top: 2.5em; }
+#home .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 #home .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 525px) { #home .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
   #home .pagewrap:after { content: ""; display: table; clear: both; } }

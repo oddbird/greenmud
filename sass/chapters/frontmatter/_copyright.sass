@@ -1,0 +1,24 @@
+// copyright -----------------------------------------------------------------
+
+#copyright
+  .pagewrap
+    +media-container
+
+  .content
+    +media-full
+
+    +small
+      +pad(1,1)
+
+    +medium
+      +pad(2,2)
+
+  p
+    +trailer(.5)
+    ~ p
+      +adjust-font-size-to($smallpx)
+      +trailer(.5,$smallpx)
+
+  em
+    @extend .allcaps
+    font-style: normal

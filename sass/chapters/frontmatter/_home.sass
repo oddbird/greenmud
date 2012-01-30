@@ -1,0 +1,69 @@
+// home page controls --------------------------------------------------------
+
+body.homepage
+
+  #toggle
+    +opacity(.5)
+    +transition(background 300ms)
+    background: rgba($yellow-lighter,$xxsmall)
+
+    +medium(both)
+      background: rgba($yellow-lighter,0)
+      #{$focus}
+        background: rgba($yellow-lighter,$xxsmall)
+
+  .after
+    .prev
+      a
+        background: rgba($red-lighter,$xxsmall)
+    .next
+      a
+        background: rgba($green-lighter,$xxsmall)
+
+
+    +medium(both)
+      a
+        +transition(background 300ms)
+      .prev
+        a
+          background: rgba($red-lighter,0)
+          #{$focus}
+            background: rgba($red-lighter,$xxsmall)
+      .next
+        a
+          background: rgba($green-lighter,0)
+          #{$focus}
+            background: rgba($green-lighter,$xxsmall)
+
+// home page -----------------------------------------------------------------
+
+#home
+  .pagewrap
+    +media-container
+  .content
+    +media-full
+
+  .novel-title
+    +trailer(.5)
+    p
+      +trailer(0)
+    .name
+      +adjust-font-size-to($largepx)
+    .tagline, .byline
+      display: inline
+
+  .read, .support
+    +trailer(.5)
+    a, em
+      display: block
+    span
+      +adjust-font-size-to($smallpx)
+    em
+      @extend .allcaps
+      +adjust-font-size-to($medpx,1)
+      font-style: normal
+
+  .description, .instructions
+    +trailer(.5)
+    p
+      +trailer(0)
