@@ -1,55 +1,56 @@
-// home page controls --------------------------------------------------------
+// show targets --------------------------------------------------------------
 
-body.homepage
+.showtargets
 
   #toggle
     +opacity(.5)
-    +transition(background 300ms)
-    background: rgba($yellow-lighter,$xxsmall)
-
-    +medium(both)
-      background: rgba($yellow-lighter,0)
-      #{$focus}
-        background: rgba($yellow-lighter,$xxsmall)
+    +background-image(linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0)))
+    background-color: $blue-lighter
+    border-bottom: 1px solid $white
+    #{$focus}
+      +opacity(1)
 
   .after
+    a
+      +opacity(.5)
+      +background-image(linear-gradient(left,rgba($white,$xxxsmall),rgba($white,0)))
+      &[href]
+        #{$focus}
+          +opacity(1)
     .prev
       a
-        background: rgba($red-lighter,$xxsmall)
+        background-color: $red-lighter
+        border-right: 1px solid $white
     .next
       a
-        background: rgba($green-lighter,$xxsmall)
-
-
-    +medium(both)
-      a
-        +transition(background 300ms)
-      .prev
-        a
-          background: rgba($red-lighter,0)
-          #{$focus}
-            background: rgba($red-lighter,$xxsmall)
-      .next
-        a
-          background: rgba($green-lighter,0)
-          #{$focus}
-            background: rgba($green-lighter,$xxsmall)
+        background-color: $green-light
+        border-left: 1px solid $white
 
 // home page -----------------------------------------------------------------
 
 #home
+  background: $pink-lightest
+
   .pagewrap
     +media-container
+    +padding-trailer(1)
+    +background($pink-hint)
+    +background(linear-gradient(bottom,$pink-lightest,$pink-hint rhythm(1)))
+    +box-shadow(rgba($pink-lighter,$xsmall) 0 rhythm(-1) rhythm(1))
   .content
     +media-full
 
   .novel-title
     +trailer(.5)
+    text-align: center
     p
       +trailer(0)
     .name
-      +adjust-font-size-to($largepx)
+      +adjust-font-size-to($largepx,1.5)
+      +leader(1,$largepx)
     .tagline, .byline
+      @extend .allcaps
+      +adjust-font-size-to($smallpx)
       display: inline
 
   .read, .support
