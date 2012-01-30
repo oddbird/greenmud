@@ -48,9 +48,6 @@ var GM = (function (GM, $) {
         $(window).resize(function () {
             $.doTimeout('resize', 250, function () {
                 updateHeight(element);
-                $.doTimeout(800, function () {
-                    $('.main').animate({'height': $('.active-page').height()}, 'fast');
-                });
             });
         });
     };

@@ -122,36 +122,18 @@ h1, .breadcrumb
     display: block
     width: 100%
 
-// main ----------------------------------------------------------------------
-
-.main
-  +animation(fadeIn 1s .2s both)
-
-  .js &
-    position: relative
-    overflow: hidden
-
 // page ----------------------------------------------------------------------
 
-=pageindex()
-  @for $i from 1 through 100
-    &:nth-child(#{101 - $i})
-      z-index: $i
-
 .page
-  +stretch-x
-  +pageindex
-  top: 0
   display: none
-  background: white
   overflow-x: hidden
 
-.prev-page, .active-page, .next-page
-  +transition(all 800ms)
+.active-page
+  +animation($fadeInActive)
   display: block
 
-.prev-page
-  +translate(- 100%,0)
+.prev-page, .next-page
+  display: none
 
 // pagewrap ------------------------------------------------------------------
 

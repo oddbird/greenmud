@@ -161,7 +161,6 @@ var GM = (function (GM, $) {
             thisPage.addClass('active-page');
             thisPage.prev(pageSelector).addClass('prev-page');
             thisPage.next(pageSelector).addClass('next-page');
-            $('.main').animate({'height': $('.active-page').height()}, 'fast');
 
             pageControls.each(function () {
                 $(this).find('.pagenav').replaceWith(pageNav.clone());
