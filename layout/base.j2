@@ -40,7 +40,6 @@
 
   <!-- Styles -->
   {% block styles -%}
-  <link rel="stylesheet" href="{{ media_url('css/screen.css') }}" />
   {% endblock styles %}
 
   <!-- Modernizr -->
@@ -76,12 +75,13 @@
 
 {% block js %}
 
-  <script src="{{ media_url('js/jquery-1.7.1.min.js') }}"></script>
+  <script src="{{ media_url('js/jquery-1.7.1.js') }}"></script>
   <script src="{{ media_url('js/jquery.history.js') }}"></script>
   <script src="{{ media_url('js/jquery.ba-dotimeout.js') }}"></script>
   <script src="{{ media_url('js/jquery.placeholder.js') }}"></script>
   <script src="{{ media_url('js/viewport.js') }}"></script>
   <script src="{{ media_url('js/local.js') }}"></script>
+  <script src="{{ media_url('js/pageturning.js') }}"></script>
   <script src="{{ media_url('js/init.js') }}"></script>
 
   {% block scripts %}

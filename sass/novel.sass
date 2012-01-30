@@ -10,8 +10,10 @@ $uifontsize : $xxsmallpx
   #{$link}
     +opacity(0)
     +hide-text
-    +stretch-x
+    position: fixed
     top: 0
+    left: 0
+    right: 0
     height: rhythm(1.5)
     z-index: 875
 
@@ -72,7 +74,9 @@ $uifontsize : $xxsmallpx
   .after &
     a, span
       +hide-text
-      +stretch-y
+      position: fixed
+      top: 0
+      bottom: 0
       display: block
       width: rhythm(1, $uifontsize)
       z-index: 850
@@ -123,30 +127,40 @@ h1, .breadcrumb
 .main
   +animation(fadeIn 1s .2s both)
 
+  .js &
+    position: relative
+    overflow: hidden
+
+// page ----------------------------------------------------------------------
+
+=pageindex()
+  @for $i from 1 through 100
+    &:nth-child(#{101 - $i})
+      z-index: $i
+
 .page
-  +opacity(0)
-  +clearfix
-  +box-shadow($base 0 0 rhythm())
-  -moz-transition: -moz-transform, padding 300ms
-  -webkit-transition: -webkit-transform, padding 300ms
-  -o-transition: -o-transform, padding 300ms
-  transition: transform, padding 300ms
+  +stretch-x
+  +pageindex
+  top: 0
+  display: none
+  background: white
+  overflow-x: hidden
 
-.pagewrap
-  +padding-leader(1)
-
-  +small(height)
-    +padding-leader(1.5)
-
-  +large(height)
-    +padding-leader(3)
-
-.active-page
-  +opacity(1)
+.prev-page, .active-page, .next-page
+  +transition(all 800ms)
+  display: block
 
 .prev-page
-  +opacity(1)
   +translate(- 100%,0)
-  overflow: hidden
-  +small
+
+// pagewrap ------------------------------------------------------------------
+
+.pagewrap
+  +padding-leader
+  +transition(padding 300ms)
+  +small(height)
+    +padding-leader(1.5)
+  +medium(height)
     +padding-leader(2)
+  +large(height)
+    +padding-leader(3)
