@@ -7,7 +7,13 @@ body.homepage
 
   #toggle
     +opacity(.5)
+    +transition(background 300ms)
     background: rgba($yellow-lighter,$xxsmall)
+
+    +medium(both)
+      background: rgba($yellow-lighter,0)
+      #{$focus}
+        background: rgba($yellow-lighter,$xxsmall)
 
   .after
     .prev
@@ -16,6 +22,21 @@ body.homepage
     .next
       a
         background: rgba($green-lighter,$xxsmall)
+
+
+    +medium(both)
+      a
+        +transition(background 300ms)
+      .prev
+        a
+          background: rgba($red-lighter,0)
+          #{$focus}
+            background: rgba($red-lighter,$xxsmall)
+      .next
+        a
+          background: rgba($green-lighter,0)
+          #{$focus}
+            background: rgba($green-lighter,$xxsmall)
 
 #home
   .pagewrap
