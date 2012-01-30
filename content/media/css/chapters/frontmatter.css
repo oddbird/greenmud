@@ -34,6 +34,10 @@
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
+body.homepage #toggle { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; background: rgba(255, 229, 153, 0.512); }
+body.homepage .after .prev a { background: rgba(255, 153, 153, 0.512); }
+body.homepage .after .next a { background: rgba(153, 255, 153, 0.512); }
+
 #home .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; padding-top: 2.5em; }
 #home .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 525px) { #home .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
