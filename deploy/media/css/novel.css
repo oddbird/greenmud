@@ -944,7 +944,7 @@ dt { margin-top: 1.25em; }
 .before .pagenav .prev, .before .pagenav .next { display: inline; float: left; }
 .before .pagenav .prev span, .before .pagenav .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
 .before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
-.after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; position: fixed; top: 0; bottom: 0; display: block; width: 2.441em; z-index: 850; }
+.after .pagenav a, .after .pagenav span { text-indent: -119988px; overflow: hidden; text-align: left; position: absolute; top: 0; bottom: 0; display: block; width: 2.441em; z-index: 850; }
 @media (min-width: 525px) { .after .pagenav a, .after .pagenav span { width: 1.831em; } }
 @media (min-width: 980px) { .after .pagenav a, .after .pagenav span { width: 2.441em; } }
 .after .pagenav .prev a, .after .pagenav .prev span { left: 0; }
