@@ -134,6 +134,7 @@ var GM = (function (GM, $) {
                 $(this).find('.pagenav').replaceWith(pageNav.clone());
             });
 
+            $('body').attr('class', thisPage.data('body-class'));
             document.title = title;
             $('title').text(title);
 
