@@ -1,9 +1,43 @@
+// mixins --------------------------------------------------------------------
+
+=button($c:$green,$i:false,$lines:.25,$context:$normpx)
+  $high: tint($c,$hint-tint)
+  $low: shade($c,$dark-shade)
+  $border: shade($c,$darker-shade)
+  $img: linear-gradient(top, rgba($high,$xsmall), rgba($c,0), rgba($low,$xsmall))
+  $hov: linear-gradient(top, rgba($c,0), rgba($border,$xsmall))
+
+  @if lightness($c) >= 50%
+    +text-shadow(rgba($high,$xsmall) 0 1px 0)
+    color: $base
+  @else
+    +text-shadow(rgba($low,$xsmall) 0 1px 0)
+    color: $hint
+
+  @if $i
+    $img: image-url($i), $img
+    $hov: image-url($i), $hov
+
+  +border-radius
+  +rhythm-borders(1px,$lines,$context)
+  +background-image($img)
+  background-color: $c
+  border-color: $border
+  text-align: center
+
+  #{$focus}
+    +background-image($hov)
+
+  &:active
+    +box-shadow($border 0 0 rhythm(.25) inset)
+
+
 // show targets --------------------------------------------------------------
 
 .showtargets
 
   #toggle
-    +opacity(.5)
+    +opacity(.25)
     +background-image(linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0)))
     background-color: $blue-lighter
     border-bottom: 1px solid $white
@@ -12,7 +46,7 @@
 
   .after
     a
-      +opacity(.5)
+      +opacity(.25)
       +background-image(linear-gradient(left,rgba($white,$xxxsmall),rgba($white,0)))
       &[href]
         #{$focus}
@@ -29,19 +63,22 @@
 // home page -----------------------------------------------------------------
 
 #home
-  background: $pink-lightest
+  +text-shadow($white 0 1px 0)
+  +background($pink-hint linear-gradient(top, rgba($pink-lightest,$xxsmall), rgba($pink-lightest,0) rhythm(6)))
 
   .pagewrap
     +media-container
     +padding-trailer(1)
     +background($pink-hint)
-    +background(linear-gradient(bottom,$pink-lightest,$pink-hint rhythm(1)))
     +box-shadow(rgba($pink-lighter,$xsmall) 0 rhythm(-1) rhythm(1))
-  .content
+    background: $pink-hint
+    overflow: hidden
+  .info
     +media-full
 
   .novel-title
-    +trailer(.5)
+    +trailer(.25)
+    +hpadding(side-gutter())
     text-align: center
     p
       +trailer(0)
@@ -57,14 +94,85 @@
     +trailer(.5)
     a, em
       display: block
-    span
-      +adjust-font-size-to($smallpx)
     em
       @extend .allcaps
-      +adjust-font-size-to($medpx,1)
       font-style: normal
+
+  .read
+    a
+      +button($green-lighter,false,.25,$smallpx)
+  .support
+    a
+      +button($pink-lightest,false,.25,$smallpx)
+
+  .extra
+    +adjust-font-size-to($smallpx)
+    display: none
 
   .description, .instructions
     +trailer(.5)
+    clear: both
+    h2
+      @extend .allcaps
+
+  .description
+    +title($off-cyan-hint,$xsmall)
+    +padding-leader(1)
+    +padding-trailer(1)
     p
+      +adjust-font-size-to($smallpx)
       +trailer(0)
+
+  .instructions
+    +pad(1,1,6)
+    text-align: center
+    p
+      +trailer(.5)
+
+  +small
+    .extra
+      display: block
+    .read, .support
+      +columns(6,12)
+    .read
+      +omega(12)
+    .description
+      +pad(1,1,12)
+    .instructions
+      +pad(2,2,12)
+
+  +small(height)
+    .novel-title
+      +animation(linetiny 75s infinite both)
+      +padding-trailer(2.5)
+      background: image-url($line) repeat-x scroll 0 bottom
+      .name
+        +leader(0)
+
+  // small height, medium width
+  @media (min-width: 980px) and (min-height: 350px)
+    .pagewrap
+      background:
+        image: image-url($strings-left), image-url($strings-right)
+        position: left top, right top
+        repeat: no-repeat, no-repeat
+
+  +medium
+    .actions
+      +columns(4,12)
+      +omega(12)
+      +leader(1)
+      position: relative
+      z-index: 20
+    .read, .support
+      +un-column
+      +full(4)
+
+    .description
+      +columns(8,12)
+      +hpadding(0)
+      min-height: rhythm(5.5)
+      clear: none
+
+    .instructions
+      background: image-url($scribble) no-repeat scroll left, image-url($scribble) no-repeat scroll right

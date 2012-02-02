@@ -2,6 +2,19 @@
 
 @import ../defaults/default-mixins
 
+// Stuff ---------------------------------------------------------------------
+
+$line           : 'frontmatter/titlepage/line.png'
+$strings-left   : 'frontmatter/titlepage/strings_left.png'
+$strings-right  : 'frontmatter/titlepage/strings_right.png'
+$scribble       : 'frontmatter/titlepage/scribble.png'
+
++keyframes(linetiny)
+  0%
+    background-position: image-width($line) bottom
+  100%
+    background-position: 0 bottom
+
 // Pages ---------------------------------------------------------------------
 
 @import frontmatter/home

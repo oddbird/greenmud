@@ -5,10 +5,11 @@
 
 /* titlepages ----------------------------------------------------------------
 
-=title($c:$blue-lighter)
-  $c  : rgba($c,$xxxsmall)
+=title($c:$blue-lighter,$o:$xxxsmall)
+  $c  : rgba($c,$o)
 
   position: relative
+  z-index: 10
 
   &:before, &:after
     +stretch-y

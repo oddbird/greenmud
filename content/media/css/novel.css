@@ -58,6 +58,8 @@ html > body { font-size: 22.4px; }
 
 @media (min-width: 525px) and (min-height: 350px) { body { font-size: 175%; line-height: 1.25em; }
   html > body { font-size: 28px; } }
+@media (min-width: 980px) { body { font-size: 175%; line-height: 1.25em; }
+  html > body { font-size: 28px; } }
 html { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
 body { position: relative; color: #202020; overflow-x: hidden; }
@@ -77,7 +79,7 @@ a:focus, a:hover, a:active { color: #00bf00; }
 /* Inline -------------------------------------------------------------------- */
 cite, em, dfn, address, i { font-style: italic; }
 
-strong, dfn { font-weight: 700; }
+strong, dfn { text-transform: uppercase; }
 
 sup, sub { position: relative; font-size: smaller; line-height: 0; }
 
@@ -971,4 +973,4 @@ h1, .breadcrumb { *display: inline; }
 .pagewrap { padding-top: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
 @media (min-height: 350px) { .pagewrap { padding-top: 1.875em; } }
 @media (min-height: 490px) { .pagewrap { padding-top: 2.5em; } }
-@media (min-height: 700px) { .pagewrap { padding-top: 3.75em; } }
+@media (min-width: 1260px), (min-height: 700px) { .pagewrap { padding-top: 3.75em; } }
