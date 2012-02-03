@@ -964,11 +964,7 @@ h1, .breadcrumb { *display: inline; }
 .tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }
 .tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
-.page { display: none; overflow-x: hidden; }
-
-.active-page { -moz-animation: fadeIn 1s 0.2s both; -webkit-animation: fadeIn 1s 0.2s both; -ms-animation: fadeIn 1s 0.2s both; animation: fadeIn 1s 0.2s both; display: block; }
-
-.prev-page, .next-page { display: none; }
+.page { overflow-x: hidden; }
 
 .pagewrap { padding-top: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
 @media (min-height: 350px) { .pagewrap { padding-top: 1.875em; } }
