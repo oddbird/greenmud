@@ -125,9 +125,9 @@ var GM = (function (GM, $) {
             stateChange = true;
             thisPage = $('.main').data(state.id);
             pageNav = thisPage.data('pagenav');
-            $('.main').fadeOut('fast', function () {
+            $('.main').fadeOut('300ms', function () {
                 $(pageSelector).replaceWith(thisPage.clone(true));
-                $('.main').fadeIn('fast');
+                $('.main').fadeIn('slow');
             });
 
             pageControls.each(function () {
