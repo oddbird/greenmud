@@ -38,6 +38,7 @@
 
   #toggle
     +opacity(.25)
+    +transition(opacity 400ms)
     +background-image(linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0)))
     background-color: $blue-lighter
     border-bottom: 1px solid $white
@@ -47,6 +48,7 @@
   .after
     a
       +opacity(.25)
+      +transition(opacity 400ms)
       +background-image(linear-gradient(left,rgba($white,$xxxsmall),rgba($white,0)))
       &[href]
         #{$focus}
@@ -60,11 +62,25 @@
         background-color: $green-light
         border-left: 1px solid $white
 
+  +medium(both)
+    #toggle
+      +opacity(0)
+      #{$focus}
+        +opacity(1)
+    .after
+      a
+        +opacity(0)
+        #{$focus}
+          +opacity(.25)
+        &[href]
+          #{$focus}
+            +opacity(1)
+
 // home page -----------------------------------------------------------------
 
 #home
   +text-shadow($white 0 1px 0)
-  +background($pink-hint linear-gradient(top, rgba($pink-lightest,$xxsmall), rgba($pink-lightest,0) rhythm(6)))
+  +background($pink-hint linear-gradient(top, rgba($pink-lightest,$xxsmall), rgba($pink-lightest,0) rhythm(12)))
 
   .pagewrap
     +media-container
