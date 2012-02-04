@@ -950,15 +950,13 @@ dt { margin-top: 1.25em; }
 .after .pagenav .prev a, .after .pagenav .prev span { left: 0; }
 .after .pagenav .next a, .after .pagenav .next span { right: 0; }
 
-#location { position: absolute; top: 0; bottom: 0; left: 2.441em; right: 7.324em; }
+#location { position: absolute; top: 0; bottom: 0; left: 2.441em; right: 7.324em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
-h1, .breadcrumb { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; margin: 0; padding: 0; }
-h1, .breadcrumb { *display: inline; }
+h1, .breadcrumb { display: inline; margin: 0; padding: 0; }
 
-.breadcrumb { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; }
-.breadcrumb li { list-style-image: none; list-style-type: none; margin-left: 0px; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; white-space: nowrap; }
-.breadcrumb li { *display: inline; }
-.breadcrumb .crumb::before { content: " » "; }
+.crumb-list { list-style-type: none; }
+.crumb-list, .crumb-list li { margin: 0px; padding: 0px; display: inline; }
+.crumb-list .crumb::before { content: " » "; }
 
 .tocnav { position: absolute; top: 0; bottom: 0; width: 2.441em; }
 .tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }

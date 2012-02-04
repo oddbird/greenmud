@@ -95,14 +95,17 @@ $uifontsize : $xxsmallpx
 
 #location
   +stretch(0,rhythm(3,$uifontsize),0,rhythm(1,$uifontsize))
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
 
 h1, .breadcrumb
-  +inline-block
+  display: inline
   margin: 0
   padding: 0
 
-.breadcrumb
-  +inline-block-list
+.crumb-list
+  +inline-list
   .crumb
     &::before
       content: ' » '
