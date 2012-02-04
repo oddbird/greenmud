@@ -54,28 +54,31 @@ var GM = (function (GM, $) {
 
         // Ajaxify
         pageControls.on('click', '.prev a, .next a', function (e) {
-            var page;
+            var page,
+                fallback = function (link) {
+                    if ($('#toggle').hasClass('active')) {
+                        $('.main').fadeOut('300', function () {
+                            window.location = link.attr('href') + '#controls';
+                        });
+                    } else {
+                        $('.main').fadeOut('300', function () {
+                            window.location = link.attr('href');
+                        });
+                    }
+                };
             stateChange = false;
             // Continue as normal for cmd clicks etc
             if (e.which === 2 || e.metaKey) {
                 return true;
             } else if ($(this).parent('li').hasClass('break')) {
-                if ($('#toggle').hasClass('active')) {
-                    window.location = $(this).attr('href') + '#controls';
-                } else {
-                    window.location = $(this).attr('href');
-                }
+                fallback($(this));
                 e.preventDefault();
             } else {
                 if ($(this).data('id') && $('.main').data($(this).data('id'))) {
                     page = $('.main').data($(this).data('id'));
                     turnToPage(page);
                 } else if ($(this).attr('href')) {
-                    if ($('#toggle').hasClass('active')) {
-                        window.location = $(this).attr('href') + '#controls';
-                    } else {
-                        window.location = $(this).attr('href');
-                    }
+                    fallback($(this));
                 }
                 e.preventDefault();
             }
@@ -126,9 +129,9 @@ var GM = (function (GM, $) {
             if ($(pageSelector).attr('id') !== state.id) {
                 thisPage = $('.main').data(state.id);
                 pageNav = thisPage.data('pagenav');
-                $('.main').fadeOut('300ms', function () {
+                $('.main').fadeOut('300', function () {
                     $(pageSelector).replaceWith(thisPage.clone(true));
-                    $('.main').fadeIn('slow');
+                    $('.main').fadeIn('300');
                 });
 
                 pageControls.each(function () {
