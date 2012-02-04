@@ -123,16 +123,18 @@ var GM = (function (GM, $) {
                 };
 
             stateChange = true;
-            thisPage = $('.main').data(state.id);
-            pageNav = thisPage.data('pagenav');
-            $('.main').fadeOut('300ms', function () {
-                $(pageSelector).replaceWith(thisPage.clone(true));
-                $('.main').fadeIn('slow');
-            });
+            if ($(pageSelector).attr('id') !== state.id) {
+                thisPage = $('.main').data(state.id);
+                pageNav = thisPage.data('pagenav');
+                $('.main').fadeOut('300ms', function () {
+                    $(pageSelector).replaceWith(thisPage.clone(true));
+                    $('.main').fadeIn('slow');
+                });
 
-            pageControls.each(function () {
-                $(this).find('.pagenav').replaceWith(pageNav.clone());
-            });
+                pageControls.each(function () {
+                    $(this).find('.pagenav').replaceWith(pageNav.clone());
+                });
+            }
 
             $('body').attr('class', thisPage.data('body-class'));
             document.title = title;
