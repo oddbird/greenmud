@@ -80,13 +80,13 @@
 
 #home
   +text-shadow($white 0 1px 0)
-  +background($pink-hint linear-gradient(top, rgba($pink-lightest,$xxsmall), rgba($pink-lightest,0) rhythm(12)))
+  +background($pink-hint linear-gradient(top, rgba($pink-lighter,$xxxsmall), rgba($pink-lighter,0) rhythm(12)))
 
   .pagewrap
     +media-container
     +padding-trailer(1)
     +background($pink-hint)
-    +box-shadow(rgba($pink-lighter,$xsmall) 0 rhythm(-1) rhythm(1))
+    +box-shadow(rgba($pink-lighter,$xsmall) 0 0 rhythm(1))
     background: $pink-hint
     overflow: hidden
   .info
@@ -132,7 +132,7 @@
       @extend .allcaps
 
   .description
-    +title($off-cyan-hint,$xsmall)
+    +title($cyan-hint,$xsmall)
     +padding-leader(1)
     +padding-trailer(1)
     p

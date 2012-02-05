@@ -26,7 +26,7 @@ $rain: 'ch01/once-upon-sunday/rain.png'
 
 #once-upon-a-sunday
   +animation(rain 45s .2s linear infinite both)
-  background: image-url($rain) top left, desaturate($yellow-dark,50) image-url($rain) center
+  background: image-url($rain) top left, $off-orange-darker image-url($rain) center
 
   .pagewrap
     +media-container
@@ -36,28 +36,26 @@ $rain: 'ch01/once-upon-sunday/rain.png'
     position: relative
 
   blockquote
-    +padding-leader(2)
+    +padding-leader(1.5)
     position: relative
     z-index: 5
 
+  i
+    +animation(fadeIn 4s 3s both)
+    background: rgba($yellow-lightest,$small)
+
   .pitpot
     @extend .allcaps
+    +animation(pitpotIn 2s 2s both)
     +adjust-font-size-to($smallpx)
     +rotate(3deg)
     +box-shadow($base 0 0 rhythm(1))
     position: absolute
     top: 0
-    background: rgba($red-light,$small)
+    background: rgba($off-orange,$small)
     margin: 0 rhythm(-100)
     padding: 0 rhythm(50)
     text-align: center
-
-  +tiny(height)
-    &.active-page
-      i
-        +animation(fadeIn 4s 3s both)
-      .pitpot
-        +animation(pitpotIn 2s both)
 
   +small-only
     blockquote
@@ -76,19 +74,14 @@ $rain: 'ch01/once-upon-sunday/rain.png'
       width: columns(4,10)
       z-index: 15
 
-  &.active-page
     .raindrop
-      +animation(fadeInDownBig 6s 2s both)
-    .pitpot
-      +animation(pitpotIn 2s 8s both)
+      +animation(fadeInDownBig 6s 4s both)
+    i
+      +animation(fadeIn 4s 10s both)
 
   +small(height)
     blockquote
       +padding-trailer(1)
-
-    .pitpot
-      top: auto
-      bottom: rhythm(2)
 
   +medium
     blockquote
@@ -103,5 +96,6 @@ $rain: 'ch01/once-upon-sunday/rain.png'
       +padding-leader(2)
       +padding-trailer(2)
 
-  i
-    background: rgba($yellow-lighter,$small)
+    .pitpot
+      top: auto
+      bottom: rhythm(2)

@@ -3,14 +3,12 @@
 // Colors --------------------------------------------------------------------
 
 $red              : hsla(0,100%,50%,1)
-$orange           : hsla(22,100%,50%,1)
-$yellow           : hsla(45,100%,50%,1)
+$orange           : hsla(30,100%,50%,1)
+$yellow           : hsla(60,100%,50%,1)
 $green            : hsla(120,100%,50%,1)
 $cyan             : hsla(180,100%,50%,1)
 $blue             : hsla(240,100%,50%,1)
-$purple           : hsla(290,100%,50%,1)
-$pink             : hsla(315,100%,50%,1)
-$crimson          : hsla(338,100%,50%,1)
+$pink             : hsla(300,100%,50%,1)
 
 $white            : hsla(0,0%,100%,1)
 $black            : hsla(0,0%,0%,1)
@@ -22,7 +20,7 @@ $light-tint       : 45
 $lighter-tint     : 60
 $lightest-tint    : 75
 $hint-tint        : 90
-$off              : 60
+$off              : 65
 
 $mid              : hsl(0,0%,50%)
 $dark             : shade($mid,$dark-shade)
@@ -135,23 +133,6 @@ $off-blue-lighter   : tint($off-blue,$lighter-tint)
 $off-blue-lightest  : tint($off-blue,$lightest-tint)
 $off-blue-hint      : tint($off-blue,$hint-tint)
 
-$purple-dark      : shade($purple,$dark-shade)
-$purple-darker    : shade($purple,$darker-shade)
-$purple-darkest   : shade($purple,$darkest-shade)
-$purple-light     : tint($purple,$light-tint)
-$purple-lighter   : tint($purple,$lighter-tint)
-$purple-lightest  : tint($purple,$lightest-tint)
-$purple-hint      : tint($purple,$hint-tint)
-
-$off-purple           : desaturate($purple,$off)
-$off-purple-dark      : shade($off-purple,$dark-shade)
-$off-purple-darker    : shade($off-purple,$darker-shade)
-$off-purple-darkest   : shade($off-purple,$darkest-shade)
-$off-purple-light     : tint($off-purple,$light-tint)
-$off-purple-lighter   : tint($off-purple,$lighter-tint)
-$off-purple-lightest  : tint($off-purple,$lightest-tint)
-$off-purple-hint      : tint($off-purple,$hint-tint)
-
 $pink-dark        : shade($pink,$dark-shade)
 $pink-darker      : shade($pink,$darker-shade)
 $pink-darkest     : shade($pink,$darkest-shade)
@@ -169,25 +150,34 @@ $off-pink-lighter   : tint($off-pink,$lighter-tint)
 $off-pink-lightest  : tint($off-pink,$lightest-tint)
 $off-pink-hint      : tint($off-pink,$hint-tint)
 
-$crimson-dark     : shade($crimson,$dark-shade)
-$crimson-darker   : shade($crimson,$darker-shade)
-$crimson-darkest  : shade($crimson,$darkest-shade)
-$crimson-light    : tint($crimson,$light-tint)
-$crimson-lighter  : tint($crimson,$lighter-tint)
-$crimson-lightest : tint($crimson,$lightest-tint)
-$crimson-hint     : tint($crimson,$hint-tint)
-
-$off-crimson           : desaturate($crimson,$off)
-$off-crimson-dark      : shade($off-crimson,$dark-shade)
-$off-crimson-darker    : shade($off-crimson,$darker-shade)
-$off-crimson-darkest   : shade($off-crimson,$darkest-shade)
-$off-crimson-light     : tint($off-crimson,$light-tint)
-$off-crimson-lighter   : tint($off-crimson,$lighter-tint)
-$off-crimson-lightest  : tint($off-crimson,$lightest-tint)
-$off-crimson-hint      : tint($off-crimson,$hint-tint)
-
 $base             : $darkest
 $alt              : $pink-dark
 $accent           : $green-dark
 
-$colors           : $red $orange $yellow $green $cyan $blue $purple $pink $crimson
+$reds             : $red, $red-dark, $red-darker, $red-darkest, $red-light, $red-lighter, $red-lightest, $red-hint
+$oranges          : $orange, $orange-dark, $orange-darker, $orange-darkest, $orange-light, $orange-lighter, $orange-lightest, $orange-hint
+$yellows          : $yellow, $yellow-dark, $yellow-darker, $yellow-darkest, $yellow-light, $yellow-lighter, $yellow-lightest, $yellow-hint
+$greens           : $green, $green-dark, $green-darker, $green-darkest, $green-light, $green-lighter, $green-lightest, $green-hint
+$cyans            : $cyan, $cyan-dark, $cyan-darker, $cyan-darkest, $cyan-light, $cyan-lighter, $cyan-lightest, $cyan-hint
+$blues            : $blue, $blue-dark, $blue-darker, $blue-darkest, $blue-light, $blue-lighter, $blue-lightest, $blue-hint
+$pinks            : $pink, $pink-dark, $pink-darker, $pink-darkest, $pink-light, $pink-lighter, $pink-lightest, $pink-hint
+
+$off-reds         : $off-red, $off-red-dark, $off-red-darker, $off-red-darkest, $off-red-light, $off-red-lighter, $off-red-lightest, $off-red-hint
+$off-oranges      : $off-orange, $off-orange-dark, $off-orange-darker, $off-orange-darkest, $off-orange-light, $off-orange-lighter, $off-orange-lightest, $off-orange-hint
+$off-yellows      : $off-yellow, $off-yellow-dark, $off-yellow-darker, $off-yellow-darkest, $off-yellow-light, $off-yellow-lighter, $off-yellow-lightest, $off-yellow-hint
+$off-greens       : $off-green, $off-green-dark, $off-green-darker, $off-green-darkest, $off-green-light, $off-green-lighter, $off-green-lightest, $off-green-hint
+$off-cyans        : $off-cyan, $off-cyan-dark, $off-cyan-darker, $off-cyan-darkest, $off-cyan-light, $off-cyan-lighter, $off-cyan-lightest, $off-cyan-hint
+$off-blues        : $off-blue, $off-blue-dark, $off-blue-darker, $off-blue-darkest, $off-blue-light, $off-blue-lighter, $off-blue-lightest, $off-blue-hint
+$off-pinks        : $off-pink, $off-pink-dark, $off-pink-darker, $off-pink-darkest, $off-pink-light, $off-pink-lighter, $off-pink-lightest, $off-pink-hint
+
+$colors           : join(join(join($reds, $oranges), join($yellows, $greens)), join(join($cyans, $blues), $pinks))
+$off-colors       : join(join(join($off-reds, $off-oranges), join($off-yellows, $off-greens)), join(join($off-cyans, $off-blues), $off-pinks))
+
+$all-colors       : join($colors, $off-colors)
+
+=print-colors($cl:$color-list)
+  $i: 1
+  @each $c in $cl
+    .color-#{$i}
+      color: $c
+    $i: 1 + $i
