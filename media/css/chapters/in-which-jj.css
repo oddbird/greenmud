@@ -34,17 +34,6 @@
 
 /* Links --------------------------------------------------------------------- */
 /* Lists --------------------------------------------------------------------- */
-#titlepage .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
-#titlepage .pagewrap:after { content: ""; display: table; clear: both; }
-@media (min-width: 525px) { #titlepage .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
-  #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
-@media (min-width: 980px) { #titlepage .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
-  #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
-#titlepage h2 { position: relative; }
-#titlepage h2:before, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(255, 229, 153, 0.41); z-index: -1; }
-#titlepage h2:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
-#titlepage h2:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
-
 @-webkit-keyframes rain { 0% { background-position: 0 -450px, 225px -450px; }
   100% { background-position: -450px 0, -675px 450px; } }
 
@@ -81,7 +70,7 @@
 @keyframes pitpotOut { 0% { -moz-transform: translateY(0) rotate(3deg); -webkit-transform: translateY(0) rotate(3deg); -o-transform: translateY(0) rotate(3deg); -ms-transform: translateY(0) rotate(3deg); transform: translateY(0) rotate(3deg); opacity: 1; }
   100% { -moz-transform: translateY(100px) rotate(0deg); -webkit-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
 
-#once-upon-a-sunday { -moz-animation: rain 45s 0.2s linear infinite both; -webkit-animation: rain 45s 0.2s linear infinite both; -ms-animation: rain 45s 0.2s linear infinite both; animation: rain 45s 0.2s linear infinite both; background: url('../../images/ch01/once-upon-sunday/rain.png?1319146885') top left, #8f7730 url('../../images/ch01/once-upon-sunday/rain.png?1319146885') center; }
+#once-upon-a-sunday { -moz-animation: rain 45s 0.2s linear infinite both; -webkit-animation: rain 45s 0.2s linear infinite both; -ms-animation: rain 45s 0.2s linear infinite both; animation: rain 45s 0.2s linear infinite both; background: url('../../images/ch01/once-upon-sunday/rain.png?1319146885') top left, #564029 url('../../images/ch01/once-upon-sunday/rain.png?1319146885') center; }
 #once-upon-a-sunday .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 #once-upon-a-sunday .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 525px) { #once-upon-a-sunday .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
@@ -91,18 +80,27 @@
 #once-upon-a-sunday .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; position: relative; }
 @media (min-width: 525px) { #once-upon-a-sunday .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #once-upon-a-sunday .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-#once-upon-a-sunday blockquote { padding-top: 2.5em; position: relative; z-index: 5; }
-#once-upon-a-sunday .pitpot { font-size: 0.8em; line-height: 1.562em; -moz-transform: rotate(3deg); -webkit-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; position: absolute; top: 0; background: rgba(255, 114, 114, 0.8); margin: 0 -125em; padding: 0 62.5em; text-align: center; }
-@media (max-height: 349px) { #once-upon-a-sunday.active-page i { -moz-animation: fadeIn 4s 3s both; -webkit-animation: fadeIn 4s 3s both; -ms-animation: fadeIn 4s 3s both; animation: fadeIn 4s 3s both; }
-  #once-upon-a-sunday.active-page .pitpot { -moz-animation: pitpotIn 2s both; -webkit-animation: pitpotIn 2s both; -ms-animation: pitpotIn 2s both; animation: pitpotIn 2s both; } }
+#once-upon-a-sunday blockquote { padding-top: 1.875em; position: relative; z-index: 5; }
+#once-upon-a-sunday i { -moz-animation: fadeIn 4s 3s both; -webkit-animation: fadeIn 4s 3s both; -ms-animation: fadeIn 4s 3s both; animation: fadeIn 4s 3s both; background: rgba(255, 255, 191, 0.8); }
+#once-upon-a-sunday .pitpot { -moz-animation: pitpotIn 2s 2s both; -webkit-animation: pitpotIn 2s 2s both; -ms-animation: pitpotIn 2s 2s both; animation: pitpotIn 2s 2s both; font-size: 0.8em; line-height: 1.562em; -moz-transform: rotate(3deg); -webkit-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); -moz-box-shadow: #202020 0 0 1.25em; -webkit-box-shadow: #202020 0 0 1.25em; -o-box-shadow: #202020 0 0 1.25em; box-shadow: #202020 0 0 1.25em; position: absolute; top: 0; background: rgba(172, 128, 83, 0.8); margin: 0 -125em; padding: 0 62.5em; text-align: center; }
 @media (min-width: 525px) and (max-width: 979px) { #once-upon-a-sunday blockquote { font-size: 0.8em; line-height: 1.562em; } }
 @media (min-width: 525px) { #once-upon-a-sunday blockquote { padding-left: 40.678%; }
-  #once-upon-a-sunday .raindrop { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../../images/ch01/once-upon-sunday/raindrop.png?1319065580'); background-repeat: no-repeat; background-position: 50% 50%; -moz-background-size: contain; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; position: absolute; top: 0; bottom: 0; display: block; left: 0; width: 38.983%; z-index: 15; } }
-#once-upon-a-sunday.active-page .raindrop { -moz-animation: fadeInDownBig 6s 2s both; -webkit-animation: fadeInDownBig 6s 2s both; -ms-animation: fadeInDownBig 6s 2s both; animation: fadeInDownBig 6s 2s both; }
-#once-upon-a-sunday.active-page .pitpot { -moz-animation: pitpotIn 2s 8s both; -webkit-animation: pitpotIn 2s 8s both; -ms-animation: pitpotIn 2s 8s both; animation: pitpotIn 2s 8s both; }
-@media (min-height: 350px) { #once-upon-a-sunday blockquote { padding-bottom: 1.25em; }
-  #once-upon-a-sunday .pitpot { top: auto; bottom: 2.5em; } }
+  #once-upon-a-sunday .raindrop { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../../images/ch01/once-upon-sunday/raindrop.png?1328435214'); background-repeat: no-repeat; background-position: 50% 50%; -moz-background-size: contain; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; position: absolute; top: 0; bottom: 0; display: block; left: 0; width: 38.983%; z-index: 15; }
+  #once-upon-a-sunday .raindrop { -moz-animation: fadeInDownBig 6s 4s both; -webkit-animation: fadeInDownBig 6s 4s both; -ms-animation: fadeInDownBig 6s 4s both; animation: fadeInDownBig 6s 4s both; }
+  #once-upon-a-sunday i { -moz-animation: fadeIn 4s 10s both; -webkit-animation: fadeIn 4s 10s both; -ms-animation: fadeIn 4s 10s both; animation: fadeIn 4s 10s both; } }
+@media (min-height: 350px) { #once-upon-a-sunday blockquote { padding-bottom: 1.25em; } }
 @media (min-width: 980px) { #once-upon-a-sunday blockquote { padding-left: 42.254%; }
   #once-upon-a-sunday .raindrop { left: 7.042%; width: 32.394%; } }
-@media (min-height: 490px) { #once-upon-a-sunday blockquote { padding-top: 2.5em; padding-bottom: 2.5em; } }
-#once-upon-a-sunday i { background: rgba(255, 229, 153, 0.8); }
+@media (min-height: 490px) { #once-upon-a-sunday blockquote { padding-top: 2.5em; padding-bottom: 2.5em; }
+  #once-upon-a-sunday .pitpot { top: auto; bottom: 2.5em; } }
+
+#titlepage .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
+#titlepage .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 525px) { #titlepage .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+  #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
+@media (min-width: 980px) { #titlepage .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+  #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
+#titlepage h2 { position: relative; z-index: 10; }
+#titlepage h2:before, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(255, 255, 153, 0.41); z-index: -1; }
+#titlepage h2:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
+#titlepage h2:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }

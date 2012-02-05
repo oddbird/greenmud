@@ -25,7 +25,7 @@
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <!--iOS. Delete if not required -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -62,10 +62,10 @@
   <h2 class="hidden">Page Navigation</h2>
   <ul>
     <li class="prev ">
-      <a href="copyright.html" title="go to the previous page">Previous</a>
+      <a href="copyright.html" title="go to the previous page" data-id="copyright">Previous</a>
     </li>
     <li class="next ">
-      <a href="epigraph.html" title="go to the next page">Next</a>
+      <a href="epigraph.html" title="go to the next page" data-id="epigraph">Next</a>
     </li>
   </ul>
 </nav>
@@ -76,7 +76,7 @@
   </nav></div>
 
 <div role="main" class="main">
-<div id="contents" class="page  frontmatter narrator active-page" data-prev="copyright.html" data-next="epigraph.html" data-url="contents.html">
+<div id="contents" class="page  frontmatter narrator" data-url="contents.html" data-body-class="">
   <div class="pagewrap">
   <div class="content">
     <section class="contents">
@@ -118,29 +118,30 @@
     </div>
   </div>
 </div>
-</div>
 
-<div class="controls after">
-  <nav class="pagenav">
+  <div class="controls after">
+    <nav class="pagenav">
   <h2 class="hidden">Page Navigation</h2>
   <ul>
     <li class="prev ">
-      <a href="copyright.html" title="go to the previous page">Previous</a>
+      <a href="copyright.html" title="go to the previous page" data-id="copyright">Previous</a>
     </li>
     <li class="next ">
-      <a href="epigraph.html" title="go to the next page">Next</a>
+      <a href="epigraph.html" title="go to the next page" data-id="epigraph">Next</a>
     </li>
   </ul>
-</nav></div>
+</nav>  </div>
+</div>
 
 
 
-  <script src="/media/js/jquery-1.7.1.min.js"></script>
+  <script src="/media/js/jquery-1.7.1.js"></script>
   <script src="/media/js/jquery.history.js"></script>
   <script src="/media/js/jquery.ba-dotimeout.js"></script>
   <script src="/media/js/jquery.placeholder.js"></script>
   <script src="/media/js/viewport.js"></script>
   <script src="/media/js/local.js"></script>
+  <script src="/media/js/pageturning.js"></script>
   <script src="/media/js/init.js"></script>
 
     
