@@ -36,8 +36,14 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
     height: rhythm(1)
     z-index: 910
 
+    +small
+      width: rhythm(.75)
+      height: rhythm(.75)
+
     +medium
       +opacity(1)
+      width: rhythm(1)
+      height: rhythm(1)
 
   &:hover, &.active
     .icon
