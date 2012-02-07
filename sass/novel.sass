@@ -17,6 +17,7 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
     right: 0
     cursor: pointer
   .target
+    +replace-text('ui/gear.png')
     left: 0
     height: rhythm(1.5)
     z-index: 875
@@ -30,22 +31,15 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
       border-bottom: 1px solid $white
   .icon
     +replace-text('ui/gear.png')
-    +border-bottom-left-radius
     display: block
     width: rhythm(1)
     height: rhythm(1)
     z-index: 910
 
-    +small
-      width: rhythm(.75)
-      height: rhythm(.75)
-
-    +medium
-      +opacity(1)
-      width: rhythm(1)
-      height: rhythm(1)
-
   &:hover, &.active
+    .target
+      +opacity(1)
+  &.active
     .icon
       +opacity(1)
 
@@ -97,7 +91,7 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
     .prev, .next
       +float(left)
     .prev
-      span, a
+      a
         +replace-text('ui/arrow_left.png')
 
     .next
@@ -113,6 +107,7 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
       display: block
       width: rhythm(1, $uifontsize)
       background:
+        color: rgba($base,.25)
         position: center
         repeat: no-repeat
       z-index: 850
