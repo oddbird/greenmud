@@ -31,51 +31,6 @@
   &:active
     +box-shadow($border 0 0 rhythm(.25) inset)
 
-
-// show targets --------------------------------------------------------------
-
-.showtargets
-
-  #toggle
-    +opacity(.25)
-    +transition(opacity 400ms)
-    +background-image(linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0)))
-    background-color: $blue-lighter
-    border-bottom: 1px solid $white
-    #{$focus}
-      +opacity(1)
-
-  .after
-    a
-      +opacity(.25)
-      +transition(opacity 400ms)
-      +background-image(linear-gradient(left,rgba($white,$xxxsmall),rgba($white,0)))
-      &[href]
-        #{$focus}
-          +opacity(1)
-    .prev
-      a
-        background-color: $red-lighter
-        border-right: 1px solid $white
-    .next
-      a
-        background-color: $green-light
-        border-left: 1px solid $white
-
-  +medium(both)
-    #toggle
-      +opacity(0)
-      #{$focus}
-        +opacity(1)
-    .after
-      a
-        +opacity(0)
-        #{$focus}
-          +opacity(.25)
-        &[href]
-          #{$focus}
-            +opacity(1)
-
 // home page -----------------------------------------------------------------
 
 #home

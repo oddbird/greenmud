@@ -5,17 +5,46 @@
 // UI ------------------------------------------------------------------------
 
 $uifontsize : $xxsmallpx
+$uigradx    : linear-gradient(left,rgba($white,$xxxsmall),rgba($white,0))
+$uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
 
 #toggle
-  #{$link}
+  .target, .icon
     +opacity(0)
-    +hide-text
+    +transition(opacity 400ms)
     position: fixed
     top: 0
-    left: 0
     right: 0
+    cursor: pointer
+  .target
+    left: 0
     height: rhythm(1.5)
     z-index: 875
+    .showtargets &
+      +opacity(.5)
+      +background-image(image-url('ui/gear.png'), $uigrady)
+      background:
+        color: $blue-dark
+        position: center
+        repeat: no-repeat
+      border-bottom: 1px solid $white
+  .icon
+    +replace-text('ui/gear.png')
+    +border-bottom-left-radius
+    display: block
+    width: rhythm(1)
+    height: rhythm(1)
+    background-color: rgba($base,.25)
+    z-index: 910
+    .showtargets &
+      background-color: rgba($base,.5)
+
+    +medium(either)
+      +opacity(1)
+
+  &:hover, &.active
+    .icon
+      +opacity(1)
 
 .controls
   +adjust-font-size-to($uifontsize)
@@ -30,7 +59,7 @@ $uifontsize : $xxsmallpx
     background-color: rgba($base,.9)
     color: $lightest
     z-index: 700
-    &.active
+    &:hover, &.active
       +opacity(1)
       z-index: 900
 
@@ -48,6 +77,7 @@ $uifontsize : $xxsmallpx
     +no-style-list
 
   .before &
+    margin-right: rhythm(1.5)
     a
       +transition(opacity 300ms)
       +opacity(.25)
@@ -72,12 +102,20 @@ $uifontsize : $xxsmallpx
         +replace-text('ui/arrow_right.png')
 
   .after &
-    a, span
+    a
+      +opacity(0)
+      +transition(opacity 400ms)
       +hide-text
       +stretch-y
       display: block
       width: rhythm(1, $uifontsize)
+      background:
+        position: center
+        repeat: no-repeat
       z-index: 850
+      &[href]
+        &:hover, .showtargets &
+          +opacity(.5)
 
       +small
         width: rhythm(.75, $uifontsize)
@@ -85,11 +123,17 @@ $uifontsize : $xxsmallpx
         width: rhythm(1, $uifontsize)
 
     .prev
-      a, span
+      a
+        +background-image(image-url('ui/angle_left.png'), $uigradx)
         left: 0
+        background-color: $red-dark
+        border-right: 1px solid $white
     .next
-      a, span
+      a
+        +background-image(image-url('ui/angle_right.png'), $uigradx)
         right: 0
+        background-color: $green-dark
+        border-left: 1px solid $white
 
 // breadcrumb ----------------------------------------------------------------
 
