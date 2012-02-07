@@ -2,10 +2,10 @@
   <h2 class="hidden">Page Navigation</h2>
   <ul>
     <li class="prev {% if resource.meta.chapter_break == 'before' %}break{% endif %}">
-      <a {% if resource.meta.prev_url %}href="{{ resource.meta.prev_url }}" title="go to the previous page" data-id="{{ resource.meta.prev_slug }}"{% else %}title="no previous pages"{% endif %}>Previous</a>
+      <a {% if resource.meta.prev.url %}href="{{ resource.meta.prev.url }}" title="go to the previous page" data-id="{{ resource.meta.prev.slug }}"{% else %}title="no previous pages"{% endif %}>Previous</a>
     </li>
     <li class="next {% if resource.meta.chapter_break == 'after' %}break{% endif %}">
-      <a {% if resource.meta.next_url %}href="{{ resource.meta.next_url }}" title="go to the next page" data-id="{{ resource.meta.next_slug }}"{% else %}title="no more pages"{% endif %}>Next</a>
+      <a {% if resource.meta.next.url %}href="{{ resource.meta.next.url }}" title="go to the next page" data-id="{{ resource.meta.next.slug }}"{% else %}title="no more pages"{% endif %}>Next</a>
     </li>
   </ul>
 </nav>
