@@ -31,6 +31,14 @@
   &:active
     +box-shadow($border 0 0 rhythm(.25) inset)
 
+.check
+  &::before
+    content: "N "
+
+.successful
+  &::before
+    content: "Y "
+
 // home page -----------------------------------------------------------------
 
 #home
@@ -67,13 +75,43 @@
 
   .read
     +trailer(.5)
-    a, em
-      display: block
-    a
-      +button($green-lighter,false,.25,$smallpx)
+
+  .good
+    +button($green-lighter,false,.25,$smallpx)
+    display: none
     em
       @extend .allcaps
+      display: block
       font-style: normal
+
+  .bad
+    display: block
+
+  .checklist
+    +no-style-list
+
+  @media all and (min-width: 0px)
+    .media
+      @extend .successful
+
+  .fontface & .fontface
+    @extend .successful
+  .opacity & .opacity
+    @extend .successful
+  .rgba & .rgba
+    @extend .successful
+  .cssgradients & .cssgradients
+    @extend .successful
+  .multiplebgs & .multiplebgs
+    @extend .successful
+  .backgroundsize & .backgroundsize
+    @extend .successful
+
+  +support
+    .good
+      display: block
+    .bad
+      display: none
 
   .extra
     +adjust-font-size-to($smallpx)

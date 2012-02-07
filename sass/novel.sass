@@ -8,6 +8,12 @@ $uifontsize : $xxsmallpx
 $uigradx    : linear-gradient(left,rgba($white,$xxxsmall),rgba($white,0))
 $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
 
+#toggle, .controls
+  display: none
+  +support
+    display: block
+
+
 #toggle
   .target, .icon
     +opacity(0)
