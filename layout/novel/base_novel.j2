@@ -1,14 +1,14 @@
 {% extends 'base.j2' %}
 
 {% block title -%}
-  {{ super() }}
-  {%- if resource.meta.book -%}
+  GreenMud
+  {%- if resource.meta.book %}
     : {{ resource.meta.book }}
-  {%- endif -%}
-  {%- if resource.meta.chapter -%}
+  {% endif %}
+  {% if resource.meta.chapter %}
   : {{ resource.meta.chapter }}
-  {%- endif -%}
-  {%- if resource.meta.title -%}
+  {% endif %}
+  {% if resource.meta.title %}
   : {{ resource.meta.title }}
   {%- endif -%}
 {%- endblock %}
