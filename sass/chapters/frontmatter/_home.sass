@@ -90,7 +90,11 @@
     background: $pink-hint
     overflow: hidden
   .info
-    +media-full
+    +title($cyan-hint,$xsmall)
+    +clearfix
+    +padding-leader(1)
+    +padding-trailer(1)
+    +hpadding(side-gutter())
 
   .novel-title
     +trailer(.25)
@@ -106,56 +110,36 @@
       +adjust-font-size-to($smallpx)
       display: inline
 
-  .read, .support
+  .read
     +trailer(.5)
     a, em
       display: block
+    a
+      +button($green-lighter,false,.25,$smallpx)
     em
       @extend .allcaps
       font-style: normal
-
-  .read
-    a
-      +button($green-lighter,false,.25,$smallpx)
-  .support
-    a
-      +button($pink-lightest,false,.25,$smallpx)
 
   .extra
     +adjust-font-size-to($smallpx)
     display: none
 
-  .description, .instructions
+  .description
     +trailer(.5)
     clear: both
     h2
       @extend .allcaps
-
-  .description
-    +title($cyan-hint,$xsmall)
-    +padding-leader(1)
-    +padding-trailer(1)
     p
       +adjust-font-size-to($smallpx)
       +trailer(0)
 
-  .instructions
-    +pad(1,1,6)
-    text-align: center
-    p
-      +trailer(.5)
-
   +small
+    .info
+      +hpadding(side-gutter())
     .extra
       display: block
-    .read, .support
-      +columns(6,12)
-    .read
-      +omega(12)
     .description
       +pad(1,1,12)
-    .instructions
-      +pad(2,2,12)
 
   +small(height)
     .novel-title
@@ -174,21 +158,16 @@
         repeat: no-repeat, no-repeat
 
   +medium
-    .actions
+    .info
+      +hpadding(side-gutter())
+
+    .read
       +columns(4,12)
       +omega(12)
       +leader(1)
-      position: relative
-      z-index: 20
-    .read, .support
-      +un-column
-      +full(4)
 
     .description
       +columns(8,12)
       +hpadding(0)
       min-height: rhythm(5.5)
       clear: none
-
-    .instructions
-      background: image-url($scribble) no-repeat scroll left, image-url($scribble) no-repeat scroll right
