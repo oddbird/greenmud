@@ -1,7 +1,7 @@
 // Mixin ---------------------------------------------------------------------
 
-+font-face('GreenMudJJRegular', font-files('jj/GreenMudJJ-Regular.otf',opentype), false, normal, normal)
-+font-face('GreenMudJJRegular', font-files('jj/GreenMudJJ-Italic.otf',opentype), false, normal, italic)
++font-face('GreenMudJJRegular', font-files('jj/greenmudjj-regular-webfont.woff', woff, 'jj/greenmudjj-regular-webfont.ttf', truetype, 'jj/greenmudjj-regular-webfont.svg#GreenMudJJRegular', svg), 'jj/greenmudjj-regular-webfont.eot', normal, normal)
++font-face('GreenMudJJRegular', font-files('jj/greenmudjj-italic-webfont.woff', woff, 'jj/greenmudjj-italic-webfont.ttf', truetype, 'jj/greenmudjj-italic-webfont.svg#GreenMudJJItalic', svg), 'jj/greenmudjj-italic-webfont.eot', normal, italic)
 
 // Font Stacks ---------------------------------------------------------------
 
@@ -15,7 +15,10 @@ $mono-stack   : monospace, sans-serif
   font-family: $sans-stack
 
 =serif-family
-  font-family: 'GreenMudJJRegular', $serif-stack
+  font-family: $serif-stack
 
 =mono-family
   font-family: $mono-stack
+
+=jj-family
+  font-family: 'GreenMudJJRegular', serif
