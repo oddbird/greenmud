@@ -67,16 +67,16 @@ html { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 body { -moz-animation: fadeIn 300ms linear both; -webkit-animation: fadeIn 300ms linear both; -ms-animation: fadeIn 300ms linear both; animation: fadeIn 300ms linear both; position: relative; color: #202020; overflow-x: hidden; }
 
 /* Selected Text ------------------------------------------------------------- */
-::-webkit-selection { color: black; background: #bf00bf; text-shadow: none; }
+::-webkit-selection { color: white; background: #7f007f; text-shadow: none; }
 
-::-moz-selection { color: black; background: #bf00bf; text-shadow: none; }
+::-moz-selection { color: white; background: #7f007f; text-shadow: none; }
 
-::selection { color: black; background: #bf00bf; text-shadow: none; }
+::selection { color: white; background: #7f007f; text-shadow: none; }
 
 /* Links --------------------------------------------------------------------- */
 a:hover, a:active { outline: none; }
-a:link, a:visited { color: #bf00bf; text-decoration: none; }
-a:focus, a:hover, a:active { color: #00bf00; }
+a:link, a:visited { color: #7f007f; text-decoration: none; }
+a:focus, a:hover, a:active { color: #003f00; }
 
 /* Inline -------------------------------------------------------------------- */
 cite, em, dfn, address, i { font-style: italic; }
@@ -113,7 +113,7 @@ blockquote { font-style: italic; }
 details { margin-bottom: 1.25em; }
 
 summary { display: inline; cursor: pointer; }
-summary:focus { outline: thin dotted #00bf00; }
+summary:focus { outline: thin dotted #003f00; }
 
 .no-details details > * { display: none; }
 .no-details details summary { display: inline; }

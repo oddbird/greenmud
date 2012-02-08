@@ -32,12 +32,33 @@
     +box-shadow($border 0 0 rhythm(.25) inset)
 
 .check
-  &::before
-    content: "N "
+  @extend .allcaps
+  +adjust-font-size-to($xsmallpx,.75,$smallpx)
+  a
+    +leading-border(1px,.125,$xsmallpx)
+    display: block
+    color: $red-darkest
+    border-color: $red-lightest
+    background: rgba($red-light,$xxsmall)
+    &::before
+      +opacity(.75)
+      content: image-url('ui/x.png')
+      margin: 0 rhythm(.375)
+    #{$focus}
+      color: $red-darkest
+      background: rgba($red-light,$xsmall)
+      &::before
+        +opacity(1)
 
 .successful
-  &::before
-    content: "Y "
+  a
+    color: $base
+    background: none
+    &::before
+      content: image-url('ui/check.png')
+    #{$focus}
+      color: $green-darkest
+      background: rgba($green-lighter,$xxxsmall)
 
 // home page -----------------------------------------------------------------
 
@@ -75,17 +96,28 @@
 
   .read
     +trailer(.5)
+    em
+      @extend .allcaps
+      font-style: normal
 
   .good
     +button($green-lighter,false,.25,$smallpx)
     display: none
     em
-      @extend .allcaps
       display: block
-      font-style: normal
 
   .bad
+    +adjust-font-size-to($smallpx,.75)
+    +rhythm-borders(1px,.25,$smallpx)
+    +border-radius
+    +box-shadow(rgba($red-light,$small) 0 0 $xsmallem inset)
+    +text-shadow(rgba($lightest,$xsmall) 0 1px 0)
     display: block
+    background: rgba($red-lighter,$small)
+    border-color: $off-red
+    p
+      @extend .allcaps
+      +trailer(.125,$smallpx)
 
   .checklist
     +no-style-list
@@ -123,7 +155,7 @@
     h2
       @extend .allcaps
     p
-      +adjust-font-size-to($smallpx)
+      +adjust-font-size-to($smallpx,.75)
       +trailer(0)
 
   +small
@@ -157,10 +189,8 @@
     .read
       +columns(4,12)
       +omega(12)
-      +leader(1)
 
     .description
       +columns(8,12)
       +hpadding(0)
-      min-height: rhythm(5.5)
       clear: none

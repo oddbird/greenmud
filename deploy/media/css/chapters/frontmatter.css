@@ -11,9 +11,9 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, #home .novel-title .tagline, #home .novel-title .byline, #home .good em, #home .description h2, #copyright em, #contents h4 { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, .check, #home .novel-title .tagline, #home .novel-title .byline, #home .read em, #home .bad p, #home .description h2, #copyright em, #contents h4 { letter-spacing: 0.05em; }
 
-.allcaps, .title i, #home .novel-title .tagline, #home .novel-title .byline, #home .good em, #home .description h2, #copyright em, #contents h4 { text-transform: uppercase; }
+.allcaps, .title i, .check, #home .novel-title .tagline, #home .novel-title .byline, #home .read em, #home .bad p, #home .description h2, #copyright em, #contents h4 { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -48,9 +48,15 @@
 @keyframes linetiny { 0% { background-position: 1500px bottom; }
   100% { background-position: 0 bottom; } }
 
-.check::before { content: "N "; }
+.check { font-size: 0.8em; line-height: 1.465em; }
+.check a { border-top-style: solid; border-top-width: 0.056em; padding-top: 0.188em; display: block; color: #3f0000; border-color: #ffbfbf; background: rgba(255, 114, 114, 0.512); }
+.check a::before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; content: url('../../images/ui/x.png?1326735333'); margin: 0 0.469em; }
+.check a:focus, .check a:hover, .check a:active { color: #3f0000; background: rgba(255, 114, 114, 0.64); }
+.check a:focus::before, .check a:hover::before, .check a:active::before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 
-.successful::before, #home .media::before, .fontface #home .fontface::before, .opacity #home .opacity::before, .rgba #home .rgba::before, .cssgradients #home .cssgradients::before, .multiplebgs #home .multiplebgs::before, .backgroundsize #home .backgroundsize::before { content: "Y "; }
+.successful a, #home .media a, .fontface #home .fontface a, .opacity #home .opacity a, .rgba #home .rgba a, .cssgradients #home .cssgradients a, .multiplebgs #home .multiplebgs a, .backgroundsize #home .backgroundsize a { color: #202020; background: none; }
+.successful a::before, #home .media a::before, .fontface #home .fontface a::before, .opacity #home .opacity a::before, .rgba #home .rgba a::before, .cssgradients #home .cssgradients a::before, .multiplebgs #home .multiplebgs a::before, .backgroundsize #home .backgroundsize a::before { content: url('../../images/ui/check.png?1326735333'); }
+.successful a:focus, #home .media a:focus, .fontface #home .fontface a:focus, .opacity #home .opacity a:focus, .rgba #home .rgba a:focus, .cssgradients #home .cssgradients a:focus, .multiplebgs #home .multiplebgs a:focus, .backgroundsize #home .backgroundsize a:focus, .successful a:hover, #home .media a:hover, .fontface #home .fontface a:hover, .opacity #home .opacity a:hover, .rgba #home .rgba a:hover, .cssgradients #home .cssgradients a:hover, .multiplebgs #home .multiplebgs a:hover, .backgroundsize #home .backgroundsize a:hover, .successful a:active, #home .media a:active, .fontface #home .fontface a:active, .opacity #home .opacity a:active, .rgba #home .rgba a:active, .cssgradients #home .cssgradients a:active, .multiplebgs #home .multiplebgs a:active, .backgroundsize #home .backgroundsize a:active { color: #003f00; background: rgba(153, 255, 153, 0.41); }
 
 #home { text-shadow: white 0 1px 0; background: #ffe5ff -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 153, 255, 0.41)), color-stop(100%, rgba(255, 153, 255, 0))); background: #ffe5ff -webkit-linear-gradient(top, rgba(255, 153, 255, 0.41), rgba(255, 153, 255, 0) 15em); background: #ffe5ff -moz-linear-gradient(top, rgba(255, 153, 255, 0.41), rgba(255, 153, 255, 0) 15em); background: #ffe5ff -o-linear-gradient(top, rgba(255, 153, 255, 0.41), rgba(255, 153, 255, 0) 15em); background: #ffe5ff -ms-linear-gradient(top, rgba(255, 153, 255, 0.41), rgba(255, 153, 255, 0) 15em); background: #ffe5ff linear-gradient(top, rgba(255, 153, 255, 0.41), rgba(255, 153, 255, 0) 15em); }
 #home .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; padding-bottom: 1.25em; background: #ffe5ff; -moz-box-shadow: rgba(255, 153, 255, 0.64) 0 0 1.25em; -webkit-box-shadow: rgba(255, 153, 255, 0.64) 0 0 1.25em; -o-box-shadow: rgba(255, 153, 255, 0.64) 0 0 1.25em; box-shadow: rgba(255, 153, 255, 0.64) 0 0 1.25em; background: #ffe5ff; overflow: hidden; }
@@ -68,18 +74,20 @@
 #home .novel-title .name { font-size: 1.563em; line-height: 1.2em; margin-top: 0.8em; }
 #home .novel-title .tagline, #home .novel-title .byline { font-size: 0.8em; line-height: 1.562em; display: inline; }
 #home .read { margin-bottom: 0.625em; }
+#home .read em { font-style: normal; }
 #home .good { text-shadow: rgba(244, 255, 244, 0.64) 0 1px 0; color: #202020; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.045em; padding: 0.346em; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(244, 255, 244, 0.64)), color-stop(50%, rgba(153, 255, 153, 0)), color-stop(100%, rgba(114, 191, 114, 0.64))); background-image: -webkit-linear-gradient(top, rgba(244, 255, 244, 0.64), rgba(153, 255, 153, 0), rgba(114, 191, 114, 0.64)); background-image: -moz-linear-gradient(top, rgba(244, 255, 244, 0.64), rgba(153, 255, 153, 0), rgba(114, 191, 114, 0.64)); background-image: -o-linear-gradient(top, rgba(244, 255, 244, 0.64), rgba(153, 255, 153, 0), rgba(114, 191, 114, 0.64)); background-image: -ms-linear-gradient(top, rgba(244, 255, 244, 0.64), rgba(153, 255, 153, 0), rgba(114, 191, 114, 0.64)); background-image: linear-gradient(top, rgba(244, 255, 244, 0.64), rgba(153, 255, 153, 0), rgba(114, 191, 114, 0.64)); background-color: #99ff99; border-color: #4c7f4c; text-align: center; display: none; }
 #home .good:focus, #home .good:hover, #home .good:active { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(153, 255, 153, 0)), color-stop(100%, rgba(76, 127, 76, 0.64))); background-image: -webkit-linear-gradient(top, rgba(153, 255, 153, 0), rgba(76, 127, 76, 0.64)); background-image: -moz-linear-gradient(top, rgba(153, 255, 153, 0), rgba(76, 127, 76, 0.64)); background-image: -o-linear-gradient(top, rgba(153, 255, 153, 0), rgba(76, 127, 76, 0.64)); background-image: -ms-linear-gradient(top, rgba(153, 255, 153, 0), rgba(76, 127, 76, 0.64)); background-image: linear-gradient(top, rgba(153, 255, 153, 0), rgba(76, 127, 76, 0.64)); }
 #home .good:active { -moz-box-shadow: #4c7f4c 0 0 0.313em inset; -webkit-box-shadow: #4c7f4c 0 0 0.313em inset; -o-box-shadow: #4c7f4c 0 0 0.313em inset; box-shadow: #4c7f4c 0 0 0.313em inset; }
-#home .good em { display: block; font-style: normal; }
-#home .bad { display: block; }
+#home .good em { display: block; }
+#home .bad { font-size: 0.8em; line-height: 1.172em; border-style: solid; border-width: 0.045em; padding: 0.346em; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; -moz-box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; -webkit-box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; -o-box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; text-shadow: rgba(223, 223, 223, 0.64) 0 1px 0; display: block; background: rgba(255, 153, 153, 0.8); border-color: #ac5353; }
+#home .bad p { margin-bottom: 0.195em; }
 #home .checklist { margin: 0; padding: 0; border: 0; list-style: none; }
 #home .checklist li { list-style-image: none; list-style-type: none; margin-left: 0px; }
 @media all and (min-width: 0px) { .fontface.opacity.cssgradients.rgba.multiplebgs.backgroundsize #home .good { display: block; }
   .fontface.opacity.cssgradients.rgba.multiplebgs.backgroundsize #home .bad { display: none; } }
 #home .extra { font-size: 0.8em; line-height: 1.562em; display: none; }
 #home .description { margin-bottom: 0.625em; clear: both; }
-#home .description p { font-size: 0.8em; line-height: 1.562em; margin-bottom: 0em; }
+#home .description p { font-size: 0.8em; line-height: 1.172em; margin-bottom: 0em; }
 @media (min-width: 525px) { #home .info { padding-left: 4.615%; padding-right: 4.615%; }
   #home .extra { display: block; }
   #home .description { padding-left: 8.451%; padding-right: 8.451%; } }
@@ -87,8 +95,8 @@
   #home .novel-title .name { margin-top: 0em; } }
 @media (min-width: 980px) and (min-height: 350px) { #home .pagewrap { background-image: url('../../images/frontmatter/titlepage/strings_left.png?1327305552'), url('../../images/frontmatter/titlepage/strings_right.png?1327306277'); background-position: left top, right top; background-repeat: no-repeat, no-repeat; } }
 @media (min-width: 980px) { #home .info { padding-left: 3.896%; padding-right: 3.896%; }
-  #home .read { display: inline; float: left; width: 32.394%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; margin-top: 1.25em; }
-  #home .description { display: inline; float: left; width: 66.197%; margin-right: 1.408%; padding-left: 0; padding-right: 0; min-height: 6.875em; clear: none; } }
+  #home .read { display: inline; float: left; width: 32.394%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
+  #home .description { display: inline; float: left; width: 66.197%; margin-right: 1.408%; padding-left: 0; padding-right: 0; clear: none; } }
 
 @-webkit-keyframes line { 0% { background-position: 1500px center; }
   100% { background-position: 0 center; } }
