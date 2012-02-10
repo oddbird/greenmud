@@ -1,6 +1,8 @@
 // contents ------------------------------------------------------------------
 
 #contents
+  +text-shadow($white 0 0 $xxsmallpx)
+  +background(linear-gradient(top, rgba($green-hint,$small), rgba($green-hint,$small) 50%, rgba($red-hint,$small) 50%))
 
   h4
     @extend .allcaps
@@ -13,6 +15,7 @@
 
   .pagewrap
     +media-container
+    background: image-url($scribble) no-repeat scroll 200% 40%
 
   .content
     +media-full
@@ -31,11 +34,19 @@
         right: 100% + gutter()
         content: counter(contents,decimal) "."
 
-    +small
+  +small
+    +background(linear-gradient(left, rgba($green-hint,$small), rgba($green-hint,$small) 48%, rgba($red-hint,$small) 48%))
+
+    .pagewrap
+      background-position: 43% rhythm(-5)
+
+    .contents
       +columns(5,10)
       &:last-child
         +omega(10)
-    +medium
+
+  +medium
+    .contents
       +columns(6,12)
       &:last-child
         +omega(12)
