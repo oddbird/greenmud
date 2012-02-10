@@ -68,17 +68,10 @@
 
   .pagewrap
     +media-container
-    +padding-trailer(1)
     +background($pink-hint)
     +box-shadow(rgba($pink-lighter,$xsmall) 0 0 rhythm(1))
     background: $pink-hint
     overflow: hidden
-  .info
-    +title($cyan-hint,$xsmall)
-    +clearfix
-    +padding-leader(1)
-    +padding-trailer(1)
-    +hpadding(side-gutter())
 
   .novel-title
     +trailer(.25)
@@ -94,8 +87,15 @@
       +adjust-font-size-to($smallpx)
       display: inline
 
+  // Main Info ---------------------------------------------------------------
+  .info
+    +title($cyan-hint,$xsmall)
+    +clearfix
+    +padding-leader(1)
+    +padding-trailer(1)
+    +hpadding(side-gutter())
+
   .read
-    +trailer(.5)
     em
       @extend .allcaps
       font-style: normal
@@ -105,45 +105,6 @@
     display: none
     em
       display: block
-
-  .bad
-    +adjust-font-size-to($smallpx,.75)
-    +rhythm-borders(1px,.25,$smallpx)
-    +border-radius
-    +box-shadow(rgba($red-light,$small) 0 0 $xsmallem inset)
-    +text-shadow(rgba($lightest,$xsmall) 0 1px 0)
-    display: block
-    background: rgba($red-lighter,$small)
-    border-color: $off-red
-    p
-      @extend .allcaps
-      +trailer(.125,$smallpx)
-
-  .checklist
-    +no-style-list
-
-  @media all and (min-width: 0px)
-    .media
-      @extend .successful
-
-  .fontface & .fontface
-    @extend .successful
-  .opacity & .opacity
-    @extend .successful
-  .rgba & .rgba
-    @extend .successful
-  .cssgradients & .cssgradients
-    @extend .successful
-  .multiplebgs & .multiplebgs
-    @extend .successful
-  .backgroundsize & .backgroundsize
-    @extend .successful
-
-  +support
-    .good
-      display: block
-    .bad
-      display: none
 
   .extra
     +adjust-font-size-to($smallpx)
@@ -174,7 +135,6 @@
       .name
         +leader(0)
 
-  // small height, medium width
   @media (min-width: 980px) and (min-height: 350px)
     .pagewrap
       background:
@@ -194,3 +154,55 @@
       +columns(8,12)
       +hpadding(0)
       clear: none
+
+  // Browser Support ---------------------------------------------------------
+  .bad
+    +adjust-font-size-to($smallpx,.75)
+    +rhythm-borders(1px,.25,$smallpx)
+    +border-radius
+    +box-shadow(rgba($red-light,$small) 0 0 $xsmallem inset)
+    +text-shadow(rgba($lightest,$xsmall) 0 1px 0)
+    display: block
+    background: rgba($red-lighter,$small)
+    border-color: $off-red
+    p
+      @extend .allcaps
+      +trailer(.125,$smallpx)
+
+  .checklist
+    +no-style-list
+
+  @media all and (min-width: 0px)
+    .media
+      @extend .successful
+
+  .fontface & .fontface, .opacity & .opacity, .rgba & .rgba,
+  .cssgradients & .cssgradients, .multiplebgs & .multiplebgs,
+  .backgroundsize & .backgroundsize
+    @extend .successful
+
+  +support
+    .good
+      display: block
+    .bad
+      display: none
+
+  // Funding -----------------------------------------------------------------
+
+  .support
+    +media-full
+    +leader
+
+    p
+      +adjust-font-size-to($smallpx)
+
+  // Footer ------------------------------------------------------------------
+
+  .pageinfo
+    +clearfix
+    +adjust-font-size-to($smallpx)
+    background: $blue-hint
+
+  .copyright, .colophon
+    +media-full
+    +leader
