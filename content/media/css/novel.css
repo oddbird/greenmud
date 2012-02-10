@@ -979,4 +979,4 @@ h1, .breadcrumb { display: inline; margin: 0; padding: 0; }
 .pagewrap { padding-top: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
 @media (min-height: 350px) { .pagewrap { padding-top: 1.875em; } }
 @media (min-height: 490px) { .pagewrap { padding-top: 2.5em; } }
-@media (min-width: 1260px), (min-height: 700px) { .pagewrap { padding-top: 3.75em; } }
+@media (min-height: 700px) { .pagewrap { padding-top: 3.75em; } }

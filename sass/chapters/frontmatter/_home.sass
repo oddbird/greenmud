@@ -64,24 +64,23 @@
 
 #home
   +text-shadow($white 0 1px 0)
-  +background($pink-hint linear-gradient(top, rgba($pink-lighter,$xxxsmall), rgba($pink-lighter,0) rhythm(12)))
+  +background($off-blue-hint linear-gradient(top, rgba($off-blue-lightest,$xxxsmall), rgba($off-blue-lightest,0) rhythm(12)))
 
   .pagewrap
     +media-container
-    +background($pink-hint)
-    +box-shadow(rgba($pink-lighter,$xsmall) 0 0 rhythm(1))
-    background: $pink-hint
+    +box-shadow(rgba($blue-lighter,$xxsmall) 0 rhythm(-1) rhythm(1))
+    background: change-color($pink-hint,$lightness: 97%)
     overflow: hidden
 
   .novel-title
     +trailer(.25)
     +hpadding(side-gutter())
+    +transition(padding 300ms)
     text-align: center
     p
       +trailer(0)
     .name
       +adjust-font-size-to($largepx,1.5)
-      +leader(1,$largepx)
     .tagline, .byline
       @extend .allcaps
       +adjust-font-size-to($smallpx)
@@ -95,10 +94,12 @@
     +padding-trailer(1)
     +hpadding(side-gutter())
 
-  .read
+  .read, .action
+    +trailer(.5)
     em
       @extend .allcaps
       font-style: normal
+      white-space: nowrap
 
   .good
     +button($green-lighter,false,.25,$smallpx)
@@ -106,54 +107,22 @@
     em
       display: block
 
+  .fund
+    +button($pink-lighter,false,.25,$smallpx)
+    display: block
+
   .extra
     +adjust-font-size-to($smallpx)
     display: none
 
   .description
-    +trailer(.5)
+    +adjust-font-size-to($smallpx)
+    +trailer(.5,$smallpx)
     clear: both
     h2
       @extend .allcaps
     p
-      +adjust-font-size-to($smallpx,.75)
       +trailer(0)
-
-  +small
-    .info
-      +hpadding(side-gutter())
-    .extra
-      display: block
-    .description
-      +pad(1,1,12)
-
-  +small(height)
-    .novel-title
-      +animation(linetiny 75s infinite both)
-      +padding-trailer(2.5)
-      background: image-url($line) repeat-x scroll 0 bottom
-      .name
-        +leader(0)
-
-  @media (min-width: 980px) and (min-height: 350px)
-    .pagewrap
-      background:
-        image: image-url($strings-left), image-url($strings-right)
-        position: left top, right top
-        repeat: no-repeat, no-repeat
-
-  +medium
-    .info
-      +hpadding(side-gutter())
-
-    .read
-      +columns(4,12)
-      +omega(12)
-
-    .description
-      +columns(8,12)
-      +hpadding(0)
-      clear: none
 
   // Browser Support ---------------------------------------------------------
   .bad
@@ -187,22 +156,93 @@
     .bad
       display: none
 
-  // Funding -----------------------------------------------------------------
-
-  .support
-    +media-full
-    +leader
-
-    p
-      +adjust-font-size-to($smallpx)
-
   // Footer ------------------------------------------------------------------
 
   .pageinfo
     +clearfix
     +adjust-font-size-to($smallpx)
-    background: $blue-hint
+    +padding-leader(1,$smallpx)
+    background: $off-blue-hint
 
   .copyright, .colophon
-    +media-full
-    +leader
+    +full
+    +trailer(.5,$smallpx)
+
+  .copyright, .colophon a
+    text-transform: uppercase
+
+  // Media Queries -----------------------------------------------------------
+
+  +small
+    .info
+      +hpadding(side-gutter())
+    .extra
+      display: block
+
+    .description
+      +columns(6,10)
+      +hpadding(0)
+      +trailer(0)
+      clear: none
+
+    .read, .action
+      +columns(4,10)
+      +omega(10)
+
+    .colophon, .copyright
+      margin: 0
+      +columns(5)
+      +trailer(.5,$smallpx)
+      clear: none
+
+    .copyright
+      +alpha
+    .colophon
+      +omega
+
+  +small(both)
+    .pageinfo
+      +adjust-font-size-to($xsmallpx,.75)
+    .colophon, .copyright
+      +trailer(.5,$xsmallpx)
+
+  +small(height)
+    .novel-title
+      +animation(linetiny 75s infinite both)
+      +padding-trailer(2.5)
+      background: image-url($line) repeat-x scroll 0 bottom
+
+  @media (min-width: 980px) and (min-height: 350px)
+    .pagewrap
+      +transition(all 300ms)
+      background:
+        image: image-url($strings-left), image-url($strings-right)
+        position: left rhythm(-1), right rhythm(-1)
+        repeat: no-repeat, no-repeat
+
+  +medium
+    .info
+      +hpadding(side-gutter())
+
+    .description
+      +columns(7,12)
+
+    .read, .action
+      +columns(5,12)
+      +omega(12)
+
+    .colophon, .copyright
+      +columns(5)
+    .copyright
+      +alpha
+    .colophon
+      +omega
+
+  +medium(height)
+    .pagewrap
+      background-position: left top, right top
+
+  +large(height)
+    .pagewrap
+      background-position: left rhythm(1), right rhythm(1)
+
