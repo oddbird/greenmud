@@ -1,20 +1,41 @@
++keyframes(copyright)
+  0%
+    +rotate(2deg)
+    top: rhythm(6.25)
+  15%
+    +rotate(-3deg)
+    top: rhythm(2)
+  45%
+    +rotate(4deg)
+    top: rhythm(9)
+  75%
+    +rotate(-6deg)
+    top: rhythm(3)
+  100%
+    +rotate(2deg)
+    top: rhythm(6.25)
+
 // copyright -----------------------------------------------------------------
 
 #copyright
+  position: relative
+  background: $off-green-hint
+  overflow: hidden
+
   .pagewrap
     +media-container
 
   .content
     +media-full
-
     +small
       +pad(1,1)
-
     +medium
       +pad(2,2)
 
   p
     +trailer(.5)
+    position: relative
+    z-index: 1
     ~ p
       +adjust-font-size-to($smallpx)
       +trailer(.5,$smallpx)
@@ -22,3 +43,23 @@
   em
     @extend .allcaps
     font-style: normal
+
+  .water1, .water2
+    position: absolute
+    top: rhythm(6.25)
+    left: rhythm(-10)
+    bottom: rhythm(-10)
+    right: rhythm(-10)
+    background: rgba($off-blue-hint,$small)
+    z-index: 0
+
+  .water1
+    +animation(copyright 23s linear infinite both)
+    +rotate(2deg)
+
+  .water2
+    +animation(copyright 41s linear infinite both)
+    +rotate(-2deg)
+    margin-top: rhythm(8)
+    background: rgba($off-cyan-hint,$small)
+
