@@ -1,17 +1,19 @@
-@font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/GreenMudJJ-Regular.otf') format('opentype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/greenmudjj-regular-webfont.eot'); src: url('../../fonts/jj/greenmudjj-regular-webfont.eot?iefix') format('eot'), url('../../fonts/jj/greenmudjj-regular-webfont.woff') format('woff'), url('../../fonts/jj/greenmudjj-regular-webfont.ttf') format('truetype'), url('../../fonts/jj/greenmudjj-regular-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/GreenMudJJ-Italic.otf') format('opentype'); font-weight: normal; font-style: italic; }
+@font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../../fonts/jj/greenmudjj-italic-webfont.eot?iefix') format('eot'), url('../../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJItalic') format('svg'); font-weight: normal; font-style: italic; }
 
 /* Typography ---------------------------------------------------------------- */
-.serif, .jj, .susy, .narrator { font-family: "GreenMudJJRegular", serif; }
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", serif; }
+
+.serif { font-family: serif; }
 
 .sans { font-family: sans-serif; }
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot, .demo .demo-title { letter-spacing: 0.05em; }
 
-.allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot { text-transform: uppercase; }
+.allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot, .demo .demo-title { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -104,3 +106,19 @@
 #titlepage h2:before, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(255, 255, 153, 0.41); z-index: -1; }
 #titlepage h2:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 #titlepage h2:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
+
+.demo { background: #f6f6ed; }
+.demo .demo-note { margin-bottom: 1.25em; color: #bf0000; }
+.demo .demo-title { font-size: 0.64em; line-height: 1.953em; }
+.demo .demo-image { border: 1px solid rgba(129, 129, 62, 0.64); }
+.demo .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
+.demo .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 525px) { .demo .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+  .demo .pagewrap:after { content: ""; display: table; clear: both; } }
+@media (min-width: 980px) { .demo .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+  .demo .pagewrap:after { content: ""; display: table; clear: both; } }
+.demo .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; }
+@media (min-width: 525px) { .demo .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 980px) { .demo .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+@media (min-width: 525px) { .demo .content { padding-left: 9.231%; padding-right: 9.231%; } }
+@media (min-width: 980px) { .demo .content { padding-left: 15.584%; padding-right: 15.584%; } }
