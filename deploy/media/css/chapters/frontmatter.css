@@ -114,6 +114,21 @@
 @media (min-height: 490px) { #home .pagewrap { background-position: left top, right top; } }
 @media (min-height: 700px) { #home .pagewrap { background-position: left 1.25em, right 1.25em; } }
 
+#instructions { background: #f6f6ed; text-align: center; }
+#instructions .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
+#instructions .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 525px) { #instructions .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+  #instructions .pagewrap:after { content: ""; display: table; clear: both; } }
+@media (min-width: 980px) { #instructions .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+  #instructions .pagewrap:after { content: ""; display: table; clear: both; } }
+#instructions .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; margin-top: 0.625em; }
+@media (min-width: 525px) { #instructions .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 980px) { #instructions .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+#instructions strong { display: block; }
+#instructions p { margin-bottom: 0em; }
+#instructions p:last-child { margin-bottom: 2.5em; }
+#instructions img { margin-bottom: 0.625em; }
+
 @-webkit-keyframes line { 0% { background-position: 1500px center; }
   100% { background-position: 0 center; } }
 

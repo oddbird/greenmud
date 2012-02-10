@@ -1,0 +1,18 @@
+#instructions
+  background: $off-yellow-hint
+  text-align: center
+
+  .pagewrap
+    +media-container
+  .content
+    +media-full
+    +leader(.5)
+
+  strong
+    display: block
+  p
+    +trailer(0)
+    &:last-child
+      +trailer(2)
+  img
+    +trailer(.5)
