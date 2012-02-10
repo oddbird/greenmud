@@ -29,39 +29,57 @@
       color: $green-darkest
       background: rgba($green-lighter,$xxxsmall)
 
+.checklist
+  +no-style-list
+
+  @media all and (min-width: 0px)
+    .media
+      @extend .successful
+
+  .fontface & .fontface, .opacity & .opacity, .rgba & .rgba,
+  .cssgradients & .cssgradients, .multiplebgs & .multiplebgs,
+  .backgroundsize & .backgroundsize
+    @extend .successful
+
 // home page -----------------------------------------------------------------
 
 #home
-  +text-shadow($white 0 1px 0)
-  +background($off-blue-hint linear-gradient(top, rgba($off-blue-lightest,$xxxsmall), rgba($off-blue-lightest,0) rhythm(12)))
+  +background-image(linear-gradient(bottom, rgba($pink-lightest,$xxxsmall), rgba($pink-lightest,0) rhythm(12)))
+  background-color: $pink-hint
 
   .pagewrap
     +media-container
-    +box-shadow(rgba($blue-lighter,$xxsmall) 0 rhythm(-1) rhythm(1))
-    background: change-color($pink-hint,$lightness: 97%)
-    overflow: hidden
 
   .novel-title
+    +media-full
     +trailer(.25)
-    +hpadding(side-gutter())
     +transition(padding 300ms)
-    text-align: center
+    +small
+      +pad(1,1)
+    +medium
+      +pad(2,2)
+    +medium(height)
+      +padding-trailer
     p
       +trailer(0)
     .name
       +adjust-font-size-to($largepx,1.5)
+      +small
+        +adjust-font-size-to($xlargepx,1.5)
     .tagline, .byline
-      @extend .allcaps
       +adjust-font-size-to($smallpx)
       display: inline
 
   // Main Info ---------------------------------------------------------------
   .info
+    +media-full
     +title($cyan-hint,$xsmall)
-    +clearfix
-    +padding-leader(1)
-    +padding-trailer(1)
-    +hpadding(side-gutter())
+    +padding-leader(.5)
+    +padding-trailer(.5)
+    +small
+      +pad(1,1)
+    +medium
+      +pad(2,2)
 
   .read, .action
     +trailer(.5)
@@ -83,13 +101,15 @@
   .extra
     +adjust-font-size-to($smallpx)
     display: none
+    +small
+      display: block
 
   .description
-    +adjust-font-size-to($smallpx)
-    +trailer(.5,$smallpx)
+    +trailer(.5)
     clear: both
     h2
       @extend .allcaps
+      +adjust-font-size-to($medpx,1.5)
     p
       +trailer(0)
 
@@ -107,18 +127,6 @@
       @extend .allcaps
       +trailer(.125,$smallpx)
 
-  .checklist
-    +no-style-list
-
-  @media all and (min-width: 0px)
-    .media
-      @extend .successful
-
-  .fontface & .fontface, .opacity & .opacity, .rgba & .rgba,
-  .cssgradients & .cssgradients, .multiplebgs & .multiplebgs,
-  .backgroundsize & .backgroundsize
-    @extend .successful
-
   +support
     .good
       display: block
@@ -128,90 +136,25 @@
   // Footer ------------------------------------------------------------------
 
   .pageinfo
-    +clearfix
     +adjust-font-size-to($smallpx)
+    +media-full
     +padding-leader(1,$smallpx)
-    background: $off-blue-hint
+    +small
+      +pad(1,1)
+    +medium
+      +pad(2,2)
 
   .copyright, .colophon
-    +full
     +trailer(.5,$smallpx)
+    +small
+      +columns(4,8)
+    +medium
+      +columns(4,8)
+
+  .colophon
+    +small
+      +omega(8)
 
   .copyright, .colophon a
     text-transform: uppercase
-
-  // Media Queries -----------------------------------------------------------
-
-  +small
-    .info
-      +hpadding(side-gutter())
-    .extra
-      display: block
-
-    .description
-      +columns(6,10)
-      +hpadding(0)
-      +trailer(0)
-      clear: none
-
-    .read, .action
-      +columns(4,10)
-      +omega(10)
-
-    .colophon, .copyright
-      margin: 0
-      +columns(5)
-      +trailer(.5,$smallpx)
-      clear: none
-
-    .copyright
-      +alpha
-    .colophon
-      +omega
-
-  +small(both)
-    .pageinfo
-      +adjust-font-size-to($xsmallpx,.75)
-    .colophon, .copyright
-      +trailer(.5,$xsmallpx)
-
-  +small(height)
-    .novel-title
-      +animation(linetiny 75s infinite both)
-      +padding-trailer(2.5)
-      background: image-url($line) repeat-x scroll 0 bottom
-
-  @media (min-width: 980px) and (min-height: 350px)
-    .pagewrap
-      +transition(all 300ms)
-      background:
-        image: image-url($strings-left), image-url($strings-right)
-        position: left rhythm(-1), right rhythm(-1)
-        repeat: no-repeat, no-repeat
-
-  +medium
-    .info
-      +hpadding(side-gutter())
-
-    .description
-      +columns(7,12)
-
-    .read, .action
-      +columns(5,12)
-      +omega(12)
-
-    .colophon, .copyright
-      +columns(5)
-    .copyright
-      +alpha
-    .colophon
-      +omega
-
-  +medium(height)
-    .pagewrap
-      background-position: left top, right top
-
-  +large(height)
-    .pagewrap
-      background-position: left rhythm(1), right rhythm(1)
 
