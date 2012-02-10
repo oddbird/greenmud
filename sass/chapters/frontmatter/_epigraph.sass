@@ -1,6 +1,8 @@
 // epigraph ------------------------------------------------------------------
 
 #epigraph
+  +background-image(linear-gradient(-70deg, rgba($blue-hint, 0), rgba($blue-hint, 0) 50%, $blue-hint 50%))
+  background-color: $darker
 
   .pagewrap
     +media-container
@@ -9,9 +11,26 @@
     +media-full
     +adjust-font-size-to($smallpx)
 
-    +small
-      +prefix(2)
+  blockquote
+    +border-radius(1em 3em 2em 0)
+    +rhythm-borders(1px,.5,$xsmallpx)
+    border-color: $base
+    background: $off-cyan-hint
 
-    +medium
-      +prefix(4)
+  p
+    &:last-child
+      +trailer(0)
+      font-style: normal
+
+  +small
+    .content
+      +pad(1,1)
+
+  +medium
+    .content
+      +pad(3,1)
       font: inherit
+
+    blockquote
+      +rhythm-borders(1px,.5,$smallpx)
+
