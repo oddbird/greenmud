@@ -37,17 +37,11 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
       border-bottom: 1px solid $white
   .icon
     +replace-text('ui/gear.png')
+    +opacity(1)
     display: block
     width: rhythm(1)
     height: rhythm(1)
     z-index: 910
-
-  &:hover, &.active
-    .target
-      +opacity(1)
-  &.active
-    .icon
-      +opacity(1)
 
 .controls
   +adjust-font-size-to($uifontsize)
@@ -117,9 +111,8 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
         position: center
         repeat: no-repeat
       z-index: 850
-      &[href]
-        &:hover, .showtargets &
-          +opacity(.5)
+      .showtargets &
+        +opacity(.5)
 
       +small
         width: rhythm(.75, $uifontsize)
