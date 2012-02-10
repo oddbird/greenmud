@@ -15,3 +15,29 @@
   h2
     @extend .title
     +title($yellow-lighter)
+
+// Demo ----------------------------------------------------------------------
+
+.demo
+  background: $off-yellow-hint
+
+  .demo-note
+    +trailer(1)
+    color: $red-dark
+
+  .demo-title
+    @extend .allcaps
+    +adjust-font-size-to($xsmallpx)
+
+  .demo-image
+    border: 1px solid rgba($off-yellow-dark,$xsmall)
+
+  .pagewrap
+    +media-container
+  .content
+    +media-full
+
+    +small
+      +pad(1,1)
+    +medium
+      +pad(2,2)
