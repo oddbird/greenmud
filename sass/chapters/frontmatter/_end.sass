@@ -1,0 +1,43 @@
+#end
+  background-color: $off-green-hint
+
+  .pagewrap
+    +media-container
+  .content
+    +media-full
+    +small
+      +pad(1,1)
+    +medium
+      +pad(2,2)
+
+  h2
+    @extend .allcaps
+    +adjust-font-size-to($medpx,1)
+    +trailer(.5,$medpx)
+
+  .fund
+    +trailer(.5)
+    +button($green-lighter,false,.25,$smallpx)
+    display: block
+    em
+      @extend .allcaps
+      display: block
+      font-style: normal
+    .extra
+      +adjust-font-size-to($smallpx)
+    +small
+      +trailer(.25)
+      +float(right)
+      width: columns(4,10)
+      margin-left: gutter(10)
+    +medium
+      width: columns(5,12)
+      margin-left: gutter(12)
+
+  .extra
+    display: none
+    +small
+      display: inline
+
+  .thanks-list
+    +delimited-list
