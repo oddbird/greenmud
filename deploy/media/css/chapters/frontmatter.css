@@ -127,7 +127,6 @@
 @media (min-width: 980px) { #instructions .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #instructions strong { display: block; }
 #instructions p { margin-bottom: 0em; }
-#instructions p:last-child { margin-bottom: 2.5em; }
 #instructions img { margin-bottom: 0.625em; }
 
 @-webkit-keyframes line { 0% { background-position: 1500px center; }
