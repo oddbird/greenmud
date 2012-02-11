@@ -2,13 +2,13 @@
   0%
     +rotate(2deg)
     top: rhythm(6.25)
-  15%
+  10%
     +rotate(-3deg)
     top: rhythm(2)
   45%
     +rotate(4deg)
     top: rhythm(9)
-  75%
+  55%
     +rotate(-6deg)
     top: rhythm(3)
   100%
@@ -44,22 +44,15 @@
     @extend .allcaps
     font-style: normal
 
-  .water1, .water2
+  .water1
+    +rotate(2deg)
     position: absolute
-    top: rhythm(6.25)
+    top: rhythm(7.5)
     left: rhythm(-10)
     bottom: rhythm(-10)
     right: rhythm(-10)
-    background: rgba($off-blue-hint,$small)
+    background: rgba($off-blue-lightest,$small)
     z-index: 0
-
-  .water1
-    +animation(copyright 23s linear infinite both)
-    +rotate(2deg)
-
-  .water2
-    +animation(copyright 41s linear infinite both)
-    +rotate(-2deg)
-    margin-top: rhythm(8)
-    background: rgba($off-cyan-hint,$small)
-
+    +medium
+      +animation(copyright 41s linear infinite both)
+      top: rhythm(6.25)

@@ -199,27 +199,27 @@
   #titlepage .mud { clear: both; margin-left: 3.896%; margin-right: 3.896%; padding-left: 62.338%; } }
 
 @-webkit-keyframes copyright { 0% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; }
-  15% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
+  10% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
   45% { -moz-transform: rotate(4deg); -webkit-transform: rotate(4deg); -o-transform: rotate(4deg); -ms-transform: rotate(4deg); transform: rotate(4deg); top: 11.25em; }
-  75% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
+  55% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
   100% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; } }
 
 @-moz-keyframes copyright { 0% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; }
-  15% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
+  10% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
   45% { -moz-transform: rotate(4deg); -webkit-transform: rotate(4deg); -o-transform: rotate(4deg); -ms-transform: rotate(4deg); transform: rotate(4deg); top: 11.25em; }
-  75% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
+  55% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
   100% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; } }
 
 @-ms-keyframes copyright { 0% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; }
-  15% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
+  10% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
   45% { -moz-transform: rotate(4deg); -webkit-transform: rotate(4deg); -o-transform: rotate(4deg); -ms-transform: rotate(4deg); transform: rotate(4deg); top: 11.25em; }
-  75% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
+  55% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
   100% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; } }
 
 @keyframes copyright { 0% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; }
-  15% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
+  10% { -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); -o-transform: rotate(-3deg); -ms-transform: rotate(-3deg); transform: rotate(-3deg); top: 2.5em; }
   45% { -moz-transform: rotate(4deg); -webkit-transform: rotate(4deg); -o-transform: rotate(4deg); -ms-transform: rotate(4deg); transform: rotate(4deg); top: 11.25em; }
-  75% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
+  55% { -moz-transform: rotate(-6deg); -webkit-transform: rotate(-6deg); -o-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg); top: 3.75em; }
   100% { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); top: 7.813em; } }
 
 #copyright { position: relative; background: #edf6ed; overflow: hidden; }
@@ -237,9 +237,8 @@
 #copyright p { margin-bottom: 0.625em; position: relative; z-index: 1; }
 #copyright p ~ p { font-size: 0.8em; line-height: 1.562em; margin-bottom: 0.781em; }
 #copyright em { font-style: normal; }
-#copyright .water1, #copyright .water2 { position: absolute; top: 7.813em; left: -12.5em; bottom: -12.5em; right: -12.5em; background: rgba(237, 237, 246, 0.8); z-index: 0; }
-#copyright .water1 { -moz-animation: copyright 23s linear infinite both; -webkit-animation: copyright 23s linear infinite both; -ms-animation: copyright 23s linear infinite both; animation: copyright 23s linear infinite both; -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); }
-#copyright .water2 { -moz-animation: copyright 41s linear infinite both; -webkit-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; -moz-transform: rotate(-2deg); -webkit-transform: rotate(-2deg); -o-transform: rotate(-2deg); -ms-transform: rotate(-2deg); transform: rotate(-2deg); margin-top: 10em; background: rgba(237, 246, 246, 0.8); }
+#copyright .water1 { -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); -o-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); position: absolute; top: 9.375em; left: -12.5em; bottom: -12.5em; right: -12.5em; background: rgba(212, 212, 234, 0.8); z-index: 0; }
+@media (min-width: 980px) { #copyright .water1 { -moz-animation: copyright 41s linear infinite both; -webkit-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; top: 7.813em; } }
 
 #contents { text-shadow: white 0 0 14.336px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(229, 255, 229, 0.8)), color-stop(50%, rgba(229, 255, 229, 0.8)), color-stop(50%, rgba(255, 229, 229, 0.8))); background: -webkit-linear-gradient(top, rgba(229, 255, 229, 0.8), rgba(229, 255, 229, 0.8) 50%, rgba(255, 229, 229, 0.8) 50%); background: -moz-linear-gradient(top, rgba(229, 255, 229, 0.8), rgba(229, 255, 229, 0.8) 50%, rgba(255, 229, 229, 0.8) 50%); background: -o-linear-gradient(top, rgba(229, 255, 229, 0.8), rgba(229, 255, 229, 0.8) 50%, rgba(255, 229, 229, 0.8) 50%); background: -ms-linear-gradient(top, rgba(229, 255, 229, 0.8), rgba(229, 255, 229, 0.8) 50%, rgba(255, 229, 229, 0.8) 50%); background: linear-gradient(top, rgba(229, 255, 229, 0.8), rgba(229, 255, 229, 0.8) 50%, rgba(255, 229, 229, 0.8) 50%); }
 #contents h4 { margin-bottom: 0.625em; }
