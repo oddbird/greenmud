@@ -2,32 +2,19 @@
 
 .check
   @extend .allcaps
-  +adjust-font-size-to($xsmallpx,.75,$smallpx)
   a
-    +leading-border(1px,.125,$xsmallpx)
     display: block
     color: $red-darkest
-    border-color: $red-lightest
-    background: rgba($red-light,$xxsmall)
-    &::before
-      +opacity(.75)
-      content: image-url('ui/x.png')
-      margin: 0 rhythm(.375)
+    background: image-url('ui/x.png') no-repeat scroll $xxsmallpx/2
+    padding-left: image-width('ui/x.png') + $xxsmallpx
     #{$focus}
       color: $red-darkest
-      background: rgba($red-light,$xsmall)
+      background-color: rgba($red-light,$xsmall)
       &::before
         +opacity(1)
 
 .successful
-  a
-    color: $base
-    background: none
-    &::before
-      content: image-url('ui/check.png')
-    #{$focus}
-      color: $green-darkest
-      background: rgba($green-lighter,$xxxsmall)
+  display: none
 
 .checklist
   +no-style-list
@@ -36,7 +23,7 @@
     .media
       @extend .successful
 
-  .fontface & .fontface, .opacity & .opacity, .rgba & .rgba,
+  // .fontface & .fontface, .opacity & .opacity, .rgba & .rgba,
   .cssgradients & .cssgradients, .multiplebgs & .multiplebgs,
   .backgroundsize & .backgroundsize
     @extend .successful
@@ -54,10 +41,6 @@
     +media-full
     +trailer(.25)
     +transition(padding 300ms)
-    +small
-      +pad(1,1)
-    +medium
-      +pad(2,2)
     +medium(height)
       +padding-trailer
     p
@@ -74,12 +57,14 @@
   .info
     +media-full
     +title($cyan-hint,$xsmall)
-    +padding-leader(.5)
+    +padding-leader(1)
     +padding-trailer(.5)
+    .wrap
+      overflow: hidden
     +small
-      +pad(1,1)
+      +pad(0,0)
     +medium
-      +pad(2,2)
+      +pad(0,0)
 
   .read, .action
     +trailer(.5)
@@ -87,6 +72,20 @@
       @extend .allcaps
       font-style: normal
       white-space: nowrap
+
+  +small
+    .read, .action
+      +columns(5,10)
+    .action
+      +omega(10)
+  +medium
+    .description
+      +columns(8,12)
+    .read, .action
+      +columns(4,12)
+      +omega(12)
+    .read
+      +leader(.25)
 
   .good
     +button($green-lighter,false,.25,$smallpx)
@@ -115,8 +114,8 @@
 
   // Browser Support ---------------------------------------------------------
   .bad
-    +adjust-font-size-to($smallpx,.75)
-    +rhythm-borders(1px,.25,$smallpx)
+    +adjust-font-size-to($xsmallpx,.75)
+    +rhythm-borders(1px,.25,$xxsmallpx)
     +border-radius
     +box-shadow(rgba($red-light,$small) 0 0 $xsmallem inset)
     +text-shadow(rgba($lightest,$xsmall) 0 1px 0)
@@ -125,7 +124,10 @@
     border-color: $off-red
     p
       @extend .allcaps
+      +adjust-font-size-to($smallpx,.75,$xsmallpx)
       +trailer(.125,$smallpx)
+    +small
+      +rhythm-borders(1px,.5,$xsmallpx)
 
   +support
     .good
@@ -139,17 +141,13 @@
     +adjust-font-size-to($smallpx)
     +media-full
     +padding-leader(1,$smallpx)
-    +small
-      +pad(1,1)
-    +medium
-      +pad(2,2)
 
   .copyright, .colophon
     +trailer(.5,$smallpx)
     +small
-      +columns(4,8)
+      +columns(5,10)
     +medium
-      +columns(4,8)
+      +columns(6,12)
 
   .colophon
     +small
