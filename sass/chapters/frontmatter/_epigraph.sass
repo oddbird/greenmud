@@ -13,7 +13,7 @@
 
   blockquote
     +border-radius(1em 3em 2em 0)
-    +rhythm-borders(1px,.5,$xsmallpx)
+    +rhythm-borders(1px,.25,$xsmallpx)
     border-color: $base
     background: $off-cyan-hint
 
@@ -25,12 +25,12 @@
   +small
     .content
       +pad(1,1)
+    blockquote
+      +rhythm-borders(1px,.5,$smallpx)
 
   +medium
     .content
       +pad(3,1)
       font: inherit
-
     blockquote
-      +rhythm-borders(1px,.5,$smallpx)
-
+      +rhythm-borders(1px,1)
