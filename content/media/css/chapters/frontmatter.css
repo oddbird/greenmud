@@ -11,9 +11,9 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { letter-spacing: 0.05em; }
 
-.allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em { text-transform: uppercase; }
+.allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -308,3 +308,17 @@
 #end .thanks-list li:after { content: ", "; }
 #end .thanks-list li:last-child:after { content: ""; }
 #end .thanks-list li.last:after { content: ""; }
+
+#about { background: #ffe5ff; }
+#about .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
+#about .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 525px) { #about .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+  #about .pagewrap:after { content: ""; display: table; clear: both; } }
+@media (min-width: 980px) { #about .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+  #about .pagewrap:after { content: ""; display: table; clear: both; } }
+#about .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; }
+@media (min-width: 525px) { #about .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 980px) { #about .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+@media (min-width: 525px) { #about .content { padding-left: 9.231%; padding-right: 9.231%; } }
+@media (min-width: 980px) { #about .content { padding-left: 15.584%; padding-right: 15.584%; } }
+#about a, #about em { font-style: normal; }

@@ -11,9 +11,9 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { letter-spacing: 0.05em; }
 
-.allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em { text-transform: uppercase; }
+.allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -21,7 +21,7 @@
 .hidden { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; height: 1px; width: 1px; border: 0; }
 
 /* titlepages ---------------------------------------------------------------- */
-.title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0.8em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -moz-transition: all 300ms; -webkit-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
+.title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -moz-transition: all 300ms; -webkit-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
 @media (min-width: 525px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 .title .wrap { overflow: hidden; *zoom: 1; }
@@ -308,3 +308,17 @@
 #end .thanks-list li:after { content: ", "; }
 #end .thanks-list li:last-child:after { content: ""; }
 #end .thanks-list li.last:after { content: ""; }
+
+#about { background: #ffe5ff; }
+#about .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
+#about .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 525px) { #about .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+  #about .pagewrap:after { content: ""; display: table; clear: both; } }
+@media (min-width: 980px) { #about .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+  #about .pagewrap:after { content: ""; display: table; clear: both; } }
+#about .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; }
+@media (min-width: 525px) { #about .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 980px) { #about .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+@media (min-width: 525px) { #about .content { padding-left: 9.231%; padding-right: 9.231%; } }
+@media (min-width: 980px) { #about .content { padding-left: 15.584%; padding-right: 15.584%; } }
+#about a, #about em { font-style: normal; }
