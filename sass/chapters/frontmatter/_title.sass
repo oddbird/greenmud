@@ -1,8 +1,5 @@
 // title page ----------------------------------------------------------------
 
-$noise          : 'frontmatter/titlepage/noise.png'
-$scribble-sm    : 'frontmatter/titlepage/scribble_sm.png'
-
 $the    : $medpx + 8px
 $green1 : $the + 6px
 $green2 : $green1 + 6px
@@ -23,7 +20,7 @@ $green2 : $green1 + 6px
 
 #titlepage
   +animation(titlebg 60s infinite both, $fadeInActive)
-  +background(linear-gradient(top left, rgba($pink-hint,0), rgba($pink-hint,0) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)), image-url($noise))
+  +background(linear-gradient(top left, rgba($pink-hint,0), rgba($pink-hint,0) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)))
   background-color: $pink-hint
 
   .content
