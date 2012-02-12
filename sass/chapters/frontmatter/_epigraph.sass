@@ -1,8 +1,22 @@
++keyframes(lightning)
+  0%, 49%, 51%, 53%, 55%, 57%, 100%
+    background-position: center rhythm(-1)
+  50%
+    background-position: left rhythm(-10)
+  52%, 56%
+    background-position: center rhythm(-3)
+  54%
+    background-position: right rhythm(-5)
+
+
 // epigraph ------------------------------------------------------------------
 
 #epigraph
-  +background-image(linear-gradient(-70deg, rgba($blue-hint, 0), rgba($blue-hint, 0) 50%, $blue-hint 50%))
-  background-color: $darker
+  background: $darker image-url('frontmatter/lightning.png') no-repeat scroll center rhythm(-1)
+  position: relative
+  overflow: hidden
+  +small(both)
+    +animation(lightning 10s linear infinite both)
 
   .pagewrap
     +media-container
@@ -11,11 +25,18 @@
     +media-full
     +adjust-font-size-to($smallpx)
 
+  .sky
+    +stretch(50%,-100%,-100%,-100%)
+    +rotate(-20deg)
+    background: rgba($blue-hint,$small)
+    border: 1px solid $base
   blockquote
     +border-radius(1em 3em 2em 0)
     +rhythm-borders(1px,.25,$xsmallpx)
+    position: relative
     border-color: $base
     background: $off-cyan-hint
+    z-index: 1
 
   p
     &:last-child
