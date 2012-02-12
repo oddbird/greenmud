@@ -8,12 +8,18 @@
   .author
     +padding-leader(6.5)
     background: image-url('frontmatter/home/eric.png') no-repeat scroll top
+  .oddbird, .teacupgorilla
+    +padding-leader(3.5)
+  .oddbird
+    background: image-url('frontmatter/logo_oddbird.png') no-repeat scroll top
+  .teacupgorilla
+    background: image-url('frontmatter/logo_teacup.png') no-repeat scroll top
 
   +small
     .author
       +pad(1,1,10)
       +padding-leader(6)
-      +trailing-border(1px,1)
+      +trailing-border(1px,2)
       +trailer
       background-image: image-url('frontmatter/home/faces.png')
       border-color: rgba($off-pink-light,$xxsmall)
@@ -27,7 +33,7 @@
     .author
       +pad(2,1,12)
       +padding-leader(0)
-      margin: 0 columns(1,12) + gutter(12) rhythm(1)
+      margin: rhythm(1) columns(1,12) + gutter(12)
       background:
         image: image-url('frontmatter/home/eric.png')
         position: left top

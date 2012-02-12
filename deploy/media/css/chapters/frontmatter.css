@@ -333,10 +333,13 @@
 @media (min-width: 525px) { #about .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #about .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #about .author { padding-top: 8.125em; background: url('../../images/frontmatter/home/eric.png?1329022848') no-repeat scroll top; }
-@media (min-width: 525px) { #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 7.5em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 1.214em; margin-bottom: 1.25em; background-image: url('../../images/frontmatter/home/faces.png?1329020403'); border-color: rgba(209, 160, 209, 0.512); }
+#about .oddbird, #about .teacupgorilla { padding-top: 4.375em; }
+#about .oddbird { background: url('../../images/frontmatter/logo_oddbird.png?1329027606') no-repeat scroll top; }
+#about .teacupgorilla { background: url('../../images/frontmatter/logo_teacup.png?1329027722') no-repeat scroll top; }
+@media (min-width: 525px) { #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 7.5em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 2.464em; margin-bottom: 1.25em; background-image: url('../../images/frontmatter/home/faces.png?1329020403'); border-color: rgba(209, 160, 209, 0.512); }
   #about .author p { margin: 0; }
   #about .oddbird, #about .teacupgorilla { padding-left: 10.169%; padding-right: 10.169%; font-size: 0.8em; line-height: 1.562em; } }
-@media (min-width: 980px) { #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 0 8.451% 1.25em; background-image: url('../../images/frontmatter/home/eric.png?1329022848'); background-position: left top; }
+@media (min-width: 980px) { #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 1.25em 8.451%; background-image: url('../../images/frontmatter/home/eric.png?1329022848'); background-position: left top; }
   #about .oddbird, #about .teacupgorilla { display: inline; float: left; width: 49.296%; margin-right: 1.408%; padding-left: 0%; padding-right: 0%; }
   #about .teacupgorilla { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
 #about a, #about em { font-style: normal; }
