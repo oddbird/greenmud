@@ -45,8 +45,19 @@
     +media-full
     +trailer(.25)
     +transition(padding 300ms)
-    +medium(height)
-      +padding-trailer
+    text-align: center
+    +small(height)
+      +padding-leader(5,$smallpx)
+      background: image-url('frontmatter/home/tree.png') no-repeat scroll top
+    +small(both)
+      +padding-leader(5)
+    +medium
+      +padding-leader(1.5)
+      +padding-trailer(1.5)
+      margin-left: columns(2,10) + gutter(10)
+      padding-left: image-width('frontmatter/home/tree.png') + $normpx
+      background: image-url('frontmatter/home/tree.png') no-repeat scroll left
+      text-align: left
     p
       +trailer(0)
     .name
