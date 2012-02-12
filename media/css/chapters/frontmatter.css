@@ -11,9 +11,9 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, .check, #home h2, #home .read em, #home .action em, #home a, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { letter-spacing: 0.05em; }
 
-.allcaps, .title i, .check, #home .read em, #home .action em, #home .description h2, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { text-transform: uppercase; }
+.allcaps, .title i, .check, #home h2, #home .read em, #home .action em, #home a, #home .bad p, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -64,10 +64,13 @@
   #home .pagewrap:after { content: ""; display: table; clear: both; } }
 @media (min-width: 980px) { #home .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #home .pagewrap:after { content: ""; display: table; clear: both; } }
-#home .novel-title { clear: both; margin-left: 7.317%; margin-right: 7.317%; margin-bottom: 0.313em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
+#home h2 { font-size: 1.25em; line-height: 1.5em; }
+#home .novel-title { clear: both; margin-left: 7.317%; margin-right: 7.317%; margin-bottom: 0.313em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; text-align: center; }
 @media (min-width: 525px) { #home .novel-title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .novel-title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-@media (min-height: 490px) { #home .novel-title { padding-bottom: 1.25em; } }
+@media (min-height: 350px) { #home .novel-title { padding-top: 7.812em; background: url('../../images/frontmatter/home/tree.png?1329025039') no-repeat scroll top; } }
+@media (min-width: 525px) and (min-height: 350px) { #home .novel-title { padding-top: 6.25em; } }
+@media (min-width: 980px) { #home .novel-title { padding-top: 1.875em; padding-bottom: 1.875em; margin-left: 20.339%; padding-left: 213px; background: url('../../images/frontmatter/home/tree.png?1329025039') no-repeat scroll left; text-align: left; } }
 #home .novel-title p { margin-bottom: 0em; }
 #home .novel-title .name { font-size: 1.563em; line-height: 1.2em; }
 @media (min-width: 525px) { #home .novel-title .name { font-size: 1.953em; line-height: 0.96em; } }
@@ -98,16 +101,27 @@
 #home .extra { font-size: 0.8em; line-height: 1.562em; display: none; }
 @media (min-width: 525px) { #home .extra { display: block; } }
 #home .description { margin-bottom: 0.625em; clear: both; }
-#home .description h2 { font-size: 1.25em; line-height: 1.5em; }
 #home .description p { margin-bottom: 0em; }
+#home .about { clear: both; margin-left: 7.317%; margin-right: 7.317%; overflow: hidden; *zoom: 1; padding-top: 6.25em; padding-bottom: 1.25em; -moz-background-size: contain; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; background: url('../../images/frontmatter/home/faces.png?1329020403') no-repeat scroll center 0.625em; }
+@media (min-width: 525px) { #home .about { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+@media (min-width: 980px) { #home .about { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+#home .about h2 { margin-bottom: 0.5em; text-align: center; }
+@media (min-width: 525px) { #home .about { padding-left: 9.231%; padding-right: 9.231%; padding-top: 6.875em; -moz-background-size: auto; -webkit-background-size: auto; -o-background-size: auto; background-size: auto; } }
+#home .music { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; border: 1px solid #7f007f; }
+#home iframe { vertical-align: top; }
+@media (min-width: 980px) { #home .about { padding-left: 0%; padding-right: 0%; }
+  #home .author, #home .music { display: inline; float: left; width: 49.296%; margin-right: 1.408%; }
+  #home .music { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
+#home p { margin-bottom: 0.625em; }
 #home .bad { font-size: 0.64em; line-height: 1.465em; border-style: solid; border-width: 0.07em; padding: 0.541em; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; -moz-box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; -webkit-box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; -o-box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; box-shadow: rgba(255, 114, 114, 0.8) 0 0 0.64em inset; text-shadow: rgba(223, 223, 223, 0.64) 0 1px 0; display: block; background: rgba(255, 153, 153, 0.8); border-color: #ac5353; }
 #home .bad p { font-size: 1.25em; line-height: 1.172em; margin-bottom: 0.195em; }
 @media (min-width: 525px) { #home .bad { border-style: solid; border-width: 0.056em; padding: 0.921em; } }
 @media all and (min-width: 0px) { .fontface.opacity.cssgradients.rgba.multiplebgs.backgroundsize #home .good { display: block; }
   .fontface.opacity.cssgradients.rgba.multiplebgs.backgroundsize #home .bad { display: none; } }
-#home .pageinfo { font-size: 0.8em; line-height: 1.562em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-top: 1.562em; }
+#home .pageinfo { font-size: 0.8em; line-height: 1.562em; clear: both; margin-left: 7.317%; margin-right: 7.317%; border-top-style: solid; border-top-width: 0.056em; padding-top: 0.921em; border-color: rgba(209, 160, 209, 0.512); }
 @media (min-width: 525px) { #home .pageinfo { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .pageinfo { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+@media (min-width: 525px) { #home .pageinfo { border-top-style: solid; border-top-width: 0.045em; padding-top: 0.737em; } }
 #home .copyright, #home .colophon { margin-bottom: 0.781em; }
 @media (min-width: 525px) { #home .copyright, #home .colophon { display: inline; float: left; width: 49.153%; margin-right: 1.695%; } }
 @media (min-width: 980px) { #home .copyright, #home .colophon { display: inline; float: left; width: 49.296%; margin-right: 1.408%; } }
@@ -318,6 +332,14 @@
 #about .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; }
 @media (min-width: 525px) { #about .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #about .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-@media (min-width: 525px) { #about .content { padding-left: 9.231%; padding-right: 9.231%; } }
-@media (min-width: 980px) { #about .content { padding-left: 15.584%; padding-right: 15.584%; } }
+#about .author { padding-top: 8.125em; background: url('../../images/frontmatter/home/eric.png?1329022848') no-repeat scroll top; }
+#about .oddbird, #about .teacupgorilla { padding-top: 4.375em; }
+#about .oddbird { background: url('../../images/frontmatter/logo_oddbird.png?1329027606') no-repeat scroll top; }
+#about .teacupgorilla { background: url('../../images/frontmatter/logo_teacup.png?1329027722') no-repeat scroll top; }
+@media (min-width: 525px) { #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 7.5em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 2.464em; margin-bottom: 1.25em; background-image: url('../../images/frontmatter/home/faces.png?1329020403'); border-color: rgba(209, 160, 209, 0.512); }
+  #about .author p { margin: 0; }
+  #about .oddbird, #about .teacupgorilla { padding-left: 10.169%; padding-right: 10.169%; font-size: 0.8em; line-height: 1.562em; } }
+@media (min-width: 980px) { #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 1.25em 8.451%; background-image: url('../../images/frontmatter/home/eric.png?1329022848'); background-position: left top; }
+  #about .oddbird, #about .teacupgorilla { display: inline; float: left; width: 49.296%; margin-right: 1.408%; padding-left: 0%; padding-right: 0%; }
+  #about .teacupgorilla { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
 #about a, #about em { font-style: normal; }
