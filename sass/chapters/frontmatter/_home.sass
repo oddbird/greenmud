@@ -43,30 +43,44 @@
 
   .novel-title
     +media-full
+    +clearfix
     +trailer(.25)
     +transition(padding 300ms)
     text-align: center
-    +small(height)
-      +padding-leader(5,$smallpx)
-      background: image-url('frontmatter/home/tree.png') no-repeat scroll top
-    +small(both)
-      +padding-leader(5)
-    +medium
-      +padding-leader(1.5)
-      +padding-trailer(1.5)
-      margin-left: columns(2,10) + gutter(10)
-      padding-left: image-width('frontmatter/home/tree.png') + $normpx
-      background: image-url('frontmatter/home/tree.png') no-repeat scroll left
-      text-align: left
     p
       +trailer(0)
+
+  .logo
+    +pad(2,2,6)
+    text-align: center
+  .name
+    +adjust-font-size-to($largepx,1.5)
+  .tagline, .byline
+    +adjust-font-size-to($smallpx)
+    display: inline
+
+  +small(both)
+    .novel-title
+      text-align: left
+    .logo
+      +columns(3,10)
+      padding: 0
     .name
-      +adjust-font-size-to($largepx,1.5)
-      +small
-        +adjust-font-size-to($xlargepx,1.5)
-    .tagline, .byline
-      +adjust-font-size-to($smallpx)
-      display: inline
+      +columns(7,10)
+      +omega(10)
+      +leader(1,$largepx)
+  +medium
+    .novel-title
+      text-align: left
+    .logo
+      +columns(3,12)
+      margin-left: columns(1,12) + gutter(12)
+      padding: 0
+    .name
+      +adjust-font-size-to($xlargepx,1.5)
+      +columns(8,12)
+      +omega(12)
+      +leader(1.5,$xlargepx)
 
   // Main Info ---------------------------------------------------------------
   .info
@@ -77,8 +91,6 @@
     .wrap
       overflow: hidden
     +small
-      +pad(0,0)
-    +medium
       +pad(0,0)
 
   .read, .action

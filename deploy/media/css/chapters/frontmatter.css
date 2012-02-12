@@ -65,16 +65,19 @@
 @media (min-width: 980px) { #home .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #home .pagewrap:after { content: ""; display: table; clear: both; } }
 #home h2 { font-size: 1.25em; line-height: 1.5em; }
-#home .novel-title { clear: both; margin-left: 7.317%; margin-right: 7.317%; margin-bottom: 0.313em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; text-align: center; }
+#home .novel-title { clear: both; margin-left: 7.317%; margin-right: 7.317%; overflow: hidden; *zoom: 1; margin-bottom: 0.313em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; text-align: center; }
 @media (min-width: 525px) { #home .novel-title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .novel-title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-@media (min-height: 350px) { #home .novel-title { padding-top: 7.812em; background: url('../../images/frontmatter/home/tree.png?1329025039') no-repeat scroll top; } }
-@media (min-width: 525px) and (min-height: 350px) { #home .novel-title { padding-top: 6.25em; } }
-@media (min-width: 980px) { #home .novel-title { padding-top: 1.875em; padding-bottom: 1.875em; margin-left: 20.339%; padding-left: 213px; background: url('../../images/frontmatter/home/tree.png?1329025039') no-repeat scroll left; text-align: left; } }
 #home .novel-title p { margin-bottom: 0em; }
-#home .novel-title .name { font-size: 1.563em; line-height: 1.2em; }
-@media (min-width: 525px) { #home .novel-title .name { font-size: 1.953em; line-height: 0.96em; } }
-#home .novel-title .tagline, #home .novel-title .byline { font-size: 0.8em; line-height: 1.562em; display: inline; }
+#home .logo { padding-left: 34.286%; padding-right: 34.286%; text-align: center; }
+#home .name { font-size: 1.563em; line-height: 1.2em; }
+#home .tagline, #home .byline { font-size: 0.8em; line-height: 1.562em; display: inline; }
+@media (min-width: 525px) and (min-height: 350px) { #home .novel-title { text-align: left; }
+  #home .logo { display: inline; float: left; width: 28.814%; margin-right: 1.695%; padding: 0; }
+  #home .name { display: inline; float: left; width: 69.492%; margin-right: 1.695%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; margin-top: 0.8em; } }
+@media (min-width: 980px) { #home .novel-title { text-align: left; }
+  #home .logo { display: inline; float: left; width: 23.944%; margin-right: 1.408%; margin-left: 8.451%; padding: 0; }
+  #home .name { font-size: 1.953em; line-height: 0.96em; display: inline; float: left; width: 66.197%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; margin-top: 0.96em; } }
 #home .info { clear: both; margin-left: 7.317%; margin-right: 7.317%; position: relative; z-index: 10; padding-top: 1.25em; padding-bottom: 0.625em; }
 @media (min-width: 525px) { #home .info { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .info { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
@@ -83,7 +86,6 @@
 #home .info:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 #home .info .wrap { overflow: hidden; }
 @media (min-width: 525px) { #home .info { padding-left: 0%; padding-right: 0%; } }
-@media (min-width: 980px) { #home .info { padding-left: 0%; padding-right: 0%; } }
 #home .read, #home .action { margin-bottom: 0.625em; }
 #home .read em, #home .action em { font-style: normal; white-space: nowrap; }
 @media (min-width: 525px) { #home .read, #home .action { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
