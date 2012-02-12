@@ -118,7 +118,7 @@
 @media (min-width: 525px) { #home .bad { border-style: solid; border-width: 0.056em; padding: 0.921em; } }
 @media all and (min-width: 0px) { .fontface.opacity.cssgradients.rgba.multiplebgs.backgroundsize #home .good { display: block; }
   .fontface.opacity.cssgradients.rgba.multiplebgs.backgroundsize #home .bad { display: none; } }
-#home .pageinfo { font-size: 0.8em; line-height: 1.562em; clear: both; margin-left: 7.317%; margin-right: 7.317%; border-top-style: solid; border-top-width: 0.056em; padding-top: 0.921em; border-color: #ffbfff; }
+#home .pageinfo { font-size: 0.8em; line-height: 1.562em; clear: both; margin-left: 7.317%; margin-right: 7.317%; border-top-style: solid; border-top-width: 0.056em; padding-top: 0.921em; border-color: rgba(209, 160, 209, 0.512); }
 @media (min-width: 525px) { #home .pageinfo { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .pageinfo { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 @media (min-width: 525px) { #home .pageinfo { border-top-style: solid; border-top-width: 0.045em; padding-top: 0.737em; } }
@@ -333,7 +333,7 @@
 @media (min-width: 525px) { #about .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #about .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #about .author { padding-top: 8.125em; background: url('../../images/frontmatter/home/eric.png?1329022848') no-repeat scroll top; }
-@media (min-width: 525px) { #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 7.5em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 1.214em; margin-bottom: 1.25em; background-image: url('../../images/frontmatter/home/faces.png?1329020403'); border-color: rgba(127, 0, 127, 0.8); }
+@media (min-width: 525px) { #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 7.5em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 1.214em; margin-bottom: 1.25em; background-image: url('../../images/frontmatter/home/faces.png?1329020403'); border-color: rgba(209, 160, 209, 0.512); }
   #about .author p { margin: 0; }
   #about .oddbird, #about .teacupgorilla { padding-left: 10.169%; padding-right: 10.169%; font-size: 0.8em; line-height: 1.562em; } }
 @media (min-width: 980px) { #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 0 8.451% 1.25em; background-image: url('../../images/frontmatter/home/eric.png?1329022848'); background-position: left top; }
