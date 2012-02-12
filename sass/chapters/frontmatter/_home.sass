@@ -37,6 +37,10 @@
   .pagewrap
     +media-container
 
+  h2
+    @extend .allcaps
+    +adjust-font-size-to($medpx,1.5)
+
   .novel-title
     +media-full
     +trailer(.25)
@@ -106,11 +110,46 @@
   .description
     +trailer(.5)
     clear: both
-    h2
-      @extend .allcaps
-      +adjust-font-size-to($medpx,1.5)
     p
       +trailer(0)
+
+  // About -------------------------------------------------------------------
+  .about
+    +media-full
+    +clearfix
+    +padding-leader(5)
+    +padding-trailer(1)
+    +background-size(contain)
+    background: image-url('frontmatter/home/faces.png') no-repeat scroll center rhythm(.5)
+    h2
+      +trailer(.5,$medpx)
+      text-align: center
+
+    +small
+      +pad(1,1)
+      +padding-leader(5.5)
+      +background-size(auto)
+
+  .music
+    +box-sizing(border-box)
+    border: 1px solid $pink-darker
+
+  iframe
+    vertical-align: top
+
+  +medium
+    .about
+      +pad(0,0)
+    .author, .music
+      +columns(6,12)
+    .music
+      +omega(12)
+
+  a
+    @extend .allcaps
+  p
+    +trailer(.5)
+
 
   // Browser Support ---------------------------------------------------------
   .bad
@@ -140,7 +179,10 @@
   .pageinfo
     +adjust-font-size-to($smallpx)
     +media-full
-    +padding-leader(1,$smallpx)
+    +leading-border(1px,.5,$xsmallpx)
+    border-color: $pink-lightest
+    +small
+      +leading-border(1px,.5,$smallpx)
 
   .copyright, .colophon
     +trailer(.5,$smallpx)
