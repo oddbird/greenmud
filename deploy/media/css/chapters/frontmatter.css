@@ -261,7 +261,7 @@
 #contents h4 { margin-bottom: 0.625em; }
 #contents ol { margin: 0; padding: 0; border: 0; list-style: none; font-size: 0.8em; line-height: 1.562em; margin-bottom: 1.562em; }
 #contents ol li { list-style-image: none; list-style-type: none; margin-left: 0px; }
-#contents .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; background: url('../../images/frontmatter/titlepage/scribble_sm.png?1327188026') no-repeat scroll 10em 45%; }
+#contents .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 #contents .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 525px) { #contents .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
   #contents .pagewrap:after { content: ""; display: table; clear: both; } }
