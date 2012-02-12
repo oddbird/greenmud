@@ -85,10 +85,10 @@
 #home .info:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 #home .info:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 #home .info .wrap { overflow: hidden; }
-@media (min-width: 525px) { #home .info { padding-left: 0%; padding-right: 0%; } }
 #home .read, #home .action { margin-bottom: 0.625em; }
 #home .read em, #home .action em { font-style: normal; white-space: nowrap; }
-@media (min-width: 525px) { #home .read, #home .action { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
+@media (min-width: 525px) { #home .info { padding-left: 0; padding-right: 0; }
+  #home .read, #home .action { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
   #home .action { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
 @media (min-width: 980px) { #home .description { display: inline; float: left; width: 66.197%; margin-right: 1.408%; }
   #home .read, #home .action { display: inline; float: left; width: 32.394%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
@@ -123,12 +123,12 @@
 #home .pageinfo { font-size: 0.8em; line-height: 1.562em; clear: both; margin-left: 7.317%; margin-right: 7.317%; border-top-style: solid; border-top-width: 0.056em; padding-top: 0.921em; border-color: rgba(209, 160, 209, 0.512); }
 @media (min-width: 525px) { #home .pageinfo { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .pageinfo { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-@media (min-width: 525px) { #home .pageinfo { border-top-style: solid; border-top-width: 0.045em; padding-top: 0.737em; } }
 #home .copyright, #home .colophon { margin-bottom: 0.781em; }
-@media (min-width: 525px) { #home .copyright, #home .colophon { display: inline; float: left; width: 49.153%; margin-right: 1.695%; } }
 @media (min-width: 980px) { #home .copyright, #home .colophon { display: inline; float: left; width: 49.296%; margin-right: 1.408%; } }
-@media (min-width: 525px) { #home .colophon { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
 #home .copyright, #home .colophon a { text-transform: uppercase; }
+@media (min-width: 525px) { #home .pageinfo { border-top-style: solid; border-top-width: 0.045em; padding-top: 0.737em; }
+  #home .copyright, #home .colophon { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
+  #home .colophon { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
 
 #instructions { background: #f6f6ed; text-align: center; }
 #instructions .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }

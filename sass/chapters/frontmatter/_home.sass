@@ -90,8 +90,6 @@
     +padding-trailer(.5)
     .wrap
       overflow: hidden
-    +small
-      +pad(0,0)
 
   .read, .action
     +trailer(.5)
@@ -101,6 +99,8 @@
       white-space: nowrap
 
   +small
+    .info
+      +hpadding(0)
     .read, .action
       +columns(5,10)
     .action
@@ -204,20 +204,20 @@
     +media-full
     +leading-border(1px,.5,$xsmallpx)
     border-color: rgba($off-pink-light,$xxsmall)
-    +small
-      +leading-border(1px,.5,$smallpx)
 
   .copyright, .colophon
     +trailer(.5,$smallpx)
-    +small
-      +columns(5,10)
     +medium
       +columns(6,12)
 
-  .colophon
-    +small
-      +omega(8)
-
   .copyright, .colophon a
     text-transform: uppercase
+
+  +small
+    .pageinfo
+      +leading-border(1px,.5,$smallpx)
+    .copyright, .colophon
+      +columns(5,10)
+    .colophon
+      +omega(8)
 
