@@ -64,6 +64,7 @@
   #home .pagewrap:after { content: ""; display: table; clear: both; } }
 @media (min-width: 980px) { #home .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #home .pagewrap:after { content: ""; display: table; clear: both; } }
+@media (min-height: 490px) { #home .pagewrap { padding-top: 1.25em; } }
 #home h2 { font-size: 1.25em; line-height: 1.5em; }
 #home .novel-title { clear: both; margin-left: 7.317%; margin-right: 7.317%; overflow: hidden; *zoom: 1; margin-bottom: 0.313em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; text-align: center; }
 @media (min-width: 525px) { #home .novel-title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
