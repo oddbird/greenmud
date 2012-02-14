@@ -131,17 +131,15 @@ var GM = (function (GM, $) {
                 pageNav = thisPage.data('pagenav');
                 $('.main').fadeOut('300', function () {
                     $(pageSelector).replaceWith(thisPage.clone(true));
+                    $('body').attr('class', thisPage.data('body-class'));
+                    document.title = title;
+                    $('title').text(title);
+                    pageControls.each(function () {
+                        $(this).find('.pagenav').replaceWith(pageNav.clone());
+                    });
                     $('.main').fadeIn('300');
                 });
-
-                pageControls.each(function () {
-                    $(this).find('.pagenav').replaceWith(pageNav.clone());
-                });
             }
-
-            $('body').attr('class', thisPage.data('body-class'));
-            document.title = title;
-            $('title').text(title);
 
             prev = pageControls.first().find('.pagenav .prev a');
             next = pageControls.first().find('.pagenav .next a');
