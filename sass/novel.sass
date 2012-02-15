@@ -24,17 +24,17 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
     cursor: pointer
   .target
     +replace-text('ui/gear.png')
+    +background-image(image-url('ui/gear.png'), $uigrady)
     left: 0
     height: rhythm(1.5)
+    background:
+      color: rgba($blue-dark,$xxsmall)
+      position: center
+      repeat: no-repeat
+    border-bottom: 1px solid $white
     z-index: 875
     .showtargets &
       +opacity(.5)
-      +background-image(image-url('ui/gear.png'), $uigrady)
-      background:
-        color: rgba($blue-dark,$xxsmall)
-        position: center
-        repeat: no-repeat
-      border-bottom: 1px solid $white
   .icon
     +replace-text('ui/gear.png')
     +opacity(1)
