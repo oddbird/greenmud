@@ -105,11 +105,11 @@
 @media (min-width: 525px) { #home .extra { display: block; } }
 #home .description { margin-bottom: 0.625em; clear: both; }
 #home .description p { margin-bottom: 0em; }
-#home .about { clear: both; margin-left: 7.317%; margin-right: 7.317%; overflow: hidden; *zoom: 1; padding-top: 6.25em; padding-bottom: 1.25em; -moz-background-size: contain; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; background: url('../../images/frontmatter/home/faces.png?1329020403') no-repeat scroll center 0.625em; }
+#home .about { clear: both; margin-left: 7.317%; margin-right: 7.317%; overflow: hidden; *zoom: 1; padding-top: 8.594em; padding-bottom: 1.25em; background: url('../../images/frontmatter/home/faces.png?1329020403') no-repeat scroll center 0.625em; }
 @media (min-width: 525px) { #home .about { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .about { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #home .about h2 { margin-bottom: 0.5em; text-align: center; }
-@media (min-width: 525px) { #home .about { padding-left: 9.231%; padding-right: 9.231%; padding-top: 6.875em; -moz-background-size: auto; -webkit-background-size: auto; -o-background-size: auto; background-size: auto; } }
+@media (min-width: 525px) { #home .about { padding-top: 6.875em; padding-left: 9.231%; padding-right: 9.231%; } }
 #home .music { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; border: 1px solid #7f007f; }
 #home iframe { vertical-align: top; }
 @media (min-width: 980px) { #home .about { padding-left: 0%; padding-right: 0%; }
