@@ -77,8 +77,8 @@
   #home .logo { display: inline; float: left; width: 28.814%; margin-right: 1.695%; padding: 0; }
   #home .name { display: inline; float: left; width: 69.492%; margin-right: 1.695%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; margin-top: 0.8em; } }
 @media (min-width: 980px) { #home .novel-title { text-align: left; }
-  #home .logo { display: inline; float: left; width: 23.944%; margin-right: 1.408%; margin-left: 8.451%; padding: 0; }
-  #home .name { font-size: 1.953em; line-height: 0.96em; display: inline; float: left; width: 66.197%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; margin-top: 0.96em; } }
+  #home .logo { display: inline; float: left; width: 23.944%; margin-right: 1.408%; padding: 0; }
+  #home .name { font-size: 1.953em; line-height: 0.96em; display: inline; float: left; width: 74.648%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; margin-top: 0.96em; } }
 #home .info { clear: both; margin-left: 7.317%; margin-right: 7.317%; position: relative; z-index: 10; padding-top: 1.25em; padding-bottom: 0.625em; }
 @media (min-width: 525px) { #home .info { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .info { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
