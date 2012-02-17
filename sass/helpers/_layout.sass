@@ -3,11 +3,6 @@
 .hidden
   +gone
 
-=support
-  @media all and (min-width: 0px)
-    .fontface.opacity.cssgradients.rgba.multiplebgs.backgroundsize &
-      @content
-
 /* titlepages ----------------------------------------------------------------
 
 =title($c:$blue-lighter,$o:$xxxsmall)
@@ -24,9 +19,9 @@
     background: $c
     z-index: -1
   &:before
-    +rotate(.5deg)
+    +rotate(-1deg)
   &:after
-    +rotate(-.5deg)
+    +rotate(1deg)
 
 .title
   +media-full

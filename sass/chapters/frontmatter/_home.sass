@@ -1,31 +1,32 @@
 // mixins --------------------------------------------------------------------
 
 .check
-  @extend .allcaps
   a
     display: block
-    color: $red-darkest
-    background: image-url('ui/x.png') no-repeat scroll $xxsmallpx/2
-    padding-left: image-width('ui/x.png') + $xxsmallpx
-    #{$focus}
-      color: $red-darkest
-      background-color: rgba($red-light,$xsmall)
-      &::before
-        +opacity(1)
+    position: relative
+    padding-left: rhythm(1,$smallpx)
+    &::before
+      +border-radius
+      +box-shadow(rgba($base,$xsmall) 0 0 3px inset)
+      position: absolute
+      top: 0
+      left: 0
+      content: " "
+      width: rhythm(.75,$smallpx)
+      height: rhythm(.75,$smallpx)
+      background: $red-lighter image-url('ui/x.png') no-repeat scroll center
 
 .successful
-  display: none
+  @extend .check
+  a
+    &::before
+      background: $off-green-lightest image-url('ui/check.png') no-repeat scroll center
 
 .checklist
-  +no-style-list
-
-  @media all and (min-width: 0px)
-    .media
-      @extend .successful
-
-  // .fontface & .fontface, .opacity & .opacity, .rgba & .rgba,
+  .fontface & .fontface, .rgba & .rgba,
   .cssgradients & .cssgradients, .multiplebgs & .multiplebgs,
-  .backgroundsize & .backgroundsize
+  .backgroundsize & .backgroundsize, .cssanimations & .cssanimations,
+  .csstransforms & .csstransforms, .csstransitions & .csstransitions
     @extend .successful
 
 // home page -----------------------------------------------------------------
@@ -36,6 +37,10 @@
 
   .pagewrap
     +media-container
+    +box-shadow(rgba($pink-lightest,$xsmall) 0 0 rhythm(.5))
+    background: rgba($white,$xsmall)
+    overflow: hidden
+
     +medium(height)
       +padding-leader
 
@@ -83,19 +88,20 @@
       +omega(12)
       +leader(1.5,$xlargepx)
 
+  .wrap
+    overflow: hidden
+
   // Main Info ---------------------------------------------------------------
   .info
     +media-full
-    +title($cyan-hint,$xsmall)
+    +title($blue-hint,$xxxsmall)
     +padding-leader(1)
     +padding-trailer(.5)
-    .wrap
-      overflow: hidden
 
   .read, .action
     +trailer(.5)
     em
-      @extend .allcaps
+      display: block
       font-style: normal
       white-space: nowrap
 
@@ -117,12 +123,10 @@
 
   .good
     +button($green-lighter,false,.25,$smallpx)
-    display: none
-    em
-      display: block
+    display: block
 
   .fund
-    +button($pink-lighter,false,.25,$smallpx)
+    +button($pink-lightest,false,.25,$smallpx)
     display: block
 
   .extra
@@ -139,18 +143,18 @@
 
   // About -------------------------------------------------------------------
   .about
-    +media-full
     +clearfix
     +padding-leader(5.5,$smallpx)
     +padding-trailer(1)
-    background: image-url('frontmatter/home/faces.png') no-repeat scroll center rhythm(.5)
+    +hpadding(side-gutter())
+    background: rgba($red-hint,$xxsmall) image-url('frontmatter/home/faces.png') no-repeat scroll center rhythm(.5)
     h2
       +trailer(.5,$medpx)
       text-align: center
 
     +small
       +padding-leader(5.5)
-      +pad(1,1)
+      +hpadding(side-gutter() + columns(1) + gutter())
 
   .music
     +box-sizing(border-box)
@@ -161,7 +165,7 @@
 
   +medium
     .about
-      +pad(0,0)
+      +hpadding(side-gutter())
     .author, .music
       +columns(6,12)
     .music
@@ -172,37 +176,55 @@
   p
     +trailer(.5)
 
+  // Support -----------------------------------------------------------------
 
-  // Browser Support ---------------------------------------------------------
-  .bad
-    +adjust-font-size-to($xsmallpx,.75)
-    +rhythm-borders(1px,.25,$xxsmallpx)
-    +border-radius
-    +box-shadow(rgba($red-light,$small) 0 0 $xsmallem inset)
-    +text-shadow(rgba($lightest,$xsmall) 0 1px 0)
-    display: block
-    background: rgba($red-lighter,$small)
-    border-color: $off-red
-    p
+  .support
+    +media-full
+    +padding-leader(1)
+    +padding-trailer(1)
+    +title($green-hint,$xxsmall)
+    .wrap
+      +padding-leader(6,$smallpx)
+      background: image-url('frontmatter/devices.png') no-repeat scroll center top
+    h3
       @extend .allcaps
-      +adjust-font-size-to($smallpx,.75,$xsmallpx)
-      +trailer(.125,$smallpx)
-    +small
-      +rhythm-borders(1px,.5,$xsmallpx)
 
-  +support
-    .good
-      display: block
-    .bad
-      display: none
+  .reqhead
+    font-size: inherit
+    line-height: inherit
+
+  .checklist
+    +no-style-list
+    +adjust-font-size-to($xsmallpx,.75,$smallpx)
+
+  +small
+    .suggest
+      +columns(6,10)
+    .you
+      +columns(4,10)
+      +omega(10)
+
+  +medium
+    .support
+      .wrap
+        +padding-leader(0)
+        background-position: columns(6.5,12) rhythm(1)
+    .suggest
+      +columns(4,12)
+    .you
+      +columns(3,12)
+      +omega(12)
+
+  +small(both)
+    .support
+      +adjust-font-size-to($smallpx)
 
   // Footer ------------------------------------------------------------------
 
   .pageinfo
     +adjust-font-size-to($smallpx)
     +media-full
-    +leading-border(1px,.5,$xsmallpx)
-    border-color: rgba($off-pink-light,$xxsmall)
+    +padding-leader(1)
 
   .copyright, .colophon
     +trailer(.5,$smallpx)
@@ -213,8 +235,6 @@
     text-transform: uppercase
 
   +small
-    .pageinfo
-      +leading-border(1px,.5,$smallpx)
     .copyright, .colophon
       +columns(5,10)
     .colophon

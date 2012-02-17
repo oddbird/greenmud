@@ -104,8 +104,8 @@
   #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
 #titlepage h2 { position: relative; z-index: 10; }
 #titlepage h2:before, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(255, 255, 153, 0.41); z-index: -1; }
-#titlepage h2:before { -moz-transform: rotate(0.5deg); -webkit-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); transform: rotate(0.5deg); }
-#titlepage h2:after { -moz-transform: rotate(-0.5deg); -webkit-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
+#titlepage h2:before { -moz-transform: rotate(-1deg); -webkit-transform: rotate(-1deg); -o-transform: rotate(-1deg); -ms-transform: rotate(-1deg); transform: rotate(-1deg); }
+#titlepage h2:after { -moz-transform: rotate(1deg); -webkit-transform: rotate(1deg); -o-transform: rotate(1deg); -ms-transform: rotate(1deg); transform: rotate(1deg); }
 
 .demo { background: #f6f6ed; }
 .demo .demo-note { margin-bottom: 1.25em; color: #bf0000; }
