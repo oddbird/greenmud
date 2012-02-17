@@ -3,9 +3,9 @@
 @font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../../fonts/jj/greenmudjj-italic-webfont.eot?iefix') format('eot'), url('../../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJItalic') format('svg'); font-weight: normal; font-style: italic; }
 
 /* Typography ---------------------------------------------------------------- */
-.jj, .susy, .narrator { font-family: "GreenMudJJRegular", serif; }
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
 
-.serif { font-family: serif; }
+.serif { font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
 
 .sans { font-family: sans-serif; }
 
@@ -24,7 +24,8 @@
 .title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -moz-transition: all 300ms; -webkit-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
 @media (min-width: 525px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-.title .wrap { overflow: hidden; *zoom: 1; }
+.title .wrap { *zoom: 1; }
+.title .wrap:after { content: ""; display: table; clear: both; }
 .title i { font-size: 0.64em; line-height: 1.25em; display: block; font-style: normal; }
 @media (min-height: 350px) { .title { margin-top: 1.6em; } }
 @media (min-height: 490px) { .title { margin-top: 3.2em; } }
@@ -80,8 +81,8 @@
 @media (min-width: 525px) { #home .info { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .info { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #home .info:before, #home .info:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(229, 229, 255, 0.41); z-index: -1; }
-#home .info:before { -moz-transform: rotate(-1deg); -webkit-transform: rotate(-1deg); -o-transform: rotate(-1deg); -ms-transform: rotate(-1deg); transform: rotate(-1deg); }
-#home .info:after { -moz-transform: rotate(1deg); -webkit-transform: rotate(1deg); -o-transform: rotate(1deg); -ms-transform: rotate(1deg); transform: rotate(1deg); }
+#home .info:before { -moz-transform: rotate(-0.75deg); -webkit-transform: rotate(-0.75deg); -o-transform: rotate(-0.75deg); -ms-transform: rotate(-0.75deg); transform: rotate(-0.75deg); }
+#home .info:after { -moz-transform: rotate(0.75deg); -webkit-transform: rotate(0.75deg); -o-transform: rotate(0.75deg); -ms-transform: rotate(0.75deg); transform: rotate(0.75deg); }
 #home .read, #home .action { margin-bottom: 0.625em; }
 #home .read em, #home .action em { display: block; font-style: normal; white-space: nowrap; }
 @media (min-width: 525px) { #home .info { padding-left: 0; padding-right: 0; }
@@ -113,8 +114,8 @@
 @media (min-width: 525px) { #home .support { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #home .support { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #home .support:before, #home .support:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(229, 255, 229, 0.512); z-index: -1; }
-#home .support:before { -moz-transform: rotate(-1deg); -webkit-transform: rotate(-1deg); -o-transform: rotate(-1deg); -ms-transform: rotate(-1deg); transform: rotate(-1deg); }
-#home .support:after { -moz-transform: rotate(1deg); -webkit-transform: rotate(1deg); -o-transform: rotate(1deg); -ms-transform: rotate(1deg); transform: rotate(1deg); }
+#home .support:before { -moz-transform: rotate(-0.75deg); -webkit-transform: rotate(-0.75deg); -o-transform: rotate(-0.75deg); -ms-transform: rotate(-0.75deg); transform: rotate(-0.75deg); }
+#home .support:after { -moz-transform: rotate(0.75deg); -webkit-transform: rotate(0.75deg); -o-transform: rotate(0.75deg); -ms-transform: rotate(0.75deg); transform: rotate(0.75deg); }
 #home .support .wrap { padding-top: 9.375em; background: url('../../images/frontmatter/devices.png?1329466318') no-repeat scroll center top; }
 #home .reqhead { font-size: inherit; line-height: inherit; }
 #home .checklist { margin: 0; padding: 0; border: 0; list-style: none; font-size: 0.8em; line-height: 1.465em; }

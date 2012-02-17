@@ -166,6 +166,14 @@ h1, .breadcrumb
 .page
   overflow-x: hidden
 
+  .no-fontface &
+    .content
+      +adjust-font-size-to($smallpx)
+      +small(both)
+        +adjust-font-size-to($smallpx)
+      +medium
+        +adjust-font-size-to($smallpx)
+
 // pagewrap ------------------------------------------------------------------
 
 .pagewrap

@@ -19,9 +19,9 @@
     background: $c
     z-index: -1
   &:before
-    +rotate(-1deg)
+    +rotate(-.75deg)
   &:after
-    +rotate(1deg)
+    +rotate(.75deg)
 
 .title
   +media-full
@@ -32,7 +32,7 @@
   text-align: center
 
   .wrap
-    +clearfix
+    +pie-clearfix
 
   i
     @extend .allcaps

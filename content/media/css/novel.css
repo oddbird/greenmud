@@ -20,9 +20,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../fonts/jj/greenmudjj-italic-webfont.eot?iefix') format('eot'), url('../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJItalic') format('svg'); font-weight: normal; font-style: italic; }
 
 /* Typography ---------------------------------------------------------------- */
-.jj, .susy, .narrator { font-family: "GreenMudJJRegular", serif; }
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
 
-.serif { font-family: serif; }
+.serif { font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
 
 .sans { font-family: sans-serif; }
 
@@ -41,7 +41,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -moz-transition: all 300ms; -webkit-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
 @media (min-width: 525px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-.title .wrap { overflow: hidden; *zoom: 1; }
+.title .wrap { *zoom: 1; }
+.title .wrap:after { content: ""; display: table; clear: both; }
 .title i { font-size: 0.64em; line-height: 1.25em; display: block; font-style: normal; }
 @media (min-height: 350px) { .title { margin-top: 1.6em; } }
 @media (min-height: 490px) { .title { margin-top: 3.2em; } }
@@ -972,6 +973,9 @@ h1, .breadcrumb { display: inline; margin: 0; padding: 0; }
 .tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
 .page { overflow-x: hidden; }
+.no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; }
+@media (min-width: 525px) and (min-height: 350px) { .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; } }
+@media (min-width: 980px) { .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; } }
 
 .pagewrap { padding-top: 1.875em; padding-bottom: 1.25em; -moz-transition: padding 300ms; -webkit-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
 @media (min-height: 490px) { .pagewrap { padding-top: 2.5em; } }
