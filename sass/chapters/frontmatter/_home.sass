@@ -62,9 +62,8 @@
     text-align: center
   .name
     +adjust-font-size-to($largepx,1.5)
-  .tagline, .byline
+  .byline
     +adjust-font-size-to($smallpx)
-    display: inline
 
   +small(both)
     .novel-title
@@ -72,9 +71,10 @@
     .logo
       +columns(3,10)
       padding: 0
-    .name
+    .name, .byline
       +columns(7,10)
       +omega(10)
+    .name
       +leader(1,$largepx)
   +medium
     .novel-title
@@ -82,10 +82,11 @@
     .logo
       +columns(3,12)
       padding: 0
-    .name
-      +adjust-font-size-to($xlargepx,1.5)
+    .name, .byline
       +columns(9,12)
       +omega(12)
+    .name
+      +adjust-font-size-to($xlargepx,1.5)
       +leader(1.5,$xlargepx)
 
   .wrap

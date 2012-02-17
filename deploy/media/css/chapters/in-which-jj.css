@@ -3,7 +3,7 @@
 @font-face { font-family: "GreenMudJJRegular"; src: url('../../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../../fonts/jj/greenmudjj-italic-webfont.eot?iefix') format('eot'), url('../../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJItalic') format('svg'); font-weight: normal; font-style: italic; }
 
 /* Typography ---------------------------------------------------------------- */
-.jj, .susy, .narrator { font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
 
 .serif { font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
 

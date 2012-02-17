@@ -65,7 +65,7 @@ html > body { font-size: 22.4px; }
   html > body { font-size: 28px; } }
 html { -webkit-font-smoothing: antialiased; }
 
-body { -moz-animation: fadeIn 300ms linear both; -webkit-animation: fadeIn 300ms linear both; -ms-animation: fadeIn 300ms linear both; animation: fadeIn 300ms linear both; position: relative; color: #202020; overflow-x: hidden; }
+body { -moz-animation: fadeIn 300ms linear both; -webkit-animation: fadeIn 300ms linear both; -ms-animation: fadeIn 300ms linear both; animation: fadeIn 300ms linear both; position: relative; min-width: 12em; color: #202020; overflow-x: hidden; }
 
 /* Selected Text ------------------------------------------------------------- */
 ::-webkit-selection { color: white; background: #7f007f; text-shadow: none; }
