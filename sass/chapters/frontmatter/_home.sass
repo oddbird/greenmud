@@ -44,10 +44,6 @@
     +medium(height)
       +padding-leader
 
-  h2
-    @extend .allcaps
-    +adjust-font-size-to($medpx,1.5)
-
   .novel-title
     +media-full
     +clearfix
@@ -99,6 +95,9 @@
     +padding-leader(1)
     +padding-trailer(.5)
 
+  .desc-head
+    @extend .allcaps
+
   .read, .action
     +trailer(.5)
     em
@@ -119,8 +118,6 @@
     .read, .action
       +columns(4,12)
       +omega(12)
-    .read
-      +leader(.25)
 
   .good
     +button($green-lighter,false,.25,$smallpx)
@@ -145,17 +142,16 @@
   // About -------------------------------------------------------------------
   .about
     +clearfix
-    +padding-leader(5.5,$smallpx)
+    +padding-leader(6,$smallpx)
     +padding-trailer(1)
     +hpadding(side-gutter())
     background: rgba($red-hint,$xxsmall) image-url('frontmatter/home/faces.png') no-repeat scroll center rhythm(.5)
-    h2
-      +trailer(.5,$medpx)
-      text-align: center
-
     +small
-      +padding-leader(5.5)
+      +padding-leader(6)
       +hpadding(side-gutter() + columns(1) + gutter())
+
+  .about-head
+    +gone
 
   .music
     +box-sizing(border-box)
@@ -191,6 +187,7 @@
       @extend .allcaps
 
   .reqhead
+    @extend .allcaps
     font-size: inherit
     line-height: inherit
 
