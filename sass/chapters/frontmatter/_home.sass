@@ -1,3 +1,7 @@
+// Forms ---------------------------------------------------------------------
+
+@import ../../defaults/forms
+
 // mixins --------------------------------------------------------------------
 
 .check
@@ -216,6 +220,9 @@
   +small(both)
     .support
       +adjust-font-size-to($smallpx)
+  +medium
+    .support
+      +adjust-font-size-to($smallpx)
 
   // Footer ------------------------------------------------------------------
 
@@ -224,17 +231,61 @@
     +media-full
     +padding-leader(1)
 
-  .copyright, .colophon
-    +trailer(.5,$smallpx)
-    +medium
-      +columns(6,12)
+  .newsletter
+    +clearfix
+    +padding-trailer(.5,$smallpx)
+    .note
+      @extend .allcaps
+      +trailer(.25,$smallpx)
+    .formfield
+      margin: 0
+      overflow: visible
+    .type
+      +gone
+    .value
+      +rhythm-borders(1px,.25,$xsmallpx)
+      +trailer(.25,$smallpx)
+    .submit
+      +box-sizing(border-box)
+      +adjust-font-size-to($xsmallpx,1,$smallpx)
+      +button($pink-hint,false,.125,$xxsmallpx)
+      padding: rhythm(.125,$xxsmallpx) rhythm(.5,$xxsmallpx) 0
 
-  .copyright, .colophon a
+    +small(both)
+      .value
+        +rhythm-borders(1px,.25,$xsmallpx)
+      .submit
+        +button($pink-hint,false,.125,$xsmallpx)
+        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
+    +medium
+      .value
+        +rhythm-borders(1px,.25,$smallpx)
+        +columns(4,6)
+      .form-actions
+        +columns(2,6)
+        +omega(6)
+        clear: none
+      .submit
+        +button($pink-hint,false,.125,$xsmallpx)
+        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
+        width: 100%
+
+  .contact, .license, .colophon
+    +trailer(.25,$smallpx)
+
+  .license, .colophon a
     text-transform: uppercase
 
   +small
-    .copyright, .colophon
+    .contact, .copyright
       +columns(5,10)
-    .colophon
-      +omega(8)
+    .contact
+      +omega(10)
+
+  +medium
+    .contact, .copyright
+      +columns(6,12)
+    .contact
+      +omega(12)
+
 
