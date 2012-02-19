@@ -19,7 +19,7 @@ $green2 : $green1 + 6px
     background-color: $pink-hint
 
 #titlepage
-  +animation(titlebg 60s infinite both, $fadeInActive)
+  +animation(titlebg 60s .5s infinite both, $fadeInActive)
   +background(linear-gradient(top left, rgba($pink-hint,0), rgba($pink-hint,0) 50%, rgba($green-lighter,$xxxsmall) 50%, rgba($green-lighter,$xxxsmall)))
   background-color: $pink-hint
 
@@ -28,7 +28,7 @@ $green2 : $green1 + 6px
       position: - image-width($strings-left), $media-query-width-medium
 
   .novel-title
-    +animation(linetiny 75s infinite both)
+    +animation(linetiny 75s .5s infinite both)
     +padding-trailer(2.5)
     background: image-url($line) repeat-x scroll 0 bottom
 
@@ -37,7 +37,7 @@ $green2 : $green1 + 6px
       text-transform: lowercase
 
     span
-      +animation(fadeIn 4s 2s ease both)
+      +animation(fadeIn 4s 1s ease both)
       +transition(all 300ms)
       display: block
 
@@ -66,7 +66,7 @@ $green2 : $green1 + 6px
     +prefix(4)
 
   .byline
-    +animation(fadeIn 3s 4s ease both)
+    +animation(fadeIn 3s 2s ease both)
     +media-full
     p
       +trailer(0)
@@ -74,7 +74,7 @@ $green2 : $green1 + 6px
   +small(height)
 
     .novel-title
-      +animation(line 75s infinite both)
+      +animation(line 75s .5s infinite both)
       +padding-trailer(0)
       background-position: 0 center
 
