@@ -220,6 +220,7 @@ button:active { -moz-box-shadow: #397f39 0 0 0.313em inset; -webkit-box-shadow: 
 @media (min-width: 980px) { #titlepage .novel-title .wrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #titlepage .novel-title .wrap:after { content: ""; display: table; clear: both; } }
 #titlepage .novel-title span { -moz-animation: fadeIn 4s 1s ease both; -webkit-animation: fadeIn 4s 1s ease both; -ms-animation: fadeIn 4s 1s ease both; animation: fadeIn 4s 1s ease both; -moz-transition: all 300ms; -webkit-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; display: block; }
+.cssanimations #titlepage .novel-title span { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 #titlepage .into { font-size: 1.25em; line-height: 1em; display: inline; float: left; margin-left: 7.317%; padding-left: 29.268%; margin-right: 0.2em; }
 #titlepage .the { font-size: 1.536em; line-height: 0.814em; display: inline; float: left; }
 #titlepage .green1 { font-size: 1.75em; line-height: 0.714em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-right: 29.268%; text-align: center; }
