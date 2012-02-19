@@ -222,6 +222,7 @@
   +small(both)
     .support
       +adjust-font-size-to($smallpx)
+      +h-borders(1px,1,$smallpx)
   +medium
     .support
       +adjust-font-size-to($smallpx)
@@ -237,7 +238,6 @@
     +clearfix
     +padding-trailer(.5,$smallpx)
     .note
-      @extend .allcaps
       +trailer(.25,$smallpx)
     .formfield
       margin: 0
@@ -272,8 +272,11 @@
         padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
         width: 100%
 
-  .contact, .license, .colophon
+  .contact, .colophon
     +trailer(.25,$smallpx)
+
+  .license
+    +trailer(.125,$smallpx)
 
   .license, .colophon a
     text-transform: uppercase
