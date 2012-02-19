@@ -42,7 +42,7 @@
   .pagewrap
     +media-container
     +box-shadow(rgba($pink-lightest,$xsmall) 0 0 rhythm(.5))
-    background: rgba($white,$xsmall)
+    background: rgba($white,$xxsmall)
     overflow: hidden
 
     +medium(height)
@@ -90,14 +90,16 @@
       +leader(1.5,$xlargepx)
 
   .wrap
+    +media-full
     overflow: hidden
 
   // Main Info ---------------------------------------------------------------
   .info
-    +media-full
-    +title($blue-hint,$xxxsmall)
-    +padding-leader(1)
-    +padding-trailer(.5)
+    +leading-border(1px,1)
+    +trailing-border(1px,.5)
+    +box-shadow(rgba($blue-dark,$xxxsmall) 0 0 rhythm(.5) inset)
+    background: rgba($blue-hint,$xsmall)
+    border-color: rgba($base,$xxxsmall)
 
   .desc-head
     @extend .allcaps
@@ -147,9 +149,9 @@
   .about
     +clearfix
     +padding-leader(6,$smallpx)
-    +padding-trailer(1)
+    +padding-trailer(.5)
     +hpadding(side-gutter())
-    background: rgba($red-hint,$xxsmall) image-url('frontmatter/home/faces.png') no-repeat scroll center rhythm(.5)
+    background: image-url('frontmatter/home/faces.png') no-repeat scroll center rhythm(.5)
     +small
       +padding-leader(6)
       +hpadding(side-gutter() + columns(1) + gutter())
@@ -180,10 +182,10 @@
   // Support -----------------------------------------------------------------
 
   .support
-    +media-full
-    +padding-leader(1)
-    +padding-trailer(1)
-    +title($green-hint,$xxsmall)
+    +h-borders(1px,1,$xxsmallpx)
+    +box-shadow(rgba($green-darker,$xxsmall) 0 0 rhythm(.5) inset)
+    background-color: rgba($green-hint,$xsmall)
+    border-color: rgba($base,$xxxsmall)
     .wrap
       +padding-leader(6,$smallpx)
       background: image-url('frontmatter/devices.png') no-repeat scroll center top
