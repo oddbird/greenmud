@@ -1,5 +1,4 @@
 // All mixins accept $what: [width | height | either | both].
-// break points should adjust based on the design.
 =media-container
   +container
   +susy-grid-background
@@ -17,9 +16,21 @@
   +medium
     +full
 
-// timy screens --------------------------------------------------------------
-$tiny-columns:  6
+// Media Settings ------------------------------------------------------------
+$media-query-width-small: 525px
+$media-query-width-medium: 980px
+$media-query-width-large: 1260px
 
+$media-query-height-small: 350px
+$media-query-height-medium: 490px
+$media-query-height-large: 700px
+
+$tiny-columns:  6
+$small-columns: 10
+$medium-columns: 12
+$large-columns: 12
+
+// timy screens --------------------------------------------------------------
 =tiny($what: width)
   @if $what == width
     // @media (max-width: $media-query-width-small - 1px)
@@ -37,10 +48,6 @@ $tiny-columns:  6
       @content
 
 // small screens -------------------------------------------------------------
-$media-query-width-small: 525px
-$media-query-height-small: 350px
-$small-columns: 10
-
 =small($what: "width")
   @if $what == width or $what == both
     $total-cols: $small-columns
@@ -87,10 +94,6 @@ $small-columns: 10
     $total-cols: $tiny-columns
 
 // medium screens ------------------------------------------------------------
-$media-query-width-medium: 980px
-$media-query-height-medium: 490px
-$medium-columns: 12
-
 =medium($what: "width")
   @if $what == width or $what == both
     $total-cols: $medium-columns
@@ -138,10 +141,6 @@ $medium-columns: 12
 
 
 // large screens -------------------------------------------------------------
-$media-query-width-large: 1260px
-$media-query-height-large: 700px
-$large-columns: 12
-
 =large($what: "width")
   @if $what == width or $what == both
     $total-cols: $large-columns
