@@ -138,6 +138,7 @@ var GM = (function (GM, $) {
                         $(this).find('.pagenav').replaceWith(pageNav.clone());
                     });
                     $('.main').fadeIn('300');
+                    $.scrollTo(0);
                 });
             }
 
