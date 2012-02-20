@@ -1,0 +1,42 @@
+// Buttons -------------------------------------------------------------------
+
+=button-reset
+  +reset-box-model
+  display: inline
+  overflow: visible
+  width: auto
+  vertical-align: baseline
+  background: none
+  color: inherit
+  font: inherit
+
+=button($c:$green,$i:false,$lines:.25,$context:$normpx)
+  $high: tint($c,$hint-tint)
+  $low: shade($c,$dark-shade)
+  $border: shade($c,$darker-shade)
+  $img: linear-gradient(top, rgba($high,$xsmall), rgba($c,0), rgba($low,$xsmall))
+  $hov: linear-gradient(top, rgba($c,0), rgba($border,$xsmall))
+
+  @if lightness($c) >= 50%
+    +text-shadow(rgba($high,$xsmall) 0 1px 0)
+    color: $base
+  @else
+    +text-shadow(rgba($low,$xsmall) 0 1px 0)
+    color: $hint
+
+  @if $i
+    $img: image-url($i), $img
+    $hov: image-url($i), $hov
+
+  +border-radius
+  +rhythm-borders(1px,$lines,$context)
+  +background-image($img)
+  background-color: $c
+  border-color: $border
+  text-align: center
+
+  #{$focus}
+    +background-image($hov)
+
+  &:active
+    +box-shadow($border 0 0 rhythm(.25) inset)
