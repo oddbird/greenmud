@@ -70,7 +70,7 @@ var GM = (function (GM, $) {
                 };
             stateChange = false;
             // Continue as normal for cmd clicks etc
-            if (e.which === 2 || e.metaKey || href.indexOf('http://') === 0) {
+            if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
                 return true;
             } else if (href) {
                 e.preventDefault();
