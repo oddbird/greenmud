@@ -52,9 +52,11 @@ var GM = (function (GM, $) {
                 }
             };
 
-        // Ajaxify
-        pageControls.on('click', '.prev a, .next a', function (e) {
-            var page,
+        // Hijack all internal links
+        $('body').on('click', 'a', function (e) {
+            var thisLink = $(this),
+                href = $(this).attr('href'),
+                page,
                 fallback = function (link) {
                     if ($('#toggle').hasClass('active')) {
                         $('.main').fadeOut('300', function () {
@@ -68,18 +70,21 @@ var GM = (function (GM, $) {
                 };
             stateChange = false;
             // Continue as normal for cmd clicks etc
-            if (e.which === 2 || e.metaKey) {
+            if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
                 return true;
-            } else if ($(this).parent('li').hasClass('break')) {
-                fallback($(this));
+            } else if (href) {
                 e.preventDefault();
-            } else {
-                if ($(this).data('id') && $('.main').data($(this).data('id'))) {
-                    page = $('.main').data($(this).data('id'));
-                    turnToPage(page);
-                } else if ($(this).attr('href')) {
-                    fallback($(this));
+                if ($(this).hasClass('break')) {
+                    fallback(thisLink);
+                } else {
+                    if ($(this).data('id') && $('.main').data($(this).data('id'))) {
+                        page = $('.main').data($(this).data('id'));
+                        turnToPage(page);
+                    } else {
+                        fallback(thisLink);
+                    }
                 }
+            } else {
                 e.preventDefault();
             }
         });
@@ -138,6 +143,7 @@ var GM = (function (GM, $) {
                         $(this).find('.pagenav').replaceWith(pageNav.clone());
                     });
                     $('.main').fadeIn('300');
+                    $.scrollTo(0);
                 });
             }
 
