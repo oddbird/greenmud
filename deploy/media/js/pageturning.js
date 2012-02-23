@@ -20,6 +20,7 @@ var GM = (function (GM, $) {
             thisPage = $(pageSelector),
             pageControls = $('.controls'),
             stateChange = false,
+            pageturn,
             // HTML Helper
             documentHtml = function (html) {
 	            // Prepare
@@ -69,6 +70,12 @@ var GM = (function (GM, $) {
                     }
                 };
             stateChange = false;
+            // Prev/Next page-turns use classes for css-animation
+            if (thisLink.parent().hasClass('prev')) {
+                pageturn = 'prev';
+            } else if (thisLink.parent().hasClass('next')) {
+                pageturn = 'next';
+            }
             // Continue as normal for cmd clicks etc
             if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
                 return true;
@@ -89,6 +96,7 @@ var GM = (function (GM, $) {
             }
         });
 
+        // LEFT or RIGHT triggers page-turn click
         $(document).keydown(function (e) {
             if (e.which === GM.keycodes.LEFT) {
                 e.preventDefault();
@@ -108,6 +116,8 @@ var GM = (function (GM, $) {
                 pageNav,
                 prev,
                 next,
+                pageturnExitClass,
+                pageturnEnterClass,
                 preparePage = function (response) {
                     // Prepare
                     var data = $(documentHtml(response)),
@@ -130,22 +140,45 @@ var GM = (function (GM, $) {
                     $('.main').data(id, dataContent);
                 };
 
-            stateChange = true;
             if ($(pageSelector).attr('id') !== state.id) {
                 thisPage = $('.main').data(state.id);
                 pageNav = thisPage.data('pagenav');
-                $('.main').fadeOut('300', function () {
-                    $(pageSelector).replaceWith(thisPage.clone(true));
-                    $('body').attr('class', thisPage.data('body-class'));
-                    document.title = title;
-                    $('title').text(title);
-                    pageControls.each(function () {
-                        $(this).find('.pagenav').replaceWith(pageNav.clone());
+                if (pageturn === 'prev' || pageturn === 'next') {
+                    if (pageturn === 'prev') {
+                        pageturnExitClass = 'exit-next';
+                        pageturnEnterClass = 'enter-prev';
+                    } else if (pageturn === 'next') {
+                        pageturnExitClass = 'exit-prev';
+                        pageturnEnterClass = 'enter-next';
+                    }
+                    $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
+                    $.doTimeout(300, function () {
+                        $('body').attr('class', thisPage.data('body-class'));
+                        document.title = title;
+                        $('title').text(title);
+                        $.scrollTo(0);
+                        $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
+                        pageControls.each(function () {
+                            $(this).find('.pagenav').replaceWith(pageNav.clone());
+                        });
+                        pageturn = null;
                     });
-                    $('.main').fadeIn('300');
-                    $.scrollTo(0);
-                });
+                } else {
+                    $('.main').fadeOut('300', function () {
+                        $(pageSelector).replaceWith(thisPage.clone(true));
+                        $('body').attr('class', thisPage.data('body-class'));
+                        document.title = title;
+                        $('title').text(title);
+                        pageControls.each(function () {
+                            $(this).find('.pagenav').replaceWith(pageNav.clone());
+                        });
+                        $('.main').fadeIn('300');
+                        $.scrollTo(0);
+                    });
+                }
             }
+
+            stateChange = true;
 
             prev = pageControls.first().find('.pagenav .prev a');
             next = pageControls.first().find('.pagenav .next a');
