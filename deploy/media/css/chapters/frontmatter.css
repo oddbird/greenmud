@@ -320,7 +320,7 @@
 @media (min-width: 525px) { #epigraph .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 @media (min-width: 980px) { #epigraph .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #epigraph .sky { position: absolute; top: 12.5em; bottom: -100%; left: -100%; right: -100%; -webkit-transform: rotate(-20deg); -moz-transform: rotate(-20deg); -ms-transform: rotate(-20deg); -o-transform: rotate(-20deg); transform: rotate(-20deg); background: rgba(229, 229, 255, 0.8); border: 1px solid #202020; }
-#epigraph blockquote { -webkit-border-radius: 1em 3em 2em 0; -moz-border-radius: 1em 3em 2em 0; -ms-border-radius: 1em 3em 2em 0; -o-border-radius: 1em 3em 2em 0; border-radius: 1em 3em 2em 0; border-style: solid; border-width: 0.056em; padding: 0.432em; position: relative; border-color: #202020; background: #edf6f6; z-index: 1; }
+#epigraph blockquote { -webkit-border-radius: 1em 3em 2em 0; -moz-border-radius: 1em 3em 2em 0; -ms-border-radius: 1em 3em 2em 0; -o-border-radius: 1em 3em 2em 0; border-radius: 1em 3em 2em 0; border-style: solid; border-width: 0.056em; padding: 0.432em; position: relative; border-color: #202020; background: rgba(237, 246, 246, 0.95); z-index: 1; }
 #epigraph p:last-child { margin-bottom: 0em; font-style: normal; }
 @media (min-width: 525px) { #epigraph .content { padding-left: 9.231%; padding-right: 9.231%; }
   #epigraph blockquote { border-style: solid; border-width: 0.045em; padding: 0.737em; } }
