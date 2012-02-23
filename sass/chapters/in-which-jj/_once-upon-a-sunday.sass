@@ -29,6 +29,7 @@ $rain-anim : rain 45s .2s linear infinite both
 #once-upon-a-sunday
   +page-animations($rain-anim)
   background: image-url($rain) top left, $off-orange-darker image-url($rain) center
+  overflow: hidden
 
   .pagewrap
     +media-container
