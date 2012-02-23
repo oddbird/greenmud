@@ -57,9 +57,9 @@
 @media (min-width: 980px) and (min-height: 490px) { #home .pagewrap { background: url('../../images/frontmatter/titlepage/strings_left.png?1327305552') no-repeat scroll left -0.625em, rgba(255, 255, 255, 0.512) url('../../images/frontmatter/titlepage/strings_right.png?1327306277') no-repeat scroll right -0.625em; } }
 #home .novel-title { overflow: hidden; *zoom: 1; margin-bottom: 0.313em; -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -ms-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; padding-left: 7.317%; padding-right: 7.317%; text-align: center; }
 #home .novel-title p { margin-bottom: 0em; }
-@media (min-width: 525px), (min-height: 350px) { #home .novel-title { -webkit-animation: linetiny 85s 0.5s infinite both; -moz-animation: linetiny 85s 0.5s infinite both; -ms-animation: linetiny 85s 0.5s infinite both; animation: linetiny 85s 0.5s infinite both; padding-bottom: 3.75em; background: url('../../images/frontmatter/titlepage/line.png?1327284513') repeat-x scroll bottom; } }
+@media (min-width: 525px), (min-height: 350px) { #home .novel-title { padding-bottom: 3.75em; background: url('../../images/frontmatter/titlepage/line.png?1327284513') repeat-x scroll bottom; } }
 @media (min-width: 525px) and (min-height: 350px) { #home .novel-title { padding-bottom: 2.5em; } }
-@media (min-width: 980px) { #home .novel-title { padding-bottom: 2.5em; } }
+@media (min-width: 980px) { #home .novel-title { padding-bottom: 2.5em; -webkit-animation: linetiny 75s 0.5s infinite both; -moz-animation: linetiny 75s 0.5s infinite both; -ms-animation: linetiny 75s 0.5s infinite both; animation: linetiny 75s 0.5s infinite both; } }
 #home .name { font-size: 1.563em; line-height: 1.2em; }
 #home .byline { font-size: 0.8em; line-height: 1.562em; }
 #home .wrap { clear: both; margin-left: 7.317%; margin-right: 7.317%; *zoom: 1; }
