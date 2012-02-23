@@ -11,12 +11,14 @@
 
 // epigraph ------------------------------------------------------------------
 
+$lightning-anim : lightning 10s linear infinite both
+
 #epigraph
+  +page-animations($lightning-anim)
   background: $darker image-url('frontmatter/lightning.png') no-repeat scroll center rhythm(-1)
   position: relative
   overflow: hidden
-  +small(both)
-    +animation(lightning 10s linear infinite both)
+
 
   .pagewrap
     +media-container
