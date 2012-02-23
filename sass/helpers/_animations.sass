@@ -10,20 +10,20 @@ $default-animation-mode: false
 @import animation
 
 // ---------------------------------------------------------------------------
-$enter-prev : fadeInLeft 300ms both
-$exit-prev  : fadeOutLeft 300ms both
-$enter-next : fadeInRight 300ms both
-$exit-next  : fadeOutRight 300ms both
+$enter-prev : bounceInLeft 400ms both
+$exit-prev  : bounceOutLeft 400ms both
+$enter-next : bounceInRight 400ms both
+$exit-next  : bounceOutRight 400ms both
 
 // ---------------------------------------------------------------------------
 =page-animations($anim1, $anim2:false, $anim3:false, $anim4:false, $anim5:false)
   $animations : compact($anim1, $anim2, $anim3, $anim4, $anim5)
   +animation($animations)
-  &.enter-prev
-    +animation($enter-prev, $animations)
-  &.exit-prev
-    +animation($exit-prev, $animations)
-  &.enter-next
-    +animation($enter-next, $animations)
-  &.exit-next
-    +animation($exit-next, $animations)
+  // &.enter-prev
+  //   +animation($enter-prev, $animations)
+  // &.exit-prev
+  //   +animation($exit-prev, $animations)
+  // &.enter-next
+  //   +animation($enter-next, $animations)
+  // &.exit-next
+  //   +animation($exit-next, $animations)
