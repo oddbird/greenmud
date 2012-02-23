@@ -990,6 +990,14 @@ h1, .breadcrumb { display: inline; margin: 0; padding: 0; }
 .tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }
 .tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
+.next-enter { -webkit-animation: fadeInRightBig 300ms both; -moz-animation: fadeInRightBig 300ms both; -ms-animation: fadeInRightBig 300ms both; animation: fadeInRightBig 300ms both; }
+
+.prev-enter { -webkit-animation: fadeInLeftBig 300ms both; -moz-animation: fadeInLeftBig 300ms both; -ms-animation: fadeInLeftBig 300ms both; animation: fadeInLeftBig 300ms both; }
+
+.exit-prev { -webkit-animation: fadeOutLeftBig 300ms both; -moz-animation: fadeOutLeftBig 300ms both; -ms-animation: fadeOutLeftBig 300ms both; animation: fadeOutLeftBig 300ms both; }
+
+.exit-next { -webkit-animation: fadeOutRightBig 300ms both; -moz-animation: fadeOutRightBig 300ms both; -ms-animation: fadeOutRightBig 300ms both; animation: fadeOutRightBig 300ms both; }
+
 .page { overflow-x: hidden; }
 .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; }
 @media (min-width: 525px) and (min-height: 350px) { .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; } }
