@@ -41,49 +41,31 @@
     background: rgba($white,$xxsmall)
     overflow: hidden
 
-    +medium(height)
-      +padding-leader
+    +medium(both)
+      background: image-url($strings-left) no-repeat scroll left rhythm(-.5), rgba($white,$xxsmall) image-url($strings-right) no-repeat scroll right rhythm(-.5)
 
   .novel-title
-    +media-full
     +clearfix
     +trailer(.25)
     +transition(padding 300ms)
+    +hpadding(side-gutter())
     text-align: center
     p
       +trailer(0)
+    +small(either)
+      +animation(linetiny 85s .5s infinite both)
+      +padding-trailer(3)
+      background: image-url($line) repeat-x scroll bottom
+    +small(both)
+      +padding-trailer(2)
+    +medium
+      +padding-trailer(2)
 
-  .logo
-    +pad(2,2,6)
-    text-align: center
   .name
+    @extend .allcaps
     +adjust-font-size-to($largepx,1.5)
   .byline
     +adjust-font-size-to($smallpx)
-
-  +small(both)
-    .novel-title
-      text-align: left
-    .logo
-      +columns(3,10)
-      padding: 0
-    .name, .byline
-      +columns(7,10)
-      +omega(10)
-    .name
-      +leader(1,$largepx)
-  +medium
-    .novel-title
-      text-align: left
-    .logo
-      +columns(3,12)
-      padding: 0
-    .name, .byline
-      +columns(9,12)
-      +omega(12)
-    .name
-      +adjust-font-size-to($xlargepx,1.5)
-      +leader(1.5,$xlargepx)
 
   .wrap
     +media-full
@@ -94,7 +76,7 @@
     +leading-border(1px,1)
     +trailing-border(1px,.5)
     +box-shadow(rgba($blue-dark,$xxxsmall) 0 0 rhythm(.5) inset)
-    background: rgba($blue-hint,$xsmall)
+    background: rgba($blue-hint,.85)
     border-color: rgba($base,$xxxsmall)
 
   .desc-head
