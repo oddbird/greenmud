@@ -21,8 +21,6 @@ var GM = (function (GM, $) {
             pageControls = $('.controls'),
             stateChange = false,
             pageturn,
-            ajaxCounter = 0,
-            responseCounter = 0,
             // HTML Helper
             documentHtml = function (html) {
 	            // Prepare
@@ -82,14 +80,11 @@ var GM = (function (GM, $) {
                 if ($(this).hasClass('break')) {
                     fallback(thisLink);
                 } else {
-                    if (ajaxCounter !== responseCounter) {
-                        console.log(ajaxCounter + ' calls, but only ' + responseCounter + ' responses!');
-                    } else if ($(this).data('id') && $('.main').data($(this).data('id'))) {
+                    if ($(this).data('id') && $('.main').data($(this).data('id'))) {
                         page = $('.main').data($(this).data('id'));
                         turnToPage(page);
                     } else {
-                        console.log('this page is ' + $(this).data('id') + ', but stored data is ' + $('.main').data($(this).data('id')));
-                        // fallback(thisLink);
+                        fallback(thisLink);
                     }
                 }
             } else {
@@ -139,26 +134,19 @@ var GM = (function (GM, $) {
 
                     // Store the content as a data-attr on .main
                     $('.main').data(id, dataContent);
-
-                    responseCounter = responseCounter + 1;
-                    console.log('fetched ' + id);
                 },
                 ajaxFetchPages = function () {
                     prev = pageControls.first().find('.pagenav .prev a');
                     next = pageControls.first().find('.pagenav .next a');
 
-                    if (!(prev.parent('li').hasClass('break')) && prev.attr('href') && !($('.main').data(prev.data('id')))) {
+                    if (!(prev.hasClass('break')) && prev.attr('href') && !($('.main').data(prev.data('id')))) {
                         // Ajax Request the Prev Page
                         $.get(prev.attr('href'), preparePage);
-                        console.log('fetching ' + prev.attr('href'));
-                        ajaxCounter = ajaxCounter + 1;
                     }
 
-                    if (!(next.parent('li').hasClass('break')) && next.attr('href') && !($('.main').data(next.data('id')))) {
+                    if (!(next.hasClass('break')) && next.attr('href') && !($('.main').data(next.data('id')))) {
                         // Ajax Request the Next Page
                         $.get(next.attr('href'), preparePage);
-                        console.log('fetching ' + next.attr('href'));
-                        ajaxCounter = ajaxCounter + 1;
                     }
                 },
                 replacePage = function () {
@@ -198,9 +186,9 @@ var GM = (function (GM, $) {
                         $('.main').fadeIn('300');
                     });
                 }
+            } else {
+                ajaxFetchPages();
             }
-
-            ajaxFetchPages();
 
             stateChange = true;
 
