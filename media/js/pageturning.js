@@ -20,6 +20,7 @@ var GM = (function (GM, $) {
             thisPage = $(pageSelector),
             pageControls = $('.controls'),
             stateChange = false,
+            pageturn,
             // HTML Helper
             documentHtml = function (html) {
 	            // Prepare
@@ -59,16 +60,18 @@ var GM = (function (GM, $) {
                 page,
                 fallback = function (link) {
                     if ($('#toggle').hasClass('active')) {
-                        $('.main').fadeOut('300', function () {
-                            window.location = link.attr('href') + '#controls';
-                        });
+                        window.location = link.attr('href') + '#controls';
                     } else {
-                        $('.main').fadeOut('300', function () {
-                            window.location = link.attr('href');
-                        });
+                        window.location = link.attr('href');
                     }
                 };
             stateChange = false;
+            // Prev/Next page-turns use classes for css-animation
+            if (thisLink.parent().hasClass('prev')) {
+                pageturn = 'prev';
+            } else if (thisLink.parent().hasClass('next')) {
+                pageturn = 'next';
+            }
             // Continue as normal for cmd clicks etc
             if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
                 return true;
@@ -89,6 +92,7 @@ var GM = (function (GM, $) {
             }
         });
 
+        // LEFT or RIGHT triggers page-turn click
         $(document).keydown(function (e) {
             if (e.which === GM.keycodes.LEFT) {
                 e.preventDefault();
@@ -108,6 +112,8 @@ var GM = (function (GM, $) {
                 pageNav,
                 prev,
                 next,
+                pageturnExitClass,
+                pageturnEnterClass,
                 preparePage = function (response) {
                     // Prepare
                     var data = $(documentHtml(response)),
@@ -128,37 +134,63 @@ var GM = (function (GM, $) {
 
                     // Store the content as a data-attr on .main
                     $('.main').data(id, dataContent);
-                };
+                },
+                ajaxFetchPages = function () {
+                    prev = pageControls.first().find('.pagenav .prev a');
+                    next = pageControls.first().find('.pagenav .next a');
 
-            stateChange = true;
-            if ($(pageSelector).attr('id') !== state.id) {
-                thisPage = $('.main').data(state.id);
-                pageNav = thisPage.data('pagenav');
-                $('.main').fadeOut('300', function () {
-                    $(pageSelector).replaceWith(thisPage.clone(true));
+                    if (!(prev.hasClass('break')) && prev.attr('href') && !($('.main').data(prev.data('id')))) {
+                        // Ajax Request the Prev Page
+                        $.get(prev.attr('href'), preparePage);
+                    }
+
+                    if (!(next.hasClass('break')) && next.attr('href') && !($('.main').data(next.data('id')))) {
+                        // Ajax Request the Next Page
+                        $.get(next.attr('href'), preparePage);
+                    }
+                },
+                replacePage = function () {
                     $('body').attr('class', thisPage.data('body-class'));
                     document.title = title;
                     $('title').text(title);
+                    $.scrollTo(0);
+
                     pageControls.each(function () {
                         $(this).find('.pagenav').replaceWith(pageNav.clone());
                     });
-                    $('.main').fadeIn('300');
-                    $.scrollTo(0);
-                });
+
+                    ajaxFetchPages();
+                };
+
+            if ($(pageSelector).attr('id') !== state.id) {
+                thisPage = $('.main').data(state.id);
+                pageNav = thisPage.data('pagenav');
+                if (pageturn === 'prev' || pageturn === 'next') {
+                    if (pageturn === 'prev') {
+                        pageturnExitClass = 'exit-next';
+                        pageturnEnterClass = 'enter-prev';
+                    } else if (pageturn === 'next') {
+                        pageturnExitClass = 'exit-prev';
+                        pageturnEnterClass = 'enter-next';
+                    }
+                    $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
+                    $.doTimeout(300, function () {
+                        replacePage();
+                        $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
+                        pageturn = null;
+                    });
+                } else {
+                    $('.main').fadeOut('300', function () {
+                        replacePage();
+                        $(pageSelector).replaceWith(thisPage.clone(true));
+                        $('.main').fadeIn('300');
+                    });
+                }
+            } else {
+                ajaxFetchPages();
             }
 
-            prev = pageControls.first().find('.pagenav .prev a');
-            next = pageControls.first().find('.pagenav .next a');
-
-            if (!(prev.parent('li').hasClass('break')) && prev.attr('href') && !($('.main').data(prev.data('id')))) {
-                // Ajax Request the Prev Page
-                $.get(prev.attr('href'), preparePage);
-            }
-
-            if (!(next.parent('li').hasClass('break')) && next.attr('href') && !($('.main').data(next.data('id')))) {
-                // Ajax Request the Next Page
-                $.get(next.attr('href'), preparePage);
-            }
+            stateChange = true;
 
         }); // end onStateChange
 

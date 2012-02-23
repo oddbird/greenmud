@@ -7,9 +7,9 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot, .demo .demo-title { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot { letter-spacing: 0.05em; }
 
-.allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot, .demo .demo-title { text-transform: uppercase; }
+.allcaps, .title i, #titlepage h2 i, #once-upon-a-sunday .pitpot { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -67,6 +67,10 @@
   100% { -webkit-transform: translateY(100px) rotate(0deg); -moz-transform: translateY(100px) rotate(0deg); -ms-transform: translateY(100px) rotate(0deg); -o-transform: translateY(100px) rotate(0deg); transform: translateY(100px) rotate(0deg); opacity: 0; } }
 
 #once-upon-a-sunday { -webkit-animation: rain 45s 0.2s linear infinite both; -moz-animation: rain 45s 0.2s linear infinite both; -ms-animation: rain 45s 0.2s linear infinite both; animation: rain 45s 0.2s linear infinite both; background: url('../../images/ch01/once-upon-sunday/rain.png?1319146885') top left, #564029 url('../../images/ch01/once-upon-sunday/rain.png?1319146885') center; }
+#once-upon-a-sunday.enter-prev { -webkit-animation: fadeInLeft 300ms both, rain 45s 0.2s linear infinite both; -moz-animation: fadeInLeft 300ms both, rain 45s 0.2s linear infinite both; -ms-animation: fadeInLeft 300ms both, rain 45s 0.2s linear infinite both; animation: fadeInLeft 300ms both, rain 45s 0.2s linear infinite both; }
+#once-upon-a-sunday.exit-prev { -webkit-animation: fadeOutLeft 300ms both, rain 45s 0.2s linear infinite both; -moz-animation: fadeOutLeft 300ms both, rain 45s 0.2s linear infinite both; -ms-animation: fadeOutLeft 300ms both, rain 45s 0.2s linear infinite both; animation: fadeOutLeft 300ms both, rain 45s 0.2s linear infinite both; }
+#once-upon-a-sunday.enter-next { -webkit-animation: fadeInRight 300ms both, rain 45s 0.2s linear infinite both; -moz-animation: fadeInRight 300ms both, rain 45s 0.2s linear infinite both; -ms-animation: fadeInRight 300ms both, rain 45s 0.2s linear infinite both; animation: fadeInRight 300ms both, rain 45s 0.2s linear infinite both; }
+#once-upon-a-sunday.exit-next { -webkit-animation: fadeOutRight 300ms both, rain 45s 0.2s linear infinite both; -moz-animation: fadeOutRight 300ms both, rain 45s 0.2s linear infinite both; -ms-animation: fadeOutRight 300ms both, rain 45s 0.2s linear infinite both; animation: fadeOutRight 300ms both, rain 45s 0.2s linear infinite both; }
 #once-upon-a-sunday .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 #once-upon-a-sunday .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 525px) { #once-upon-a-sunday .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
@@ -100,19 +104,3 @@
 #titlepage h2:before, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(255, 255, 153, 0.41); z-index: -1; }
 #titlepage h2:before { -webkit-transform: rotate(-0.75deg); -moz-transform: rotate(-0.75deg); -ms-transform: rotate(-0.75deg); -o-transform: rotate(-0.75deg); transform: rotate(-0.75deg); }
 #titlepage h2:after { -webkit-transform: rotate(0.75deg); -moz-transform: rotate(0.75deg); -ms-transform: rotate(0.75deg); -o-transform: rotate(0.75deg); transform: rotate(0.75deg); }
-
-.demo { background: #f6f6ed; }
-.demo .demo-note { margin-bottom: 1.25em; color: #bf0000; }
-.demo .demo-title { font-size: 0.64em; line-height: 1.953em; }
-.demo .demo-image { border: 1px solid rgba(129, 129, 62, 0.64); }
-.demo .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
-.demo .pagewrap:after { content: ""; display: table; clear: both; }
-@media (min-width: 525px) { .demo .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
-  .demo .pagewrap:after { content: ""; display: table; clear: both; } }
-@media (min-width: 980px) { .demo .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
-  .demo .pagewrap:after { content: ""; display: table; clear: both; } }
-.demo .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; }
-@media (min-width: 525px) { .demo .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
-@media (min-width: 980px) { .demo .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
-@media (min-width: 525px) { .demo .content { padding-left: 9.231%; padding-right: 9.231%; } }
-@media (min-width: 980px) { .demo .content { padding-left: 15.584%; padding-right: 15.584%; } }
