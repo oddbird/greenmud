@@ -5,15 +5,15 @@
   <div class="pagewrap">
   <div class="content">
   {% filter typogrify %}
-  {% if resource.meta.demo %}
-    <div class="demo-note">
-      <h2 class="demo-title">This page has not been built. Coming soon:</h2>
-      <img src="/media/images/{{ resource.meta.demo_image }}" class="demo-image" />
-    </div>
-  {% endif %}
   {% block page %}
 
   {% endblock page %}
+  {% if resource.meta.demo %}
+    <div class="demo-note">
+      <h2 class="demo-title">This page has not been built. The first draft looked like this.</h2>
+      <img src="/media/images/{{ resource.meta.demo_image }}" class="demo-image" />
+    </div>
+  {% endif %}
   {% endfilter %}
   </div>
   </div>

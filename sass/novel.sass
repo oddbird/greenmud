@@ -194,3 +194,50 @@ h1, .breadcrumb
     +padding-leader(2)
   +large(height)
     +padding-leader(3)
+
+// Demo ----------------------------------------------------------------------
+
+.demo
+  background: $off-yellow-hint
+
+  .pagewrap
+    +media-container
+  .content
+    +media-full
+    +small
+      +pad(1,1)
+    +medium
+      +pad(2,2)
+
+  .demo-note
+    +clearfix
+    +trailer(.5)
+    color: $red-dark
+
+  .demo-title
+    @extend .allcaps
+    +adjust-font-size-to($xsmallpx)
+
+  .demo-image
+    +box-sizing(border-box)
+    border: 1px solid rgba($off-yellow-dark,$xsmall)
+
+  +small
+    .demo-note
+      +leading-border(3px,.75)
+      border:
+        style: dashed
+        color: rgba($off-yellow-light,$xxxsmall)
+    .demo-title
+      +columns(5,10)
+      +omega(10)
+    .demo-image
+      +columns(5,10)
+
+  +medium
+    .demo-title
+      +columns(6,12)
+      +omega(12)
+    .demo-image
+      +columns(6,12)
+
