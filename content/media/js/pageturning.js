@@ -62,13 +62,9 @@ var GM = (function (GM, $) {
                 page,
                 fallback = function (link) {
                     if ($('#toggle').hasClass('active')) {
-                        $('.main').fadeOut('300', function () {
-                            window.location = link.attr('href') + '#controls';
-                        });
+                        window.location = link.attr('href') + '#controls';
                     } else {
-                        $('.main').fadeOut('300', function () {
-                            window.location = link.attr('href');
-                        });
+                        window.location = link.attr('href');
                     }
                 };
             stateChange = false;
