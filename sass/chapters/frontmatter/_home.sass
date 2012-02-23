@@ -69,7 +69,7 @@
 
   .wrap
     +media-full
-    overflow: hidden
+    +pie-clearfix
 
   // Main Info ---------------------------------------------------------------
   .info
@@ -88,6 +88,52 @@
       display: block
       font-style: normal
       white-space: nowrap
+
+  .newsletter
+    +pie-clearfix
+    +rhythm-borders(1px,.5)
+    +hpadding(rhythm(1.5))
+    clear: both
+    margin: 0 rhythm(-1.5) rhythm(-.5)
+    background: rgba($blue-lightest,$xxxsmall)
+    border-color: rgba($blue-lighter,$xxxsmall)
+    .note
+      +adjust-font-size-to($smallpx)
+      +trailer(0)
+    .formfield
+      margin: 0
+      overflow: visible
+    .interest-field
+      +gone
+    .type
+      +gone
+    .value
+      +rhythm-borders(1px,.25,$xsmallpx)
+      +trailer(.25,$smallpx)
+    .submit
+      +box-sizing(border-box)
+      +adjust-font-size-to($xsmallpx,1,$smallpx)
+      +button($pink-hint,false,.125,$xxsmallpx)
+      padding: rhythm(.125,$xxsmallpx) rhythm(.5,$xxsmallpx) 0
+
+    +small(both)
+      .value
+        +rhythm-borders(1px,.25,$xsmallpx)
+      .submit
+        +button($pink-hint,false,.125,$xsmallpx)
+        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
+    +medium
+      .value
+        +rhythm-borders(1px,.25,$smallpx)
+        +columns(8,12)
+      .form-actions
+        +columns(4,12)
+        +omega(12)
+        clear: none
+      .submit
+        +button($pink-hint,false,.125,$xsmallpx)
+        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
+        width: 100%
 
   +small
     .info
@@ -212,63 +258,22 @@
     +media-full
     +padding-leader(1)
 
-  .newsletter
-    +clearfix
-    +padding-trailer(.5,$smallpx)
-    .note
-      +trailer(.25,$smallpx)
-    .formfield
-      margin: 0
-      overflow: visible
-    .type
-      +gone
-    .value
-      +rhythm-borders(1px,.25,$xsmallpx)
-      +trailer(.25,$smallpx)
-    .submit
-      +box-sizing(border-box)
-      +adjust-font-size-to($xsmallpx,1,$smallpx)
-      +button($pink-hint,false,.125,$xxsmallpx)
-      padding: rhythm(.125,$xxsmallpx) rhythm(.5,$xxsmallpx) 0
-
-    +small(both)
-      .value
-        +rhythm-borders(1px,.25,$xsmallpx)
-      .submit
-        +button($pink-hint,false,.125,$xsmallpx)
-        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
-    +medium
-      .value
-        +rhythm-borders(1px,.25,$smallpx)
-        +columns(4,6)
-      .form-actions
-        +columns(2,6)
-        +omega(6)
-        clear: none
-      .submit
-        +button($pink-hint,false,.125,$xsmallpx)
-        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
-        width: 100%
-
-  .contact, .colophon
+  .license, .colophon
     +trailer(.25,$smallpx)
-
-  .license
-    +trailer(.125,$smallpx)
 
   .license, .colophon a
     text-transform: uppercase
 
   +small
-    .contact, .copyright
+    .license, .colophon
       +columns(5,10)
-    .contact
+    .colophon
       +omega(10)
 
   +medium
-    .contact, .copyright
+    .license, .colophon
       +columns(6,12)
-    .contact
+    .colophon
       +omega(12)
 
 
