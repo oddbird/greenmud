@@ -1,6 +1,5 @@
 #instructions
   background: $off-yellow-hint
-  text-align: center
 
   .pagewrap
     +media-container
@@ -8,9 +7,34 @@
     +media-full
     +leader(.5)
 
-  strong
-    display: block
+  h2
+    @extend .allcaps
   p
     +trailer(0)
-  img
+
+  .how
+    +hpadding
+    +trailing-border(2px,.5,$smallpx)
     +trailer(.5)
+    border:
+      style: dashed
+      color: $off-blue-lighter
+    +small
+      +pad(1,1,10)
+
+  .nav-inst
+    text-align: center
+    img
+      +trailer(.5)
+
+  +medium
+    .how
+      +columns(7,12)
+      +omega(12)
+      +leader(3.5)
+      padding: 0
+      border: 0
+    .nav-inst
+      +box-sizing(border-box)
+      +columns(5,12)
+      border-right: 2px dashed $off-blue-lighter
