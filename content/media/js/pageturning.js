@@ -21,6 +21,8 @@ var GM = (function (GM, $) {
             pageControls = $('.controls'),
             stateChange = false,
             pageturn,
+            ajaxCounter = 0,
+            responseCounter = 0,
             // HTML Helper
             documentHtml = function (html) {
 	            // Prepare
@@ -84,11 +86,14 @@ var GM = (function (GM, $) {
                 if ($(this).hasClass('break')) {
                     fallback(thisLink);
                 } else {
-                    if ($(this).data('id') && $('.main').data($(this).data('id'))) {
+                    if (ajaxCounter !== responseCounter) {
+                        console.log(ajaxCounter + ' calls, but only ' + responseCounter + ' responses!');
+                    } else if ($(this).data('id') && $('.main').data($(this).data('id'))) {
                         page = $('.main').data($(this).data('id'));
                         turnToPage(page);
                     } else {
-                        fallback(thisLink);
+                        console.log('this page is ' + $(this).data('id') + ', but stored data is ' + $('.main').data($(this).data('id')));
+                        // fallback(thisLink);
                     }
                 }
             } else {
@@ -138,6 +143,39 @@ var GM = (function (GM, $) {
 
                     // Store the content as a data-attr on .main
                     $('.main').data(id, dataContent);
+
+                    responseCounter = responseCounter + 1;
+                    console.log('fetched ' + id);
+                },
+                ajaxFetchPages = function () {
+                    prev = pageControls.first().find('.pagenav .prev a');
+                    next = pageControls.first().find('.pagenav .next a');
+
+                    if (!(prev.parent('li').hasClass('break')) && prev.attr('href') && !($('.main').data(prev.data('id')))) {
+                        // Ajax Request the Prev Page
+                        $.get(prev.attr('href'), preparePage);
+                        console.log('fetching ' + prev.attr('href'));
+                        ajaxCounter = ajaxCounter + 1;
+                    }
+
+                    if (!(next.parent('li').hasClass('break')) && next.attr('href') && !($('.main').data(next.data('id')))) {
+                        // Ajax Request the Next Page
+                        $.get(next.attr('href'), preparePage);
+                        console.log('fetching ' + next.attr('href'));
+                        ajaxCounter = ajaxCounter + 1;
+                    }
+                },
+                replacePage = function () {
+                    $('body').attr('class', thisPage.data('body-class'));
+                    document.title = title;
+                    $('title').text(title);
+                    $.scrollTo(0);
+
+                    pageControls.each(function () {
+                        $(this).find('.pagenav').replaceWith(pageNav.clone());
+                    });
+
+                    ajaxFetchPages();
                 };
 
             if ($(pageSelector).attr('id') !== state.id) {
@@ -153,45 +191,22 @@ var GM = (function (GM, $) {
                     }
                     $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
                     $.doTimeout(300, function () {
-                        $('body').attr('class', thisPage.data('body-class'));
-                        document.title = title;
-                        $('title').text(title);
-                        $.scrollTo(0);
+                        replacePage();
                         $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
-                        pageControls.each(function () {
-                            $(this).find('.pagenav').replaceWith(pageNav.clone());
-                        });
                         pageturn = null;
                     });
                 } else {
                     $('.main').fadeOut('300', function () {
+                        replacePage();
                         $(pageSelector).replaceWith(thisPage.clone(true));
-                        $('body').attr('class', thisPage.data('body-class'));
-                        document.title = title;
-                        $('title').text(title);
-                        pageControls.each(function () {
-                            $(this).find('.pagenav').replaceWith(pageNav.clone());
-                        });
                         $('.main').fadeIn('300');
-                        $.scrollTo(0);
                     });
                 }
             }
 
+            ajaxFetchPages();
+
             stateChange = true;
-
-            prev = pageControls.first().find('.pagenav .prev a');
-            next = pageControls.first().find('.pagenav .next a');
-
-            if (!(prev.parent('li').hasClass('break')) && prev.attr('href') && !($('.main').data(prev.data('id')))) {
-                // Ajax Request the Prev Page
-                $.get(prev.attr('href'), preparePage);
-            }
-
-            if (!(next.parent('li').hasClass('break')) && next.attr('href') && !($('.main').data(next.data('id')))) {
-                // Ajax Request the Next Page
-                $.get(next.attr('href'), preparePage);
-            }
 
         }); // end onStateChange
 
