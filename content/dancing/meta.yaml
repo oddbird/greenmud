@@ -8,7 +8,8 @@ voice         : narrator
 chapters:
     -   name: 'In Which JJ.'
         url: 'in-which-jj/'
-    - name: 'Daymares, Poor Boy.'
+    -   name: 'Daymares, Poor Boy.'
+        url: 'daymares/'
     - name: 'The Susy Within.'
     - name: 'Yes Mother, Goodnight.'
     - name: 'Bring Down The House House.'

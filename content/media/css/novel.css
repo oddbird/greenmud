@@ -1048,3 +1048,5 @@ h1, .breadcrumb { display: inline; margin: 0; padding: 0; }
 .ie .demo .demo-image { display: inline; float: left; width: 49.296%; margin-right: 1.408%; }
 @media (min-width: 980px) { .demo .demo-title { display: inline; float: left; width: 49.296%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
   .demo .demo-image { display: inline; float: left; width: 49.296%; margin-right: 1.408%; } }
+.demo.narrator blockquote { margin-bottom: 0.625em; font-style: normal; }
+.demo.narrator blockquote::before { content: "– "; }

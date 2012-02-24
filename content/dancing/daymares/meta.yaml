@@ -1,0 +1,4 @@
+chapter       : 'Daymares, Poor Boy.'
+chapter_slug  : daymares
+extra_styles  : chapters/daymares.css
+voice         : narrator
