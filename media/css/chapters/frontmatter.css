@@ -59,7 +59,7 @@
 #home .novel-title p { margin-bottom: 0em; }
 @media (min-width: 525px), (min-height: 350px) { #home .novel-title { padding-bottom: 3.75em; background: url('../../images/frontmatter/titlepage/line.png?1327284513') repeat-x scroll bottom; } }
 @media (min-width: 525px) and (min-height: 350px) { #home .novel-title { padding-bottom: 2.5em; } }
-@media (min-width: 980px) { #home .novel-title { padding-bottom: 2.5em; -webkit-animation: linetiny 75s 0.5s infinite both; -moz-animation: linetiny 75s 0.5s infinite both; -ms-animation: linetiny 75s 0.5s infinite both; animation: linetiny 75s 0.5s infinite both; } }
+@media (min-width: 980px) { #home .novel-title { padding-bottom: 2.5em; -webkit-animation: linetiny 60s 1s linear infinite both; -moz-animation: linetiny 60s 1s linear infinite both; -ms-animation: linetiny 60s 1s linear infinite both; animation: linetiny 60s 1s linear infinite both; } }
 #home .name { font-size: 1.563em; line-height: 1.2em; }
 #home .byline { font-size: 0.8em; line-height: 1.562em; }
 #home .wrap { clear: both; margin-left: 7.317%; margin-right: 7.317%; *zoom: 1; }
@@ -190,7 +190,6 @@
 @media (min-width: 980px) { #titlepage .novel-title .wrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #titlepage .novel-title .wrap:after { content: ""; display: table; clear: both; } }
 #titlepage .novel-title span { -webkit-animation: fadeIn 4s 1s ease both; -moz-animation: fadeIn 4s 1s ease both; -ms-animation: fadeIn 4s 1s ease both; animation: fadeIn 4s 1s ease both; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; display: block; }
-.cssanimations #titlepage .novel-title span { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 #titlepage .into { font-size: 1.25em; line-height: 1em; display: inline; float: left; margin-left: 7.317%; padding-left: 29.268%; margin-right: 0.2em; }
 #titlepage .the { font-size: 1.536em; line-height: 0.814em; display: inline; float: left; }
 #titlepage .green1 { font-size: 1.75em; line-height: 0.714em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-right: 29.268%; text-align: center; }
