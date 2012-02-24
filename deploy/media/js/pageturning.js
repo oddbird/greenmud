@@ -181,7 +181,6 @@ var GM = (function (GM, $) {
                         $(window).resize();
                     });
                 } else {
-                    console.log('turned!');
                     replacePage(thisPage, pageNav);
                     $(pageSelector).replaceWith(thisPage.clone(true));
                     $(window).resize();
