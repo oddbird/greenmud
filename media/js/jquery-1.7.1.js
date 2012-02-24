@@ -91,7 +91,7 @@ var jQuery = function( selector, context ) {
 	trim = String.prototype.trim,
 	indexOf = Array.prototype.indexOf,
 
-	// {{ content_url('Class') }} -> type pairs
+	// [[Class]] -> type pairs
 	class2type = {};
 
 jQuery.fn = jQuery.prototype = {
@@ -3116,7 +3116,7 @@ jQuery.event = {
 
 		// Determine event propagation path in advance, per W3C events spec (#9951)
 		// Bubble up to document, then to window; watch for a global ownerDocument var (#9724)
-		eventPath = {{ content_url(' elem, special.bindType || type ') }};
+		eventPath = [[ elem, special.bindType || type ]];
 		if ( !onlyHandlers && !special.noBubble && !jQuery.isWindow( elem ) ) {
 
 			bubbleType = special.delegateType || type;
