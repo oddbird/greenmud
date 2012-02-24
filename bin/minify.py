@@ -3,14 +3,18 @@
 Minify and concatenate all Javascript files referenced from ``layout/base.j2``
 into ``content/media/js/minified.js``.
 
+Warns about any .js files found in ``content/media/js`` that aren't included in
+the minification.
+
 """
-import os.path, re, subprocess
+import os, re, subprocess, sys
 
 
 BIN = os.path.dirname(__file__)
 BASE = os.path.dirname(BIN)
 MEDIA = os.path.join(BASE, "content", "media")
 LAYOUT = os.path.join(BASE, "layout")
+JS = os.path.join(MEDIA, "js")
 
 
 COMPILER_JAR = os.path.join(BIN, "compiler.jar")
@@ -23,9 +27,24 @@ def main():
     Minify all JS files referenced from base.j2 into minified.js.
 
     """
+    found_files = find_js_files(os.path.join(LAYOUT, "base.j2"))
+
+    expected_files = [
+        os.path.join(JS, fn)
+        for fn in os.listdir(os.path.join(MEDIA, "js"))
+        if fn.endswith(".js")
+        ]
+
+    missing = set(expected_files).difference(found_files)
+    if missing:
+        out = ["", "UNUSED JAVASCRIPT FILES!", "", ""]
+        out.extend([os.path.basename(fn) for fn in missing])
+        out.extend(["", ""])
+        sys.stderr.write("\n".join(out))
+
     minify(
-        find_js_files(os.path.join(LAYOUT, "base.j2")),
-        os.path.join(MEDIA, "js", "minified.js"),
+        found_files,
+        os.path.join(JS, "minified.js"),
         )
 
 
