@@ -149,14 +149,14 @@ var GM = (function (GM, $) {
                         $.get(next.attr('href'), preparePage);
                     }
                 },
-                replacePage = function () {
-                    $('body').attr('class', thisPage.data('body-class'));
+                replacePage = function (newPage, newPageNav) {
+                    $('body').attr('class', newPage.data('body-class'));
                     document.title = title;
                     $('title').text(title);
                     $.scrollTo(0);
 
                     pageControls.each(function () {
-                        $(this).find('.pagenav').replaceWith(pageNav.clone());
+                        $(this).find('.pagenav').replaceWith(newPageNav.clone());
                     });
 
                     ajaxFetchPages();
@@ -175,18 +175,15 @@ var GM = (function (GM, $) {
                     }
                     $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
                     $.doTimeout(300, function () {
-                        replacePage();
+                        replacePage(thisPage, pageNav);
                         $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
                         pageturn = null;
                         $(window).resize();
                     });
                 } else {
-                    $('.main').fadeOut('300', function () {
-                        replacePage();
-                        $(pageSelector).replaceWith(thisPage.clone(true));
-                        $('.main').fadeIn('300');
-                        $(window).resize();
-                    });
+                    replacePage(thisPage, pageNav);
+                    $(pageSelector).replaceWith(thisPage.clone(true));
+                    $(window).resize();
                 }
             } else {
                 ajaxFetchPages();
