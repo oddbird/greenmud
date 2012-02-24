@@ -16,7 +16,7 @@ a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
 /* Typography ---------------------------------------------------------------- */
-.jj, .susy, .narrator { font-family: "GreenMudJJRegular", Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", "MV Boli", Purisa, Casual, cursive; }
 
 .serif { font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
 
@@ -34,14 +34,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* titlepages ---------------------------------------------------------------- */
 .title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
+.ie .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
 @media (min-width: 525px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+.ie .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
 @media (min-width: 980px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 .title .wrap { *zoom: 1; }
 .title .wrap:after { content: ""; display: table; clear: both; }
 .title i { font-size: 0.64em; line-height: 1.25em; display: block; font-style: normal; }
+.ie .title { margin-top: 1.6em; }
 @media (min-height: 350px) { .title { margin-top: 1.6em; } }
+.ie .title { margin-top: 3.2em; }
 @media (min-height: 490px) { .title { margin-top: 3.2em; } }
 @media (min-height: 700px) { .title { margin-top: 4.8em; } }
+.ie .title i, .ie .title .name { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
+.ie .title i { padding-top: 0.625em; font: inherit; }
+.ie .title .name { text-transform: uppercase; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
+.ie .title b { font-size: 0.64em; line-height: 1.875em; display: block; }
 @media (min-width: 525px) { .title i, .title .name { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
   .title i { padding-top: 0.625em; font: inherit; }
   .title .name { text-transform: uppercase; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
@@ -60,6 +68,9 @@ html > body { font-size: 22.4px; }
   html > body { font-size: 28px; } }
 @media (min-width: 980px) { body { font-size: 175%; line-height: 1.25em; }
   html > body { font-size: 28px; } }
+.ie body { font-size: 175%; line-height: 1.25em; }
+.ie html > body { font-size: 28px; }
+
 html { -webkit-font-smoothing: antialiased; }
 
 body { -webkit-animation: fadeIn 300ms linear both; -moz-animation: fadeIn 300ms linear both; -ms-animation: fadeIn 300ms linear both; animation: fadeIn 300ms linear both; position: relative; min-width: 12em; color: #202020; overflow-x: hidden; }
@@ -927,7 +938,7 @@ dt { margin-top: 1.25em; }
 @keyframes rollOut { 0% { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; -webkit-transform: translateX(0px) rotate(0deg); -moz-transform: translateX(0px) rotate(0deg); -ms-transform: translateX(0px) rotate(0deg); -o-transform: translateX(0px) rotate(0deg); transform: translateX(0px) rotate(0deg); }
   100% { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transform: translateX(-100%) rotate(-120deg); -moz-transform: translateX(-100%) rotate(-120deg); -ms-transform: translateX(-100%) rotate(-120deg); -o-transform: translateX(-100%) rotate(-120deg); transform: translateX(-100%) rotate(-120deg); } }
 
-.input, textarea, select, input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="tel"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="search"], input[type="color"] { font-family: "GreenMudJJRegular", Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; border-style: solid; border-width: 0.036em; padding: 0.277em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: inset rgba(0, 0, 191, 0.41) 0 0 0.8em; -moz-box-shadow: inset rgba(0, 0, 191, 0.41) 0 0 0.8em; box-shadow: inset rgba(0, 0, 191, 0.41) 0 0 0.8em; font-size: inherit; line-height: inherit; width: 100%; background: rgba(223, 223, 223, 0.512); color: #202020; border-color: #202020; vertical-align: top; outline: 0; }
+.input, textarea, select, input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="tel"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="search"], input[type="color"] { font-family: "GreenMudJJRegular", "MV Boli", Purisa, Casual, cursive; border-style: solid; border-width: 0.036em; padding: 0.277em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: inset rgba(0, 0, 191, 0.41) 0 0 0.8em; -moz-box-shadow: inset rgba(0, 0, 191, 0.41) 0 0 0.8em; box-shadow: inset rgba(0, 0, 191, 0.41) 0 0 0.8em; font-size: inherit; line-height: inherit; width: 100%; background: rgba(223, 223, 223, 0.512); color: #202020; border-color: #202020; vertical-align: top; outline: 0; }
 .input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="datetime"]::-webkit-input-placeholder, input[type="datetime-local"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="color"]::-webkit-input-placeholder { color: #606060; }
 .input:-moz-placeholder, textarea:-moz-placeholder, select:-moz-placeholder, input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="url"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="date"]:-moz-placeholder, input[type="datetime"]:-moz-placeholder, input[type="datetime-local"]:-moz-placeholder, input[type="month"]:-moz-placeholder, input[type="week"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="search"]:-moz-placeholder, input[type="color"]:-moz-placeholder { color: #606060; }
 .input.placeholder, textarea.placeholder, select.placeholder, input.placeholder[type="text"], input.placeholder[type="password"], input.placeholder[type="email"], input.placeholder[type="url"], input.placeholder[type="tel"], input.placeholder[type="date"], input.placeholder[type="datetime"], input.placeholder[type="datetime-local"], input.placeholder[type="month"], input.placeholder[type="week"], input.placeholder[type="time"], input.placeholder[type="number"], input.placeholder[type="search"], input.placeholder[type="color"] { color: #606060; }
