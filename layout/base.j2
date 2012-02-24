@@ -31,7 +31,15 @@
   <!--iOS. Delete if not required -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <link rel="apple-touch-startup-image" href="{{ media_url('images/favicons/splash.png') }}">
+
+  <!-- 320x460 for iPhone 3GS -->
+  <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and not (-webkit-min-device-pixel-ratio: 2)" href="{{ media_url('images/favicons/splash-iphone.png') }}" />
+  <!-- 640x920 for retina display -->
+  <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="{{ media_url('images/favicons/splash-iphone4.png') }}" />
+  <!-- iPad Portrait 768x1004 -->
+  <link rel="apple-touch-startup-image" media="(min-device-width: 768px) and (orientation: portrait)" href="{{ media_url('images/favicons/splash-portrait.png') }}" />
+  <!-- iPad Landscape 1024x748 -->
+  <link rel="apple-touch-startup-image" media="(min-device-width: 768px) and (orientation: landscape)" href="{{ media_url('images/favicons/splash-landscape.png') }}" />
 
   <!-- favicon.ico -->
   <link rel="shortcut icon" href="{{ media_url('images/favicons/favicon.ico') }}" />
@@ -76,19 +84,15 @@
 
 {% block js %}
 
-  {% if site.config.mode == "production" %}
-    <script src="{{ media_url('js/minified.js') }}"></script>
-  {% else %}
-    <script src="{{ media_url('js/jquery-1.7.1.js') }}"></script>
-    <script src="{{ media_url('js/jquery.history.js') }}"></script>
-    <script src="{{ media_url('js/jquery.ba-dotimeout.js') }}"></script>
-    <script src="{{ media_url('js/jquery.placeholder.js') }}"></script>
-    <script src="{{ media_url('js/jquery.scrollTo.js') }}"></script>
-    <script src="{{ media_url('js/viewport.js') }}"></script>
-    <script src="{{ media_url('js/local.js') }}"></script>
-    <script src="{{ media_url('js/pageturning.js') }}"></script>
-    <script src="{{ media_url('js/init.js') }}"></script>
-  {% endif %}
+  <script src="{{ media_url('js/jquery-1.7.1.js') }}"></script>
+  <script src="{{ media_url('js/jquery.history.js') }}"></script>
+  <script src="{{ media_url('js/jquery.ba-dotimeout.js') }}"></script>
+  <script src="{{ media_url('js/jquery.placeholder.js') }}"></script>
+  <script src="{{ media_url('js/jquery.scrollTo.js') }}"></script>
+  <script src="{{ media_url('js/viewport.js') }}"></script>
+  <script src="{{ media_url('js/local.js') }}"></script>
+  <script src="{{ media_url('js/pageturning.js') }}"></script>
+  <script src="{{ media_url('js/init.js') }}"></script>
 
   {% block scripts %}
   {% endblock scripts %}
