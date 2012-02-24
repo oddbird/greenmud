@@ -32,7 +32,15 @@
   <!--iOS. Delete if not required -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <link rel="apple-touch-startup-image" href="/media/images/favicons/splash.png">
+
+  <!-- 320x460 for iPhone 3GS -->
+  <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and not (-webkit-min-device-pixel-ratio: 2)" href="/media/images/favicons/splash-iphone.png" />
+  <!-- 640x920 for retina display -->
+  <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="/media/images/favicons/splash-iphone4.png" />
+  <!-- iPad Portrait 768x1004 -->
+  <link rel="apple-touch-startup-image" media="(min-device-width: 768px) and (orientation: portrait)" href="/media/images/favicons/splash-portrait.png" />
+  <!-- iPad Landscape 1024x748 -->
+  <link rel="apple-touch-startup-image" media="(min-device-width: 768px) and (orientation: landscape)" href="/media/images/favicons/splash-landscape.png" />
 
   <!-- favicon.ico -->
   <link rel="shortcut icon" href="/media/images/favicons/favicon.ico" />
@@ -111,8 +119,16 @@ awake, it&#8217;s true. Every day since St. Stephen’s, now. What a&nbsp;world!
 
 
 
-      <script src="/media/js/minified.js"></script>
-  
+  <script src="/media/js/jquery-1.7.1.js"></script>
+  <script src="/media/js/jquery.history.js"></script>
+  <script src="/media/js/jquery.ba-dotimeout.js"></script>
+  <script src="/media/js/jquery.placeholder.js"></script>
+  <script src="/media/js/jquery.scrollTo.js"></script>
+  <script src="/media/js/viewport.js"></script>
+  <script src="/media/js/local.js"></script>
+  <script src="/media/js/pageturning.js"></script>
+  <script src="/media/js/init.js"></script>
+
     
     <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
        change the UA-XXXXX-X to be your site's ID -->
