@@ -1,0 +1,54 @@
+/* Typography ---------------------------------------------------------------- */
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", "MV Boli", Purisa, Casual, cursive; }
+
+.serif { font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif; }
+
+.sans { font-family: sans-serif; }
+
+.mono { font-family: monospace, sans-serif; }
+
+.caps, .allcaps, .title i, #titlepage h2 i { letter-spacing: 0.05em; }
+
+.allcaps, .title i, #titlepage h2 i { text-transform: uppercase; }
+
+.smallcaps { font-variant: small-caps; }
+
+.hidden { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; height: 1px; width: 1px; border: 0; }
+
+/* titlepages ---------------------------------------------------------------- */
+.title, #titlepage h2 { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
+.ie .title, .ie #titlepage h2, #titlepage .ie h2 { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
+@media (min-width: 525px) { .title, #titlepage h2 { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+.ie .title, .ie #titlepage h2, #titlepage .ie h2 { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
+@media (min-width: 980px) { .title, #titlepage h2 { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+.title .wrap, #titlepage h2 .wrap { *zoom: 1; }
+.title .wrap:after, #titlepage h2 .wrap:after { content: ""; display: table; clear: both; }
+.title i, #titlepage h2 i { font-size: 0.64em; line-height: 1.25em; display: block; font-style: normal; }
+.ie .title, .ie #titlepage h2, #titlepage .ie h2 { margin-top: 1.6em; }
+@media (min-height: 350px) { .title, #titlepage h2 { margin-top: 1.6em; } }
+.ie .title, .ie #titlepage h2, #titlepage .ie h2 { margin-top: 3.2em; }
+@media (min-height: 490px) { .title, #titlepage h2 { margin-top: 3.2em; } }
+@media (min-height: 700px) { .title, #titlepage h2 { margin-top: 4.8em; } }
+.ie .title i, .ie #titlepage h2 i, #titlepage .ie h2 i, .ie .title .name, .ie #titlepage h2 .name, #titlepage .ie h2 .name { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
+.ie .title i, .ie #titlepage h2 i, #titlepage .ie h2 i { padding-top: 0.625em; font: inherit; }
+.ie .title .name, .ie #titlepage h2 .name, #titlepage .ie h2 .name { text-transform: uppercase; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
+.ie .title b, .ie #titlepage h2 b, #titlepage .ie h2 b { font-size: 0.64em; line-height: 1.875em; display: block; }
+@media (min-width: 525px) { .title i, #titlepage h2 i, .title .name, #titlepage h2 .name { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
+  .title i, #titlepage h2 i { padding-top: 0.625em; font: inherit; }
+  .title .name, #titlepage h2 .name { text-transform: uppercase; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
+  .title b, #titlepage h2 b { font-size: 0.64em; line-height: 1.875em; display: block; } }
+
+#titlepage .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
+#titlepage .pagewrap:after { content: ""; display: table; clear: both; }
+.ie #titlepage .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+.ie #titlepage .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 525px) { #titlepage .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+  #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
+.ie #titlepage .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+.ie #titlepage .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 980px) { #titlepage .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+  #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
+#titlepage h2 { position: relative; z-index: 10; }
+#titlepage h2:before, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(255, 229, 229, 0.41); z-index: -1; }
+#titlepage h2:before { -webkit-transform: rotate(-0.75deg); -moz-transform: rotate(-0.75deg); -ms-transform: rotate(-0.75deg); -o-transform: rotate(-0.75deg); transform: rotate(-0.75deg); }
+#titlepage h2:after { -webkit-transform: rotate(0.75deg); -moz-transform: rotate(0.75deg); -ms-transform: rotate(0.75deg); -o-transform: rotate(0.75deg); transform: rotate(0.75deg); }
