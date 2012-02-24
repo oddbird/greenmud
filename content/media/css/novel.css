@@ -34,14 +34,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* titlepages ---------------------------------------------------------------- */
 .title { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
+.ie .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
 @media (min-width: 525px) { .title { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+.ie .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
 @media (min-width: 980px) { .title { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 .title .wrap { *zoom: 1; }
 .title .wrap:after { content: ""; display: table; clear: both; }
 .title i { font-size: 0.64em; line-height: 1.25em; display: block; font-style: normal; }
+.ie .title { margin-top: 1.6em; }
 @media (min-height: 350px) { .title { margin-top: 1.6em; } }
+.ie .title { margin-top: 3.2em; }
 @media (min-height: 490px) { .title { margin-top: 3.2em; } }
 @media (min-height: 700px) { .title { margin-top: 4.8em; } }
+.ie .title i, .ie .title .name { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
+.ie .title i { padding-top: 0.625em; font: inherit; }
+.ie .title .name { text-transform: uppercase; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
+.ie .title b { font-size: 0.64em; line-height: 1.875em; display: block; }
 @media (min-width: 525px) { .title i, .title .name { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
   .title i { padding-top: 0.625em; font: inherit; }
   .title .name { text-transform: uppercase; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
@@ -60,6 +68,9 @@ html > body { font-size: 22.4px; }
   html > body { font-size: 28px; } }
 @media (min-width: 980px) { body { font-size: 175%; line-height: 1.25em; }
   html > body { font-size: 28px; } }
+.ie body { font-size: 175%; line-height: 1.25em; }
+.ie html > body { font-size: 28px; }
+
 html { -webkit-font-smoothing: antialiased; }
 
 body { -webkit-animation: fadeIn 300ms linear both; -moz-animation: fadeIn 300ms linear both; -ms-animation: fadeIn 300ms linear both; animation: fadeIn 300ms linear both; position: relative; min-width: 12em; color: #202020; overflow-x: hidden; }
@@ -951,7 +962,7 @@ button:active { -webkit-box-shadow: #397f39 0 0 0.313em inset; -moz-box-shadow: 
 #toggle, .controls { display: block; }
 
 #toggle .target, #toggle .icon { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms; -ms-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; position: fixed; top: 0; right: 0; cursor: pointer; }
-#toggle .target { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/gear.png?1328577505'); background-repeat: no-repeat; background-position: 50% 50%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.41)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); left: 0; height: 1.875em; background-color: rgba(0, 0, 191, 0.512); background-position: center; background-repeat: no-repeat; border-bottom: 1px solid white; z-index: 875; }
+#toggle .target { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.41)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); left: 0; height: 1.875em; background-color: rgba(0, 0, 191, 0.512); background-position: center; background-repeat: no-repeat; border-bottom: 1px solid white; z-index: 875; }
 .showtargets #toggle .target { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
 #toggle .icon { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/gear.png?1328577505'); background-repeat: no-repeat; background-position: 50% 50%; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; display: block; width: 1.25em; height: 1.25em; z-index: 910; }
 
@@ -973,7 +984,9 @@ button:active { -webkit-box-shadow: #397f39 0 0 0.313em inset; -moz-box-shadow: 
 .before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
 .after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms; -ms-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; text-indent: -119988px; overflow: hidden; text-align: left; position: absolute; top: 0; bottom: 0; display: block; width: 2.441em; background-color: rgba(32, 32, 32, 0.25); background-position: center; background-repeat: no-repeat; z-index: 850; }
 .showtargets .after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.ie .after .pagenav a { width: 1.831em; }
 @media (min-width: 525px) { .after .pagenav a { width: 1.831em; } }
+.ie .after .pagenav a { width: 2.441em; }
 @media (min-width: 980px) { .after .pagenav a { width: 2.441em; } }
 .after .pagenav .prev a { background-image: url('../images/ui/angle_left.png?1328580016'), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.41)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: url('../images/ui/angle_left.png?1328580016'), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_left.png?1328580016'), -moz-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_left.png?1328580016'), -o-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_left.png?1328580016'), -ms-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_left.png?1328580016'), linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); left: 0; background-color: rgba(191, 0, 0, 0.64); border-right: 1px solid white; }
 .after .pagenav .next a { background-image: url('../images/ui/angle_right.png?1328579960'), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.41)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: url('../images/ui/angle_right.png?1328579960'), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_right.png?1328579960'), -moz-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_right.png?1328579960'), -o-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_right.png?1328579960'), -ms-linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: url('../images/ui/angle_right.png?1328579960'), linear-gradient(left, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); right: 0; background-color: rgba(0, 191, 0, 0.64); border-left: 1px solid white; }
@@ -992,30 +1005,46 @@ h1, .breadcrumb { display: inline; margin: 0; padding: 0; }
 
 .page { overflow-x: hidden; }
 .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; }
+.ie .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; }
 @media (min-width: 525px) and (min-height: 350px) { .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; } }
+.ie .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; }
 @media (min-width: 980px) { .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; } }
 
 .pagewrap { padding-top: 1.875em; padding-bottom: 1.25em; -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -ms-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
+.ie .pagewrap { padding-top: 2.5em; }
 @media (min-height: 490px) { .pagewrap { padding-top: 2.5em; } }
 @media (min-height: 700px) { .pagewrap { padding-top: 3.75em; } }
 
 .demo { background: #f6f6ed; }
 .demo .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 .demo .pagewrap:after { content: ""; display: table; clear: both; }
+.ie .demo .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+.ie .demo .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 525px) { .demo .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
   .demo .pagewrap:after { content: ""; display: table; clear: both; } }
+.ie .demo .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+.ie .demo .pagewrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 980px) { .demo .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   .demo .pagewrap:after { content: ""; display: table; clear: both; } }
 .demo .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; }
+.ie .demo .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
 @media (min-width: 525px) { .demo .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+.ie .demo .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
 @media (min-width: 980px) { .demo .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+.ie .demo .content { padding-left: 9.231%; padding-right: 9.231%; }
 @media (min-width: 525px) { .demo .content { padding-left: 9.231%; padding-right: 9.231%; } }
+.ie .demo .content { padding-left: 15.584%; padding-right: 15.584%; }
 @media (min-width: 980px) { .demo .content { padding-left: 15.584%; padding-right: 15.584%; } }
 .demo .demo-note { overflow: hidden; *zoom: 1; margin-bottom: 0.625em; color: #bf0000; }
 .demo .demo-title { font-size: 0.64em; line-height: 1.953em; }
 .demo .demo-image { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid rgba(129, 129, 62, 0.64); }
+.ie .demo .demo-note { border-top-style: solid; border-top-width: 0.107em; padding-top: 0.83em; border-style: dashed; border-color: rgba(209, 209, 160, 0.41); }
+.ie .demo .demo-title { display: inline; float: left; width: 49.153%; margin-right: 1.695%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
+.ie .demo .demo-image { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }
 @media (min-width: 525px) { .demo .demo-note { border-top-style: solid; border-top-width: 0.107em; padding-top: 0.83em; border-style: dashed; border-color: rgba(209, 209, 160, 0.41); }
   .demo .demo-title { display: inline; float: left; width: 49.153%; margin-right: 1.695%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
   .demo .demo-image { display: inline; float: left; width: 49.153%; margin-right: 1.695%; } }
+.ie .demo .demo-title { display: inline; float: left; width: 49.296%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
+.ie .demo .demo-image { display: inline; float: left; width: 49.296%; margin-right: 1.408%; }
 @media (min-width: 980px) { .demo .demo-title { display: inline; float: left; width: 49.296%; margin-right: 1.408%; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
   .demo .demo-image { display: inline; float: left; width: 49.296%; margin-right: 1.408%; } }

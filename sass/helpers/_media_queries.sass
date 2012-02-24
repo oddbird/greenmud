@@ -48,9 +48,13 @@ $large-columns: 12
       @content
 
 // small screens -------------------------------------------------------------
-=small($what: "width")
+=small($what: "width",$noie:false)
   @if $what == width or $what == both
     $total-cols: $small-columns
+
+  @if not $noie
+    .ie &
+      @content
 
   @if $what == "width"
     // @media (min-width: $media-query-width-small)
@@ -94,9 +98,13 @@ $large-columns: 12
     $total-cols: $tiny-columns
 
 // medium screens ------------------------------------------------------------
-=medium($what: "width")
+=medium($what: "width",$noie:false)
   @if $what == width or $what == both
     $total-cols: $medium-columns
+
+  @if not $noie
+    .ie &
+      @content
 
   @if $what == "width"
     // @media (min-width: $media-query-width-medium)
@@ -117,9 +125,13 @@ $large-columns: 12
     $total-cols: $tiny-columns
 
 
-=medium-only($what: "width")
+=medium-only($what: "width",$noie:false)
   @if $what == width or $what == both
     $total-cols: $medium-columns
+
+  @if not $noie
+    .ie &
+      @content
 
   @if $what == "width"
     // @media (min-width: $media-query-width-medium) and (max-width: $media-query-width-large - 1px)

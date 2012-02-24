@@ -2,7 +2,8 @@
 
 #contents
   +text-shadow($white 0 0 $xxsmallpx)
-  +background(linear-gradient(top, rgba($green-hint,$small), rgba($green-hint,$small) 50%, rgba($red-hint,$small) 50%))
+  overflow: hidden
+  background: $green-hint
 
   h4
     @extend .allcaps
@@ -23,6 +24,16 @@
   .contents
     +box-sizing('border-box')
     +hpadding(rhythm(1))
+    &:last-child
+      position: relative
+      h4, ol
+        position: relative
+        z-index: 1
+      &::before
+        +stretch(0, -100%, -100%, -100%)
+        content: " "
+        background-color: $red-hint
+        z-index: 0
 
     li
       position: relative
@@ -34,7 +45,6 @@
         content: counter(contents,decimal) "."
 
   +small
-    +background(linear-gradient(left, rgba($green-hint,$small), rgba($green-hint,$small) 48%, rgba($red-hint,$small) 48%))
 
     .pagewrap
       background-position: 45% rhythm(-2)
@@ -43,6 +53,8 @@
       +columns(5,10)
       &:last-child
         +omega(10)
+        &::before
+          +stretch(-100%, -100%, -100%, rhythm(-1))
 
   +medium
     .contents
