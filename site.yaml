@@ -8,7 +8,6 @@ plugins:
     - hyde.ext.plugins.sorter.SorterPlugin
     - hyde.ext.plugins.tagger.TaggerPlugin
     - hyde.ext.plugins.syntext.SyntextPlugin
-    - hyde.ext.plugins.textlinks.TextlinksPlugin
 context:
 meta:
     nodemeta: meta.yaml
