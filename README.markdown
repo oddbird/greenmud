@@ -19,16 +19,16 @@ What does a digital graphic novel look like?
 Hyde
 ----
 
-To see what is there, you can simply look in the "deploy" folder. To run a server or deploy yourself, you will need [Hyde](https://github.com/hyde/hyde).
+To see what is there, you can simply look in the "output" folder. To run a server or deploy yourself, you will need [Hyde](https://github.com/hyde/hyde).
 
 It's not hard. Install that. Install this. Run one or two commands and you have a website. By which I mean a book. A digital web book that is still very much in development.
 
-Generate the deploy files:
+Generate the output files:
 
     hyde gen
 
-Generate a web server:
+Run a local web server:
 
     hyde serve [-a address] [-p port]
 
-`hyde serve` doesn't catch and deploy all changes to all files, especially html includes. If a file doesn't update, you can try re-saving the parent (non-include) file, or stopping the server to run `hyde gen`. I recommend running `hyde gen` before committing changes, to make sure all deploy files are updated.
+`hyde serve` doesn't catch and regenerate all changes to all files, especially html includes. If a file doesn't update, you can try re-saving the parent (non-include) file, or stopping the server to run `hyde gen -r`.
