@@ -1,3 +1,4 @@
 #!/bin/bash
 
+bin/minify.py
 hyde serve -d ../greenmud-pages/ -p 8000 -c prod.yaml

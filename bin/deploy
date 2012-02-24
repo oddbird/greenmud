@@ -1,3 +1,4 @@
 #!/bin/bash
 
+bin/minify.py
 hyde gen -d ../greenmud-pages/ -c prod.yaml
