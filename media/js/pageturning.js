@@ -9,6 +9,8 @@ var GM = (function (GM, $) {
 
     // Based on https://gist.github.com/854622
     GM.pageTurning = function () {
+        var History = window.History;
+
         // Check to see if History.js is enabled for our Browser
         if (!History.enabled) {
             return false;
