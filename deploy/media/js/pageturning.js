@@ -178,12 +178,14 @@ var GM = (function (GM, $) {
                         replacePage();
                         $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
                         pageturn = null;
+                        $(window).resize();
                     });
                 } else {
                     $('.main').fadeOut('300', function () {
                         replacePage();
                         $(pageSelector).replaceWith(thisPage.clone(true));
                         $('.main').fadeIn('300');
+                        $(window).resize();
                     });
                 }
             } else {
