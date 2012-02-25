@@ -49,6 +49,7 @@
 @media (min-width: 980px) { #titlepage .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #titlepage .pagewrap:after { content: ""; display: table; clear: both; } }
 #titlepage h2 { position: relative; z-index: 10; }
-#titlepage h2:before, #titlepage h2:after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: rgba(255, 229, 229, 0.41); z-index: -1; }
-#titlepage h2:before { -webkit-transform: rotate(-0.75deg); -moz-transform: rotate(-0.75deg); -ms-transform: rotate(-0.75deg); -o-transform: rotate(-0.75deg); transform: rotate(-0.75deg); }
-#titlepage h2:after { -webkit-transform: rotate(0.75deg); -moz-transform: rotate(0.75deg); -ms-transform: rotate(0.75deg); -o-transform: rotate(0.75deg); transform: rotate(0.75deg); }
+.ie #titlepage h2 { background: #fff2f2; }
+#titlepage h2::before, #titlepage h2::after { position: absolute; top: 0; bottom: 0; content: " "; left: -300%; right: -300%; background: #fff2f2; background: rgba(255, 229, 229, 0.41); z-index: -1; }
+#titlepage h2::before { -webkit-transform: rotate(-0.75deg); -moz-transform: rotate(-0.75deg); -ms-transform: rotate(-0.75deg); -o-transform: rotate(-0.75deg); transform: rotate(-0.75deg); }
+#titlepage h2::after { -webkit-transform: rotate(0.75deg); -moz-transform: rotate(0.75deg); -ms-transform: rotate(0.75deg); -o-transform: rotate(0.75deg); transform: rotate(0.75deg); }
