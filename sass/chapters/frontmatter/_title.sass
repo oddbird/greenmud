@@ -92,8 +92,7 @@ $title-bg : titlebg 60s .5s infinite both
     .byline
       +stretch-x
       bottom: rhythm(.5)
-      .wrap
-        +container
+      left: rhythm(.5)
 
   +small(width)
     .content
@@ -128,13 +127,13 @@ $title-bg : titlebg 60s .5s infinite both
         +background-size(rhythm(floor(image-height($scribble)/$medpx)) auto)
         background-image: image-url($scribble)
 
-    .into
-      +full
-      +prefix(2)
-    .the
+    .into, .the
       +full
       +prefix(2)
       +float(none)
+      width: auto
+      display: block
+    .the
       margin-left: side-gutter() + gutter()*2
     .green1
       +trailer(floor(image-height($scribble)/$medpx),$green1)

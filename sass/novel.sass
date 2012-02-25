@@ -24,6 +24,7 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
     left: 0
     height: rhythm(1.5)
     background:
+      color: $blue-dark
       color: rgba($blue-dark,$xxsmall)
       position: center
       repeat: no-repeat
@@ -49,6 +50,7 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
     position: fixed
     top: 0
     padding: 0
+    background-color: $base
     background-color: rgba($base,.9)
     color: $lightest
     z-index: 700
@@ -117,14 +119,18 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
 
     .prev
       a
+        +background-image(image-url('ui/angle_left.png'))
         +background-image(image-url('ui/angle_left.png'), $uigradx)
         left: 0
+        background-color: $red-dark
         background-color: rgba($red-dark,$xsmall)
         border-right: 1px solid $white
     .next
       a
+        +background-image(image-url('ui/angle_right.png'))
         +background-image(image-url('ui/angle_right.png'), $uigradx)
         right: 0
+        background-color: $green-dark
         background-color: rgba($green-dark,$xsmall)
         border-left: 1px solid $white
 
@@ -218,13 +224,15 @@ h1, .breadcrumb
 
   .demo-image
     +box-sizing(border-box)
-    border: 1px solid rgba($off-yellow-dark,$xsmall)
+    border: 1px solid $off-yellow-light
+      color: rgba($off-yellow-dark,$xsmall)
 
   +small
     .demo-note
       +leading-border(3px,.75)
       border:
         style: dashed
+        color: $off-yellow-light
         color: rgba($off-yellow-light,$xxxsmall)
     .demo-title
       +columns(5,10)

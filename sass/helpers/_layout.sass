@@ -34,21 +34,24 @@
 /* titlepages ----------------------------------------------------------------
 
 =title($c:$blue-lighter,$o:$xxxsmall)
-  $c  : rgba($c,$o)
+  $co : rgba($c,$o)
 
   position: relative
   z-index: 10
+  .ie &
+    background: mix($c,$white)
 
-  &:before, &:after
+  &::before, &::after
     +stretch-y
     content: " "
     left: -300%
     right: -300%
-    background: $c
+    background: mix($white,$c)
+    background: $co
     z-index: -1
-  &:before
+  &::before
     +rotate(-.75deg)
-  &:after
+  &::after
     +rotate(.75deg)
 
 .title

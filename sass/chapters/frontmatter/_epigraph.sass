@@ -28,9 +28,10 @@ $lightning-anim : lightning 10s linear infinite both
     +adjust-font-size-to($smallpx)
 
   .sky
+    +opacity($small)
     +stretch(rhythm(10),-100%,-100%,-100%)
     +rotate(-20deg)
-    background: rgba($blue-hint,$small)
+    background: $blue-hint
     border: 1px solid $base
 
   blockquote
@@ -38,8 +39,11 @@ $lightning-anim : lightning 10s linear infinite both
     +rhythm-borders(1px,.25,$xsmallpx)
     position: relative
     border-color: $base
+    background: $off-cyan-hint
     background: rgba($off-cyan-hint,.95)
     z-index: 1
+    .no-rgba &
+      +opacity(.95)
 
   p
     &:last-child

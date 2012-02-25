@@ -28,6 +28,7 @@ $rain-anim : rain 45s .2s linear infinite both
 
 #once-upon-a-sunday
   +page-animations($rain-anim)
+  background: $off-orange-darker image-url($rain) center
   background: image-url($rain) top left, $off-orange-darker image-url($rain) center
   overflow: hidden
 
@@ -45,6 +46,7 @@ $rain-anim : rain 45s .2s linear infinite both
 
   i
     +animation(fadeIn 4s 3s both)
+    background: $yellow-lightest
     background: rgba($yellow-lightest,$small)
 
   .pitpot
@@ -55,11 +57,14 @@ $rain-anim : rain 45s .2s linear infinite both
     +box-shadow($base 0 0 rhythm(1))
     position: absolute
     top: 0
+    background: $off-orange
     background: rgba($off-orange,$small)
     margin: 0 rhythm(-100)
     padding: 0 rhythm(50)
     text-align: center
     white-space: nowrap
+    .no-rgba &
+      +opacity(.9)
 
   +small-only
     blockquote
