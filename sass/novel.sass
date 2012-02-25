@@ -136,22 +136,37 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
 
 // breadcrumb ----------------------------------------------------------------
 
-#location
+h1
+  +gone
+
+.breadcrumb
   +stretch(0,rhythm(4,$uifontsize),0,rhythm(.25,$uifontsize))
+  margin: 0
+  padding: 0
   overflow: hidden
   white-space: nowrap
   text-overflow: ellipsis
-
-h1, .breadcrumb
-  display: inline
-  margin: 0
-  padding: 0
 
 .crumb-list
   +inline-list
   .crumb
     &::before
       content: ' » '
+  .contents
+    a
+      #{$link}
+        +opacity(.75)
+        +transition(opacity 300ms)
+        +replace-text('ui/bookmark.png')
+        display: inline-block
+        width: rhythm(1)
+        height: rhythm(2)
+        vertical-align: top
+      #{$focus}
+        +opacity(1)
+  .contents, .novel
+    &::before
+      content: ''
 
 // tocnav --------------------------------------------------------------------
 
