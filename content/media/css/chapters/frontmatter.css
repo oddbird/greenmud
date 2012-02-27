@@ -93,7 +93,7 @@ iframe { vertical-align: top; max-width: 100%; }
 #home .wrap:after, #fourohfour .wrap:after { content: ""; display: table; clear: both; }
 
 #home .info { border-top-style: solid; border-top-width: 0.036em; padding-top: 1.214em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 0.589em; -webkit-box-shadow: rgba(0, 0, 191, 0.41) 0 0 0.625em inset; -moz-box-shadow: rgba(0, 0, 191, 0.41) 0 0 0.625em inset; box-shadow: rgba(0, 0, 191, 0.41) 0 0 0.625em inset; background: #e5e5ff; background: rgba(229, 229, 255, 0.85); border-color: #9999ff; border-color: rgba(32, 32, 32, 0.41); }
-#home .video { margin-bottom: 0.625em; background: black; text-align: center; }
+#home .video { margin-bottom: 0.625em; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; background: black url('../../images/frontmatter/video-placeholder.png?1330357674') no-repeat scroll center; text-align: center; }
 #home .read, #home .fuel { margin-bottom: 0.625em; }
 #home .read em, #home .fuel em { display: block; font-style: normal; white-space: nowrap; }
 #home .reward-head { background: #9999ff; background: rgba(191, 191, 255, 0.41); margin: -0.488em; margin-bottom: 0; padding: 0.244em 0.488em; }
