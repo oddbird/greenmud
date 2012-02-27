@@ -1,3 +1,14 @@
+iframe
+  vertical-align: top
+  max-width: 100%
+  .video &
+    max-height: rhythm(7)
+    +small
+      max-height: rhythm(11)
+    +medium
+      max-height: none
+
+
 // mixins --------------------------------------------------------------------
 
 .check
@@ -77,72 +88,57 @@
   .desc-head
     @extend .allcaps
 
-  .read, .action
+  .video
+    +trailer(.5)
+    background: #000
+    text-align: center
+
+  .read, .fuel
     +trailer(.5)
     em
       display: block
       font-style: normal
       white-space: nowrap
 
-  .newsletter
-    +pie-clearfix
-    +rhythm-borders(1px,.5)
-    +hpadding(rhythm(1.5))
-    clear: both
-    margin: 0 rhythm(-1.5) rhythm(-.5)
+  .reward-head
+    @extend .allcaps
+    background: $blue-lighter
+    background: rgba($blue-lightest,$xxxsmall)
+    margin: rhythm(-.25,$xsmallpx)
+      bottom: 0
+    padding: rhythm(.125,$xsmallpx) rhythm(.25,$xsmallpx)
+
+  .rewards
+    +box-sizing(border-box)
+    +adjust-font-size-to($smallpx)
+    +border-radius
+    +rhythm-borders(1px,.25,$xsmallpx)
+    +trailer(.5,$smallpx)
+    +box-shadow($blue-lighter 0 0 $xxxsmallpx inset)
     background: $blue-lightest
     background: rgba($blue-lightest,$xxxsmall)
-    border-color: $blue-lighter
-    border-color: rgba($blue-lighter,$xxxsmall)
-    .note
-      +adjust-font-size-to($smallpx)
-      +trailer(0)
-    .formfield
-      margin: 0
-      overflow: visible
-    .interest-field
-      +gone
-    .type
-      +gone
-    .value
-      +rhythm-borders(1px,.25,$xsmallpx)
-      +trailer(.25,$smallpx)
-    .submit
-      +box-sizing(border-box)
-      +adjust-font-size-to($xsmallpx,1,$smallpx)
-      +button($pink-hint,false,.125,$xxsmallpx)
-      padding: rhythm(.125,$xxsmallpx) rhythm(.5,$xxsmallpx) 0
-
-    +small(both)
-      .value
-        +rhythm-borders(1px,.25,$xsmallpx)
-      .submit
-        +button($pink-hint,false,.125,$xsmallpx)
-        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
-    +medium
-      .value
-        +rhythm-borders(1px,.25,$smallpx)
-        +columns(8,12)
-      .form-actions
-        +columns(4,12)
-        +omega(12)
-        clear: none
-      .submit
-        +button($pink-hint,false,.125,$xsmallpx)
-        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
-        width: 100%
+    border-color: $blue-light
+    border-color: rgba($blue-light,$xxxsmall)
+    overflow: hidden
+    ul
+      +no-style-list
+    li
+      &::before
+        content: "· "
+    .more
+      +float(right)
 
   +small
     .info
       +hpadding(0)
-    .read, .action
+    .actions, .rewards
       +columns(5,10)
-    .action
+    .actions
       +omega(10)
   +medium
     .description
       +columns(8,12)
-    .read, .action
+    .actions, .rewards
       +columns(4,12)
       +omega(12)
 
@@ -180,12 +176,9 @@
   .about-head
     +gone
 
-  .music
+  .music, .video
     +box-sizing(border-box)
     border: 1px solid $pink-darker
-
-  iframe
-    vertical-align: top
 
   +medium
     .about
@@ -200,55 +193,58 @@
   p
     +trailer(.5)
 
-  // Support -----------------------------------------------------------------
-
-  .support
-    +h-borders(1px,1,$xxsmallpx)
+  // Newsletter --------------------------------------------------------------
+  .newsletter
+    +pie-clearfix
+    +h-borders(1px,.5,$xsmallpx)
     +box-shadow(rgba($green-darker,$xxsmall) 0 0 rhythm(.5) inset)
     background-color: $green-hint
     background-color: rgba($green-hint,$xsmall)
     border-color: $green-lighter
     border-color: rgba($base,$xxxsmall)
-    .wrap
-      +padding-leader(6,$smallpx)
-      background: image-url('frontmatter/devices.png') no-repeat scroll center top
-    h3
-      @extend .allcaps
+    .note
+      +adjust-font-size-to($smallpx)
+      +trailer(0)
+    .formfield
+      margin: 0
+      overflow: visible
+    .interest-field
+      +gone
+    .type
+      +gone
+    .value
+      +rhythm-borders(1px,.25,$xsmallpx)
+      +trailer(.25,$smallpx)
+    .submit
+      +box-sizing(border-box)
+      +adjust-font-size-to($xsmallpx,1,$smallpx)
+      +button($pink-hint,false,.125,$xxsmallpx)
+      padding: rhythm(.125,$xxsmallpx) rhythm(.5,$xxsmallpx) 0
 
-  .reqhead
-    @extend .allcaps
-    font-size: inherit
-    line-height: inherit
-
-  .checklist
-    +no-style-list
-    +adjust-font-size-to($xsmallpx,.75,$smallpx)
-
-  +small
-    .suggest
-      +columns(6,10)
-    .you
-      +columns(4,10)
-      +omega(10)
-
-  +medium
-    .support
+    +small(both)
+      +h-borders(1px,1)
+      .value
+        +rhythm-borders(1px,.25,$xsmallpx)
+      .submit
+        +button($pink-hint,false,.125,$xsmallpx)
+        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
+    +small
       .wrap
-        +padding-leader(0)
-        background-position: columns(6.5,12) rhythm(1)
-    .suggest
-      +columns(4,12)
-    .you
-      +columns(3,12)
-      +omega(12)
-
-  +small(both)
-    .support
-      +adjust-font-size-to($smallpx)
-      +h-borders(1px,1,$smallpx)
-  +medium
-    .support
-      +adjust-font-size-to($smallpx)
+        +pad(1,1,10)
+    +medium
+      .wrap
+        +pad(2,2,12)
+      .value
+        +rhythm-borders(1px,.25,$smallpx)
+        +columns(4,8)
+      .form-actions
+        +columns(4,8)
+        +omega(10)
+        clear: none
+      .submit
+        +button($pink-hint,false,.125,$xsmallpx)
+        padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
+        width: 100%
 
   // Footer ------------------------------------------------------------------
 
