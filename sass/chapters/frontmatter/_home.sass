@@ -8,7 +8,6 @@ iframe
     +medium
       max-height: none
 
-
 // mixins --------------------------------------------------------------------
 
 .check
@@ -238,15 +237,19 @@ iframe
         +pad(2,2,12)
       .value
         +rhythm-borders(1px,.25,$smallpx)
-        +columns(4,8)
-      .form-actions
-        +columns(4,8)
-        +omega(10)
-        clear: none
       .submit
         +button($pink-hint,false,.125,$xsmallpx)
         padding: rhythm(.125,$xsmallpx) rhythm(.5,$xsmallpx) 0
-        width: 100%
+
+  .social-facebook, .social-twitter
+    display: inline-block
+    height: rhythm(1)
+    width: rhythm(1)
+
+  .social-facebook
+    +replace-text('social/facebook_32.png')
+  .social-twitter
+    +replace-text('social/twitter_32.png')
 
   // Footer ------------------------------------------------------------------
 
