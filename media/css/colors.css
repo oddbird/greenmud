@@ -73,7 +73,7 @@ html > body { font-size: 22.4px; }
 
 html { -webkit-font-smoothing: antialiased; }
 
-body { -webkit-animation: fadeIn 300ms linear both; -moz-animation: fadeIn 300ms linear both; -ms-animation: fadeIn 300ms linear both; animation: fadeIn 300ms linear both; position: relative; min-width: 12em; color: #202020; overflow-x: hidden; }
+body { text-shadow: #606060 0 0 0; position: relative; min-width: 12em; color: #202020; overflow-x: hidden; }
 
 /* Selected Text ------------------------------------------------------------- */
 ::-webkit-selection { color: white; background: #7f007f; text-shadow: none; }
