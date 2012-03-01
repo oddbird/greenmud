@@ -1,0 +1,59 @@
+#thanks
+  overflow: hidden
+  background: $off-yellow-hint
+  &::before, &::after
+    +opacity($small)
+    +rotate(-45deg)
+    +transform-origin(50% 50%)
+    position: fixed
+    content: " "
+    width: rhythm(10)
+    height: rhythm(5)
+    z-index: 1
+    background: $off-pink-hint
+  &::before
+    top: rhythm(-2.5)
+    left: rhythm(-5)
+  &::after
+    bottom: rhythm(-2.5)
+    right: rhythm(-5)
+
+  .pagewrap
+    +media-container
+  .content
+    +media-full
+    position: relative
+    z-index: 5
+    +small
+      +pad(1,1)
+    +medium
+      +pad(2,2)
+
+  h2, .more
+    @extend .allcaps
+
+  .thanks-list
+    +delimited-list
+    &
+      +trailer
+      display: block
+    li:last-child
+      &::before
+        content: "and "
+      &::after
+        content: "."
+
+  .more
+    text-align: right
+
+  +medium
+    &::before, &::after
+      width: rhythm(20)
+      height: rhythm(10)
+    &::before
+      top: rhythm(-5)
+      left: rhythm(-10)
+    &::after
+      bottom: rhythm(-5)
+      right: rhythm(-10)
+

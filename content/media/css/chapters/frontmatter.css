@@ -7,9 +7,9 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #thanks h2, #thanks .more, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { letter-spacing: 0.05em; }
 
-.allcaps, .title i, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { text-transform: uppercase; }
+.allcaps, .title i, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #thanks h2, #thanks .more, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -236,6 +236,45 @@ iframe { vertical-align: top; max-width: 100%; }
 .ie #instructions .support { font-size: 0.8em; line-height: 1.562em; }
 @media (min-width: 980px) { #instructions .support { font-size: 0.8em; line-height: 1.562em; } }
 
+#thanks { overflow: hidden; background: #f6f6ed; }
+#thanks::before, #thanks::after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: 50% 50% 50%; -moz-transform-origin: 50% 50% 50%; -ms-transform-origin: 50% 50% 50%; -o-transform-origin: 50% 50% 50%; transform-origin: 50% 50% 50%; position: fixed; content: " "; width: 12.5em; height: 6.25em; z-index: 1; background: #f6edf6; }
+#thanks::before { top: -3.125em; left: -6.25em; }
+#thanks::after { bottom: -3.125em; right: -6.25em; }
+#thanks .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
+#thanks .pagewrap:after { content: ""; display: table; clear: both; }
+.ie #thanks .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+.ie #thanks .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 525px) { #thanks .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
+  #thanks .pagewrap:after { content: ""; display: table; clear: both; } }
+.ie #thanks .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+.ie #thanks .pagewrap:after { content: ""; display: table; clear: both; }
+@media (min-width: 980px) { #thanks .pagewrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
+  #thanks .pagewrap:after { content: ""; display: table; clear: both; } }
+#thanks .content { clear: both; margin-left: 7.317%; margin-right: 7.317%; position: relative; z-index: 5; }
+.ie #thanks .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
+@media (min-width: 525px) { #thanks .content { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+.ie #thanks .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
+@media (min-width: 980px) { #thanks .content { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+.ie #thanks .content { padding-left: 9.231%; padding-right: 9.231%; }
+@media (min-width: 525px) { #thanks .content { padding-left: 9.231%; padding-right: 9.231%; } }
+.ie #thanks .content { padding-left: 15.584%; padding-right: 15.584%; }
+@media (min-width: 980px) { #thanks .content { padding-left: 15.584%; padding-right: 15.584%; } }
+#thanks .thanks-list { list-style-type: none; }
+#thanks .thanks-list, #thanks .thanks-list li { margin: 0px; padding: 0px; display: inline; }
+#thanks .thanks-list li:after { content: ", "; }
+#thanks .thanks-list li:last-child:after { content: ""; }
+#thanks .thanks-list li.last:after { content: ""; }
+#thanks .thanks-list { margin-bottom: 1.25em; display: block; }
+#thanks .thanks-list li:last-child::before { content: "and "; }
+#thanks .thanks-list li:last-child::after { content: "."; }
+#thanks .more { text-align: right; }
+.ie #thanks::before, .ie #thanks::after { width: 25em; height: 12.5em; }
+.ie #thanks::before { top: -6.25em; left: -12.5em; }
+.ie #thanks::after { bottom: -6.25em; right: -12.5em; }
+@media (min-width: 980px) { #thanks::before, #thanks::after { width: 25em; height: 12.5em; }
+  #thanks::before { top: -6.25em; left: -12.5em; }
+  #thanks::after { bottom: -6.25em; right: -12.5em; } }
+
 @-webkit-keyframes line { 0% { background-position: 1500px center; }
   100% { background-position: 0 center; } }
 
@@ -381,7 +420,7 @@ iframe { vertical-align: top; max-width: 100%; }
 .ie #copyright .water1 { -webkit-animation: copyright 41s linear infinite both; -moz-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; top: 7.813em; }
 @media (min-width: 980px) { #copyright .water1 { -webkit-animation: copyright 41s linear infinite both; -moz-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; top: 7.813em; } }
 
-#contents { text-shadow: white 0 0 14.336px; overflow: hidden; background: #e5ffe5; }
+#contents { text-shadow: white 0 0 14.336px; overflow: hidden; background: #edf6ed; }
 #contents h4 { margin-bottom: 0.625em; }
 #contents ol { margin: 0; padding: 0; border: 0; list-style: none; font-size: 0.8em; line-height: 1.562em; margin-bottom: 1.562em; }
 #contents ol li { list-style-image: none; list-style-type: none; margin-left: 0; }
@@ -501,11 +540,6 @@ iframe { vertical-align: top; max-width: 100%; }
 #end .extra { display: none; }
 .ie #end .extra { display: inline; }
 @media (min-width: 525px) { #end .extra { display: inline; } }
-#end .thanks-list { list-style-type: none; }
-#end .thanks-list, #end .thanks-list li { margin: 0px; padding: 0px; display: inline; }
-#end .thanks-list li:after { content: ", "; }
-#end .thanks-list li:last-child:after { content: ""; }
-#end .thanks-list li.last:after { content: ""; }
 
 #about { background: #ffe5ff; }
 #about .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
