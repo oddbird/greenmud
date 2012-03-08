@@ -1,0 +1,27 @@
+$show-grid-backgrounds: true
+$grid-background-column-color: rgba($green-hint,$xxsmall)
+
+#drink-a-lot
+  +baseline-grid-background
+  background-color: $green-lightest
+  .pagewrap
+    +media-container
+    +susy-grid-background
+
+  .content
+    +trailer(-6)
+    background: image-url('dancing/into-the-green/teapot.png') no-repeat scroll
+    height: rhythm(12)
+
+  blockquote
+    color: $green-dark
+    +medium
+      +columns(5)
+      +omega()
+      +leader(2)
+
+  i
+    background: $green-dark
+
+
+$show-grid-backgrounds: false
