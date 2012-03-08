@@ -1,1 +1,37 @@
 // epigraph ------------------------------------------------------------------
+
+#epigraph
+  background: $off-blue-lightest image-url('dancing/belonely.png') no-repeat scroll left 90%
+  .pagewrap
+    +media-container
+  .content
+    +media-full
+    +prefix(1)
+    +adjust-font-size-to($smallpx)
+
+  .tree
+    +stretch(-50%,-50%,-50%,50%)
+    +rotate(3deg)
+    background: rgba($off-orange-lighter,$small)
+    border: 1px solid
+
+  blockquote
+    +border-radius
+    +rhythm-borders(1px,.5,$xsmallpx)
+    background: rgba($off-orange-hint,.95)
+    position: relative
+    z-index: 10
+
+  p
+    &:last-child
+      +trailer(0)
+      font-style: normal
+
+  +small
+    .content
+      +pad(3,1)
+
+  +medium
+    .content
+      +pad(4,1)
+      font: inherit
