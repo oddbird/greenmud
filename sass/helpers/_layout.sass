@@ -31,7 +31,8 @@
 .hidden
   +gone
 
-/* titlepages ----------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// chapter titles
 
 =title($c:$blue-lighter,$o:$xxxsmall)
   $co : rgba($c,$o)
@@ -90,3 +91,30 @@
     b
       +adjust-font-size-to($normpx,1.5,$largepx)
       display: block
+
+// ---------------------------------------------------------------------------
+// book titles
+
+.booktitle
+  +media-full
+  +text-shadow(rgba($white,$xsmall) 0 1px 0)
+  +transition(all 300ms)
+  text-align: center
+  .name, b
+    @extend .allcaps
+    display: block
+  b
+    +adjust-font-size-to($xxlargepx,2)
+
+  .name
+    +padding-leader(.5)
+    +padding-trailer(.5)
+    +small(height)
+      +padding-leader
+      +padding-trailer
+    +medium(height)
+      +leader
+      +trailer
+
+
+

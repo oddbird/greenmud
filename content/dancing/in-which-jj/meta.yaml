@@ -1,4 +1,6 @@
 chapter       : In Which JJ
+description   : 'Chapter 1: In Which JJ.'
+
 chapter_slug  : in-which-jj
 extra_styles  : chapters/in-which-jj.css
 voice         : jj

@@ -1,12 +1,21 @@
 ---
-title         : Epigraph
 description   : 'Epigraph: I Sat Belonely, by John Lennon.'
 chapter_break : after
-prev_url      : index.html
-current_url   : epigraph.html
-next_url      : in-which-jj/
+
 slug          : epigraph
+url           : epigraph.html
+
+prev:
+    slug      : titlepage
+    url       : index.html
+next:
+    slug      :
+    url       : in-which-jj/
 ---
+
+<span class="tree"></span>
+
+{% filter markdown %}
 
 > I sat belonely down a tree,<br />
 humbled fat and small.<br />
@@ -14,3 +23,5 @@ A little lady sing to me<br />
 I couldn't see at all.
 >
 > &mdash; John Lennon, I Sat Belonely
+
+{% endfilter %}

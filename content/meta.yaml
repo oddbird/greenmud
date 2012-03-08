@@ -1,3 +1,5 @@
+description: Into the Green Green Mud
+
 extends: novel/page.j2
 default_block: page
 
