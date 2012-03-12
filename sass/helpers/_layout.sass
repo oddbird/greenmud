@@ -104,7 +104,11 @@
     @extend .allcaps
     display: block
   b
-    +adjust-font-size-to($xxlargepx,2)
+    +adjust-font-size-to($xlargepx,1)
+    +small(both)
+      +adjust-font-size-to($xxlargepx,2)
+    +medium
+      +adjust-font-size-to($xxlargepx,2)
 
   .name
     +padding-leader(.5)

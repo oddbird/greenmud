@@ -2,6 +2,8 @@
 
 #epigraph
   background: $off-blue-lightest image-url('dancing/belonely.png') no-repeat scroll left 90%
+  position: relative
+  overflow: hidden
   .pagewrap
     +media-container
   .content
@@ -21,6 +23,8 @@
     background: rgba($off-orange-hint,.95)
     position: relative
     z-index: 10
+    &:hover
+      +animation(swing .3s)
 
   p
     &:last-child

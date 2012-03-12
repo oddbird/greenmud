@@ -60,7 +60,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .ie .booktitle { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
 @media (min-width: 980px) { .booktitle { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 .booktitle .name, .booktitle b { display: block; }
-.booktitle b { font-size: 3.052em; line-height: 0.819em; }
+.booktitle b { font-size: 1.953em; line-height: 0.64em; }
+.ie .booktitle b { font-size: 3.052em; line-height: 0.819em; }
+@media (min-width: 525px) and (min-height: 350px) { .booktitle b { font-size: 3.052em; line-height: 0.819em; } }
+.ie .booktitle b { font-size: 3.052em; line-height: 0.819em; }
+@media (min-width: 980px) { .booktitle b { font-size: 3.052em; line-height: 0.819em; } }
 .booktitle .name { padding-top: 0.625em; padding-bottom: 0.625em; }
 .ie .booktitle .name { padding-top: 1.25em; padding-bottom: 1.25em; }
 @media (min-height: 350px) { .booktitle .name { padding-top: 1.25em; padding-bottom: 1.25em; } }
