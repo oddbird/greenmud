@@ -980,7 +980,7 @@ button:active { -webkit-box-shadow: #397f39 0 0 0.313em inset; -moz-box-shadow: 
 #toggle .target, #toggle .icon { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms; -ms-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; position: fixed; top: 0; right: 0; cursor: pointer; }
 #toggle .target { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.41)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); background-image: linear-gradient(top, rgba(255, 255, 255, 0.41), rgba(255, 255, 255, 0)); left: 0; height: 1.875em; background-color: #0000bf; background-color: rgba(0, 0, 191, 0.512); background-position: center; background-repeat: no-repeat; border-bottom: 1px solid white; z-index: 875; }
 .showtargets #toggle .target { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
-#toggle .icon { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/gear.png?1328577505'); background-repeat: no-repeat; background-position: 50% 50%; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; display: block; width: 1.25em; height: 1.25em; z-index: 910; }
+#toggle .icon { text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('../images/ui/gear.png?1328577505'); background-repeat: no-repeat; background-position: 50% 50%; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; display: block; width: 1.25em; height: 1.25em; z-index: 910; }
 
 .controls { font-size: 0.512em; line-height: 2.441em; }
 .controls.before { position: absolute; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms; -ms-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; overflow: hidden; *zoom: 1; position: fixed; top: 0; padding: 0; background-color: #202020; background-color: rgba(32, 32, 32, 0.9); color: #dfdfdf; z-index: 700; }
@@ -996,9 +996,9 @@ button:active { -webkit-box-shadow: #397f39 0 0 0.313em inset; -moz-box-shadow: 
 .before .pagenav a:link, .before .pagenav a:visited, .before .pagenav a.active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; }
 .before .pagenav a[href]:focus, .before .pagenav a[href]:hover, .before .pagenav a[href]:active, .before .pagenav a.active:focus, .before .pagenav a.active:hover, .before .pagenav a.active:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; cursor: pointer; }
 .before .pagenav .prev, .before .pagenav .next { display: inline; float: left; }
-.before .pagenav .prev a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
-.before .pagenav .next a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
-.after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms; -ms-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; text-indent: -119988px; overflow: hidden; text-align: left; position: absolute; top: 0; bottom: 0; display: block; width: 2.441em; background-color: rgba(32, 32, 32, 0.25); background-position: center; background-repeat: no-repeat; z-index: 850; }
+.before .pagenav .prev a { text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('../images/ui/arrow_left.png?1319924665'); background-repeat: no-repeat; background-position: 50% 50%; }
+.before .pagenav .next a { text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
+.after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms; -ms-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; text-indent: 110%; white-space: nowrap; overflow: hidden; position: absolute; top: 0; bottom: 0; display: block; width: 2.441em; background-color: rgba(32, 32, 32, 0.25); background-position: center; background-repeat: no-repeat; z-index: 850; }
 .showtargets .after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
 .ie .after .pagenav a { width: 1.831em; }
 @media (min-width: 525px) { .after .pagenav a { width: 1.831em; } }
@@ -1014,13 +1014,13 @@ h1 { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; pa
 .crumb-list { list-style-type: none; }
 .crumb-list, .crumb-list li { margin: 0px; padding: 0px; display: inline; }
 .crumb-list .crumb::before { content: " » "; }
-.crumb-list .contents a:link, .crumb-list .contents a:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; -webkit-transition: opacity 300ms; -moz-transition: opacity 300ms; -ms-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: inline-block; width: 1.25em; height: 2.5em; vertical-align: top; }
+.crumb-list .contents a:link, .crumb-list .contents a:visited { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; -webkit-transition: opacity 300ms; -moz-transition: opacity 300ms; -ms-transition: opacity 300ms; -o-transition: opacity 300ms; transition: opacity 300ms; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: inline-block; width: 1.25em; height: 2.5em; vertical-align: top; }
 .crumb-list .contents a:focus, .crumb-list .contents a:hover, .crumb-list .contents a:active { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 .crumb-list .contents::before, .crumb-list .novel::before { content: ""; }
 
 .tocnav { position: absolute; top: 0; bottom: 0; width: 2.441em; }
 .tocnav h2 { margin: 0; padding: 0; border: 0; font: inherit; }
-.tocnav a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
+.tocnav a { text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('../images/ui/bookmark.png?1319924701'); background-repeat: no-repeat; background-position: 50% 50%; display: block; width: 100%; }
 
 .page { overflow-x: hidden; }
 .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; }
