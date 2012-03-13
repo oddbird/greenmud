@@ -275,14 +275,26 @@ iframe { vertical-align: top; max-width: 100%; }
 @media (min-width: 525px) { #thanks .content { padding-left: 9.231%; padding-right: 9.231%; } }
 .ie #thanks .content { padding-left: 15.584%; padding-right: 15.584%; }
 @media (min-width: 980px) { #thanks .content { padding-left: 15.584%; padding-right: 15.584%; } }
-#thanks .thanks-list { list-style-type: none; }
-#thanks .thanks-list, #thanks .thanks-list li { margin: 0px; padding: 0px; display: inline; }
-#thanks .thanks-list li:after { content: ", "; }
-#thanks .thanks-list li:last-child:after { content: ""; }
-#thanks .thanks-list li.last:after { content: ""; }
-#thanks .thanks-list { margin-bottom: 1.25em; display: block; }
-#thanks .thanks-list li:last-child::before { content: "and "; }
-#thanks .thanks-list li:last-child::after { content: "."; }
+#thanks .colab { list-style-type: none; }
+#thanks .colab, #thanks .colab li { margin: 0px; padding: 0px; display: inline; }
+#thanks .colab li:after { content: ";"; }
+#thanks .colab li:last-child:after { content: ""; }
+#thanks .colab li.last:after { content: ""; }
+#thanks .colab { margin-bottom: 1.25em; display: block; }
+#thanks .colab ul { list-style-type: none; }
+#thanks .colab ul, #thanks .colab ul li { margin: 0px; padding: 0px; display: inline; }
+#thanks .colab ul li:after { content: ","; }
+#thanks .colab ul li:last-child:after { content: ""; }
+#thanks .colab ul li.last:after { content: ""; }
+#thanks .colab ul li:last-child::before { content: "and "; }
+#thanks .contrib { list-style-type: none; }
+#thanks .contrib, #thanks .contrib li { margin: 0px; padding: 0px; display: inline; }
+#thanks .contrib li:after { content: ","; }
+#thanks .contrib li:last-child:after { content: ""; }
+#thanks .contrib li.last:after { content: ""; }
+#thanks .contrib { margin-bottom: 1.25em; display: block; }
+#thanks .thanks-list > li:last-child::after { content: "."; }
+#thanks .thanks-list > li:last-child::before { content: "and "; }
 #thanks .more { text-align: right; }
 .ie #thanks::before, .ie #thanks::after { width: 25em; height: 12.5em; }
 .ie #thanks::before { top: -6.25em; left: -12.5em; }

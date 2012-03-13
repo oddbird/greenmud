@@ -32,16 +32,30 @@
   h2, .more
     @extend .allcaps
 
-  .thanks-list
-    +delimited-list
+  .colab
+    +delimited-list(';')
     &
       +trailer
       display: block
-    li:last-child
-      &::before
-        content: "and "
+    ul
+      +delimited-list(',')
+      li:last-child
+        &::before
+          content: "and "
+
+  .contrib
+    +delimited-list(',')
+    &
+      +trailer
+      display: block
+
+  .thanks-list
+    > li:last-child
       &::after
         content: "."
+      &::before
+        content: "and "
+
 
   .more
     text-align: right
