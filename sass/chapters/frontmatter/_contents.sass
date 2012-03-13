@@ -1,9 +1,10 @@
 // contents ------------------------------------------------------------------
 
 #contents
+  +background-image(linear-gradient(top,$off-green-hint, $off-green-hint 49%, $red-hint 49%, $red-hint))
   +text-shadow($white 0 0 $xxsmallpx)
   overflow: hidden
-  background: $off-green-hint
+  background-color: $off-green-hint
 
   h4
     @extend .allcaps
@@ -29,11 +30,6 @@
       h4, ol
         position: relative
         z-index: 1
-      &::before
-        +stretch(0, -100%, -100%, -100%)
-        content: " "
-        background-color: $red-hint
-        z-index: 0
 
     li
       position: relative
@@ -45,6 +41,7 @@
         content: counter(contents,decimal) "."
 
   +small
+    +background-image(linear-gradient(left,$off-green-hint, $off-green-hint 49%, $red-hint 49%, $red-hint))
 
     .pagewrap
       background-position: 45% rhythm(-2)
@@ -53,8 +50,6 @@
       +columns(5,10)
       &.everafter
         +omega(10)
-        &::before
-          +stretch(-100%, -100%, -100%, rhythm(-1))
 
   +medium
     .contents
