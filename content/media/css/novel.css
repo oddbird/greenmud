@@ -1205,6 +1205,7 @@ button:active { -webkit-box-shadow: #397f39 0 0 0.313em inset; -moz-box-shadow: 
 .before .pagenav .next a { text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('../images/ui/arrow_right.png?1319924680'); background-repeat: no-repeat; background-position: 50% 50%; }
 .after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms; -ms-transition: opacity 400ms; -o-transition: opacity 400ms; transition: opacity 400ms; text-indent: 110%; white-space: nowrap; overflow: hidden; position: absolute; top: 0; bottom: 0; display: block; width: 2.441em; background-color: rgba(32, 32, 32, 0.25); background-position: center; background-repeat: no-repeat; z-index: 850; }
 .showtargets .after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.no-rgba .showtargets .after .pagenav a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=13); opacity: 0.125; }
 .ie .after .pagenav a { width: 1.831em; }
 @media (min-width: 525px) { .after .pagenav a { width: 1.831em; } }
 .ie .after .pagenav a { width: 2.441em; }

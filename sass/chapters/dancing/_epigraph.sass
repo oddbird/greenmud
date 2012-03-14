@@ -14,15 +14,21 @@
   .tree
     +stretch(-50%,-50%,-50%,50%)
     +rotate(3deg)
+    background: $off-orange-lighter
     background: rgba($off-orange-lighter,$small)
     border: 1px solid
+    .no-rgba &
+      +opacity($small)
 
   blockquote
     +border-radius
     +rhythm-borders(1px,.5,$xsmallpx)
+    background: $off-orange-hint
     background: rgba($off-orange-hint,.95)
     position: relative
     z-index: 10
+    .no-rgba &
+      +opacity(.95)
     &:hover
       +animation(swing .3s)
 
