@@ -20,7 +20,8 @@ body
   color: $base
   overflow-x: hidden
 
-/* Selected Text -------------------------------------------------------------
+/* ---------------------------------------------------------------------------
+/* Selected Text
 
 =selected-text($color:$alt)
   color: contrast-color($color)
@@ -36,3 +37,9 @@ body
     +selected-text($color)
 
 +apply-selected-text
+
+/* ---------------------------------------------------------------------------
+/* No Android Animations
+
+.touch.no-webgl *
+  -webkit-animation: none !important

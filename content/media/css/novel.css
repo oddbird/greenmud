@@ -91,12 +91,17 @@ html { -webkit-font-smoothing: antialiased; }
 
 body { text-shadow: #606060 0 0 0; position: relative; min-width: 12em; color: #202020; overflow-x: hidden; }
 
-/* Selected Text ------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* Selected Text */
 ::-webkit-selection { color: white; background: #7f007f; text-shadow: none; }
 
 ::-moz-selection { color: white; background: #7f007f; text-shadow: none; }
 
 ::selection { color: white; background: #7f007f; text-shadow: none; }
+
+/* --------------------------------------------------------------------------- */
+/* No Android Animations */
+.touch.no-webgl * { -webkit-animation: none !important; }
 
 /* Links --------------------------------------------------------------------- */
 a:hover, a:active { outline: none; }
