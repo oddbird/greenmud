@@ -11,18 +11,8 @@ $rain: 'ch01/once-upon-sunday/rain.png'
 +keyframes(pitpotIn)
   0%
     +transform(translateY(100px) rotate(0deg))
-    opacity: 0
   100%
     +transform(translateY(0) rotate(3deg))
-    opacity: 1
-
-+keyframes(pitpotOut)
-  0%
-    +transform(translateY(0) rotate(3deg))
-    opacity: 1
-  100%
-    +transform(translateY(100px) rotate(0deg))
-    opacity: 0
 
 $rain-anim : rain 45s .2s linear infinite both
 
@@ -51,7 +41,7 @@ $rain-anim : rain 45s .2s linear infinite both
 
   .pitpot
     @extend .allcaps
-    +animation(pitpotIn 2s 2s both)
+    +animation(pitpotIn 2s 2s both, fadeIn 2s 2s both)
     +adjust-font-size-to($smallpx)
     +rotate(3deg)
     +box-shadow($base 0 0 rhythm(1))
