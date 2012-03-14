@@ -33,12 +33,14 @@ $uigrady    : linear-gradient(top,rgba($white,$xxxsmall),rgba($white,0))
     .showtargets &
       +opacity(.5)
   .icon
-    +replace-text('ui/gear.png')
     +opacity(1)
     display: block
     width: rhythm(1)
     height: rhythm(1)
+    background: image-url('ui/gear.png') no-repeat scroll center
     z-index: 910
+  .context
+    +gone
 
 .controls
   +adjust-font-size-to($uifontsize)
