@@ -7,15 +7,14 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, #titlepage h2 i { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, #titlepage h2 i, .booktitle .name, .booktitle b { letter-spacing: 0.05em; }
 
-.allcaps, .title i, #titlepage h2 i { text-transform: uppercase; }
+.allcaps, .title i, #titlepage h2 i, .booktitle .name, .booktitle b { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
 .hidden { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; height: 1px; width: 1px; border: 0; }
 
-/* titlepages ---------------------------------------------------------------- */
 .title, #titlepage h2 { clear: both; margin-left: 7.317%; margin-right: 7.317%; font-size: 1.563em; line-height: 0.8em; margin-top: 0em; padding-top: 0.8em; padding-bottom: 0.8em; margin-bottom: 0em; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
 .ie .title, .ie #titlepage h2, #titlepage .ie h2 { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
 @media (min-width: 525px) { .title, #titlepage h2 { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
@@ -37,6 +36,23 @@
   .title i, #titlepage h2 i { padding-top: 0.625em; font: inherit; }
   .title .name, #titlepage h2 .name { text-transform: uppercase; display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
   .title b, #titlepage h2 b { font-size: 0.64em; line-height: 1.875em; display: block; } }
+
+.booktitle { clear: both; margin-left: 7.317%; margin-right: 7.317%; text-shadow: rgba(255, 255, 255, 0.64) 0 1px 0; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; text-align: center; }
+.ie .booktitle { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
+@media (min-width: 525px) { .booktitle { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
+.ie .booktitle { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
+@media (min-width: 980px) { .booktitle { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
+.booktitle .name, .booktitle b { display: block; }
+.booktitle b { font-size: 1.953em; line-height: 0.64em; }
+.ie .booktitle b { font-size: 3.052em; line-height: 0.819em; }
+@media (min-width: 525px) and (min-height: 350px) { .booktitle b { font-size: 3.052em; line-height: 0.819em; } }
+.ie .booktitle b { font-size: 3.052em; line-height: 0.819em; }
+@media (min-width: 980px) { .booktitle b { font-size: 3.052em; line-height: 0.819em; } }
+.booktitle .name { padding-top: 0.625em; padding-bottom: 0.625em; }
+.ie .booktitle .name { padding-top: 1.25em; padding-bottom: 1.25em; }
+@media (min-height: 350px) { .booktitle .name { padding-top: 1.25em; padding-bottom: 1.25em; } }
+.ie .booktitle .name { margin-top: 1.25em; margin-bottom: 1.25em; }
+@media (min-height: 490px) { .booktitle .name { margin-top: 1.25em; margin-bottom: 1.25em; } }
 
 #titlepage .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 #titlepage .pagewrap:after { content: ""; display: table; clear: both; }
