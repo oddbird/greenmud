@@ -101,7 +101,7 @@ body { text-shadow: #606060 0 0 0; position: relative; min-width: 12em; color: #
 
 /* --------------------------------------------------------------------------- */
 /* No Android Animations */
-.touch.no-webgl * { -webkit-animation: none !important; }
+.touch.no-history * { -webkit-animation: none !important; }
 
 /* Links --------------------------------------------------------------------- */
 a:hover, a:active { outline: none; }

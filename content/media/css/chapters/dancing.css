@@ -54,7 +54,7 @@
 .ie .booktitle .name, .ie #titlepage .book-title .name, #titlepage .ie .book-title .name { margin-top: 1.25em; margin-bottom: 1.25em; }
 @media (min-height: 490px) { .booktitle .name, #titlepage .book-title .name { margin-top: 1.25em; margin-bottom: 1.25em; } }
 
-#epigraph { background: #d4d4ea url('../../images/dancing/belonely.png?1331228087') no-repeat scroll left 90%; position: relative; overflow: hidden; }
+#epigraph { background: #d4d4ea url('../../images/dancing/belonely.png?1331750152') no-repeat scroll left 90%; position: relative; overflow: hidden; }
 #epigraph .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 #epigraph .pagewrap:after { content: ""; display: table; clear: both; }
 .ie #epigraph .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
