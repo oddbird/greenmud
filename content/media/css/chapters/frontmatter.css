@@ -7,9 +7,9 @@
 
 .mono { font-family: monospace, sans-serif; }
 
-.caps, .allcaps, .title i, .booktitle .name, .booktitle b, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #thanks h2, #thanks .more, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { letter-spacing: 0.05em; }
+.caps, .allcaps, .title i, .booktitle .name, .booktitle b, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home .rewards .more, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #thanks h2, #thanks .more, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { letter-spacing: 0.05em; }
 
-.allcaps, .title i, .booktitle .name, .booktitle b, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #thanks h2, #thanks .more, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { text-transform: uppercase; }
+.allcaps, .title i, .booktitle .name, .booktitle b, #home .name, #fourohfour .name, #home .desc-head, #home .reward-head, #home .rewards .more, #home a, #instructions h2, #instructions .support h3, #instructions .reqhead, #thanks h2, #thanks .more, #copyright em, #contents h4, #end h2, #end .fund em, #about a, #about em, #fourohfour h2, #fourohfour a { text-transform: uppercase; }
 
 .smallcaps { font-variant: small-caps; }
 
@@ -115,11 +115,13 @@ iframe { vertical-align: top; max-width: 100%; }
 #home .video { margin-bottom: 0.625em; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; background: black url('../../images/frontmatter/video-placeholder.png?1331750152') no-repeat scroll center; text-align: center; }
 #home .read, #home .fuel { margin-bottom: 0.625em; }
 #home .read em, #home .fuel em { display: block; font-style: normal; white-space: nowrap; }
-#home .reward-head { background: #9999ff; background: rgba(191, 191, 255, 0.41); margin: -0.488em; margin-bottom: 0; padding: 0.244em 0.488em; }
+#home .reward-head { background: #9999ff; background: rgba(191, 191, 255, 0.41); margin: -0.488em; margin-bottom: 0.313em; padding: 0.244em 0.488em; }
 #home .rewards { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 0.8em; line-height: 1.562em; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.056em; padding: 0.432em; margin-bottom: 0.781em; -webkit-box-shadow: #9999ff 0 0 11.469px inset; -moz-box-shadow: #9999ff 0 0 11.469px inset; box-shadow: #9999ff 0 0 11.469px inset; background: #bfbfff; background: rgba(191, 191, 255, 0.41); border-color: #7272ff; border-color: rgba(114, 114, 255, 0.41); overflow: hidden; }
-#home .rewards ul { margin: 0; padding: 0; border: 0; list-style: none; }
+#home .rewards ul { margin: 0; padding: 0; border: 0; list-style: none; padding-left: 0.313em; }
 #home .rewards ul li { list-style-image: none; list-style-type: none; margin-left: 0; }
+#home .rewards li { text-indent: -0.313em; }
 #home .rewards li::before { content: "· "; }
+#home .rewards a { text-transform: none; }
 #home .rewards .more { display: inline; float: right; }
 .ie #home .info { padding-left: 0; padding-right: 0; }
 .ie #home .actions, .ie #home .rewards { display: inline; float: left; width: 49.153%; margin-right: 1.695%; }

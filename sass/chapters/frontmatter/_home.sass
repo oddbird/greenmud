@@ -107,7 +107,7 @@ iframe
     background: $blue-lighter
     background: rgba($blue-lightest,$xxxsmall)
     margin: rhythm(-.25,$xsmallpx)
-      bottom: 0
+      bottom: rhythm(.25)
     padding: rhythm(.125,$xsmallpx) rhythm(.25,$xsmallpx)
 
   .rewards
@@ -124,10 +124,15 @@ iframe
     overflow: hidden
     ul
       +no-style-list
+      padding-left: rhythm(.25)
     li
+      text-indent: rhythm(-.25)
       &::before
         content: "· "
+    a
+      text-transform: none
     .more
+      @extend .allcaps
       +float(right)
 
   +small
