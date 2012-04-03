@@ -18,12 +18,11 @@
   +small
     .author
       +pad(1,1,10)
-      +padding-leader(6)
+      +padding-leader(5.5)
       +trailing-border(1px,2)
       +trailer
-      background-image: image-url('frontmatter/home/faces.png')
       border-color: rgba($off-pink-light,$xxsmall)
-      p
+      p:last-child
         margin: 0
     .oddbird, .teacupgorilla
       +pad(1,1,10)
@@ -35,7 +34,6 @@
       +padding-leader(0)
       margin: rhythm(1) columns(1,12) + gutter(12)
       background:
-        image: image-url('frontmatter/home/eric.png')
         position: left top
     .oddbird, .teacupgorilla
       +columns(6,12)
