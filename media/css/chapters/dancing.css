@@ -74,7 +74,7 @@
 .no-rgba #epigraph .tree { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 #epigraph blockquote { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.056em; padding: 0.921em; background: #f6f2ed; background: rgba(246, 242, 237, 0.95); position: relative; z-index: 10; }
 .no-rgba #epigraph blockquote { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95); opacity: 0.95; }
-#epigraph blockquote:hover { -webkit-animation: swing 0.3s; -moz-animation: swing 0.3s; -ms-animation: swing 0.3s; animation: swing 0.3s; }
+#epigraph blockquote:hover { -webkit-animation: swing 0.3s; -moz-animation: swing 0.3s; -ms-animation: swing 0.3s; -o-animation: swing 0.3s; animation: swing 0.3s; }
 #epigraph p:last-child { margin-bottom: 0em; font-style: normal; }
 .ie #epigraph .content { padding-left: 27.692%; padding-right: 9.231%; }
 @media (min-width: 525px) { #epigraph .content { padding-left: 27.692%; padding-right: 9.231%; } }

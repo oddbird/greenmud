@@ -343,9 +343,9 @@ iframe { vertical-align: top; max-width: 100%; }
   50% { background-color: #e5e5ff; }
   100% { background-color: #ffe5ff; } }
 
-#titlepage { -webkit-animation: titlebg 60s 0.5s infinite both; -moz-animation: titlebg 60s 0.5s infinite both; -ms-animation: titlebg 60s 0.5s infinite both; animation: titlebg 60s 0.5s infinite both; background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(255, 229, 255, 0)), color-stop(50%, rgba(255, 229, 255, 0)), color-stop(50%, rgba(153, 255, 153, 0.41)), color-stop(100%, rgba(153, 255, 153, 0.41))); background: -webkit-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: -moz-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: -o-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: -ms-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background-color: #ffe5ff; }
+#titlepage { -webkit-animation: titlebg 60s 0.5s infinite both; -moz-animation: titlebg 60s 0.5s infinite both; -ms-animation: titlebg 60s 0.5s infinite both; -o-animation: titlebg 60s 0.5s infinite both; animation: titlebg 60s 0.5s infinite both; background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(255, 229, 255, 0)), color-stop(50%, rgba(255, 229, 255, 0)), color-stop(50%, rgba(153, 255, 153, 0.41)), color-stop(100%, rgba(153, 255, 153, 0.41))); background: -webkit-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: -moz-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: -o-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: -ms-linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background: linear-gradient(top left, rgba(255, 229, 255, 0), rgba(255, 229, 255, 0) 50%, rgba(153, 255, 153, 0.41) 50%, rgba(153, 255, 153, 0.41)); background-color: #ffe5ff; }
 #titlepage .content { background: url('../../images/frontmatter/titlepage/strings_left.png?1331750152') no-repeat scroll, url('../../images/frontmatter/titlepage/strings_right.png?1331750152') no-repeat scroll; background-position: -260px, 980px; }
-#titlepage .novel-title { -webkit-animation: linetiny 75s 0.5s infinite both; -moz-animation: linetiny 75s 0.5s infinite both; -ms-animation: linetiny 75s 0.5s infinite both; animation: linetiny 75s 0.5s infinite both; padding-bottom: 3.125em; background: url('../../images/frontmatter/titlepage/line.png?1331750152') repeat-x scroll 0 bottom; }
+#titlepage .novel-title { -webkit-animation: linetiny 75s 0.5s infinite both; -moz-animation: linetiny 75s 0.5s infinite both; -ms-animation: linetiny 75s 0.5s infinite both; -o-animation: linetiny 75s 0.5s infinite both; animation: linetiny 75s 0.5s infinite both; padding-bottom: 3.125em; background: url('../../images/frontmatter/titlepage/line.png?1331750152') repeat-x scroll 0 bottom; }
 #titlepage .novel-title .wrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; text-transform: lowercase; }
 #titlepage .novel-title .wrap:after { content: ""; display: table; clear: both; }
 .ie #titlepage .novel-title .wrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
@@ -356,24 +356,24 @@ iframe { vertical-align: top; max-width: 100%; }
 .ie #titlepage .novel-title .wrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 980px) { #titlepage .novel-title .wrap { *zoom: 1; margin: auto; width: 38.5em; max-width: 100%; }
   #titlepage .novel-title .wrap:after { content: ""; display: table; clear: both; } }
-#titlepage .novel-title span { -webkit-animation: fadeIn 4s 1s ease both; -moz-animation: fadeIn 4s 1s ease both; -ms-animation: fadeIn 4s 1s ease both; animation: fadeIn 4s 1s ease both; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; display: block; }
+#titlepage .novel-title span { -webkit-animation: fadeIn 4s 1s ease both; -moz-animation: fadeIn 4s 1s ease both; -ms-animation: fadeIn 4s 1s ease both; -o-animation: fadeIn 4s 1s ease both; animation: fadeIn 4s 1s ease both; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; display: block; }
 #titlepage .into { font-size: 1.25em; line-height: 1em; display: inline; float: left; margin-left: 7.317%; padding-left: 29.268%; margin-right: 0.2em; }
 #titlepage .the { font-size: 1.536em; line-height: 0.814em; display: inline; float: left; }
 #titlepage .green1 { font-size: 1.75em; line-height: 0.714em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-right: 29.268%; text-align: center; }
 #titlepage .green2 { font-size: 1.964em; line-height: 0.636em; margin-top: -0.318em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 43.902%; }
 #titlepage .mud { font-size: 1.25em; line-height: 1em; clear: both; margin-left: 7.317%; margin-right: 7.317%; padding-left: 58.537%; }
-#titlepage .byline { -webkit-animation: fadeIn 3s 2s ease both; -moz-animation: fadeIn 3s 2s ease both; -ms-animation: fadeIn 3s 2s ease both; animation: fadeIn 3s 2s ease both; clear: both; margin-left: 7.317%; margin-right: 7.317%; }
+#titlepage .byline { -webkit-animation: fadeIn 3s 2s ease both; -moz-animation: fadeIn 3s 2s ease both; -ms-animation: fadeIn 3s 2s ease both; -o-animation: fadeIn 3s 2s ease both; animation: fadeIn 3s 2s ease both; clear: both; margin-left: 7.317%; margin-right: 7.317%; }
 .ie #titlepage .byline { clear: both; margin-left: 4.615%; margin-right: 4.615%; }
 @media (min-width: 525px) { #titlepage .byline { clear: both; margin-left: 4.615%; margin-right: 4.615%; } }
 .ie #titlepage .byline { clear: both; margin-left: 3.896%; margin-right: 3.896%; }
 @media (min-width: 980px) { #titlepage .byline { clear: both; margin-left: 3.896%; margin-right: 3.896%; } }
 #titlepage .byline p { margin-bottom: 0em; }
-.ie #titlepage .novel-title { -webkit-animation: line 75s 0.5s infinite both; -moz-animation: line 75s 0.5s infinite both; -ms-animation: line 75s 0.5s infinite both; animation: line 75s 0.5s infinite both; padding-bottom: 0em; background-position: 0 center; }
+.ie #titlepage .novel-title { -webkit-animation: line 75s 0.5s infinite both; -moz-animation: line 75s 0.5s infinite both; -ms-animation: line 75s 0.5s infinite both; -o-animation: line 75s 0.5s infinite both; animation: line 75s 0.5s infinite both; padding-bottom: 0em; background-position: 0 center; }
 .ie #titlepage .novel-title .wrap { -webkit-background-size: 5em auto; -moz-background-size: 5em auto; -o-background-size: 5em auto; background-size: 5em auto; background: url('../../images/frontmatter/titlepage/scribble_sm.png?1331750152') no-repeat scroll center; }
 .ie #titlepage .green1 { margin-bottom: 2.857em; }
 .ie #titlepage .green2 { margin-top: 0em; }
 .ie #titlepage .byline { position: absolute; left: 0; right: 0; bottom: 0.625em; left: 0.625em; }
-@media (min-height: 350px) { #titlepage .novel-title { -webkit-animation: line 75s 0.5s infinite both; -moz-animation: line 75s 0.5s infinite both; -ms-animation: line 75s 0.5s infinite both; animation: line 75s 0.5s infinite both; padding-bottom: 0em; background-position: 0 center; }
+@media (min-height: 350px) { #titlepage .novel-title { -webkit-animation: line 75s 0.5s infinite both; -moz-animation: line 75s 0.5s infinite both; -ms-animation: line 75s 0.5s infinite both; -o-animation: line 75s 0.5s infinite both; animation: line 75s 0.5s infinite both; padding-bottom: 0em; background-position: 0 center; }
   #titlepage .novel-title .wrap { -webkit-background-size: 5em auto; -moz-background-size: 5em auto; -o-background-size: 5em auto; background-size: 5em auto; background: url('../../images/frontmatter/titlepage/scribble_sm.png?1331750152') no-repeat scroll center; }
   #titlepage .green1 { margin-bottom: 2.857em; }
   #titlepage .green2 { margin-top: 0em; }
@@ -463,8 +463,8 @@ iframe { vertical-align: top; max-width: 100%; }
 #copyright p ~ p { font-size: 0.8em; line-height: 1.562em; margin-bottom: 0.781em; }
 #copyright em { font-style: normal; }
 #copyright .water1 { -webkit-transform: rotate(2deg); -moz-transform: rotate(2deg); -ms-transform: rotate(2deg); -o-transform: rotate(2deg); transform: rotate(2deg); position: absolute; top: 9.375em; left: -12.5em; bottom: -12.5em; right: -12.5em; background: rgba(212, 212, 234, 0.8); z-index: 0; }
-.ie #copyright .water1 { -webkit-animation: copyright 41s linear infinite both; -moz-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; top: 7.813em; }
-@media (min-width: 980px) { #copyright .water1 { -webkit-animation: copyright 41s linear infinite both; -moz-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; top: 7.813em; } }
+.ie #copyright .water1 { -webkit-animation: copyright 41s linear infinite both; -moz-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; -o-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; top: 7.813em; }
+@media (min-width: 980px) { #copyright .water1 { -webkit-animation: copyright 41s linear infinite both; -moz-animation: copyright 41s linear infinite both; -ms-animation: copyright 41s linear infinite both; -o-animation: copyright 41s linear infinite both; animation: copyright 41s linear infinite both; top: 7.813em; } }
 
 #contents { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #edf6ed), color-stop(49%, #edf6ed), color-stop(49%, #ffe5e5), color-stop(100%, #ffe5e5)); background-image: -webkit-linear-gradient(top, #edf6ed, #edf6ed 49%, #ffe5e5 49%, #ffe5e5); background-image: -moz-linear-gradient(top, #edf6ed, #edf6ed 49%, #ffe5e5 49%, #ffe5e5); background-image: -o-linear-gradient(top, #edf6ed, #edf6ed 49%, #ffe5e5 49%, #ffe5e5); background-image: -ms-linear-gradient(top, #edf6ed, #edf6ed 49%, #ffe5e5 49%, #ffe5e5); background-image: linear-gradient(top, #edf6ed, #edf6ed 49%, #ffe5e5 49%, #ffe5e5); text-shadow: white 0 0 14.336px; overflow: hidden; background-color: #edf6ed; }
 #contents h4 { margin-bottom: 0.625em; }
@@ -528,7 +528,7 @@ iframe { vertical-align: top; max-width: 100%; }
   52%, 56% { background-position: center -3.75em; }
   54% { background-position: right -6.25em; } }
 
-#epigraph { -webkit-animation: lightning 10s linear infinite both; -moz-animation: lightning 10s linear infinite both; -ms-animation: lightning 10s linear infinite both; animation: lightning 10s linear infinite both; background: #404040 url('../../images/frontmatter/lightning.png?1331750152') no-repeat scroll center -1.25em; position: relative; overflow: hidden; }
+#epigraph { -webkit-animation: lightning 10s linear infinite both; -moz-animation: lightning 10s linear infinite both; -ms-animation: lightning 10s linear infinite both; -o-animation: lightning 10s linear infinite both; animation: lightning 10s linear infinite both; background: #404040 url('../../images/frontmatter/lightning.png?1331750152') no-repeat scroll center -1.25em; position: relative; overflow: hidden; }
 #epigraph .pagewrap { *zoom: 1; margin: auto; width: 20.5em; max-width: 100%; }
 #epigraph .pagewrap:after { content: ""; display: table; clear: both; }
 .ie #epigraph .pagewrap { *zoom: 1; margin: auto; width: 32.5em; max-width: 100%; }
@@ -611,16 +611,16 @@ iframe { vertical-align: top; max-width: 100%; }
 #about .oddbird, #about .teacupgorilla { padding-top: 4.375em; }
 #about .oddbird { background: url('../../images/frontmatter/logo_oddbird.png?1331750152') no-repeat scroll top; }
 #about .teacupgorilla { background: url('../../images/frontmatter/logo_teacup.png?1331750152') no-repeat scroll top; }
-.ie #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 7.5em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 2.464em; margin-bottom: 1.25em; background-image: url('../../images/frontmatter/home/faces.png?1331750152'); border-color: rgba(209, 160, 209, 0.512); }
-.ie #about .author p { margin: 0; }
+.ie #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 6.875em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 2.464em; margin-bottom: 1.25em; border-color: rgba(209, 160, 209, 0.512); }
+.ie #about .author p:last-child { margin: 0; }
 .ie #about .oddbird, .ie #about .teacupgorilla { padding-left: 10.169%; padding-right: 10.169%; font-size: 0.8em; line-height: 1.562em; }
-@media (min-width: 525px) { #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 7.5em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 2.464em; margin-bottom: 1.25em; background-image: url('../../images/frontmatter/home/faces.png?1331750152'); border-color: rgba(209, 160, 209, 0.512); }
-  #about .author p { margin: 0; }
+@media (min-width: 525px) { #about .author { padding-left: 10.169%; padding-right: 10.169%; padding-top: 6.875em; border-bottom-style: solid; border-bottom-width: 0.036em; padding-bottom: 2.464em; margin-bottom: 1.25em; border-color: rgba(209, 160, 209, 0.512); }
+  #about .author p:last-child { margin: 0; }
   #about .oddbird, #about .teacupgorilla { padding-left: 10.169%; padding-right: 10.169%; font-size: 0.8em; line-height: 1.562em; } }
-.ie #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 1.25em 8.451%; background-image: url('../../images/frontmatter/home/eric.png?1331750152'); background-position: left top; }
+.ie #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 1.25em 8.451%; background-position: left top; }
 .ie #about .oddbird, .ie #about .teacupgorilla { display: inline; float: left; width: 49.296%; margin-right: 1.408%; padding-left: 0%; padding-right: 0%; }
 .ie #about .teacupgorilla { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; }
-@media (min-width: 980px) { #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 1.25em 8.451%; background-image: url('../../images/frontmatter/home/eric.png?1331750152'); background-position: left top; }
+@media (min-width: 980px) { #about .author { padding-left: 16.901%; padding-right: 8.451%; padding-top: 0em; margin: 1.25em 8.451%; background-position: left top; }
   #about .oddbird, #about .teacupgorilla { display: inline; float: left; width: 49.296%; margin-right: 1.408%; padding-left: 0%; padding-right: 0%; }
   #about .teacupgorilla { display: inline; float: right; margin-right: 0; #margin-left: -0.5em; } }
 #about a, #about em { font-style: normal; }
