@@ -95,14 +95,14 @@ iframe
     background: #000 image-url('frontmatter/video-placeholder.png') no-repeat scroll center
     text-align: center
 
-  .read, .fuel
+  .read
     +trailer(.5)
     em
       display: block
       font-style: normal
       white-space: nowrap
 
-  .reward-head
+  .update-head
     @extend .allcaps
     background: $blue-lighter
     background: rgba($blue-lightest,$xxxsmall)
@@ -110,7 +110,7 @@ iframe
       bottom: rhythm(.25)
     padding: rhythm(.125,$xsmallpx) rhythm(.25,$xsmallpx)
 
-  .rewards
+  .update
     +box-sizing(border-box)
     +adjust-font-size-to($smallpx)
     +border-radius
@@ -131,21 +131,14 @@ iframe
         content: "· "
     a
       text-transform: none
-    .more
-      @extend .allcaps
-      +float(right)
 
   +small
     .info
       +hpadding(0)
-    .actions, .rewards
-      +columns(5,10)
-    .actions
-      +omega(10)
   +medium
     .description
       +columns(8,12)
-    .actions, .rewards
+    .read, .update
       +columns(4,12)
       +omega(12)
 
