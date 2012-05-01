@@ -1,7 +1,3 @@
-/*jslint    browser:    true,
-            indent:     4 */
-/*global    jQuery */
-
 var GM = (function (GM, $) {
 
     'use strict';
