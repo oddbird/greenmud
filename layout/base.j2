@@ -59,8 +59,8 @@
 
   <!-- Modernizr -->
   {% block headjs -%}
-  <script src="{{ media_url('js/modernizr.js') }}"></script>
-  <script src="{{ media_url('js/modernizr.selectors.js') }}"></script>
+  <script src="{{ media_url('js/src/plugins/modernizr.js') }}"></script>
+  <script src="{{ media_url('js/src/plugins/modernizr.selectors.js') }}"></script>
   {% endblock headjs %}
 
   <!-- Page-Specific Head -->
@@ -90,17 +90,17 @@
 {% block js %}
 
   {% if site.config.mode == "production" %}
-    <script src="{{ media_url('js/minified.js') }}"></script>
+    <script src="{{ media_url('js/dist/minified.js') }}"></script>
   {% else %}
-    <script src="{{ media_url('js/jquery-1.7.1.js') }}"></script>
-    <script src="{{ media_url('js/jquery.history.js') }}"></script>
-    <script src="{{ media_url('js/jquery.ba-dotimeout.js') }}"></script>
-    <script src="{{ media_url('js/jquery.placeholder.js') }}"></script>
-    <script src="{{ media_url('js/jquery.scrollTo.js') }}"></script>
-    <script src="{{ media_url('js/viewport.js') }}"></script>
-    <script src="{{ media_url('js/local.js') }}"></script>
-    <script src="{{ media_url('js/pageturning.js') }}"></script>
-    <script src="{{ media_url('js/init.js') }}"></script>
+    <script src="{{ media_url('js/src/libs/jquery-1.7.1.js') }}"></script>
+    <script src="{{ media_url('js/src/plugins/jquery.history.js') }}"></script>
+    <script src="{{ media_url('js/src/plugins/jquery.ba-dotimeout.js') }}"></script>
+    <script src="{{ media_url('js/src/plugins/jquery.placeholder.js') }}"></script>
+    <script src="{{ media_url('js/src/plugins/jquery.scrollTo.js') }}"></script>
+    <script src="{{ media_url('js/src/plugins/viewport.js') }}"></script>
+    <script src="{{ media_url('js/src/local.js') }}"></script>
+    <script src="{{ media_url('js/src/pageturning.js') }}"></script>
+    <script src="{{ media_url('js/src/init.js') }}"></script>
     <script src="http://10.0.1.8:8080/target/target-script-min.js#anonymous"></script>
   {% endif %}
 

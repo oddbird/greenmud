@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
 Minify and concatenate all Javascript files referenced from ``layout/base.j2``
-into ``content/media/js/minified.js``.
+into ``content/media/js/dist/minified.js``.
 
-Warns about any .js files found in ``content/media/js`` that aren't included in
+Warns about any .js files found in ``content/media/js/src`` that aren't included in
 the minification.
 
 """
@@ -15,6 +15,8 @@ BASE = os.path.dirname(BIN)
 MEDIA = os.path.join(BASE, "content", "media")
 LAYOUT = os.path.join(BASE, "layout")
 JS = os.path.join(MEDIA, "js")
+SRC = os.path.join(JS, "src")
+DIST = os.path.join(JS, "dist")
 
 
 COMPILER_JAR = os.path.join(BIN, "compiler.jar")
@@ -30,8 +32,8 @@ def main():
     found_files = find_js_files(os.path.join(LAYOUT, "base.j2"))
 
     expected_files = [
-        os.path.join(JS, fn)
-        for fn in os.listdir(os.path.join(MEDIA, "js"))
+        os.path.join(SRC, fn)
+        for fn in os.listdir(os.path.join(MEDIA, "js", "src"))
         if fn.endswith(".js")
         ]
 
@@ -44,7 +46,7 @@ def main():
 
     minify(
         found_files,
-        os.path.join(JS, "minified.js"),
+        os.path.join(DIST, "minified.js"),
         )
 
 
