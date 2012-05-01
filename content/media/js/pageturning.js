@@ -1,25 +1,20 @@
-/*jslint    browser:    true,
-            indent:     4,
-            regexp:     true */
-/*global    jQuery, History */
-
 var GM = (function (GM, $) {
 
     'use strict';
 
     // Based on https://gist.github.com/854622
     GM.pageTurning = function () {
-        var History = window.History;
+        var History = window.History,
 
         // Prepare Variables
-        var pageSelector = '.page',
+            pageSelector = '.page',
             thisPage = $(pageSelector),
             pageControls = $('.controls'),
             stateChange = false,
             pageturn,
             // HTML Helper
             documentHtml = function (html) {
-	            // Prepare
+                // Prepare
                 var result = String(html)
                     .replace(/<\!DOCTYPE[^>]*>/i, '')
                     .replace(/<(html|head|body|title|meta|script)([\s\>])/gi, '<div class="document-$1"$2')
