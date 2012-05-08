@@ -54,6 +54,7 @@
   <link rel="apple-touch-icon-precomposed" href="{{ media_url('images/favicons/apple-touch-icon-precomposed.png') }}">
 
   <!-- Styles -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
   {% block styles -%}
   {% endblock styles %}
 
@@ -68,6 +69,7 @@
 
 </head>
 <body id="greengreenmud-com" {% if resource.meta.body_class %}class="{{ resource.meta.body_class }}"{% endif %}>
+<div data-role="page">
 {% block body %}
 
   <header role="banner">
@@ -75,7 +77,7 @@
     <h2 class="byline">by <a href="http://eric.andmeyer.com/">Eric A. Meyer</a></h2>
   </header>
 
-  <div id="main" role="main">
+  <div class="main" role="main">
     {% block main %}
 
     {% endblock main %}
@@ -86,22 +88,23 @@
   </footer>
 
 {% endblock body%}
-
+</div>
 {% block js %}
 
   {% if site.config.mode == "production" %}
     <script src="{{ media_url('js/dist/minified.js') }}"></script>
   {% else %}
     <script src="{{ media_url('js/src/libs/jquery-1.7.2.js') }}"></script>
-    <script src="{{ media_url('js/src/plugins/jquery.history.js') }}"></script>
+    <script src="{{ media_url('js/src/libs/jquery.mobile-1.1.0.js') }}"></script>
+    <!-- <script src="{{ media_url('js/src/plugins/jquery.history.js') }}"></script> -->
     <script src="{{ media_url('js/src/plugins/jquery.ba-dotimeout.js') }}"></script>
     <script src="{{ media_url('js/src/plugins/jquery.placeholder.js') }}"></script>
     <script src="{{ media_url('js/src/plugins/jquery.scrollTo.js') }}"></script>
     <script src="{{ media_url('js/src/plugins/viewport.js') }}"></script>
     <script src="{{ media_url('js/src/local.js') }}"></script>
-    <script src="{{ media_url('js/src/pageturning.js') }}"></script>
+    <!-- <script src="{{ media_url('js/src/pageturning.js') }}"></script> -->
     <script src="{{ media_url('js/src/init.js') }}"></script>
-    <script src="http://10.0.1.8:8080/target/target-script-min.js#anonymous"></script>
+    <!-- <script src="http://10.0.1.8:8080/target/target-script-min.js#anonymous"></script> -->
   {% endif %}
 
   {% block scripts %}

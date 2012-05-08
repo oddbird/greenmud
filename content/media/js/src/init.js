@@ -4,14 +4,12 @@ var GM = (function (GM, $) {
 
     $(function () {
         // plugins
-        $('input[placeholder], textarea[placeholder]').placeholder();
+        // $('input[placeholder], textarea[placeholder]').placeholder();
 
         // local.js
-        GM.toggleControls('#toggle', '.controls');
+        GM.toggleControls('#toggle', '.controls', 'div[data-role="page"]');
         GM.bodyHeight('.page', 'min-height');
-
-        // pageturning.js
-        GM.pageTurning();
+        // GM.pageTurning();
     });
 
     return GM;
