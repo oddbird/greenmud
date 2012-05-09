@@ -4,3 +4,4 @@ output/
 .sass-cache/
 .livereload
 .hyde_deps
+*.sublime-*
