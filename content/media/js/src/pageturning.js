@@ -97,11 +97,15 @@ var GM = (function (GM, $) {
 
         // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
         $(document).on('swipeone', function (e, gesture) {
-            if (gesture && gesture.direction && gesture.direction.lastX) {
-                if (gesture.direction.lastX === -1) {
-                    pageControls.first().find('.pagenav .next a').click();
-                } else if (gesture.direction.lastX === 1) {
-                    pageControls.first().find('.pagenav .prev a').click();
+            if (gesture && gesture.delta && gesture.delta[0].lastX && gesture.delta[0].lastY) {
+                var deltaX = gesture.delta[0].lastX;
+                var deltaY = gesture.delta[0].lastY;
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                    if (deltaX > 0) {
+                        pageControls.first().find('.pagenav .prev a').click();
+                    } else {
+                        pageControls.first().find('.pagenav .next a').click();
+                    }
                 }
             }
         });
