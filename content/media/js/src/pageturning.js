@@ -95,6 +95,17 @@ var GM = (function (GM, $) {
             }
         });
 
+        // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
+        $(document).on('swipeone', function (e, gesture) {
+            if (gesture && gesture.direction && gesture.direction.lastX) {
+                if (gesture.direction.lastX === -1) {
+                    pageControls.first().find('.pagenav .next a').click();
+                } else if (gesture.direction.lastX === 1) {
+                    pageControls.first().find('.pagenav .prev a').click();
+                }
+            }
+        });
+
         if (History.enabled) {
             // Hook into State Changes
             $(window).on('statechange', function () {
