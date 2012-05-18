@@ -207,6 +207,14 @@ h1
       +medium
         +adjust-font-size-to($smallpx)
 
+body
+  +transition(all 200ms ease-in-out)
+  &.swiping
+    +translateX(-2em)
+    *
+      +animation-play-state(paused !important)
+  
+
 // pagewrap ------------------------------------------------------------------
 
 .pagewrap
