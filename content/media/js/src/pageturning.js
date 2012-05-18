@@ -102,28 +102,24 @@ var GM = (function (GM, $) {
                     pageControls.first().find('.pagenav .next a').click();
                 } else if (direction === 'right') {
                     pageControls.first().find('.pagenav .prev a').click();
+                } else {
+                    $('body').removeClass('swiping-next swiping-prev');
                 }
             },
-            timeThreshold: 500,
+            timeThreshold: 10000,
             allowPageScroll: 'vertical'
         });
         // While swiping, addClass 'swiping' to 'body'
         $(document).swipe({
             swipe: function (event, direction, distance) {
-                if (direction === 'left' || direction === 'right') {
-                    $('body').addClass('swiping');
+                if (direction === 'left') {
+                    $('body').addClass('swiping-next');
+                } else if (direction === 'right') {
+                    $('body').addClass('swiping-prev');
                 }
             },
-            timeThreshold: 500,
-            triggerOnTouchEnd: false,
-            allowPageScroll: 'vertical'
-        });
-        // Remove class 'swiping' from 'body' when finger is lifted
-        $(document).swipe({
-            swipe: function (event, direction, distance) {
-                $('body').removeClass('swiping');
-            },
             timeThreshold: 10000,
+            triggerOnTouchEnd: false,
             allowPageScroll: 'vertical'
         });
 
