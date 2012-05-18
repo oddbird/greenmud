@@ -95,6 +95,38 @@ var GM = (function (GM, $) {
             }
         });
 
+        // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
+        $(document).swipe({
+            swipe: function (event, direction, distance) {
+                if (direction === 'left') {
+                    pageControls.first().find('.pagenav .next a').click();
+                } else if (direction === 'right') {
+                    pageControls.first().find('.pagenav .prev a').click();
+                }
+            },
+            timeThreshold: 500,
+            allowPageScroll: 'vertical'
+        });
+        // While swiping, addClass 'swiping' to 'body'
+        $(document).swipe({
+            swipe: function (event, direction, distance) {
+                if (direction === 'left' || direction === 'right') {
+                    $('body').addClass('swiping');
+                }
+            },
+            timeThreshold: 500,
+            triggerOnTouchEnd: false,
+            allowPageScroll: 'vertical'
+        });
+        // Remove class 'swiping' from 'body' when finger is lifted
+        $(document).swipe({
+            swipe: function (event, direction, distance) {
+                $('body').removeClass('swiping');
+            },
+            timeThreshold: 10000,
+            allowPageScroll: 'vertical'
+        });
+
         if (History.enabled) {
             // Hook into State Changes
             $(window).on('statechange', function () {
