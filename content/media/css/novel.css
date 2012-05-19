@@ -1346,8 +1346,9 @@ h1 { position: absolute; clip: rect(0 0 0 0); overflow: hidden; margin: -1px; pa
 @media (min-width: 980px) { .no-fontface .page .content { font-size: 0.8em; line-height: 1.562em; } }
 
 body { -webkit-transition: all 200ms ease-in-out; -moz-transition: all 200ms ease-in-out; -ms-transition: all 200ms ease-in-out; -o-transition: all 200ms ease-in-out; transition: all 200ms ease-in-out; }
-body.swiping { -webkit-transform: translateX(-2em); -moz-transform: translateX(-2em); -ms-transform: translateX(-2em); -o-transform: translateX(-2em); transform: translateX(-2em); }
-body.swiping * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
+body.swiping-next *, body.swiping-prev * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
+body.swiping-next { -webkit-transform: translateX(-2em); -moz-transform: translateX(-2em); -ms-transform: translateX(-2em); -o-transform: translateX(-2em); transform: translateX(-2em); }
+body.swiping-prev { -webkit-transform: translateX(2em); -moz-transform: translateX(2em); -ms-transform: translateX(2em); -o-transform: translateX(2em); transform: translateX(2em); }
 
 .pagewrap { padding-top: 1.875em; padding-bottom: 1.25em; -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -ms-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
 .ie .pagewrap { padding-top: 2.5em; }

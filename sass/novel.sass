@@ -209,11 +209,13 @@ h1
 
 body
   +transition(all 200ms ease-in-out)
-  &.swiping
-    +translateX(-2em)
+  &.swiping-next, &.swiping-prev
     *
       +animation-play-state(paused !important)
-  
+  &.swiping-next
+    +translateX(-2em)
+  &.swiping-prev
+    +translateX(2em)
 
 // pagewrap ------------------------------------------------------------------
 
