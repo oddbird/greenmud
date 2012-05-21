@@ -95,6 +95,35 @@ var GM = (function (GM, $) {
             }
         });
 
+        // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
+        $(document).swipe({
+            swipeStatus: function (event, phase, direction, distance) {
+                if (phase === 'end') {
+                    if (direction === 'left') {
+                        pageControls.first().find('.pagenav .next a').click();
+                    } else if (direction === 'right') {
+                        pageControls.first().find('.pagenav .prev a').click();
+                    } else {
+                        $('body').removeClass('swiping-next swiping-prev');
+                    }
+                } else if (phase === 'cancel') {
+                    $('body').removeClass('swiping-next swiping-prev');
+                } else if (phase === 'move') {
+                    if (distance >= 75) {
+                        if (direction === 'left') {
+                            $('body').removeClass('swiping-prev').addClass('swiping-next');
+                        } else if (direction === 'right') {
+                            $('body').removeClass('swiping-next').addClass('swiping-prev');
+                        } else {
+                            $('body').removeClass('swiping-next swiping-prev');
+                        }
+                    }
+                }
+            },
+            timeThreshold: 10000,
+            allowPageScroll: 'vertical'
+        });
+
         if (History.enabled) {
             // Hook into State Changes
             $(window).on('statechange', function () {

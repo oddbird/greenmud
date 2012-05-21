@@ -92,6 +92,15 @@ $control-padding: rhythm(1,$control-fontsize);
 /* ----------------------------------------------------------------------------
   page */
 
+body {
+  @include transition(all 200ms ease-in-out);
+  &.swiping-next, &.swiping-prev {
+    * { @include animation-play-state(paused !important); }
+  }
+  &.swiping-next { @include translateX(-1em); }
+  &.swiping-prev { @include translateX(1em); }
+}
+
 .page {
   @include container(4,8);
   @include susy-grid-background;

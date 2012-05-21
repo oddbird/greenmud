@@ -84,6 +84,11 @@ a:hover, a:focus, a:active { color: magenta; }
 [rel="next"]::before { content: "\f061"; }
 
 /* ---------------------------------------------------------------------------- page */
+body { -webkit-transition: all 200ms ease-in-out; -moz-transition: all 200ms ease-in-out; -ms-transition: all 200ms ease-in-out; -o-transition: all 200ms ease-in-out; transition: all 200ms ease-in-out; }
+body.swiping-next *, body.swiping-prev * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
+body.swiping-next { -webkit-transform: translateX(-1em); -moz-transform: translateX(-1em); -ms-transform: translateX(-1em); -o-transform: translateX(-1em); transform: translateX(-1em); }
+body.swiping-prev { -webkit-transform: translateX(1em); -moz-transform: translateX(1em); -ms-transform: translateX(1em); -o-transform: translateX(1em); transform: translateX(1em); }
+
 .page { max-width: 13.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; }
 .page:after { content: ""; display: table; clear: both; }
 @media (min-width: 42.75em) { .page { max-width: 27.5em; } }
