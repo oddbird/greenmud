@@ -10,7 +10,7 @@
  *
  * Changelog
  * $Date: 2010-12-12 (Wed, 12 Dec 2010) $
- * $version: 1.0.0
+ * $version: 1.0.0 
  * $version: 1.0.1 - removed multibyte comments
  *
  * $Date: 2011-21-02 (Mon, 21 Feb 2011) $
@@ -21,7 +21,7 @@
  *					- If you use the http://code.google.com/p/jquery-ui-for-ipad-and-iphone/ plugin, you can also assign jQuery mouse events to children of a touchSwipe object.
  * $version: 1.2.1 	- removed console log!
  *
- * $version: 1.2.2 	- Fixed bug where scope was not preserved in callback methods.
+ * $version: 1.2.2 	- Fixed bug where scope was not preserved in callback methods. 
  *
  * $Date: 2011-28-04 (Thurs, 28 April 2011) $
  * $version: 1.2.4 	- Changed licence terms to be MIT or GPL inline with jQuery. Added check for support of touch events to stop non compatible browsers erroring.
@@ -47,7 +47,7 @@
  * 		threshold 		int  		Default 75.	The number of pixels that the user must move their finger by before it is considered a swipe.
 * 		timeThreshold 	int  		Default 250. Time, in milliseconds, between touchStart and touchEnd must not exceed in order to be considered a swipe.
  *		triggerOnTouchEnd Boolean Default true If true, the swipe events are triggered when the touch end event is received (user releases finger).  If false, it will be triggered on reaching the threshold, and then cancel the touch event automatically.
- *		allowPageScroll String Default "auto". How the browser handles page scrolls when the user is swiping on a touchSwipe object.
+ *		allowPageScroll String Default "auto". How the browser handles page scrolls when the user is swiping on a touchSwipe object. 
  *										"auto" : all undefined swipes will cause the page to scroll in that direction.
  *										"none" : the page will not scroll when user swipes.
  *										"horizontal" : will force page to scroll on horizontal swipes.
@@ -55,25 +55,25 @@
  *
  * This jQuery plugin will only run on devices running Mobile Webkit based browsers (iOS 2.0+, android 2.2+)
  */
-(function($)
+(function($) 
 {
-
-
-
-	$.fn.swipe = function(options)
+	
+	
+	
+	$.fn.swipe = function(options) 
 	{
 		if (!this) return false;
-
+		
 		// Default thresholds & swipe functions
 		var defaults = {
-
+					
 			fingers 		: 1,		// int - The number of fingers to trigger the swipe, 1 or 2. Default is 1.
 			threshold 		: 75,		// int - The number of pixels that the user must move their finger by before it is considered a swipe. Default is 75.
-
-
+			
+			
 			timeThreshold  : 250,      // int - Time, in milliseconds, between touchStart and touchEnd must not exceed in order to be considered a swipe.
-
-
+			
+			
 			swipe 			: null,		// Function - A catch all handler that is triggered for all swipe directions. Accepts 2 arguments, the original event object and the direction of the swipe : "left", "right", "up", "down".
 			swipeLeft		: null,		// Function - A handler that is triggered for "left" swipes. Accepts 3 arguments, the original event object, the direction of the swipe : "left", "right", "up", "down" and the distance of the swipe.
 			swipeRight		: null,		// Function - A handler that is triggered for "right" swipes. Accepts 3 arguments, the original event object, the direction of the swipe : "left", "right", "up", "down" and the distance of the swipe.
@@ -81,17 +81,17 @@
 			swipeDown		: null,		// Function - A handler that is triggered for "down" swipes. Accepts 3 arguments, the original event object, the direction of the swipe : "left", "right", "up", "down" and the distance of the swipe.
 			swipeStatus		: null,		// Function - A handler triggered for every phase of the swipe. Handler is passed 4 arguments: event : The original event object, phase:The current swipe face, either "start?, "move?, "end? or "cancel?. direction : The swipe direction, either "up?, "down?, "left " or "right?.distance : The distance of the swipe.
 			click			: null,		// Function	- A handler triggered when a user just clicks on the item, rather than swipes it. If they do not move, click is triggered, if they do move, it is not.
-
+			
 			triggerOnTouchEnd : true,	// Boolean, if true, the swipe events are triggered when the touch end event is received (user releases finger).  If false, it will be triggered on reaching the threshold, and then cancel the touch event automatically.
-			allowPageScroll : "auto" 	/* How the browser handles page scrolls when the user is swiping on a touchSwipe object.
+			allowPageScroll : "auto" 	/* How the browser handles page scrolls when the user is swiping on a touchSwipe object. 
 											"auto" : all undefined swipes will cause the page to scroll in that direction.
  											"none" : the page will not scroll when user swipes.
  											"horizontal" : will force page to scroll on horizontal swipes.
  											"vertical" : will force page to scroll on vertical swipes.
 										*/
 		};
-
-
+		
+		
 		//Constants
 		var LEFT = "left";
 		var RIGHT = "right";
@@ -101,79 +101,79 @@
 		var HORIZONTAL = "horizontal";
 		var VERTICAL = "vertical";
 		var AUTO = "auto";
-
+				
 		var PHASE_START="start";
 		var PHASE_MOVE="move";
 		var PHASE_END="end";
 		var PHASE_CANCEL="cancel";
-
+		
 	    var hasTouch = 'ontouchstart' in window,
         START_EV = hasTouch ? 'touchstart' : 'mousedown',
         MOVE_EV = hasTouch ? 'touchmove' : 'mousemove',
         END_EV = hasTouch ? 'touchend' : 'mouseup',
         CANCEL_EV = 'touchcancel';
-
+		
 		var phase="start";
 		var startTouchTime;
-
+		
 		if (options.allowPageScroll==undefined && (options.swipe!=undefined || options.swipeStatus!=undefined))
 			options.allowPageScroll=NONE;
-
+		
 		if (options)
 			$.extend(defaults, options);
-
-
+		
+		
 		/**
 		 * Setup each object to detect swipe gestures
 		 */
-		return this.each(function()
+		return this.each(function() 
 		{
             var that = this;
 			var $this = $(this);
-
+			
 			var triggerElementID = null; 	// this variable is used to identity the triggering element
-			var fingerCount = 0;			// the current number of fingers being used.
-
+			var fingerCount = 0;			// the current number of fingers being used.	
+			
 			//track mouse points / delta
 			var start={x:0, y:0};
 			var end={x:0, y:0};
 			var delta={x:0, y:0};
-
-
+			
+			
 			/**
-			* Event handler for a touch start event.
+			* Event handler for a touch start event. 
 			* Stops the default click event from triggering and stores where we touched
 			*/
-			function touchStart(event)
+			function touchStart(event) 
 			{
-                var evt = hasTouch ? event.touches[0] : event;
+                var evt = hasTouch ? event.touches[0] : event; 
 				phase = PHASE_START;
-
+		
                 if (hasTouch) {
                     // get the total number of fingers touching the screen
                     fingerCount = event.touches.length;
                 }
-
+				
 				//clear vars..
 				distance=0;
 				direction=null;
-
+				
 				// check the number of fingers is what we are looking for
-				if (fingerCount == defaults.fingers || !hasTouch)
+				if (fingerCount == defaults.fingers || !hasTouch) 
 				{
 					// get the coordinates of the touch
 					start.x = end.x = evt.pageX;
 					start.y = end.y = evt.pageY;
-
+					
 					if (defaults.swipeStatus)
 						triggerHandler(event, phase);
-
+						
 					// REV mdc
-
+					
 					var thisDate = new Date();
 					startTouchTime = thisDate.getTime();
-				}
-				else
+				} 
+				else 
 				{
 					//touch with more/less than the fingers we are looking for
 					touchCancel(event);
@@ -184,125 +184,124 @@
 			}
 
 			/**
-			* Event handler for a touch move event.
+			* Event handler for a touch move event. 
 			* If we change fingers during move, then cancel the event
 			*/
-			function touchMove(event)
+			function touchMove(event) 
 			{
 				if (phase == PHASE_END || phase == PHASE_CANCEL)
 					return;
-
-                var evt = hasTouch ? event.touches[0] : event;
-
+                
+                var evt = hasTouch ? event.touches[0] : event; 
+				
 				end.x = evt.pageX;
 				end.y = evt.pageY;
-
+					
 				direction = caluculateDirection();
                 if (hasTouch) {
                     fingerCount = event.touches.length;
                 }
-
+				
 				phase = PHASE_MOVE
-
+				
 				//Check if we need to prevent default evnet (page scroll) or not
 				validateDefaultEvent(event, direction);
-
-				if ( fingerCount == defaults.fingers || !hasTouch)
+		
+				if ( fingerCount == defaults.fingers || !hasTouch) 
 				{
 					distance = caluculateDistance();
-
+					
 					if (defaults.swipeStatus)
 						triggerHandler(event, phase, direction, distance);
-
+					
 					//If we trigger whilst dragging, not on touch end, then calculate now...
 					if (!defaults.triggerOnTouchEnd)
 					{
 						// ADDED by Mark Chase 2012-Apr-27
 						// if the user swiped more than the minimum length, perform the appropriate action
-
+						
 						var thisDate = new Date();
 						var endTouchTime = thisDate.getTime();
 						var totalTouchTime = endTouchTime - startTouchTime;
 						//
-						if ( distance >= defaults.threshold  && totalTouchTime <= defaults.timeThreshold)
+						if ( distance >= defaults.threshold  && totalTouchTime <= defaults.timeThreshold) 
 						{
 							phase = PHASE_END;
 							triggerHandler(event, phase);
 							touchCancel(event); // reset the variables
 						}
 					}
-				}
-				else
+				} 
+				else 
 				{
 					phase = PHASE_CANCEL;
-					triggerHandler(event, phase);
+					triggerHandler(event, phase); 
 					touchCancel(event);
 				}
 			}
-
+			
 			/**
-			* Event handler for a touch end event.
+			* Event handler for a touch end event. 
 			* Calculate the direction and trigger events
 			*/
-			function touchEnd(event)
+			function touchEnd(event) 
 			{
 				event.preventDefault();
-
+				
 				distance = caluculateDistance();
 				direction = caluculateDirection();
-
+						
 				if (defaults.triggerOnTouchEnd)
 				{
 					phase = PHASE_END;
 					// check to see if more than one finger was used and that there is an ending coordinate
-					if ( (fingerCount == defaults.fingers  || !hasTouch) && end.x != 0 )
+					if ( (fingerCount == defaults.fingers  || !hasTouch) && end.x != 0 ) 
 					{
 						// ADDED by Mark Chase 2012-Apr-27
 						var thisDate = new Date();
 						var endTouchTime = thisDate.getTime();
 						var totalTouchTime = endTouchTime - startTouchTime;
 						//
-
+						
 						// if the user swiped more than the minimum length, perform the appropriate action
 						if ( distance >= defaults.threshold && totalTouchTime <= defaults.timeThreshold)
 						{
-                            // alert("endTouchTime: "+endTouchTime);
 							triggerHandler(event, phase);
 							touchCancel(event); // reset the variables
-						}
-						else
+						} 
+						else 
 						{
 							phase = PHASE_CANCEL;
-							triggerHandler(event, phase);
+							triggerHandler(event, phase); 
 							touchCancel(event);
-						}
-					}
-					else
+						}	
+					} 
+					else 
 					{
 						phase = PHASE_CANCEL;
-						triggerHandler(event, phase);
+						triggerHandler(event, phase); 
 						touchCancel(event);
 					}
 				}
 				else if (phase == PHASE_MOVE)
 				{
 					phase = PHASE_CANCEL;
-					triggerHandler(event, phase);
+					triggerHandler(event, phase); 
 					touchCancel(event);
 				}
 				that.removeEventListener(MOVE_EV, touchMove, false);
 				that.removeEventListener(END_EV, touchEnd, false);
 			}
-
+			
 			/**
-			* Event handler for a touch cancel event.
+			* Event handler for a touch cancel event. 
 			* Clears current vars
 			*/
-			function touchCancel(event)
+			function touchCancel(event) 
 			{
 				// reset the variables back to default values
 				fingerCount = 0;
-
+				
 				start.x = 0;
 				start.y = 0;
 				end.x = 0;
@@ -310,42 +309,42 @@
 				delta.x = 0;
 				delta.y = 0;
 			}
-
-
+			
+			
 			/**
 			* Trigger the relevant event handler
 			* The handlers are passed the original event, the element that was swiped, and in the case of the catch all handler, the direction that was swiped, "left", "right", "up", or "down"
 			*/
-			function triggerHandler(event, phase)
+			function triggerHandler(event, phase) 
 			{
 				//update status
 				if (defaults.swipeStatus)
 					defaults.swipeStatus.call($this,event, phase, direction || null, distance || 0);
-
-
+				
+				
 				if (phase == PHASE_CANCEL)
 				{
 					if (defaults.click && (fingerCount==1 || !hasTouch) && (isNaN(distance) || distance==0))
 						defaults.click.call($this,event, event.target);
 				}
-
+				
 				if (phase == PHASE_END)
 				{
 					//trigger catch all event handler
 					if (defaults.swipe)
 				{
-
+						
 						defaults.swipe.call($this,event, direction, distance);
-
+						
 				}
-					//trigger direction specific event handlers
+					//trigger direction specific event handlers	
 					switch(direction)
 					{
 						case LEFT :
 							if (defaults.swipeLeft)
 								defaults.swipeLeft.call($this,event, direction, distance);
 							break;
-
+						
 						case RIGHT :
 							if (defaults.swipeRight)
 								defaults.swipeRight.call($this,event, direction, distance);
@@ -355,16 +354,16 @@
 							if (defaults.swipeUp)
 								defaults.swipeUp.call($this,event, direction, distance);
 							break;
-
-						case DOWN :
+						
+						case DOWN :	
 							if (defaults.swipeDown)
 								defaults.swipeDown.call($this,event, direction, distance);
 							break;
 					}
 				}
 			}
-
-
+			
+			
 			/**
 			 * Checks direction of the swipe and the value allowPageScroll to see if we should allow or prevent the default behaviour from occurring.
 			 * This will essentially allow page scrolling or not when the user is swiping on a touchSwipe object.
@@ -375,17 +374,17 @@
 				{
 					event.preventDefault();
 				}
-				else
+				else 
 				{
 					var auto=defaults.allowPageScroll==AUTO;
-
+					
 					switch(direction)
 					{
 						case LEFT :
 							if ( (defaults.swipeLeft && auto) || (!auto && defaults.allowPageScroll!=HORIZONTAL))
 								event.preventDefault();
 							break;
-
+						
 						case RIGHT :
 							if ( (defaults.swipeRight && auto) || (!auto && defaults.allowPageScroll!=HORIZONTAL))
 								event.preventDefault();
@@ -395,18 +394,18 @@
 							if ( (defaults.swipeUp && auto) || (!auto && defaults.allowPageScroll!=VERTICAL))
 								event.preventDefault();
 							break;
-
-						case DOWN :
+						
+						case DOWN :	
 							if ( (defaults.swipeDown && auto) || (!auto && defaults.allowPageScroll!=VERTICAL))
 								event.preventDefault();
 							break;
 					}
 				}
-
+				
 			}
-
-
-
+			
+			
+			
 			/**
 			* Calcualte the length / distance of the swipe
 			*/
@@ -414,49 +413,49 @@
 			{
 				return Math.round(Math.sqrt(Math.pow(end.x - start.x,2) + Math.pow(end.y - start.y,2)));
 			}
-
+			
 			/**
 			* Calcualte the angle of the swipe
 			*/
-			function caluculateAngle()
+			function caluculateAngle() 
 			{
 				var X = start.x-end.x;
 				var Y = end.y-start.y;
 				var r = Math.atan2(Y,X); //radians
 				var angle = Math.round(r*180/Math.PI); //degrees
-
+				
 				//ensure value is positive
-				if (angle < 0)
+				if (angle < 0) 
 					angle = 360 - Math.abs(angle);
-
+					
 				return angle;
 			}
-
+			
 			/**
 			* Calcualte the direction of the swipe
 			* This will also call caluculateAngle to get the latest angle of swipe
 			*/
-			function caluculateDirection()
+			function caluculateDirection() 
 			{
 				var angle = caluculateAngle();
-
-				if ( (angle <= 45) && (angle >= 0) )
+				
+				if ( (angle <= 45) && (angle >= 0) ) 
 					return LEFT;
-
+				
 				else if ( (angle <= 360) && (angle >= 315) )
 					return LEFT;
-
+				
 				else if ( (angle >= 135) && (angle <= 225) )
 					return RIGHT;
-
+				
 				else if ( (angle > 45) && (angle < 135) )
 					return DOWN;
-
+				
 				else
 					return UP;
 			}
-
-
+			
+			
 
 			// Add gestures to all swipable areas if supported
 			try
@@ -469,11 +468,11 @@
 			{
 				//touch not supported
 			}
-
+				
 		});
 	};
-
-
-
-
+	
+	
+	
+	
 })(jQuery);
