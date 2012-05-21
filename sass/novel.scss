@@ -1,0 +1,103 @@
+// ----------------------------------------------------------------------------
+// imports
+
+@import "base/base";
+@import "compass/reset";
+
+@import "general/fonts";
+@import "general/type";
+@import "general/root";
+
+/* ----------------------------------------------------------------------------
+  controls */
+
+$control-fontsize: $smallpx;
+$control-padding: rhythm(1,$control-fontsize);
+
+.controls {
+  @include adjust-font-size-to($control-fontsize);
+  @include clearfix;
+  @include stretch-x;
+  @include transition(all 200ms);
+  @include translateY(rhythm(-3,$control-fontsize));
+  padding: 0 $control-padding;
+  background: $base;
+  color: $white;
+  z-index: 900;
+  a {
+    #{$link} { color: $lightest; }
+    #{$focus} { color: $white; }
+    &:not([href]) { @include opacity(.5); }
+  }
+  &.active {
+    @include translateY(0);
+  }
+}
+
+#toggle {
+  @extend %icon-replace;
+  @include font-icon-image($icon-cog);
+  @include text-shadow(rgba($base,$small) 0 0 1px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1em;
+  color: $white;
+  cursor: pointer;
+  overflow: visible;
+  z-index: 950;
+  #{$focus} { color: $white; }
+}
+
+.breadcrumb { 
+  @extend %ellipsis;
+  max-height: rhythm(1,$control-fontsize);
+  margin-right: 2.5em;
+}
+
+[rel="contents"] {
+  @extend %icon-replace;
+  @include font-icon-image($icon-list);
+  float: left;
+  margin-right: .4em;
+}
+
+.crumb-list {
+  @include delimited-list("»");
+}
+
+.pagenav { 
+  @include clearfix; 
+  position: absolute;
+  top: 0;
+  right: $control-padding;
+  max-width: 2.5em;
+  a {
+    #{$link} { display: block; }
+  }
+}
+.prev { float: left; }
+.next { float: right; }
+
+[rel="prev"] {
+  @extend %icon-replace;
+  @include font-icon-image($icon-arrow-left);
+}
+
+[rel="next"] {
+  @extend %icon-replace;
+  @include font-icon-image($icon-arrow-right);
+}
+
+/* ----------------------------------------------------------------------------
+  page */
+
+.page {
+  @include container(4,8);
+  @include susy-grid-background;
+}
+
+.content {
+  @extend %type;
+  @include padding-leader(2);
+}

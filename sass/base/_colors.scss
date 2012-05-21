@@ -1,0 +1,212 @@
+// ----------------------------------------------------------------------------
+// tint and shade
+
+@function tint($color, $dilution: 50) {
+  $white: rgba(255, 255, 255, 1);
+  @if $color == "transparent" {
+    $color: rgba(0, 0, 0, 0);
+  }
+  @if $dilution < 0 or $dilution > 100 {
+    @warn "Dilution #{$dilution} must be between 0% and 100%";
+  }
+
+  @return mix($color, $white, 100 - $dilution);
+}
+
+@function shade($color, $dilution: 50) {
+  $black: rgba(0, 0, 0, 1);
+  @if $color == "transparent" {
+    $color: rgba(0, 0, 0, 0);
+  }
+  @if $dilution < 0 or $dilution > 100 {
+    @warn "Dilution #{$dilution} must be between 0% and 100%";
+  }
+
+  @return mix($color, $black, 100 - $dilution);
+}
+
+// ----------------------------------------------------------------------------
+// colors
+
+$red              : hsla(0,100%,50%,1);
+$orange           : hsla(30,100%,50%,1);
+$yellow           : hsla(60,100%,50%,1);
+$green            : hsla(120,100%,50%,1);
+$cyan             : hsla(180,100%,50%,1);
+$blue             : hsla(240,100%,50%,1);
+$pink             : hsla(300,100%,50%,1);
+
+$white            : hsla(0,0%,100%,1);
+$black            : hsla(0,0%,0%,1);
+
+$dark-shade       : 25;
+$darker-shade     : 50;
+$darkest-shade    : 75;
+$light-tint       : 45;
+$lighter-tint     : 60;
+$lightest-tint    : 75;
+$hint-tint        : 90;
+$off              : 65;
+
+$mid              : hsl(0,0%,50%);
+$dark             : shade($mid,$dark-shade);
+$darker           : shade($mid,$darker-shade);
+$darkest          : shade($mid,$darkest-shade);
+$light            : tint($mid,$light-tint);
+$lighter          : tint($mid,$lighter-tint);
+$lightest         : tint($mid,$lightest-tint);
+$hint             : tint($mid,$hint-tint);
+
+$red-dark         : shade($red,$dark-shade);
+$red-darker       : shade($red,$darker-shade);
+$red-darkest      : shade($red,$darkest-shade);
+$red-light        : tint($red,$light-tint);
+$red-lighter      : tint($red,$lighter-tint);
+$red-lightest     : tint($red,$lightest-tint);
+$red-hint         : tint($red,$hint-tint);
+
+$off-red           : desaturate($red,$off);
+$off-red-dark      : shade($off-red,$dark-shade);
+$off-red-darker    : shade($off-red,$darker-shade);
+$off-red-darkest   : shade($off-red,$darkest-shade);
+$off-red-light     : tint($off-red,$light-tint);
+$off-red-lighter   : tint($off-red,$lighter-tint);
+$off-red-lightest  : tint($off-red,$lightest-tint);
+$off-red-hint      : tint($off-red,$hint-tint);
+
+$orange-dark      : shade($orange,$dark-shade);
+$orange-darker    : shade($orange,$darker-shade);
+$orange-darkest   : shade($orange,$darkest-shade);
+$orange-light     : tint($orange,$light-tint);
+$orange-lighter   : tint($orange,$lighter-tint);
+$orange-lightest  : tint($orange,$lightest-tint);
+$orange-hint      : tint($orange,$hint-tint);
+
+$off-orange           : desaturate($orange,$off);
+$off-orange-dark      : shade($off-orange,$dark-shade);
+$off-orange-darker    : shade($off-orange,$darker-shade);
+$off-orange-darkest   : shade($off-orange,$darkest-shade);
+$off-orange-light     : tint($off-orange,$light-tint);
+$off-orange-lighter   : tint($off-orange,$lighter-tint);
+$off-orange-lightest  : tint($off-orange,$lightest-tint);
+$off-orange-hint      : tint($off-orange,$hint-tint);
+
+$yellow-dark      : shade($yellow,$dark-shade);
+$yellow-darker    : shade($yellow,$darker-shade);
+$yellow-darkest   : shade($yellow,$darkest-shade);
+$yellow-light     : tint($yellow,$light-tint);
+$yellow-lighter   : tint($yellow,$lighter-tint);
+$yellow-lightest  : tint($yellow,$lightest-tint);
+$yellow-hint      : tint($yellow,$hint-tint);
+
+$off-yellow           : desaturate($yellow,$off);
+$off-yellow-dark      : shade($off-yellow,$dark-shade);
+$off-yellow-darker    : shade($off-yellow,$darker-shade);
+$off-yellow-darkest   : shade($off-yellow,$darkest-shade);
+$off-yellow-light     : tint($off-yellow,$light-tint);
+$off-yellow-lighter   : tint($off-yellow,$lighter-tint);
+$off-yellow-lightest  : tint($off-yellow,$lightest-tint);
+$off-yellow-hint      : tint($off-yellow,$hint-tint);
+
+$green-dark       : shade($green,$dark-shade);
+$green-darker     : shade($green,$darker-shade);
+$green-darkest    : shade($green,$darkest-shade);
+$green-light      : tint($green,$light-tint);
+$green-lighter    : tint($green,$lighter-tint);
+$green-lightest   : tint($green,$lightest-tint);
+$green-hint       : tint($green,$hint-tint);
+
+$off-green           : desaturate($green,$off);
+$off-green-dark      : shade($off-green,$dark-shade);
+$off-green-darker    : shade($off-green,$darker-shade);
+$off-green-darkest   : shade($off-green,$darkest-shade);
+$off-green-light     : tint($off-green,$light-tint);
+$off-green-lighter   : tint($off-green,$lighter-tint);
+$off-green-lightest  : tint($off-green,$lightest-tint);
+$off-green-hint      : tint($off-green,$hint-tint);
+
+$cyan-dark        : shade($cyan,$dark-shade);
+$cyan-darker      : shade($cyan,$darker-shade);
+$cyan-darkest     : shade($cyan,$darkest-shade);
+$cyan-light       : tint($cyan,$light-tint);
+$cyan-lighter     : tint($cyan,$lighter-tint);
+$cyan-lightest    : tint($cyan,$lightest-tint);
+$cyan-hint        : tint($cyan,$hint-tint);
+
+$off-cyan           : desaturate($cyan,$off);
+$off-cyan-dark      : shade($off-cyan,$dark-shade);
+$off-cyan-darker    : shade($off-cyan,$darker-shade);
+$off-cyan-darkest   : shade($off-cyan,$darkest-shade);
+$off-cyan-light     : tint($off-cyan,$light-tint);
+$off-cyan-lighter   : tint($off-cyan,$lighter-tint);
+$off-cyan-lightest  : tint($off-cyan,$lightest-tint);
+$off-cyan-hint      : tint($off-cyan,$hint-tint);
+
+$blue-dark        : shade($blue,$dark-shade);
+$blue-darker      : shade($blue,$darker-shade);
+$blue-darkest     : shade($blue,$darkest-shade);
+$blue-light       : tint($blue,$light-tint);
+$blue-lighter     : tint($blue,$lighter-tint);
+$blue-lightest    : tint($blue,$lightest-tint);
+$blue-hint        : tint($blue,$hint-tint);
+
+$off-blue           : desaturate($blue,$off);
+$off-blue-dark      : shade($off-blue,$dark-shade);
+$off-blue-darker    : shade($off-blue,$darker-shade);
+$off-blue-darkest   : shade($off-blue,$darkest-shade);
+$off-blue-light     : tint($off-blue,$light-tint);
+$off-blue-lighter   : tint($off-blue,$lighter-tint);
+$off-blue-lightest  : tint($off-blue,$lightest-tint);
+$off-blue-hint      : tint($off-blue,$hint-tint);
+
+$pink-dark        : shade($pink,$dark-shade);
+$pink-darker      : shade($pink,$darker-shade);
+$pink-darkest     : shade($pink,$darkest-shade);
+$pink-light       : tint($pink,$light-tint);
+$pink-lighter     : tint($pink,$lighter-tint);
+$pink-lightest    : tint($pink,$lightest-tint);
+$pink-hint        : tint($pink,$hint-tint);
+
+$off-pink           : desaturate($pink,$off);
+$off-pink-dark      : shade($off-pink,$dark-shade);
+$off-pink-darker    : shade($off-pink,$darker-shade);
+$off-pink-darkest   : shade($off-pink,$darkest-shade);
+$off-pink-light     : tint($off-pink,$light-tint);
+$off-pink-lighter   : tint($off-pink,$lighter-tint);
+$off-pink-lightest  : tint($off-pink,$lightest-tint);
+$off-pink-hint      : tint($off-pink,$hint-tint);
+
+$base             : $darkest;
+$alt              : $pink-darker;
+$accent           : $green-darkest;
+
+$reds             : $red, $red-dark, $red-darker, $red-darkest, $red-light, $red-lighter, $red-lightest, $red-hint;
+$oranges          : $orange, $orange-dark, $orange-darker, $orange-darkest, $orange-light, $orange-lighter, $orange-lightest, $orange-hint;
+$yellows          : $yellow, $yellow-dark, $yellow-darker, $yellow-darkest, $yellow-light, $yellow-lighter, $yellow-lightest, $yellow-hint;
+$greens           : $green, $green-dark, $green-darker, $green-darkest, $green-light, $green-lighter, $green-lightest, $green-hint;
+$cyans            : $cyan, $cyan-dark, $cyan-darker, $cyan-darkest, $cyan-light, $cyan-lighter, $cyan-lightest, $cyan-hint;
+$blues            : $blue, $blue-dark, $blue-darker, $blue-darkest, $blue-light, $blue-lighter, $blue-lightest, $blue-hint;
+$pinks            : $pink, $pink-dark, $pink-darker, $pink-darkest, $pink-light, $pink-lighter, $pink-lightest, $pink-hint;
+
+$off-reds         : $off-red, $off-red-dark, $off-red-darker, $off-red-darkest, $off-red-light, $off-red-lighter, $off-red-lightest, $off-red-hint;
+$off-oranges      : $off-orange, $off-orange-dark, $off-orange-darker, $off-orange-darkest, $off-orange-light, $off-orange-lighter, $off-orange-lightest, $off-orange-hint;
+$off-yellows      : $off-yellow, $off-yellow-dark, $off-yellow-darker, $off-yellow-darkest, $off-yellow-light, $off-yellow-lighter, $off-yellow-lightest, $off-yellow-hint;
+$off-greens       : $off-green, $off-green-dark, $off-green-darker, $off-green-darkest, $off-green-light, $off-green-lighter, $off-green-lightest, $off-green-hint;
+$off-cyans        : $off-cyan, $off-cyan-dark, $off-cyan-darker, $off-cyan-darkest, $off-cyan-light, $off-cyan-lighter, $off-cyan-lightest, $off-cyan-hint;
+$off-blues        : $off-blue, $off-blue-dark, $off-blue-darker, $off-blue-darkest, $off-blue-light, $off-blue-lighter, $off-blue-lightest, $off-blue-hint;
+$off-pinks        : $off-pink, $off-pink-dark, $off-pink-darker, $off-pink-darkest, $off-pink-light, $off-pink-lighter, $off-pink-lightest, $off-pink-hint;
+
+$colors           : join(join(join($reds, $oranges), join($yellows, $greens)), join(join($cyans, $blues), $pinks));
+$off-colors       : join(join(join($off-reds, $off-oranges), join($off-yellows, $off-greens)), join(join($off-cyans, $off-blues), $off-pinks));
+
+$all-colors       : join($colors, $off-colors);
+
+@mixin print-colors($cl:$color-list) {
+  $i: 1;
+  @each $c in $cl {
+    .color-#{$i} {
+      color: $c;
+    }
+    $i: 1 + $i;
+  }
+}

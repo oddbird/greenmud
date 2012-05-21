@@ -1,0 +1,30 @@
+/* ----------------------------------------------------------------------------
+  root */
+
+$base   : $dark;
+$alt    : $blue;
+$accent : $pink;
+
+@include establish-baseline;
+
+html { 
+  @include baseline-grid-background($base-line-height);
+  font-family: $jj-stack; 
+  color: $base;
+}
+
+/* ----------------------------------------------------------------------------
+  links */
+
+$link : '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';
+
+a {
+  #{$link} {
+    text-decoration: none;
+    color: $alt;
+  }
+  #{$focus} {
+    color: $accent;
+  }
+}

@@ -1,21 +1,11 @@
 {% extends 'novel/base_novel.j2' %}
 
 {% block main %}
-<div id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.body_class }}">
-  <div class="pagewrap">
+<section id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.body_class }}" role="main">
   <div class="content">
-  {% filter typogrify %}
-  {% block page %}
-
-  {% endblock page %}
-  {% if resource.meta.demo %}
-    <div class="demo-note">
-      <h2 class="demo-title">This page has not been built. The first draft looked like this.</h2>
-      <img src="/media/images/{{ resource.meta.demo_image }}" class="demo-image" />
-    </div>
-  {% endif %}
-  {% endfilter %}
+    {% filter typogrify %}
+    {% block page %}{% endblock page %}
+    {% endfilter %}
   </div>
-  </div>
-</div>
+</section>
 {% endblock main %}
