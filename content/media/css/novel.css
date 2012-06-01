@@ -36,7 +36,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .breadcrumb { overflow: hidden; max-height: 1.208em; white-space: nowrap; word-wrap: break-word; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
 /* ---------------------------------------------------------------------------- defaults */
-.content h1, .content h2, .content h3, .content h4 { font-size: 1.458em; line-height: 1.243em; }
+.content h1, .content h2, .content h3, .content h4 { font-size: 1.458em; line-height: 1.243em; margin-top: 0.829em; }
 .content p, .content ol, .content ul { margin-bottom: 1.208em; }
 .content ol { list-style-type: decimal; }
 .content ul { list-style-type: circle; }

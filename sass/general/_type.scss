@@ -33,6 +33,7 @@ $jj-stack: "GreenMudJJRegular", sans-serif;
 %type {
   h1, h2, h3, h4 {
     @include adjust-font-size-to($largepx);
+    @include leader(1,$largepx);
   }
   p, ol, ul {
     @include trailer;
