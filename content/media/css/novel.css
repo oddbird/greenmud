@@ -1227,7 +1227,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.208em; }
 
-html { font-family: "GreenMudJJRegular", sans-serif; color: #606060; }
+html { font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
 
 /* ---------------------------------------------------------------------------- links */
 a:link, a:visited { text-decoration: none; color: blue; }

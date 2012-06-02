@@ -12,6 +12,7 @@ html {
   @include baseline-grid-background($base-line-height);
   font-family: $jj-stack; 
   color: $base;
+  overflow-x: hidden;
 }
 
 /* ----------------------------------------------------------------------------
