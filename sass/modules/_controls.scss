@@ -1,24 +1,32 @@
 /* ----------------------------------------------------------------------------
   controls */
 
-$control-fontsize: $smallpx;
-$control-padding: rhythm(1,$control-fontsize);
+$control-size: 1.5;
+
+%control-icon {
+  &:before {
+    @include adjust-font-size-to($medpx,$control-size);
+    right: 0;
+    text-align: right;
+  }
+}
 
 // ----------------------------------------------------------------------------
 // toggle
 
 #toggle {
   @extend %icon-replace;
+  @extend %control-icon;
+  @include adjust-leading-to($control-size);
   @include font-icon-image($icon-cog);
-  @include text-shadow(rgba($base,$small) 0 0 1px);
+  @include text-shadow(rgba($darkest,$small) 0 0 1px);
   position: absolute;
   top: 0;
   right: 0;
-  width: 1.25em;
+  width: rhythm($control-size);
   color: $white;
   cursor: pointer;
   z-index: 950;
-  &::before { right: 0; text-align: right; }
   #{$focus} { color: $white; }
 }
 
@@ -26,14 +34,15 @@ $control-padding: rhythm(1,$control-fontsize);
 // controls
 
 .controls {
-  @include adjust-font-size-to($control-fontsize);
   @include clearfix;
   @include stretch-x;
+  @include adjust-leading-to($control-size);
+  @include text-shadow(rgba($darkest,$small) 0 1px 0);
   @include transition(all 200ms);
-  @include translateY(rhythm(-3,$control-fontsize));
-  padding: 0 $control-padding;
-  background: $base;
-  color: $white;
+  @include translateY(rhythm(-3));
+  padding: 0 rhythm($control-size) 0 $grid-padding;
+  background: $darker;
+  color: $mid;
   z-index: 900;
   a {
     #{$link} { color: $lightest; }
@@ -50,15 +59,16 @@ $control-padding: rhythm(1,$control-fontsize);
 
 .breadcrumb { 
   @extend %ellipsis;
-  max-height: rhythm(1,$control-fontsize);
-  margin-right: 2.5em;
+  @include clearfix;
+  max-height: rhythm(1.5);
 }
 
 [rel="contents"] {
   @extend %icon-replace;
+  @extend %control-icon;
   @include font-icon-image($icon-list);
-  float: left;
-  margin-right: .4em;
+  @include float(left);
+  width: rhythm($control-size);
 }
 
 .crumb-list {
@@ -69,24 +79,26 @@ $control-padding: rhythm(1,$control-fontsize);
 // pagenav
 
 .pagenav { 
-  @include clearfix; 
-  position: absolute;
-  top: 0;
-  right: $control-padding;
-  max-width: 2.5em;
+  @include float(right);
+  width: rhythm($control-size*2);
   a {
-    #{$link} { display: block; }
+    #{$link} { 
+      display: block;
+      width: rhythm($control-size);
+    }
   }
 }
-.prev { float: left; }
-.next { float: right; }
+.prev { @include float(left); }
+.next { @include float(right); }
 
 [rel="prev"] {
   @extend %icon-replace;
+  @extend %control-icon;
   @include font-icon-image($icon-arrow-left);
 }
 
 [rel="next"] {
   @extend %icon-replace;
+  @extend %control-icon;
   @include font-icon-image($icon-arrow-right);
 }
