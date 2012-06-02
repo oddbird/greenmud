@@ -4,3 +4,4 @@ susy==1.0.rc.0
 compass-rgbapng==0.1.1
 chunky_png==1.2.5
 modular-scale==0.0.5
+animate==1.0.alpha.0

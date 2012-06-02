@@ -1,7 +1,7 @@
 {% extends 'novel/base_novel.j2' %}
 
 {% block main %}
-<section id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.body_class }}" role="main">
+<section id="{{ resource.meta.slug }}" class="main page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.body_class }}" role="main">
   <div class="content">
     {% filter typogrify %}
     {% block page %}{% endblock page %}

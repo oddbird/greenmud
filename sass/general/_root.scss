@@ -5,6 +5,7 @@ $base   : $dark;
 $alt    : $blue;
 $accent : $pink;
 
+@include animate;
 @include establish-baseline;
 
 html { 

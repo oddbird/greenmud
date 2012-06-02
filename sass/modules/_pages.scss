@@ -1,0 +1,42 @@
+/* ----------------------------------------------------------------------------
+  page */
+
+// ----------------------------------------------------------------------------
+// swipe
+
+body {
+  @include transition(all 200ms ease-in-out);
+  &.swiping-next, &.swiping-prev {
+    * { @include animation-play-state(paused !important); }
+  }
+  &.swiping-next { @include translateX(-1em); }
+  &.swiping-prev { @include translateX(1em); }
+}
+
+// ----------------------------------------------------------------------------
+// temporary page styles
+
+.page {
+  @include container;
+  @include susy-grid-background;
+}
+
+.content {
+  @extend %type;
+  @include padding-leader(2);
+}
+
+// ----------------------------------------------------------------------------
+// pageturn
+
+.enter-prev { @extend %fadeInLeft; }
+.enter-next { @extend %fadeInRight; }
+.exit-prev { @extend %fadeOutLeft; }
+.exit-next { @extend %fadeOutRight; }
+
+.enter-prev, .enter-next, .exit-prev, .exit-next {
+  @include animation-duration(200ms);
+  @include animation-timing-function(ease);
+  @include animation-fill-mode(both);
+}
+

@@ -2,6 +2,7 @@
 
 require 'susy'
 require 'modular-scale'
+require 'animate'
 # Require any additional compass plugins here.
 
 project_type = :stand_alone
