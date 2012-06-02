@@ -19,7 +19,7 @@ $control-size: 1.5;
   @extend %control-icon;
   @include adjust-leading-to($control-size);
   @include font-icon-image($icon-cog);
-  @include text-shadow(rgba($darkest,$small) 0 0 1px);
+  @include text-shadow(rgba($darkest,$small) 0 0 3px);
   position: absolute;
   top: 0;
   right: 0;
@@ -27,7 +27,9 @@ $control-size: 1.5;
   color: $white;
   cursor: pointer;
   z-index: 950;
-  #{$focus} { color: $white; }
+  #{$focus} { 
+    @include text-shadow($darkest 0 0 3px);
+  }
 }
 
 // ----------------------------------------------------------------------------

@@ -1236,9 +1236,9 @@ a:hover, a:focus, a:active { color: magenta; }
 /* ---------------------------------------------------------------------------- controls */
 #toggle:before, [rel="contents"]:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; text-align: right; }
 
-#toggle { line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 0 1px; position: absolute; top: 0; right: 0; width: 1.875em; color: white; cursor: pointer; z-index: 950; }
+#toggle { line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; position: absolute; top: 0; right: 0; width: 1.875em; color: white; cursor: pointer; z-index: 950; }
 #toggle::before { content: "\f013"; }
-#toggle:hover, #toggle:focus, #toggle:active { color: white; }
+#toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform: translateY(-3.75em); -moz-transform: translateY(-3.75em); -ms-transform: translateY(-3.75em); -o-transform: translateY(-3.75em); transform: translateY(-3.75em); padding: 0 1.875em 0 0.5em; background: #404040; color: gray; z-index: 900; }
 .controls a:link, .controls a:visited { color: #dfdfdf; }
