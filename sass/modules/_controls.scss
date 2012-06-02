@@ -46,8 +46,10 @@ $control-size: 1.5;
   z-index: 900;
   a {
     #{$link} { color: $lightest; }
-    #{$focus} { color: $white; }
-    &:not([href]) { @include opacity(.5); }
+    #{$focus} { color: $mid; }
+    &[href] { 
+      #{$focus} { color: $white; }
+    }
   }
   &.active {
     @include translateY(0);
@@ -67,7 +69,7 @@ $control-size: 1.5;
   @extend %icon-replace;
   @extend %control-icon;
   @include font-icon-image($icon-list);
-  @include float(left);
+  float: left;
   width: rhythm($control-size);
 }
 
@@ -79,17 +81,15 @@ $control-size: 1.5;
 // pagenav
 
 .pagenav { 
-  @include float(right);
+  float: right;
   width: rhythm($control-size*2);
   a {
-    #{$link} { 
-      display: block;
-      width: rhythm($control-size);
-    }
+    display: block;
+    width: rhythm($control-size);
   }
 }
-.prev { @include float(left); }
-.next { @include float(right); }
+.prev { float: left; }
+.next { float: right; }
 
 [rel="prev"] {
   @extend %icon-replace;
