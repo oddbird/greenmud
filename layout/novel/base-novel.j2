@@ -26,8 +26,11 @@
   <a id="toggle" title="show/hide controls">show/hide controls</a>
   <div class="controls">
   {% block header -%}
-    {% include "novel/_page_nav.j2" %}
-    {% include "novel/_breadcrumb.j2" %}
+    {% include "novel/_page-nav.j2" %}
+    <nav role="navigation">
+      {% include "novel/_meta-nav.j2" %}
+      {% include "novel/_breadcrumb.j2" %}
+    </nav>
   {%- endblock %}
   </div>
 

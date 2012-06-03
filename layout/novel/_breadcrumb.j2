@@ -1,24 +1,12 @@
-<nav role="navigation">
-  <ul class="meta">
-    <li>
-      <a href="/" rel="home" title="Home">{{ node.meta.novel }}</a>
+<ol class="breadcrumb">
+  {% if node.meta.book -%}
+    <li class="crumb">
+      <a href="/{{ node.meta.book_slug }}/">{{ node.meta.book }}</a>
     </li>
-    <li>
-      <a href="/contents.html" title="Table of Contents" rel="contents">
-        Table of Contents
-      </a>
+  {%- endif %}
+  {% if node.meta.chapter -%}
+    <li class="crumb">
+      <a href="../{{ node.meta.chapter_slug }}/">{{ node.meta.chapter }}</a>
     </li>
-  </ul>
-  <ol class="breadcrumb">
-    {% if node.meta.book -%}
-      <li class="crumb">
-        <a href="/{{ node.meta.book_slug }}/">{{ node.meta.book }}</a>
-      </li>
-    {%- endif %}
-    {% if node.meta.chapter -%}
-      <li class="crumb">
-        <a href="../{{ node.meta.chapter_slug }}/">{{ node.meta.chapter }}</a>
-      </li>
-    {%- endif %}
-  </ol>
-</nav>
+  {%- endif %}
+</ol>
