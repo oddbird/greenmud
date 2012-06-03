@@ -3,6 +3,10 @@
     <li class="crumb">
       <a href="/{{ node.meta.book_slug }}/">{{ node.meta.book }}</a>
     </li>
+  {%- else -%}
+    <li class="crumb">
+      <a href="/">{{ node.meta.novel }}</a>
+    </li>
   {%- endif %}
   {% if node.meta.chapter -%}
     <li class="crumb">

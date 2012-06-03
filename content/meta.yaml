@@ -1,4 +1,3 @@
-book          : Into the Green Green Mud
 description   : Into the Green Green Mud
 
 extends: novel/page.j2
