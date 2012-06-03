@@ -10,21 +10,18 @@ next:
     url       : copyright.html
 ---
 
-<h2 class="novel-title">
-  <div class="wrap">
-    <span class="into">Into</span>
-    <span class="the">The</span>
-    <span class="green1">Green</span>
-    <span class="green2">Green</span>
-    <span class="mud">Mud</span>
-  </div>
-</h2>
+{% filter markdown %}
 
-<div class="byline">
-  <div class="wrap">
-    <p class="tagline">A novel (with pictures)</p>
-    <p class="author vcard">
-      by <a href="http://eric.andmeyer.com/" class="fn url">Eric A. Meyer</a>
-    </p>
-  </div>
-</div>
+# Into the Green Green Mud
+## a novel (with pictures)
+
+by [Eric A. Meyer][eam],
+music by [Teacup Gorilla][tg]
+
+[Teacup Gorilla][tg] | [OddBird][obc]
+
+[eam]: http://eric.andmeyer.com/
+[tg]: http://teacupgorilla.com/
+[obc]: http://oddbird.net/
+
+{% endfilter %}
