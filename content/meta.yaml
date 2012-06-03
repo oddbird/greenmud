@@ -1,4 +1,5 @@
-description: Into the Green Green Mud
+book          : Into the Green Green Mud
+description   : Into the Green Green Mud
 
 extends: novel/page.j2
 default_block: page

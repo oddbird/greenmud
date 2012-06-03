@@ -43,6 +43,7 @@ $control-size: 1.5;
   @include transition(all 200ms);
   @include translateY(rhythm(-3));
   padding: 0 rhythm($control-size) 0 $grid-padding;
+  min-width: rhythm($control-size*4);
   background: $darker;
   color: $mid;
   z-index: 900;
@@ -59,24 +60,52 @@ $control-size: 1.5;
 }
 
 // ----------------------------------------------------------------------------
+// meta
+
+.meta {
+  @include horizontal-list(0);
+  float: left;
+  width: rhythm($control-size*2);
+  a {
+    #{$link} {
+      @extend %icon-replace;
+      @extend %control-icon;
+      float: left;
+      width: rhythm($control-size);
+    }
+  }
+}
+
+[rel="contents"] {
+  @include font-icon-image($icon-list);
+}
+
+[rel="home"] {
+  @include font-icon-image($icon-home);
+}
+
+// ----------------------------------------------------------------------------
 // breadcrumb
+
+$breadcrumb-font-size: $smallpx;
 
 .breadcrumb { 
   @extend %ellipsis;
   @include clearfix;
-  max-height: rhythm(1.5);
-}
-
-[rel="contents"] {
-  @extend %icon-replace;
-  @extend %control-icon;
-  @include font-icon-image($icon-list);
-  float: left;
-  width: rhythm($control-size);
-}
-
-.crumb-list {
-  @include delimited-list("»");
+  @include adjust-font-size-to($breadcrumb-font-size,1.5);
+  max-height: rhythm($control-size,$breadcrumb-font-size);
+  text-align: center;
+  width: auto;
+  li { 
+    display: inline;
+    &:after { content: ":"; }
+    &:last-child { &:after { content: ""; } }
+  }
+  @include media(50em) { 
+    @include adjust-font-size-to($base-font-size,1.5);
+    max-height: rhythm($control-size);
+    text-align: left;
+  }
 }
 
 // ----------------------------------------------------------------------------

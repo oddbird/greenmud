@@ -1,0 +1,34 @@
+$default-min-width: 30em !default;
+$default-max-width: 80em !default;
+
+// ----------------------------------------------------------------------------
+// media-query mixins
+
+@mixin media($media: $default-min-width, $max-only: false) {
+  $min: false;
+  $max: false;
+  $query: '';
+  @if type-of($media) != 'list' {
+    @if $max-only { $max: $media; }
+    @else { $min: $media; }
+  } @else {
+    @if index($media,1) >= index($media,2) {
+      $min: index($media,2);
+      $max: index($media,1);
+    } @else {
+      $min: index($media,1);
+      $max: index($media,2);
+    }
+  }
+  @if $min {
+    @if $max { 
+      @media all and (min-width: $min) and (max-width: $max) { @content; }
+    } @else {
+      @media all and (min-width: $min) { @content; }
+    }
+  } @else {
+    @if $max { 
+      @media all and (max-width: $max) { @content; }
+    }
+  }
+}

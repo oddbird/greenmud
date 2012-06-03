@@ -1,11 +1,15 @@
-<nav class="breadcrumb" role="navigation">
-  <a href="/contents.html" title="table of contents" rel="contents">
-    table of contents
-  </a>
-  <ol class="crumb-list">
-    <li class="crumb novel">
-      <a href="/">Green Mud</a>
+<nav role="navigation">
+  <ul class="meta">
+    <li>
+      <a href="/" rel="home" title="Home">{{ node.meta.novel }}</a>
     </li>
+    <li>
+      <a href="/contents.html" title="Table of Contents" rel="contents">
+        Table of Contents
+      </a>
+    </li>
+  </ul>
+  <ol class="breadcrumb">
     {% if node.meta.book -%}
       <li class="crumb">
         <a href="/{{ node.meta.book_slug }}/">{{ node.meta.book }}</a>

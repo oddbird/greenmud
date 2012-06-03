@@ -1,10 +1,10 @@
 <nav class="pagenav">
   <ul class="page-list">
     <li class="prev">
-      <a rel="prev" {% if resource.meta.prev.url %}href="{{ resource.meta.prev.url }}" {% if resource.meta.chapter_break == 'before' or resource.meta.chapter_break == 'both' %}class="break" {% endif %}title="go to the previous page" data-id="{{ resource.meta.prev.slug }}"{% else %}title="no previous pages"{% endif %}>Previous</a>
+      <a rel="prev" {% if resource.meta.prev.url %}href="{{ resource.meta.prev.url }}" {% if resource.meta.chapter_break == 'before' or resource.meta.chapter_break == 'both' %}class="break" {% endif %}title="previous page" data-id="{{ resource.meta.prev.slug }}"{% else %}title="no previous pages"{% endif %}>Previous</a>
     </li>
     <li class="next">
-      <a rel="next" {% if resource.meta.next.url %}href="{{ resource.meta.next.url }}" {% if resource.meta.chapter_break == 'after' or resource.meta.chapter_break == 'both'  %}class="break" {% endif %}title="go to the next page" data-id="{{ resource.meta.next.slug }}"{% else %}title="no more pages"{% endif %}>Next</a>
+      <a rel="next" {% if resource.meta.next.url %}href="{{ resource.meta.next.url }}" {% if resource.meta.chapter_break == 'after' or resource.meta.chapter_break == 'both'  %}class="break" {% endif %}title="next page" data-id="{{ resource.meta.next.slug }}"{% else %}title="no more pages"{% endif %}>Next</a>
     </li>
   </ul>
 </nav>
