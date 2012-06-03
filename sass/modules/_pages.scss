@@ -16,7 +16,7 @@
 // pageturn
 
 .page {
-  @include transition(all 200ms ease-in-out);
+  @include transition(left 200ms ease-in-out);
   position: relative;
   left: 0;
   .swiping-next &, .swiping-prev & {
