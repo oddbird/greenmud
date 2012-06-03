@@ -16,14 +16,26 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-/*  Font Awesome the iconic font designed for use with Twitter Bootstrap ------------------------------------------------------- The full suite of pictographic icons, examples, and documentation can be found at: http://fortawesome.github.com/Font-Awesome/
- License ------------------------------------------------------- The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0: http://creativecommons.org/licenses/by/3.0/ A mention of 'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable source code is considered acceptable attribution (most common on the web). If human readable source code is not available to the end user, a mention in an 'About' or 'Credits' screen is considered acceptable (most common in desktop or mobile software).
- Contact ------------------------------------------------------- Email: dave@davegandy.com Twitter: http://twitter.com/fortaweso_me Work: http://lemonwi.se co-founder
- */
-@font-face { font-family: "FontAwesome"; src: url('../fonts/font-awesome/fontawesome-webfont.eot'); src: url('../fonts/font-awesome/fontawesome-webfont.eot?#iefix') format('eot'), url('../fonts/font-awesome/fontawesome-webfont.woff') format('woff'), url('../fonts/font-awesome/fontawesome-webfont.ttf') format('truetype'), url('../fonts/font-awesome/fontawesome-webfont.otf') format('opentype'), url('../fonts/font-awesome/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), url('../fonts/font-awesome/fontawesome-webfont.svg#FontAwesomeRegular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'IcoMoon'; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format("embedded-opentype"), url('../fonts/icomoon/IcoMoon.svg#IcoMoon') format("svg"), url('../fonts/icomoon/IcoMoon.woff') format("woff"), url('../fonts/icomoon/IcoMoon.ttf') format("truetype"); font-weight: normal; font-style: normal; }
 
-#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { text-indent: -9999px; overflow: hidden; display: inline-block; position: relative; min-width: 1em; }
-#toggle::before, .meta a:link::before, .meta a:visited::before, [rel="prev"]::before, [rel="next"]::before { margin-right: 0.4em; position: absolute; left: 0; top: 0; text-indent: 0; font-family: FontAwesome; font-weight: normal; font-style: normal; }
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
+
+/* Use the following CSS code if you want to have a class per icon */
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
+
+[rel="home"]:before { content: "\2617"; }
+
+[rel="contents"]:before { content: "\2630"; }
+
+[rel="next"]:before { content: "\2190"; }
+
+[rel="prev"]:before { content: "\2192"; }
+
+#toggle:before { content: "\2731"; }
 
 /* ---------------------------------------------------------------------------- fonts */
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-regular-webfont.eot'); src: url('../fonts/jj/greenmudjj-regular-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-regular-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-regular-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-regular-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
@@ -1234,10 +1246,10 @@ a:link, a:visited { text-decoration: none; color: blue; }
 a:hover, a:focus, a:active { color: magenta; }
 
 /* ---------------------------------------------------------------------------- controls */
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; text-align: right; }
+#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { width: 1.875em; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; }
 
-#toggle { line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; position: absolute; top: 0; right: 0; width: 1.875em; color: white; cursor: pointer; z-index: 950; }
-#toggle::before { content: "\f013"; }
+#toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
 #toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform: translateY(-3.75em); -moz-transform: translateY(-3.75em); -ms-transform: translateY(-3.75em); -o-transform: translateY(-3.75em); transform: translateY(-3.75em); padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; }
@@ -1253,10 +1265,6 @@ a:hover, a:focus, a:active { color: magenta; }
 .meta li.last { padding-right: 0; }
 .meta a:link, .meta a:visited { float: left; width: 1.875em; }
 
-[rel="contents"]::before { content: "\f03a"; }
-
-[rel="home"]::before { content: "\f015"; }
-
 .breadcrumb { overflow: hidden; font-size: 0.792em; line-height: 2.368em; max-height: 2.368em; text-align: center; width: auto; }
 .breadcrumb li { display: inline; }
 .breadcrumb li:after { content: ":"; }
@@ -1269,10 +1277,6 @@ a:hover, a:focus, a:active { color: magenta; }
 .prev { float: left; }
 
 .next { float: right; }
-
-[rel="prev"]::before { content: "\f060"; }
-
-[rel="next"]::before { content: "\f061"; }
 
 /* ---------------------------------------------------------------------------- page */
 .page { background: #ffe5ff; }

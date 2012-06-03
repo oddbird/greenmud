@@ -1,13 +1,15 @@
 /* ----------------------------------------------------------------------------
   controls */
 
-$control-size: 1.5;
+$control-icon: $medpx;
+$control-line: 1.5;
 
 %control-icon {
+  @extend %icon-replace;
+  width: rhythm($control-line);
   &:before {
-    @include adjust-font-size-to($medpx,$control-size);
+    @include adjust-font-size-to($control-icon,$control-line);
     right: 0;
-    text-align: right;
   }
 }
 
@@ -15,15 +17,12 @@ $control-size: 1.5;
 // toggle
 
 #toggle {
-  @extend %icon-replace;
   @extend %control-icon;
-  @include adjust-leading-to($control-size);
-  @include font-icon-image($icon-cog);
+  @extend %icon-cog;
   @include text-shadow(rgba($darkest,$small) 0 0 3px);
   position: absolute;
   top: 0;
   right: 0;
-  width: rhythm($control-size);
   color: $white;
   cursor: pointer;
   z-index: 950;
@@ -38,12 +37,12 @@ $control-size: 1.5;
 .controls {
   @include clearfix;
   @include stretch-x;
-  @include adjust-leading-to($control-size);
+  @include adjust-leading-to($control-line);
   @include text-shadow(rgba($darkest,$small) 0 1px 0);
   @include transition(all 200ms);
   @include translateY(rhythm(-3));
-  padding: 0 rhythm($control-size) 0 $grid-padding;
-  min-width: rhythm($control-size*4);
+  padding: 0 rhythm($control-line) 0 $grid-padding;
+  min-width: rhythm($control-line*4);
   background: $darker;
   color: $mid;
   z-index: 900;
@@ -65,24 +64,19 @@ $control-size: 1.5;
 .meta {
   @include horizontal-list(0);
   float: left;
-  width: rhythm($control-size*2);
+  width: rhythm($control-line*2);
   a {
     #{$link} {
-      @extend %icon-replace;
       @extend %control-icon;
       float: left;
-      width: rhythm($control-size);
+      width: rhythm($control-line);
     }
   }
 }
 
-[rel="contents"] {
-  @include font-icon-image($icon-list);
-}
+[rel="contents"] { @extend %icon-list; }
 
-[rel="home"] {
-  @include font-icon-image($icon-home);
-}
+[rel="home"] { @extend %icon-home; }
 
 // ----------------------------------------------------------------------------
 // breadcrumb
@@ -92,8 +86,8 @@ $breadcrumb-font-size: $smallpx;
 .breadcrumb { 
   @extend %ellipsis;
   @include clearfix;
-  @include adjust-font-size-to($breadcrumb-font-size,1.5);
-  max-height: rhythm($control-size,$breadcrumb-font-size);
+  @include adjust-font-size-to($breadcrumb-font-size,$control-line);
+  max-height: rhythm($control-line,$breadcrumb-font-size);
   text-align: center;
   width: auto;
   li { 
@@ -102,8 +96,8 @@ $breadcrumb-font-size: $smallpx;
     &:last-child { &:after { content: ""; } }
   }
   @include media(50em) { 
-    @include adjust-font-size-to($base-font-size,1.5);
-    max-height: rhythm($control-size);
+    @include adjust-font-size-to($base-font-size,$control-line);
+    max-height: rhythm($control-line);
     text-align: left;
   }
 }
@@ -113,23 +107,21 @@ $breadcrumb-font-size: $smallpx;
 
 .pagenav { 
   float: right;
-  width: rhythm($control-size*2);
+  width: rhythm($control-line*2);
   a {
     display: block;
-    width: rhythm($control-size);
+    width: rhythm($control-line);
   }
 }
 .prev { float: left; }
 .next { float: right; }
 
 [rel="prev"] {
-  @extend %icon-replace;
   @extend %control-icon;
-  @include font-icon-image($icon-arrow-left);
+  @extend %icon-arrow-left;
 }
 
 [rel="next"] {
-  @extend %icon-replace;
   @extend %control-icon;
-  @include font-icon-image($icon-arrow-right);
+  @extend %icon-arrow-right;
 }
