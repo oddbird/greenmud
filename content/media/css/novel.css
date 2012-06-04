@@ -45,7 +45,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ---------------------------------------------------------------------------- type */
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
-.breadcrumb { overflow: hidden; max-height: 1.25em; white-space: nowrap; word-wrap: break-word; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+.breadcrumb, #toc li { overflow: hidden; max-height: 1.25em; white-space: nowrap; word-wrap: break-word; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
 /* ---------------------------------------------------------------------------- defaults */
 .content h1, .content h2, .content h3, .content h4 { font-size: 1.5em; line-height: 1.25em; margin-top: 0.833em; }
@@ -1249,13 +1249,14 @@ a:hover, a:focus, a:active { color: magenta; }
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { width: 1.875em; }
 #toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; }
 
+.controls a:link, #toc a:link, .controls a:visited, #toc a:visited { color: #dfdfdf; }
+.controls a:hover, #toc a:hover, .controls a:focus, #toc a:focus, .controls a:active, #toc a:active { color: gray; }
+.controls a[href]:hover, #toc a[href]:hover, .controls a[href]:focus, #toc a[href]:focus, .controls a[href]:active, #toc a[href]:active { color: white; }
+
 #toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
 #toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform: translateY(-3.75em); -moz-transform: translateY(-3.75em); -ms-transform: translateY(-3.75em); -o-transform: translateY(-3.75em); transform: translateY(-3.75em); padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; }
-.controls a:link, .controls a:visited { color: #dfdfdf; }
-.controls a:hover, .controls a:focus, .controls a:active { color: gray; }
-.controls a[href]:hover, .controls a[href]:focus, .controls a[href]:active { color: white; }
 .controls.active { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
 
 .meta { margin: 0; padding: 0; border: 0; overflow: hidden; float: left; width: 3.75em; }
@@ -1277,6 +1278,17 @@ a:hover, a:focus, a:active { color: magenta; }
 .prev { float: left; }
 
 .next { float: right; }
+
+#toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms; -moz-transition: max-height 600ms; -ms-transition: max-height 600ms; -o-transition: max-height 600ms; transition: max-height 600ms; max-height: 0; }
+#toc ol { list-style-type: decimal-leading-zero; list-style-position: inside; }
+#toc .wrap { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
+#toc .wrap:after { content: ""; display: table; clear: both; }
+@media all and (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
+#toc.active { max-height: 45em; }
+
+[class^="toc-"] { margin-bottom: 1.25em; }
+@media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }
+  [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 /* ---------------------------------------------------------------------------- page */
 .page { background: #ffe5ff; }

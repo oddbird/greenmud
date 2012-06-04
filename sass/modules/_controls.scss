@@ -4,12 +4,24 @@
 $control-icon: $medpx;
 $control-line: 1.5;
 
+$control-text-color   : $mid;
+$control-link-color   : $lightest;
+$control-focus-color  : $white;
+
 %control-icon {
   @extend %icon-replace;
   width: rhythm($control-line);
   &:before {
     @include adjust-font-size-to($control-icon,$control-line);
     right: 0;
+  }
+}
+
+%control-link {
+  #{$link} { color: $control-link-color; }
+  #{$focus} { color: $control-text-color; }
+  &[href] { 
+    #{$focus} { color: $control-focus-color; }
   }
 }
 
@@ -23,7 +35,7 @@ $control-line: 1.5;
   position: absolute;
   top: 0;
   right: 0;
-  color: $white;
+  color: $control-focus-color;
   cursor: pointer;
   z-index: 950;
   #{$focus} { 
@@ -44,18 +56,10 @@ $control-line: 1.5;
   padding: 0 rhythm($control-line) 0 $grid-padding;
   min-width: rhythm($control-line*4);
   background: $darker;
-  color: $mid;
+  color: $control-text-color;
   z-index: 900;
-  a {
-    #{$link} { color: $lightest; }
-    #{$focus} { color: $mid; }
-    &[href] { 
-      #{$focus} { color: $white; }
-    }
-  }
-  &.active {
-    @include translateY(0);
-  }
+  a { @extend %control-link; }
+  &.active { @include translateY(0); }
 }
 
 // ----------------------------------------------------------------------------
@@ -75,13 +79,13 @@ $control-line: 1.5;
 }
 
 [rel="contents"] { @extend %icon-list; }
-
 [rel="home"] { @extend %icon-home; }
 
 // ----------------------------------------------------------------------------
 // breadcrumb
 
 $breadcrumb-font-size: $smallpx;
+$breadcrumb-break: 50em;
 
 .breadcrumb { 
   @extend %ellipsis;
@@ -95,7 +99,7 @@ $breadcrumb-font-size: $smallpx;
     &:after { content: ":"; }
     &:last-child { &:after { content: ""; } }
   }
-  @include media(50em) { 
+  @include media($breadcrumb-break) { 
     @include adjust-font-size-to($base-font-size,$control-line);
     max-height: rhythm($control-line);
     text-align: left;
@@ -124,4 +128,37 @@ $breadcrumb-font-size: $smallpx;
 [rel="next"] {
   @extend %control-icon;
   @extend %icon-arrow-right;
+}
+
+// ----------------------------------------------------------------------------
+// table of contents
+
+#toc {
+  @include clearfix;
+  background: $darkest;
+  color: $control-text-color;
+  a { @extend %control-link; }
+  ol { 
+    list-style-type: decimal-leading-zero; 
+    list-style-position: inside;
+  }
+  li { @extend %ellipsis; }
+  .wrap { 
+    @include container; 
+    @include padding-leader($control-line+.5);
+    @include media($breadcrumb-break) { margin-left: rhythm($control-line*2); }
+  }
+
+  // show and hide toc
+  @include transition(max-height 600ms);
+  max-height: 0;
+  &.active { max-height: 45em; }
+}
+
+[class^="toc-"] { 
+  @include trailer;
+  @include media(32em) {
+    @include span-columns(4,$total-columns); 
+    &:last-child { @include omega; }
+  }
 }
