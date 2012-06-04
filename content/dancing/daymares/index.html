@@ -1,5 +1,6 @@
 ---
 chapter_break : before
+body_class    : demo
 
 slug          : titlepage
 url           : index.html
@@ -12,9 +13,9 @@ next:
     url       : ~he-seemed-a-bit-down.html
 ---
 
-<h2 class="chapter-title">
-  <div class="wrap">
-    <i>Chapter 2</i>
-    <span class="name"><b>Daymares,</b> Poor Boy.</span>
-  </div>
-</h2>
+{% filter markdown %}
+
+## Chapter 2
+# <b>Daymares,</b> Poor Boy.
+  
+{% endfilter %}

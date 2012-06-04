@@ -4,12 +4,14 @@
 // ----------------------------------------------------------------------------
 // temporary page styles
 
-.page { background: $pink-hint; }
-.content {
-  @extend %type;
-  @include container;
-  @include susy-grid-background;
-  @include padding-leader(2);
+.demo {
+  .page { background: $pink-hint; }
+  .content {
+    @extend %type;
+    @include container;
+    @include susy-grid-background;
+    @include padding-leader(2);
+  }
 }
 
 // ----------------------------------------------------------------------------

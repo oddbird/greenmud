@@ -1,6 +1,7 @@
 ---
 description   : '404: Page Not Found.'
 chapter_break : both
+body_class    : demo
 
 slug          : fourohfour
 url           : 404.html
@@ -16,22 +17,20 @@ next:
 
 {% filter markdown %}
 
-<div class="novel-title">
-  <p class="name">Into The Green Green Mud</p>
-  <p class="byline">A Novel (with pictures) by Eric A. Meyer</p>
-</div>
+# Into The Green Green Mud
+## A Novel (with pictures) by Eric A. Meyer
 
-<div class="error">
+## We couldn't find that page.
 
-## It's not that way.
+You can start at [the beginning][home],
+or the [table of contents][toc]
+and find your way from there.
 
-Perhaps you followed a link to an old blog post? Well, I'm replacing the blog
-with <a href="/" rel="home">the novel itself</a>. Check it out, I think you
-might like it. You can still find all the old posts (and some new ones) over
-on <a href="http://eric.andmeyer.com">eric.andmeyer.com</a>.
+Or learn more [about the project][about] 
+and the people involved.
 
-<a href="/" rel="home" class="home">It's over here!</a>
-
-</div>
+[home]: /index.html
+[toc]: /contents.html
+[about]: /about.html
 
 {% endfilter %}

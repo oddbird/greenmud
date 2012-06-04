@@ -1,5 +1,6 @@
 ---
 chapter_break : before
+body_class    : demo
 
 slug          : titlepage
 url           : index.html
@@ -12,9 +13,9 @@ next:
     url       : ~holidays-go.html
 ---
 
-<h2 class="chapter-title">
-  <div class="wrap">
-    <i>Chapter 3</i>
-    <span class="name"><b>The Susy</b> Within.</span>
-  </div>
-</h2>
+{% filter markdown %}
+
+## Chapter 3
+# <b>The Susy</b> Within.
+  
+{% endfilter %}

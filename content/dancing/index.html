@@ -1,5 +1,6 @@
 ---
 chapter_break : before
+body_class    : demo
 
 slug          : titlepage
 url           : index.html
@@ -12,6 +13,9 @@ next:
     url       : epigraph.html
 ---
 
-<h2 class="book-title">
-  <span class="name">Dancing Without <b>Architecture</b></span>
-</h2>
+{% filter markdown %}
+
+## Book 1
+# Dancing Without <b>Architecture</b>
+
+{% endfilter %}
