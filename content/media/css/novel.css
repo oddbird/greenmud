@@ -31,9 +31,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 [rel="contents"]:before { content: "\2630"; }
 
-[rel="next"]:before { content: "\2190"; }
+[rel="next"]:before { content: "\2192"; }
 
-[rel="prev"]:before { content: "\2192"; }
+[rel="prev"]:before { content: "\2190"; }
 
 #toggle:before { content: "\2731"; }
 
