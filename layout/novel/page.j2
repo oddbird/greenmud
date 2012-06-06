@@ -2,16 +2,8 @@
 
 {% block main %}
 <section id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.body_class }}">
-
   {% if resource.meta.template %}
-  <header role="banner">
-    <hgroup class="site-title">
-      {% filter typogrify %}
-      <h1><a href="/">{{ resource.meta.novel }}</a></h1>
-      <h2><a href="/about.html">{{ resource.meta.tagline }}</a></h2>
-      {% endfilter %}
-    </hgroup>
-  </header>
+  {% include "novel/_tempate-banner.j2" %}
   {% endif %}
 
   <div class="content"  role="main">
@@ -21,22 +13,7 @@
   </div>
 
   {% if resource.meta.template %}
-  <footer role="contentinfo">
-  <div class="footer">
-    {% filter typogrify %}
-    <p class="license">
-      <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">Copyright ©</a>
-      2006-2012 <b>{{ resource.meta.author }}</b>
-    </p>
-    <ul class="social">
-      <li><a href="http://eric.andmeyer.com/">blog</a></li>
-      <li><a href="http://twitter.com/eriiicam/">twitter</a></li>
-      <li><a href="http://facebook.com/greengreenmud/">facebook</a></li>
-      <li><a href="https://github.com/oddbird/greenmud/">github</a></li>
-    </ul>
-    {% endfilter %}
-  </div>
-  </footer>
+  {% include "novel/_template-info.j2" %}
   {% endif %}
 </section>
 {% endblock main %}

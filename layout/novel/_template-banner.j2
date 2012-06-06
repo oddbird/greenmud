@@ -1,0 +1,8 @@
+  <header role="banner">
+    <hgroup class="site-title">
+      {% filter typogrify %}
+      <h1><a href="/">{{ resource.meta.novel }}</a></h1>
+      <h2><a href="/about.html">{{ resource.meta.tagline }}</a></h2>
+      {% endfilter %}
+    </hgroup>
+  </header>
