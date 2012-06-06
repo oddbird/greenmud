@@ -50,7 +50,7 @@
 #home .social a { display: inline-block; width: 1.25em; }
 #home .social a:before { right: 0; }
 
-#home { text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px; background: #edf6ed url('../../images/noise.png?1331750152') repeat scroll; }
+#home { text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px; background: #edf6ed url('../../images/noise.png?1331750152') repeat scroll; background: url('../../images/noise.png?1331750152'), -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #ffffe5), color-stop(100%, #edf6ed)); background: url('../../images/noise.png?1331750152'), -webkit-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1331750152'), -moz-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1331750152'), -o-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1331750152'), -ms-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1331750152'), linear-gradient(bottom left, #ffffe5, #edf6ed); }
 #home .site-title, #home [role="main"], #home .footer { -webkit-transition: max-width 300ms; -moz-transition: max-width 300ms; -ms-transition: max-width 300ms; -o-transition: max-width 300ms; transition: max-width 300ms; max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; }
 #home .site-title:after, #home [role="main"]:after, #home .footer:after { content: ""; display: table; clear: both; }
 @media (min-width: 53.25em) { #home .site-title, #home [role="main"], #home .footer { max-width: 34.5em; } }
@@ -61,7 +61,7 @@
 #home .site-title { padding-top: 1.875em; }
 #home .site-title h1 { font-size: 1.5em; line-height: 1.25em; }
 #home [role="main"] { padding-top: 1.25em; padding-bottom: 1.25em; }
-#home [role="contentinfo"] { border-top-style: solid; border-top-width: 0.083em; padding-top: 0.542em; padding-bottom: 1.875em; background: #d4ead4 url('../../images/noise.png?1331750152'); border-color: #404040; color: gray; }
+#home [role="contentinfo"] { border-top-style: solid; border-top-width: 0.083em; padding-top: 0.542em; border-bottom-style: solid; border-bottom-width: 0.083em; padding-bottom: 1.792em; background: #d4ead4 url('../../images/noise.png?1331750152'); border-color: #404040; color: gray; }
 #home [role="contentinfo"] a:link, #home [role="contentinfo"] a:visited { color: gray; }
 #home [role="contentinfo"] a:hover, #home [role="contentinfo"] a:focus, #home [role="contentinfo"] a:active { color: #404040; }
 #home [role="contentinfo"] b { white-space: nowrap; color: #404040; }

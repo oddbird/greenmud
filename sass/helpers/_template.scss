@@ -33,8 +33,9 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
 %template {
   @include text-shadow(rgba($white,$small) 0 1px 1px);
-  background: $background repeat scroll;
-  
+  @include background($background repeat scroll);
+  @include background($noise, 
+    linear-gradient(bottom left, $yellow-hint, $off-green-hint));  
   .site-title, 
   [role="main"], 
   .footer {
@@ -82,8 +83,8 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   [role="contentinfo"] {
     @include leading-border($border-width,.5);
-    @include padding-trailer(1.5);
-    background: $off-green-lightest $noise;
+    @include trailing-border($border-width,1.5);
+    @include background($off-green-lightest $noise);
     border-color: $darker;
     color: $footer-color;
     a { 
