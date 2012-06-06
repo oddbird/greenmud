@@ -32,6 +32,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 }
 
 %template {
+  @include text-shadow(rgba($white,$small) 0 1px 1px);
   background: $background repeat scroll;
   
   .site-title, 
