@@ -106,6 +106,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     [href*="facebook"] { @extend %icon-facebook; }
     [href*="github"] { @extend %icon-github; }
     [href*="andmeyer"] { @extend %icon-tumblr; }
+    [href*="vimeo"] { @extend %icon-vimeo; }
   }
   @include at-breakpoint($break) {
     .license, .social { @include span-columns(5,$total-columns); }

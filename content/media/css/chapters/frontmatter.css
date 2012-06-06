@@ -10,6 +10,8 @@
 
 #home .inst.access:before { content: "\2731"; }
 
+#home .social [href*="vimeo"]:before { content: "\e002"; }
+
 #home .social [href*="github"]:before { content: "\e003"; }
 
 #home .inst.turn:before { content: "\e005"; }
