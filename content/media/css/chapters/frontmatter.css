@@ -16,7 +16,7 @@
 #home .site-title, #home [role="main"], #home .footer { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; }
 #home .site-title:after, #home [role="main"]:after, #home .footer:after { content: ""; display: table; clear: both; }
 @media (min-width: 53.25em) { #home .site-title, #home [role="main"], #home .footer { max-width: 34.5em; } }
-#home [role="banner"] { border-bottom-style: solid; border-bottom-width: 0.083em; padding-bottom: 1.792em; margin-bottom: 0.625em; color: #404040; background: #ffbfff url('../../images/noise.png?1331750152'); border-color: #202020; }
+#home [role="banner"] { border-bottom-style: solid; border-bottom-width: 0.083em; padding-bottom: 1.792em; margin-bottom: 0.625em; color: #404040; background: #ffe5ff url('../../images/noise.png?1331750152'); border-color: #202020; }
 #home [role="banner"] a:link, #home [role="banner"] a:visited { color: #404040; }
 #home .site-title { padding-top: 1.875em; }
 #home .site-title h1 { font-size: 1.5em; line-height: 1.25em; }

@@ -23,7 +23,7 @@ $border-width   : 2px;
     @include trailing-border($border-width,1.5);
     @include trailer(.5);
     color: $darker;
-    background: $pink-lightest $noise;
+    background: $pink-hint $noise;
     border-color: $base;
     a {
       #{$link} { color: $darker; }
