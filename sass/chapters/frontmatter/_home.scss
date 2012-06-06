@@ -18,8 +18,10 @@ $scribble : '#{$img}scribble.png';
 
   .actions {
     .act {
-      @include span-columns(3);
-      &:last-child { @include omega; }
+      @include media(24em) {
+        @include span-columns(3);
+        &:last-child { @include omega; }
+      }
     }
     a {
       #{$link} {
