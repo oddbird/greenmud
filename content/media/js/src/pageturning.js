@@ -98,34 +98,36 @@ var GM = (function (GM, $) {
         });
 
         // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
-        $(document).swipe({
-            swipeStatus: function (event, phase, direction, distance) {
-                if (phase === 'end') {
-                    if (direction === 'left') {
-                        pageControls.first().find('.pagenav .next a').click();
-                    } else if (direction === 'right') {
-                        pageControls.first().find('.pagenav .prev a').click();
-                    } else {
-                        $('body').removeClass('swiping-next swiping-prev');
-                    }
-                } else if (phase === 'cancel') {
-                    $('body').removeClass('swiping-next swiping-prev');
-                } else if (phase === 'move') {
-                    if (distance >= 75) {
+        if ('ontouchstart' in window) {
+            $(document).swipe({
+                swipeStatus: function (event, phase, direction, distance) {
+                    if (phase === 'end') {
                         if (direction === 'left') {
-                            $('body').removeClass('swiping-prev').addClass('swiping-next');
+                            pageControls.first().find('.pagenav .next a').click();
                         } else if (direction === 'right') {
-                            $('body').removeClass('swiping-next').addClass('swiping-prev');
+                            pageControls.first().find('.pagenav .prev a').click();
                         } else {
                             $('body').removeClass('swiping-next swiping-prev');
                         }
-                    } else {
+                    } else if (phase === 'cancel') {
                         $('body').removeClass('swiping-next swiping-prev');
+                    } else if (phase === 'move') {
+                        if (distance >= 50) {
+                            if (direction === 'left') {
+                                $('body').removeClass('swiping-prev').addClass('swiping-next');
+                            } else if (direction === 'right') {
+                                $('body').removeClass('swiping-next').addClass('swiping-prev');
+                            } else {
+                                $('body').removeClass('swiping-next swiping-prev');
+                            }
+                        } else {
+                            $('body').removeClass('swiping-next swiping-prev');
+                        }
                     }
-                }
-            },
-            allowPageScroll: 'vertical'
-        });
+                },
+                allowPageScroll: 'vertical'
+            });
+        }
 
         if (History.enabled) {
             // Hook into State Changes
