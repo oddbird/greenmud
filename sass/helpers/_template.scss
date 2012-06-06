@@ -53,7 +53,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
       #{$link} { 
         @include transition(all 200ms);
         @include transform-origin(0, 50%);
-        display: block;
+        display: inline-block;
         color: $darker; 
       }
       #{$focus} { 

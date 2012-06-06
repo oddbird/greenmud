@@ -3,12 +3,16 @@
 [data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
 
 /* Use the following CSS code if you want to have a class per icon */
-#home .social a:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+#home .social a:before, #home .inst:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
 
 #home .social a { position: relative; min-width: 1em; text-indent: -9999px; }
 #home .social a:before { position: absolute; top: 0; left: 0; text-indent: 0; }
 
+#home .inst.access:before { content: "\2731"; }
+
 #home .social [href*="github"]:before { content: "\e003"; }
+
+#home .inst.turn:before { content: "\e005"; }
 
 #home .social [href*="andmeyer"]:before { content: "\e004"; }
 
@@ -49,7 +53,7 @@
 #home .site-title:after, #home [role="main"]:after, #home .footer:after { content: ""; display: table; clear: both; }
 @media (min-width: 53.25em) { #home .site-title, #home [role="main"], #home .footer { max-width: 34.5em; } }
 #home [role="banner"] { -webkit-animation: template-burst 6s 1s ease both; -moz-animation: template-burst 6s 1s ease both; -ms-animation: template-burst 6s 1s ease both; -o-animation: template-burst 6s 1s ease both; animation: template-burst 6s 1s ease both; border-bottom-style: solid; border-bottom-width: 0.083em; padding-bottom: 1.792em; color: #404040; background: #ffe5ff url('../../images/noise.png?1331750152'); background: url('../../images/frontmatter/burst.png?1338952196') no-repeat scroll center -2.5em, #ffe5ff url('../../images/noise.png?1331750152'); border-color: #202020; }
-#home [role="banner"] a:link, #home [role="banner"] a:visited { -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; display: block; color: #404040; }
+#home [role="banner"] a:link, #home [role="banner"] a:visited { -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; display: inline-block; color: #404040; }
 #home [role="banner"] a:hover, #home [role="banner"] a:focus, #home [role="banner"] a:active { -webkit-transform: scale(1.2, 1.2); -moz-transform: scale(1.2, 1.2); -ms-transform: scale(1.2, 1.2); -o-transform: scale(1.2, 1.2); transform: scale(1.2, 1.2); color: #7f0000; }
 #home [role="banner"]:hover h2 { -webkit-animation: hinge 1.5s 10s ease both; -moz-animation: hinge 1.5s 10s ease both; -ms-animation: hinge 1.5s 10s ease both; -o-animation: hinge 1.5s 10s ease both; animation: hinge 1.5s 10s ease both; }
 #home .site-title { padding-top: 1.875em; }
@@ -65,7 +69,8 @@
   #home .social { float: right; margin-right: 0; text-align: right; }
   #home .social a { text-align: left; } }
 
-#home [role="main"] { -webkit-transition: background-position 300ms; -moz-transition: background-position 300ms; -ms-transition: background-position 300ms; -o-transition: background-position 300ms; transition: background-position 300ms; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll 0 -310px; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll, url('../../images/frontmatter/scribble.png?1339003706') no-repeat scroll; background-position: 0 -310px, right 27.5em; }
+#home [role="main"] { -webkit-transition: background-position 300ms; -moz-transition: background-position 300ms; -ms-transition: background-position 300ms; -o-transition: background-position 300ms; transition: background-position 300ms; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll 0 -310px; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll, url('../../images/frontmatter/scribble.png?1339003706') no-repeat scroll; background-position: 0 -310px, right 50em; }
+#home .intro, #home .actions, #home .instructions { overflow: hidden; }
 @media all and (min-width: 24em) { #home .actions .act { width: 48.78%; float: left; margin-right: 2.439%; }
   #home .actions .act:last-child { float: right; margin-right: 0; } }
 #home .actions a:link, #home .actions a:visited { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.083em; padding: 0.542em; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; display: block; color: #202020; text-align: center; }
@@ -75,7 +80,10 @@
 #home .actions a:hover:after, #home .actions a:focus:after, #home .actions a:active:after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; -webkit-animation: fadeIn 1.5s infinite alternate; -moz-animation: fadeIn 1.5s infinite alternate; -ms-animation: fadeIn 1.5s infinite alternate; -o-animation: fadeIn 1.5s infinite alternate; animation: fadeIn 1.5s infinite alternate; }
 #home .actions a:hover[href*="about"], #home .actions a:focus[href*="about"], #home .actions a:active[href*="about"] { background: #ffff72; }
 #home .actions a:hover[href*="title"], #home .actions a:focus[href*="title"], #home .actions a:active[href*="title"] { background: #72ff72; }
-@media (min-width: 32.25em) { #home .inst { width: 48.78%; float: left; margin-right: 2.439%; }
+#home .inst { text-align: center; }
+#home .inst:before { font-size: 2.25em; line-height: 1.111em; margin-bottom: 0.139em; -webkit-transition: color 300ms; -moz-transition: color 300ms; -ms-transition: color 300ms; -o-transition: color 300ms; transition: color 300ms; display: block; color: rgba(128, 128, 128, 0.8); }
+#home .inst:hover:before { color: rgba(32, 32, 32, 0.8); }
+@media all and (min-width: 24em) { #home .inst { width: 48.78%; float: left; margin-right: 2.439%; }
   #home .inst:last-child { float: right; margin-right: 0; } }
-@media (min-width: 53.25em) { #home [role="main"] { background-position: 0 0; background-position: 0 0, right 13.75em; }
-  #home .intro, #home .actions, #home .instructions { padding-left: 20.29%; padding-right: 20.29%; } }
+@media (min-width: 53.25em) { #home [role="main"] { background-position: 0 0; background-position: 0 0, right 16.25em; }
+  #home .intro, #home .actions, #home .instructions { padding-left: 20.29%; padding-right: 20.29%; clear: both; } }

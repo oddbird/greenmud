@@ -1,6 +1,9 @@
 // ----------------------------------------------------------------------------
 // home page
 
+$total-columns: 6;
+$minor-break: 24em;
+
 $img      : 'frontmatter/';
 $homeimg  : '#{$img}home/';
 $swing    : '#{$homeimg}swing.png';
@@ -13,12 +16,16 @@ $scribble : '#{$img}scribble.png';
     @include transition(background-position 300ms);
     background: image-url($swing) no-repeat scroll 0 0 - image-height($swing); 
     background: image-url($swing) no-repeat scroll, image-url($scribble) no-repeat scroll; 
-    background-position: 0 0 - image-height($swing), right rhythm(22);
+    background-position: 0 0 - image-height($swing), right rhythm(40);
+  }
+
+  .intro, .actions, .instructions { 
+    @include clearfix;
   }
 
   .actions {
     .act {
-      @include media(24em) {
+      @include media($minor-break) {
         @include span-columns(3);
         &:last-child { @include omega; }
       }
@@ -46,8 +53,20 @@ $scribble : '#{$img}scribble.png';
     }
   }
 
-  @include at-breakpoint(container-outer-width($total-columns) $total-columns) {
-    .inst {
+  .inst {
+    @extend %icon;
+    text-align: center;
+    &:before { 
+      @include adjust-font-size-to($xxlargepx); 
+      @include trailer(.25,$xxlargepx);
+      @include transition(color 300ms);
+      display: block;
+      color: rgba($mid,$small);
+    }
+    &:hover:before { color: rgba($base,$small); }
+    &.turn { @extend %icon-swipe; }
+    &.access { @extend %icon-cog; }
+    @include media($minor-break) {
       @include span-columns(3);
       &:last-child { @include omega; }
     }
@@ -56,8 +75,11 @@ $scribble : '#{$img}scribble.png';
   @include at-breakpoint($break) {
     [role="main"] { 
       background-position: 0 0; 
-      background-position: 0 0, right rhythm(11); 
+      background-position: 0 0, right rhythm(13); 
     }
-    .intro, .actions, .instructions { @include pad(2,2); }
+    .intro, .actions, .instructions { 
+      @include pad(2,2);
+      clear: both; 
+    }
   }
 }
