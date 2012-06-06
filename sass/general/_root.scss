@@ -1,6 +1,12 @@
+// ----------------------------------------------------------------------------
+// imports
+
+@import "fonts";
+
 /* ----------------------------------------------------------------------------
   root */
 
+$back   : $lightest;
 $base   : $dark;
 $alt    : $blue;
 $accent : $pink;
@@ -10,16 +16,18 @@ $accent : $pink;
 
 html { 
   @include baseline-grid-background($base-line-height);
-  font-family: $jj-stack; 
+  font-family: $jj-stack;
+  background: $back;
   color: $base;
   overflow-x: hidden;
 }
 
+.jj, .susy, .narrator {
+  font-family: $jj-stack;
+}
+
 /* ----------------------------------------------------------------------------
   links */
-
-$link : '&:link, &:visited';
-$focus: '&:hover, &:focus, &:active';
 
 a {
   #{$link} {
