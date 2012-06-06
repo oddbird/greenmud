@@ -25,10 +25,16 @@
   h1, h2, h3, h4 {
     @include adjust-font-size-to($medpx);
     @include leader(1,$largepx);
+    color: $darker;
   }
   p, ol, ul {
     @include trailer;
   }
   ol { list-style-type: decimal; }
   ul { list-style-type: circle; }
+  b { 
+    @extend %allcaps; 
+    color: $darker;
+    white-space: nowrap;
+  }
 }

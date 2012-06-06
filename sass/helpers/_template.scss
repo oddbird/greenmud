@@ -9,25 +9,46 @@ $noise          : image-url('noise.png');
 $background     : $bg-color $noise;
 $border-width   : 2px;
 
+$imgs     : 'frontmatter/';
+$burst    : '#{$imgs}burst.png';
+$bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
+
+@include keyframes(template-burst) {
+  0% { background-position: center rhythm(-8), center; }
+  100% { background-position: center rhythm(-2), center; }
+}
+
 %template {
   background: $background repeat scroll;
   
   .site-title, 
   [role="main"], 
   .footer {
+    @include transition(max-width 300ms);
     @include container($total-columns,$break);
   }
 
   // banner ---------------//
   [role="banner"] {
+    @include animation(template-burst 6s ease both);
     @include trailing-border($border-width,1.5);
-    @include trailer(.5);
     color: $darker;
     background: $pink-hint $noise;
+    background: $bgburst, $pink-hint $noise;
     border-color: $base;
     a {
-      #{$link} { color: $darker; }
+      #{$link} { 
+        @include transition(all 200ms);
+        @include transform-origin(0, 50%);
+        display: block;
+        color: $darker; 
+      }
+      #{$focus} { 
+        @include scale(1.2);
+        color: $red-darker;
+      } 
     }
+    &:hover { h2 { @include animation(hinge 1.5s 10s ease both); } }
   }
   .site-title {
     @include padding-leader(1.5);
@@ -36,7 +57,8 @@ $border-width   : 2px;
 
   // main ---------------//
   [role="main"] {
-    @include trailer;
+    @include padding-leader;
+    @include padding-trailer;
     @extend %type;
   }
 
@@ -48,7 +70,7 @@ $border-width   : 2px;
     @include leading-border($border-width,.5);
     @include padding-trailer(1.5);
     background: $off-green-lightest $noise;
-    border-color: $lighter;
+    border-color: $darker;
     color: $footer-color;
     .license { 
       @extend %allcaps;

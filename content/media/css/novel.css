@@ -1237,13 +1237,31 @@ a:hover, a:focus, a:active { color: magenta; }
 #toggle:before { content: "\2731"; }
 
 /* ---------------------------------------------------------------------------- type */
+.demo .content b { text-transform: uppercase; }
+
 .breadcrumb, #toc li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
 /* ---------------------------------------------------------------------------- defaults */
-.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
+.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; color: #404040; }
 .demo .content p, .demo .content ol, .demo .content ul { margin-bottom: 1.25em; }
 .demo .content ol { list-style-type: decimal; }
 .demo .content ul { list-style-type: circle; }
+.demo .content b { color: #404040; white-space: nowrap; }
+
+@-moz-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@-webkit-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@-o-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@-ms-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
 
 /* ---------------------------------------------------------------------------- controls */
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { width: 1.875em; }

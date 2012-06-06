@@ -4,34 +4,58 @@
 
 /* Use the following CSS code if you want to have a class per icon */
 /* ---------------------------------------------------------------------------- type */
-#home [role="contentinfo"] .license { text-transform: uppercase; }
+#home [role="main"] b, #home [role="contentinfo"] .license { text-transform: uppercase; }
 
 /* ---------------------------------------------------------------------------- defaults */
-#home [role="main"] h1, #home [role="main"] h2, #home [role="main"] h3, #home [role="main"] h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
+#home [role="main"] h1, #home [role="main"] h2, #home [role="main"] h3, #home [role="main"] h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; color: #404040; }
 #home [role="main"] p, #home [role="main"] ol, #home [role="main"] ul { margin-bottom: 1.25em; }
 #home [role="main"] ol { list-style-type: decimal; }
 #home [role="main"] ul { list-style-type: circle; }
+#home [role="main"] b { color: #404040; white-space: nowrap; }
+
+@-moz-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@-webkit-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@-o-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@-ms-keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
+
+@keyframes template-burst { 0% { background-position: center -10em, center; }
+  100% { background-position: center -2.5em, center; } }
 
 #home { background: #edf6ed url('../../images/noise.png?1331750152') repeat scroll; }
-#home .site-title, #home [role="main"], #home .footer { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; }
+#home .site-title, #home [role="main"], #home .footer { -webkit-transition: max-width 300ms; -moz-transition: max-width 300ms; -ms-transition: max-width 300ms; -o-transition: max-width 300ms; transition: max-width 300ms; max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; }
 #home .site-title:after, #home [role="main"]:after, #home .footer:after { content: ""; display: table; clear: both; }
 @media (min-width: 53.25em) { #home .site-title, #home [role="main"], #home .footer { max-width: 34.5em; } }
-#home [role="banner"] { border-bottom-style: solid; border-bottom-width: 0.083em; padding-bottom: 1.792em; margin-bottom: 0.625em; color: #404040; background: #ffe5ff url('../../images/noise.png?1331750152'); border-color: #202020; }
-#home [role="banner"] a:link, #home [role="banner"] a:visited { color: #404040; }
+#home [role="banner"] { -webkit-animation: template-burst 6s ease both; -moz-animation: template-burst 6s ease both; -ms-animation: template-burst 6s ease both; -o-animation: template-burst 6s ease both; animation: template-burst 6s ease both; border-bottom-style: solid; border-bottom-width: 0.083em; padding-bottom: 1.792em; color: #404040; background: #ffe5ff url('../../images/noise.png?1331750152'); background: url('../../images/frontmatter/burst.png?1338952196') no-repeat scroll center -2.5em, #ffe5ff url('../../images/noise.png?1331750152'); border-color: #202020; }
+#home [role="banner"] a:link, #home [role="banner"] a:visited { -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; display: block; color: #404040; }
+#home [role="banner"] a:hover, #home [role="banner"] a:focus, #home [role="banner"] a:active { -webkit-transform: scale(1.2, 1.2); -moz-transform: scale(1.2, 1.2); -ms-transform: scale(1.2, 1.2); -o-transform: scale(1.2, 1.2); transform: scale(1.2, 1.2); color: #7f0000; }
+#home [role="banner"]:hover h2 { -webkit-animation: hinge 1.5s 10s ease both; -moz-animation: hinge 1.5s 10s ease both; -ms-animation: hinge 1.5s 10s ease both; -o-animation: hinge 1.5s 10s ease both; animation: hinge 1.5s 10s ease both; }
 #home .site-title { padding-top: 1.875em; }
 #home .site-title h1 { font-size: 1.5em; line-height: 1.25em; }
-#home [role="main"] { margin-bottom: 1.25em; }
-#home [role="contentinfo"] { border-top-style: solid; border-top-width: 0.083em; padding-top: 0.542em; padding-bottom: 1.875em; background: #d4ead4 url('../../images/noise.png?1331750152'); border-color: #cccccc; color: gray; }
+#home [role="main"] { padding-top: 1.25em; padding-bottom: 1.25em; }
+#home [role="contentinfo"] { border-top-style: solid; border-top-width: 0.083em; padding-top: 0.542em; padding-bottom: 1.875em; background: #d4ead4 url('../../images/noise.png?1331750152'); border-color: #404040; color: gray; }
 #home [role="contentinfo"] .license { font-size: 0.792em; line-height: 1.579em; }
 #home [role="contentinfo"] a:link, #home [role="contentinfo"] a:visited { color: gray; }
 #home [role="contentinfo"] a:hover, #home [role="contentinfo"] a:focus, #home [role="contentinfo"] a:active { color: #404040; }
 #home [role="contentinfo"] b { white-space: nowrap; color: #404040; }
 
+#home [role="main"] { -webkit-transition: background-position 300ms; -moz-transition: background-position 300ms; -ms-transition: background-position 300ms; -o-transition: background-position 300ms; transition: background-position 300ms; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll 0 -310px; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll, url('../../images/frontmatter/scribble.png?1331750152') no-repeat scroll; background-position: 0 -310px, right 27.5em; }
 #home .actions .act { width: 48.78%; float: left; margin-right: 2.439%; }
 #home .actions .act:last-child { float: right; margin-right: 0; }
-#home .actions a:link, #home .actions a:visited { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.083em; padding: 0.542em; display: block; color: #202020; text-align: center; }
+#home .actions a:link, #home .actions a:visited { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.083em; padding: 0.542em; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; display: block; color: #202020; text-align: center; }
+#home .actions a:link:after, #home .actions a:visited:after { content: " »"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 #home .actions a:link[href*="about"], #home .actions a:visited[href*="about"] { background: #ffffbf; }
 #home .actions a:link[href*="title"], #home .actions a:visited[href*="title"] { background: #bfffbf; }
-@media (min-width: 53.25em) { #home .instructions .inst { width: 49.275%; float: left; margin-right: 1.449%; }
-  #home .instructions .inst:last-child { float: right; margin-right: 0; } }
-@media (min-width: 53.25em) { #home .intro, #home .actions { padding-left: 20.29%; padding-right: 20.29%; } }
+#home .actions a:hover:after, #home .actions a:focus:after, #home .actions a:active:after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; -webkit-animation: fadeIn 1.5s infinite alternate; -moz-animation: fadeIn 1.5s infinite alternate; -ms-animation: fadeIn 1.5s infinite alternate; -o-animation: fadeIn 1.5s infinite alternate; animation: fadeIn 1.5s infinite alternate; }
+#home .actions a:hover[href*="about"], #home .actions a:focus[href*="about"], #home .actions a:active[href*="about"] { background: #ffff72; }
+#home .actions a:hover[href*="title"], #home .actions a:focus[href*="title"], #home .actions a:active[href*="title"] { background: #72ff72; }
+@media (min-width: 32.25em) { #home .inst { width: 48.78%; float: left; margin-right: 2.439%; }
+  #home .inst:last-child { float: right; margin-right: 0; } }
+@media (min-width: 53.25em) { #home [role="main"] { background-position: 0 0; background-position: 0 0, right 13.75em; }
+  #home .intro, #home .actions, #home .instructions { padding-left: 20.29%; padding-right: 20.29%; } }

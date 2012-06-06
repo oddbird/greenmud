@@ -1,8 +1,20 @@
 // ----------------------------------------------------------------------------
 // home page
 
+$img      : 'frontmatter/';
+$homeimg  : '#{$img}home/';
+$swing    : '#{$homeimg}swing.png';
+$scribble : '#{$img}scribble.png';
+
 #home {
   @extend %template;
+
+  [role="main"] { 
+    @include transition(background-position 300ms);
+    background: image-url($swing) no-repeat scroll 0 0 - image-height($swing); 
+    background: image-url($swing) no-repeat scroll, image-url($scribble) no-repeat scroll; 
+    background-position: 0 0 - image-height($swing), right rhythm(22);
+  }
 
   .actions {
     .act {
@@ -13,25 +25,37 @@
       #{$link} {
         @include border-radius;
         @include rhythm-borders($border-width,.5);
+        @include transition(all 300ms);
         display: block;
         color: $base;
         text-align: center;
+        &:after { content: " »"; @include opacity(0); }
         &[href*="about"] { background: $yellow-lightest; }
         &[href*="title"] { background: $green-lightest; }
+      }
+      #{$focus} {
+        &:after { 
+          @include opacity(1); 
+          @include animation(fadeIn 1.5s infinite alternate)
+        }
+        &[href*="about"] { background: $yellow-light; }
+        &[href*="title"] { background: $green-light; }
       }
     }
   }
 
-  .instructions {
-    @include at-breakpoint($break) {
-      .inst {
-        @include span-columns(5,$break);
-        &:last-child { @include omega; }
-      }
+  @include at-breakpoint(container-outer-width($total-columns) $total-columns) {
+    .inst {
+      @include span-columns(3);
+      &:last-child { @include omega; }
     }
   }
 
   @include at-breakpoint($break) {
-    .intro, .actions { @include pad(2,2); }
+    [role="main"] { 
+      background-position: 0 0; 
+      background-position: 0 0, right rhythm(11); 
+    }
+    .intro, .actions, .instructions { @include pad(2,2); }
   }
 }
