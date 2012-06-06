@@ -1300,18 +1300,18 @@ a:hover, a:focus, a:active { color: magenta; }
 
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms; -moz-transition: max-height 600ms; -ms-transition: max-height 600ms; -o-transition: max-height 600ms; transition: max-height 600ms; max-height: 0; }
 #toc ol { list-style-type: decimal-leading-zero; list-style-position: inside; }
-#toc .wrap { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
+#toc .wrap { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media all and (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
 #toc.active { max-height: 45em; }
 
 [class^="toc-"] { margin-bottom: 1.25em; }
-@media all and (min-width: 32em) { [class^="toc-"] { width: 65.854%; float: left; margin-right: 2.439%; }
+@media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 /* ---------------------------------------------------------------------------- page */
 .demo .page { background: #ffe5ff; }
-.demo .content { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; }
+.demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; }
 .demo .content:after { content: ""; display: table; clear: both; }
 
 .page { -webkit-transition: left 200ms ease-in-out; -moz-transition: left 200ms ease-in-out; -ms-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; position: relative; left: 0; }
