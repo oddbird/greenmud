@@ -7,7 +7,8 @@ var GM = (function (GM, $) {
         $('input[placeholder], textarea[placeholder]').placeholder();
 
         // local.js
-        GM.toggleControls('#toggle', '.controls');
+        GM.toggleControls('#toggle', '.controls', 'controls');
+        GM.toggleControls('a[rel="contents"]', '#toc', 'toc');
         GM.bodyHeight('.page', 'min-height');
 
         // pageturning.js

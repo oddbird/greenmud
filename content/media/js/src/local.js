@@ -19,7 +19,7 @@ var GM = (function (GM, $) {
         DOWN: 40
     };
 
-    GM.toggleControls = function (toggle, controls) {
+    GM.toggleControls = function (toggle, controls, hash) {
         var doToggle = function () {
             $(controls).toggleClass('active');
             $(toggle).toggleClass('active');
@@ -30,7 +30,7 @@ var GM = (function (GM, $) {
             e.preventDefault();
         });
 
-        if (window.location.hash === '#controls') {
+        if (window.location.hash === '#' + hash) {
             doToggle();
         }
     };
