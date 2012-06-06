@@ -119,10 +119,11 @@ var GM = (function (GM, $) {
                         } else {
                             $('body').removeClass('swiping-next swiping-prev');
                         }
+                    } else {
+                        $('body').removeClass('swiping-next swiping-prev');
                     }
                 }
             },
-            timeThreshold: 10000,
             allowPageScroll: 'vertical'
         });
 
