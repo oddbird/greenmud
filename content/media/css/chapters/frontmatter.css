@@ -3,8 +3,21 @@
 [data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
 
 /* Use the following CSS code if you want to have a class per icon */
+#home .social a:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+#home .social a { position: relative; min-width: 1em; text-indent: -9999px; }
+#home .social a:before { position: absolute; top: 0; left: 0; text-indent: 0; }
+
+#home .social [href*="github"]:before { content: "\e003"; }
+
+#home .social [href*="andmeyer"]:before { content: "\e004"; }
+
+#home .social [href*="twitter"]:before { content: "\e000"; }
+
+#home .social [href*="facebook"]:before { content: "\e001"; }
+
 /* ---------------------------------------------------------------------------- type */
-#home [role="main"] b, #home [role="contentinfo"] .license { text-transform: uppercase; }
+#home [role="main"] b, #home .license { text-transform: uppercase; }
 
 /* ---------------------------------------------------------------------------- defaults */
 #home [role="main"] h1, #home [role="main"] h2, #home [role="main"] h3, #home [role="main"] h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; color: #404040; }
@@ -28,6 +41,9 @@
 @keyframes template-burst { 0% { background-color: #cccccc; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
+#home .social a { display: inline-block; width: 1.25em; }
+#home .social a:before { right: 0; }
+
 #home { background: #edf6ed url('../../images/noise.png?1331750152') repeat scroll; }
 #home .site-title, #home [role="main"], #home .footer { -webkit-transition: max-width 300ms; -moz-transition: max-width 300ms; -ms-transition: max-width 300ms; -o-transition: max-width 300ms; transition: max-width 300ms; max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; }
 #home .site-title:after, #home [role="main"]:after, #home .footer:after { content: ""; display: table; clear: both; }
@@ -40,10 +56,14 @@
 #home .site-title h1 { font-size: 1.5em; line-height: 1.25em; }
 #home [role="main"] { padding-top: 1.25em; padding-bottom: 1.25em; }
 #home [role="contentinfo"] { border-top-style: solid; border-top-width: 0.083em; padding-top: 0.542em; padding-bottom: 1.875em; background: #d4ead4 url('../../images/noise.png?1331750152'); border-color: #404040; color: gray; }
-#home [role="contentinfo"] .license { font-size: 0.792em; line-height: 1.579em; }
 #home [role="contentinfo"] a:link, #home [role="contentinfo"] a:visited { color: gray; }
 #home [role="contentinfo"] a:hover, #home [role="contentinfo"] a:focus, #home [role="contentinfo"] a:active { color: #404040; }
 #home [role="contentinfo"] b { white-space: nowrap; color: #404040; }
+#home .license { font-size: 0.792em; line-height: 1.579em; }
+#home .social li { display: inline-block; }
+@media (min-width: 53.25em) { #home .license, #home .social { width: 49.275%; float: left; margin-right: 1.449%; }
+  #home .social { float: right; margin-right: 0; text-align: right; }
+  #home .social a { text-align: left; } }
 
 #home [role="main"] { -webkit-transition: background-position 300ms; -moz-transition: background-position 300ms; -ms-transition: background-position 300ms; -o-transition: background-position 300ms; transition: background-position 300ms; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll 0 -310px; background: url('../../images/frontmatter/home/swing.png?1338950330') no-repeat scroll, url('../../images/frontmatter/scribble.png?1339003706') no-repeat scroll; background-position: 0 -310px, right 27.5em; }
 @media all and (min-width: 24em) { #home .actions .act { width: 48.78%; float: left; margin-right: 2.439%; }

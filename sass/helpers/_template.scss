@@ -24,6 +24,13 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
   }
 }
 
+%social-icon {
+  @extend %icon-replace;
+  display: inline-block;
+  width: rhythm(1);
+  &:before { right: 0; }
+}
+
 %template {
   background: $background repeat scroll;
   
@@ -78,10 +85,6 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     background: $off-green-lightest $noise;
     border-color: $darker;
     color: $footer-color;
-    .license { 
-      @extend %allcaps;
-      @include adjust-font-size-to($smallpx); 
-    }
     a { 
       #{$link} { color: $footer-color; } 
       #{$focus} { color: $footer-highlight; }
@@ -89,6 +92,26 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     b { 
       white-space: nowrap; 
       color: $footer-highlight
+    }
+  }
+  .license { 
+    @extend %allcaps;
+    @include adjust-font-size-to($smallpx); 
+  }
+  .social {
+    li { display: inline-block; }
+    a { @extend %social-icon; }
+    [href*="twitter"] { @extend %icon-twitter; }
+    [href*="facebook"] { @extend %icon-facebook; }
+    [href*="github"] { @extend %icon-github; }
+    [href*="andmeyer"] { @extend %icon-tumblr; }
+  }
+  @include at-breakpoint($break) {
+    .license, .social { @include span-columns(5,$total-columns); }
+    .social { 
+      @include omega; 
+      text-align: right;
+      a { text-align: left; }
     }
   }
 }
