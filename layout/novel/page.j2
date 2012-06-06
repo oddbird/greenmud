@@ -1,7 +1,7 @@
 {% extends 'novel/base-novel.j2' %}
 
 {% block main %}
-<section id="{{ resource.meta.slug }}" class="main page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.body_class }}">
+<section id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.body_class }}">
 
   {% if resource.meta.template %}
   <header role="banner">
@@ -25,7 +25,7 @@
   <div class="footer">
     {% filter typogrify %}
     <p class="license">
-      <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">Copyright ©</a> 
+      <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">Copyright ©</a>
       2006-2012 <b>{{ resource.meta.author }}</b>
     </p>
     {% endfilter %}

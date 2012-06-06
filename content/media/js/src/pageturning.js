@@ -10,6 +10,7 @@ var GM = (function (GM, $) {
             pageSelector = '.page',
             thisPage = $(pageSelector),
             pageControls = $('.controls'),
+            body = $('body'),
             stateChange = false,
             pageturn,
             // HTML Helper
@@ -71,8 +72,8 @@ var GM = (function (GM, $) {
                 if ($(this).hasClass('break')) {
                     fallback(thisLink);
                 } else {
-                    if ($(this).data('id') && $('.main').data($(this).data('id')) && History.enabled) {
-                        page = $('.main').data($(this).data('id'));
+                    if ($(this).data('id') && body.data($(this).data('id')) && History.enabled) {
+                        page = body.data($(this).data('id'));
                         turnToPage(page);
                     } else {
                         fallback(thisLink);
@@ -153,19 +154,19 @@ var GM = (function (GM, $) {
                         // Set min-height of new page to be window height
                         dataContent.css('min-height', $(window).height());
 
-                        // Store the content as a data-attr on .main
-                        $('.main').data(id, dataContent);
+                        // Store the content as a data-attr on 'body'
+                        body.data(id, dataContent);
                     },
                     ajaxFetchPages = function () {
                         prev = pageControls.first().find('.pagenav .prev a');
                         next = pageControls.first().find('.pagenav .next a');
 
-                        if (!(prev.hasClass('break')) && prev.attr('href') && !($('.main').data(prev.data('id')))) {
+                        if (!(prev.hasClass('break')) && prev.attr('href') && !(body.data(prev.data('id')))) {
                             // Ajax Request the Prev Page
                             $.get(prev.attr('href'), preparePage);
                         }
 
-                        if (!(next.hasClass('break')) && next.attr('href') && !($('.main').data(next.data('id')))) {
+                        if (!(next.hasClass('break')) && next.attr('href') && !(body.data(next.data('id')))) {
                             // Ajax Request the Next Page
                             $.get(next.attr('href'), preparePage);
                         }
@@ -184,7 +185,7 @@ var GM = (function (GM, $) {
                     };
 
                 if ($(pageSelector).attr('id') !== state.id) {
-                    thisPage = $('.main').data(state.id);
+                    thisPage = body.data(state.id);
                     pageNav = thisPage.data('pagenav');
                     if (pageturn === 'prev' || pageturn === 'next') {
                         if (pageturn === 'prev') {
@@ -216,7 +217,7 @@ var GM = (function (GM, $) {
 
             thisPage.data('title', $('title').text());
             thisPage.data('pagenav', $('.controls .pagenav').first().clone());
-            $('.main').data(thisPage.attr('id'), thisPage.clone(true));
+            body.data(thisPage.attr('id'), thisPage.clone(true));
             turnToPage(thisPage, true);
         }
     };
