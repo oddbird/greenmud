@@ -27,10 +27,10 @@ var GM = (function (GM, $) {
 
         $(toggle).click(function (e) {
             doToggle();
-            e.preventDefault();
+            return false;
         });
 
-        if (window.location.hash === '#' + hash) {
+        if (hash && window.location.hash === '#' + hash) {
             doToggle();
         }
     };

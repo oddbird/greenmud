@@ -2,7 +2,7 @@ var GM = (function (GM, $) {
 
     'use strict';
 
-    // Based on https://gist.github.com/854622
+    // Originally based on https://gist.github.com/854622, by Benjamin Lupton (balupton)
     GM.pageTurning = function () {
         var History = window.History,
 
@@ -64,7 +64,7 @@ var GM = (function (GM, $) {
             } else if (thisLink.parent().hasClass('next')) {
                 pageturn = 'next';
             }
-            // Continue as normal for cmd clicks etc
+            // Continue as normal for external links, cmd clicks, etc.
             if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
                 return true;
             } else if (href) {
@@ -73,6 +73,7 @@ var GM = (function (GM, $) {
                     fallback(thisLink);
                 } else {
                     if ($(this).data('id') && body.data($(this).data('id')) && History.enabled) {
+                        $('#toc, a[rel="contents"]').removeClass('active');
                         page = body.data($(this).data('id'));
                         turnToPage(page);
                     } else {
