@@ -59,7 +59,10 @@ $control-focus-color  : $white;
   color: $control-text-color;
   z-index: 900;
   a { @extend %control-link; }
-  &.active { @include translateY(0); }
+  &.active, .showcontrols & { @include translateY(0); }
+  .showcontrols & { 
+    @include animation(fadeInDown 300ms ease both);
+  }
 }
 
 // ----------------------------------------------------------------------------

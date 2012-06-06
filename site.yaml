@@ -12,8 +12,10 @@ plugins:
 context:
 meta:
     nodemeta: meta.yaml
-    novel: Into The Green Green Mud
-    author: Eric Meyer
+    novel: 'Into the Green Green Mud'
+    tagline: 'a novel (with pictures)'
+    author: 'Eric A. Meyer'
+    composer: 'Teacup Gorilla'
     keywords: jj, susy, novel, graphic, pictures, love
     analytics:
         id: UA-824108-5

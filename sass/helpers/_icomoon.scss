@@ -1,0 +1,58 @@
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'IcoMoon';
+  content: attr(data-icon);
+  speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+%icon:before {
+  font-family: 'IcoMoon';
+  font-style: normal;
+  speak: none;
+}
+
+%icon-replace {
+  @extend %icon;
+  position: relative;
+  min-width: 1em;
+  text-indent: -9999px;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+  }
+}
+
+$icon-home        : "\2617";
+$icon-list        : "\2630";
+$icon-arrow-right : "\2192";
+$icon-arrow-left  : "\2190";
+$icon-cog         : "\2731";
+$icon-info-sign   : "\2370";
+$icon-download    : "\2913";
+$icon-facebook    : "\e000";
+$icon-twitter     : "\e001";
+$icon-vimeo       : "\e002";
+$icon-github      : "\e003";
+$icon-tumblr      : "\e004";
+$icon-checkmark   : "\2714";
+$icon-x           : "\2718";
+$icon-play        : "\25ba";
+
+%icon-home:before         { content: $icon-home         ; }
+%icon-list:before         { content: $icon-list         ; }
+%icon-arrow-right:before  { content: $icon-arrow-right  ; }
+%icon-arrow-left:before   { content: $icon-arrow-left   ; }
+%icon-cog:before          { content: $icon-cog          ; }
+%icon-info-sign:before    { content: $icon-info-sign    ; }
+%icon-download:before     { content: $icon-download     ; }
+%icon-facebook:before     { content: $icon-facebook     ; }
+%icon-twitter:before      { content: $icon-twitter      ; }
+%icon-vimeo:before        { content: $icon-vimeo        ; }
+%icon-github:before       { content: $icon-github       ; }
+%icon-tumblr:before       { content: $icon-tumblr       ; }
+%icon-checkmark:before    { content: $icon-checkmark    ; }
+%icon-x:before            { content: $icon-x            ; }
+%icon-play:before         { content: $icon-play         ; }

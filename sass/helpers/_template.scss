@@ -1,0 +1,67 @@
+// ----------------------------------------------------------------------------
+// template
+
+$total-columns  : 6;
+$break          : 10;
+
+$bg-color       : $off-green-hint;
+$noise          : image-url('noise.png');
+$background     : $bg-color $noise;
+$border-width   : 2px;
+
+%template {
+  background: $background repeat scroll;
+  
+  .site-title, 
+  [role="main"], 
+  .footer {
+    @include container($total-columns,$break);
+  }
+
+  // banner ---------------//
+  [role="banner"] {
+    @include trailing-border($border-width,1.5);
+    @include trailer(.5);
+    color: $darker;
+    background: $pink-lightest $noise;
+    border-color: $base;
+    a {
+      #{$link} { color: $darker; }
+    }
+  }
+  .site-title {
+    @include padding-leader(1.5);
+    h1 { @include adjust-font-size-to($largepx); }
+  }
+
+  // main ---------------//
+  [role="main"] {
+    @include trailer;
+    @extend %type;
+  }
+
+  // footer ---------------//
+  $footer-color: $mid;
+  $footer-highlight: $darker;
+
+  [role="contentinfo"] {
+    @include leading-border($border-width,.5);
+    @include padding-trailer(1.5);
+    background: $off-green-lightest $noise;
+    border-color: $lighter;
+    color: $footer-color;
+    .license { 
+      @extend %allcaps;
+      @include adjust-font-size-to($smallpx); 
+    }
+    a { 
+      #{$link} { color: $footer-color; } 
+      #{$focus} { color: $footer-highlight; }
+    }
+    b { 
+      white-space: nowrap; 
+      color: $footer-highlight
+    }
+  }
+}
+

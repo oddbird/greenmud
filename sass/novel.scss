@@ -3,10 +3,8 @@
 
 @import "base/base";
 @import "compass/reset";
-
-@import "general/fonts";
-@import "general/type";
 @import "general/root";
+@import "helpers/helpers";
 
 @import "modules/controls";
 @import "modules/pages";

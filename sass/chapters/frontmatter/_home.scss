@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------------
+// home page
+
+#home {
+  @extend %template;
+
+  .actions {
+    .act {
+      @include span-columns(3);
+      &:last-child { @include omega; }
+    }
+    a {
+      #{$link} {
+        @include border-radius;
+        @include rhythm-borders($border-width,.5);
+        display: block;
+        color: $base;
+        text-align: center;
+        &[href*="about"] { background: $yellow-lightest; }
+        &[href*="title"] { background: $green-lightest; }
+      }
+    }
+  }
+
+  .instructions {
+    @include at-breakpoint($break) {
+      .inst {
+        @include span-columns(5,$break);
+        &:last-child { @include omega; }
+      }
+    }
+  }
+
+  @include at-breakpoint($break) {
+    .intro, .actions { @include pad(2,2); }
+  }
+}

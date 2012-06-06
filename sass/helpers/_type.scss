@@ -1,0 +1,34 @@
+/* ----------------------------------------------------------------------------
+  type */
+
+%caps {
+  letter-spacing: .05em;
+}
+
+%allcaps {
+  @extend .caps;
+  text-transform: uppercase;
+}
+
+%smallcaps {
+  font-variant: small-caps;
+}
+
+%ellipsis {
+  @include ellipsis;
+}
+
+/* ----------------------------------------------------------------------------
+  defaults */
+
+%type {
+  h1, h2, h3, h4 {
+    @include adjust-font-size-to($medpx);
+    @include leader(1,$largepx);
+  }
+  p, ol, ul {
+    @include trailer;
+  }
+  ol { list-style-type: decimal; }
+  ul { list-style-type: circle; }
+}

@@ -16,42 +16,12 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-@font-face { font-family: 'IcoMoon'; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format("embedded-opentype"), url('../fonts/icomoon/IcoMoon.svg#IcoMoon') format("svg"), url('../fonts/icomoon/IcoMoon.woff') format("woff"), url('../fonts/icomoon/IcoMoon.ttf') format("truetype"); font-weight: normal; font-style: normal; }
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
-
-/* Use the following CSS code if you want to have a class per icon */
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
-
-#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
-
-[rel="home"]:before { content: "\2617"; }
-
-[rel="contents"]:before { content: "\2630"; }
-
-[rel="next"]:before { content: "\2192"; }
-
-[rel="prev"]:before { content: "\2190"; }
-
-#toggle:before { content: "\2731"; }
-
 /* ---------------------------------------------------------------------------- fonts */
+@font-face { font-family: "IcoMoon"; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format('eot'), url('../fonts/icomoon/IcoMoon.woff') format('woff'), url('../fonts/icomoon/IcoMoon.ttf') format('truetype'), url('../fonts/icomoon/IcoMoon.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
+
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-regular-webfont.eot'); src: url('../fonts/jj/greenmudjj-regular-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-regular-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-regular-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-regular-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../fonts/jj/greenmudjj-italic-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJItalic') format('svg'); font-weight: normal; font-style: italic; }
-
-/* ---------------------------------------------------------------------------- type */
-.jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
-
-.breadcrumb, #toc li { overflow: hidden; max-height: 1.25em; white-space: nowrap; word-wrap: break-word; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
-
-/* ---------------------------------------------------------------------------- defaults */
-.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.5em; line-height: 1.25em; margin-top: 0.833em; }
-.demo .content p, .demo .content ol, .demo .content ul { margin-bottom: 1.25em; }
-.demo .content ol { list-style-type: decimal; }
-.demo .content ul { list-style-type: circle; }
+@font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../fonts/jj/greenmudjj-italic-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: italic; }
 
 /* ---------------------------------------------------------------------------- root */
 @-moz-keyframes flash { 0% { opacity: 1; }
@@ -1239,11 +1209,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.25em; }
 
-html { font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
+html { font-family: "GreenMudJJRegular", sans-serif; background: #dfdfdf; color: #606060; overflow-x: hidden; }
+
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
 /* ---------------------------------------------------------------------------- links */
 a:link, a:visited { text-decoration: none; color: blue; }
 a:hover, a:focus, a:active { color: magenta; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
+
+/* Use the following CSS code if you want to have a class per icon */
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
+
+[rel="home"]:before { content: "\2617"; }
+
+[rel="contents"]:before { content: "\2630"; }
+
+[rel="next"]:before { content: "\2192"; }
+
+[rel="prev"]:before { content: "\2190"; }
+
+#toggle:before { content: "\2731"; }
+
+/* ---------------------------------------------------------------------------- type */
+.breadcrumb, #toc li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+/* ---------------------------------------------------------------------------- defaults */
+.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
+.demo .content p, .demo .content ol, .demo .content ul { margin-bottom: 1.25em; }
+.demo .content ol { list-style-type: decimal; }
+.demo .content ul { list-style-type: circle; }
 
 /* ---------------------------------------------------------------------------- controls */
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { width: 1.875em; }
@@ -1257,7 +1257,8 @@ a:hover, a:focus, a:active { color: magenta; }
 #toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform: translateY(-3.75em); -moz-transform: translateY(-3.75em); -ms-transform: translateY(-3.75em); -o-transform: translateY(-3.75em); transform: translateY(-3.75em); padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; }
-.controls.active { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
+.controls.active, .showcontrols .controls { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
+.showcontrols .controls { -webkit-animation: fadeInDown 300ms ease both; -moz-animation: fadeInDown 300ms ease both; -ms-animation: fadeInDown 300ms ease both; -o-animation: fadeInDown 300ms ease both; animation: fadeInDown 300ms ease both; }
 
 .meta { margin: 0; padding: 0; border: 0; overflow: hidden; float: left; width: 3.75em; }
 .meta li { list-style-image: none; list-style-type: none; margin-left: 0; white-space: nowrap; display: inline; float: left; padding-left: 0; padding-right: 0; }
@@ -1281,18 +1282,18 @@ a:hover, a:focus, a:active { color: magenta; }
 
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms; -moz-transition: max-height 600ms; -ms-transition: max-height 600ms; -o-transition: max-height 600ms; transition: max-height 600ms; max-height: 0; }
 #toc ol { list-style-type: decimal-leading-zero; list-style-position: inside; }
-#toc .wrap { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
+#toc .wrap { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media all and (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
 #toc.active { max-height: 45em; }
 
 [class^="toc-"] { margin-bottom: 1.25em; }
-@media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }
+@media all and (min-width: 32em) { [class^="toc-"] { width: 65.854%; float: left; margin-right: 2.439%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 /* ---------------------------------------------------------------------------- page */
 .demo .page { background: #ffe5ff; }
-.demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; }
+.demo .content { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; }
 .demo .content:after { content: ""; display: table; clear: both; }
 
 .page { -webkit-transition: left 200ms ease-in-out; -moz-transition: left 200ms ease-in-out; -ms-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; position: relative; left: 0; }
