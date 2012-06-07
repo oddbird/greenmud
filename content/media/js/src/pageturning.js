@@ -46,7 +46,7 @@ var GM = (function (GM, $) {
             };
 
         // Hijack all internal links
-        $('body').on('click', 'a', function (e) {
+        body.on('click', 'a', function (e) {
             var thisLink = $(this),
                 href = $(this).attr('href'),
                 page,
@@ -107,21 +107,27 @@ var GM = (function (GM, $) {
                         } else if (direction === 'right') {
                             pageControls.first().find('.pagenav .prev a').click();
                         } else {
-                            $('body').removeClass('swiping-next swiping-prev');
+                            body.removeClass('swiping-next swiping-prev');
                         }
                     } else if (phase === 'cancel') {
-                        $('body').removeClass('swiping-next swiping-prev');
+                        body.removeClass('swiping-next swiping-prev');
                     } else if (phase === 'move') {
                         if (distance >= 50) {
                             if (direction === 'left') {
-                                $('body').removeClass('swiping-prev').addClass('swiping-next');
+                                body.removeClass('swiping-prev');
+                                if (pageControls.first().find('.pagenav .next a').attr('href')) {
+                                    body.addClass('swiping-next');
+                                }
                             } else if (direction === 'right') {
-                                $('body').removeClass('swiping-next').addClass('swiping-prev');
+                                body.removeClass('swiping-next');
+                                if (pageControls.first().find('.pagenav .prev a').attr('href')) {
+                                    body.addClass('swiping-prev');
+                                }
                             } else {
-                                $('body').removeClass('swiping-next swiping-prev');
+                                body.removeClass('swiping-next swiping-prev');
                             }
                         } else {
-                            $('body').removeClass('swiping-next swiping-prev');
+                            body.removeClass('swiping-next swiping-prev');
                         }
                     }
                 },
@@ -176,7 +182,7 @@ var GM = (function (GM, $) {
                         }
                     },
                     replacePage = function (newPage, newPageNav) {
-                        $('body').attr('class', newPage.data('body-class'));
+                        body.attr('class', newPage.data('body-class'));
                         document.title = title;
                         $('title').text(title);
                         $.scrollTo(0);
