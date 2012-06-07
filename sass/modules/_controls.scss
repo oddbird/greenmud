@@ -55,22 +55,16 @@ $control-focus-color  : $white;
   @include stretch-x;
   @include adjust-leading-to($control-line);
   @include text-shadow(rgba($darkest,$small) 0 1px 0);
-  @include transition(all 200ms);
-  @include translateY(rhythm(-3));
   padding: 0 rhythm($control-line) 0 $grid-padding;
   min-width: rhythm($control-line*4);
   background: $darker;
   color: $control-text-color;
   z-index: 900;
-  .no-csstransforms & { display: none; }
   a { @extend %control-link; }
-  &.active, .showcontrols & { 
-    @include translateY(0); 
-    .no-csstransforms & { display: block; }
-  }
-  .showcontrols & { 
-    @include animation(fadeInDown 300ms ease both);
-  }
+
+  // toggle controls ------//
+  display: none;
+  &.active, .showcontrols & { display: block; }
 }
 
 // ----------------------------------------------------------------------------
@@ -159,11 +153,11 @@ $breadcrumb-break: 50em;
 
   // show and hide toc
   @include transition(max-height 600ms);
+  height: 0;
   max-height: 0;
-  .no-csstransforms & { display: none; }
   &.active { 
+    height: auto;
     max-height: 45em; 
-    .no-csstransforms & { display: block; }
   }
 }
 
