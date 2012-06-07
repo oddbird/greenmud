@@ -35,7 +35,14 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
   @include text-shadow(rgba($white,$small) 0 1px 1px);
   @include background($background repeat scroll);
   @include background($noise, 
-    linear-gradient(bottom left, $yellow-hint, $off-green-hint));  
+    linear-gradient(bottom left, $yellow-hint, $off-green-hint)
+  );  
+  b { 
+    @extend %allcaps; 
+    white-space: nowrap;
+    color: $darker;
+  }
+
   .site-title, 
   [role="main"], 
   .footer {
@@ -90,10 +97,6 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     a { 
       #{$link} { color: $footer-color; } 
       #{$focus} { color: $footer-highlight; }
-    }
-    b { 
-      white-space: nowrap; 
-      color: $footer-highlight
     }
   }
   .license { 
