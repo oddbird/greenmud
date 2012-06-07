@@ -63,7 +63,6 @@ $scribble : '#{$img}scribble.png';
       display: block;
       color: rgba($mid,$small);
     }
-    &:hover:before { color: rgba($base,$small); }
     &.turn { @extend %icon-swipe; }
     &.access { @extend %icon-cog; }
     @include media($minor-break) {
