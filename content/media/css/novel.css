@@ -1275,7 +1275,9 @@ a:hover, a:focus, a:active { color: magenta; }
 #toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform: translateY(-3.75em); -moz-transform: translateY(-3.75em); -ms-transform: translateY(-3.75em); -o-transform: translateY(-3.75em); transform: translateY(-3.75em); padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; }
+.no-csstransforms .controls { display: none; }
 .controls.active, .showcontrols .controls { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
+.no-csstransforms .controls.active, .no-csstransforms .showcontrols .controls { display: block; }
 .showcontrols .controls { -webkit-animation: fadeInDown 300ms ease both; -moz-animation: fadeInDown 300ms ease both; -ms-animation: fadeInDown 300ms ease both; -o-animation: fadeInDown 300ms ease both; animation: fadeInDown 300ms ease both; }
 
 .meta { margin: 0; padding: 0; border: 0; overflow: hidden; float: left; width: 3.75em; }
@@ -1303,7 +1305,9 @@ a:hover, a:focus, a:active { color: magenta; }
 #toc .wrap { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media all and (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
+.no-csstransforms #toc { display: none; }
 #toc.active { max-height: 45em; }
+.no-csstransforms #toc.active { display: block; }
 
 [class^="toc-"] { margin-bottom: 1.25em; }
 @media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }

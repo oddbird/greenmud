@@ -60,8 +60,12 @@ $control-focus-color  : $white;
   background: $darker;
   color: $control-text-color;
   z-index: 900;
+  .no-csstransforms & { display: none; }
   a { @extend %control-link; }
-  &.active, .showcontrols & { @include translateY(0); }
+  &.active, .showcontrols & { 
+    @include translateY(0); 
+    .no-csstransforms & { display: block; }
+  }
   .showcontrols & { 
     @include animation(fadeInDown 300ms ease both);
   }
@@ -157,7 +161,11 @@ $breadcrumb-break: 50em;
   // show and hide toc
   @include transition(max-height 600ms);
   max-height: 0;
-  &.active { max-height: 45em; }
+  .no-csstransforms & { display: none; }
+  &.active { 
+    max-height: 45em; 
+    .no-csstransforms & { display: block; }
+  }
 }
 
 [class^="toc-"] { 
