@@ -1217,15 +1217,6 @@ html { font-family: "GreenMudJJRegular", sans-serif; background: #dfdfdf; color:
 a:link, a:visited { text-decoration: none; color: blue; }
 a:hover, a:focus, a:active { color: magenta; }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
-
-/* Use the following CSS code if you want to have a class per icon */
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
-
-#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
-
 [rel="home"]:before { content: "\2617"; }
 
 [rel="contents"]:before { content: "\2630"; }
@@ -1235,6 +1226,15 @@ a:hover, a:focus, a:active { color: magenta; }
 [rel="prev"]:before { content: "\2190"; }
 
 #toggle:before { content: "\2731"; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
+
+/* Use the following CSS code if you want to have a class per icon */
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
 
 /* ---------------------------------------------------------------------------- type */
 .demo .content b { text-transform: uppercase; }

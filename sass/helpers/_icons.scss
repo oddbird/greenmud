@@ -1,0 +1,26 @@
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'IcoMoon';
+  content: attr(data-icon);
+  speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+%icon:before {
+  font-family: 'IcoMoon';
+  font-style: normal;
+  speak: none;
+}
+
+%icon-replace {
+  @extend %icon;
+  position: relative;
+  min-width: 1em;
+  text-indent: -9999px;
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+  }
+}

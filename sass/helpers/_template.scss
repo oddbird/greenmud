@@ -98,15 +98,20 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
   }
   .license { 
     @extend %allcaps;
-    @include adjust-font-size-to($smallpx); 
+    @include adjust-font-size-to($smallpx,1.5); 
   }
   .social {
+    @include adjust-font-size-to($largepx); 
     li { display: inline-block; }
-    a { @extend %social-icon; }
+    a { 
+      @extend %social-icon; 
+      #{$link} { color: rgba($footer-color,.5); }
+      #{$focus} { color: $footer-highlight; }
+    }
     [href*="twitter"] { @extend %icon-twitter; }
     [href*="facebook"] { @extend %icon-facebook; }
     [href*="github"] { @extend %icon-github; }
-    [href*="andmeyer"] { @extend %icon-tumblr; }
+    [href*="andmeyer"] { @extend %icon-blog; }
     [href*="vimeo"] { @extend %icon-vimeo; }
   }
   @include at-breakpoint($break) {

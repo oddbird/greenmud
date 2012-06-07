@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
-
-/* Use the following CSS code if you want to have a class per icon */
-#home .social a:before, #about .social a:before, #home .inst:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
-
-#home .social a, #about .social a { position: relative; min-width: 1em; text-indent: -9999px; }
-#home .social a:before, #about .social a:before { position: absolute; top: 0; left: 0; text-indent: 0; }
-
 #home .inst.access:before { content: "\2731"; }
 
 #home .social [href*="vimeo"]:before, #about .social [href*="vimeo"]:before { content: "\e002"; }
@@ -16,11 +7,20 @@
 
 #home .inst.turn:before { content: "\e005"; }
 
-#home .social [href*="andmeyer"]:before, #about .social [href*="andmeyer"]:before { content: "\e004"; }
-
 #home .social [href*="twitter"]:before, #about .social [href*="twitter"]:before { content: "\e000"; }
 
 #home .social [href*="facebook"]:before, #about .social [href*="facebook"]:before { content: "\e001"; }
+
+#home .social [href*="andmeyer"]:before, #about .social [href*="andmeyer"]:before { content: "\e004"; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
+
+/* Use the following CSS code if you want to have a class per icon */
+#home .social a:before, #about .social a:before, #home .inst:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+#home .social a, #about .social a { position: relative; min-width: 1em; text-indent: -9999px; }
+#home .social a:before, #about .social a:before { position: absolute; top: 0; left: 0; text-indent: 0; }
 
 /* ---------------------------------------------------------------------------- type */
 #home [role="main"] b, #about [role="main"] b, #home .license, #about .license { text-transform: uppercase; }
@@ -65,8 +65,11 @@
 #home [role="contentinfo"] a:link, #about [role="contentinfo"] a:link, #home [role="contentinfo"] a:visited, #about [role="contentinfo"] a:visited { color: gray; }
 #home [role="contentinfo"] a:hover, #about [role="contentinfo"] a:hover, #home [role="contentinfo"] a:focus, #about [role="contentinfo"] a:focus, #home [role="contentinfo"] a:active, #about [role="contentinfo"] a:active { color: #404040; }
 #home [role="contentinfo"] b, #about [role="contentinfo"] b { white-space: nowrap; color: #404040; }
-#home .license, #about .license { font-size: 0.792em; line-height: 1.579em; }
+#home .license, #about .license { font-size: 0.792em; line-height: 2.368em; }
+#home .social, #about .social { font-size: 1.5em; line-height: 1.25em; }
 #home .social li, #about .social li { display: inline-block; }
+#home .social a:link, #about .social a:link, #home .social a:visited, #about .social a:visited { color: rgba(128, 128, 128, 0.5); }
+#home .social a:hover, #about .social a:hover, #home .social a:focus, #about .social a:focus, #home .social a:active, #about .social a:active { color: #404040; }
 @media (min-width: 53.25em) { #home .license, #about .license, #home .social, #about .social { width: 49.275%; float: left; margin-right: 1.449%; }
   #home .social, #about .social { float: right; margin-right: 0; text-align: right; }
   #home .social a, #about .social a { text-align: left; } }
