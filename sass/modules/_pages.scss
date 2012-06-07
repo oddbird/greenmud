@@ -5,7 +5,7 @@
 // temporary page styles
 
 .demo {
-  .page { background: $pink-hint; }
+  .page { background: $pink-hint image-url('noise.png'); }
   .content {
     @extend %type;
     @include container;

@@ -1209,7 +1209,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.25em; }
 
-html { font-family: "GreenMudJJRegular", sans-serif; background: #dfdfdf; color: #606060; overflow-x: hidden; }
+html { font-family: "GreenMudJJRegular", sans-serif; background: #dfdfdf url('../images/noise.png?1331750152'); color: #606060; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
@@ -1309,7 +1309,7 @@ a:hover, a:focus, a:active { color: magenta; }
 #toc.active { height: auto; max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
-.demo .page { background: #ffe5ff; }
+.demo .page { background: #ffe5ff url('../images/noise.png?1331750152'); }
 .demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; }
 .demo .content:after { content: ""; display: table; clear: both; }
 

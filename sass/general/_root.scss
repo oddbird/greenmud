@@ -17,7 +17,7 @@ $accent : $pink;
 html { 
   @include baseline-grid-background($base-line-height);
   font-family: $jj-stack;
-  background: $back;
+  background: $back image-url('noise.png');
   color: $base;
   overflow-x: hidden;
 }
