@@ -15,7 +15,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
 @include keyframes(template-burst) {
   0% { 
-    background-color: $lighter;
+    background-color: $blue-hint;
     background-position: center rhythm(-8), center; 
   }
   100% { 
@@ -45,7 +45,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   // banner ---------------//
   [role="banner"] {
-    @include animation(template-burst 6s 1s ease both);
+    @include animation(template-burst 6s ease both);
     @include trailing-border($border-width,1.5);
     color: $darker;
     background: $pink-hint $noise;

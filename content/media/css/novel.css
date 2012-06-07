@@ -1248,19 +1248,19 @@ a:hover, a:focus, a:active { color: magenta; }
 .demo .content ul { list-style-type: circle; }
 .demo .content b { color: #404040; white-space: nowrap; }
 
-@-moz-keyframes template-burst { 0% { background-color: #cccccc; background-position: center -10em, center; }
+@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-@-webkit-keyframes template-burst { 0% { background-color: #cccccc; background-position: center -10em, center; }
+@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-@-o-keyframes template-burst { 0% { background-color: #cccccc; background-position: center -10em, center; }
+@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-@-ms-keyframes template-burst { 0% { background-color: #cccccc; background-position: center -10em, center; }
+@-ms-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-@keyframes template-burst { 0% { background-color: #cccccc; background-position: center -10em, center; }
+@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
 /* ---------------------------------------------------------------------------- controls */
