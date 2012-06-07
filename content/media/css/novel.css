@@ -1239,12 +1239,12 @@ a:hover, a:focus, a:active { color: magenta; }
 /* ---------------------------------------------------------------------------- type */
 .demo .content b { text-transform: uppercase; }
 
-.breadcrumb, #toc li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+.breadcrumb, [class^="toc-"] .book, [class^="toc-"] li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
 /* ---------------------------------------------------------------------------- defaults */
 .demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; color: #404040; }
 .demo .content p, .demo .content ol, .demo .content ul { margin-bottom: 1.25em; }
-.demo .content ol { list-style-type: decimal; }
+.demo .content ol { list-style-type: decimal-leading-zero; }
 .demo .content ul { list-style-type: circle; }
 .demo .content b { color: #404040; white-space: nowrap; }
 
@@ -1297,16 +1297,16 @@ a:hover, a:focus, a:active { color: magenta; }
 
 .next { float: right; }
 
+[class^="toc-"] { margin-bottom: 1.25em; }
+[class^="toc-"] ol { list-style-type: decimal-leading-zero; list-style-position: inside; }
+@media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }
+  [class^="toc-"]:last-child { float: right; margin-right: 0; } }
+
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms; -moz-transition: max-height 600ms; -ms-transition: max-height 600ms; -o-transition: max-height 600ms; transition: max-height 600ms; height: 0; max-height: 0; }
-#toc ol { list-style-type: decimal-leading-zero; list-style-position: inside; }
 #toc .wrap { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media all and (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
 #toc.active { height: auto; max-height: 45em; }
-
-[class^="toc-"] { margin-bottom: 1.25em; }
-@media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }
-  [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 /* ---------------------------------------------------------------------------- page */
 .demo .page { background: #ffe5ff; }

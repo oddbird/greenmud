@@ -1,0 +1,40 @@
+// ----------------------------------------------------------------------------
+// contents
+
+[class^="toc-"] { 
+  @include trailer;
+  ol { 
+    list-style-type: decimal-leading-zero; 
+    list-style-position: inside;
+  }
+  .book, li { @extend %ellipsis; }
+  @include media(32em) {
+    @include span-columns(4,$total-columns); 
+    &:last-child { @include omega; }
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// header toc
+
+#toc {
+  @include clearfix;
+  background: $darkest;
+  color: $control-text-color;
+  a { @extend %control-link; }
+  .wrap { 
+    @include container; 
+    @include padding-leader($control-line+.5);
+    @include media($breadcrumb-break) { margin-left: rhythm($control-line*2); }
+  }
+
+  // show and hide toc
+  @include transition(max-height 600ms);
+  height: 0;
+  max-height: 0;
+  &.active { 
+    height: auto;
+    max-height: 45em; 
+  }
+}

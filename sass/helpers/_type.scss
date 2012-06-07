@@ -30,7 +30,7 @@
   p, ol, ul {
     @include trailer;
   }
-  ol { list-style-type: decimal; }
+  ol { list-style-type: decimal-leading-zero; }
   ul { list-style-type: circle; }
   b { 
     @extend %allcaps; 

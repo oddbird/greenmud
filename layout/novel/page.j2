@@ -7,6 +7,10 @@
   {% endif %}
 
   <div class="content"  role="main">
+    {% if resource.meta.slug == 'contents' %}
+    {% include "novel/_toc-lists.j2" %}
+    {% endif %}
+
     {% filter typogrify %}
     {% block page %}{% endblock page %}
     {% endfilter %}
