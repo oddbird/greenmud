@@ -16,6 +16,7 @@ $control-focus-color  : $white;
   &:before {
     @include adjust-font-size-to($control-icon,$control-line);
     right: 0;
+    text-align: center;
   }
 }
 
@@ -34,6 +35,7 @@ $control-focus-color  : $white;
   @extend %control-icon;
   @extend %icon-cog;
   @include text-shadow(rgba($darkest,$small) 0 0 3px);
+  @include adjust-leading-to($control-line);
   position: absolute;
   top: 0;
   right: 0;
@@ -121,10 +123,7 @@ $breadcrumb-break: 50em;
 .pagenav { 
   float: right;
   width: rhythm($control-line*2);
-  a {
-    display: block;
-    width: rhythm($control-line);
-  }
+  a { display: block; }
 }
 .prev { float: left; }
 .next { float: right; }

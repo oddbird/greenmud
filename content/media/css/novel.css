@@ -1265,13 +1265,13 @@ a:hover, a:focus, a:active { color: magenta; }
 
 /* ---------------------------------------------------------------------------- controls */
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { width: 1.875em; }
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; text-align: center; }
 
 .controls a:link, #toc a:link, .controls a:visited, #toc a:visited { color: #dfdfdf; }
 .controls a:hover, #toc a:hover, .controls a:focus, #toc a:focus, .controls a:active, #toc a:active { color: gray; }
 .controls a[href]:hover, #toc a[href]:hover, .controls a[href]:focus, #toc a[href]:focus, .controls a[href]:active, #toc a[href]:active { color: white; }
 
-#toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
+#toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; line-height: 1.875em; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
 #toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; -webkit-transition: all 200ms; -moz-transition: all 200ms; -ms-transition: all 200ms; -o-transition: all 200ms; transition: all 200ms; -webkit-transform: translateY(-3.75em); -moz-transform: translateY(-3.75em); -ms-transform: translateY(-3.75em); -o-transform: translateY(-3.75em); transform: translateY(-3.75em); padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; }
@@ -1294,7 +1294,7 @@ a:hover, a:focus, a:active { color: magenta; }
 @media all and (min-width: 50em) { .breadcrumb { font-size: 1em; line-height: 1.875em; max-height: 1.875em; text-align: left; } }
 
 .pagenav { float: right; width: 3.75em; }
-.pagenav a { display: block; width: 1.875em; }
+.pagenav a { display: block; }
 
 .prev { float: left; }
 
