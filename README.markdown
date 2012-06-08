@@ -1,34 +1,65 @@
-Into The Green Green Mud
-========================
+# Into The Green Green Mud
 
 [A Novel](http://greengreenmud.com/) (with pictures)
 by [Eric Meyer](http://eric.andmeyer.com/)
 
-The Novel
----------
+## The Project
 
-Words move, images shift and stranded characters wander through the rubble. The clouds come and go. And so on. And so on. Entropy is the passage of more than time. Sometimes people. Often ketchup. Pass the time. Pass the time. Love is only what it is, and often only a shadow of that. The sun moves from the three hand to the four and squirrels are collecting nuts, so where does that leave us? Alone and alone and alone.
+A story of love, and after-love. 
+Eternity is a fickle thing,
+and the moments just keep coming.
+Clouds shift,
+the sun moves past,
+and squirrels are collecting nuts,
+so where does that leave us?
 
-The Project
------------
+_Into the Green Green Mud_ 
+is an ode to change & impermanence,
+both in content and medium.
+Starting from a simple text "script"
+we are creating a number of inter-related "performances"
+in various media.
+This version includes text, images, code, and animation,
+with a soundtrack that you can download and listen to.
+Future versions might include
+a printed book,
+a live multimedia performance,
+sky writing,
+or anything else we decide to explore.
 
-Experimenting with an initial digital publication, using HTML5 and CSS3 to add interaction, responsive design and movement to the images. Followed by a short run of hard copies for people with real coffee tables.
+- [Blog](http://eric.andmeyer.com/)
+- [Videos](https://vimeo.com/album/1858141)
+- [Facebook](https://www.facebook.com/greengreenmud)
+- [Twitter](http://twitter.com/eriiicam/)
+- [BWW Interview][bww]
+- [RocketHub Interview][rockethub]
+- [Code](https://github.com/oddbird/greenmud)
 
-What does a digital graphic novel look like?
+[bww]: http://www.boulderwritersworkshop.org/2012/03/28/into-the-green-mud-a-novel-with-pictures/
+[rockethub]: http://blog.rockethub.com/a-new-kind-of-novel-by-eric-meyer
 
-Hyde
-----
+## Hyde Setup
 
-To see what is there, you can simply look in the "output" folder. To run a server or deploy yourself, you will need [Hyde](https://github.com/hyde/hyde).
+To run a server
+or generate the static content
+you will need [Hyde](https://github.com/hyde/hyde).
 
-It's not hard. Install that. Install this. Run one or two commands and you have a website. By which I mean a book. A digital web book that is still very much in development.
+It's not hard. 
+Install that. Install this.
+Run one or two commands and you have a website. 
+By which I mean a book. 
+A digital web book that is still very much in development.
 
 Generate the output files:
 
-    hyde gen
+    hyde gen -r
 
 Run a local web server:
 
     hyde serve [-a address] [-p port]
 
-`hyde serve` doesn't catch and regenerate all changes to all files, especially html includes. If a file doesn't update, you can try re-saving the parent (non-include) file, or stopping the server to run `hyde gen -r`.
+`hyde serve` doesn't catch and regenerate all changes to all files, 
+especially html includes. 
+If a file doesn't update, 
+you can try re-saving the parent (non-include) file, 
+or stopping the server to run `hyde gen -r`.
