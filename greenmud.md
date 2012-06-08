@@ -1,5 +1,6 @@
 <!-- meta
 description: 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
+slug: title
 -->
 
 # Into the Green Green Mud
@@ -17,6 +18,7 @@ by [Eric A. Meyer][eam]
 
 <!-- meta
 description: 'Epigraph: "Good Friday" by Cocorosie.'
+slug: epigraph
 -->
 
 > I once fell in love with your                     <br />
@@ -48,6 +50,7 @@ voice         : narrator
 
 <!-- meta
 description: 'Epigraph: "I Sat Belonely" by John Lennon.'
+slug: epigraph
 -->
 
 > I sat belonely down a tree,     <br />
