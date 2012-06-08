@@ -1,23 +1,25 @@
 # Into The Green Green Mud
-A novel (with pictures)
-by Eric A. Meyer
+## A novel (with pictures)
+by [Eric A. Meyer][eam]
+
+[eam]: http://eric.andmeyer.com/
 
 ------
 
 <!-- meta
-description: 'Epigraph: Good Friday, by Cocorosie.'
+description: 'Epigraph: "Good Friday" by Cocorosie.'
 -->
 
-> 	I once fell in love with you
-	Just because the sky turned from gray into blue
-	It was a good Friday
-	The streets were open and empty
-	No more passion play
-	On St. Nicholas avenue
-	I believe in St. Nicholas
-	It’s a different type of Santa Claus
+> I once fell in love with you 										<br />
+Just because the sky turned from gray into blue 	<br />
+It was a good Friday 															<br />
+The streets were open and empty 									<br />
+No more passion play 															<br />
+On St. Nicholas avenue 														<br />
+I believe in St. Nicholas      										<br />
+It’s a different type of Santa Claus
 
-> 	— Cocorosie, “Good Friday”
+> <cite>— Cocorosie, “Good Friday”</cite>
 
 ------
 
@@ -35,15 +37,15 @@ voice         : narrator
 ------
 
 <!-- meta
-description: 'Epigraph: I Sat Belonely, by John Lennon.'
+description: 'Epigraph: "I Sat Belonely" by John Lennon.'
 -->
 
-> 	I sat belonely down a tree,
-	humbled fat and small.
-	A little lady sing to me
-	I couldn't see at all. 
+> I sat belonely down a tree, 		<br />
+humbled fat and small.   					<br />
+A little lady sing to me 					<br />
+I couldn't see at all.
 
-> 	— John Lennon, “I Sat Belonely”
+> <cite>— John Lennon, “I Sat Belonely”</cite>
 
 ------
 
@@ -56,34 +58,44 @@ extra_styles  : chapters/in-which-jj.css
 voice         : jj
 -->
 
-### Chapter 1: In Which JJ.
+## Chapter 1
+# In Which JJ.
 
 ------
 
-Once upon a Sunday raining afternoon
-stood a man without a spoon,
-and seeing what my hands be free
+> Once upon a Sunday raining afternoon 			<br />
+stood a man without a spoon, 								<br />
+and seeing what my hands be free 						<br />
 I double-dare and climb a tree!
 
-A simple song so sing along!
+> A simple song so sing along!
 
-Oh la la and la again,
-surely squirrelly be my friend
+> Oh la la and la again, 										<br />
+surely squirrelly be my friend 							<br />
 and that’s just how this song must end.
 
 [pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot]
 
 ------
 
-Johnny-John goes sitting on a Sunday bench in the parkest of trees.
+Johnny-John goes sitting on a Sunday bench 
+in the parkest of trees.
 
 ------
 
-Shadow, shadow, park and shadow. The rain falls slow, and the clouds fall too. JJ sits to watch the trees. Watch the trees and the rain and the pit pit pit pit pit pot in the puddles before.
+Shadow, shadow, park and shadow. 
+The rain falls slow, 
+and the clouds fall too. 
+JJ sits to watch the trees. 
+Watch the trees and the rain 
+and the pit pit pit pit pit pot 
+in the puddles before.
 
 ------
 
-His shirt is wet, and the darkest black hole is his heart. Sad like a toothache.
+His shirt is wet, 
+and the darkest black hole is his heart. 
+Sad like a toothache.
 
 The rain falls slow, and the leaves fall too. 
 (JJ watches the trees)
@@ -95,14 +107,24 @@ JJ sits and sings along.
 
 ------
 
-Shadow, shadow, park and shadow. JJ sits beneath the trees and sings his song. All along. All along. In the park that made him strong.
+Shadow, shadow, park and shadow. 
+JJ sits beneath the trees and sings his song. 
+All along. All along. 
+In the park that made him strong.
 
 ------
+
 Monday: Clear skies. Unearth the little bugger.
 
 ------
 
-Christmas is just around the corner and JJ can’t complain, much to his chagrin.When the TV comes on it’s all tinsel and tinseltown, snowstorms and snowstormstown - white and white and white and whiter. Teeth and smiles and babies in strollers.
+Christmas is just around the corner 
+and JJ can’t complain, 
+much to his chagrin.
+When the TV comes on it’s all tinsel and tinseltown, 
+snowstorms and snowstormstown - 
+white and white and white and whiter. 
+Teeth and smiles and babies in strollers.
 
 JJ goes for a walk instead. 
 
@@ -112,15 +134,37 @@ JJ goes for a walk instead.
 
 ------
 
-He doesn’t buy anything in the shop windows, or sit in the park bench under the shade of the shadows. When the rain lets up he eats an ice cream cone, but it is cold and sweet. Sweet like a tooth! And he goes home all the same, but a little bit louder. It’s Thursday after all.
+He doesn’t buy anything in the shop windows, 
+or sit in the park bench under the shade of the shadows. 
+When the rain lets up he eats an ice cream cone, 
+but it is cold and sweet. 
+Sweet like a tooth! 
+And he goes home all the same, 
+but a little bit louder. 
+It’s Thursday after all.
 
 ------
 
-It doesn't rain every day in the life of JJ, and next Tuesday is one of those days. The fluffy clouds make shapes like rabbits and battleships and dandelions. JJ doesn’t watch the clouds, but they watch him. He looks like a dot, they think. Look at that dot.
+It doesn't rain every day in the life of JJ, 
+and next Tuesday is one of those days. 
+The fluffy clouds make shapes 
+like rabbits and battleships and dandelions. 
+JJ doesn’t watch the clouds, 
+but they watch him. 
+He looks like a dot, they think. 
+Look at that dot.
 
 ------
 
-There are cars on the highway and some semi truck trailers pulled and pulling and people moving. License plates from out of town and as far west as South Nebraska on a sunny day. One car is green, with its blinkers on and latin hip hop like a locomotive. Here and gone like the rest. Gone and gone and gone and gone and gone and gone.
+There are cars on the highway 
+and some semi truck trailers pulled and pulling 
+and people moving. 
+License plates from out of town 
+and as far west as South Nebraska on a sunny day. 
+One car is green, 
+with its blinkers on and latin hip hop like a locomotive. 
+Here and gone like the rest. 
+Gone and gone and gone and gone and gone and gone.
 
 ------
 
@@ -130,7 +174,11 @@ Like the road to somewheresville, Go Go Go.
 
 ------
 
-JJ thinks he ought to take a nap on that note. So he sleeps for the afternoon, till the sun goes down and his house is a shadow under the clouds. Then the clouds drift off, and JJ and his house are shadows all alone.
+JJ thinks he ought to take a nap on that note. 
+So he sleeps for the afternoon, 
+till the sun goes down and his house is a shadow under the clouds. 
+Then the clouds drift off, 
+and JJ and his house are shadows all alone.
 
 ------
  
@@ -146,41 +194,77 @@ JJ watches some TV and goes back to bed.
 
 ------
 
-At the bookstore on Wednesday, JJ isn’t sure if he wants the new hardcover by Tuesday’s top seller, or the old classic he never read in junior high school. No one enjoyed junior high school, least of all JJ, but he does a lot of reading and he should have read them all by now. Instead, he buys a paperback of poems by someone in their thirties. She’s a recent immigrant or an exile or something else entirely. He likes the cover art and hopes the poems are that good, which they are. It’s well worth the money money money, and he uses a debit card to make the purchase final.
+At the bookstore on Wednesday, 
+JJ isn’t sure if he wants the new hardcover by Tuesday’s top seller, 
+or the old classic he never read in junior high school. 
+No one enjoyed junior high school, 
+least of all JJ, 
+but he does a lot of reading 
+and he should have read them all by now. 
+
+Instead, he buys a paperback of poems by someone in their thirties. 
+She’s a recent immigrant or an exile or something else entirely. 
+He likes the cover art and hopes the poems are that good, 
+which they are. 
+It’s well worth the money money money, 
+and he uses a debit card to make the purchase final.
 
 ------
 
-> 	The snow below our heads is cold
-	that's how we know we’ve gotten old.
-	All curled up with War and Peace,
-	or poetry, beneath my fleece.
+> The snow below our heads is cold 			<br />
+that's how we know we’ve gotten old. 		<br />
+All curled up with War and Peace, 			<br />
+or poetry, beneath my fleece.
 
-> 	A holiday song for holiday times
-	holiday holiday holiday rhymes.
-
-------
-
-The family comes around that Christmas, and sits in the living room. Some of them on the couch or in chairs, and some on the hardy-har-hardwood floor with pillows under their bums. 
-
-It isn’t a white Christmas, but that’s just as well for the kids who build giant killer robots on the screen, to much greater and long-lasting effect than you or my childhood holiday snowscapes. It also keeps the volume down in the basement with the treadmill and the television.
+> A holiday song for holiday times 			<br />
+holiday holiday holiday rhymes.
 
 ------
 
-JJ's aunt is on the phone all mid-afternoon, and if the Attorneys General want to call, well, they’ll just have to wait. Everyone laughs. It’s a merry old Christmas time, with mud and holiday cheer. They even watch a movie and eat sweet things.
+The family comes around that Christmas, 
+and sits in the living room. 
+Some of them on the couch or in chairs, 
+and some on the hardy-har-hardwood floor 
+with pillows under their bums. 
+
+It isn’t a white Christmas, 
+but that’s just as well for the kids 
+who build giant killer robots on the screen, 
+to much greater and long-lasting effect 
+than you or my childhood holiday snowscapes. 
+It also keeps the volume down in the basement 
+with the treadmill and the television.
+
+------
+
+JJ's aunt is on the phone all mid-afternoon, 
+and if the Attorneys General want to call, 
+well, they’ll just have to wait. 
+Everyone laughs. 
+It’s a merry old Christmas time, 
+with mud and holiday cheer. 
+They even watch a movie and eat sweet things.
 
 Delicious.
 
 ------
 
-JJ sleeps that whole night through, and then he sleeps the next day too.
+JJ sleeps that whole night through, 
+and then he sleeps the next day too.
 
 ------
 
-The birds outside make lots of noise and children play and play and play with toys (some of them are boys).
+The birds outside make lots of noise 
+and children play and play and play with toys 
+(some of them are boys).
 
 ------
 
-What a bore what a bore, what a sleeping little bore. What a bore what a bore, bore bore bore bore bore bore bore. And more!
+What a bore what a bore, 
+what a sleeping little bore. 
+What a bore what a bore, 
+bore bore bore bore bore bore bore. 
+And more!
 
 ------
 
@@ -188,15 +272,29 @@ Happy Birthday! call the chimes.
 
 ------
 
-But it isn't his birthday, it’s almost New Years (when the apples fall). Tick tick tick tick tick.
+But it isn't his birthday, 
+it’s almost New Years (when the apples fall). 
+Tick tick tick tick tick.
 
 ------
 
-Hummm, hum the clouds, and the trees hum too. It's a whole new world outside in January. And finally the snow comes with ice to keep the world cool. JJ came awake, it's true. Every day since St. Stephen’s, now. What a world!
+Hummm, hum the clouds, and the trees hum too. 
+It's a whole new world outside in January. 
+And finally the snow comes with ice to keep the world cool. 
+JJ came awake, it's true. 
+Every day since St. Stephen’s, now. 
+What a world!
 
 ------
 
-It’s next Friday already before JJ goes to the park again. He makes snow angels in the snow and sky angels in the sky. He goes sledding on his sled and skating on his skates. It's cold outside, but his hat keeps his ears warm, and before long he takes off his scarf to give his poor neck some fresh air. The sun is blazing through the cold cold cold like a giant ball of fire, millions of miles away.
+It’s next Friday already before JJ goes to the park again. 
+He makes snow angels in the snow and sky angels in the sky. 
+He goes sledding on his sled and skating on his skates. 
+It's cold outside, 
+but his hat keeps his ears warm, 
+and before long he takes off his scarf to give his poor neck some fresh air. 
+The sun is blazing through the cold cold cold like a giant ball of fire, 
+millions of miles away.
 
 ------
 
@@ -204,26 +302,37 @@ What a day! What a day!
 
 ------
 
-The ice is thick, but has cracks running through it. The snow is thick and JJ runs through it. He builds a snow woman and a fort and snow man, but it’s getting dark. By now he’s hungry, and walks home to find a cookie and cocoa and dinner and all.
+The ice is thick, but has cracks running through it. 
+The snow is thick and JJ runs through it. 
+He builds a snow woman and a fort and snow man, 
+but it’s getting dark. 
+By now he’s hungry, 
+and walks home to find a cookie and cocoa and dinner and all.
 
 ------
 
-A winter wonderland dinner of frozen pizza and veggies, all cooked up and hot to the touch. JJ likes the frozen veggies better than the canned ones - and pizza is as pizza does: good good good. No root beer tonight. None to be had. Do without!
+A winter wonderland dinner of frozen pizza and veggies, 
+all cooked up and hot to the touch. 
+JJ likes the frozen veggies better than the canned ones - 
+and pizza is as pizza does: good good good. 
+No root beer tonight. 
+None to be had. 
+Do without!
 
 ------
 
-> 	Merry go round and round and round— 
-	merry go to and fro and fro— 
-	up and down, up and down— 
-	merry go round and round and round. 
+> Merry go round and round and round— 
+merry go to and fro and fro— 
+up and down, up and down— 
+merry go round and round and round. 
 
-> 	The sun comes up, the sun goes down 
-	but merry goes round and round and round.
+> The sun comes up, the sun goes down 
+but merry goes round and round and round.
 
-> 	Without a sound. 
-	Head in the ground. 
-	Tightly wound. 
-	Lost and found. 
+> Without a sound. 
+Head in the ground. 
+Tightly wound. 
+Lost and found. 
 
 ------
 
