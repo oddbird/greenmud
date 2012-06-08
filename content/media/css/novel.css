@@ -1245,8 +1245,9 @@ a:hover, a:focus, a:active { color: magenta; }
 .demo .content h1:first-child, .demo .content h1 + h2, .demo .content h1 + h3, .demo .content h1 + h4, .demo .content h2:first-child, .demo .content h2 + h2, .demo .content h2 + h3, .demo .content h2 + h4, .demo .content h3:first-child, .demo .content h3 + h2, .demo .content h3 + h3, .demo .content h3 + h4, .demo .content h4:first-child, .demo .content h4 + h2, .demo .content h4 + h3, .demo .content h4 + h4 { margin-top: 0; }
 .demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
 .demo .content p, .demo .content ol, .demo .content ul { margin-bottom: 1.25em; }
-.demo .content ol { list-style-type: decimal-leading-zero; }
-.demo .content ul { list-style-type: circle; }
+.demo .content ol { list-style-type: decimal; }
+.demo .content ul li { position: relative; }
+.demo .content ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
 
 #toc { counter-reset: toc; }
 #toc ol { list-style-type: none; }

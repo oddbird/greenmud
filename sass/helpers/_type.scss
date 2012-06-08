@@ -34,8 +34,19 @@
   p, ol, ul {
     @include trailer;
   }
-  ol { list-style-type: decimal-leading-zero; }
-  ul { list-style-type: circle; }
+  ol { list-style-type: decimal; }
+  ul { 
+    li { 
+      position: relative;
+      &:before { 
+        content: "•"; 
+        position: absolute;
+        top: 0;
+        right: 100%;
+        margin-right: .2em;
+      }
+    }
+  }
 }
 
 %toc-counter {
