@@ -346,8 +346,6 @@ Do without!
 <!-- chapter
 chapter       : 'Daymares, Poor Boy.'
 description   : 'Chapter 2: Daymares, Poor Boy.'
-
-voice         : narrator
 -->
 
 ## Chapter 2
@@ -603,8 +601,6 @@ with an exposure to match the length of the moon-lit night.
 <!-- chapter
 chapter       : 'Yes Mother, Goodnight.'
 description   : 'Chapter 4: Yes Mother, Goodnight.'
-
-voice         : narrator
 -->
 
 ## Chapter 4
@@ -872,8 +868,6 @@ bring down the house house.
 <!-- chapter
 chapter       : 'Dance Together and Cry.'
 description   : 'Chapter 6: Dance Together and Cry.'
-
-voice         : narrator
 -->
 
 ## Chapter 6
@@ -1094,8 +1088,6 @@ Take the weekend off and write a novel.
 <!-- chapter
 chapter       : 'Twice Three, Plus One.'
 description   : 'Chapter 8: Twice Three, Plus One.'
-
-voice         : narrator
 -->
 
 ## Chapter 8
@@ -1335,8 +1327,6 @@ and make it jump jump jump jump jump jump jump!
 <!-- chapter
 chapter       : 'Those Nice Bright Colors.'
 description   : 'Chapter 10: Those Nice Bright Colors.'
-
-voice         : narrator
 -->
 
 ## Chapter 10
@@ -1735,48 +1725,92 @@ description   : 'Book 2: This EverAfter Life.'
 # This EverAfter Life.
 
 ------
+
 > And now, each night I count the stars.
   And each night I get the same number.
   And when they will not come to be counted,
   I count the holes they leave.
-> — Amiri Baraka, "Preface to a Twenty Volume Suicide Note"
+
+> <cite>— Amiri Baraka, "Preface to a Twenty Volume Suicide Note"</cite>
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Stranger Than a Sunny Day on the Beach.'
+description   : 'Chapter 13: Stranger Than a Sunny Day on the Beach.'
+-->
 
-### Chapter 13: Stranger Than a Sunny Day on the Beach.
+## Chapter 13
+# Stranger Than a Sunny Day on the Beach.
 
 ------
 
 Dear Susy,
 c/o My Journal, June 23
 
-Have you read Camus? Can you understand? The sun was in my eyes, and the puddles were soft under my feet. Dancing with you out of the rain was like nothing never. The rain down your face was too much and more. The world was taking a stand beyond reason or hope. The world was passion. I think it's love, and I don't know the difference. Someday will tell, or I'll be in Kansas. Either way is miles from now. The world will end and be reborn, if I have my way. The world has ended already since sunset in the Sunday park. Now what?
+Have you read Camus?
+Can you understand?
+The sun was in my eyes,
+and the puddles were soft under my feet.
+Dancing with you out of the rain was like nothing never.
+The rain down your face was too much and more.
+The world was taking a stand beyond reason or hope.
+The world was passion.
+I think it's love,
+and I don't know the difference.
+Someday will tell,
+or I'll be in Kansas.
+Either way is miles from now.
+The world will end and be reborn,
+if I have my way.
+The world has ended already since sunset in the Sunday park.
+Now what?
 
-Have you read Camus? I'm on a bus to never again. It’s an adventure. Is it the end of my life? Is it the end of yours? Will we find out together? Will we die alone? Will you sing to me on the wind? I'm making lists of you behind my heart. Can you hear them? Why can't I send this? Why am I on a bus?
+Have you read Camus?
+I'm on a bus to never again.
+It’s an adventure.
+Is it the end of my life?
+Is it the end of yours?
+Will we find out together?
+Will we die alone?
+Will you sing to me on the wind?
+I'm making lists of you behind my heart.
+Can you hear them?
+Why can't I send this?
+Why am I on a bus?
 
-Have you read Camus? The world was no longer gentle or indifferent, and the sun was in my eyes. Is this remorse?
+Have you read Camus?
+The world was no longer gentle or indifferent,
+and the sun was in my eyes.
+Is this remorse?
 
 Sincerely, JJJJJJjjj
-------
-
-<!-- chapter -->
-
-### Chapter 14: Once upon a Sunday Raining.
 
 ------
 
-1. No rain since Thursday past.
-2. In like a lion, as they say.
-3. Out and gone like a lover.
-4. As they say.
-5. Better to have had your cake and eaten it.
-6. As they say.
+<!-- chapter
+chapter       : 'Once upon a Sunday Raining.'
+description   : 'Chapter 14: Once upon a Sunday Raining.'
+
+voice         : susy
+-->
+
+## Chapter 14
+# Once upon a Sunday Raining.
 
 ------
 
-Susy's song is sad and long, as the days go on and on and on.
+1.  No rain since Thursday past.
+2.  In like a lion, as they say.
+3.  Out and gone like a lover.
+4.  As they say.
+5.  Better to have had your cake and eaten it.
+6.  As they say.
+
+------
+
+Susy's song is sad and long,
+as the days go on and on and on.
 
 ------
 
@@ -1790,49 +1824,84 @@ Shakespeare.
 
 ------
 
-Susy stays late at work and can't write her soul on paper in words that touch and mean and grow and breath with life and flavor.
+Susy stays late at work
+and can't write her soul on paper
+in words that touch and mean and grow
+and breath with life and flavor.
 
 ------
 
-Thai spice with tea and ice, and other things with flavor:
+Thai spice with tea and ice,
+and other things with flavor:
 
-1. Italian sausage.
-2. Chocolate chip cookies.
-3. Coconut milk.
-4. Salt.
-5. Picante sauce.
-6. And sometimes love.
-
-------
-
-All the words are the same on the page full of rage. Not rage, but pain. Not pain, but fear. Not fear, but sorrow. Not any of those. Nothing. Nothing on the page, all the same, all the time, page after page. What a feeling to find within.
+1.  Italian sausage.
+2.  Chocolate chip cookies.
+3.  Coconut milk.
+4.  Salt.
+5.  Picante sauce.
+6.  And sometimes love.
 
 ------
 
-Go outside in the darkest of night, Susy, and walk the park in bare feet till the coming of God. In the park she finds a squirrel, three dandelions, and her voice. A soul. And a blade of grass to take home and make music with.
+All the words are the same on the page full of rage.
+Not rage, but pain.
+Not pain, but fear.
+Not fear, but sorrow.
+Not any of those.
+Nothing.
+Nothing on the page,
+all the same,
+all the time,
+page after page.
+What a feeling to find within.
 
 ------
 
-Wednesday morning the same-old same-old cereal-and-numbers on the clock-computer and pencil-paper work-work work-work work.
+Go outside in the darkest of night, Susy,
+and walk the park in bare feet till the coming of God.
+In the park she finds a squirrel,
+three dandelions,
+and her voice.
+A soul.
+And a blade of grass to take home and make music with.
 
 ------
 
- The phone rings like a child.
+Wednesday morning the same-old same-old
+cereal-and-numbers on the clock-computer
+and pencil-paper work-work-work work-work.
+
+------
+
+The phone rings like a child.
 
 ------
 
 A phone call.
 A meeting.
 
-Another meeting, and a promotion. All-day all-day, more-pay more-pay. One-two, one-two, and a corner office with bigger windows to see from. Nothing to see but the night-air-breeze, in off the hills and lakes of all time. Like falling snow, or falling leaves. Or grass growing in the spring.
+Another meeting,
+and a promotion.
+All-day all-day,
+more-pay more-pay.
+One-two,
+one-two,
+and a corner office with bigger windows to see from.
+Nothing to see but the night-air-breeze,
+in off the hills and lakes of all time.
+Like falling snow,
+or falling leaves.
+Or grass growing in the spring.
 
 ------
 
-Through cracks in the floor, her office becomes a jungle.
+Through cracks in the floor,
+her office becomes a jungle.
 
 ------
 
-Through under the door, where the wild things were.
+Through under the door,
+where the wild things were.
 
 ------
 
@@ -1844,76 +1913,136 @@ A crayon.
 
 ------
 
-Just one, in the side drawer of her desk, will take her there at ten-o'clock, for fifteen minutes before the bell tolls.
+Just one,
+in the side drawer of her desk,
+will take her there at ten-o'clock,
+for fifteen minutes before the bell tolls.
 
 ------
 
-One two three tick four tick five, and on and on and on.
+One two three tick four tick five,
+and on and on and on.
 
-The new job has less numbers to count, but more accounting to be done. One o'clock, two o'clock, three-o-the-clock, four.
+The new job has less numbers to count,
+but more accounting to be done.
+One o'clock,
+two o'clock,
+three-o-the-clock,
+four.
 
 ------
 
-And out the door, and out the door.
+And out the door,
+and out the door.
 
 Sweep up the mess tomorrow.
 
 ------
 
-1. Take in the seams.
-2. Let out a scream.
-3. Hang in there.
-4. Hang in there.
-5. Hang in there.
+1.  Take in the seams.
+2.  Let out a scream.
+3.  Hang in there.
+4.  Hang in there.
+5.  Hang in there.
 
 ------
 
-The novel is on hold in the corner now, with the TV on to a movie every night.
+The novel is on hold in the corner now,
+with the TV on to a movie every night.
 
 ------
 
-Drugs and sex and rock and roll (but roll most of all). Food and gore and love and more. All in all, three bags full.
+Drugs and sex and rock and roll
+(but roll most of all).
+Food and gore and love and more.
+All in all,
+three bags full.
 
-She calls her father to discuss the weather up there. Getting hotter every day. Brighter than the night is long. No sign of rain, brings a tear to her eye. Congratulations, and all that.
+She calls her father to discuss the weather up there.
+Getting hotter every day.
+Brighter than the night is long.
+No sign of rain,
+brings a tear to her eye.
+Congratulations, and all that.
 
 ------
 
-A long distance glass of whatever's on hand, and a toast to the Susy with the mostess. Oh bright our daughter. First and forever amen. It's a beautiful day in this neighborhood, and so on and on to the end of times. Mother says Hi and Well. She has her hands busy-busy-busy like-a-bee like-a-bee. Buzz buzz, she always does. Work herself to death-do-us-part since the day we met.
+A long distance glass of whatever's on hand,
+and a toast to the Susy with the mostess.
+Oh bright our daughter.
+First and forever amen.
+It's a beautiful day in this neighborhood,
+and so on and on to the end of times.
+Mother says Hi and Well.
+She has her hands busy-busy-busy
+like-a-bee like-a-bee.
+Buzz buzz, she always does.
+Work herself to death-do-us-part since the day we met.
 
 ------
 
-A quick nap on the couch, with three pages crumpled and trashed. Life is as-unto a whale in the night. Land ho! Until the rain shall come. Until it came, and washed away all fear. Where have those waters gone? Wherefore art they gone? Wherefore? And forsaken me?
+A quick nap on the couch,
+with three pages crumpled and trashed.
+Life is as-unto a whale in the night.
+Land ho!
+Until the rain shall come.
+Until it came, and washed away all fear.
+Where have those waters gone?
+Wherefore art they gone?
+Wherefore?
+And forsaken me?
 
 ------
 
 Good words on a sunny day in June:
 
-1. Forsaken.
-2. Honeydew melon.
-3. Wishy-washy.
-4. Gingerbread.
-5. Without.
-6. Absolutely.
+1.  Forsaken.
+2.  Honeydew melon.
+3.  Wishy-washy.
+4.  Gingerbread.
+5.  Without.
+6.  Absolutely.
 
 ------
 
-Always something to put your mind to, if you're into that sort of thing. The view from the window is a maze of light and shadows, like the park without squirrels. Like rain on a sunny day.
+Always something to put your mind to,
+if you're into that sort of thing.
+The view from the window is a maze of light and shadows,
+like the park without squirrels.
+Like rain on a sunny day.
 
-The numbers don't add up, but they don't have to. That's the beauty of it all. Numbers come and go. Build them into towers and knock them down. Timber, she cries out! Timber! And they all come a-tumbling down-down-down. Into the depths of life.
+The numbers don't add up,
+but they don't have to.
+That's the beauty of it all.
+Numbers come and go.
+Build them into towers and knock them down.
+Timber, she cries out!
+Timber!
+And they all come a-tumbling down-down-down.
+Into the depths of life.
 
 ------
 
-Life without wheels. Life in a laundry basket on the living room floor.
+Life without wheels.
+Life in a laundry basket on the living room floor.
 
 ------
 
-1. At least the movie was good.
-2. Better than the book, actually.
-3. You should see the sequel.
+1.  At least the movie was good.
+2.  Better than the book, actually.
+3.  You should see the sequel.
 
 ------
 
-Maybe she’ll call a friend. An old friend, with glasses or contacts (depending on the occasion). A friend from the other side of forever, who enjoys movies and long walks on the beach. Also chocolate chips and falafel. It's a whole new world out there. Remember back when?
+Maybe she’ll call a friend.
+An old friend,
+with glasses or contacts
+(depending on the occasion).
+A friend from the other side of forever,
+who enjoys movies and long walks on the beach.
+Also chocolate chips and falafel.
+It's a whole new world out there.
+Remember back when?
 
 ------
 
@@ -1921,35 +2050,73 @@ Back when everything was.
 
 ------
 
-Just so, just so, she goes for walks on Thursdays before work, as the sun comes up between Edison and Seventh. Earlier every week. The sky turns purple, and then orange and blue. Finally blue, as she reaches the corner where you-go-this-way and I'll-go-that-way, and off to work.
+Just so, just so,
+she goes for walks on Thursdays before work,
+as the sun comes up between Edison and Seventh.
+Earlier every week.
+The sky turns purple,
+and then orange and blue.
+Finally blue,
+as she reaches the corner
+where you-go-this-way and I'll-go-that-way,
+and off to work.
 
 ------
 
-1. Life goes on.
-2. Without you now.
-3. And on and on and on.
+1.  Life goes on.
+2.  Without you now.
+3.  And on and on and on.
 
 ------
 
-When the rain comes down with the sun, out and outside, the grass is loving it up as green as the day is long. It's the light of the street lamps through the falling water that keeps the curtains open. Back to reading and writing for Susy. The one and the other, the both the same. The one without, and the other within. Forever and ever amen, until bed.
+When the rain comes down with the sun,
+out and outside,
+the grass is loving it up as green as the day is long.
+It's the light of the street lamps through the falling water
+that keeps the curtains open.
+Back to reading and writing for Susy.
+The one and the other,
+the both the same.
+The one without,
+and the other within.
+Forever and ever amen,
+until bed.
 
 Someone's got to do it.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Open and Empty.'
+description   : 'Chapter 15: Open and Empty.'
+-->
 
-### Chapter 15: Open and Empty.
+## Chapter 15
+# Open and Empty.
 
 ------
 
 - I’m calling it a novel.
 - About?
-- Nothing. Anything. Tea. The smell of ginseng. Or something else. Will-o-the-wisps. The leaves turning and falling. The color of the lawn. The length of a day. The way the sun feels when you stare at it. Bright, but red. I don't know.
+- Nothing.
+  Anything.
+  Tea.
+  The smell of ginseng.
+  Or something else.
+  Will-o-the-wisps.
+  The leaves turning and falling.
+  The color of the lawn.
+  The length of a day.
+  The way the sun feels when you stare at it.
+  Bright, but red.
+  I don't know.
 - Do you stare at the sun often?
 - No.
 - But you write about it?
-- Sometimes. Once. I did. You know the feeling.
+- Sometimes.
+  Once.
+  I did.
+  You know the feeling.
 
 ------
 
@@ -1958,27 +2125,55 @@ Someone's got to do it.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Not a Susy in Sight for Miles and Miles.'
+description   : 'Chapter 16: Not a Susy in Sight for Miles and Miles.'
 
-### Chapter 16: Not a Susy in Sight for Miles and Miles.
+voice         : jj
+-->
 
-------
-
-On his third bus between here and west-young-man it's getting late, but the radio sings along. The woman in the seat next to him is reading a book, and so does JJ, inspired. Black text on white. A smooth white. A new book. A whole new look. Just in time. JJ left his watch behind.
-
-Oh well, it's for the best. A stitch in time, for the rest of time. Take a rest. Take a nap. A book in his lap.
-
-------
-
-JJ, asleep and dreaming. Mmm, yes, mmmm. Take a look!
+## Chapter 16
+# Not a Susy in Sight for Miles and Miles.
 
 ------
 
-Awake again, JJ puts the book away. Lights and shadows become a town in the night.
+On his third bus between here and west-young-man it's getting late,
+but the radio sings along.
+The woman in the seat next to him is reading a book,
+and so does JJ,
+inspired.
+Black text on white.
+A smooth white.
+A new book.
+A whole new look.
+Just in time.
+JJ left his watch behind.
+
+Oh well,
+it's for the best.
+A stitch in time,
+for the rest of time.
+Take a rest.
+Take a nap.
+A book in his lap.
 
 ------
 
-Quite a sight, there's people alright.
+JJ,
+asleep and dreaming.
+Mmm, yes, mmmm.
+Take a look!
+
+------
+
+Awake again,
+JJ puts the book away.
+Lights and shadows become a town in the night.
+
+------
+
+Quite a sight,
+there's people alright.
 
 ------
 
@@ -1986,23 +2181,32 @@ Like magic.
 
 ------
 
-This one walking or sitting, through a window in the cafe, reading a book about a girl in Illinois.
+This one walking or sitting,
+through a window in the cafe,
+reading a book about a girl in Illinois.
 
 ------
 
-Look up! Look up!
+Look up!
+Look up!
 
-Sip. Sip. And on.
+Sip.
+Sip.
+And on.
+
+------
+
+Up the block and down the around.
+In and out and down and down again.
+Advertisements for soap and a large screen TV.
 
 ------
 
-Up the block and down the around. In and out and down and down again. Advertisements for soap and a large screen TV.
+Food next eternity.
+Three miles and snoring.
 
 ------
 
-Food next eternity. Three miles and snoring.
-
-------
 > Take me to your room and show me the end of times.
   Show me sunflowers bent towards noon.
 
@@ -2011,37 +2215,90 @@ Food next eternity. Three miles and snoring.
 
 ------
 
-A penny saved gets lost in your bags, but a few dollars is tomorrow’s lunch.
+A penny saved gets lost in your bags,
+but a few dollars is tomorrow’s lunch.
 
 ------
 
-JJ has some money, but not a job or a place to lay his sweet head as he goes.
+JJ has some money,
+but not a job or a place to lay his sweet head as he goes.
 
 ------
 
-Back on the bus and bumping along with all the others, gone and gone and gone and gone with the best of them. License plates from he couldn't see where or know why, all leaving nothing behind, with their hearts in San Francisco, AHOY!
+Back on the bus and bumping along with all the others,
+gone and gone and gone and gone with the best of them.
+License plates from he couldn't see where or know why,
+all leaving nothing behind,
+with their hearts in San Francisco,
+AHOY!
 
-Tomorrow is stuck on the letter J, like his name, and waiting for the next town to come rolling in with a pit stop and — THAR SHE BLOWS — we're on to K (which is much easier). It's a small town, with one bathroom in the gas station, but plenty of beer and ice cream and coffee doughnut-chip jerky-trinket brake-fluid cigarettes (and so on). Three aisles full, yes sir, yes sir!
+Tomorrow is stuck on the letter J,
+like his name,
+and waiting for the next town to come rolling in with a pit stop and —
+THAR SHE BLOWS —
+we're on to K
+(which is much easier).
+It's a small town,
+with one bathroom in the gas station,
+but plenty of beer and ice cream
+and coffee doughnut-chip jerky-trinket brake-fluid cigarettes
+(and so on).
+Three aisles full,
+yes sir, yes sir!
 
 ------
 
-JJ has an iced tea of all things, and is back on the bus lickety-split, sipping and watching. A woman with a beret, and another with a barrette, and two or three without. A couple studying a map, and deciding whether 680 or 275. A woman kissing a man quick-quick on the cheek-cheek, and skipping up the steps past JJ and towards the back. The driver eats a sandwich with too much mayo as she closes the door and they all roll away without further delay. No way.
+JJ has an iced tea of all things,
+and is back on the bus lickety-split,
+sipping and watching.
+A woman with a beret,
+and another with a barrette,
+and two or three without.
+A couple studying a map,
+and deciding whether 680 or 275.
+A woman kissing a man
+quick-quick on the cheek-cheek,
+and skipping up the steps
+past JJ and towards the back.
+The driver eats a sandwich with too much mayo
+as she closes the door and they all roll away
+without further delay.
+No way.
 
 ------
 
-L-M-N-O and P, and into the country again. Q can be hard on the open road, but that's ok. It's a whole new world outside today.
+L-M-N-O and P,
+and into the country again.
+Q can be hard on the open road,
+but that's ok.
+It's a whole new world outside today.
 
 ------
 
-It's a dirty dirt beaten path back to the bus after each scenic overlook. One stop, two stop, three stops an hour. Counting time by the beauty of the outside. Take a bus or take a train. Let it rain.
+It's a dirty dirt beaten path
+back to the bus after each scenic overlook.
+One stop, two stop, three stops an hour.
+Counting time by the beauty of the outside.
+Take a bus or take a train.
+Let it rain.
 
 ------
 
-After Q and R come S for Susy. It's a long walk back. J for Johnny, and J for John. Sue for Susy, and S and Sad. What a sad day on the old open highway, with nothing to sing but a sad little tune, and nothing to do but a book or two.
+After Q and R come S for Susy.
+It's a long walk back.
+J for Johnny, and J for John.
+Sue for Susy, and S and Sad.
+What a sad day on the old open highway,
+with nothing to sing but a sad little tune,
+and nothing to do but a book or two.
 
 ------
 
-What happy days, under the dusty trees with Susy, back back back forever. With squirrels in the park. Where is she now?
+What happy days,
+under the dusty trees with Susy,
+back back back forever.
+With squirrels in the park.
+Where is she now?
 
 ------
 
@@ -2086,7 +2343,12 @@ Gone with the flowers, forever.
 
 ------
 
-Waving off the waterfall dry sky, he calls his mom from a phone in the next town. Double S by now, and counting. More Susy than the eye can see, and nowhere in sight.
+Waving off the waterfall dry sky,
+he calls his mom from a phone in the next town.
+Double S by now,
+and counting.
+More Susy than the eye can see,
+and nowhere in sight.
 
 ------
 
@@ -2098,7 +2360,16 @@ His father is dying.
 
 ------
 
-In Tucson, or hotter. Dying in a hospital, without a heart to keep him talking. Without a name to say at all. That's all. Dying like the dead. Like a bird without flying. In a bed forever and more. Wires and tubes and bags of food. Reds and whites and metallic sights.
+In Tucson, or hotter.
+Dying in a hospital,
+without a heart to keep him talking.
+Without a name to say at all.
+That's all.
+Dying like the dead.
+Like a bird without flying.
+In a bed forever and more.
+Wires and tubes and bags of food.
+Reds and whites and metallic sights.
 
 ------
 
@@ -2110,12 +2381,20 @@ In Tucson, or hotter. Dying in a hospital, without a heart to keep him talking. 
 
 ------
 
-The quarter runs its time and they say goodbye. What a day. What a day to die. Let us bow our heads and cry.
+The quarter runs its time and they say goodbye.
+What a day.
+What a day to die.
+Let us bow our heads and cry.
+
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Of Blood.'
+description   : 'Chapter 17: Of Blood.'
+-->
 
-### Chapter 17: Of Blood.
+## Chapter 17
+# Of Blood.
 
 ------
 
@@ -2132,37 +2411,43 @@ The quarter runs its time and they say goodbye. What a day. What a day to die. L
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Anon and Anon.'
+description   : 'Chapter 18: Anon and Anon.'
 
-### Chapter 18: Anon and Anon.
+voice         : susy
+-->
+
+## Chapter 18
+# Anon and Anon.
 
 ------
 
 Saturday:
 
-1. Sleep in.
-2. Read the paper.
-3. Over coffee and—
-4. An english muffin.
-5. Butter, no jam.
-6. Call Mom?
+1.  Sleep in.
+2.  Read the paper.
+3.  Over coffee and—
+4.  An english muffin.
+5.  Butter, no jam.
+6.  Call Mom?
 
 ------
 
 Sunday:
 
-1. The Coffee Shop.
-2. Take the novel?
-3. Scraps of paper will do.
-4. Scrawl this.
-5. And that.
-6. Crumple.
-7. Iced mocha.
+1.  The Coffee Shop.
+2.  Take the novel?
+3.  Scraps of paper will do.
+4.  Scrawl this.
+5.  And that.
+6.  Crumple.
+7.  Iced mocha.
 
 ------
 
-8. Two shots.
-9. Whipped cream.
+8.  Two shots.
+9.  Whipped cream.
 10. Doodle.
 11. Dawdle.
 12. Sip.
@@ -2172,11 +2457,16 @@ Sunday:
 
 ------
 
-Rob wants a seat, and does she mind? He has a book black planner and all that. The works.
+Rob wants a seat,
+and does she mind?
+He has a book black planner and all that.
+The works.
 
 ------
 
-Doing work over latte cream, with hazel green gray eyes like his shirt.
+Doing work over latte cream,
+with hazel green-gray eyes
+like his shirt.
 
 ------
 
@@ -2184,30 +2474,74 @@ On a Sunday?
 
 ------
 
-At the table next, an older couple read separate newspapers, now eye-deep in conversation. This and that. This and that. Caffeine. People come and go. The waitress bounces wee-wee-wee all the way home. Barista. A high school boy, all the way in the back, swish-swash-spraying clean the dishes. Rock sax swings the room around and around. People come and go. People come and go. People.
+At the table next,
+an older couple read separate newspapers,
+now eye-deep in conversation.
+This and that.
+This and that.
+Caffeine.
+People come and go.
+The waitress bounces wee-wee-wee all the way home.
+Barista.
+A high school boy,
+all the way in the back,
+swish-swash-spraying clean the dishes.
+Rock sax swings the room around and around.
+People come and go.
+People come and go.
+People.
 
-People are in a novel. People in a novel come and go. How does it work? Why do people in a novel do this? Why do people not in a novel do that? Where is this novel going? Diddle-scribble-scrawl, and she's off the beaten page. Reference and style and subject and it's all a blur. Rob becomes that man in the coffee shop. Rob has always been that man in the coffee shop. Rob represents man. In a coffee shop. Rob.
+People are in a novel.
+People in a novel come and go.
+How does it work?
+Why do people in a novel do this?
+Why do people not in a novel do that?
+Where is this novel going?
+Diddle-scribble-scrawl,
+and she's off the beaten page.
+Reference and style and subject and it's all a blur.
+Rob becomes that man in the coffee shop.
+Rob has always been that man in the coffee shop.
+Rob represents man.
+In a coffee shop.
+Rob.
 
 ------
 
-Men in coffee shops are romantic interests, and this one is no different. The eyes, that's what you talk about. The man, the shirt, and his eyes. Three pages in ten minutes: a new Sunday coffee-shop caffeine-novel record for Susy. Rob becomes curious about this writer-mysterious wonder-woman across. Eyes meet eyes in conversation.
+Men in coffee shops are romantic interests,
+and this one is no different.
+The eyes,
+that's what you talk about.
+The man,
+the shirt,
+and his eyes.
+Three pages in ten minutes:
+a new Sunday coffee-shop caffeine-novel record for Susy.
+Rob becomes curious about this writer-mysterious wonder-woman across.
+Eyes meet eyes in conversation.
 
 ------
 
-There's a voice on the radio talking, and the channel changes. Boy in the back doing the dishes. A new song, a new station, and on and on.
+There's a voice on the radio talking,
+and the channel changes.
+Boy in the back doing the dishes.
+A new song,
+a new station,
+and on and on.
 
 ------
 
-1. What's the opposite of entropy?
-2. What am I doing tonight?
-3. Muscle tussle scar.
-4. All in a live long day.
-5. What a to-do to-do to do.
-6. Amen.
+1.  What's the opposite of entropy?
+2.  What am I doing tonight?
+3.  Muscle tussle scar.
+4.  All in a live long day.
+5.  What a to-do to-do to do.
+6.  Amen.
 
 ------
 
-It's a short conversation over the smells of grinding-and-ground-steeping coffee and the rest. A few chuckles, and well, he has to go. Not that you could really expect anything else, really, right? What could you expect, really-really really, right? In a cafe, right? Over latte-cream planners, and scraps of novel-pages, and a table?
+It's a short conversation
+over the smells of grinding-and-ground-steeping coffee and the rest. A few chuckles, and well, he has to go. Not that you could really expect anything else, really, right? What could you expect, really-really really, right? In a cafe, right? Over latte-cream planners, and scraps of novel-pages, and a table?
 
 ------
 
@@ -2237,9 +2571,13 @@ It's an empty night, and cold in the thoughts under her covers, dreaming of thos
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Why Cry when You Can Kick a Cat?'
+description   : 'Chapter 19: Why Cry when You Can Kick a Cat?'
+-->
 
-### Chapter 19: Why Cry when You Can Kick a Cat?
+## Chapter 19
+# Why Cry when You Can Kick a Cat?
 
 ------
 
@@ -2256,9 +2594,15 @@ It's an empty night, and cold in the thoughts under her covers, dreaming of thos
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'There and Back Again, Forever.'
+description   : 'Chapter 20: There and Back Again, Forever.'
 
-### Chapter 20: There and Back Again, Forever.
+voice         : jj
+-->
+
+## Chapter 20
+# There and Back Again, Forever.
 
 ------
 
@@ -2393,11 +2737,16 @@ How is it now?
 A year later and back again, with mother in the kitchen and no one to visit in the hospital, JJ has nothing to say. He says nothing. Nothing is said. JJ sits. Mother sits. It is silent. Silence is said by all. Silence.
 
 Nothing is nothing.
+
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Nothing.'
+description   : 'Chapter 21: Nothing.'
+-->
 
-### Chapter 21: Nothing.
+## Chapter 21
+# Nothing.
 
 ------
 
@@ -2405,9 +2754,15 @@ Nothing is nothing.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Under the Sky is Gray.'
+description   : 'Chapter 22: Under the Sky is Gray.'
 
-### Chapter 22: Under the Sky is Gray.
+voice         : susy
+-->
+
+## Chapter 22
+# Under the Sky is Gray.
 
 ------
 
@@ -2429,6 +2784,7 @@ Susy's mother comes to town to celebrate. The birthing of a book is no small thi
 The end of one is the beginning. And this one goes on forever.
 
 ------
+
 For my grandmother:
 
 1. I opened the card that you sent.
@@ -2475,22 +2831,49 @@ Light a candle, light a lamp, and step down. Step down. Write, and write, and wr
 
 ------
 
-Susy writes it all down and goes to bed with a sense of something. The end of a day, perhaps. Friday evening evokes just that feeling. She rolls it around on her tongue as she falls off the edge of awake.
-------
-
-<!-- chapter -->
-
-### Chapter 23: Still.
+Susy writes it all down and goes to bed with a sense of something.
+The end of a day, perhaps. Friday evening evokes just that feeling. She rolls it around on her tongue as she falls off the edge of awake.
 
 ------
 
-- And if I say just that, it hurts so much, you have no idea why or what or how. You think maybe like stepping on a nail. But not actually anything like stepping on a nail. Not like anything that hurts. Like something that doesn't feel at all, or something that feels too much all at once, or both. Something that can't be followed, but must be. Like St. Elmo’s will-o-the-wisp foxfire-demon pied-pixie siren, calling you, so you move. Because cause-and-effect have to exist for me to get from one place to the next. And what then, if they don't? What? Am I stuck here forever?
+<!-- chapter
+chapter       : 'Still.'
+description   : 'Chapter 23: Still.'
+-->
+
+## Chapter 23
+# Still.
 
 ------
 
-<!-- chapter -->
+- And if I say just that,
+  it hurts so much,
+  you have no idea why or what or how.
+  You think maybe like stepping on a nail.
+  But not actually anything like stepping on a nail.
+  Not like anything that hurts.
+  Like something that doesn't feel at all,
+  or something that feels too much all at once,
+  or both.
+  Something that can't be followed,
+  but must be.
+  Like St. Elmo’s will-o-the-wisp foxfire-demon pied-pixie siren,
+  calling you, so you move.
+  Because cause-and-effect have to exist for me to get from one place to the next.
+  And what then,
+  if they don't?
+  What?
+  Am I stuck here forever?
 
-### Chapter 24: Whence, from Two.
+------
+
+<!-- chapter
+chapter       : 'Whence, from Two.'
+description   : 'Chapter 24: Whence, from Two.'
+-->
+
+## Chapter 24
+# Whence, from Two.
 
 ------
 
@@ -2508,25 +2891,30 @@ Susy writes it all down and goes to bed with a sense of something. The end of a 
 
 ------
 
-1. Forever is at least an hour and a half.
-2. While my heart is deeper than three.
-3. And without blankets, loneliness sets in.
-4. You can't sleep at night.
-5. And I miss your kiss on my neck.
-6. Which is not to say—
-7. Or to put—
-8. Too fine a point anywhere forever.
-9. Goodnight.
+1.  Forever is at least an hour and a half.
+2.  While my heart is deeper than three.
+3.  And without blankets, loneliness sets in.
+4.  You can't sleep at night.
+5.  And I miss your kiss on my neck.
+6.  Which is not to say—
+7.  Or to put—
+8.  Too fine a point anywhere forever.
+9.  Goodnight.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'This Road Full Glittered.'
+description   : 'Chapter 25: This Road Full Glittered.'
+-->
 
-### Chapter 25: This Road Full Glittered.
+## Chapter 25
+# This Road Full Glittered.
 
 ------
 
-In the park with the sky is amber and falling, and the trees turn from blue to gray and curdle like clouds.
+In the park with the sky is amber and falling,
+and the trees turn from blue to gray and curdle like clouds.
 
 JJ and Susy on the bench and sighing:
 
@@ -2556,16 +2944,20 @@ JJ and Susy on the bench and sighing:
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Over Un-Thought Waters.'
+description   : 'Chapter 26: Over Un-Thought Waters.'
+-->
 
-### Chapter 26: Over Un-Thought Waters.
+## Chapter 26
+# Over Un-Thought Waters.
 
 ------
 
-1. Thursdays go and come again.
-2. Without you is like.
-3. The beginning of one is.
-4. And on.
+1.  Thursdays go and come again.
+2.  Without you is like.
+3.  The beginning of one is.
+4.  And on.
 
 ------
 
@@ -2582,4 +2974,3 @@ The sun was setting, and so on.
 ------
 
 [Setting]
-------
