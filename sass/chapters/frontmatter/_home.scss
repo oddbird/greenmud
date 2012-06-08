@@ -73,6 +73,7 @@ $scribble : '#{$img}scribble.png';
 
   @include at-breakpoint($break) {
     [role="main"] { 
+      @include padding-leader(2);
       background-position: 0 0; 
       background-position: 0 0, right rhythm(13); 
     }

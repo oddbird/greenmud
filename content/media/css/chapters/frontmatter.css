@@ -97,5 +97,5 @@
 #home .inst:before { font-size: 2.25em; line-height: 1.111em; margin-bottom: 0.139em; -webkit-transition: color 300ms; -moz-transition: color 300ms; -ms-transition: color 300ms; -o-transition: color 300ms; transition: color 300ms; display: block; color: rgba(128, 128, 128, 0.8); }
 @media all and (min-width: 24em) { #home .inst { width: 48.78%; float: left; margin-right: 2.439%; }
   #home .inst:last-child { float: right; margin-right: 0; } }
-@media (min-width: 53.25em) { #home [role="main"] { background-position: 0 0; background-position: 0 0, right 16.25em; }
+@media (min-width: 53.25em) { #home [role="main"] { padding-top: 2.5em; background-position: 0 0; background-position: 0 0, right 16.25em; }
   #home .intro, #home .actions, #home .instructions { padding-left: 20.29%; padding-right: 20.29%; clear: both; } }
