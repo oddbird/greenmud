@@ -1,5 +1,5 @@
 # Into The Green Green Mud
-A novel (with pictures) 
+A novel (with pictures)
 by Eric A. Meyer
 
 ------
@@ -21,7 +21,14 @@ description: 'Epigraph: Good Friday, by Cocorosie.'
 
 ------
 
-<!-- book -->
+<!-- book
+book          : Dancing Without Architecture
+description   : 'Book 1: Dancing Without Architecture.'
+book_slug     : dancing
+chapter_slug  : frontmatter
+extra_styles  : chapters/dancing.css
+voice         : narrator
+-->
 
 ## BOOK 1: Dancing Without Architecture.
 
@@ -40,7 +47,14 @@ description: 'Epigraph: I Sat Belonely, by John Lennon.'
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : In Which JJ
+description   : 'Chapter 1: In Which JJ.'
+
+chapter_slug  : in-which-jj
+extra_styles  : chapters/in-which-jj.css
+voice         : jj
+-->
 
 ### Chapter 1: In Which JJ.
 
@@ -213,7 +227,14 @@ A winter wonderland dinner of frozen pizza and veggies, all cooked up and hot to
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Daymares, Poor Boy.'
+description   : 'Chapter 2: Daymares, Poor Boy.'
+
+chapter_slug  : daymares
+extra_styles  : chapters/daymares.css
+voice         : narrator
+-->
 
 ### Chapter 2: Daymares, Poor Boy.
 
@@ -259,7 +280,14 @@ A winter wonderland dinner of frozen pizza and veggies, all cooked up and hot to
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'The Susy Within.'
+description   : 'Chapter 3: The Susy Within.'
+
+chapter_slug  : the-susy-within
+extra_styles  : chapters/the-susy-within.css
+voice         : susy
+-->
 
 ### Chapter 3: The Susy Within.
 
@@ -1155,7 +1183,14 @@ So green!
 [red]
 ------
 
-<!-- book -->
+<!-- book
+book          : This EverAfter Life
+description   : 'Book 2: This EverAfter Life.'
+book_slug     : everafter
+chapter_slug  : frontmatter
+extra_styles  : chapters/everafter.css
+voice         : narrator
+-->
 
 ## BOOK 2: This EverAfter Life.
 
