@@ -1,8 +1,17 @@
-# Into The Green Green Mud
-## A novel (with pictures)
+<!-- meta
+description: 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
+-->
+
+# Into the Green Green Mud
+## a novel (with pictures)
+
 by [Eric A. Meyer][eam]
 
+[Teacup Gorilla][tg] | [OddBird][obc]
+
 [eam]: http://eric.andmeyer.com/
+[tg]: http://teacupgorilla.com/
+[obc]: http://oddbird.net/
 
 ------
 
