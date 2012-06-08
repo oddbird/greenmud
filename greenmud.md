@@ -35,12 +35,8 @@ slug: epigraph
 ------
 
 <!-- book
-book          : Dancing Without Architecture
+book          : 'Dancing Without Architecture.'
 description   : 'Book 1: Dancing Without Architecture.'
-book_slug     : dancing
-chapter_slug  : frontmatter
-extra_styles  : chapters/dancing.css
-voice         : narrator
 -->
 
 ## Book 1
@@ -63,11 +59,9 @@ slug: epigraph
 ------
 
 <!-- chapter
-chapter       : In Which JJ
+chapter       : 'In Which JJ.'
 description   : 'Chapter 1: In Which JJ.'
 
-chapter_slug  : in-which-jj
-extra_styles  : chapters/in-which-jj.css
 voice         : jj
 -->
 
@@ -353,8 +347,6 @@ Do without!
 chapter       : 'Daymares, Poor Boy.'
 description   : 'Chapter 2: Daymares, Poor Boy.'
 
-chapter_slug  : daymares
-extra_styles  : chapters/daymares.css
 voice         : narrator
 -->
 
@@ -407,8 +399,6 @@ voice         : narrator
 chapter       : 'The Susy Within.'
 description   : 'Chapter 3: The Susy Within.'
 
-chapter_slug  : the-susy-within
-extra_styles  : chapters/the-susy-within.css
 voice         : susy
 -->
 
@@ -610,7 +600,12 @@ with an exposure to match the length of the moon-lit night.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Yes Mother, Goodnight.'
+description   : 'Chapter 4: Yes Mother, Goodnight.'
+
+voice         : narrator
+-->
 
 ## Chapter 4
 # Yes Mother, Goodnight.
@@ -644,7 +639,12 @@ with an exposure to match the length of the moon-lit night.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Bring Down the House House.'
+description   : 'Chapter 5: Bring Down the House House.'
+
+voice         : jj
+-->
 
 ## Chapter 5
 # Bring Down the House House.
@@ -869,7 +869,12 @@ bring down the house house.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Dance Together and Cry.'
+description   : 'Chapter 6: Dance Together and Cry.'
+
+voice         : narrator
+-->
 
 ## Chapter 6
 # Dance Together and Cry.
@@ -905,41 +910,59 @@ bring down the house house.
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Forever Amen.'
+description   : 'Chapter 7: Forever Amen.'
+
+voice         : susy
+-->
 
 ## Chapter 7
 # Forever Amen.
 
 ------
 
-Susy saw a rainbow at the corner of Roosevelt and Forever Amen. Now it's in her notebook-brain beyond words-to-come. A rainbow sketch in pen looks like the end of a good day.
+Susy saw a rainbow at the corner of Roosevelt and Forever Amen.
+Now it's in her notebook-brain beyond words-to-come.
+A rainbow sketch in pen looks like the end of a good day.
 
 ------
 
 Nothing to do but list the words, and she does:
 
-1. The rain and the trees and the humming bird bees.
-2. The wind and the sky and the rain in my eye.
-3. Round and round and round we go.
-4. Through time and rain and wind and snow.
-5. Round and round and round we go.
-6. With love to keep the time.
+1.  The rain and the trees and the humming bird bees.
+2.  The wind and the sky and the rain in my eye.
+3.  Round and round and round we go.
+4.  Through time and rain and wind and snow.
+5.  Round and round and round we go.
+6.  With love to keep the time.
 
 ------
 
-It's a whiff of joy saved for later. Aged in oak. It's not a joke. A creative stroke!
+It's a whiff of joy saved for later.
+Aged in oak.
+It's not a joke.
+A creative stroke!
 
 Write it down!
 
 ------
 
-She reads it for JJ who sings it to himself, changing it a bit here and there, but loving it all the same. They sing it together in duet and round, harmonies up and down and in-between. Within, and without end. It's a beautiful sound in the wilderness-apartment-flat first-floor living-room of Susy's life.
+She reads it for JJ who sings it to himself,
+changing it a bit here and there,
+but loving it all the same.
+They sing it together in duet and round,
+harmonies up and down and in-between.
+Within, and without end.
+It's a beautiful sound
+in the wilderness-apartment-flat first-floor living-room of Susy's life.
 
 ------
 
-1. Nothing consistent these days.
-2. Not even the rain snow rain on the windshield before and after work each morning.
-3. And on and on and on.
+1.  Nothing consistent these days.
+2.  Not even the rain snow rain on the windshield
+    before and after work each morning.
+3.  And on and on and on.
 
 ------
 
@@ -957,19 +980,22 @@ Time time time (beat) time time time.
 
 ------
 
-A through A through A through Z, and on and on, through you and you and you and me.
+A through A through A through Z,
+and on and on,
+through you and you and you and me.
 
 ------
 
-Write it down! Write it down!
+Write it down!
+Write it down!
 
 ------
 
-1. In the end and out again.
-2. Without your love it's all the same.
-3. Take the reins.
-4. Break the reins.
-5. In and out it's all the same.
+1.  In the end and out again.
+2.  Without your love it's all the same.
+3.  Take the reins.
+4.  Break the reins.
+5.  In and out it's all the same.
 
 ------
 
@@ -977,17 +1003,23 @@ When it gets just so, out of the oven and ready to edit, Susy goes at it with kn
 
 ------
 
-1. Like skipping stones on a frozen lake.
-2. Like the lake froze over and birds fly.
-3. Like coming home!
-4. Coming home!
-5. The end of one chapter is the beginning of another.
-6. Through all time.
-7. Forever amen.
+1.  Like skipping stones on a frozen lake.
+2.  Like the lake froze over and birds fly.
+3.  Like coming home!
+4.  Coming home!
+5.  The end of one chapter is the beginning of another.
+6.  Through all time.
+7.  Forever amen.
 
 ------
 
-She calls up JJ on Thursdays after work and Saturdays without work to get some food or a film or both. A walk in the park will do the trick, it always has. Together they are like boats on a log, sailing into the sunrise red.
+She calls up JJ on Thursdays after work
+and Saturdays without work
+to get some food or a film or both.
+A walk in the park will do the trick,
+it always has.
+Together they are like boats on a log,
+sailing into the sunrise red.
 
 ------
 
@@ -995,9 +1027,17 @@ Sailor's warning.
 
 ------
 
-Keep up the good looks, don't change a wink.
+Keep up the good looks,
+don't change a wink.
 
-Sometimes on a sad day, or one where the numbers got away, they just sit in solemn silence, like never before. Like the night before forever. To hold and be held is a moment of peace in this joyless-go-round of some-such and so-much and more.
+Sometimes on a sad day,
+or one where the numbers got away,
+they just sit in solemn silence,
+like never before.
+Like the night before forever.
+To hold and be held is a moment of peace
+in this joyless-go-round
+of some-such and so-much and more.
 
 ------
 
@@ -1005,36 +1045,61 @@ Close the door. Close the door.
 
 ------
 
-1. To hold and be held.
-2. To held and be hold.
-3. To meld and be mold.
-4. To mold and be meld.
-5. The joy of the old.
-6. The flock and the fold.
-7. The best that there is in this wonderful world.
-8. The two together, and one forever. Amen.
+1.  To hold and be held.
+2.  To held and be hold.
+3.  To meld and be mold.
+4.  To mold and be meld.
+5.  The joy of the old.
+6.  The flock and the fold.
+7.  The best that there is in this wonderful world.
+8.  The two together, and one forever. Amen.
 
 ------
 
-Eat a bagel, eat a biscuit, keep the time, keeping time, keeping time, keeping time, let it rhyme, let it rhyme, keep the time.
+Eat a bagel,
+eat a biscuit,
+keep the time,
+keeping time,
+keeping time,
+keeping time,
+let it rhyme,
+let it rhyme,
+keep the time.
 
 Half past nine.
 
 ------
 
-The trash goes out on Monday mornings, just like that. Nothing to be done. Picked up and gone, over the edge of the earth. The men wear cover-alls to mask their smells. Keep the clean air clean. Put the bin outside the door as you leave the office on Fridays and you'll be fine. No need to think or breathe. Take the weekend off and write a novel.
+The trash goes out on Monday mornings,
+just like that.
+Nothing to be done.
+Picked up and gone,
+over the edge of the earth.
+The men wear cover-alls to mask their smells.
+Keep the clean air clean.
+Put the bin outside the door as you leave the office on Fridays
+and you'll be fine.
+No need to think or breathe.
+Take the weekend off and write a novel.
+
 ------
 
-1. Do something with your hands.
-2. Anything really.
-3. One thing is as good as another.
-4. The end of one chapter is
+1.  Do something with your hands.
+2.  Anything really.
+3.  One thing is as good as another.
+4.  The end of one chapter is
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Twice Three, Plus One.'
+description   : 'Chapter 8: Twice Three, Plus One.'
 
-### Chapter 8: Twice Three, Plus One.
+voice         : narrator
+-->
+
+## Chapter 8
+# Twice Three, Plus One.
 
 ------
 
@@ -1058,9 +1123,15 @@ The trash goes out on Monday mornings, just like that. Nothing to be done. Picke
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Love in the Time of Dandelions.'
+description   : 'Chapter 9: Love in the Time of Dandelions.'
 
-### Chapter 9: Love in the Time of Dandelions.
+voice         : jj
+-->
+
+## Chapter 9
+# Love in the Time of Dandelions.
 
 ------
 
@@ -1068,41 +1139,79 @@ The trash goes out on Monday mornings, just like that. Nothing to be done. Picke
   the earths deep crust and down and down,
   and down and down and down and down...
 
-> Swing in your little baby gravity, baby, baby girl.
+> Swing in your little baby gravity,
+  baby, baby girl.
 
 ------
 
-The sun is up and then some, floating lazy-like through the blue blue blue backstroke sky. Explain that.
+The sun is up and then some,
+floating lazy-like through the blue blue blue backstroke sky.
+Explain that.
 
 WAKE UP.
 
-JJ is late for work today, but that’s ok.
+JJ is late for work today,
+but that’s ok.
 
 WAKE UP.
 
-The sun and JJ in freestyle together underwater. Clouds carry them away. Stars explode. The earth is swallowed up by the earth. JJ and Susy in their arms. They are held.
+The sun and JJ in freestyle together underwater.
+Clouds carry them away.
+Stars explode.
+The earth is swallowed up by the earth.
+JJ and Susy in their arms.
+They are held.
 
 ------
 
-Gone and gone and gone and gone and gone goes the world and the trees, the cars and the sun, clouds and bees and work and work and work work work. It's raining in the park, but no one notices. Where did time go? Time flies! Bring back time. The good ol’ times. For the bees!
+Gone and gone and gone and gone and gone
+goes the world and the trees,
+the cars and the sun,
+clouds and bees
+and work and work and work work work.
+It's raining in the park,
+but no one notices.
+Where did time go?
+Time flies!
+Bring back time.
+The good ol’ times.
+For the bees!
 
 ------
 
-After work the next day and the day after (and several times over the next week) JJ finds Susy in the parking lot, and they drive to the park and sing songs the whole way there and back again, forever. It’s a joy, and a dream, and being held is everything.
+After work the next day and the day after
+(and several times over the next week)
+JJ finds Susy in the parking lot,
+and they drive to the park
+and sing songs the whole way there and back again, forever.
+It’s a joy,
+and a dream,
+and being held is everything.
 
-Sundays they sleep in, and Tuesdays they get up early for a little bit more before toast and jam and off to work work work.
+Sundays they sleep in,
+and Tuesdays they get up early for a little bit more
+before toast and jam
+and off to work work work.
 
 ------
 
-There’s a letter on the table this morning, from yesterday's mail. Three letters, but two of them are credit cards and lotteries and an army of one-two-three. The third is from his mother.
+There’s a letter on the table this morning,
+from yesterday's mail.
+Three letters,
+but two of them are credit cards
+and lotteries
+and an army of one-two-three.
+The third is from his mother.
 
 ------
 
-His mother! A letter!
+His mother!
+A letter!
 
 ------
 
-> To my dearest sweet John-J-Johnny-Boy, with love your mother.
+> To my dearest sweet John-J-Johnny-Boy,
+  with love your mother.
 
 ------
 
@@ -1110,13 +1219,23 @@ And on with the usual.
 
 ------
 
-It isn’t till mid spring that JJ goes park-walking on his own again, in the shade of the big trees and one jumping squirrel. With a hum in his heart and smile on his smile, JJ sits again belonely neath his tree.
+It isn’t till mid spring that JJ goes park-walking on his own again,
+in the shade of the big trees and one jumping squirrel.
+With a hum in his heart and smile on his smile,
+JJ sits again belonely neath his tree.
 
 ------
 
-And so he sits as the hum goes down, back on his bench at the edge of town. What a silly little life that leads us here, with a smile and a tear, through love and fear, without enough beer.
+And so he sits as the hum goes down,
+back on his bench at the edge of town.
+What a silly little life that leads us here,
+with a smile and a tear,
+through love and fear,
+without enough beer.
 
-I remember now, thinks John to himself, what it must be like to be me under a tree.
+I remember now,
+thinks John to himself,
+what it must be like to be me under a tree.
 
 ------
 
@@ -1125,12 +1244,21 @@ I remember now, thinks John to himself, what it must be like to be me under a tr
 
 > How do you control a spark in your heart?
   — Nothing can be done.
+
 > Where have you been all the days, joy of mine?
   — Nowhere under the sun.
 
 ------
 
-Susy isn’t there, but she does call, and the joy from it lasts almost half a minute or two, before the shadows and the sun and the world outside have their way again. What a silly world from where he sits under the trees, with tears in his eyes. How dare it go that way again, after the joy of the holiest of holy winter days, with snow and gifts and Susy and all.
+Susy isn’t there,
+but she does call,
+and the joy from it lasts almost half a minute or two,
+before the shadows and the sun and the world outside have their way again.
+What a silly world from where he sits under the trees,
+with tears in his eyes.
+How dare it go that way again,
+after the joy of the holiest of holy winter days,
+with snow and gifts and Susy and all.
 
 ------
 
@@ -1161,11 +1289,15 @@ Susy isn’t there, but she does call, and the joy from it lasts almost half a m
 
 ------
 
-A silly little rhyme, but just in time, so he does. Up and home with a smile.
+A silly little rhyme,
+but just in time,
+so he does.
+Up and home with a smile.
 
 ------
 
-Dandelions are on their way, and some of them have things to say.
+Dandelions are on their way,
+and some of them have things to say.
 
 Talking dandelions!
 
@@ -1173,11 +1305,20 @@ Talking dandelions!
 
 All on their own they populate the earth with yellow, then white.
 
-Quite a night! All right!
+Quite a night!
+All right!
 
 ------
 
-He sings his song, as he hums right along, between the trees and bushes and the shadows and the shadows and the light and the shadows. Squirrels above and trees besides, and everyone together on a grand old adventure over potholes and under lamp posts to find his heart and make it jump jump jump jump jump jump jump!
+He sings his song,
+as he hums right along,
+between the trees and bushes
+and the shadows and the shadows and the light and the shadows.
+Squirrels above and trees besides,
+and everyone together on a grand old adventure
+over potholes and under lamp posts
+to find his heart
+and make it jump jump jump jump jump jump jump!
 
 ------
 
@@ -1191,9 +1332,15 @@ He sings his song, as he hums right along, between the trees and bushes and the 
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Those Nice Bright Colors.'
+description   : 'Chapter 10: Those Nice Bright Colors.'
 
-### Chapter 10: Those Nice Bright Colors.
+voice         : narrator
+-->
+
+## Chapter 10
+# Those Nice Bright Colors.
 
 ------
 
@@ -1223,9 +1370,15 @@ Also:
 
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Into the Green Green Mud.'
+description   : 'Chapter 11: Into the Green Green Mud.'
 
-### Chapter 11: Into the Green Green Mud.
+voice         : jj
+-->
+
+## Chapter 11
+# Into the Green Green Mud.
 
 ------
 
@@ -1245,27 +1398,50 @@ Date: June 19, Sunday
 
 ------
 
-It's all tea all the time for JJ now, the English breakfast kind, like the best of them. What a smell on these rainy nights. Still! You know what they say.
+It's all tea all the time for JJ now,
+the English breakfast kind,
+like the best of them.
+What a smell on these rainy nights.
+Still!
+You know what they say.
 
 ------
 
-The end of the moonlit world is only steps away — a phase or two, where the tides come rushing in and out out out and then fall. Over The Edge and beyond. What a world.
+The end of the moonlit world is only steps away —
+a phase or two,
+where the tides come rushing in and out out out and then fall.
+Over The Edge and beyond.
+What a world.
 
 ------
 
-JJ takes his socks off and smells the ocean in his tea. Waves crashing on the hard rocks below. Like a bungalow. He hums, like he does with the windows shut, about a bee and a bear and a tree and a buzzzzz. Busy like a bee, like a bee, like a bee. Buzzzzzzzz buzzzzzzzz buzzzzzy beee.
+JJ takes his socks off and smells the ocean in his tea.
+Waves crashing on the hard rocks below.
+Like a bungalow.
+He hums, like he does with the windows shut,
+about a bee and a bear and a tree and a buzzzzz.
+Busy like a bee, like a bee, like a bee.
+Buzzzzzzzz buzzzzzzzz buzzzzzy beee.
 
 ------
 
-Water is as water does, and outside it’s falling. Over The Edge. What a World.
+Water is as water does,
+and outside it’s falling.
+Over The Edge.
+What a World.
 
 ------
 
-He takes it black, too. Not one lump or two, but black as can beee. No milk for my tea, not me, not me!
+He takes it black, too.
+Not one lump or two,
+but black as can beee.
+No milk for my tea,
+not me, not me!
 
 ------
 
-Susy calls to leave a message about taking a walk, beeeeeeeep.
+Susy calls to leave a message about taking a walk,
+beeeeeeeep.
 
 ------
 
@@ -1273,15 +1449,19 @@ JJ calls her back.
 
 ------
 
-The puddles are filled to the brim and running over, but the sky is clear and the worms are running for cover like they do.
+The puddles are filled to the brim and running over,
+but the sky is clear
+and the worms are running for cover like they do.
 
 ------
 
-JJ and Susy step careful, like detectives and runaways.
+JJ and Susy step careful,
+like detectives and runaways.
 
 ------
 
-With their eyes on the path and their shoes in their hands.
+With their eyes on the path
+and their shoes in their hands.
 
 ------
 
@@ -1289,7 +1469,8 @@ With their eyes on the path and their shoes in their hands.
 
 ------
 
-The warmth of finger on finger on palm and tickling is the joy of JJ's heart all pounding.
+The warmth of finger on finger on palm and tickling
+is the joy of JJ's heart all pounding.
 
 Susy can't look or the world will explode in tiny flames.
 
@@ -1299,28 +1480,55 @@ Balls of fire, a man on a horse.
 
 ------
 
-Or every calm thing dissolving into itself, into dust, into ashes, into dust, into itself as they walk.
+Or every calm thing dissolving into itself,
+into dust,
+into ashes,
+into dust,
+into itself as they walk.
 
 ------
 
-The sky is falling! The sky is falling!
+The sky is falling!
+The sky is falling!
 
 ------
 
-All conversation is slight movements of the fingernail. Tips of fingers and the middle palm. Back of the hand pointer pinky knuckle palm knuckle fingernails palm thumb grasp grasp tickle. Faster and then stopping and slow and nothing at all. Stepping over the cracks, and splitting to avoid a puddle, and back together in full grasp and tickle! More exciting than ever!
+All conversation is slight movements of the fingernail.
+Tips of fingers and the middle palm.
+Back of the hand pointer pinky knuckle palm knuckle fingernails palm
+thumb grasp grasp tickle.
+Faster and then stopping
+and slow and nothing at all.
+Stepping over the cracks,
+and splitting to avoid a puddle,
+and back together in full grasp and tickle!
+More exciting than ever!
 
 ------
 
-Susy pulls hard and they are off the beaten path. Blazing their own. Marching to a beat. A different heart-drum. Two of them, together. Wild like sunshine in the puddles. Wild like a Sunday morning in June. Merrily rolling along. Life is but a green green puddle dream. Wild like waking up or falling asleep. The space in-between. The mud on the feet of the people with hearts. The wet on the legs of splashing lovers. Like a fountain!
+Susy pulls hard and they are off the beaten path.
+Blazing their own.
+Marching to a beat.
+A different heart-drum.
+Two of them, together.
+Wild like sunshine in the puddles.
+Wild like a Sunday morning in June.
+Merrily rolling along.
+Life is but a green green puddle dream.
+Wild like waking up or falling asleep.
+The space in-between.
+The mud on the feet of the people with hearts.
+The wet on the legs of splashing lovers.
+Like a fountain!
 
 ------
 
-1. Youth everlasting!
-2. A whole new world!
-3. Over the raging seas of change!
-4. Between the sea and sky!
-5. Bed sheets full billowed!
-6. Billowed!
+1.  Youth everlasting!
+2.  A whole new world!
+3.  Over the raging seas of change!
+4.  Between the sea and sky!
+5.  Bed sheets full billowed!
+6.  Billowed!
 
 > A roll in the hay, hey? For old time's sake?
 
@@ -1329,19 +1537,27 @@ Susy pulls hard and they are off the beaten path. Blazing their own. Marching to
 
 ------
 
-And all is green and cold and cozy, running home in clinging clothes. Hand in hand, a full swing band. Sing, sing, dance and sing. Splash and crash and run for warmth.
+And all is green and cold and cozy,
+running home in clinging clothes.
+Hand in hand, a full swing band.
+Sing, sing, dance and sing.
+Splash and crash and run for warmth.
 
 ------
 
-Strip in the stairwell without enough time even for tea on the stove. English breakfast will have to wait.
+Strip in the stairwell
+without enough time even for tea on the stove.
+English breakfast will have to wait.
 
 ------
 
-Under the covers and tickling. Full body now, and warmer than ever.
+Under the covers and tickling.
+Full body now, and warmer than ever.
 
 ------
 
-It's a game! A war!
+It's a game!
+A war!
 
 ------
 
@@ -1349,11 +1565,13 @@ It's a game! A war!
 
 ------
 
-Everything for all time, like the movies!
+Everything for all time,
+like the movies!
 
 ------
 
-And all is still, and the world is at peace.
+And all is still,
+and the world is at peace.
 
 ------
 
@@ -1373,37 +1591,51 @@ There's a puddle at the foot of the stairs.
 
 ------
 
-What can you do about a thing like that? Life is a miracle after all.
+What can you do about a thing like that?
+Life is a miracle after all.
+
 ------
 
-<!-- chapter -->
+<!-- chapter
+chapter       : 'Given Time, Silence.'
+description   : 'Chapter 12: Given Time, Silence.'
+-->
 
-### Chapter 12: Given Time, Silence.
+## Chapter 12
+# Given Time, Silence.
 
 ------
 
 Things to do on a Monday after:
 
-1. Plant a tree.
-2. Sing a song.
-3. Walk a mile.
-4. Kiss me with your breakfast breath.
-5. Become an astronaut.
-6. Paint the garage.
+1.  Plant a tree.
+2.  Sing a song.
+3.  Walk a mile.
+4.  Kiss me with your breakfast breath.
+5.  Become an astronaut.
+6.  Paint the garage.
 
 > Remember New Year’s Eve?
 
-7. Pancakes for breakfast!
+7.  Pancakes for breakfast!
 
 > Wasn't that great?
 
-8. Work work work
+8.  Work work work
 
-> We kissed at midnight, and did a dance for the new year.
+> We kissed at midnight,
+  and did a dance for the new year.
 
 ------
 
-The singing done, the world's begun to fall asleep and drift away. Nothing to say. Nothing to say. Given time, silence. Puddles dry with her back to him, his arms around above beneath between and held. Still.
+The singing done,
+the world's begun to fall asleep and drift away.
+Nothing to say.
+Nothing to say.
+Given time, silence.
+Puddles dry with her back to him,
+his arms around above beneath between and held.
+Still.
 
 ------
 
@@ -1417,15 +1649,24 @@ What is the opposite of entropy?
 
 ------
 
-> What a time and time and time again, with you in the arms of joy, amen. We'll meet again, goodnight.
+> What a time and time and time again,
+  with you in the arms of joy, amen.
+  We'll meet again, goodnight.
 
 ------
 
-JJ left his job that day, without a note from the doctor. Walked out and caught the first bus to way way way away away west young man. Left a note for Susy on her pillow on her desk on her phone in her heart and was gone.
+JJ left his job that day,
+without a note from the doctor.
+Walked out and caught the first bus
+to way way way away away west young man.
+Left a note for Susy on her pillow
+on her desk on her phone in her heart and was gone.
 
 ------
 
-> What a time and time and time again, with you in the arms of joy, amen. We'll meet again, goodnight.
+> What a time and time and time again,
+  with you in the arms of joy, amen.
+  We'll meet again, goodnight.
 
 ------
 
@@ -1435,7 +1676,8 @@ JJ cried, and hummed a little hum.
 
 ------
 
-A spring little hum for leaving and loving. Better to have hummed along with every song.
+A spring little hum for leaving and loving.
+Better to have hummed along with every song.
 
 ------
 
@@ -1457,10 +1699,10 @@ A spring little hum for leaving and loving. Better to have hummed along with eve
 
 ------
 
-1. As rain falls, puddles rise.
-2. At sunrise, shadows fall.
-3. JJ watches from the window.
-4. Susy watches from the window.
+1.  As rain falls, puddles rise.
+2.  At sunrise, shadows fall.
+3.  JJ watches from the window.
+4.  Susy watches from the window.
 
 ------
 
@@ -1481,18 +1723,16 @@ So green!
 ------
 
 [red]
+
 ------
 
 <!-- book
 book          : This EverAfter Life
 description   : 'Book 2: This EverAfter Life.'
-book_slug     : everafter
-chapter_slug  : frontmatter
-extra_styles  : chapters/everafter.css
-voice         : narrator
 -->
 
-## BOOK 2: This EverAfter Life.
+## Book 2
+# This EverAfter Life.
 
 ------
 > And now, each night I count the stars.
