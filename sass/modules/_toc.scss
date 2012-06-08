@@ -3,10 +3,6 @@
 
 [class^="toc-"] { 
   @include trailer;
-  ol { 
-    list-style-type: decimal-leading-zero; 
-    list-style-position: inside;
-  }
   .book, li { @extend %ellipsis; }
   @include media(32em) {
     @include span-columns(4,$total-columns); 
@@ -19,6 +15,7 @@
 // header toc
 
 #toc {
+  @extend %toc-counter;
   @include clearfix;
   background: $darkest;
   color: $control-text-color;

@@ -1248,6 +1248,11 @@ a:hover, a:focus, a:active { color: magenta; }
 .demo .content ol { list-style-type: decimal-leading-zero; }
 .demo .content ul { list-style-type: circle; }
 
+#toc { counter-reset: toc; }
+#toc ol { list-style-type: none; }
+#toc li { counter-increment: toc; }
+#toc li:before { content: counter(toc, decimal-leading-zero) ". "; }
+
 @-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
@@ -1298,7 +1303,6 @@ a:hover, a:focus, a:active { color: magenta; }
 .next { float: right; }
 
 [class^="toc-"] { margin-bottom: 1.25em; }
-[class^="toc-"] ol { list-style-type: decimal-leading-zero; list-style-position: inside; }
 @media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 

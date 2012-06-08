@@ -37,3 +37,13 @@
   ol { list-style-type: decimal-leading-zero; }
   ul { list-style-type: circle; }
 }
+
+%toc-counter {
+  counter-reset: toc;
+  ol { list-style-type: none; }
+  li {
+    counter-increment: toc;
+    &:before { content: counter(toc, decimal-leading-zero) ". "; }
+  }
+}
+

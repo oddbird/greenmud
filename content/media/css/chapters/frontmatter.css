@@ -34,6 +34,11 @@
 #home [role="main"] ol, #about [role="main"] ol { list-style-type: decimal-leading-zero; }
 #home [role="main"] ul, #about [role="main"] ul { list-style-type: circle; }
 
+#contents { counter-reset: toc; }
+#contents ol { list-style-type: none; }
+#contents li { counter-increment: toc; }
+#contents li:before { content: counter(toc, decimal-leading-zero) ". "; }
+
 @-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
