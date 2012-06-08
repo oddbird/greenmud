@@ -1248,6 +1248,7 @@ a:hover, a:focus, a:active { color: magenta; }
 .demo .content ol { list-style-type: decimal; }
 .demo .content ul li { position: relative; }
 .demo .content ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
+.demo .content em, .demo .content blockquote { font-style: italic; }
 
 #toc { counter-reset: toc; }
 #toc ol { list-style-type: none; }
