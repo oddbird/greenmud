@@ -993,7 +993,22 @@ Write it down!
 
 ------
 
-When it gets just so, out of the oven and ready to edit, Susy goes at it with knives. Hungry like wolves for the word kill. Cut it out, pare it down, eat the flesh living off its bones, and spit them out for later crunching between cold white teeth. Make it a game, like cartwheels and ping pong. Every third word has got to go - and so on, till the end of times-up - seven o'clock (or eight, by any other name).
+When it gets just so,
+out of the oven and ready to edit,
+Susy goes at it with knives.
+Hungry like wolves for the word kill.
+Cut it out,
+pare it down,
+eat the flesh living off its bones,
+and spit them out for later crunching
+between cold white teeth.
+Make it a game,
+like cartwheels and ping pong.
+Every third word has got to go -
+and so on,
+till the end of times-up -
+seven o'clock
+(or eight, by any other name).
 
 ------
 
@@ -1095,11 +1110,39 @@ description   : 'Chapter 8: Twice Three, Plus One.'
 
 ------
 
-- The problem with love it seems, if you ask me, which you didn't, but you should — I am your best friend after all. And so I will tell you anyway, As a friend. The problem with love is fidelity. And I don't mean sex with another man or woman (or both, times being what they are), because that's not really the point, is it? Not the cause, but the symptom. Not the symptom, but the exit strategy.
+- The problem with love it seems,
+  if you ask me,
+  which you didn't,
+  but you should —
+  I am your best friend after all.
+  And so I will tell you anyway,
+  As a friend.
+  The problem with love is fidelity.
+  And I don't mean sex with another man or woman
+  (or both, times being what they are),
+  because that's not really the point, is it?
+  Not the cause,
+  but the symptom.
+  Not the symptom,
+  but the exit strategy.
 
 ------
 
-- Because the problem is you, and not them. It always is. However cheap it sounds when you say it. It doesn't last. You don't last. You can't be one thing forever. You were a three and now you’re a seven. Twice three plus one more — the extra one for your parent's divorce maybe, or for no reason at all. You're a seven now, which is only loosely related to three in a mathematical sense, and has nothing in the slightest to say to thirteen, so why bother?
+- Because the problem is you,
+  and not them.
+  It always is.
+  However cheap it sounds when you say it.
+  It doesn't last.
+  You don't last.
+  You can't be one thing forever.
+  You were a three and now you’re a seven.
+  Twice three plus one more —
+  the extra one for your parent's divorce maybe,
+  or for no reason at all.
+  You're a seven now,
+  which is only loosely related to three in a mathematical sense,
+  and has nothing in the slightest to say to thirteen,
+  so why bother?
 
 ------
 
@@ -2541,33 +2584,71 @@ and on and on.
 ------
 
 It's a short conversation
-over the smells of grinding-and-ground-steeping coffee and the rest. A few chuckles, and well, he has to go. Not that you could really expect anything else, really, right? What could you expect, really-really really, right? In a cafe, right? Over latte-cream planners, and scraps of novel-pages, and a table?
+over the smells of grinding and ground-steeping coffee and the rest.
+A few chuckles,
+and well, he has to go.
+Not that you could really expect anything else,
+really, right?
+What could you expect,
+really-really really, right?
+In a cafe, right?
+Over latte-cream planners,
+and scraps of novel-pages,
+and a table?
 
 ------
 
-He's up up and away that way. Rob-man up-up and up-and-gone in slow motion, faster than the eye can think.
+He's up up and away that way.
+Rob-man up-up and up-and-gone in slow motion,
+faster than the eye can think.
 
-But romantic interests take your number, and take you home by the hand (the other hand), brushing the hair from your blinking eyes. Walking home in the rain, carried through puddles and around potholes. Romantic interests slowly undress you by the fireplace, and you don't have to go to work the next morning.
+But romantic interests take your number,
+and take you home by the hand
+(the other hand),
+brushing the hair from your blinking eyes.
+Walking home in the rain,
+carried through puddles and around potholes.
+Romantic interests slowly undress you by the fireplace,
+and you don't have to go to work the next morning.
 
-Or they are up up and gone in the blink of an eye, never seen or heard from again. The angel and the hobo: the disappearing kind. Here today, gone today, all in the blink of a day. A live-long day. Till the moon comes over the hill. And then night.
+Or they are up up and gone in the blink of an eye,
+never seen or heard from again.
+The angel and the hobo:
+the disappearing kind.
+Here today,
+gone today,
+all in the blink of a day.
+Till the moon comes over the hill.
+And then night.
 
 ------
 
-It's Sunday anyway, she thinks, as she walks home alone, all alone. It never really works out that way, does it? And never on a Sunday. Why is that?
+It's Sunday anyway,
+she thinks,
+as she walks home alone,
+all alone.
+It never really works out that way,
+does it?
+And never on a Sunday.
+Why is that?
 
-It's an empty night, and cold in the thoughts under her covers, dreaming of those eyes. And those hands. The other hands.
+It's an empty night,
+and cold in the thoughts under her covers,
+dreaming of those eyes.
+And those hands.
+The other hands.
 
 ------
 
-1. What a to-do to live today, without you.
-2. I'm blue.
-3. Without you.
-4. Another day, another planner.
-5. Another coffee or two.
-6. It's a whole new feeling.
-7. Just knowing that I could.
-8. Anon.
-9. Anon Anon Anon Anon.
+1.  What a to-do to live today, without you.
+2.  I'm blue.
+3.  Without you.
+4.  Another day, another planner.
+5.  Another coffee or two.
+6.  It's a whole new feeling.
+7.  Just knowing that I could.
+8.  Anon.
+9.  Anon Anon Anon Anon.
 
 ------
 
@@ -2586,7 +2667,16 @@ description   : 'Chapter 19: Why Cry when You Can Kick a Cat?'
 
 ------
 
-- Your novel. I don't get it. What it's saying. I don't see why one word follows the next, or one character follows the color red. I didn't laugh. I'm not sure that I cried. Like dancing about architecture. I'm not sure I know what I would cry about, or why you wrote it.
+- Your novel.
+  I don't get it.
+  What it's saying.
+  I don't see why one word follows the next,
+  or one character follows the color red.
+  I didn't laugh.
+  I'm not sure that I cried.
+  Like dancing about architecture.
+  I'm not sure I know what I would cry about,
+  or why you wrote it.
 
 ------
 
@@ -2606,13 +2696,21 @@ voice         : jj
 
 ------
 
-A plane ticket to South wherever, round-tripping forever, is a life for the long-lost and lonely.
+A plane ticket to South wherever,
+round-tripping forever,
+is a life for the long-lost and lonely.
 
 ------
 
-This or that packet of peanut-chip cheddar-crack candy-bar bite-size water-wonder-bread seat-up-sick snacks makes you wonder about home and lemonade on the grass (among other things).
+This or that packet of peanut-chip
+cheddar-crack candy-bar bite-size water-wonder-bread seat-up-sick snacks
+makes you wonder about home
+and lemonade on the grass
+(among other things).
 
-I'm a timezone before myself, and two behind Susy, JJ sings in his sad little seat.
+I'm a timezone before myself,
+and two behind Susy,
+JJ sings in his sad little seat.
 
 ------
 
@@ -2630,29 +2728,53 @@ I'm a timezone before myself, and two behind Susy, JJ sings in his sad little se
 
 ------
 
-It's light later in the sky, with the sun beaten white off the cool-whip clouds, turning orange and red before sinking through. A whole lot of nothing is the same in black or white. JJ watches the wing as it blinks green-green-green-green against the black.
+It's light later in the sky,
+with the sun beaten white off the cool-whip clouds,
+turning orange and red before sinking through.
+A whole lot of nothing is the same in black or white.
+JJ watches the wing as it blinks green-green-green-green
+against the black.
 
 ------
 
-A row of blue lights against two rows of white. The earth can rise up without warning when you're thinking of other lovers. Back home in the light of the covers, the warmth of sheets, and the soft smell of the lamps. The love in his mind is a love for all times.
+A row of blue lights against two rows of white.
+The earth can rise up without warning
+when you're thinking of other lovers.
+Back home in the light of the covers,
+the warmth of sheets,
+and the soft smell of the lamps.
+The love in his mind is a love for all times.
 
-The airport is a cold white metal moving through clouded glass. Plastic tunnels from one reality to another. Or a fantasy back home, or the other way around. Moving between thought, flight, fiction, love, and the death of a father.
+The airport is a cold white metal moving through clouded glass.
+Plastic tunnels from one reality to another.
+Or a fantasy back home,
+or the other way around.
+Moving between thought,
+flight, fiction, love,
+and the death of a father.
 
 ------
 
-The Airport within. The Airport without.
+The Airport within.
+The Airport without.
 
 Purgatory with a baggage claim.
 
 ------
 
-It's a sunny day out sunny-side the next sunny-sunny morning. Nothing but sun to keep the clouds in the sky and the rain from falling.
+It's a sunny day out sunny-side the next sunny-sunny morning.
+Nothing but sun to keep the clouds in the sky and the rain from falling.
 
-It's a dry heat out south-west of somewhere, and the sand is here to prove it. JJ finds an ice cream stand on his way to the hospital.
+It's a dry heat out south-west of somewhere,
+and the sand is here to prove it.
+JJ finds an ice cream stand on his way to the hospital.
 
 ------
 
-One for the road, and another for the road as well. Two scoops a day, with a doctor on the way.
+One for the road,
+and another for the road as well.
+Two scoops a day,
+with a doctor on the way.
 
 (Mustn't even)
 
@@ -2673,13 +2795,21 @@ One for the road, and another for the road as well. Two scoops a day, with a doc
 
 ------
 
-Uncharted rooms, the anatomy of thought. From one room to the next, along a corridor to the elevator, and waiting for the telling-and-the-tolling, ping-ding, and no one pouring out past or down the hall.
+Uncharted rooms,
+the anatomy of thought.
+From one room to the next,
+along a corridor to the elevator,
+and waiting for the telling-and-the-tolling,
+ping-ding,
+and no one pouring out past or down the hall.
 
-Silence after the whir of the doors. JJ steps in for the magic of movement.
+Silence after the whir of the doors.
+JJ steps in for the magic of movement.
 
 ------
 
-Little lights above the door, just like in the movies.
+Little lights above the door,
+just like in the movies.
 
 ------
 
@@ -2694,17 +2824,44 @@ Little lights above the door, just like in the movies.
 
 ------
 
-And so it goes to the third floor, where cell phones aren't allowed unless you ask the right nurse. The night nurse. Which you don't. No one to call, and no one calling. Other things to keep off the mind.
+And so it goes to the third floor,
+where cell phones aren't allowed unless you ask the right nurse.
+The night nurse.
+Which you don't.
+No one to call,
+and no one calling.
+Other things to keep off the mind.
 
 ------
 
-With the advent of the microwave comes hospital food, and dinner for JJ with his parents. Both quiet, bed and chair. Father drinking in the eternal liquid dinner of the drip-drip drip-drip drip-drip drip, and mother having eaten several times ago already.
+With the advent of the microwave comes hospital food,
+and dinner for JJ with his parents.
+Both quiet,
+bed and chair.
+Father drinking in the eternal liquid dinner
+of the drip-drip drip-drip drip-drip drip,
+and mother having eaten several times ago already.
 
 ------
 
-It's roast beef on a kaiser, to say the least, with iceberg and fries. Tepid and soggy, to be exact. Silence isn't less silent with food in your mouth, but chewing is something to do when you can't look up.
+It's roast beef on a kaiser,
+to say the least,
+with iceberg and fries.
+Tepid and soggy,
+to be exact.
+Silence isn't less silent with food in your mouth,
+but chewing is something to do when you can't look up.
 
-Billions of eyes blinking, but only six in the room. Two pair each, over the sterile bed, for Mother to communicate with slight twitches, and a curling at the mouth. Which makes JJ queasy for a moment, and then another, and a third, before he excuses himself.
+Billions of eyes blinking,
+but only six in the room.
+One pair each,
+over the sterile bed,
+for Mother to communicate with slight twitches,
+and a curling at the mouth.
+Which makes JJ queasy for a moment,
+and then another,
+and a third,
+before he excuses himself.
 
 ------
 
@@ -2720,21 +2877,49 @@ Billions of eyes blinking, but only six in the room. Two pair each, over the ste
 
 ------
 
-Next day, Mother has dinner prepped to the teeth and beyond, in crock pots and dishes and pans and ovens. With spoons, forks, knives, sporks, whisks and the works. It's a long day at home alone in the summer, with nothing and no one and never. What a to-do to die today.
+Next day,
+Mother has dinner prepped to the teeth and beyond,
+in crock pots and dishes and pans and ovens.
+With spoons, forks, knives, sporks, whisks and the works.
+It's a long day at home alone in the summer,
+swith nothing and no one and never. What a to-do to die today.
 
-Or tomorrow, for what it's worth (which is quite a lot).
+Or tomorrow,
+for what it's worth
+(which is quite a lot).
 
 ------
 
-Worth thousands, and more. Bills spread and crumpled, mixed and mashed like potatoes in milk and money. Nothing left to grow on. It's a long way to the bank, but insurance will cover it, won't they? Life and death and everything in-between? Covered.
+Worth thousands,
+and more.
+Bills spread and crumpled,
+mixed and mashed like potatoes in milk and money.
+Nothing left to grow on.
+It's a long way to the bank,
+but insurance will cover it,
+won't they?
+Life and death and everything in-between?
+Covered?
 
-She did the books, and still does, but he signed the papers and read the small print. That's just the way it was.
+She did the books,
+and still does,
+but he signed the papers and read the small print.
+That's just the way it was.
 
 How is it now?
 
 ------
 
-A year later and back again, with mother in the kitchen and no one to visit in the hospital, JJ has nothing to say. He says nothing. Nothing is said. JJ sits. Mother sits. It is silent. Silence is said by all. Silence.
+A year later and back again,
+with mother in the kitchen and no one to visit in the hospital,
+JJ has nothing to say.
+He says nothing.
+Nothing is said.
+JJ sits.
+Mother sits.
+It is silent.
+Silence is said by all.
+Silence.
 
 Nothing is nothing.
 
@@ -2766,47 +2951,76 @@ voice         : susy
 
 ------
 
-1. My Sunday best.
-2. Under the live long.
-3. A squirrel between.
-4. When I wept without you (twice).
-5. Sometimes the daffodils.
-6. How to know.
-7. All is said.
-8. Like a metaphor.
+1.  My Sunday best.
+2.  Under the live long.
+3.  A squirrel between.
+4.  When I wept without you (twice).
+5.  Sometimes the daffodils.
+6.  How to know.
+7.  All is said.
+8.  Like a metaphor.
 
 ------
 
-It's a list-book of poems, when all is said and done. What's a novel when life is cut? What's a short when life? Why are you crying?
+It's a list-book of poems,
+when all is said and done.
+What's a novel when life is cut?
+What's a short when life?
+Why are you crying?
 
-Susy's mother comes to town to celebrate. The birthing of a book is no small thing to waste.
+Susy's mother comes to town to celebrate.
+The birthing of a book is no small thing to waste.
 
-The end of one is the beginning. And this one goes on forever.
+The end of one is the beginning.
+And this one goes on forever.
 
 ------
 
 For my grandmother:
 
-1. I opened the card that you sent.
-2. And wept.
-3. Like an afternoon sunset.
-4. Like a metaphor.
+1.  I opened the card that you sent.
+2.  And wept.
+3.  Like an afternoon sunset.
+4.  Like a metaphor.
 
 ------
 
-It's going to be a long winter, but not long enough. The book sells like a book, for love not money, and Susy is working on the next one. Her mother has gone home with a hug and farewell, and a sprinkle of pixie-dust heels-together golden-silver-ruby-rouge slippers. Susy goes to the lake with a pack of sandwiches and now-a-major-motion-picture by what’s-his-name. It's a good book, but not good enough, and she walks out on the frozen water slide.
+It's going to be a long winter,
+but not long enough.
+The book sells like a book,
+for love not money,
+and Susy is working on the next one.
+Her mother has gone home with a hug and farewell,
+and a sprinkle of pixie-dust heels-together golden-silver-ruby-rouge slippers.
+Susy goes to the lake with a pack of sandwiches
+and now-a-major-motion-picture by what’s-his-name.
+It's a good book,
+but not good enough,
+and she walks out on the frozen water slide.
 
 ------
 
-1. Frozen water.
-2. Slide.
-3. Repeat.
+1.  Frozen water.
+2.  Slide.
+3.  Repeat.
 
 ------
 
-The snow is pushed aside beneath her feet and back when she lays down. The cold and wet are reminders of coldness and wetness. The snow is gray forever. The sky is gray forever. Where they meet is forever.
+The snow is pushed aside beneath her feet and back when she lays down.
+The cold and wet are reminders of coldness and wetness.
+The snow is gray forever.
+The sky is gray forever.
+Where they meet is forever.
 
-She should have brought a pencil, shouldn't she? And a sheet of paper. Write it down like yesterday's poetry. A silver lining. A shadow. Trees. Evening mass. Falling asleep.
+She should have brought a pencil,
+shouldn't she?
+And a sheet of paper.
+Write it down like yesterday's poetry.
+A silver lining.
+A shadow.
+Trees.
+Evening mass.
+Falling asleep.
 
 ------
 
@@ -2816,23 +3030,40 @@ She eats another to stave off another before sleep.
 
 ------
 
-When it starts snowing, and the trees set in with evening shadows and glowing leaves, Susy makes her way back to the park bench, and to the car, and to her home, upstairs by the chimney with a cup of tea, a pencil, and paper. Nothing to be done. There's no song to sing, when there's nothing to be sung.
+When it starts snowing,
+and the trees set in with evening shadows and glowing leaves,
+Susy makes her way back to the park bench,
+and to the car,
+and to her home,
+upstairs by the chimney with a cup of tea,
+a pencil,
+and paper.
+Nothing to be done.
+There's no song to sing,
+when there's nothing to be sung.
 
-Light a candle, light a lamp, and step down. Step down. Write, and write, and write, and write. Write, and write, and write another.
+Light a candle,
+light a lamp,
+and step down.
+Step down.
+Write, and write, and write, and write.
+Write, and write, and write another.
 
 ------
 
-1. Don't quit your live long job.
-2. Never eat your vegetables.
-3. What's it to you?
-4. I'm dining alone.
-5. Dining of natural causes.
-6. Alone of natural causes.
+1.  Don't quit your live long job.
+2.  Never eat your vegetables.
+3.  What's it to you?
+4.  I'm dining alone.
+5.  Dining of natural causes.
+6.  Alone of natural causes.
 
 ------
 
 Susy writes it all down and goes to bed with a sense of something.
-The end of a day, perhaps. Friday evening evokes just that feeling. She rolls it around on her tongue as she falls off the edge of awake.
+The end of a day, perhaps.
+Friday evening evokes just that feeling.
+She rolls it around on her tongue as she falls off the edge of awake.
 
 ------
 
@@ -2961,15 +3192,24 @@ description   : 'Chapter 26: Over Un-Thought Waters.'
 
 ------
 
-JJ went to the park, with a song on his hum and a breeze to be blown. He sat ever so beneath the trees, and thought about forever. The rain ran tears down his umbrella, and off into the earth.
+JJ went to the park,
+with a song on his hum and a breeze to be blown.
+He sat ever so beneath the trees,
+and thought about forever.
+The rain ran tears down his umbrella,
+and off into the earth.
 
 ------
 
-Susy thought "ablation" was a good word, and wrote another poem about flowers in full bloom, and the mud on her heels. A cup of tea with Jack Daniel's is called a Hot Toddy.
+Susy thought "ablation" was a good word,
+and wrote another poem about flowers in full bloom,
+and the mud on her heels.
+A cup of tea with Jack Daniel's is called a Hot Toddy.
 
 ------
 
-The sun was setting, and so on.
+The sun was setting,
+and so on.
 
 ------
 
