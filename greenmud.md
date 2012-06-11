@@ -942,7 +942,7 @@ Nothing to do but list the words, and she does:
 
 ------
 
-It's a whiff of joy saved for later.
+It's a whiff of joy, saved for later.
 Aged in oak.
 It's not a joke.
 A creative stroke!
@@ -1400,8 +1400,9 @@ Updated June 4, 11:24 p.m. MT
 
 ------
 
-Smithsonian Magazine, May 2008: "Uganda’s wild wild giraffes."
+Smithsonian Magazine, May 2008:
 
+"Uganda’s wild wild giraffes."
 Also:
 
 1. Lincoln elected!
@@ -1653,7 +1654,7 @@ Things to do on a Monday after:
 1.  Plant a tree.
 2.  Sing a song.
 3.  Walk a mile.
-4.  Kiss me with your breakfast breath.
+4.  Take me by the hand and smile.
 5.  Become an astronaut.
 6.  Paint the garage.
 
