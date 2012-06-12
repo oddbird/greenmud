@@ -1,18 +1,20 @@
+
 ---
-body_class    : demo
-
-slug          : titlepage
-url           : title.html
-
-prev:
-    slug      : home
-    url       : index.html
+body_class: demo
+description: 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
 next:
-    slug      : copyright
-    url       : copyright.html
+    slug: copyright
+    url: copyright.html
+prev:
+    slug: home
+    url: index.html
+slug: title
+url: title.html
+
 ---
 
 {% filter markdown %}
+
 
 # Into the Green Green Mud
 ## a novel (with pictures)
@@ -24,5 +26,6 @@ by [Eric A. Meyer][eam]
 [eam]: http://eric.andmeyer.com/
 [tg]: http://teacupgorilla.com/
 [obc]: http://oddbird.net/
+
 
 {% endfilter %}

@@ -5,4 +5,3 @@ default_block: page
 
 chapter_slug: frontmatter
 extra_styles: frontmatter.css
-voice: narrator

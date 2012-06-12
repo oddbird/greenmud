@@ -1,0 +1,5 @@
+book: Dancing Without Architecture.
+book_slug: dancing-without-architecture
+chapter_slug: frontmatter
+description: 'Book 1: Dancing Without Architecture.'
+extra_styles: dancing-without-architecture/frontmatter.css
