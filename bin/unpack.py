@@ -110,7 +110,7 @@ class NovelParser(object):
 
     def _ensure_output_dir(self):
         """Create the output directory if it doesn't exist and copy skel."""
-        shutil.copytree(self.skeleton_dir, self.output_dir)
+        shutil.copytree(self.skeleton_dir, self.output_dir, symlinks=True)
 
 
 class Page(object):
