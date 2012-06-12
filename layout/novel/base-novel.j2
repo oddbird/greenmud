@@ -16,13 +16,13 @@
 {% block styles -%}
   <link rel="stylesheet" href="{{ media_url('css/novel.css') }}" />
   {% if resource.meta.extra_styles -%}
-  {%- set style_url = 'css/' + resource.meta.extra_styles -%}
+  {%- set style_url = 'css/chapters/' + resource.meta.extra_styles -%}
   <link rel="stylesheet" href="{{ media_url(style_url) }}" />
   {% endif %}
 {% endblock styles %}
 
 {% block body %}
-  
+
   <a id="toggle" title="show/hide controls">show/hide controls</a>
   <div class="controls">
   {% block header -%}
@@ -33,9 +33,9 @@
     </nav>
   {%- endblock %}
   </div>
-  
+
   {% include "novel/_toc.j2" %}
-  
+
   {% block main %}{% endblock main %}
 
 {% endblock body%}

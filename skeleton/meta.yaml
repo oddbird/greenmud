@@ -4,5 +4,5 @@ extends: novel/page.j2
 default_block: page
 
 chapter_slug: frontmatter
-extra_styles: chapters/frontmatter.css
+extra_styles: frontmatter.css
 voice: narrator
