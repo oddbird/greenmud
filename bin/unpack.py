@@ -260,6 +260,8 @@ class Page(object):
                 n.setdefault("url", "{0}/".format(self.next.title_slug))
                 if len(self.path_segments) == 2:
                     n["url"] = "../{0}".format(n["url"])
+                    if self.next.is_book_title:
+                        n["url"] = "../{0}".format(n["url"])
             else:
                 n.setdefault("url", self.next.meta["url"])
         else:
