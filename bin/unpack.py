@@ -275,7 +275,10 @@ class Page(object):
             p.setdefault("slug", self.prev.meta["slug"])
             p.setdefault("url", self.prev.meta["url"])
             if self.is_title:
-                if len(self.prev.path_segments) == len(self.path_segments):
+                if self.is_book_title and self.prev.path_segments:
+                    p["url"] = "../{0}/{1}".format(
+                        "/".join(self.prev.path_segments), p["url"])
+                elif len(self.prev.path_segments) == len(self.path_segments):
                     p["url"] = "../{0}/{1}".format(
                         self.prev.path_segments[-1], p["url"])
                 else:
