@@ -94,12 +94,19 @@ class NovelParser(object):
     def unpack(self, source_file):
         self._ensure_output_dir()
         with codecs.open(source_file, encoding="UTF-8") as f:
+            slugs_in_chapter = set()
             last_page = None
             for page in Page.pages(f.xreadlines()):
+                if page.is_title:
+                    slugs_in_chapter = set()
                 if page.is_book_title:
                     self.path_segments = [page.book_slug]
                 elif page.is_chapter_title:
                     self.path_segments[1:] = [page.chapter_slug]
+                if page.meta["slug"] in slugs_in_chapter:
+                    page.meta["slug"] = "{0}-2".format(page.meta["slug"])
+                    page.meta["url"] = "{0}.html".format(page.meta["slug"])
+                slugs_in_chapter.add(page.meta["slug"])
                 page.path_segments = self.path_segments[:]
                 if last_page is not None:
                     last_page.next = page
