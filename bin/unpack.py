@@ -106,6 +106,7 @@ class NovelParser(object):
                     page.prev = last_page
                     last_page.write(self.output_dir)
                 last_page = page
+            last_page.write(self.output_dir)
 
 
     def _ensure_output_dir(self):
@@ -249,6 +250,8 @@ class Page(object):
                 current_page_lines = []
             else:
                 current_page_lines.append(line)
+
+        yield cls.parse(current_page_lines)
 
 
     def ensure_meta_defaults(self):
