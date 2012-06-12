@@ -1453,7 +1453,7 @@ You know what they say.
 The end of the moonlit world is only steps away —
 a phase or two,
 where the tides come rushing in and out out out and then fall.
-Over The Edge and beyond.
+Over the edge and beyond.
 What a world.
 
 ------
@@ -1470,7 +1470,7 @@ Buzzzzzzzz buzzzzzzzz buzzzzzy beee.
 
 Water is as water does,
 and outside it’s falling.
-Over The Edge.
+Over the edge.
 What a World.
 
 ------
