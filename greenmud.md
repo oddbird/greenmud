@@ -1,6 +1,12 @@
 <!-- meta
 description: 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
 slug: title
+prev:
+    slug: home
+    url: index.html
+next:
+    slug: copyright
+    url: copyright.html
 -->
 
 # Into the Green Green Mud
@@ -19,9 +25,12 @@ by [Eric A. Meyer][eam]
 <!-- meta
 description: 'Epigraph: "Good Friday" by Cocorosie.'
 slug: epigraph
+prev:
+    slug: thanks
+    url: thanks.html
 -->
 
-> I once fell in love with your                     <br />
+> I once fell in love with you                      <br />
   Just because the sky turned from gray into blue   <br />
   It was a good Friday                              <br />
   The streets were open and empty                   <br />

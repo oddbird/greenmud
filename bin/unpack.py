@@ -9,6 +9,7 @@ import codecs
 import os
 import re
 import shutil
+import sys
 import unicodedata
 import yaml
 
@@ -30,6 +31,7 @@ PAGE_BREAK = "------"
 
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 def main():
@@ -60,6 +62,11 @@ def main():
 
     args = parser.parse_args()
 
+    if os.path.exists(args.output):
+        print "Output directory {0} exists; remove it first.".format(
+            args.output)
+        sys.exit(1)
+
     unpack(args.source, args.output, args.skeleton)
 
 
@@ -87,17 +94,18 @@ class NovelParser(object):
     def unpack(self, source_file):
         self._ensure_output_dir()
         with codecs.open(source_file, encoding="UTF-8") as f:
+            last_page = None
             for page in Page.pages(f.xreadlines()):
-                # @@@ handle next/prev correctly
-                # @@@ this sets extra_styles too seen; needs path_segments
-                page.ensure_meta_defaults()
                 if page.is_book_title:
-                    self.path_segments = [page.book_meta["book_slug"]]
+                    self.path_segments = [page.book_slug]
                 elif page.is_chapter_title:
-                    self.path_segments[1:] = [
-                        page.chapter_meta["chapter_slug"]]
+                    self.path_segments[1:] = [page.chapter_slug]
                 page.path_segments = self.path_segments[:]
-                page.write(self.output_dir)
+                if last_page is not None:
+                    last_page.next = page
+                    page.prev = last_page
+                    last_page.write(self.output_dir)
+                last_page = page
 
 
     def _ensure_output_dir(self):
@@ -117,6 +125,18 @@ class Page(object):
         self.chapter_meta = chapter_meta or {}
         self.path_segments = path_segments or []
 
+        self.meta.setdefault("body_class", "demo")
+
+        if self.is_title:
+            self.meta.setdefault("slug", "titlepage")
+            self.meta.setdefault("url", "index.html")
+        else:
+            self.meta.setdefault(
+                "slug",
+                slugify("-".join(self.markdown.split()[:5])).lstrip("-"),
+                )
+            self.meta.setdefault("url", u"{0}.html".format(self.meta["slug"]))
+
 
     @property
     def is_chapter_title(self):
@@ -124,8 +144,62 @@ class Page(object):
 
 
     @property
+    def chapter_slug(self):
+        if self.is_chapter_title:
+            return self.chapter_meta.get(
+                "chapter_slug", slugify(self.chapter_meta["chapter"]))
+        elif self.is_book_title:
+            return self.book_meta.get("chapter_slug", "frontmatter")
+        try:
+            return self.path_segments[1]
+        except IndexError:
+            return None
+
+
+    @property
     def is_book_title(self):
         return "book" in self.book_meta
+
+
+    @property
+    def book_slug(self):
+        if self.is_book_title:
+            return self.book_meta.get(
+                "book_slug", slugify(self.book_meta["book"]))
+        try:
+            return self.path_segments[0]
+        except IndexError:
+            return None
+
+
+    @property
+    def is_title(self):
+        return self.is_book_title or self.is_chapter_title
+
+
+    @property
+    def title_slug(self):
+        if self.is_book_title:
+            return self.book_slug
+        elif self.is_chapter_title:
+            return self.chapter_slug
+        return None
+
+
+    @property
+    def title_meta(self):
+        if self.is_book_title:
+            return self.book_meta
+        elif self.is_chapter_title:
+            return self.chapter_meta
+        return None
+
+
+    @property
+    def extra_styles(self):
+        if self.is_title:
+            return "{0}/{1}.css".format(self.book_slug, self.chapter_slug)
+        return None
 
 
     @classmethod
@@ -178,37 +252,40 @@ class Page(object):
 
 
     def ensure_meta_defaults(self):
-        self.meta.setdefault("body_class", "demo")
-        self.meta.setdefault(
-            "slug", slugify("-".join(self.markdown.split()[:5])).lstrip("-"))
-        self.meta.setdefault("url", u"{0}.html".format(self.meta["slug"]))
         if self.next is not None:
-            self.meta["next"] = {"slug": self.next.slug, "url": self.next.url}
+            n = self.meta.setdefault("next", {})
+            n.setdefault("slug", self.next.meta["slug"])
+            if self.next.is_title:
+                self.meta.setdefault("chapter_break", "after")
+                n.setdefault("url", "{0}/".format(self.next.title_slug))
+                if len(self.path_segments) == 2:
+                    n["url"] = "../{0}".format(n["url"])
+            else:
+                n.setdefault("url", self.next.meta["url"])
+        else:
+            # final page gets chapter_break: after
+            self.meta.setdefault("chapter_break", "after")
         if self.prev is not None:
-            self.meta["prev"] = {"slug": self.prev.slug, "url": self.prev.url}
+            p = self.meta.setdefault("prev", {})
+            p.setdefault("slug", self.prev.meta["slug"])
+            p.setdefault("url", self.prev.meta["url"])
+            if self.is_title:
+                if len(self.prev.path_segments) == len(self.path_segments):
+                    p["url"] = "../{0}/{1}".format(
+                        self.prev.path_segments[-1], p["url"])
+                else:
+                    p["url"] = "../{0}".format(p["url"])
 
         if self.is_chapter_title:
-            self.chapter_meta.setdefault(
-                "chapter_slug", slugify(self.chapter_meta["chapter"]))
-            self.chapter_meta.setdefault(
-                "extra_styles",
-                "/".join(
-                    self.path_segments +
-                    ["{0}.css".format(self.chapter_meta["chapter_slug"])]
-                    )
-                )
+            self.chapter_meta.setdefault("chapter_slug", self.chapter_slug)
+            self.chapter_meta.setdefault("extra_styles", self.extra_styles)
+            self.meta.setdefault("chapter_break", "before")
 
         if self.is_book_title:
-            self.book_meta.setdefault(
-                "book_slug", slugify(self.book_meta["book"]))
+            self.book_meta.setdefault("book_slug", self.book_slug)
             self.book_meta.setdefault("chapter_slug", u"frontmatter")
-            self.book_meta.setdefault(
-                "extra_styles",
-                "/".join(
-                    self.path_segments +
-                    [u"{0}.css".format(self.book_meta["chapter_slug"])]
-                    )
-                )
+            self.book_meta.setdefault("extra_styles", self.extra_styles)
+            self.meta.setdefault("chapter_break", "before")
 
 
     def write(self, output_dir):
@@ -221,19 +298,25 @@ class Page(object):
             os.makedirs(dest_dir)
         dest_path = os.path.join(dest_dir, self.meta["url"])
 
+        yaml_dump_opts = dict(
+            indent=4,
+            default_flow_style=False,
+            encoding=None,
+            Dumper=yaml.SafeDumper,
+            )
+
         output = TEMPLATE.format(
             markdown=self.markdown,
-            yaml=yaml.dump(
-                self.meta,
-                indent=4,
-                default_flow_style=False,
-                encoding=None,
-                Dumper=yaml.SafeDumper,
-                ),
+            yaml=yaml.dump(self.meta, **yaml_dump_opts),
             )
 
         with codecs.open(dest_path, "w", encoding="UTF-8") as f:
             f.write(output)
+
+        if self.is_title:
+            meta_yaml_path = os.path.join(dest_dir, "meta.yaml")
+            with codecs.open(meta_yaml_path, "w", encoding="UTF-8") as f:
+                f.write(yaml.dump(self.title_meta, **yaml_dump_opts))
 
 
 def slugify(value):
