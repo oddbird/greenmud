@@ -1,11 +1,11 @@
 // ----------------------------------------------------------------------------
 // contents
 
-[class^="toc-"] { 
+[class^="toc-"] {
   @include trailer;
   .book, li { @extend %ellipsis; }
   @include media(32em) {
-    @include span-columns(4,$total-columns); 
+    @include span-columns(4,$total-columns);
     &:last-child { @include omega; }
   }
 }
@@ -20,18 +20,14 @@
   background: $darkest;
   color: $control-text-color;
   a { @extend %control-link; }
-  .wrap { 
-    @include container; 
+  .wrap {
+    @include container;
     @include padding-leader($control-line+.5);
     @include media($breadcrumb-break) { margin-left: rhythm($control-line*2); }
   }
 
   // show and hide toc
-  @include transition(max-height 600ms);
-  height: 0;
+  @include transition(max-height 600ms ease);
   max-height: 0;
-  &.active { 
-    height: auto;
-    max-height: 45em; 
-  }
+  &.active { max-height: 45em; }
 }
