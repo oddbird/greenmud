@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>             <html class="no-js ie" lang="en" dir="ltr">   <![endif]-->
-<!--[if IE 9 ]>                 <html class="no-js ie9" lang="en" dir="ltr">  <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->  <html class="no-js" lang="en" dir="ltr">      <!--<![endif]-->
+<!--[if lte IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -16,7 +16,7 @@
   <meta property="og:image" content="http://greengreenmud.com/media/images/favicons/fb.jpg" />
 
   <!-- Site Info -->
-  <meta name="robots" content="index, follow" />  <meta name="author" content="Eric Meyer" />
+  <meta name="robots" content="index, follow" />  <meta name="author" content="Eric A. Meyer" />
   <meta name="keywords" content="jj, susy, novel, graphic, pictures, love" />
   <meta name="language" content="en-us" />
 
@@ -57,172 +57,316 @@
   <link rel="stylesheet" href="/media/css/chapters/frontmatter.css" />
   
   <!-- Modernizr -->
-  <script src="/media/js/modernizr.js"></script>
-  <script src="/media/js/modernizr.selectors.js"></script>
+  <script src="/media/js/src/plugins/modernizr.js"></script>
+  <script src="/media/js/src/plugins/modernizr.selectors.js"></script>
   
   <!-- Page-Specific Head -->
   
 </head>
-<body id="greengreenmud-com" >
-<a id="toggle">
-  <span class="target"></span>
-  <span class="icon"></span>
-  <span class="context">toggle controls</span>
-</a>
+<body id="greengreenmud-com" class="demo">
 
-<div class="controls before">
-<header id="location">
-    <h1>Into The Green Green Mud</h1>
-
-    <nav class="breadcrumb" role="navigation">
-      <h2 class="hidden">Breadcrumb Navigation</h2>
-      <ul class="crumb-list">
-        <li class="crumb contents">
-          <a href="/contents.html" title="table of contents">table of contents</a>
-        </li>
-        <li class="crumb novel">
-          <a href="/">Green Mud</a>
-        </li>
-                      </ul>
-    </nav>
-  </header>
-
+  <a id="toggle" title="show/hide controls">show/hide controls</a>
+  <div class="controls">
   <nav class="pagenav">
-  <h2 class="hidden">Page Navigation</h2>
-  <ul>
+  <ul class="page-list">
     <li class="prev">
-      <a href="copyright.html" title="go to the previous page" data-id="copyright">Previous</a>
+      <a rel="prev" href="contents.html" title="previous page" data-id="contents">Previous</a>
     </li>
     <li class="next">
-      <a href="contents.html" title="go to the next page" data-id="contents">Next</a>
+      <a rel="next" href="epigraph.html" title="next page" data-id="epigraph">Next</a>
     </li>
   </ul>
-</nav></div>
+</nav>    <nav role="navigation">
+      <ul class="meta">
+  <li>
+    <a href="/" rel="home" title="Home">Into the Green Green Mud</a>
+  </li>
+  <li>
+    <a href="/contents.html" title="Table of Contents" rel="contents">
+      Table of Contents
+    </a>
+  </li>
+<!--   <li>
+    <a href="/about.html" title="About">About</a>
+  </li> -->
+</ul>      <ol class="breadcrumb">
+  <li class="crumb">
+      <a href="/">Into the Green Green Mud</a>
+    </li>  </ol>    </nav>  </div>
 
-<div role="main" class="main">
-<div id="thanks" class="page  frontmatter narrator " data-url="thanks.html" data-body-class="">
-  <div class="pagewrap">
-  <div class="content">
-    <section class="thanks">
-  <h2>special&nbsp;thanks</h2>
-  <p>To all my editors, collaborators, and contributors. You make the art&nbsp;possible.</p>
-
-  <h3>Editors:</h3>
-  <p>
-    <a href="http://brandihoman.com/">Brandi Homan</a>,
-    <a href="http://sondraeby.tumblr.com/">Sondra Eisenstat</a>, and 
-    <a href="http://mappingtheterrain.wordpress.com/">Michelle Milne</a>.
-  </p>
-
-  <h3>Collaborators:</h3>
-  <ul class="colab thanks-list">
-    <li>Mary Beechy-King for inspiration and&nbsp;style</li>
-    <li><!--
-      --><ul><!--
-        --><li>Daniel&nbsp;Eisenstat</li>
-        <li>Aaron&nbsp;Liechty</li>
-        <li>Jacob&nbsp;Liechty</li>
-        <li>Julie&nbsp;Rada</li>
-        <li>Kenny&nbsp;Storms</li>
-        <li>Robert J. Meyer-Lee for inspiration and editing along the&nbsp;way</li><!--
-      --></ul><!--
-    --></li>
-    <li><a href="http://hannah.gerigmeyer.com/">Hannah Gerig Meyer</a> for her watercolor&nbsp;washes</li>
-    <li><a href="http://teacupgorilla.com">Teacup Gorilla</a> for writing the&nbsp;music</li>
-    <li><a href="http://oddbird.net">OddBird</a> for bringing it all&nbsp;online</li>
-  </ul>
-
-  <h3>Contributors:</h3>
-  <ul class="contrib thanks-list">
-    <li>Samuel&nbsp;Ace</li>
-    <li>April&nbsp;O&#8217;Hare</li>
-    <li>Anna&nbsp;Baer</li>
-    <li>Erin&nbsp;Brandeberry</li>
-    <li>Audrey&nbsp;Brooks</li>
-    <li>Beth&nbsp;Bogdewiecz</li>
-    <li>Chris&nbsp;Bombardier</li>
-    <li><a href="http://www.amaranthborsuk.com/">Amaranth&nbsp;Borsuk</a></li>
-    <li>Dominique&nbsp;Burgunder-Johnson</li>
-    <li>Bucky <span class="amp">&amp;</span> Barby&nbsp;Buss</li>
-    <li>Anne <span class="amp">&amp;</span> Mark&nbsp;Byler</li>
-    <li>Rachel Carlisle (<a href="http://dirty-words-blog.blogspot.com/">Dirty Words</a>)</li>
-    <li>Jessica&nbsp;Carter</li>
-    <li>Jeff&nbsp;Compton</li>
-    <li>Julie&nbsp;Cooper</li>
-    <li>Rita&nbsp;Eby</li>
-    <li>Daniel&nbsp;Eash</li>
-    <li>Daniel <span class="amp">&amp;</span> Sondra&nbsp;Eisenstat</li>
-    <li>Christine&nbsp;Fiedorowicz</li>
-    <li>Matthew&nbsp;Fisher</li>
-    <li>Brian Freeland (<a href="http://lida.org/">The <span class="caps">LIDA</span> Project</a>)</li>
-    <li>Ben Friesen (<a href="http://friesenfolding.com/">Friesen Folding</a>)</li>
-    <li>Jonny Gerig&nbsp;Meyer</li>
-    <li>Beth Glick <span class="amp">&amp;</span> Jesse&nbsp;Landis-Eigsti</li>
-    <li>David&nbsp;Glick</li>
-    <li><a href="http://cassiegreer.com/">Cassie&nbsp;Greer</a></li>
-    <li>Rosanna&nbsp;Henderson</li>
-    <li>Love&nbsp;Herz</li>
-    <li>Darrel <span class="amp">&amp;</span> Marian&nbsp;Hostetler</li>
-    <li>Brenda <span class="amp">&amp;</span> Rich Hostetler Meyer (<a href="http://ecclubhouse.org/">Elkhart County Clubhouse</a>)</li>
-    <li>Ben&nbsp;Jacobs</li>
-    <li>Ruth&nbsp;Maust</li>
-    <li>Micki McNie (<a href="http://www.citygrrldenver.com/">City Grrl Denver</a>)</li>
-    <li>Carl&nbsp;Meyer</li>
-    <li>Mary Ellen <span class="amp">&amp;</span> Al&nbsp;Meyer</li>
-    <li>Barb&nbsp;Meyer-Reed</li>
-    <li>Paul <span class="amp">&amp;</span> Kathy Meyer&nbsp;Reimer</li>
-    <li>Elaine&nbsp;Meyer-Lee</li>
-    <li>Nicole Miazgowicz (<a href="http://shop.theoverstuffedchair.com/">The Overstuffed Chair</a>)</li>
-    <li>Erin&nbsp;Milanese</li>
-    <li>Michelle Milne (<a href="http://mappingtheterrain.wordpress.com/">Mapping the Terrain</a>)</li>
-    <li>Tim&nbsp;Nafziger</li>
-    <li>Bruce&nbsp;Nofziger</li>
-    <li>Megan&nbsp;O&#8217;Connor</li>
-    <li><a href="http://edwardoriordan.com/">Edward&nbsp;O&#8217;Riordan</a></li>
-    <li><a href="http://www.dannyprose.com/">Danny&nbsp;Palmer</a></li>
-    <li>Henry <span class="amp">&amp;</span> Sarah&nbsp;Paulson</li>
-    <li>Jerry&nbsp;Peters</li>
-    <li>Julie&nbsp;Rada</li>
-    <li>Erin&nbsp;Ramer</li>
-    <li>Kathleen&nbsp;Raven</li>
-    <li>Erin Rollman (<a href="http://buntport.com/">Buntport</a>)</li>
-    <li>Bill&nbsp;Ryan</li>
-    <li>Aaron&nbsp;Sidder</li>
-    <li>Chris&nbsp;Scher</li>
-    <li>Carina&nbsp;Sims</li>
-    <li>Elizabeth&nbsp;Smithson</li>
-    <li>Lafe&nbsp;Spietz</li>
-    <li>Lindsay St.&nbsp;Antoine</li>
-    <li>Megan Sumner (<a href="http://chickpeasandhulahoops.com">Chickpeas <span class="amp">&amp;</span> Hulahoops</a>)</li>
-    <li>Mollie&nbsp;Sumner</li>
-    <li>Elizabeth&nbsp;Villalobos-Menuey</li>
-    <li>Venessa Vines&nbsp;Bates</li>
-    <li>Vladimir Vukicevic (<a href="http://www.rockethub.com/">RocketHub</a>)</li>
-    <li>Landon&nbsp;Yoder</li>
-  </ul>
+  <nav id="toc">
+<div class="wrap">
+<section class="toc-dancing">
+  <h3 class="book">
+    <a href="/dancing-without-architecture/">
+      Dancing Without Architecture.
+    </a>
+  </h3>
+  <ol>
+    <li>
+      <a href="/dancing-without-architecture/in-which-jj/">
+        In Which: <span class="caps">JJ</span>.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/daymares-poor-boy/">
+        Daymares, Poor Boy.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/the-susy-within/">
+        The Susy Within.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/yes-mother-goodnight/">
+        Yes Mother, Goodnight.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/bring-down-the-house-house/">
+        Bring Down the House House.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/dance-together-and-cry/">
+        Dance Together and Cry.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/forever-amen/">
+        Forever Amen.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/twice-three-plus-one/">
+        Twice Three, Plus One.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/love-in-the-time-of-dandelions/">
+        Love in the Time of Dandelions.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/those-nice-bright-colors/">
+        Those Nice Bright Colors.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/into-the-green-green-mud/">
+        Into the Green Green Mud.
+      </a>
+    </li>
+    <li>
+      <a href="/dancing-without-architecture/given-time-silence/">
+        Given Time, Silence.
+      </a>
+    </li>
+  </ol>
 </section>
-
+<section class="toc-everafter">
+  <h3 class="book">
+    <a href="/this-everafter-life/">
+      This EverAfter Life.
+    </a>
+  </h3>
+  <ol>
+    <li>
+      <a href="/this-everafter-life/stranger-than-a-sunny-day-on-the-beach/">
+        Stranger than a Sunny Day on the Beach.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/once-upon-a-sunday-raining/">
+        Once upon a Sunday Raining.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/open-and-empty/">
+        Open and Empty.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/not-a-susy-in-sight-for-miles-and-miles/">
+        Not a Susy in Sight for Miles and Miles.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/of-blood/">
+        Of Blood.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/anon-and-anon/">
+        Anon and Anon.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/why-cry-when-you-can-kick-a-cat/">
+        Why Cry when You Can Kick a Cat?
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/there-and-back-again-forever/">
+        There and Back Again, Forever.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/nothing/">
+        Nothing.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/under-the-sky-is-gray/">
+        Under the Sky is Gray.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/still/">
+        Still.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/whence-from-two/">
+        Whence, from Two.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/this-road-full-glittered/">
+        This Road Full Glittered.
+      </a>
+    </li>
+    <li>
+      <a href="/this-everafter-life/over-un-thought-waters/">
+        Over Un-Thought Waters.
+      </a>
+    </li>
+  </ol>
+</section></div>
+</nav>
+  <section id="thanks" class="page  frontmatter  " data-url="thanks.html" data-body-class="demo">
+  
+  <div class="content"  role="main">
+    
+        <h1>Special&nbsp;Thanks</h1>
+<p>To all my editors, collaborators, and contributors.
+You make the art possible, and the process a&nbsp;joy.</p>
+<h2>Editors</h2>
+<ul>
+<li><a href="http://brandihoman.com/">Brandi&nbsp;Homan</a></li>
+<li><a href="http://sondraeby.tumblr.com/">Sondra&nbsp;Eisenstat</a></li>
+<li><a href="http://mappingtheterrain.wordpress.com/">Michelle&nbsp;Milne</a></li>
+</ul>
+<h2>Collaborators</h2>
+<ul>
+<li>Mary Beechy-King for the initial&nbsp;spark</li>
+<li>Daniel Eisenstat,
+  Aaron Liechty,
+  Jacob Liechty,
+  Julie Rada,
+  Kenny Storms,
+  and Robert J. Meyer-Lee for help along the&nbsp;way</li>
+<li><a href="http://hannah.gerigmeyer.com/">Hannah Gerig Meyer</a> for the watercolor&nbsp;washes</li>
+<li><a href="http://teacupgorilla.com">Teacup Gorilla</a> for the&nbsp;music</li>
+<li><a href="http://oddbird.net">OddBird</a> for the&nbsp;code</li>
+</ul>
+<h2>Contributors</h2>
+<ul>
+<li>Samuel&nbsp;Ace</li>
+<li>April&nbsp;O&#8217;Hare</li>
+<li>Anna&nbsp;Baer</li>
+<li>Erin&nbsp;Brandeberry</li>
+<li>Audrey&nbsp;Brooks</li>
+<li>Beth&nbsp;Bogdewiecz</li>
+<li>Chris&nbsp;Bombardier</li>
+<li><a href="http://www.amaranthborsuk.com/">Amaranth&nbsp;Borsuk</a></li>
+<li>Dominique&nbsp;Burgunder-Johnson</li>
+<li>Bucky <span class="amp">&amp;</span> Barby&nbsp;Buss</li>
+<li>Anne <span class="amp">&amp;</span> Mark&nbsp;Byler</li>
+<li>Rachel Carlisle (<a href="http://dirty-words-blog.blogspot.com/">Dirty Words</a>)</li>
+<li>Jessica&nbsp;Carter</li>
+<li>Jeff&nbsp;Compton</li>
+<li>Julie&nbsp;Cooper</li>
+<li>Rita&nbsp;Eby</li>
+<li>Daniel&nbsp;Eash</li>
+<li>Daniel <span class="amp">&amp;</span> Sondra&nbsp;Eisenstat</li>
+<li>Christine&nbsp;Fiedorowicz</li>
+<li>Matthew&nbsp;Fisher</li>
+<li>Brian Freeland (<a href="http://lida.org/">The <span class="caps">LIDA</span> Project</a>)</li>
+<li>Ben Friesen (<a href="http://friesenfolding.com/">Friesen Folding</a>)</li>
+<li>Jonny Gerig&nbsp;Meyer</li>
+<li>Beth Glick <span class="amp">&amp;</span> Jesse&nbsp;Landis-Eigsti</li>
+<li>David&nbsp;Glick</li>
+<li><a href="http://cassiegreer.com/">Cassie&nbsp;Greer</a></li>
+<li>Rosanna&nbsp;Henderson</li>
+<li>Love&nbsp;Herz</li>
+<li>Darrel <span class="amp">&amp;</span> Marian&nbsp;Hostetler</li>
+<li>Brenda <span class="amp">&amp;</span> Rich Hostetler Meyer (<a href="http://ecclubhouse.org/">Elkhart County Clubhouse</a>)</li>
+<li>Ben&nbsp;Jacobs</li>
+<li>Ruth&nbsp;Maust</li>
+<li>Micki McNie (<a href="http://www.citygrrldenver.com/">City Grrl Denver</a>)</li>
+<li>Carl&nbsp;Meyer</li>
+<li>Mary Ellen <span class="amp">&amp;</span> Al&nbsp;Meyer</li>
+<li>Barb&nbsp;Meyer-Reed</li>
+<li>Paul <span class="amp">&amp;</span> Kathy Meyer&nbsp;Reimer</li>
+<li>Elaine&nbsp;Meyer-Lee</li>
+<li>Nicole Miazgowicz (<a href="http://shop.theoverstuffedchair.com/">The Overstuffed Chair</a>)</li>
+<li>Erin&nbsp;Milanese</li>
+<li>Michelle Milne (<a href="http://mappingtheterrain.wordpress.com/">Mapping the Terrain</a>)</li>
+<li>Tim&nbsp;Nafziger</li>
+<li>Bruce&nbsp;Nofziger</li>
+<li>Megan&nbsp;O&#8217;Connor</li>
+<li><a href="http://edwardoriordan.com/">Edward&nbsp;O&#8217;Riordan</a></li>
+<li><a href="http://www.dannyprose.com/">Danny&nbsp;Palmer</a></li>
+<li>Henry <span class="amp">&amp;</span> Sarah&nbsp;Paulson</li>
+<li>Jerry&nbsp;Peters</li>
+<li>Julie&nbsp;Rada</li>
+<li>Erin&nbsp;Ramer</li>
+<li>Kathleen&nbsp;Raven</li>
+<li>Erin Rollman (<a href="http://buntport.com/">Buntport</a>)</li>
+<li>Bill&nbsp;Ryan</li>
+<li>Aaron&nbsp;Sidder</li>
+<li>Chris&nbsp;Scher</li>
+<li>Carina&nbsp;Sims</li>
+<li>Elizabeth&nbsp;Smithson</li>
+<li>Lafe&nbsp;Spietz</li>
+<li>Lindsay St.&nbsp;Antoine</li>
+<li>Megan Sumner (<a href="http://chickpeasandhulahoops.com">Chickpeas <span class="amp">&amp;</span> Hulahoops</a>)</li>
+<li>Mollie&nbsp;Sumner</li>
+<li>Elizabeth&nbsp;Villalobos-Menuey</li>
+<li>Venessa Vines&nbsp;Bates</li>
+<li>Vladimir Vukicevic (<a href="http://www.rockethub.com/">RocketHub</a>)</li>
+<li>Landon&nbsp;Yoder</li>
+</ul>
+<h2>Colophon</h2>
+<p>This site is built on plain old semantic <a href="http://www.w3.org/TR/html5/"><span class="caps">HTML5</span></a>,
+powered by <a href="http://www.jquery.com/">jQuery</a>
+and the <a href="http://ringce.com/hyde">Hyde</a> static site generator
+for <a href="http://www.python.org">Python</a>,
+and styled using <a href="http://www.w3.org/TR/css-2010/"><span class="caps">CSS3</span></a>
+with help from <a href="http://www.modernizr.com/">Modernizr</a>,
+<a href="http://susy.oddbird.net/">Susy</a>,
+<a href="http://compass-style.org/">Compass</a>,
+<a href="http://sass-lang.com/">Sass</a>,
+<a href="">Modular Scales</a>,
+and <a href="">Compass Animate</a>
+(based on <a href="http://daneden.me/animate/">Animate.css</a>).
+The icons have various sources,
+collected and managed through <a href="http://keyamoon.com/icomoon/">IcoMoon</a>.
+The text was written in a variety of applications,
+starting with <a href="http://www.pmwiki.org/">PmWiki</a>,
+and ending with <a href="http://www.literatureandlatte.com/scrivener.php">Scrivner</a>,
+and finally <a href="http://www.sublimetext.com/">Sublime Text</a>.
+The <a href="https://github.com/oddbird/greenmud">full code</a> is available on <a href="https://github.com/">GitHub</a>,
+along with the original <a href="https://github.com/ericam/GreenMud-Fonts">GreenMud fonts</a>.</p>
       </div>
-  </div>
-</div>
 
-  <div class="controls after">
-    <nav class="pagenav">
-  <h2 class="hidden">Page Navigation</h2>
-  <ul>
-    <li class="prev">
-      <a href="copyright.html" title="go to the previous page" data-id="copyright">Previous</a>
-    </li>
-    <li class="next">
-      <a href="contents.html" title="go to the next page" data-id="contents">Next</a>
-    </li>
-  </ul>
-</nav>  </div>
-</div>
+  </section>
 
 
 
-      <script src="/media/js/minified.js"></script>
+      <script src="/media/js/dist/minified.js"></script>
   
     
     <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
