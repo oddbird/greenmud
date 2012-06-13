@@ -46,6 +46,7 @@ prev:
 <!-- book
 book          : 'Dancing Without Architecture.'
 description   : 'Book 1: Dancing Without Architecture.'
+extra_styles  :
 -->
 
 ## Book 1
@@ -72,6 +73,7 @@ chapter       : 'In Which JJ.'
 description   : 'Chapter 1: In Which JJ.'
 
 voice         : jj
+extra_styles  :
 -->
 
 ## Chapter 1
@@ -355,6 +357,7 @@ Do without!
 <!-- chapter
 chapter       : 'Daymares, Poor Boy.'
 description   : 'Chapter 2: Daymares, Poor Boy.'
+extra_styles  :
 -->
 
 ## Chapter 2
@@ -407,6 +410,7 @@ chapter       : 'The Susy Within.'
 description   : 'Chapter 3: The Susy Within.'
 
 voice         : susy
+extra_styles  :
 -->
 
 ## Chapter 3
@@ -610,6 +614,7 @@ with an exposure to match the length of the moon-lit night.
 <!-- chapter
 chapter       : 'Yes Mother, Goodnight.'
 description   : 'Chapter 4: Yes Mother, Goodnight.'
+extra_styles  :
 -->
 
 ## Chapter 4
@@ -649,6 +654,7 @@ chapter       : 'Bring Down the House House.'
 description   : 'Chapter 5: Bring Down the House House.'
 
 voice         : jj
+extra_styles  :
 -->
 
 ## Chapter 5
@@ -877,6 +883,7 @@ bring down the house house.
 <!-- chapter
 chapter       : 'Dance Together and Cry.'
 description   : 'Chapter 6: Dance Together and Cry.'
+extra_styles  :
 -->
 
 ## Chapter 6
@@ -918,6 +925,7 @@ chapter       : 'Forever Amen.'
 description   : 'Chapter 7: Forever Amen.'
 
 voice         : susy
+extra_styles  :
 -->
 
 ## Chapter 7
@@ -1112,6 +1120,7 @@ Take the weekend off and write a novel.
 <!-- chapter
 chapter       : 'Twice Three, Plus One.'
 description   : 'Chapter 8: Twice Three, Plus One.'
+extra_styles  :
 -->
 
 ## Chapter 8
@@ -1172,6 +1181,7 @@ chapter       : 'Love in the Time of Dandelions.'
 description   : 'Chapter 9: Love in the Time of Dandelions.'
 
 voice         : jj
+extra_styles  :
 -->
 
 ## Chapter 9
@@ -1379,6 +1389,7 @@ and make it jump jump jump jump jump jump jump!
 <!-- chapter
 chapter       : 'Those Nice Bright Colors.'
 description   : 'Chapter 10: Those Nice Bright Colors.'
+extra_styles  :
 -->
 
 ## Chapter 10
@@ -1418,6 +1429,7 @@ chapter       : 'Into the Green Green Mud.'
 description   : 'Chapter 11: Into the Green Green Mud.'
 
 voice         : jj
+extra_styles  :
 -->
 
 ## Chapter 11
@@ -1642,6 +1654,7 @@ Life is a miracle after all.
 <!-- chapter
 chapter       : 'Given Time, Silence.'
 description   : 'Chapter 12: Given Time, Silence.'
+extra_styles  :
 -->
 
 ## Chapter 12
@@ -1772,6 +1785,7 @@ So green!
 <!-- book
 book          : This EverAfter Life
 description   : 'Book 2: This EverAfter Life.'
+extra_styles  :
 -->
 
 ## Book 2
@@ -1791,6 +1805,7 @@ description   : 'Book 2: This EverAfter Life.'
 <!-- chapter
 chapter       : 'Stranger Than a Sunny Day on the Beach.'
 description   : 'Chapter 13: Stranger Than a Sunny Day on the Beach.'
+extra_styles  :
 -->
 
 ## Chapter 13
@@ -1846,6 +1861,7 @@ chapter       : 'Once upon a Sunday Raining.'
 description   : 'Chapter 14: Once upon a Sunday Raining.'
 
 voice         : susy
+extra_styles  :
 -->
 
 ## Chapter 14
@@ -2142,6 +2158,7 @@ Someone's got to do it.
 <!-- chapter
 chapter       : 'Open and Empty.'
 description   : 'Chapter 15: Open and Empty.'
+extra_styles  :
 -->
 
 ## Chapter 15
@@ -2183,6 +2200,7 @@ chapter       : 'Not a Susy in Sight for Miles and Miles.'
 description   : 'Chapter 16: Not a Susy in Sight for Miles and Miles.'
 
 voice         : jj
+extra_styles  :
 -->
 
 ## Chapter 16
@@ -2444,6 +2462,7 @@ Let us bow our heads and cry.
 <!-- chapter
 chapter       : 'Of Blood.'
 description   : 'Chapter 17: Of Blood.'
+extra_styles  :
 -->
 
 ## Chapter 17
@@ -2469,6 +2488,7 @@ chapter       : 'Anon and Anon.'
 description   : 'Chapter 18: Anon and Anon.'
 
 voice         : susy
+extra_styles  :
 -->
 
 ## Chapter 18
@@ -2665,6 +2685,7 @@ The other hands.
 <!-- chapter
 chapter       : 'Why Cry when You Can Kick a Cat?'
 description   : 'Chapter 19: Why Cry when You Can Kick a Cat?'
+extra_styles  :
 -->
 
 ## Chapter 19
@@ -2699,6 +2720,7 @@ chapter       : 'There and Back Again, Forever.'
 description   : 'Chapter 20: There and Back Again, Forever.'
 
 voice         : jj
+extra_styles  :
 -->
 
 ## Chapter 20
@@ -2938,6 +2960,7 @@ Nothing is nothing.
 <!-- chapter
 chapter       : 'Nothing.'
 description   : 'Chapter 21: Nothing.'
+extra_styles  :
 -->
 
 ## Chapter 21
@@ -2954,6 +2977,7 @@ chapter       : 'Under the Sky is Gray.'
 description   : 'Chapter 22: Under the Sky is Gray.'
 
 voice         : susy
+extra_styles  :
 -->
 
 ## Chapter 22
@@ -3080,6 +3104,7 @@ She rolls it around on her tongue as she falls off the edge of awake.
 <!-- chapter
 chapter       : 'Still.'
 description   : 'Chapter 23: Still.'
+extra_styles  :
 -->
 
 ## Chapter 23
@@ -3111,6 +3136,7 @@ description   : 'Chapter 23: Still.'
 <!-- chapter
 chapter       : 'Whence, from Two.'
 description   : 'Chapter 24: Whence, from Two.'
+extra_styles  :
 -->
 
 ## Chapter 24
@@ -3147,6 +3173,7 @@ description   : 'Chapter 24: Whence, from Two.'
 <!-- chapter
 chapter       : 'This Road Full Glittered.'
 description   : 'Chapter 25: This Road Full Glittered.'
+extra_styles  :
 -->
 
 ## Chapter 25
@@ -3188,6 +3215,7 @@ JJ and Susy on the bench and sighing:
 <!-- chapter
 chapter       : 'Over Un-Thought Waters.'
 description   : 'Chapter 26: Over Un-Thought Waters.'
+extra_styles  :
 -->
 
 ## Chapter 26
