@@ -21,13 +21,13 @@ $default-max-width: 80em !default;
     }
   }
   @if $min {
-    @if $max { 
+    @if $max {
       @media all and (min-width: $min) and (max-width: $max) { @content; }
     } @else {
       @media all and (min-width: $min) { @content; }
     }
   } @else {
-    @if $max { 
+    @if $max {
       @media all and (max-width: $max) { @content; }
     }
   }
