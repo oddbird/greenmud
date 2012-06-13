@@ -100,3 +100,5 @@
   #home .inst:last-child { float: right; margin-right: 0; } }
 @media (min-width: 53.25em) { #home [role="main"] { padding-top: 2.5em; background-position: 0 0; background-position: 0 0, right 16.25em; }
   #home .intro, #home .actions, #home .instructions { padding-left: 20.29%; padding-right: 20.29%; clear: both; } }
+
+.warning { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.083em; padding: 0.542em; background: #ffbfbf; }

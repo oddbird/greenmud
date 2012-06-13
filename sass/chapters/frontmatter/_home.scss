@@ -12,14 +12,14 @@ $scribble : '#{$img}scribble.png';
 #home {
   @extend %template;
 
-  [role="main"] { 
+  [role="main"] {
     @include transition(background-position 300ms);
-    background: image-url($swing) no-repeat scroll 0 0 - image-height($swing); 
-    background: image-url($swing) no-repeat scroll, image-url($scribble) no-repeat scroll; 
+    background: image-url($swing) no-repeat scroll 0 0 - image-height($swing);
+    background: image-url($swing) no-repeat scroll, image-url($scribble) no-repeat scroll;
     background-position: 0 0 - image-height($swing), right rhythm(40);
   }
 
-  .intro, .actions, .instructions { 
+  .intro, .actions, .instructions {
     @include clearfix;
   }
 
@@ -43,8 +43,8 @@ $scribble : '#{$img}scribble.png';
         &[href*="title"] { background: $green-lightest; }
       }
       #{$focus} {
-        &:after { 
-          @include opacity(1); 
+        &:after {
+          @include opacity(1);
           @include animation(fadeIn 1.5s infinite alternate)
         }
         &[href*="about"] { background: $yellow-light; }
@@ -56,8 +56,8 @@ $scribble : '#{$img}scribble.png';
   .inst {
     @extend %icon;
     text-align: center;
-    &:before { 
-      @include adjust-font-size-to($xxlargepx); 
+    &:before {
+      @include adjust-font-size-to($xxlargepx);
       @include trailer(.25,$xxlargepx);
       @include transition(color 300ms);
       display: block;
@@ -72,14 +72,20 @@ $scribble : '#{$img}scribble.png';
   }
 
   @include at-breakpoint($break) {
-    [role="main"] { 
+    [role="main"] {
       @include padding-leader(2);
-      background-position: 0 0; 
-      background-position: 0 0, right rhythm(13); 
+      background-position: 0 0;
+      background-position: 0 0, right rhythm(13);
     }
-    .intro, .actions, .instructions { 
+    .intro, .actions, .instructions {
       @include pad(2,2);
-      clear: both; 
+      clear: both;
     }
   }
+}
+
+.warning {
+  @include border-radius;
+  @include rhythm-borders(2px,.5);
+  background: $red-lightest;
 }
