@@ -39,7 +39,7 @@ $line-end   : 0;
   // Page background
   @include background($bg);
   @include background-image($title-grad);
-  &, & [role="main"], & .wrap1 { @include transition(all 300ms); }
+  &, & .wrap1 { @include transition(all 300ms); }
 
   // --------------------------------------------
   // Main content
