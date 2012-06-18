@@ -1,6 +1,7 @@
 <!-- meta
 description: 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
 slug: title
+body_class:
 prev:
     slug: home
     url: index.html

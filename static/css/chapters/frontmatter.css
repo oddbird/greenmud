@@ -23,7 +23,7 @@
 #home .social a:before, #about .social a:before { position: absolute; top: 0; left: 0; text-indent: 0; }
 
 /* ---------------------------------------------------------------------------- type */
-#home .license, #about .license { text-transform: uppercase; }
+#home .license, #about .license, #title a:link, #title a:visited { text-transform: uppercase; }
 
 /* ---------------------------------------------------------------------------- defaults */
 #home [role="main"] h1, #about [role="main"] h1 { font-size: 1.5em; line-height: 1.25em; }
@@ -102,3 +102,13 @@
   #home .intro, #home .actions, #home .instructions { padding-left: 20.29%; padding-right: 20.29%; clear: both; } }
 
 .warning { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.083em; padding: 0.542em; background: #ffbfbf; }
+
+#title { background: #d4ead4; background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe5ff), color-stop(50%, #ffe5ff), color-stop(50%, #d4ead4), color-stop(100%, #d4ead4)); background-image: -webkit-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -moz-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -o-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -ms-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); }
+#title [role="main"] { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 1.875em; padding-bottom: 1.25em; -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -ms-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; color: #404040; text-align: center; }
+#title [role="main"]:after { content: ""; display: table; clear: both; }
+@media all and (min-height: 32em) { #title [role="main"] { padding-top: 3.75em; } }
+#title h1, #title h2 { font-weight: bold; }
+#title h1 { font-size: 1.5em; line-height: 1.25em; }
+#title h2 { padding-bottom: 8.125em; margin-bottom: 0.625em; background: url('../../images/frontmatter/scribble.png?1339738503') no-repeat scroll center bottom; }
+#title a:link, #title a:visited { color: #3e3e81; }
+#title a:hover, #title a:focus, #title a:active { color: #813e81; }

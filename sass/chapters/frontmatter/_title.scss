@@ -1,0 +1,54 @@
+// ----------------------------------------------------------------------------
+// title: Into the Green Green Mud
+
+$img      : 'frontmatter/';
+$scribble : '#{$img}scribble.png';
+
+#title {
+  // --------------------------------------------
+  // Page background
+  @include background($off-green-lightest);
+  @include background-image(
+    linear-gradient(top left,
+      $pink-hint,
+      $pink-hint 50%,
+      $off-green-lightest 50%,
+      $off-green-lightest
+    )
+  );
+
+  // --------------------------------------------
+  // Main content
+  [role="main"] {
+    @include container;
+    @include padding-leader(1.5);
+    @include padding-trailer;
+    @include transition(padding 300ms);
+    color: $darker;
+    text-align: center;
+
+    @media all and (min-height: 32em) {
+      @include padding-leader(3);
+    }
+  }
+
+  h1, h2 {
+    font-weight: bold;
+  }
+  h1 {
+    @include adjust-font-size-to($largepx);
+  }
+  h2 {
+    @include padding-trailer(6.5);
+    @include trailer(.5);
+    background: image-url($scribble) no-repeat scroll center bottom;
+  }
+
+  a {
+    #{$link} {
+      @extend %allcaps;
+      color: $off-blue-dark;
+    }
+    #{$focus} { color: $off-pink-dark; }
+  }
+}
