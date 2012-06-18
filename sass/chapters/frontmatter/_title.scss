@@ -1,37 +1,80 @@
 // ----------------------------------------------------------------------------
 // title: Into the Green Green Mud
 
-$img      : 'frontmatter/';
-$scribble : '#{$img}scribble.png';
+$img        : 'frontmatter/';
+$scribble   : '#{$img}scribble.png';
+
+$title-grad : linear-gradient(top left,
+                $pink-hint,
+                $pink-hint 50%,
+                $off-green-lightest 50%,
+                $off-green-lightest
+              );
+
+$titleimg   : '#{$img}titlepage/';
+$line       : '#{$titleimg}line.png';
+$left       : '#{$titleimg}strings_left.png';
+$right      : '#{$titleimg}strings_right.png';
+
+$bg         : $off-green-lightest;
+$line-pos   : 6;
+$string-pos : bottom;
+$grad-pos   : center;
+
+$line-start : image-width($line);
+$line-end   : 0;
+
+@include keyframes(line1) {
+  0% { background-position: $line-start rhythm($line-pos); }
+  100% { background-position: $line-end rhythm($line-pos); }
+}
+
+@include keyframes(line2) {
+  0% { background-position: $line-start rhythm($line-pos + 1.5); }
+  100% { background-position: $line-end rhythm($line-pos + 1.5); }
+}
 
 #title {
   // --------------------------------------------
   // Page background
-  @include background($off-green-lightest);
-  @include background-image(
-    linear-gradient(top left,
-      $pink-hint,
-      $pink-hint 50%,
-      $off-green-lightest 50%,
-      $off-green-lightest
-    )
-  );
+  @include background($bg);
+  @include background-image($title-grad);
+  &, & [role="main"], & .wrap1 { @include transition(all 300ms); }
 
   // --------------------------------------------
   // Main content
   [role="main"] {
-    @include container;
-    @include padding-leader(1.5);
-    @include padding-trailer;
-    @include transition(padding 300ms);
-    color: $darker;
-    text-align: center;
-
-    @media all and (min-height: 32em) {
-      @include padding-leader(3);
+    @include media(30em) {
+      @include animation(line1 30s linear infinite both);
+      background: image-url($line) repeat-x scroll $line-start rhythm($line-pos);
+      @media all and (min-height: 32em) {
+         @include animation(line2 30s linear infinite both);
+         background-position: $line-start rhythm($line-pos + 1.5);
+      }
     }
   }
 
+  .wrap1 {
+    @include padding-leader(1.5);
+    @include padding-trailer;
+    @include background(
+      image-url($left) no-repeat scroll (0 - image-width($left)*1.5) $string-pos,
+      image-url($right) no-repeat scroll (50*16px + image-width($right)*.5) $string-pos
+    );
+    @include media(50em) {
+      background-position: left $string-pos, right $string-pos;
+    }
+    @media all and (min-height: 32em) { @include padding-leader(3); }
+  }
+
+  .wrap2 {
+    @include container;
+    color: $darker;
+    text-align: center;
+  }
+
+  // --------------------------------------------
+  // Elements
   h1, h2 {
     font-weight: bold;
   }

@@ -10,6 +10,9 @@ next:
     url: copyright.html
 -->
 
+<div class="wrap1">
+<div class="wrap2">
+
 # Into the Green Green Mud
 ## a novel (with pictures)
 
@@ -20,6 +23,9 @@ by [Eric A. Meyer][eam]
 [eam]: http://eric.andmeyer.com/
 [tg]: http://teacupgorilla.com/
 [obc]: http://oddbird.net/
+
+</div>
+</div>
 
 ------
 

@@ -103,10 +103,45 @@
 
 .warning { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.083em; padding: 0.542em; background: #ffbfbf; }
 
+@-moz-keyframes line1 { 0% { background-position: 827px 7.5em; }
+  100% { background-position: 0 7.5em; } }
+
+@-webkit-keyframes line1 { 0% { background-position: 827px 7.5em; }
+  100% { background-position: 0 7.5em; } }
+
+@-o-keyframes line1 { 0% { background-position: 827px 7.5em; }
+  100% { background-position: 0 7.5em; } }
+
+@-ms-keyframes line1 { 0% { background-position: 827px 7.5em; }
+  100% { background-position: 0 7.5em; } }
+
+@keyframes line1 { 0% { background-position: 827px 7.5em; }
+  100% { background-position: 0 7.5em; } }
+
+@-moz-keyframes line2 { 0% { background-position: 827px 9.375em; }
+  100% { background-position: 0 9.375em; } }
+
+@-webkit-keyframes line2 { 0% { background-position: 827px 9.375em; }
+  100% { background-position: 0 9.375em; } }
+
+@-o-keyframes line2 { 0% { background-position: 827px 9.375em; }
+  100% { background-position: 0 9.375em; } }
+
+@-ms-keyframes line2 { 0% { background-position: 827px 9.375em; }
+  100% { background-position: 0 9.375em; } }
+
+@keyframes line2 { 0% { background-position: 827px 9.375em; }
+  100% { background-position: 0 9.375em; } }
+
 #title { background: #d4ead4; background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe5ff), color-stop(50%, #ffe5ff), color-stop(50%, #d4ead4), color-stop(100%, #d4ead4)); background-image: -webkit-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -moz-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -o-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -ms-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); }
-#title [role="main"] { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 1.875em; padding-bottom: 1.25em; -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -ms-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; color: #404040; text-align: center; }
-#title [role="main"]:after { content: ""; display: table; clear: both; }
-@media all and (min-height: 32em) { #title [role="main"] { padding-top: 3.75em; } }
+#title, #title [role="main"], #title .wrap1 { -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+@media all and (min-width: 30em) { #title [role="main"] { -webkit-animation: line1 30s linear infinite both; -moz-animation: line1 30s linear infinite both; -ms-animation: line1 30s linear infinite both; -o-animation: line1 30s linear infinite both; animation: line1 30s linear infinite both; background: url('../../images/frontmatter/titlepage/line.png?1340056009') repeat-x scroll 827px 7.5em; } }
+@media all and (min-width: 30em) and (min-height: 32em) { #title [role="main"] { -webkit-animation: line2 30s linear infinite both; -moz-animation: line2 30s linear infinite both; -ms-animation: line2 30s linear infinite both; -o-animation: line2 30s linear infinite both; animation: line2 30s linear infinite both; background-position: 827px 9.375em; } }
+#title .wrap1 { padding-top: 1.875em; padding-bottom: 1.25em; background: url('../../images/frontmatter/titlepage/strings_left.png?1340057318') no-repeat scroll -376.5px bottom, url('../../images/frontmatter/titlepage/strings_right.png?1340057309') no-repeat scroll 947.5px bottom; }
+@media all and (min-width: 50em) { #title .wrap1 { background-position: left bottom, right bottom; } }
+@media all and (min-height: 32em) { #title .wrap1 { padding-top: 3.75em; } }
+#title .wrap2 { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; color: #404040; text-align: center; }
+#title .wrap2:after { content: ""; display: table; clear: both; }
 #title h1, #title h2 { font-weight: bold; }
 #title h1 { font-size: 1.5em; line-height: 1.25em; }
 #title h2 { padding-bottom: 8.125em; margin-bottom: 0.625em; background: url('../../images/frontmatter/scribble.png?1339738503') no-repeat scroll center bottom; }
