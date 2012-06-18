@@ -4,24 +4,25 @@
 /* ----------------------------------------------------------------------------
   fonts */
 
-$icomoon      : IcoMoon           'icomoon/IcoMoon'               normal normal;
-$jjregular    : GreenMudJJRegular 'jj/greenmudjj-regular-webfont' normal normal;
-$jjitalic     : GreenMudJJRegular 'jj/greenmudjj-italic-webfont'  normal italic;
+$icomoon      : IcoMoon           'icomoon/IcoMoon'               normal  normal;
+$jjregular    : GreenMudJJRegular 'jj/greenmudjj-regular-webfont' normal  normal;
+$jjitalic     : GreenMudJJRegular 'jj/greenmudjj-italic-webfont'  normal  italic;
+$jjbold       : GreenMudJJRegular 'jj/GreenMudJJ-Bold'        bold    normal;
 
-@mixin font($font) {
+@mixin font($font, $exact: false) {
   $name: nth($font,1);
   $location: nth($font,2);
   $weight: if(nth($font,3), nth($font,3), normal);
   $style: if(nth($font,4), nth($font,4), normal);
   @include font-face(
-    $name, 
+    $name,
     font-files(
-      '#{$location}.woff', woff, 
-      '#{$location}.ttf', truetype, 
-      '#{$location}.svg#GreenMudJJRegular', svg
-    ), 
-    '#{$location}.eot', 
-    $weight, 
+      '#{$location}.woff', 'woff',
+      '#{$location}.ttf', 'truetype',
+      '#{$location}.svg#GreenMudJJRegular', 'svg'
+    ),
+    '#{$location}.eot',
+    $weight,
     $style
   );
 }
@@ -29,3 +30,10 @@ $jjitalic     : GreenMudJJRegular 'jj/greenmudjj-italic-webfont'  normal italic;
 @include font($icomoon);
 @include font($jjregular);
 @include font($jjitalic);
+
+@font-face {
+  font-family: "GreenMudJJRegular";
+  src: url('../fonts/jj/GreenMudJJ-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
