@@ -180,6 +180,7 @@
 #dedication { background: #ededf6 url('../../images/noise.png?1339738503'); background-image: url('../../images/noise.png?1339738503'), -webkit-gradient(radial, center 5em, 0, center 5em, 100, color-stop(0%, #ededf6), color-stop(50%, #d4d4ea), color-stop(100%, #ddbadd)); background-image: url('../../images/noise.png?1339738503'), -webkit-radial-gradient(center 5em, #ededf6, #d4d4ea, #ddbadd); background-image: url('../../images/noise.png?1339738503'), -moz-radial-gradient(center 5em, #ededf6, #d4d4ea, #ddbadd); background-image: url('../../images/noise.png?1339738503'), -o-radial-gradient(center 5em, #ededf6, #d4d4ea, #ddbadd); background-image: url('../../images/noise.png?1339738503'), -ms-radial-gradient(center 5em, #ededf6, #d4d4ea, #ddbadd); background-image: url('../../images/noise.png?1339738503'), radial-gradient(center 5em, #ededf6, #d4d4ea, #ddbadd); color: #202020; }
 #dedication [role="main"] { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; padding-bottom: 2.5em; }
 #dedication [role="main"]:after { content: ""; display: table; clear: both; }
+@media all and (min-height: 25em) { #dedication [role="main"] { padding-top: 7.5em; } }
 #dedication h1 { font-weight: bold; }
 #dedication p { margin-bottom: 1.25em; }
 

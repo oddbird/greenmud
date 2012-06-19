@@ -16,6 +16,9 @@ $grad   : radial-gradient(center rhythm(4), $off-blue-hint, $off-blue-lightest, 
     @include container;
     @include padding-leader(2);
     @include padding-trailer(2);
+    @media all and (min-height: 25em) {
+      @include padding-leader(6);
+    }
   }
 
   h1 { font-weight: bold; }
