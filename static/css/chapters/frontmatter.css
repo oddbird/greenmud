@@ -166,7 +166,7 @@
 #title a:link, #title a:visited { color: #3e3e81; }
 #title a:hover, #title a:focus, #title a:active { color: #813e81; }
 
-#copyright { background: #ff7272; color: #ffe5e5; }
+#copyright { background: #ff7272 url('../../images/noise.png?1339738503'); background: url('../../images/noise.png?1339738503'), -webkit-gradient(linear, -267deg, -267deg, color-stop(0%, rgba(255, 0, 0, 0.25)), color-stop(79%, rgba(255, 229, 229, 0.125)), color-stop(79%, rgba(255, 0, 0, 0.125))), #ff7272; background: url('../../images/noise.png?1339738503'), -webkit-linear-gradient(-267deg, rgba(255, 0, 0, 0.25), rgba(255, 229, 229, 0.125) 79%, rgba(255, 0, 0, 0.125) 79%), #ff7272; background: url('../../images/noise.png?1339738503'), -moz-linear-gradient(-267deg, rgba(255, 0, 0, 0.25), rgba(255, 229, 229, 0.125) 79%, rgba(255, 0, 0, 0.125) 79%), #ff7272; background: url('../../images/noise.png?1339738503'), -o-linear-gradient(-267deg, rgba(255, 0, 0, 0.25), rgba(255, 229, 229, 0.125) 79%, rgba(255, 0, 0, 0.125) 79%), #ff7272; background: url('../../images/noise.png?1339738503'), -ms-linear-gradient(-267deg, rgba(255, 0, 0, 0.25), rgba(255, 229, 229, 0.125) 79%, rgba(255, 0, 0, 0.125) 79%), #ff7272; background: url('../../images/noise.png?1339738503'), linear-gradient(-267deg, rgba(255, 0, 0, 0.25), rgba(255, 229, 229, 0.125) 79%, rgba(255, 0, 0, 0.125) 79%), #ff7272; color: #ffe5e5; }
 #copyright [role="main"] { max-width: 34.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; padding-bottom: 2.5em; text-shadow: #7f0000 1px 1px 0; text-align: center; }
 #copyright [role="main"]:after { content: ""; display: table; clear: both; }
 #copyright a:link, #copyright a:visited { color: #bfbfff; }

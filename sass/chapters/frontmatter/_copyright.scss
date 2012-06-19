@@ -8,8 +8,15 @@ $color          : $red-hint;
 $shadow-color   : $red-darker;
 $shadow         : $shadow-color 1px 1px 0;
 
+$grad           : linear-gradient(-267deg,
+                    rgba($red,.25),
+                    rgba($red-hint,.125) 79%,
+                    rgba($red,.125) 79%
+                  );
+
 #copyright {
-  background: $bg;
+  @include background($bg image-url('noise.png'));
+  @include background(image-url('noise.png'), $grad, $bg);
   color: $color;
 
   [role="main"] {
