@@ -17,8 +17,8 @@
 // ----------------------------------------------------------------------------
 // pageturn
 
-.swiping-next { background: image-url('right.png') no-repeat scroll right; }
-.swiping-prev { background: image-url('left.png') no-repeat scroll left; }
+.swiping-next { background: image-url('right.png') no-repeat fixed right; }
+.swiping-prev { background: image-url('left.png') no-repeat fixed left; }
 
 .page {
   @include transition(left 200ms ease-in-out);
