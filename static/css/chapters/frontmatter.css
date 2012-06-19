@@ -171,7 +171,8 @@
 #copyright [role="main"]:after { content: ""; display: table; clear: both; }
 #copyright a:link, #copyright a:visited { color: #bfbfff; }
 #copyright a:hover, #copyright a:focus, #copyright a:active { color: #9999ff; }
-#copyright h1 { font-size: 1.5em; line-height: 1.25em; margin-bottom: 0.833em; -webkit-border-radius: 3em; -moz-border-radius: 3em; -ms-border-radius: 3em; -o-border-radius: 3em; border-radius: 3em; -webkit-box-shadow: #7f0000 1px 1px 1px; -moz-box-shadow: #7f0000 1px 1px 1px; box-shadow: #7f0000 1px 1px 1px; text-shadow: #7f0000 -1px -1px 0; display: inline-block; padding: 0.417em 0.833em; background: #ffe5e5; color: red; }
+#copyright h1 { font-size: 1.5em; line-height: 1.25em; margin-bottom: 0.833em; -webkit-border-radius: 3em; -moz-border-radius: 3em; -ms-border-radius: 3em; -o-border-radius: 3em; border-radius: 3em; -webkit-box-shadow: #7f0000 1px 1px 1px; -moz-box-shadow: #7f0000 1px 1px 1px; box-shadow: #7f0000 1px 1px 1px; text-shadow: #7f0000 -1px -1px 0; display: inline-block; padding: 0.417em 0.833em; background: #ffe5e5 url('../../images/noise.png?1339738503'); color: red; }
+#copyright h1:before, #copyright h1:after { content: "•"; }
 @media all and (min-width: 40em) { #copyright h1 { font-size: 2.25em; line-height: 1.111em; margin-bottom: 0.556em; } }
 #copyright p { margin-bottom: 1.25em; text-align: left; }
 #copyright em { font-style: italic; }

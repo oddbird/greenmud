@@ -33,8 +33,10 @@ $shadow         : $red-darker 1px 1px 1px;
     @include text-shadow($red-darker -1px -1px 0);
     display: inline-block;
     padding: rhythm(.5,$largepx) rhythm(1,$largepx);
-    background: $red-hint;
+    background: $red-hint image-url('noise.png');
     color: $red;
+
+    &:before, &:after { content: "•"; }
 
     @include media(40em) {
       @include adjust-font-size-to($xxlargepx);
