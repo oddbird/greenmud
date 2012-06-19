@@ -5,12 +5,27 @@
 // temporary page styles
 
 .demo {
-  .page { background: $pink-hint image-url('noise.png'); }
+  .page {
+    background: $pink-hint image-url('noise.png');
+  }
   .content {
     @extend %type;
     @include container;
     @include susy-grid-background;
     @include padding-leader(2);
+    position: relative;
+    &:before {
+      @extend %allcaps;
+      @include adjust-font-size-to($smallpx);
+      @include trailer(1,$smallpx);
+      @include border-radius($xxxsmallem);
+      content: "This page has not been designed yet.";
+      display: block;
+      padding: 0 $grid-padding;
+      background: $off-pink-lighter;
+      color: $pink-hint;
+      font-weight: bold;
+    }
   }
 }
 
