@@ -3,13 +3,14 @@
 
 $total-columns  : 10;
 
-$bg             : $red;
+$bg             : $red-light;
 $color          : $red-hint;
-$shadow         : $red-darker 1px 1px 1px;
+$shadow-color   : $red-darker;
+$shadow         : $shadow-color 1px 1px 0;
 
 #copyright {
   background: $bg;
-  color: $hint;
+  color: $color;
 
   [role="main"] {
     @include container;
@@ -20,8 +21,11 @@ $shadow         : $red-darker 1px 1px 1px;
   }
 
   a {
-    #{$link} { color: $blue-lightest; }
-    #{$focus} { color: $blue-lighter; }
+    #{$link} {
+      @extend %allcaps;
+      color: $blue-lightest;
+    }
+    #{$focus} { color: $pink-lightest; }
   }
 
   h1 {
@@ -30,11 +34,11 @@ $shadow         : $red-darker 1px 1px 1px;
     @include trailer(1,$largepx);
     @include border-radius(3em);
     @include box-shadow($shadow);
-    @include text-shadow($red-darker -1px -1px 0);
+    @include text-shadow($shadow-color -1px -1px 0);
     display: inline-block;
     padding: rhythm(.5,$largepx) rhythm(1,$largepx);
-    background: $red-hint image-url('noise.png');
-    color: $red;
+    background: $color image-url('noise.png');
+    color: $bg;
 
     &:before, &:after { content: "•"; }
 
