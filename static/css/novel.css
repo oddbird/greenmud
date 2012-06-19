@@ -1211,7 +1211,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.25em; }
 
-html { font-family: "GreenMudJJRegular", sans-serif; background: #dfdfdf url('../images/noise.png?1339738503'); color: #606060; overflow-x: hidden; }
+html { background: gray url('../images/noise.png?1339738503'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 

@@ -6,7 +6,7 @@
 /* ----------------------------------------------------------------------------
   root */
 
-$back   : $lightest;
+$back   : $mid;
 $base   : $dark;
 $alt    : $blue;
 $accent : $pink;
@@ -14,10 +14,15 @@ $accent : $pink;
 @include animate;
 @include establish-baseline;
 
-html { 
+html {
   @include baseline-grid-background($base-line-height);
+  @include background($back image-url('noise.png'));
+  // @include background(
+  //   image-url('right.png') no-repeat fixed right,
+  //   image-url('left.png') no-repeat fixed left,
+  //   $back image-url('noise.png') repeat scroll center
+  // );
   font-family: $jj-stack;
-  background: $back image-url('noise.png');
   color: $base;
   overflow-x: hidden;
 }
