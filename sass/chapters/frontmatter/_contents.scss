@@ -1,6 +1,30 @@
 // ----------------------------------------------------------------------------
 // contents
 
+$total-columns: 8;
+
+$grad1: linear-gradient(260deg, $yellow-hint, $yellow-lightest 35%, $orange-lightest 35%, $orange-light);
+$grad2: linear-gradient(260deg, $yellow-hint, $yellow-lightest 60%, $orange-lightest 60%, $orange-light);
+
 #contents {
   @extend %toc-counter;
+  @include background($yellow-hint image-url('noise.png'));
+  @include background(image-url('noise.png'), $grad1);
+  @include media(32em) { @include background(image-url('noise.png'), $grad2); }
+
+  [role="main"] {
+    @include container;
+    @include padding-leader(2);
+  }
+
+  a {
+    #{$link} { color: $orange-darker; }
+    #{$focus} { color: $orange; }
+  }
+
+  li:before { color: $off-yellow-dark; }
+
+  .book {
+    font-weight: bold;
+  }
 }

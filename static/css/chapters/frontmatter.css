@@ -182,3 +182,12 @@
 #dedication [role="main"]:after { content: ""; display: table; clear: both; }
 #dedication h1 { font-weight: bold; }
 #dedication p { margin-bottom: 1.25em; }
+
+#contents { background: #ffffe5 url('../../images/noise.png?1339738503'); background: url('../../images/noise.png?1339738503'), -webkit-gradient(linear, 260deg, 260deg, color-stop(0%, #ffffe5), color-stop(35%, #ffffbf), color-stop(35%, #ffdfbf), color-stop(100%, #ffb972)); background: url('../../images/noise.png?1339738503'), -webkit-linear-gradient(260deg, #ffffe5, #ffffbf 35%, #ffdfbf 35%, #ffb972); background: url('../../images/noise.png?1339738503'), -moz-linear-gradient(260deg, #ffffe5, #ffffbf 35%, #ffdfbf 35%, #ffb972); background: url('../../images/noise.png?1339738503'), -o-linear-gradient(260deg, #ffffe5, #ffffbf 35%, #ffdfbf 35%, #ffb972); background: url('../../images/noise.png?1339738503'), -ms-linear-gradient(260deg, #ffffe5, #ffffbf 35%, #ffdfbf 35%, #ffb972); background: url('../../images/noise.png?1339738503'), linear-gradient(260deg, #ffffe5, #ffffbf 35%, #ffdfbf 35%, #ffb972); }
+@media all and (min-width: 32em) { #contents { background: url('../../images/noise.png?1339738503'), -webkit-gradient(linear, 260deg, 260deg, color-stop(0%, #ffffe5), color-stop(60%, #ffffbf), color-stop(60%, #ffdfbf), color-stop(100%, #ffb972)); background: url('../../images/noise.png?1339738503'), -webkit-linear-gradient(260deg, #ffffe5, #ffffbf 60%, #ffdfbf 60%, #ffb972); background: url('../../images/noise.png?1339738503'), -moz-linear-gradient(260deg, #ffffe5, #ffffbf 60%, #ffdfbf 60%, #ffb972); background: url('../../images/noise.png?1339738503'), -o-linear-gradient(260deg, #ffffe5, #ffffbf 60%, #ffdfbf 60%, #ffb972); background: url('../../images/noise.png?1339738503'), -ms-linear-gradient(260deg, #ffffe5, #ffffbf 60%, #ffdfbf 60%, #ffb972); background: url('../../images/noise.png?1339738503'), linear-gradient(260deg, #ffffe5, #ffffbf 60%, #ffdfbf 60%, #ffb972); } }
+#contents [role="main"] { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
+#contents [role="main"]:after { content: ""; display: table; clear: both; }
+#contents a:link, #contents a:visited { color: #7f4000; }
+#contents a:hover, #contents a:focus, #contents a:active { color: #ff8000; }
+#contents li:before { color: #81813e; }
+#contents .book { font-weight: bold; }
