@@ -1239,6 +1239,10 @@ a:hover, a:focus, a:active { color: magenta; }
 [data-icon]:before { content: attr(data-icon); }
 
 /* ---------------------------------------------------------------------------- type */
+.demo .content:before { letter-spacing: .05em; }
+
+.demo .content:before { text-transform: uppercase; }
+
 .breadcrumb, [class^="toc-"] .book, [class^="toc-"] li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
 /* ---------------------------------------------------------------------------- defaults */
@@ -1318,8 +1322,9 @@ a:hover, a:focus, a:active { color: magenta; }
 
 /* ---------------------------------------------------------------------------- page */
 .demo .page { background: #ffe5ff url('../images/noise.png?1339738503'); }
-.demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; }
+.demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; position: relative; }
 .demo .content:after { content: ""; display: table; clear: both; }
+.demo .content:before { font-size: 0.792em; line-height: 1.579em; margin-bottom: 1.579em; -webkit-border-radius: 0.512em; -moz-border-radius: 0.512em; -ms-border-radius: 0.512em; -o-border-radius: 0.512em; border-radius: 0.512em; content: "This page has not been designed yet."; display: block; padding: 0 0.5em; background: #ddbadd; color: #ffe5ff; font-weight: bold; }
 
 .swiping-next { background: url('../images/right.png?1340123346') no-repeat fixed right; }
 
