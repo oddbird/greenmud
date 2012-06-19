@@ -133,29 +133,29 @@
 @keyframes line2 { 0% { background-position: 827px 11.25em; }
   100% { background-position: 0 11.25em; } }
 
-@-moz-keyframes line3 { 0% { background-position: 827px 18.75em; }
-  100% { background-position: 0 18.75em; } }
+@-moz-keyframes line3 { 0% { background-position: 827px 17.5em; }
+  100% { background-position: 0 17.5em; } }
 
-@-webkit-keyframes line3 { 0% { background-position: 827px 18.75em; }
-  100% { background-position: 0 18.75em; } }
+@-webkit-keyframes line3 { 0% { background-position: 827px 17.5em; }
+  100% { background-position: 0 17.5em; } }
 
-@-o-keyframes line3 { 0% { background-position: 827px 18.75em; }
-  100% { background-position: 0 18.75em; } }
+@-o-keyframes line3 { 0% { background-position: 827px 17.5em; }
+  100% { background-position: 0 17.5em; } }
 
-@-ms-keyframes line3 { 0% { background-position: 827px 18.75em; }
-  100% { background-position: 0 18.75em; } }
+@-ms-keyframes line3 { 0% { background-position: 827px 17.5em; }
+  100% { background-position: 0 17.5em; } }
 
-@keyframes line3 { 0% { background-position: 827px 18.75em; }
-  100% { background-position: 0 18.75em; } }
+@keyframes line3 { 0% { background-position: 827px 17.5em; }
+  100% { background-position: 0 17.5em; } }
 
 #title { background: #d4ead4; background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe5ff), color-stop(50%, #ffe5ff), color-stop(50%, #d4ead4), color-stop(100%, #d4ead4)); background-image: -webkit-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -moz-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -o-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: -ms-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); -webkit-transition: background 300ms; -moz-transition: background 300ms; -ms-transition: background 300ms; -o-transition: background 300ms; transition: background 300ms; }
 @media all and (min-width: 30em) { #title [role="main"] { -webkit-animation: line1 30s linear infinite both; -moz-animation: line1 30s linear infinite both; -ms-animation: line1 30s linear infinite both; -o-animation: line1 30s linear infinite both; animation: line1 30s linear infinite both; background: url('../../images/frontmatter/titlepage/line.png?1340056009') repeat-x scroll 827px 7.5em; } }
 @media all and (min-width: 30em) and (min-height: 32em) { #title [role="main"] { -webkit-animation-name: line2; -moz-animation-name: line2; -ms-animation-name: line2; -o-animation-name: line2; animation-name: line2; background-position: 827px 11.25em; } }
-@media all and (min-width: 30em) and (min-height: 50em) { #title [role="main"] { -webkit-animation-name: line3; -moz-animation-name: line3; -ms-animation-name: line3; -o-animation-name: line3; animation-name: line3; background-position: 827px 18.75em; } }
+@media all and (min-width: 30em) and (min-height: 50em) { #title [role="main"] { -webkit-animation-name: line3; -moz-animation-name: line3; -ms-animation-name: line3; -o-animation-name: line3; animation-name: line3; background-position: 827px 17.5em; } }
 #title .wrap1 { padding-top: 1.875em; padding-bottom: 1.25em; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; background: url('../../images/frontmatter/titlepage/strings_left.png?1340057318') no-repeat scroll -376.5px bottom, url('../../images/frontmatter/titlepage/strings_right.png?1340057309') no-repeat scroll 947.5px bottom; }
 @media all and (min-width: 50em) { #title .wrap1 { background-position: left bottom, right bottom; } }
 @media all and (min-height: 32em) { #title .wrap1 { padding-top: 5.625em; } }
-@media all and (min-height: 50em) { #title .wrap1 { padding-top: 13.125em; } }
+@media all and (min-height: 50em) { #title .wrap1 { padding-top: 11.875em; } }
 #title .wrap2 { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; color: #404040; text-align: center; }
 #title .wrap2:after { content: ""; display: table; clear: both; }
 #title h1, #title h2 { font-weight: bold; }

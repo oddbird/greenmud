@@ -19,7 +19,7 @@ $right      : '#{$titleimg}strings_right.png';
 $bg         : $off-green-lightest;
 $line-pos   : 6;
 $line-pos2  : $line-pos + 3;
-$line-pos3  : $line-pos + 9;
+$line-pos3  : $line-pos + 8;
 $string-pos : bottom;
 $grad-pos   : center;
 
@@ -77,7 +77,7 @@ $line-end   : 0;
       background-position: left $string-pos, right $string-pos;
     }
     @media all and (min-height: 32em) { @include padding-leader(1.5 + 3); }
-    @media all and (min-height: 50em) { @include padding-leader(1.5 + 9); }
+    @media all and (min-height: 50em) { @include padding-leader(1.5 + 8); }
   }
 
   .wrap2 {
