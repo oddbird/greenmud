@@ -1,15 +1,12 @@
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-  font-family: 'IcoMoon';
-  content: attr(data-icon);
-  speak: none;
-}
-
 /* Use the following CSS code if you want to have a class per icon */
-%icon:before {
+%icon-content {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
+}
+
+%icon:before {
+  @extend %icon-content;
 }
 
 %icon-replace {
@@ -23,4 +20,10 @@
     left: 0;
     text-indent: 0;
   }
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  @extend %icon-content;
+  content: attr(data-icon);
 }

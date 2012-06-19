@@ -13,14 +13,14 @@
 
 #home .social [href*="andmeyer"]:before, #about .social [href*="andmeyer"]:before { content: "\e004"; }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before { font-family: 'IcoMoon'; content: attr(data-icon); speak: none; }
-
 /* Use the following CSS code if you want to have a class per icon */
-#home .social a:before, #about .social a:before, #home .inst:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+#home .social a:before, #about .social a:before, #home .inst:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
 
 #home .social a, #about .social a { position: relative; min-width: 1em; text-indent: -9999px; }
 #home .social a:before, #about .social a:before { position: absolute; top: 0; left: 0; text-indent: 0; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before { content: attr(data-icon); }
 
 /* ---------------------------------------------------------------------------- type */
 #home .license, #about .license, #title a:link, #title a:visited { text-transform: uppercase; }
@@ -103,55 +103,55 @@
 
 .warning { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.083em; padding: 0.542em; background: #ffbfbf; }
 
-@-moz-keyframes line1 { 0% { background-position: 827px 7.5em; }
+@-moz-keyframes line1 { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-webkit-keyframes line1 { 0% { background-position: 827px 7.5em; }
+@-webkit-keyframes line1 { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-o-keyframes line1 { 0% { background-position: 827px 7.5em; }
+@-o-keyframes line1 { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-ms-keyframes line1 { 0% { background-position: 827px 7.5em; }
+@-ms-keyframes line1 { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@keyframes line1 { 0% { background-position: 827px 7.5em; }
+@keyframes line1 { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-moz-keyframes line2 { 0% { background-position: 827px 11.25em; }
+@-moz-keyframes line2 { 0% { background-position: 1200px 11.25em; }
   100% { background-position: 0 11.25em; } }
 
-@-webkit-keyframes line2 { 0% { background-position: 827px 11.25em; }
+@-webkit-keyframes line2 { 0% { background-position: 1200px 11.25em; }
   100% { background-position: 0 11.25em; } }
 
-@-o-keyframes line2 { 0% { background-position: 827px 11.25em; }
+@-o-keyframes line2 { 0% { background-position: 1200px 11.25em; }
   100% { background-position: 0 11.25em; } }
 
-@-ms-keyframes line2 { 0% { background-position: 827px 11.25em; }
+@-ms-keyframes line2 { 0% { background-position: 1200px 11.25em; }
   100% { background-position: 0 11.25em; } }
 
-@keyframes line2 { 0% { background-position: 827px 11.25em; }
+@keyframes line2 { 0% { background-position: 1200px 11.25em; }
   100% { background-position: 0 11.25em; } }
 
-@-moz-keyframes line3 { 0% { background-position: 827px 17.5em; }
+@-moz-keyframes line3 { 0% { background-position: 1200px 17.5em; }
   100% { background-position: 0 17.5em; } }
 
-@-webkit-keyframes line3 { 0% { background-position: 827px 17.5em; }
+@-webkit-keyframes line3 { 0% { background-position: 1200px 17.5em; }
   100% { background-position: 0 17.5em; } }
 
-@-o-keyframes line3 { 0% { background-position: 827px 17.5em; }
+@-o-keyframes line3 { 0% { background-position: 1200px 17.5em; }
   100% { background-position: 0 17.5em; } }
 
-@-ms-keyframes line3 { 0% { background-position: 827px 17.5em; }
+@-ms-keyframes line3 { 0% { background-position: 1200px 17.5em; }
   100% { background-position: 0 17.5em; } }
 
-@keyframes line3 { 0% { background-position: 827px 17.5em; }
+@keyframes line3 { 0% { background-position: 1200px 17.5em; }
   100% { background-position: 0 17.5em; } }
 
 #title { background: #d4ead4 url('../../images/noise.png?1339738503'); background-image: url('../../images/noise.png?1339738503'), -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe5ff), color-stop(50%, #ffe5ff), color-stop(50%, #d4ead4), color-stop(100%, #d4ead4)); background-image: url('../../images/noise.png?1339738503'), -webkit-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1339738503'), -moz-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1339738503'), -o-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1339738503'), -ms-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1339738503'), linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); -webkit-transition: background 300ms; -moz-transition: background 300ms; -ms-transition: background 300ms; -o-transition: background 300ms; transition: background 300ms; }
-@media all and (min-width: 30em) { #title [role="main"] { -webkit-animation: line1 30s linear infinite both; -moz-animation: line1 30s linear infinite both; -ms-animation: line1 30s linear infinite both; -o-animation: line1 30s linear infinite both; animation: line1 30s linear infinite both; background: url('../../images/frontmatter/titlepage/line.png?1340056009') repeat-x scroll 827px 7.5em; } }
-@media all and (min-width: 30em) and (min-height: 32em) { #title [role="main"] { -webkit-animation-name: line2; -moz-animation-name: line2; -ms-animation-name: line2; -o-animation-name: line2; animation-name: line2; background-position: 827px 11.25em; } }
-@media all and (min-width: 30em) and (min-height: 50em) { #title [role="main"] { -webkit-animation-name: line3; -moz-animation-name: line3; -ms-animation-name: line3; -o-animation-name: line3; animation-name: line3; background-position: 827px 17.5em; } }
+@media all and (min-width: 30em) { #title [role="main"] { -webkit-animation: line1 30s linear infinite both; -moz-animation: line1 30s linear infinite both; -ms-animation: line1 30s linear infinite both; -o-animation: line1 30s linear infinite both; animation: line1 30s linear infinite both; background: url('../../images/frontmatter/titlepage/line.png?1340116950') repeat-x scroll 1200px 7.5em; } }
+@media all and (min-width: 30em) and (min-height: 32em) { #title [role="main"] { -webkit-animation-name: line2; -moz-animation-name: line2; -ms-animation-name: line2; -o-animation-name: line2; animation-name: line2; background-position: 1200px 11.25em; } }
+@media all and (min-width: 30em) and (min-height: 50em) { #title [role="main"] { -webkit-animation-name: line3; -moz-animation-name: line3; -ms-animation-name: line3; -o-animation-name: line3; animation-name: line3; background-position: 1200px 17.5em; } }
 #title .wrap1 { padding-top: 1.875em; padding-bottom: 1.25em; -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; background: url('../../images/frontmatter/titlepage/strings_left.png?1340057318') no-repeat scroll -376.5px bottom, url('../../images/frontmatter/titlepage/strings_right.png?1340057309') no-repeat scroll 947.5px bottom; }
 @media all and (min-width: 50em) { #title .wrap1 { background-position: left bottom, right bottom; } }
 @media all and (min-height: 32em) { #title .wrap1 { padding-top: 5.625em; } }

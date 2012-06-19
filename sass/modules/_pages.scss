@@ -17,6 +17,9 @@
 // ----------------------------------------------------------------------------
 // pageturn
 
+.swiping-next { background: image-url('right.png') no-repeat scroll right; }
+.swiping-prev { background: image-url('left.png') no-repeat scroll left; }
+
 .page {
   @include transition(left 200ms ease-in-out);
   position: relative;
@@ -24,8 +27,8 @@
   .swiping-next &, .swiping-prev & {
     * { @include animation-play-state(paused !important); }
   }
-  .swiping-next & { left: rhythm(-1); }
-  .swiping-prev & { left: rhythm(1); }
+  .swiping-next & { left: rhythm(-1.5); }
+  .swiping-prev & { left: rhythm(1.5); }
 }
 
 .enter-prev { @extend %fadeInLeft; }
