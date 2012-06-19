@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------------------
+// dedication
+
+$total-columns: 6;
+
+$bg     : $off-blue-hint;
+$color  : $base;
+$grad   : radial-gradient(center rhythm(4), $off-blue-hint, $off-blue-lightest, $off-pink-lighter);
+
+#dedication {
+  @include background($bg image-url('noise.png'));
+  @include background-image(image-url('noise.png'), $grad);
+  color: $color;
+
+  [role="main"] {
+    @include container;
+    @include padding-leader(2);
+    @include padding-trailer(2);
+  }
+
+  h1 { font-weight: bold; }
+  p { @include trailer; }
+
+}
