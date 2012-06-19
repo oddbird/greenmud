@@ -34,7 +34,6 @@
 .exit-next { @extend %fadeOutRight; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next {
-  * { @include animation-play-state(paused !important); }
   @include animation-duration(200ms);
   @include animation-timing-function(ease);
   @include animation-fill-mode(both);
