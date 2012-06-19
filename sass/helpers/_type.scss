@@ -6,7 +6,7 @@
 }
 
 %allcaps {
-  @extend .caps;
+  @extend %caps;
   text-transform: uppercase;
 }
 

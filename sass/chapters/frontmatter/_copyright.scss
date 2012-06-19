@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------------------
+// copyright
+
+$total-columns  : 10;
+
+$bg             : $red;
+$color          : $red-hint;
+$shadow         : $red-darker 1px 1px 1px;
+
+#copyright {
+  background: $bg;
+  color: $hint;
+
+  [role="main"] {
+    @include container;
+    @include padding-leader(2);
+    @include padding-trailer(2);
+    @include text-shadow($shadow);
+    text-align: center;
+  }
+
+  a {
+    #{$link} { color: $blue-lightest; }
+    #{$focus} { color: $blue-lighter; }
+  }
+
+  h1 {
+    @extend %allcaps;
+    @include adjust-font-size-to($largepx);
+    @include trailer(1,$largepx);
+    @include border-radius(3em);
+    @include box-shadow($shadow);
+    @include text-shadow($red-darker -1px -1px 0);
+    display: inline-block;
+    padding: rhythm(.5,$largepx) rhythm(1,$largepx);
+    background: $red-hint;
+    color: $red;
+
+    @include media(40em) {
+      @include adjust-font-size-to($xxlargepx);
+      @include trailer(1,$xxlargepx);
+    }
+  }
+
+  p {
+    @include trailer;
+    text-align: left;
+  }
+  em { font-style: italic; }
+  strong { @extend %allcaps; }
+}
