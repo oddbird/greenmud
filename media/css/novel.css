@@ -17,11 +17,13 @@ a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
 /* ---------------------------------------------------------------------------- fonts */
-@font-face { font-family: "IcoMoon"; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format('eot'), url('../fonts/icomoon/IcoMoon.woff') format('woff'), url('../fonts/icomoon/IcoMoon.ttf') format('truetype'), url('../fonts/icomoon/IcoMoon.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "IcoMoon"; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format('eot'), url('../fonts/icomoon/IcoMoon.woff') format('woff'), url('../fonts/icomoon/IcoMoon.ttf') format('truetype'), url('../fonts/icomoon/IcoMoon.svg#IcoMoon') format('svg'); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-regular-webfont.eot'); src: url('../fonts/jj/greenmudjj-regular-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-regular-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-regular-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-regular-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../fonts/jj/greenmudjj-italic-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: italic; }
+
+@font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-bold-webfont.eot'); src: url('../fonts/jj/greenmudjj-bold-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-bold-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-bold-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-bold-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: bold; font-style: normal; }
 
 /* ---------------------------------------------------------------------------- root */
 @-moz-keyframes flash { 0% { opacity: 1; }
@@ -1209,7 +1211,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.25em; }
 
-html { font-family: "GreenMudJJRegular", sans-serif; background: #dfdfdf url('../images/noise.png?1339468850'); color: #606060; overflow-x: hidden; }
+html { background: gray url('../images/noise.png?1339738503'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
@@ -1241,7 +1243,7 @@ a:hover, a:focus, a:active { color: magenta; }
 
 /* ---------------------------------------------------------------------------- defaults */
 .demo .content h1 { font-size: 1.5em; line-height: 1.25em; }
-.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { color: #404040; }
+.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-weight: bold; color: #404040; }
 .demo .content h1:first-child, .demo .content h1 + h2, .demo .content h1 + h3, .demo .content h1 + h4, .demo .content h2:first-child, .demo .content h2 + h2, .demo .content h2 + h3, .demo .content h2 + h4, .demo .content h3:first-child, .demo .content h3 + h2, .demo .content h3 + h3, .demo .content h3 + h4, .demo .content h4:first-child, .demo .content h4 + h2, .demo .content h4 + h3, .demo .content h4 + h4 { margin-top: 0; }
 .demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
 .demo .content p, .demo .content ol, .demo .content ul { margin-bottom: 1.25em; }
@@ -1315,7 +1317,7 @@ a:hover, a:focus, a:active { color: magenta; }
 #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
-.demo .page { background: #ffe5ff url('../images/noise.png?1339468850'); }
+.demo .page { background: #ffe5ff url('../images/noise.png?1339738503'); }
 .demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; }
 .demo .content:after { content: ""; display: table; clear: both; }
 
@@ -1325,4 +1327,3 @@ a:hover, a:focus, a:active { color: magenta; }
 .swiping-prev .page { left: 1.25em; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -ms-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; }
-.enter-prev *, .enter-next *, .exit-prev *, .exit-next * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
