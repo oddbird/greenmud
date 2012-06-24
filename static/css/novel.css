@@ -1211,7 +1211,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.25em; }
 
-html { background: gray url('../images/noise.png?1339738503'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
+html { background: gray url('../images/noise.png?1340400763'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
@@ -1321,18 +1321,20 @@ a:hover, a:focus, a:active { color: magenta; }
 #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
-.demo .page { background: #ffe5ff url('../images/noise.png?1339738503'); }
+.demo .page { background: #ffe5ff url('../images/noise.png?1340400763'); }
 .demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; position: relative; }
 .demo .content:after { content: ""; display: table; clear: both; }
 .demo .content:before { font-size: 0.792em; line-height: 1.579em; margin-bottom: 1.579em; -webkit-border-radius: 0.512em; -moz-border-radius: 0.512em; -ms-border-radius: 0.512em; -o-border-radius: 0.512em; border-radius: 0.512em; content: "This page has not been designed yet."; display: block; padding: 0 0.5em; background: #ddbadd; color: #ffe5ff; font-weight: bold; }
 
-.swiping-next { background: url('../images/right.png?1340123346') no-repeat fixed right; }
+.swiping-next { background: url('../images/right.png?1340400763') no-repeat fixed right; }
 
-.swiping-prev { background: url('../images/left.png?1340123151') no-repeat fixed left; }
+.swiping-prev { background: url('../images/left.png?1340400763') no-repeat fixed left; }
 
 .page { -webkit-transition: left 200ms ease-in-out; -moz-transition: left 200ms ease-in-out; -ms-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; position: relative; left: 0; }
-.swiping-next .page *, .swiping-prev .page * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
 .swiping-next .page { left: -1.875em; }
 .swiping-prev .page { left: 1.875em; }
+.swiping-next .page *, .swiping-prev .page * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -ms-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; }
+
+.exit-prev *, .exit-next * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
