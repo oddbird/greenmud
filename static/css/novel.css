@@ -1281,11 +1281,11 @@ a:hover, a:focus, a:active { color: magenta; }
 #toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; text-align: center; }
 
 .controls a:link, #toc a:link, .controls a:visited, #toc a:visited { color: #dfdfdf; }
-.controls a:hover, #toc a:hover, .controls a:focus, #toc a:focus, .controls a:active, #toc a:active { color: gray; }
-.controls a[href]:hover, #toc a[href]:hover, .controls a[href]:focus, #toc a[href]:focus, .controls a[href]:active, #toc a[href]:active { color: white; }
+.no-touch .controls a:hover, .controls .no-touch a:hover, .no-touch #toc a:hover, #toc .no-touch a:hover, .no-touch .controls a:focus, .controls .no-touch a:focus, .no-touch #toc a:focus, #toc .no-touch a:focus, .no-touch .controls a:active, .controls .no-touch a:active, .no-touch #toc a:active, #toc .no-touch a:active { color: gray; }
+.no-touch .controls a[href]:hover, .controls .no-touch a[href]:hover, .no-touch #toc a[href]:hover, #toc .no-touch a[href]:hover, .no-touch .controls a[href]:focus, .controls .no-touch a[href]:focus, .no-touch #toc a[href]:focus, #toc .no-touch a[href]:focus, .no-touch .controls a[href]:active, .controls .no-touch a[href]:active, .no-touch #toc a[href]:active, #toc .no-touch a[href]:active { color: white; }
 
 #toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; line-height: 1.875em; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
-#toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
+.no-touch #toggle:hover, .no-touch #toggle:focus, .no-touch #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; display: none; }
 .controls.active, .showcontrols .controls { display: block; }

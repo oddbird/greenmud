@@ -42,13 +42,15 @@ $scribble : '#{$img}scribble.png';
         &[href*="about"] { background: $yellow-lightest; }
         &[href*="title"] { background: $green-lightest; }
       }
-      #{$focus} {
-        &:after {
-          @include opacity(1);
-          @include animation(fadeIn 1.5s infinite alternate)
+      .no-touch & {
+        #{$focus} {
+          &:after {
+            @include opacity(1);
+            @include animation(fadeIn 1.5s infinite alternate)
+          }
+          &[href*="about"] { background: $yellow-light; }
+          &[href*="title"] { background: $green-light; }
         }
-        &[href*="about"] { background: $yellow-light; }
-        &[href*="title"] { background: $green-light; }
       }
     }
   }
