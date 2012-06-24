@@ -210,3 +210,8 @@ $all-colors       : join($colors, $off-colors);
     $i: 1 + $i;
   }
 }
+
+// ----------------------------------------------------------------------------
+// background
+
+@mixin back($background: $mid) { background: $background image-url('noise.png'); }

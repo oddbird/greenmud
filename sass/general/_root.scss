@@ -6,7 +6,6 @@
 /* ----------------------------------------------------------------------------
   root */
 
-$back   : $mid;
 $base   : $dark;
 $alt    : $blue;
 $accent : $pink;
@@ -16,7 +15,7 @@ $accent : $pink;
 
 html {
   @include baseline-grid-background($base-line-height);
-  @include background($back image-url('noise.png'));
+  @include back;
   font-family: $jj-stack;
   color: $base;
   overflow-x: hidden;

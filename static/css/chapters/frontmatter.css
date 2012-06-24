@@ -85,6 +85,8 @@
   #home .social, #about .social { float: right; margin-right: 0; text-align: right; }
   #home .social a, #about .social a { text-align: left; } }
 
+html { background: #edf6ed url('../../images/noise.png?1340400763'); }
+
 #home [role="main"] { -webkit-transition: background-position 300ms; -moz-transition: background-position 300ms; -ms-transition: background-position 300ms; -o-transition: background-position 300ms; transition: background-position 300ms; background: url('../../images/frontmatter/home/swing.png?1340400763') no-repeat scroll 0 -310px; background: url('../../images/frontmatter/home/swing.png?1340400763') no-repeat scroll, url('../../images/frontmatter/scribble.png?1340400763') no-repeat scroll; background-position: 0 -310px, right 50em; }
 #home .intro, #home .actions, #home .instructions { overflow: hidden; }
 @media all and (min-width: 24em) { #home .actions .act { width: 48.78%; float: left; margin-right: 2.439%; }
