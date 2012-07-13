@@ -1211,7 +1211,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.25em; }
 
-html { background: gray url('../images/noise.png?1339738503'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
+html { background: gray url('../images/noise.png?1340400763'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
@@ -1223,14 +1223,14 @@ a:hover, a:focus, a:active { color: magenta; }
 
 [rel="contents"]:before { content: "\2630"; }
 
-[rel="next"]:before { content: "\2192"; }
+[rel="next"]:before, .swiping-next:before { content: "\2192"; }
 
-[rel="prev"]:before { content: "\2190"; }
+[rel="prev"]:before, .swiping-prev:before { content: "\2190"; }
 
 #toggle:before { content: "\2731"; }
 
 /* Use the following CSS code if you want to have a class per icon */
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .swiping-next:before, .swiping-prev:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
 
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
 #toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
@@ -1281,11 +1281,11 @@ a:hover, a:focus, a:active { color: magenta; }
 #toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; text-align: center; }
 
 .controls a:link, #toc a:link, .controls a:visited, #toc a:visited { color: #dfdfdf; }
-.controls a:hover, #toc a:hover, .controls a:focus, #toc a:focus, .controls a:active, #toc a:active { color: gray; }
-.controls a[href]:hover, #toc a[href]:hover, .controls a[href]:focus, #toc a[href]:focus, .controls a[href]:active, #toc a[href]:active { color: white; }
+.no-touch .controls a:hover, .controls .no-touch a:hover, .no-touch #toc a:hover, #toc .no-touch a:hover, .no-touch .controls a:focus, .controls .no-touch a:focus, .no-touch #toc a:focus, #toc .no-touch a:focus, .no-touch .controls a:active, .controls .no-touch a:active, .no-touch #toc a:active, #toc .no-touch a:active { color: gray; }
+.no-touch .controls a[href]:hover, .controls .no-touch a[href]:hover, .no-touch #toc a[href]:hover, #toc .no-touch a[href]:hover, .no-touch .controls a[href]:focus, .controls .no-touch a[href]:focus, .no-touch #toc a[href]:focus, #toc .no-touch a[href]:focus, .no-touch .controls a[href]:active, .controls .no-touch a[href]:active, .no-touch #toc a[href]:active, #toc .no-touch a[href]:active { color: white; }
 
 #toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; line-height: 1.875em; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
-#toggle:hover, #toggle:focus, #toggle:active { text-shadow: #202020 0 0 3px; }
+.no-touch #toggle:hover, .no-touch #toggle:focus, .no-touch #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; display: none; }
 .controls.active, .showcontrols .controls { display: block; }
@@ -1321,18 +1321,22 @@ a:hover, a:focus, a:active { color: magenta; }
 #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
-.demo .page { background: #ffe5ff url('../images/noise.png?1339738503'); }
+.demo .page { background: #ffe5ff url('../images/noise.png?1340400763'); }
 .demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; position: relative; }
 .demo .content:after { content: ""; display: table; clear: both; }
 .demo .content:before { font-size: 0.792em; line-height: 1.579em; margin-bottom: 1.579em; -webkit-border-radius: 0.512em; -moz-border-radius: 0.512em; -ms-border-radius: 0.512em; -o-border-radius: 0.512em; border-radius: 0.512em; content: "This page has not been designed yet."; display: block; padding: 0 0.5em; background: #ddbadd; color: #ffe5ff; font-weight: bold; }
 
-.swiping-next { background: url('../images/right.png?1340123346') no-repeat fixed right; }
+.swiping-next:before, .swiping-prev:before { font-size: 1.5em; line-height: 1.25em; position: absolute; position: fixed; top: 50%; display: block; margin-top: -1.667em; padding: 1.667em 0.833em; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: 900; }
 
-.swiping-prev { background: url('../images/left.png?1340123151') no-repeat fixed left; }
+.swiping-next:before { -moz-border-radius-topleft: 2.5em; -webkit-border-top-left-radius: 2.5em; border-top-left-radius: 2.5em; -moz-border-radius-bottomleft: 2.5em; -webkit-border-bottom-left-radius: 2.5em; border-bottom-left-radius: 2.5em; right: 0; padding-right: 0.417em; }
+
+.swiping-prev:before { -moz-border-radius-topright: 2.5em; -webkit-border-top-right-radius: 2.5em; border-top-right-radius: 2.5em; -moz-border-radius-bottomright: 2.5em; -webkit-border-bottom-right-radius: 2.5em; border-bottom-right-radius: 2.5em; left: 0; padding-left: 0.417em; }
 
 .page { -webkit-transition: left 200ms ease-in-out; -moz-transition: left 200ms ease-in-out; -ms-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; position: relative; left: 0; }
-.swiping-next .page *, .swiping-prev .page * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
 .swiping-next .page { left: -1.875em; }
 .swiping-prev .page { left: 1.875em; }
+.swiping-next .page *, .swiping-prev .page * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -ms-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; }
+
+.exit-prev *, .exit-next * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
