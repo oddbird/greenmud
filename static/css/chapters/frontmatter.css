@@ -23,20 +23,20 @@
 [data-icon]:before { content: attr(data-icon); }
 
 /* ---------------------------------------------------------------------------- type */
-#home .license, #about .license, #title a:link, #title a:visited, #copyright a:link, #copyright a:visited, #copyright h1, #copyright strong { letter-spacing: .05em; }
+#home .license, #about .license, #title a:link, #title a:visited, #copyright a:link, #copyright a:visited, #copyright h1, #copyright strong, #thanks h1 { letter-spacing: .05em; }
 
-#home .license, #about .license, #title a:link, #title a:visited, #copyright a:link, #copyright a:visited, #copyright h1, #copyright strong { text-transform: uppercase; }
+#home .license, #about .license, #title a:link, #title a:visited, #copyright a:link, #copyright a:visited, #copyright h1, #copyright strong, #thanks h1 { text-transform: uppercase; }
 
 /* ---------------------------------------------------------------------------- defaults */
-#home [role="main"] h1, #about [role="main"] h1 { font-size: 1.5em; line-height: 1.25em; }
-#home [role="main"] h1, #about [role="main"] h1, #home [role="main"] h2, #about [role="main"] h2, #home [role="main"] h3, #about [role="main"] h3, #home [role="main"] h4, #about [role="main"] h4 { font-weight: bold; color: #404040; }
-#home [role="main"] h1:first-child, #about [role="main"] h1:first-child, #home [role="main"] h1 + h2, #about [role="main"] h1 + h2, #home [role="main"] h1 + h3, #about [role="main"] h1 + h3, #home [role="main"] h1 + h4, #about [role="main"] h1 + h4, #home [role="main"] h2:first-child, #about [role="main"] h2:first-child, #home [role="main"] h2 + h2, #about [role="main"] h2 + h2, #home [role="main"] h2 + h3, #about [role="main"] h2 + h3, #home [role="main"] h2 + h4, #about [role="main"] h2 + h4, #home [role="main"] h3:first-child, #about [role="main"] h3:first-child, #home [role="main"] h3 + h2, #about [role="main"] h3 + h2, #home [role="main"] h3 + h3, #about [role="main"] h3 + h3, #home [role="main"] h3 + h4, #about [role="main"] h3 + h4, #home [role="main"] h4:first-child, #about [role="main"] h4:first-child, #home [role="main"] h4 + h2, #about [role="main"] h4 + h2, #home [role="main"] h4 + h3, #about [role="main"] h4 + h3, #home [role="main"] h4 + h4, #about [role="main"] h4 + h4 { margin-top: 0; }
-#home [role="main"] h2, #about [role="main"] h2, #home [role="main"] h3, #about [role="main"] h3, #home [role="main"] h4, #about [role="main"] h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
-#home [role="main"] p, #about [role="main"] p, #home [role="main"] ol, #about [role="main"] ol, #home [role="main"] ul, #about [role="main"] ul { margin-bottom: 1.25em; }
-#home [role="main"] ol, #about [role="main"] ol { list-style-type: decimal; }
-#home [role="main"] ul li, #about [role="main"] ul li { position: relative; }
-#home [role="main"] ul li:before, #about [role="main"] ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
-#home [role="main"] em, #about [role="main"] em, #home [role="main"] blockquote, #about [role="main"] blockquote { font-style: italic; }
+#home [role="main"] h1, #about [role="main"] h1, #thanks h1 { font-size: 1.5em; line-height: 1.25em; }
+#home [role="main"] h1, #about [role="main"] h1, #thanks h1, #home [role="main"] h2, #about [role="main"] h2, #thanks h2, #home [role="main"] h3, #about [role="main"] h3, #thanks h3, #home [role="main"] h4, #about [role="main"] h4, #thanks h4 { font-weight: bold; color: #404040; }
+#home [role="main"] h1:first-child, #about [role="main"] h1:first-child, #thanks h1:first-child, #home [role="main"] h1 + h2, #about [role="main"] h1 + h2, #thanks h1 + h2, #home [role="main"] h1 + h3, #about [role="main"] h1 + h3, #thanks h1 + h3, #home [role="main"] h1 + h4, #about [role="main"] h1 + h4, #thanks h1 + h4, #home [role="main"] h2:first-child, #about [role="main"] h2:first-child, #thanks h2:first-child, #home [role="main"] h2 + h2, #about [role="main"] h2 + h2, #thanks h2 + h2, #home [role="main"] h2 + h3, #about [role="main"] h2 + h3, #thanks h2 + h3, #home [role="main"] h2 + h4, #about [role="main"] h2 + h4, #thanks h2 + h4, #home [role="main"] h3:first-child, #about [role="main"] h3:first-child, #thanks h3:first-child, #home [role="main"] h3 + h2, #about [role="main"] h3 + h2, #thanks h3 + h2, #home [role="main"] h3 + h3, #about [role="main"] h3 + h3, #thanks h3 + h3, #home [role="main"] h3 + h4, #about [role="main"] h3 + h4, #thanks h3 + h4, #home [role="main"] h4:first-child, #about [role="main"] h4:first-child, #thanks h4:first-child, #home [role="main"] h4 + h2, #about [role="main"] h4 + h2, #thanks h4 + h2, #home [role="main"] h4 + h3, #about [role="main"] h4 + h3, #thanks h4 + h3, #home [role="main"] h4 + h4, #about [role="main"] h4 + h4, #thanks h4 + h4 { margin-top: 0; }
+#home [role="main"] h2, #about [role="main"] h2, #thanks h2, #home [role="main"] h3, #about [role="main"] h3, #thanks h3, #home [role="main"] h4, #about [role="main"] h4, #thanks h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
+#home [role="main"] p, #about [role="main"] p, #thanks p, #home [role="main"] ol, #about [role="main"] ol, #thanks ol, #home [role="main"] ul, #about [role="main"] ul, #thanks ul { margin-bottom: 1.25em; }
+#home [role="main"] ol, #about [role="main"] ol, #thanks ol { list-style-type: decimal; }
+#home [role="main"] ul li, #about [role="main"] ul li, #thanks ul li { position: relative; }
+#home [role="main"] ul li:before, #about [role="main"] ul li:before, #thanks ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
+#home [role="main"] em, #about [role="main"] em, #thanks em, #home [role="main"] blockquote, #about [role="main"] blockquote, #thanks blockquote { font-style: italic; }
 
 #contents { counter-reset: toc; }
 #contents ol { list-style-type: none; }
@@ -194,3 +194,8 @@ html { background: #edf6ed url('../../images/noise.png?1340400763'); }
 #contents a:hover, #contents a:focus, #contents a:active { color: #ff8000; }
 #contents li:before { color: #81813e; }
 #contents .book { font-weight: bold; }
+
+#thanks h1, #thanks h2 { font-weight: bold; }
+#thanks h1 { font-size: 2.25em; line-height: 1.111em; }
+#thanks [role="main"] { max-width: 20.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
+#thanks [role="main"]:after { content: ""; display: table; clear: both; }
