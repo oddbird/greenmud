@@ -32,8 +32,42 @@
 // ----------------------------------------------------------------------------
 // pageturn
 
-.swiping-next { background: image-url('right.png') no-repeat fixed right; }
-.swiping-prev { background: image-url('left.png') no-repeat fixed left; }
+$swipe-size     : $largepx;
+$swipe-margin   : 0;
+$swipe-padding  : rhythm(1,$swipe-size);
+$swipe-radius   : rhythm(3,$swipe-size);
+
+.swiping-next, .swiping-prev {
+  @extend %icon;
+  &:before {
+    @include adjust-font-size-to($swipe-size);
+    position: absolute;
+    position: fixed;
+    top: 50%;
+    display: block;
+    margin-top: - $swipe-padding*2;
+    padding: $swipe-padding*2 $swipe-padding;
+    color: rgba($hint,.75);
+    background: rgba($darker,.25);
+    z-index: 900;
+  }
+}
+.swiping-next {
+  @extend %icon-arrow-right;
+  &:before {
+    @include border-left-radius($swipe-radius);
+    right: $swipe-margin;
+    padding-right: $swipe-padding/2;
+  }
+}
+.swiping-prev {
+  @extend %icon-arrow-left;
+  &:before {
+    @include border-right-radius($swipe-radius);
+    left: $swipe-margin;
+    padding-left: $swipe-padding/2;
+  }
+}
 
 .page {
   @include transition(left 200ms ease-in-out);

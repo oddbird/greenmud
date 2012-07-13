@@ -1223,14 +1223,14 @@ a:hover, a:focus, a:active { color: magenta; }
 
 [rel="contents"]:before { content: "\2630"; }
 
-[rel="next"]:before { content: "\2192"; }
+[rel="next"]:before, .swiping-next:before { content: "\2192"; }
 
-[rel="prev"]:before { content: "\2190"; }
+[rel="prev"]:before, .swiping-prev:before { content: "\2190"; }
 
 #toggle:before { content: "\2731"; }
 
 /* Use the following CSS code if you want to have a class per icon */
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .swiping-next:before, .swiping-prev:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
 
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
 #toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
@@ -1326,9 +1326,11 @@ a:hover, a:focus, a:active { color: magenta; }
 .demo .content:after { content: ""; display: table; clear: both; }
 .demo .content:before { font-size: 0.792em; line-height: 1.579em; margin-bottom: 1.579em; -webkit-border-radius: 0.512em; -moz-border-radius: 0.512em; -ms-border-radius: 0.512em; -o-border-radius: 0.512em; border-radius: 0.512em; content: "This page has not been designed yet."; display: block; padding: 0 0.5em; background: #ddbadd; color: #ffe5ff; font-weight: bold; }
 
-.swiping-next { background: url('../images/right.png?1340400763') no-repeat fixed right; }
+.swiping-next:before, .swiping-prev:before { font-size: 1.5em; line-height: 1.25em; position: absolute; position: fixed; top: 50%; display: block; margin-top: -1.667em; padding: 1.667em 0.833em; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: 900; }
 
-.swiping-prev { background: url('../images/left.png?1340400763') no-repeat fixed left; }
+.swiping-next:before { -moz-border-radius-topleft: 2.5em; -webkit-border-top-left-radius: 2.5em; border-top-left-radius: 2.5em; -moz-border-radius-bottomleft: 2.5em; -webkit-border-bottom-left-radius: 2.5em; border-bottom-left-radius: 2.5em; right: 0; padding-right: 0.417em; }
+
+.swiping-prev:before { -moz-border-radius-topright: 2.5em; -webkit-border-top-right-radius: 2.5em; border-top-right-radius: 2.5em; -moz-border-radius-bottomright: 2.5em; -webkit-border-bottom-right-radius: 2.5em; border-bottom-right-radius: 2.5em; left: 0; padding-left: 0.417em; }
 
 .page { -webkit-transition: left 200ms ease-in-out; -moz-transition: left 200ms ease-in-out; -ms-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; position: relative; left: 0; }
 .swiping-next .page { left: -1.875em; }
