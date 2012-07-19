@@ -3,20 +3,18 @@
 
 $total-columns  : 10;
 
-$bg             : $red-light;
-$color          : $red-hint;
-$shadow-color   : $red-dark;
+$bg             : $off-red-dark;
+$highlight      : $off-red-light;
+$noise          : image-url('noise.png');
+$color          : $off-red-hint;
+$shadow-color   : $red-darker;
 $shadow         : $shadow-color 1px 1px 0;
 
-$grad           : linear-gradient(-267deg,
-                    rgba($red,.25),
-                    rgba($red-hint,.125) 79%,
-                    rgba($red,.125) 79%
-                  );
+$bg-grad        : linear-gradient(top, rgba($highlight,.5), rgba($highlight,0));
 
 #copyright {
-  @include background($bg image-url('noise.png'));
-  @include background(image-url('noise.png'), $grad, $bg);
+  @include background($bg $noise);
+  @include background-image($noise, $bg-grad);
   color: $color;
 
   [role="main"] {
@@ -44,8 +42,8 @@ $grad           : linear-gradient(-267deg,
     @include text-shadow($shadow-color -1px -1px 0);
     display: inline-block;
     padding: rhythm(.5,$largepx) rhythm(1,$largepx);
-    background: $color image-url('noise.png');
-    color: $bg;
+    background: $color $noise;
+    color: mix($bg,$highlight);
 
     &:before, &:after { content: "•"; }
 
