@@ -6,7 +6,7 @@
 
 .demo {
   .page {
-    background: $pink-hint image-url('noise.png');
+    background: $pink-hint $noise;
   }
   .content {
     @extend %type;
@@ -80,14 +80,9 @@ $swipe-radius   : rhythm(3,$swipe-size);
   }
 }
 
-.enter-prev { @extend %fadeInLeft; }
-.enter-next { @extend %fadeInRight; }
-.exit-prev { @extend %fadeOutLeft; }
-.exit-next { @extend %fadeOutRight; }
+@include pageturn;
 
 .enter-prev, .enter-next, .exit-prev, .exit-next {
-  @include animation-duration(200ms);
-  @include animation-timing-function(ease);
   @include animation-fill-mode(both);
 }
 

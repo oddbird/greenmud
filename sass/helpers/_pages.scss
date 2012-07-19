@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------------
+// pageturn nixin
+
+@mixin pageturn(
+  $enter    : '%fadeInLeft' '%fadeInRight',
+  $exit     : '%fadeOutLeft' '%fadeOutRight',
+  $time     : 200ms,
+  $function : ease
+) {
+  $enter    : if(type-of($enter) != 'list', $enter $enter, $enter);
+  $exit     : if(type-of($exit) != 'list', $exit $exit, $exit);
+  $time     : if(type-of($time) != 'list', $time $time, $time);
+
+  .enter-prev { @extend #{nth($enter,1)}; }
+  .enter-next { @extend #{nth($enter,2)}; }
+  .exit-prev { @extend #{nth($exit,1)}; }
+  .exit-next { @extend #{nth($exit,2)}; }
+
+  .enter-prev, .enter-next { @include animation-duration(nth($time,1)); }
+  .exit-prev, .exit-next { @include animation-duration(nth($time,2)); }
+
+  .enter-prev, .enter-next, .exit-prev, .exit-next {
+    @include animation-timing-function($function);
+  }
+}
