@@ -3,8 +3,13 @@
 
 $total-columns  : 6;
 
+$bg           : $off-green-lightest;
+$bg-grad      : linear-gradient(top left, $yellow-hint, $off-green-lighter);
+
 #thanks {
   @extend %type;
+  @include background($bg $noise);
+  @include background-image($noise, $bg-grad);
 
   h1, h2 { font-weight: bold; }
   h1 {
@@ -15,6 +20,5 @@ $total-columns  : 6;
   [role="main"] {
     @include container;
     @include padding-leader(2);
-    // background: rgba(white,.5);
   }
 }

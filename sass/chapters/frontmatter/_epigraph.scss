@@ -1,2 +1,16 @@
 // ----------------------------------------------------------------------------
 // epigraph: cocorosie
+
+$bg           : $off-blue-lightest;
+$bg-grad      : linear-gradient(280deg, $darkest, $darker 50%, $off-blue-hint 50%, $off-blue-light);
+
+#epigraph {
+  @extend %type;
+  @include background($bg $noise);
+  @include background-image($noise, $bg-grad);
+
+  [role="main"] {
+    @include container;
+    @include padding-leader(2);
+  }
+}

@@ -3,9 +3,9 @@
 
 $total-columns: 6;
 
-$bg     : $off-blue-hint;
+$bg     : $off-orange-lighter;
 $color  : $base;
-$grad   : radial-gradient(center rhythm(4), $off-blue-hint, $off-blue-lightest, $off-pink-lighter);
+$grad   : radial-gradient(center rhythm(4), $off-orange-lightest, $off-orange-light, $off-orange);
 
 #dedication {
   @include background($bg $noise);

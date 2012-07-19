@@ -32,6 +32,7 @@ by [Eric A. Meyer][eam]
 <!-- meta
 description: 'Epigraph: "Good Friday" by Cocorosie.'
 slug: epigraph
+body_class:
 prev:
     slug: thanks
     url: thanks.html
