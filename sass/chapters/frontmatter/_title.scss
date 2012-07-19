@@ -44,8 +44,8 @@ $line-end   : 0;
 #title {
   // --------------------------------------------
   // Page background
-  @include background($bg image-url('noise.png'));
-  @include background-image(image-url('noise.png'), $title-grad);
+  @include background($bg $noise);
+  @include background-image($noise, $title-grad);
   @include transition(background 300ms);
 
   // --------------------------------------------

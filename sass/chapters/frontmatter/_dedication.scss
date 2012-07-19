@@ -8,8 +8,8 @@ $color  : $base;
 $grad   : radial-gradient(center rhythm(4), $off-blue-hint, $off-blue-lightest, $off-pink-lighter);
 
 #dedication {
-  @include background($bg image-url('noise.png'));
-  @include background-image(image-url('noise.png'), $grad);
+  @include background($bg $noise);
+  @include background-image($noise, $grad);
   color: $color;
 
   [role="main"] {
