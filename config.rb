@@ -14,6 +14,6 @@ images_dir = "static/images"
 fonts_dir = "static/fonts"
 javascripts_dir = "static/js"
 line_comments = false
-preferred_syntax = :sass
+preferred_syntax = :scss
 output_style = :compact
 relative_assets = true
