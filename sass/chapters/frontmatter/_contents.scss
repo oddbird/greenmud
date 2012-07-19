@@ -3,14 +3,13 @@
 
 $total-columns: 8;
 
-$grad1: linear-gradient(260deg, $yellow-hint, $yellow-lightest 35%, $orange-lightest 35%, $orange-light);
-$grad2: linear-gradient(260deg, $yellow-hint, $yellow-lightest 60%, $orange-lightest 60%, $orange-light);
+$bg           : $yellow-hint;
+$bg-grad      : linear-gradient(260deg, $yellow-hint, $orange-hint, $orange-lightest);
 
 #contents {
   @extend %toc-counter;
-  @include background($yellow-hint image-url('noise.png'));
-  @include background(image-url('noise.png'), $grad1);
-  @include media(32em) { @include background(image-url('noise.png'), $grad2); }
+  @include background($bg $noise);
+  @include background-image($noise, $bg-grad);
 
   [role="main"] {
     @include container;
@@ -24,7 +23,5 @@ $grad2: linear-gradient(260deg, $yellow-hint, $yellow-lightest 60%, $orange-ligh
 
   li:before { color: $off-yellow-dark; }
 
-  .book {
-    font-weight: bold;
-  }
+  .book { font-weight: bold; }
 }
