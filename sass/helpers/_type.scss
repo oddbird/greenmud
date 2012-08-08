@@ -32,7 +32,7 @@
     @include adjust-font-size-to($medpx);
     @include leader(1,$largepx);
   }
-  p, ol, ul {
+  p, ol, ul, blockquote {
     @include trailer;
   }
   ol { list-style-type: decimal; }
@@ -50,6 +50,12 @@
   }
   em, blockquote {
     font-style: italic;
+  }
+  blockquote {
+    cite { font-style: normal; }
+    :last-child {
+      @include trailer(0);
+    }
   }
 }
 

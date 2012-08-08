@@ -14,14 +14,25 @@ next:
 
 {% filter markdown %}
 
-# Thanks
+# Thanks!
 To all my editors, collaborators, and contributors.
 You make the art possible, and the process a joy.
+
+{% endfilter %}
+
+<div class="editors">
+{% filter markdown %}
 
 ## Editors
 - [Brandi Homan](http://brandihoman.com/)
 - [Sondra Eisenstat](http://sondraedesign.tumblr.com/)
 - [Michelle Milne](http://mappingtheterrain.wordpress.com/)
+
+{% endfilter %}
+</div>
+
+<div class="collaborators">
+{% filter markdown %}
 
 ## Collaborators
 - Mary Beechy-King provided the initial spark
@@ -34,6 +45,12 @@ You make the art possible, and the process a joy.
 - [Hannah Gerig Meyer](http://hannah.gerigmeyer.com/) created the watercolor washes
 - [Teacup Gorilla](http://teacupgorilla.com) wrote and recorded the music
 - [OddBird](http://oddbird.net) wrote the code
+
+{% endfilter %}
+</div>
+
+<div class="contributors">
+{% filter markdown %}
 
 ## Contributors
 - Samuel Ace
@@ -102,27 +119,28 @@ You make the art possible, and the process a joy.
 - Vladimir Vukicevic ([RocketHub](http://www.rockethub.com/))
 - Landon Yoder
 
+{% endfilter %}
+</div>
+
+<div class="colophon">
+{% filter markdown %}
+
 ## Colophon
 This site is built on plain old semantic [HTML5][h5],
-powered by [jQuery][jq]
-and the [Hyde][hyde] static site generator
+powered by the [Hyde][hyde] static site generator
 for [Python][python],
 and styled using [CSS3][css3]
-with help from [Modernizr][modernizr],
+with help from
+[jQuery][jq],
+[Modernizr][modernizr],
 [Susy][susy],
 [Compass][compass],
 [Sass][sass],
-[Modular Scales][scales],
-and [Compass Animate][anim-compass]
-(based on [Animate.css][animate]).
-The icons have various sources,
-collected and managed through [IcoMoon][icomoon].
-The text was written in a variety of applications,
-starting with [PmWiki][pmwiki],
-and ending with [Scrivner][scrivner],
-and finally [Sublime Text][sublime].
+[Modular Scale][scale],
+[IcoMoon][icomoon],
+and [Compass Animate][animate].
 The [full code][code] is available on [GitHub][github],
-along with the original [GreenMud fonts][fonts].
+along with the [GreenMud font family][fonts].
 
 [h5]: http://www.w3.org/TR/html5/
 [jq]: http://www.jquery.com/
@@ -133,15 +151,12 @@ along with the original [GreenMud fonts][fonts].
 [susy]: http://susy.oddbird.net/
 [compass]: http://compass-style.org/
 [sass]: http://sass-lang.com/
-[scales]: #
-[animate]: http://daneden.me/animate/
-[anim-compass]: #
+[scale]: https://github.com/scottkellum/modular-scale
+[animate]: https://github.com/ericam/compass-animate
 [github]: https://github.com/
 [icomoon]: http://keyamoon.com/icomoon/
-[pmwiki]: http://www.pmwiki.org/
-[scrivner]: http://www.literatureandlatte.com/scrivener.php
-[sublime]: http://www.sublimetext.com/
 [code]: https://github.com/oddbird/greenmud
 [fonts]: https://github.com/ericam/GreenMud-Fonts
 
 {% endfilter %}
+</div>

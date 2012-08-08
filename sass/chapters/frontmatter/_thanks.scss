@@ -20,5 +20,29 @@ $bg-grad      : linear-gradient(top left, $yellow-hint, $off-green-lighter);
   [role="main"] {
     @include container;
     @include padding-leader(2);
+    div { @include trailer; }
+  }
+
+  ul {
+    @include delimited-list;
+    li {
+      &:before {
+        position: relative;
+        content: '';
+        margin: 0;
+        right: auto;
+      }
+      &:last-child {
+        &:before { content: 'and '; }
+        &:after { content: '.'; }
+      }
+    }
+  }
+
+  .collaborators {
+    ul li {
+      &:after { content: ';'; }
+      &:last-child:after { content: '.'; }
+    }
   }
 }

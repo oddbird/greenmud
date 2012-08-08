@@ -74,6 +74,7 @@ $scribble : '#{$img}scribble.png';
   }
 
   @include at-breakpoint($break) {
+    [role="banner"] { @include animation(template-burst 6s ease both); }
     [role="main"] {
       @include padding-leader(2);
       background-position: 0 0;

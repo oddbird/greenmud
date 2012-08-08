@@ -3,11 +3,18 @@
 
 @import "base/base";
 @import "helpers/helpers";
+@import "general/root";
 
 // ----------------------------------------------------------------------------
 // general
 
 html { @include back($off-yellow-lightest); }
+
+@include pageturn(
+  '%fadeIn',
+  '%fadeOutLeft' '%fadeOutRight',
+  200ms
+);
 
 // ----------------------------------------------------------------------------
 // pages

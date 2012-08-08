@@ -52,7 +52,6 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   // banner ---------------//
   [role="banner"] {
-    @include animation(template-burst 6s ease both);
     @include trailing-border($border-width,1.5);
     color: $darker;
     background: $pink-hint $noise;

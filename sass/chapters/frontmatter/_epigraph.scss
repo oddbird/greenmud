@@ -8,9 +8,21 @@ $bg-grad      : linear-gradient(280deg, $darkest, $darker 50%, $off-blue-hint 50
   @extend %type;
   @include background($bg $noise);
   @include background-image($noise, $bg-grad);
+  $color: $mid;
 
   [role="main"] {
     @include container;
     @include padding-leader(2);
+    @media all and (min-height: 25em) {
+      @include padding-leader(5);
+    }
+  }
+
+  blockquote {
+    @extend %bleed;
+    @include rhythm(0,.5,.5,2);
+    @include border-radius(.5em);
+    @include box-shadow($darker 0 0 .25em);
+    background: rgba($off-blue-hint,.95);
   }
 }
