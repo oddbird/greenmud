@@ -1249,12 +1249,14 @@ a:hover, a:focus, a:active { color: magenta; }
 .demo .content h1 { font-size: 1.5em; line-height: 1.25em; }
 .demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-weight: bold; color: #404040; }
 .demo .content h1:first-child, .demo .content h1 + h2, .demo .content h1 + h3, .demo .content h1 + h4, .demo .content h2:first-child, .demo .content h2 + h2, .demo .content h2 + h3, .demo .content h2 + h4, .demo .content h3:first-child, .demo .content h3 + h2, .demo .content h3 + h3, .demo .content h3 + h4, .demo .content h4:first-child, .demo .content h4 + h2, .demo .content h4 + h3, .demo .content h4 + h4 { margin-top: 0; }
-.demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.833em; }
-.demo .content p, .demo .content ol, .demo .content ul { margin-bottom: 1.25em; }
+.demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
+.demo .content p, .demo .content ol, .demo .content ul, .demo .content blockquote { margin-bottom: 1.25em; }
 .demo .content ol { list-style-type: decimal; }
 .demo .content ul li { position: relative; }
 .demo .content ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
 .demo .content em, .demo .content blockquote { font-style: italic; }
+.demo .content blockquote cite { font-style: normal; }
+.demo .content blockquote :last-child { margin-bottom: 0em; }
 
 #toc { counter-reset: toc; }
 #toc ol { list-style-type: none; }
@@ -1287,7 +1289,7 @@ a:hover, a:focus, a:active { color: magenta; }
 #toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; line-height: 1.875em; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
 .no-touch #toggle:hover, .no-touch #toggle:focus, .no-touch #toggle:active { text-shadow: #202020 0 0 3px; }
 
-.controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: #404040; color: gray; z-index: 900; display: none; }
+.controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875em 0 0.5em; min-width: 7.5em; background: rgba(32, 32, 32, 0.75); color: gray; z-index: 900; display: none; }
 .controls.active, .showcontrols .controls { display: block; }
 
 .meta { margin: 0; padding: 0; border: 0; overflow: hidden; float: left; width: 3.75em; }
@@ -1297,7 +1299,7 @@ a:hover, a:focus, a:active { color: magenta; }
 .meta li.last { padding-right: 0; }
 .meta a:link, .meta a:visited { float: left; width: 1.875em; }
 
-.breadcrumb { overflow: hidden; font-size: 0.792em; line-height: 2.368em; max-height: 2.368em; text-align: center; width: auto; }
+.breadcrumb { overflow: hidden; font-size: 0.79167em; line-height: 2.36842em; max-height: 2.36842em; text-align: center; width: auto; }
 .breadcrumb li { display: inline; }
 .breadcrumb li:after { content: ":"; }
 .breadcrumb li:last-child:after { content: ""; }
@@ -1311,7 +1313,7 @@ a:hover, a:focus, a:active { color: magenta; }
 .next { float: right; }
 
 [class^="toc-"] { margin-bottom: 1.25em; }
-@media all and (min-width: 32em) { [class^="toc-"] { width: 49.091%; float: left; margin-right: 1.818%; }
+@media all and (min-width: 32em) { [class^="toc-"] { width: 49.09091%; float: left; margin-right: 1.81818%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -ms-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }
@@ -1324,19 +1326,25 @@ a:hover, a:focus, a:active { color: magenta; }
 .demo .page { background: #ffe5ff url('../images/noise.png?1340400763'); }
 .demo .content { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; position: relative; }
 .demo .content:after { content: ""; display: table; clear: both; }
-.demo .content:before { font-size: 0.792em; line-height: 1.579em; margin-bottom: 1.579em; -webkit-border-radius: 0.512em; -moz-border-radius: 0.512em; -ms-border-radius: 0.512em; -o-border-radius: 0.512em; border-radius: 0.512em; content: "This page has not been designed yet."; display: block; padding: 0 0.5em; background: #ddbadd; color: #ffe5ff; font-weight: bold; }
+.demo .content:before { font-size: 0.79167em; line-height: 1.57895em; margin-bottom: 1.57895em; -webkit-border-radius: 0.512em; -moz-border-radius: 0.512em; -ms-border-radius: 0.512em; -o-border-radius: 0.512em; border-radius: 0.512em; content: "This page has not been designed yet."; display: block; padding: 0 0.5em; background: #ddbadd; color: #ffe5ff; font-weight: bold; }
 
-.swiping-next:before, .swiping-prev:before { font-size: 1.5em; line-height: 1.25em; position: absolute; position: fixed; top: 50%; display: block; margin-top: -1.667em; padding: 1.667em 0.833em; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: 900; }
+.swiping-next:before, .swiping-prev:before { font-size: 1.5em; line-height: 1.25em; position: absolute; position: fixed; top: 50%; display: block; margin-top: -1.66667em; padding: 1.66667em 0.83333em; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: 900; }
 
-.swiping-next:before { -moz-border-radius-topleft: 2.5em; -webkit-border-top-left-radius: 2.5em; border-top-left-radius: 2.5em; -moz-border-radius-bottomleft: 2.5em; -webkit-border-bottom-left-radius: 2.5em; border-bottom-left-radius: 2.5em; right: 0; padding-right: 0.417em; }
+.swiping-next:before { -moz-border-radius-topleft: 2.5em; -webkit-border-top-left-radius: 2.5em; border-top-left-radius: 2.5em; -moz-border-radius-bottomleft: 2.5em; -webkit-border-bottom-left-radius: 2.5em; border-bottom-left-radius: 2.5em; right: 0; padding-right: 0.41667em; }
 
-.swiping-prev:before { -moz-border-radius-topright: 2.5em; -webkit-border-top-right-radius: 2.5em; border-top-right-radius: 2.5em; -moz-border-radius-bottomright: 2.5em; -webkit-border-bottom-right-radius: 2.5em; border-bottom-right-radius: 2.5em; left: 0; padding-left: 0.417em; }
+.swiping-prev:before { -moz-border-radius-topright: 2.5em; -webkit-border-top-right-radius: 2.5em; border-top-right-radius: 2.5em; -moz-border-radius-bottomright: 2.5em; -webkit-border-bottom-right-radius: 2.5em; border-bottom-right-radius: 2.5em; left: 0; padding-left: 0.41667em; }
 
 .page { -webkit-transition: left 200ms ease-in-out; -moz-transition: left 200ms ease-in-out; -ms-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; position: relative; left: 0; }
 .swiping-next .page { left: -1.875em; }
 .swiping-prev .page { left: 1.875em; }
 .swiping-next .page *, .swiping-prev .page * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
 
-.enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -ms-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; }
+.enter-prev, .enter-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; }
+
+.exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; }
+
+.enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -ms-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
+
+.enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; }
 
 .exit-prev *, .exit-next * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
