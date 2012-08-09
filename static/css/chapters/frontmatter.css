@@ -1,4 +1,3 @@
-@charset "UTF-8";
 #home .inst.access:before { content: "\2731"; }
 
 #home .social [href*="vimeo"]:before, #about .social [href*="vimeo"]:before { content: "\e002"; }
