@@ -104,7 +104,7 @@ $breadcrumb-break: 50em;
     &:after { content: ":"; }
     &:last-child { &:after { content: ""; } }
   }
-  @include media($breadcrumb-break) {
+  @include breakpoint($breadcrumb-break) {
     @include adjust-font-size-to($base-font-size,$control-line);
     max-height: rhythm($control-line);
     text-align: left;

@@ -9,7 +9,9 @@ $bg-grad      : linear-gradient(260deg, $yellow-hint, $orange-hint, $orange-ligh
 #contents {
   @extend %toc-counter;
   @include background($bg $noise);
-  @include background-image($noise, $bg-grad);
+  @include background-image(image-url($scribble), $noise, $bg-grad);
+  background-repeat: no-repeat, repeat;
+  background-position: 0 - rhythm(3) 0 - rhythm(3), 0, 0;
 
   [role="main"] {
     @include container;

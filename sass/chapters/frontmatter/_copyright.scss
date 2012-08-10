@@ -13,7 +13,9 @@ $bg-grad        : linear-gradient(top, rgba($highlight,.5), rgba($highlight,0));
 
 #copyright {
   @include background($bg $noise);
-  @include background-image($noise, $bg-grad);
+  @include background-image(image-url($scribble), $noise, $bg-grad);
+  background-repeat: no-repeat, repeat;
+  background-position: 0 - rhythm(3) 0 - rhythm(3), 0, 0;
   color: $color;
 
   [role="main"] {
@@ -46,7 +48,7 @@ $bg-grad        : linear-gradient(top, rgba($highlight,.5), rgba($highlight,0));
 
     &:before, &:after { content: "•"; }
 
-    @include media(40em) {
+    @include breakpoint(40em) {
       @include adjust-font-size-to($xxlargepx);
       @include trailer(1,$xxlargepx);
     }

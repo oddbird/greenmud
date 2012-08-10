@@ -4,7 +4,7 @@
 [class^="toc-"] {
   @include trailer;
   .book, li { @extend %ellipsis; }
-  @include media(32em) {
+  @include breakpoint(32em) {
     @include span-columns(4,$total-columns);
     &:last-child { @include omega; }
   }
@@ -23,7 +23,7 @@
   .wrap {
     @include container;
     @include padding-leader($control-line+.5);
-    @include media($breadcrumb-break) { margin-left: rhythm($control-line*2); }
+    @include breakpoint($breadcrumb-break) { margin-left: rhythm($control-line*2); }
   }
 
   // show and hide toc

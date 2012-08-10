@@ -1302,7 +1302,7 @@ a:hover, a:focus, a:active { color: magenta; }
 .breadcrumb li { display: inline; }
 .breadcrumb li:after { content: ":"; }
 .breadcrumb li:last-child:after { content: ""; }
-@media all and (min-width: 50em) { .breadcrumb { font-size: 1em; line-height: 1.875em; max-height: 1.875em; text-align: left; } }
+@media (min-width: 50em) { .breadcrumb { font-size: 1em; line-height: 1.875em; max-height: 1.875em; text-align: left; } }
 
 .pagenav { float: right; width: 3.75em; }
 .pagenav a { display: block; }
@@ -1312,13 +1312,13 @@ a:hover, a:focus, a:active { color: magenta; }
 .next { float: right; }
 
 [class^="toc-"] { margin-bottom: 1.25em; }
-@media all and (min-width: 32em) { [class^="toc-"] { width: 49.09091%; float: left; margin-right: 1.81818%; }
+@media (min-width: 32em) { [class^="toc-"] { width: 49.09091%; float: left; margin-right: 1.81818%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -ms-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }
 #toc .wrap { max-width: 27.5em; margin-left: auto; margin-right: auto; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2.5em; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
-@media all and (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
+@media (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
 #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */

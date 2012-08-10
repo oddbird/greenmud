@@ -6,11 +6,37 @@ $total-columns  : 6;
 $bg           : $off-green-lightest;
 $bg-grad      : linear-gradient(top left, $yellow-hint, $off-green-lighter);
 
+$pg           : '#{$ch}thanks/';
+$balloons     : image-url('#{$pg}balloon1.png'),
+                image-url('#{$pg}balloon2.png'),
+                image-url('#{$pg}balloon3.png'),
+                image-url('#{$pg}balloon4.png'),
+                image-url('#{$pg}balloon5.png'),
+                image-url('#{$pg}balloon6.png'),
+                image-url('#{$pg}balloon7.png');
+
+$scribble     : image-url($scribble) no-repeat rhythm(-3) rhythm(-3);
+
+@include keyframes(balloons) {
+  0% {
+    @include opacity(0);
+    @include translateY(50px);
+  }
+  10% {
+    @include opacity(1);
+    @include translateY(0);
+  }
+  75% { @include opacity(1); }
+  100% {
+    @include opacity(0);
+    @include translateY(-500px);
+  }
+}
+
 #thanks {
   @extend %type;
   @include background($bg $noise);
-  @include background-image($noise, $bg-grad);
-
+  @include background($scribble, $noise repeat, $bg-grad repeat);
   h1, h2 { font-weight: bold; }
   h1 {
     @extend %allcaps;
@@ -43,6 +69,55 @@ $bg-grad      : linear-gradient(top left, $yellow-hint, $off-green-lighter);
     ul li {
       &:after { content: ';'; }
       &:last-child:after { content: '.'; }
+    }
+  }
+
+  @include breakpoint(50em) {
+    .balloon {
+      @include animation(balloons 10s linear infinite both);
+      display: block;
+      position: absolute;
+      width: image-width('#{$pg}balloon1.png');
+      height: image-height('#{$pg}balloon1.png');
+      @for $i from 1 through length($balloons) {
+        &:nth-child(#{$i}) {
+          background: nth($balloons,$i);
+          @if $i == 1 {
+            top: 1%;
+            left: 80%;
+          }
+          @if $i == 2 {
+            @include animation-delay(4s);
+            top: 15%;
+            left: 75%;
+          }
+          @if $i == 3 {
+            @include animation-delay(2s);
+            top: 8%;
+            right: 87%;
+          }
+          @if $i == 4 {
+            @include animation-delay(3s);
+            top: 30%;
+            right: 79%;
+          }
+          @if $i == 5 {
+            @include animation-delay(1s);
+            top: 48%;
+            left: 90%;
+          }
+          @if $i == 6 {
+            @include animation-delay(6s);
+            top: 62%;
+            right: 92%;
+          }
+          @if $i == 7 {
+            @include animation-delay(5s);
+            top: 70%;
+            left: 78%;
+          }
+        }
+      }
     }
   }
 }

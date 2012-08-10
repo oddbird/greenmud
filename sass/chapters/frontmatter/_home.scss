@@ -4,10 +4,9 @@
 $total-columns: 6;
 $minor-break: 24em;
 
-$img      : 'frontmatter/';
-$homeimg  : '#{$img}home/';
-$swing    : '#{$homeimg}swing.png';
-$scribble : '#{$img}scribble.png';
+$pg       : '#{$ch}home/';
+$swing    : '#{$pg}swing.png';
+$scribble : '#{$ch}scribble.png';
 
 #home {
   @extend %template;
@@ -25,7 +24,7 @@ $scribble : '#{$img}scribble.png';
 
   .actions {
     .act {
-      @include media($minor-break) {
+      @include breakpoint($minor-break) {
         @include span-columns(3);
         &:last-child { @include omega; }
       }
@@ -67,7 +66,7 @@ $scribble : '#{$img}scribble.png';
     }
     &.turn { @extend %icon-swipe; }
     &.access { @extend %icon-cog; }
-    @include media($minor-break) {
+    @include breakpoint($minor-break) {
       @include span-columns(3);
       &:last-child { @include omega; }
     }

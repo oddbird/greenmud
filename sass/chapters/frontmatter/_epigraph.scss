@@ -1,19 +1,53 @@
 // ----------------------------------------------------------------------------
 // epigraph: cocorosie
 
+$trans: rgba(0,0,0,0);
+
+@function grad($pos) {
+  $one    : if($pos == 'bg', $darkest, $trans);
+  $two    : if($pos == 'bg', $darker, rgba($darker,0));
+  $three  : if($pos == 'fg', rgba($off-blue-hint,.9), rgba($off-blue-hint,0));
+  $four   : if($pos == 'fg', $off-blue-light, $trans);
+  $split  : 50%;
+  $blur   : 0;
+  $angle  : 280deg;
+
+  @return linear-gradient($angle, $one, $two $split - $blur, $three $split + $blur, $four);
+}
+
 $bg           : $off-blue-lightest;
-$bg-grad      : linear-gradient(280deg, $darkest, $darker 50%, $off-blue-hint 50%, $off-blue-light);
+$bg-grad      : grad(bg);
+$fg-grad      : grad(fg);
+
+$lightning    : '#{$ch}lightning.png';
+$default-pos  : top left;
+
+@include keyframes(lightning) {
+  0%, 49%, 51%, 53%, 55%, 57%, 100% {
+    background-position: $default-pos, $default-pos, center rhythm(-1);
+  }
+  50%{
+    background-position: $default-pos, $default-pos, rhythm(-3) rhythm(-10);
+  }
+  52%, 56% {
+    background-position: $default-pos, $default-pos, center rhythm(-3);
+  }
+  54% {
+    background-position: $default-pos, $default-pos, rhythm(50) rhythm(-5);
+  }
+}
 
 #epigraph {
   @extend %type;
   @include background($bg $noise);
-  @include background-image($noise, $bg-grad);
+  @include background($noise, $fg-grad, image-url($lightning) no-repeat scroll center rhythm(-1), $bg-grad, $bg);
+  @include animation(lightning 10s infinite);
   $color: $mid;
 
   [role="main"] {
     @include container;
     @include padding-leader(2);
-    @media all and (min-height: 25em) {
+    @include breakpoint(min-height 25em) {
       @include padding-leader(5);
     }
   }

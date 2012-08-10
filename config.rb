@@ -3,6 +3,7 @@
 require 'susy'
 require 'modular-scale'
 require 'animate'
+require 'breakpoint'
 # Require any additional compass plugins here.
 
 project_type = :stand_alone

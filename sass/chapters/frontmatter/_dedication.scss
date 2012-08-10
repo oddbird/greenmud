@@ -5,18 +5,19 @@ $total-columns: 6;
 
 $bg     : $off-orange-lighter;
 $color  : $base;
-$grad   : radial-gradient(center rhythm(4), $off-orange-lightest, $off-orange-light, $off-orange);
+$bg-grad   : radial-gradient(center rhythm(4), $off-orange-lightest, $off-orange-light, $off-orange);
 
 #dedication {
   @include background($bg $noise);
-  @include background-image($noise, $grad);
-  color: $color;
+  @include background-image(image-url($scribble), $noise, $bg-grad);
+  background-repeat: no-repeat, repeat;
+  background-position: 0 - rhythm(3) 0 - rhythm(3), 0, 0;  color: $color;
 
   [role="main"] {
     @include container;
     @include padding-leader(2);
     @include padding-trailer(2);
-    @media all and (min-height: 25em) {
+    @include breakpoint(min-height 25em) {
       @include padding-leader(6);
     }
   }
