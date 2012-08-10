@@ -4,7 +4,7 @@
 $total-columns  : 6;
 
 $bg           : $off-green-lightest;
-$bg-grad      : linear-gradient(top left, $yellow-hint, $off-green-lighter);
+$bg-grad      : linear-gradient(top left, $yellow-hint, $off-green-lightest);
 
 $pg           : '#{$ch}thanks/';
 $balloons     : image-url('#{$pg}balloon1.png'),
@@ -35,8 +35,9 @@ $scribble     : image-url($scribble) no-repeat rhythm(-3) rhythm(-3);
 
 #thanks {
   @extend %type;
-  @include background($bg $noise);
+  @include background($bg $scribble);
   @include background($scribble, $noise repeat, $bg-grad repeat);
+
   h1, h2 { font-weight: bold; }
   h1 {
     @extend %allcaps;

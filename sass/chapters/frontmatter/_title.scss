@@ -18,6 +18,7 @@ $titleimg   : '#{$img}titlepage/';
 $line       : '#{$titleimg}line.png';
 $left       : '#{$titleimg}strings_left.png';
 $right      : '#{$titleimg}strings_right.png';
+$angle      : '#{$titleimg}angle.svg';
 
 $bg         : $off-green-lightest;
 $line-pos   : 6;
@@ -47,9 +48,12 @@ $line-end   : 0;
 #title {
   // --------------------------------------------
   // Page background
-  @include background($bg $noise);
+  @include background($bg $noise center);
   @include background-image($noise, $title-grad);
-  @include transition(background 300ms);
+  .no-cssgradients {
+    @include background-image($noise, image-url($angle));
+    @include background-size(auto, cover);
+  }
 
   // --------------------------------------------
   // Main content

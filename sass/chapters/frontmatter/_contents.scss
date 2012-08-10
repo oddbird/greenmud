@@ -4,14 +4,14 @@
 $total-columns: 8;
 
 $bg           : $yellow-hint;
-$bg-grad      : linear-gradient(260deg, $yellow-hint, $orange-hint, $orange-lightest);
+$bg-grad      : linear-gradient(260deg, $yellow-hint, $yellow-hint, $orange-lightest);
 
 #contents {
   @extend %toc-counter;
-  @include background($bg $noise);
+  @include background($bg image-url($scribble) no-repeat $scribble-pos);
   @include background-image(image-url($scribble), $noise, $bg-grad);
   background-repeat: no-repeat, repeat;
-  background-position: 0 - rhythm(3) 0 - rhythm(3), 0, 0;
+  background-position: $scribble-pos, 0, 0;
 
   [role="main"] {
     @include container;

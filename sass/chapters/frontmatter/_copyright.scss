@@ -9,13 +9,14 @@ $color          : $off-red-hint;
 $shadow-color   : $red-darker;
 $shadow         : $shadow-color 1px 1px 0;
 
-$bg-grad        : linear-gradient(top, rgba($highlight,.5), rgba($highlight,0));
+$bg-grad        : linear-gradient(top, rgba($highlight,.25), rgba($highlight,0));
+$scribble-pos    : rhythm(-3) rhythm(-3);
 
 #copyright {
-  @include background($bg $noise);
+  @include background($bg image-url($scribble) no-repeat $scribble-pos);
   @include background-image(image-url($scribble), $noise, $bg-grad);
   background-repeat: no-repeat, repeat;
-  background-position: 0 - rhythm(3) 0 - rhythm(3), 0, 0;
+  background-position: $scribble-pos, 0, 0;
   color: $color;
 
   [role="main"] {

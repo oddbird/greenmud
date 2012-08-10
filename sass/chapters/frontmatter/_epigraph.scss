@@ -3,11 +3,11 @@
 
 $trans: rgba(0,0,0,0);
 
-@function grad($pos) {
-  $one    : if($pos == 'bg', $darkest, $trans);
-  $two    : if($pos == 'bg', $darker, rgba($darker,0));
-  $three  : if($pos == 'fg', rgba($off-blue-hint,.9), rgba($off-blue-hint,0));
-  $four   : if($pos == 'fg', $off-blue-light, $trans);
+@function grad() {
+  $one    : $trans;
+  $two    : rgba($darker,0);
+  $three  : rgba($off-blue-hint,.9);
+  $four   : $off-blue-light;
   $split  : 50%;
   $blur   : 0;
   $angle  : 280deg;
@@ -15,12 +15,13 @@ $trans: rgba(0,0,0,0);
   @return linear-gradient($angle, $one, $two $split - $blur, $three $split + $blur, $four);
 }
 
-$bg           : $off-blue-lightest;
-$bg-grad      : grad(bg);
-$fg-grad      : grad(fg);
+$bg           : $darkest;
+$fg-grad      : grad();
 
-$lightning    : '#{$ch}lightning.png';
+$pg           : '#{$ch}epigraph/';
+$lightning    : image-url('#{$pg}lightning.png') no-repeat scroll center rhythm(-1);
 $default-pos  : top left;
+$angle        : image-url('#{$pg}angle.svg') no-repeat center;
 
 @include keyframes(lightning) {
   0%, 49%, 51%, 53%, 55%, 57%, 100% {
@@ -40,7 +41,11 @@ $default-pos  : top left;
 #epigraph {
   @extend %type;
   @include background($bg $noise);
-  @include background($noise, $fg-grad, image-url($lightning) no-repeat scroll center rhythm(-1), $bg-grad, $bg);
+  @include background($noise, $fg-grad, $lightning, $bg);
+  .no-cssgradients & {
+    @include background($noise, $angle, $lightning, $bg);
+    @include background-size(auto,cover,auto);
+  }
   @include animation(lightning 10s infinite);
   $color: $mid;
 
