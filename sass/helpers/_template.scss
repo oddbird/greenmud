@@ -4,6 +4,9 @@
 $total-columns  : 6;
 $break          : 10;
 
+$toc-break: 32em;
+$toc-cols: 4;
+
 $bg-color       : $off-green-hint;
 $noise          : image-url('noise.png');
 $background     : $bg-color $noise;

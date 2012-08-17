@@ -10,7 +10,7 @@ $shadow-color   : $red-darker;
 $shadow         : $shadow-color 1px 1px 0;
 
 $bg-grad        : linear-gradient(top, rgba($highlight,.25), rgba($highlight,0));
-$scribble-pos    : rhythm(-3) rhythm(-3);
+$scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 
 #copyright {
   @include background($bg image-url($scribble) no-repeat $scribble-pos);
@@ -18,6 +18,7 @@ $scribble-pos    : rhythm(-3) rhythm(-3);
   background-repeat: no-repeat, repeat;
   background-position: $scribble-pos, 0, 0;
   color: $color;
+  overflow: hidden;
 
   [role="main"] {
     @include container;
@@ -42,6 +43,7 @@ $scribble-pos    : rhythm(-3) rhythm(-3);
     @include border-radius(3em);
     @include box-shadow($shadow);
     @include text-shadow($shadow-color -1px -1px 0);
+    @include animation(hinge 1s 10s linear both);
     display: inline-block;
     padding: rhythm(.5,$largepx) rhythm(1,$largepx);
     background: $color $noise;

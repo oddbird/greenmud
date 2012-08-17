@@ -16,13 +16,13 @@ a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
 /* ---------------------------------------------------------------------------- fonts */
-@font-face { font-family: "IcoMoon"; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format('eot'), url('../fonts/icomoon/IcoMoon.woff') format('woff'), url('../fonts/icomoon/IcoMoon.ttf') format('truetype'), url('../fonts/icomoon/IcoMoon.svg#IcoMoon') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "IcoMoon"; src: url('/icomoon/IcoMoon.eot'); src: url('/icomoon/IcoMoon.eot?#iefix') format('eot'), url('/icomoon/IcoMoon.woff') format('woff'), url('/icomoon/IcoMoon.ttf') format('truetype'), url('/icomoon/IcoMoon.svg#IcoMoon') format('svg'); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-regular-webfont.eot'); src: url('../fonts/jj/greenmudjj-regular-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-regular-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-regular-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-regular-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "GreenMudJJRegular"; src: url('/jj/greenmudjj-regular-webfont.eot'); src: url('/jj/greenmudjj-regular-webfont.eot?#iefix') format('eot'), url('/jj/greenmudjj-regular-webfont.woff') format('woff'), url('/jj/greenmudjj-regular-webfont.ttf') format('truetype'), url('/jj/greenmudjj-regular-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-italic-webfont.eot'); src: url('../fonts/jj/greenmudjj-italic-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-italic-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-italic-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: italic; }
+@font-face { font-family: "GreenMudJJRegular"; src: url('/jj/greenmudjj-italic-webfont.eot'); src: url('/jj/greenmudjj-italic-webfont.eot?#iefix') format('eot'), url('/jj/greenmudjj-italic-webfont.woff') format('woff'), url('/jj/greenmudjj-italic-webfont.ttf') format('truetype'), url('/jj/greenmudjj-italic-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: normal; font-style: italic; }
 
-@font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-bold-webfont.eot'); src: url('../fonts/jj/greenmudjj-bold-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-bold-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-bold-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-bold-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: bold; font-style: normal; }
+@font-face { font-family: "GreenMudJJRegular"; src: url('/jj/greenmudjj-bold-webfont.eot'); src: url('/jj/greenmudjj-bold-webfont.eot?#iefix') format('eot'), url('/jj/greenmudjj-bold-webfont.woff') format('woff'), url('/jj/greenmudjj-bold-webfont.ttf') format('truetype'), url('/jj/greenmudjj-bold-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: bold; font-style: normal; }
 
 /* ---------------------------------------------------------------------------- root */
 @-moz-keyframes flash { 0% { opacity: 1; }
@@ -1210,7 +1210,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html { font-size: 150%; line-height: 1.25em; }
 
-html { background: gray url('../images/noise.png?1340400763'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
+html { background: gray url('noise.png?1340400763'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
@@ -1312,7 +1312,7 @@ a:hover, a:focus, a:active { color: magenta; }
 .next { float: right; }
 
 [class^="toc-"] { margin-bottom: 1.25em; }
-@media (min-width: 32em) { [class^="toc-"] { width: 49.09091%; float: left; margin-right: 1.81818%; }
+@media (min-width: 48em) { [class^="toc-"] { width: 49.09091%; float: left; margin-right: 1.81818%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -ms-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }

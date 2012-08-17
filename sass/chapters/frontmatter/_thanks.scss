@@ -15,12 +15,13 @@ $balloons     : image-url('#{$pg}balloon1.png'),
                 image-url('#{$pg}balloon6.png'),
                 image-url('#{$pg}balloon7.png');
 
-$scribble     : image-url($scribble) no-repeat rhythm(-3) rhythm(-3);
+$scribble     : image-url($scribble) no-repeat $scribble-pos;
+;
 
 @include keyframes(balloons) {
   0% {
     @include opacity(0);
-    @include translateY(50px);
+    @include translateY(100px);
   }
   10% {
     @include opacity(1);
@@ -29,7 +30,7 @@ $scribble     : image-url($scribble) no-repeat rhythm(-3) rhythm(-3);
   75% { @include opacity(1); }
   100% {
     @include opacity(0);
-    @include translateY(-500px);
+    @include translateY(-1000px);
   }
 }
 
@@ -37,6 +38,7 @@ $scribble     : image-url($scribble) no-repeat rhythm(-3) rhythm(-3);
   @extend %type;
   @include background($bg $scribble);
   @include background($scribble, $noise repeat, $bg-grad repeat);
+  overflow: hidden;
 
   h1, h2 { font-weight: bold; }
   h1 {
@@ -75,7 +77,7 @@ $scribble     : image-url($scribble) no-repeat rhythm(-3) rhythm(-3);
 
   @include breakpoint(50em) {
     .balloon {
-      @include animation(balloons 10s linear infinite both);
+      @include animation(balloons 15s linear infinite both);
       display: block;
       position: absolute;
       width: image-width('#{$pg}balloon1.png');
@@ -88,32 +90,38 @@ $scribble     : image-url($scribble) no-repeat rhythm(-3) rhythm(-3);
             left: 80%;
           }
           @if $i == 2 {
-            @include animation-delay(4s);
+            @include animation-delay(8s);
+            @include animation-duration(10s);
             top: 15%;
             left: 75%;
           }
           @if $i == 3 {
-            @include animation-delay(2s);
+            @include animation-delay(4s);
+            @include animation-duration(20s);
             top: 8%;
             right: 87%;
           }
           @if $i == 4 {
-            @include animation-delay(3s);
+            @include animation-delay(6s);
+            @include animation-duration(16s);
             top: 30%;
             right: 79%;
           }
           @if $i == 5 {
-            @include animation-delay(1s);
+            @include animation-delay(2s);
+            @include animation-duration(20s);
             top: 48%;
             left: 90%;
           }
           @if $i == 6 {
-            @include animation-delay(6s);
+            @include animation-delay(3s);
+            @include animation-duration(12s);
             top: 62%;
             right: 92%;
           }
           @if $i == 7 {
             @include animation-delay(5s);
+            @include animation-duration(18s);
             top: 70%;
             left: 78%;
           }

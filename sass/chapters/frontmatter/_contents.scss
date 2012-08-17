@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // contents
 
-$total-columns: 8;
+$total-columns: $toc-cols;
 
 $bg           : $yellow-hint;
 $bg-grad      : linear-gradient(260deg, $yellow-hint, $yellow-hint, $orange-lightest);
@@ -14,7 +14,7 @@ $bg-grad      : linear-gradient(260deg, $yellow-hint, $yellow-hint, $orange-ligh
   background-position: $scribble-pos, 0, 0;
 
   [role="main"] {
-    @include container;
+    @include container($total-columns, $toc-break $toc-cols*2);
     @include padding-leader(2);
   }
 
