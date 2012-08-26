@@ -1,2 +1,54 @@
 // ----------------------------------------------------------------------------
 // 404
+
+$total-columns: 6;
+$break        : 8;
+
+$bgcolor    : $yellow-lighter;
+$bggrad     : radial-gradient(25% top, circle,
+                $yellow,
+                $yellow           25%,
+                rgba($yellow,0)   45%,
+                rgba($yellow,0)   75%,
+                $orange
+              );
+
+#fourohfour {
+  @include background($bgcolor $noise);
+  @include background($noise, $bggrad $bgcolor);
+
+  [role="main"] {
+    @include container($total-columns, $break);
+    @include padding-leader(2);
+    @include padding-trailer(2);
+    @include transition(background-position 200ms);
+    @include background(image-url($swing) no-repeat scroll 0 0 - image-height($swing));
+  }
+
+  h1 {
+    @include adjust-font-size-to($largepx);
+    @include trailer(1,$largepx);
+    @include transition(margin-bottom 200ms);
+    text-transform: uppercase;
+    font-weight: bold;
+    a::after {
+      @include animation(fadeIn 2s ease both infinite alternate);
+      content: " »";
+    }
+  }
+  blockquote { font-style: italic; }
+  p { @include trailer; }
+  a {
+    #{$link} {
+      @include transition(color 900ms);
+      color: $green-dark;
+    }
+    #{$focus} { color: $pink; }
+  }
+
+  @include at-breakpoint($break) {
+    [role="main"] { background-position: 0 0; }
+    h1, p { @include pre(2); }
+    h1 { @include trailer(3,$largepx); }
+  }
+}
