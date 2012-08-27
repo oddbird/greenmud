@@ -8,11 +8,6 @@ $eric     : '#{$pg}eric.png';
 #about {
   @extend %template;
 
-  .eric {
-    @include padding-leader(7);
-    background: image-url($faces) no-repeat scroll top;
-  }
-
   .vcard {
     :first-line {
       @include adjust-font-size-to($smallpx,1);
@@ -20,9 +15,11 @@ $eric     : '#{$pg}eric.png';
       text-transform: uppercase;
     }
   }
+  .fn { @include adjust-font-size-to($medpx,1,$smallpx); }
 
-  .fn {
-    @include adjust-font-size-to($medpx,1,$smallpx);
+  .eric {
+    @include padding-leader(7);
+    background: image-url($faces) no-repeat scroll top;
   }
 
   @include at-breakpoint($template-break) {
@@ -32,9 +29,7 @@ $eric     : '#{$pg}eric.png';
       @include padding-trailer(2);
       background: image-url($eric) no-repeat scroll top left;
     }
-    .oddbird, .teacup {
-      @include span-columns(5);
-    }
+    .oddbird, .teacup { @include span-columns(5); }
     .teacup { @include omega; }
   }
 
