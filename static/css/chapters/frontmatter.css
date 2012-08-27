@@ -1492,9 +1492,9 @@ html { background: #eaead4 url('../../images/noise.png?1340400763'); }
 @media (min-height: 25em) { #epigraph [role="main"] { padding-top: 6.25em; } }
 #epigraph blockquote { margin-top: 0em; padding-top: 0.625em; padding-bottom: 0.625em; margin-bottom: 2.5em; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; -ms-border-radius: 0.5em; -o-border-radius: 0.5em; border-radius: 0.5em; -webkit-box-shadow: #404040 0 0 0.25em; -moz-box-shadow: #404040 0 0 0.25em; box-shadow: #404040 0 0 0.25em; background: rgba(237, 237, 246, 0.95); }
 
-#about .eric { padding-top: 8.75em; background: url('../../images/frontmatter/about/faces.png?1346027172') no-repeat scroll top; }
 #about .vcard :first-line { font-size: 0.79167em; line-height: 1.57895em; font-weight: bold; text-transform: uppercase; }
 #about .fn { font-size: 1.57895em; line-height: 1em; }
+#about .eric { padding-top: 8.75em; background: url('../../images/frontmatter/about/faces.png?1346027172') no-repeat scroll top; }
 @media (min-width: 61.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5em; padding-bottom: 2.5em; background: url('../../images/frontmatter/about/eric.png?1346027297') no-repeat scroll top left; }
   #about .oddbird, #about .teacup { width: 48.71795%; float: left; margin-right: 2.5641%; }
   #about .teacup { float: right; margin-right: 0; } }
