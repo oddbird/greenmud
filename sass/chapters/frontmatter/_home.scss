@@ -72,7 +72,7 @@ $scribble : '#{$ch}scribble.png';
     }
   }
 
-  @include at-breakpoint($break) {
+  @include at-breakpoint($template-break) {
     [role="banner"] { @include animation(template-burst 6s ease both); }
     [role="main"] {
       @include padding-leader(2);

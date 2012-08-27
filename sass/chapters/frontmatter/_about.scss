@@ -1,6 +1,41 @@
 // ----------------------------------------------------------------------------
 // about
 
+$pg       : '#{$ch}about/';
+$faces    : '#{$pg}faces.png';
+$eric     : '#{$pg}eric.png';
+
 #about {
   @extend %template;
+
+  .eric {
+    @include padding-leader(7);
+    background: image-url($faces) no-repeat scroll top;
+  }
+
+  .vcard {
+    :first-line {
+      @include adjust-font-size-to($smallpx,1);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .fn {
+    @include adjust-font-size-to($medpx,1,$smallpx);
+  }
+
+  @include at-breakpoint($template-break) {
+    .eric {
+      @include pad(3,1);
+      @include padding-leader(2);
+      @include padding-trailer(2);
+      background: image-url($eric) no-repeat scroll top left;
+    }
+    .oddbird, .teacup {
+      @include span-columns(5);
+    }
+    .teacup { @include omega; }
+  }
+
 }

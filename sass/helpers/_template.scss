@@ -2,7 +2,7 @@
 // template
 
 $total-columns  : 6;
-$break          : 10;
+$template-break : 10;
 
 $toc-break: 32em;
 $toc-cols: 4;
@@ -50,7 +50,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
   [role="main"],
   .footer {
     @include transition(max-width 300ms);
-    @include container($total-columns,$break);
+    @include container($total-columns,$template-break);
   }
 
   // banner ---------------//
@@ -122,7 +122,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     [href*="andmeyer"] { @extend %icon-blog; }
     [href*="vimeo"] { @extend %icon-vimeo; }
   }
-  @include at-breakpoint($break) {
+  @include at-breakpoint($template-break) {
     .license, .social { @include span-columns(5,$total-columns); }
     .social {
       @include omega;
