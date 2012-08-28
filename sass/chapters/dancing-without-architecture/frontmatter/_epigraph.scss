@@ -1,0 +1,16 @@
+// ----------------------------------------------------------------------------
+// epigraph: john lennon
+
+#epigraph {
+  @extend %type;
+  @include background($orange-lightest $noise);
+  @include background-image($noise, linear-gradient(120deg, rgba($orange,.5), rgba($yellow-lighter,0)));
+  text-align: center;
+
+  [role="main"] {
+    @include container;
+    @include padding-leader(2);
+    @include adjust-leading-to(1.5);
+    @include breakpoint(min-height 25em) { @include padding-leader(4); }
+  }
+}

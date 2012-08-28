@@ -54,7 +54,7 @@ prev:
 <!-- book
 book          : 'Dancing Without Architecture.'
 description   : 'Book 1: Dancing Without Architecture.'
-extra_styles  :
+body_class    :
 -->
 
 ## Book 1
@@ -63,8 +63,9 @@ extra_styles  :
 ------
 
 <!-- meta
-description: 'Epigraph: "I Sat Belonely" by John Lennon.'
-slug: epigraph
+description   : 'Epigraph: "I Sat Belonely" by John Lennon.'
+slug          : epigraph
+body_class    :
 -->
 
 > I sat belonely down a tree,     <br />
