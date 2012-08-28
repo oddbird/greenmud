@@ -6,5 +6,5 @@ gem "susy", "~> 1.0"
 
 gem "chunky_png", "~> 1.2.6"
 gem "modular-scale", "~> 1.0.2"
-gem "animate", "~> 0.1.0"
+gem "animate", "~> 0.2.beta.0"
 gem "breakpoint", "~> 1.2"

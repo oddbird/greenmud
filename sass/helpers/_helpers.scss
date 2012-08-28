@@ -1,12 +1,19 @@
 /* ----------------------------------------------------------------------------
    helpers */
 
+@import "animate";
 @import "icomoon";
 @import "icons";
 @import "type";
 @import "template";
 @import "pages";
 @import "titles";
+
+
+// ----------------------------------------------------------------------------
+// animate classes only
+
+@include animate($keyframes: false);
 
 // ----------------------------------------------------------------------------
 // generic

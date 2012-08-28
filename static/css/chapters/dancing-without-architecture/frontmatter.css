@@ -38,6 +38,10 @@
 @media (min-width: 40em) { #titlepage h1 { font-size: 2.25em; line-height: 1.11111em; }
   #titlepage h2 { margin-bottom: 0.625em; } }
 
+.enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -ms-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
+
+.exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -ms-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
+
 /* ---------------------------------------------------------------------------- general */
 html { background: #bfbfff url('../../../images/noise.png?1340400763'); }
 

@@ -83,6 +83,12 @@
   #home .social, #about .social { float: right; margin-right: 0; text-align: right; }
   #home .social a, #about .social a { text-align: left; } }
 
+.enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -ms-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
+
+.exit-prev { -webkit-animation-name: fadeOutLeft; -moz-animation-name: fadeOutLeft; -ms-animation-name: fadeOutLeft; -o-animation-name: fadeOutLeft; animation-name: fadeOutLeft; }
+
+.exit-next { -webkit-animation-name: fadeOutRight; -moz-animation-name: fadeOutRight; -ms-animation-name: fadeOutRight; -o-animation-name: fadeOutRight; animation-name: fadeOutRight; }
+
 #epigraph blockquote { margin-left: -1em; margin-right: -1em; padding-left: 1em; padding-right: 1em; }
 
 /* ---------------------------------------------------------------------------- general */
