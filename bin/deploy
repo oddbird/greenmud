@@ -1,5 +1,5 @@
 #!/bin/bash
 
 bin/minify.py
-# rm -rf ../greenmud-pages/*
+rm -rf ../greenmud-pages/*
 hyde gen -r -d ../greenmud-pages/ -c prod.yaml
