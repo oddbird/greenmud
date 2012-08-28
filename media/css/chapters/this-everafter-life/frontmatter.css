@@ -43,7 +43,7 @@
 .exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -ms-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #bfbfff url('../../../images/noise.png?1340400763'); background-image: url('../../../images/noise.png?1340400763'), -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), -ms-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); }
+html { background: #ffdfbf url('../../../images/noise.png?1340400763'); background-image: url('../../../images/noise.png?1340400763'), -webkit-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1340400763'), -moz-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1340400763'), -o-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1340400763'), -ms-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1340400763'), linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; }
 
@@ -51,9 +51,8 @@ html { background: #bfbfff url('../../../images/noise.png?1340400763'); backgrou
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -ms-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
-/* ---------------------------------------------------------------------------- epigraph: john lennon */
-#epigraph { text-align: center; }
-#epigraph [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; line-height: 1.875em; }
+/* ---------------------------------------------------------------------------- epigraph: amiri baraka */
+#epigraph [role="main"] { max-width: 19em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 25em) { #epigraph [role="main"] { padding-top: 5em; } }
 
