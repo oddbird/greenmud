@@ -38,6 +38,8 @@ prev:
     url: thanks.html
 -->
 
+<div class="lightning"></div>
+
 > I once fell in love with you                      <br />
   Just because the sky turned from gray into blue   <br />
   It was a good Friday                              <br />
@@ -54,6 +56,9 @@ prev:
 <!-- book
 book          : 'Dancing Without Architecture.'
 description   : 'Book 1: Dancing Without Architecture.'
+-->
+
+<!-- meta
 body_class    :
 -->
 

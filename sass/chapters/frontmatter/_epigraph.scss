@@ -40,28 +40,33 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
 
 #epigraph {
   @extend %type;
-  @include background($bg $noise);
-  @include background($noise, $fg-grad, $lightning, $bg);
-  .no-cssgradients & {
-    @include background($noise, $angle, $lightning, $bg);
-    @include background-size(auto,cover,auto);
-  }
-  @include animation(lightning 10s infinite);
+  @include back($bg);
   $color: $mid;
 
   [role="main"] {
-    @include container;
     @include padding-leader(2);
     @include breakpoint(min-height 25em) {
       @include padding-leader(5);
     }
   }
 
+  .lightning {
+    @include stretch;
+    @include animation(lightning 10s infinite);
+    @include background($noise, $fg-grad, $lightning);
+    .no-cssgradients & {
+      @include background($noise, $angle, $lightning);
+      @include background-size(auto,cover,auto);
+    }
+
+  }
+
   blockquote {
-    @extend %bleed;
+    @include container;
     @include rhythm(0,.5,.5,2);
     @include border-radius(.5em);
     @include box-shadow($darker 0 0 .25em);
+    position: relative;
     background: rgba($off-blue-hint,.95);
   }
 }
