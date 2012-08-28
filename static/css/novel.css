@@ -25,6 +25,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face { font-family: "GreenMudJJRegular"; src: url('../fonts/jj/greenmudjj-bold-webfont.eot'); src: url('../fonts/jj/greenmudjj-bold-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-bold-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-bold-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-bold-webfont.svg#GreenMudJJRegular') format('svg'); font-weight: bold; font-style: normal; }
 
 /* ---------------------------------------------------------------------------- root */
+html { font-size: 150%; line-height: 1.25em; }
+
+html { background: gray url('../images/noise.png?1340400763'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
+
+.jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
+
+a:link, a:visited { text-decoration: none; color: blue; }
+a:hover, a:focus, a:active { color: magenta; }
+
+/* ---------------------------------------------------------------------------- helpers */
+[rel="home"]:before { content: "\2617"; }
+
+[rel="contents"]:before { content: "\2630"; }
+
+[rel="next"]:before, .swiping-next:before { content: "\2192"; }
+
+[rel="prev"]:before, .swiping-prev:before { content: "\2190"; }
+
+#toggle:before { content: "\2731"; }
+
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .swiping-next:before, .swiping-prev:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
+
+[data-icon]:before { content: attr(data-icon); }
+
+.demo .content:before { letter-spacing: .05em; }
+
+.demo .content:before { text-transform: uppercase; }
+
+.breadcrumb, [class^="toc-"] .book, [class^="toc-"] li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+.demo .content h1 { font-size: 1.5em; line-height: 1.25em; }
+.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-weight: bold; color: #404040; }
+.demo .content h1:first-child, .demo .content h1 + h2, .demo .content h1 + h3, .demo .content h1 + h4, .demo .content h2:first-child, .demo .content h2 + h2, .demo .content h2 + h3, .demo .content h2 + h4, .demo .content h3:first-child, .demo .content h3 + h2, .demo .content h3 + h3, .demo .content h3 + h4, .demo .content h4:first-child, .demo .content h4 + h2, .demo .content h4 + h3, .demo .content h4 + h4 { margin-top: 0; }
+.demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
+.demo .content p, .demo .content ol, .demo .content ul, .demo .content blockquote { margin-bottom: 1.25em; }
+.demo .content ol { list-style-type: decimal; }
+.demo .content ul li { position: relative; }
+.demo .content ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
+.demo .content em, .demo .content blockquote { font-style: italic; }
+.demo .content blockquote cite { font-style: normal; }
+.demo .content blockquote :last-child { margin-bottom: 0em; }
+
+#toc { counter-reset: toc; }
+#toc ol { list-style-type: none; }
+#toc li { counter-increment: toc; }
+#toc li:before { content: counter(toc, decimal-leading-zero) ". "; }
+
+@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+@-ms-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+/* ---------------------------------------------------------------------------- animate */
 @-moz-keyframes flash { 0% { opacity: 1; }
   25% { opacity: 0; }
   50% { opacity: 1; }
@@ -1208,75 +1274,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; }
   100% { transform: translateY(700px); opacity: 0; } }
 
-html { font-size: 150%; line-height: 1.25em; }
-
-html { background: gray url('../images/noise.png?1340400763'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
-
-.jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
-
-/* ---------------------------------------------------------------------------- links */
-a:link, a:visited { text-decoration: none; color: blue; }
-a:hover, a:focus, a:active { color: magenta; }
-
-[rel="home"]:before { content: "\2617"; }
-
-[rel="contents"]:before { content: "\2630"; }
-
-[rel="next"]:before, .swiping-next:before { content: "\2192"; }
-
-[rel="prev"]:before, .swiping-prev:before { content: "\2190"; }
-
-#toggle:before { content: "\2731"; }
-
-/* Use the following CSS code if you want to have a class per icon */
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .swiping-next:before, .swiping-prev:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
-
-#toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before { content: attr(data-icon); }
-
-/* ---------------------------------------------------------------------------- type */
-.demo .content:before { letter-spacing: .05em; }
-
-.demo .content:before { text-transform: uppercase; }
-
-.breadcrumb, [class^="toc-"] .book, [class^="toc-"] li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
-
-/* ---------------------------------------------------------------------------- defaults */
-.demo .content h1 { font-size: 1.5em; line-height: 1.25em; }
-.demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-weight: bold; color: #404040; }
-.demo .content h1:first-child, .demo .content h1 + h2, .demo .content h1 + h3, .demo .content h1 + h4, .demo .content h2:first-child, .demo .content h2 + h2, .demo .content h2 + h3, .demo .content h2 + h4, .demo .content h3:first-child, .demo .content h3 + h2, .demo .content h3 + h3, .demo .content h3 + h4, .demo .content h4:first-child, .demo .content h4 + h2, .demo .content h4 + h3, .demo .content h4 + h4 { margin-top: 0; }
-.demo .content h2, .demo .content h3, .demo .content h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
-.demo .content p, .demo .content ol, .demo .content ul, .demo .content blockquote { margin-bottom: 1.25em; }
-.demo .content ol { list-style-type: decimal; }
-.demo .content ul li { position: relative; }
-.demo .content ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
-.demo .content em, .demo .content blockquote { font-style: italic; }
-.demo .content blockquote cite { font-style: normal; }
-.demo .content blockquote :last-child { margin-bottom: 0em; }
-
-#toc { counter-reset: toc; }
-#toc ol { list-style-type: none; }
-#toc li { counter-increment: toc; }
-#toc li:before { content: counter(toc, decimal-leading-zero) ". "; }
-
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
-
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
-
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
-
-@-ms-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
-
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
-
 /* ---------------------------------------------------------------------------- controls */
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { width: 1.875em; }
 #toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25em; line-height: 1.5em; right: 0; text-align: center; }
@@ -1311,6 +1308,7 @@ a:hover, a:focus, a:active { color: magenta; }
 
 .next { float: right; }
 
+/* ---------------------------------------------------------------------------- toc */
 [class^="toc-"] { margin-bottom: 1.25em; }
 @media (min-width: 48em) { [class^="toc-"] { width: 48.3871%; float: left; margin-right: 3.22581%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }

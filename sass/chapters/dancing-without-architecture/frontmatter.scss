@@ -3,15 +3,14 @@
 
 @import "base/base";
 @import "helpers/helpers";
-@import "general/root";
 
 // ----------------------------------------------------------------------------
 // settings
 
 $ch: 'dancing-without-architecture/frontmatter/';
 
-// ----------------------------------------------------------------------------
-// general
+/* ----------------------------------------------------------------------------
+   general */
 
 html { @include back($blue-lightest); }
 
@@ -26,8 +25,8 @@ html { @include back($blue-lightest); }
 
 @import "frontmatter/epigraph";
 
-// ----------------------------------------------------------------------------
-// title
+/* ----------------------------------------------------------------------------
+  titlepage */
 
 #titlepage {
   @extend %booktitle;
