@@ -671,7 +671,7 @@ voice         : jj
 extra_styles  :
 -->
 
-## Chapter 5
+## Chapter 5
 # Bring Down the House House.
 
 ------
@@ -1799,7 +1799,10 @@ So green!
 <!-- book
 book          : This EverAfter Life
 description   : 'Book 2: This EverAfter Life.'
-extra_styles  :
+-->
+
+<!-- meta
+body_class    :
 -->
 
 ## Book 2
@@ -1807,9 +1810,15 @@ extra_styles  :
 
 ------
 
-> And now, each night I count the stars.
-  And each night I get the same number.
-  And when they will not come to be counted,
+<!-- meta
+description   : 'Epigraph: "Preface to a Twenty Volume Suicide Note" by Amiri Baraka.'
+slug          : epigraph
+body_class    :
+-->
+
+> And now, each night I count the stars.      <br />
+  And each night I get the same number.       <br />
+  And when they will not come to be counted,  <br />
   I count the holes they leave.
 
 > <cite>— Amiri Baraka, "Preface to a Twenty Volume Suicide Note"</cite>

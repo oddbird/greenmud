@@ -13,8 +13,8 @@ $ch: 'dancing-without-architecture/frontmatter/';
    general */
 
 html {
-  @include background($blue-lightest $noise);
-  @include background-image($noise, linear-gradient(120deg, rgba($blue,.25), rgba($blue-lighter,0)));
+  @include background($orange-lightest $noise);
+  @include background-image($noise, linear-gradient(120deg, rgba($orange,.5), rgba($orange-lighter,0)));
 }
 
 @include pageturn(
