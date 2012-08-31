@@ -1,14 +1,30 @@
 /* ----------------------------------------------------------------------------
    epigraph: john lennon */
 
+$total-columns: 8;
+
+$pg       : '#{$ch}epigraph/';
+$lennon   : '#{$pg}lennon.png';
+
 #epigraph {
   @extend %type;
-  text-align: center;
+  @include background(
+    linear-gradient(170deg,
+      rgba($yellow-lightest,.75),
+      rgba($yellow-lighter,.5),
+      rgba($yellow-lighter,.25)
+    )
+  );
 
   [role="main"] {
     @include container;
-    @include padding-leader(2);
-    @include adjust-leading-to(1.5);
-    @include breakpoint(min-height 25em) { @include padding-leader(4); }
+    @include padding-leader(8);
+    @include background(image-url($lennon) no-repeat scroll center rhythm(3));
+  }
+
+  blockquote {
+    @include at-breakpoint(4) { @include prefix(1); }
+    @include at-breakpoint(5) { @include prefix(2); }
+    @include at-breakpoint(6) { @include prefix(3); }
   }
 }
