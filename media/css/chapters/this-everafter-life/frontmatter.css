@@ -30,9 +30,9 @@
 @keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-#titlepage [role="main"] { padding-top: 2.5em; text-align: center; text-transform: uppercase; }
-@media (min-height: 20em) { #titlepage [role="main"] { padding-top: 5em; } }
-@media (min-height: 30em) { #titlepage [role="main"] { padding-top: 10em; } }
+#titlepage [role="main"] { padding-top: 5em; text-align: center; text-transform: uppercase; }
+@media (min-height: 30em) { #titlepage [role="main"] { padding-top: 7.5em; } }
+@media (min-height: 40em) { #titlepage [role="main"] { padding-top: 13.75em; } }
 #titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
 #titlepage h2 { font-weight: bold; }
 @media (min-width: 40em) { #titlepage h1 { font-size: 2.25em; line-height: 1.11111em; }
