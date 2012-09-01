@@ -9,6 +9,7 @@ $eric     : '#{$pg}eric.png';
   @extend %template;
 
   .vcard {
+    @extend %type;
     :first-line {
       @include adjust-font-size-to($smallpx,1);
       font-weight: bold;
