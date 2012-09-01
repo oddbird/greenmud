@@ -69,17 +69,6 @@ $swipe-radius   : rhythm(3,$swipe-size);
   }
 }
 
-.page {
-  @include transition(left 200ms ease-in-out);
-  position: relative;
-  left: 0;
-  .swiping-next & { left: rhythm(-1.5); }
-  .swiping-prev & { left: rhythm(1.5); }
-  .swiping-next &, .swiping-prev & {
-    * { @include animation-play-state(paused !important); }
-  }
-}
-
 @include pageturn;
 
 .enter-prev, .enter-next, .exit-prev, .exit-next {
