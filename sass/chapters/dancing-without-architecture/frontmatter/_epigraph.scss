@@ -11,9 +11,10 @@ $lennon   : '#{$pg}lennon.png';
   @extend %type;
   @include background(
     linear-gradient(170deg,
-      rgba($yellow-lightest,.75),
+      rgba($yellow-lighter,.25) 25%,
       rgba($yellow-lighter,.5),
-      rgba($yellow-lighter,.25)
+      rgba($yellow-lightest,.75) 90%,
+      rgba($orange-lighter,.75)
     )
   );
 
