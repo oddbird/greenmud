@@ -23,7 +23,11 @@ $bg-grad      : linear-gradient(260deg, $yellow-hint, $yellow-hint, $orange-ligh
     #{$focus} { color: $orange; }
   }
 
-  li:before { color: $off-yellow-dark; }
+  li {
+    @extend %shrink;
+    @extend %transition;
+    &:before { color: $off-yellow-dark; }
+  }
 
   .book { font-weight: bold; }
 }

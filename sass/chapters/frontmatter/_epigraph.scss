@@ -10,7 +10,7 @@ $trans: rgba(0,0,0,0);
   $four   : $off-blue-light;
   $split  : 50%;
   $blur   : 0;
-  $angle  : 280deg;
+  $angle  : 140deg;
 
   @return linear-gradient($angle, $one, $two $split - $blur, $three $split + $blur, $four);
 }
@@ -69,4 +69,7 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
     position: relative;
     background: rgba($off-blue-hint,.95);
   }
+
+  p { @extend %shrink; }
+
 }

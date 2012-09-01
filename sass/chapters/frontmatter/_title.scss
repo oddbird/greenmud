@@ -73,9 +73,9 @@ $line-end   : 0;
   }
 
   .wrap1 {
+    @extend %transition;
     @include padding-leader(1.5);
     @include padding-trailer;
-    @include transition(all 300ms);
     @include background(
       image-url($left) no-repeat scroll (0 - image-width($left)*1.5) $string-pos,
       image-url($right) no-repeat scroll (50*16px + image-width($right)*.5) $string-pos

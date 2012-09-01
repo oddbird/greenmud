@@ -17,7 +17,7 @@ html { @include back($off-yellow-lightest); }
 @include pageturn(
   '%fadeIn',
   '%fadeOutLeft' '%fadeOutRight',
-  200ms
+  400ms
 );
 
 // ----------------------------------------------------------------------------

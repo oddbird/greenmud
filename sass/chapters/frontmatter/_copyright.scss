@@ -38,10 +38,10 @@ $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 
   h1 {
     @extend %allcaps;
+    @extend %transition;
     @include animation(hinge 1s 10s linear both, shake 500ms 3s linear);
     @include animation-play-state(paused, paused);
-    @include adjust-font-size-to($largepx);
-    @include trailer(1,$largepx);
+    @include trailer;
     @include border-radius(3em);
     @include box-shadow($shadow);
     @include text-shadow($shadow-color -1px -1px 0);
@@ -52,7 +52,11 @@ $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
     &:hover { @include animation-play-state(running, running); }
     &:before, &:after { content: "•"; }
 
-    @include breakpoint(40em) {
+    @include breakpoint(31em) {
+      @include adjust-font-size-to($largepx);
+      @include trailer(1,$largepx);
+    }
+    @include breakpoint(44em) {
       @include adjust-font-size-to($xxlargepx);
       @include trailer(1,$xxlargepx);
     }

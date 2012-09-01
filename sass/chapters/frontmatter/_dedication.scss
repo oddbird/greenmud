@@ -1,8 +1,7 @@
 /* ----------------------------------------------------------------------------
    dedication */
 
-$total-columns: 4;
-$break: 6;
+$total-columns: 6;
 
 $bg     : $orange-lighter;
 $color  : $base;
@@ -16,11 +15,17 @@ $bg-grad   : radial-gradient(center rhythm(6), $orange-lightest, $orange-lighter
   color: $color;
 
   [role="main"] {
-    @include container($total-columns, $break);
+    @extend %transition;
+    @include container($total-columns);
     @include padding-leader(2);
     @include padding-trailer(.5);
     @include breakpoint(min-height 25em) { @include padding-leader(4); }
     @include breakpoint(min-height 35em) { @include padding-leader(6); }
+  }
+
+  h1, p {
+    @extend %transition;
+    @extend %shrink;
   }
 
   h1 { font-weight: bold; }

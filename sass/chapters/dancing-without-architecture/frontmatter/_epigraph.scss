@@ -2,6 +2,7 @@
    epigraph: john lennon */
 
 $total-columns: 8;
+$grid-padding: 0;
 
 $pg       : '#{$ch}epigraph/';
 $lennon   : '#{$pg}lennon.png';
@@ -17,14 +18,23 @@ $lennon   : '#{$pg}lennon.png';
   );
 
   [role="main"] {
+    @extend %transition;
     @include container;
-    @include padding-leader(8);
-    @include background(image-url($lennon) no-repeat scroll center rhythm(3));
+    @include padding-leader(1.5);
+    @include breakpoint(min-height 20em) { @include padding-leader(2.5); }
+    @include breakpoint(min-height 30em) { @include padding-leader(4); }
   }
 
   blockquote {
+    @extend %transition;
+    @include padding-leader(4.5);
+    @include background(image-url($lennon) no-repeat scroll center top);
+
+    @include prefix(1);
     @include at-breakpoint(4) { @include prefix(1); }
     @include at-breakpoint(5) { @include prefix(2); }
     @include at-breakpoint(6) { @include prefix(3); }
   }
+
+  p { @extend %shrink; }
 }
