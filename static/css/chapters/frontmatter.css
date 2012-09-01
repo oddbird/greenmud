@@ -24,6 +24,9 @@
 
 #home .license, #about .license, #title a:link, #title a:visited, #copyright a:link, #copyright a:visited, #copyright h1, #copyright strong, #thanks h1 { text-transform: uppercase; }
 
+#dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: 0.79167em; line-height: 1.57895em; }
+@media (min-width: 35em) { #dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
+
 #home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1 { font-size: 1.5em; line-height: 1.25em; }
 #home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1, #home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-weight: bold; color: #404040; }
 #home .intro h1:first-child, #thanks h1:first-child, #epigraph h1:first-child, #about .vcard h1:first-child, #home .intro h1 + h2, #thanks h1 + h2, #epigraph h1 + h2, #about .vcard h1 + h2, #home .intro h1 + h3, #thanks h1 + h3, #epigraph h1 + h3, #about .vcard h1 + h3, #home .intro h1 + h4, #thanks h1 + h4, #epigraph h1 + h4, #about .vcard h1 + h4, #home .intro h2:first-child, #thanks h2:first-child, #epigraph h2:first-child, #about .vcard h2:first-child, #home .intro h2 + h2, #thanks h2 + h2, #epigraph h2 + h2, #about .vcard h2 + h2, #home .intro h2 + h3, #thanks h2 + h3, #epigraph h2 + h3, #about .vcard h2 + h3, #home .intro h2 + h4, #thanks h2 + h4, #epigraph h2 + h4, #about .vcard h2 + h4, #home .intro h3:first-child, #thanks h3:first-child, #epigraph h3:first-child, #about .vcard h3:first-child, #home .intro h3 + h2, #thanks h3 + h2, #epigraph h3 + h2, #about .vcard h3 + h2, #home .intro h3 + h3, #thanks h3 + h3, #epigraph h3 + h3, #about .vcard h3 + h3, #home .intro h3 + h4, #thanks h3 + h4, #epigraph h3 + h4, #about .vcard h3 + h4, #home .intro h4:first-child, #thanks h4:first-child, #epigraph h4:first-child, #about .vcard h4:first-child, #home .intro h4 + h2, #thanks h4 + h2, #epigraph h4 + h2, #about .vcard h4 + h2, #home .intro h4 + h3, #thanks h4 + h3, #epigraph h4 + h3, #about .vcard h4 + h3, #home .intro h4 + h4, #thanks h4 + h4, #epigraph h4 + h4, #about .vcard h4 + h4 { margin-top: 0; }
@@ -91,9 +94,6 @@
 .exit-prev { -webkit-animation-name: fadeOutLeft; -moz-animation-name: fadeOutLeft; -ms-animation-name: fadeOutLeft; -o-animation-name: fadeOutLeft; animation-name: fadeOutLeft; }
 
 .exit-next { -webkit-animation-name: fadeOutRight; -moz-animation-name: fadeOutRight; -ms-animation-name: fadeOutRight; -o-animation-name: fadeOutRight; animation-name: fadeOutRight; }
-
-#dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: 0.79167em; line-height: 1.57895em; }
-@media (min-width: 30em) { #dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
 
 /* ---------------------------------------------------------------------------- general */
 html { background: #eaead4 url('../../images/noise.png?1340400763'); }
@@ -289,12 +289,13 @@ html { background: #eaead4 url('../../images/noise.png?1340400763'); }
   52%, 56% { background-position: top left, top left, center -3.75em; }
   54% { background-position: top left, top left, 62.5em -6.25em; } }
 
-#epigraph { background: #202020 url('../../images/noise.png?1340400763'); }
-#epigraph [role="main"] { padding-top: 2.5em; }
-@media (min-height: 25em) { #epigraph [role="main"] { padding-top: 6.25em; } }
+#epigraph { background: #202020 url('../../images/noise.png?1340400763'); position: relative; }
+@media (min-height: 30em) { #epigraph [role="main"] { padding-top: 3.75em; } }
+@media (min-height: 40em) { #epigraph [role="main"] { padding-top: 6.25em; } }
+@media (min-height: 50em) { #epigraph [role="main"] { padding-top: 12.5em; } }
 #epigraph .lightning { position: absolute; top: 0; bottom: 0; left: 0; right: 0; -webkit-animation: lightning 10s infinite; -moz-animation: lightning 10s infinite; -ms-animation: lightning 10s infinite; -o-animation: lightning 10s infinite; animation: lightning 10s infinite; background: url('../../images/noise.png?1340400763'), -webkit-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), -moz-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), -o-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), -ms-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; }
 .no-cssgradients #epigraph .lightning { background: url('../../images/noise.png?1340400763'), url('../../images/frontmatter/epigraph/angle.svg?1344641700') no-repeat center, url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; -webkit-background-size: auto, cover, auto; -moz-background-size: auto, cover, auto; -o-background-size: auto, cover, auto; background-size: auto, cover, auto; }
-#epigraph blockquote { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; margin-top: 0em; padding-top: 0.625em; padding-bottom: 0.625em; margin-bottom: 2.5em; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; -ms-border-radius: 0.5em; -o-border-radius: 0.5em; border-radius: 0.5em; -webkit-box-shadow: #404040 0 0 0.25em; -moz-box-shadow: #404040 0 0 0.25em; box-shadow: #404040 0 0 0.25em; position: relative; background: rgba(237, 237, 246, 0.95); }
+#epigraph blockquote { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; margin-top: 0em; padding-top: 0.625em; padding-bottom: 0.625em; margin-bottom: 0em; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; -ms-border-radius: 0.5em; -o-border-radius: 0.5em; border-radius: 0.5em; -webkit-box-shadow: #404040 0 0 0.25em; -moz-box-shadow: #404040 0 0 0.25em; box-shadow: #404040 0 0 0.25em; position: relative; background: rgba(237, 237, 246, 0.95); }
 #epigraph blockquote:after { content: ""; display: table; clear: both; }
 
 /* ---------------------------------------------------------------------------- about */

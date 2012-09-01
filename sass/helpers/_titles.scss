@@ -4,11 +4,11 @@
 %booktitle {
   [role="main"] {
     @extend %transition;
-    @include padding-leader(2);
+    @include padding-leader(4);
     text-align: center;
     text-transform: uppercase;
-    @include breakpoint(min-height 20em) { @include padding-leader(4); }
-    @include breakpoint(min-height 30em) { @include padding-leader(8); }
+    @include breakpoint(min-height 30em) { @include padding-leader(6); }
+    @include breakpoint(min-height 40em) { @include padding-leader(11); }
   }
 
   h1 { @include adjust-font-size-to($largepx); }

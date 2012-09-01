@@ -41,13 +41,12 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
 #epigraph {
   @extend %type;
   @include back($bg);
-  $color: $mid;
+  position: relative;
 
   [role="main"] {
-    @include padding-leader(2);
-    @include breakpoint(min-height 25em) {
-      @include padding-leader(5);
-    }
+    @include breakpoint(min-height 30em) { @include padding-leader(3); }
+    @include breakpoint(min-height 40em) { @include padding-leader(5); }
+    @include breakpoint(min-height 50em) { @include padding-leader(10); }
   }
 
   .lightning {
@@ -63,7 +62,7 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
 
   blockquote {
     @include container;
-    @include rhythm(0,.5,.5,2);
+    @include rhythm(0,.5,.5,0);
     @include border-radius(.5em);
     @include box-shadow($darker 0 0 .25em);
     position: relative;

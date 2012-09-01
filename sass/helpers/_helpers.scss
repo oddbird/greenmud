@@ -19,11 +19,3 @@
   padding-left: $grid-padding;
   padding-right: $grid-padding;
 }
-
-%shrink {
-  @include adjust-font-size-to($smallpx);
-  @include breakpoint(30em) {
-    font-size: inherit;
-    line-height: inherit;
-  }
-}

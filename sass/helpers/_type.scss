@@ -18,6 +18,14 @@
   @include ellipsis;
 }
 
+%shrink {
+  @include adjust-font-size-to($smallpx);
+  @include breakpoint(35em) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
 // ----------------------------------------------------------------------------
 // defaults
 
