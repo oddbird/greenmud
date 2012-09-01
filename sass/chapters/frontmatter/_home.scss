@@ -15,7 +15,7 @@ $scribble : '#{$ch}scribble.png';
     @extend %transition;
     background: image-url($swing) no-repeat scroll 0 0 - image-height($swing);
     background: image-url($swing) no-repeat scroll, image-url($scribble) no-repeat scroll;
-    background-position: 0 0 - image-height($swing), right rhythm(40);
+    background-position: 0 0 - image-height($swing), right rhythm(25);
   }
 
   .intro, .instructions { @include clearfix; }
@@ -43,7 +43,7 @@ $scribble : '#{$ch}scribble.png';
     [role="main"] {
       @include padding-leader(2);
       background-position: 0 0;
-      background-position: 0 0, right rhythm(13);
+      background-position: 0 0, right rhythm(8);
     }
     .intro, .instructions {
       @include pad(2,2);
