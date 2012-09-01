@@ -10,7 +10,7 @@ $lennon   : '#{$pg}lennon.png';
 #epigraph {
   @extend %type;
   @include background(
-    linear-gradient(355deg,
+    linear-gradient(95deg,
       rgba($orange-lighter,.75),
       rgba($yellow-lightest,.75) 10%,
       rgba($yellow-lighter,.5),

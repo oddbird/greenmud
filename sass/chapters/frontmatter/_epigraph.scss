@@ -10,7 +10,7 @@ $trans: rgba(0,0,0,0);
   $four   : $off-blue-light;
   $split  : 50%;
   $blur   : 0;
-  $angle  : 140deg;
+  $angle  : 320deg;
 
   @return linear-gradient($angle, $one, $two $split - $blur, $three $split + $blur, $four);
 }
