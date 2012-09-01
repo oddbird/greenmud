@@ -18,58 +18,24 @@ $scribble : '#{$ch}scribble.png';
     background-position: 0 0 - image-height($swing), right rhythm(40);
   }
 
-  .intro, .actions, .instructions {
-    @include clearfix;
-  }
+  .intro, .instructions { @include clearfix; }
+  .intro { @extend %type; }
 
-  .actions {
-    .act {
-      @include breakpoint($minor-break) {
-        @include span-columns(3);
-        &:last-child { @include omega; }
-      }
-    }
-    a {
-      #{$link} {
-        @extend %transition;
-        @include border-radius;
-        @include rhythm-borders($border-width,.5);
-        display: block;
-        color: $base;
-        text-align: center;
-        &:after { content: " »"; @include opacity(0); }
-        &[href*="about"] { background: $yellow-lightest; }
-        &[href*="title"] { background: $green-lightest; }
-      }
-      .no-touch & {
-        #{$focus} {
-          &:after {
-            @include opacity(1);
-            @include animation(fadeIn 1.5s infinite alternate)
-          }
-          &[href*="about"] { background: $yellow-light; }
-          &[href*="title"] { background: $green-light; }
-        }
-      }
-    }
-  }
+  $inst-size      :$medpx ;
+  $inst-ico-size  :$xxlargepx ;
 
   .inst {
     @extend %icon;
-    text-align: center;
+    @include adjust-font-size-to($inst-size);
+    @include trailer(.5,$inst-size);
+    @include pie-clearfix;
     &:before {
-      @extend %transition;
-      @include adjust-font-size-to($xxlargepx);
-      @include trailer(.25,$xxlargepx);
-      display: block;
-      color: rgba($mid,$small);
+      @include adjust-font-size-to($inst-ico-size, $from-size: $inst-size);
+      margin-right: rhythm(.25, $inst-ico-size);
+      vertical-align: middle;
     }
     &.turn { @extend %icon-swipe; }
     &.access { @extend %icon-cog; }
-    @include breakpoint($minor-break) {
-      @include span-columns(3);
-      &:last-child { @include omega; }
-    }
   }
 
   @include at-breakpoint($template-break) {
@@ -79,7 +45,7 @@ $scribble : '#{$ch}scribble.png';
       background-position: 0 0;
       background-position: 0 0, right rhythm(13);
     }
-    .intro, .actions, .instructions {
+    .intro, .instructions {
       @include pad(2,2);
       clear: both;
     }

@@ -36,10 +36,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
 %template {
   @include text-shadow(rgba($white,$small) 0 1px 1px);
-  @include background($background repeat scroll);
-  @include background($noise,
-    linear-gradient(bottom left, $yellow-hint, $off-green-hint)
-  );
+  @include background($off-green-lightest $noise);
   b {
     font-weight: bold;
     white-space: nowrap;
@@ -55,11 +52,16 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   // banner ---------------//
   [role="banner"] {
-    @include trailing-border($border-width,1.5);
+    @include padding-leader(.75);
+    @include trailing-border($border-width,.75);
     color: $darker;
     background: $pink-hint $noise;
     background: $bgburst, $pink-hint $noise;
     border-color: $base;
+    h1 {
+      @include adjust-font-size-to($xlargepx);
+      font-weight: bold;
+    }
     a {
       #{$link} {
         @extend %transition;
@@ -74,19 +76,17 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     }
     &:hover { h2 { @include animation(hinge 1.5s 10s ease both); } }
   }
-  .site-title {
-    @include padding-leader(1.5);
-    h1 {
-      @include adjust-font-size-to($xlargepx);
-      font-weight: bold;
-    }
-  }
 
   // main ---------------//
+  .template {
+    @include background($background repeat scroll);
+    @include background($noise,
+      linear-gradient(bottom left, $yellow-hint, $off-green-hint)
+    );
+  }
   [role="main"] {
     @include padding-leader;
     @include padding-trailer;
-    @extend %type;
   }
 
   // footer ---------------//
@@ -95,8 +95,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   [role="contentinfo"] {
     @include leading-border($border-width,.5);
-    @include trailing-border($border-width,1.5);
-    @include background($off-green-lightest $noise);
+    @include padding-trailer(1.5);
     border-color: $darker;
     color: $footer-color;
     a {

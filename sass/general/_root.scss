@@ -6,10 +6,6 @@
 /* ----------------------------------------------------------------------------
    root */
 
-$base   : $dark;
-$alt    : $blue;
-$accent : $pink;
-
 @include establish-baseline;
 
 html {

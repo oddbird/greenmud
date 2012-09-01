@@ -176,9 +176,9 @@ $off-pink-lighter   : tint($off-pink,$lighter-tint);
 $off-pink-lightest  : tint($off-pink,$lightest-tint);
 $off-pink-hint      : tint($off-pink,$hint-tint);
 
-$base             : $darkest;
-$alt              : $pink-darker;
-$accent           : $green-darkest;
+$base   : $dark;
+$alt    : $pink-dark;
+$accent : $blue-dark;
 
 $reds             : $red, $red-dark, $red-darker, $red-darkest, $red-light, $red-lighter, $red-lightest, $red-hint;
 $oranges          : $orange, $orange-dark, $orange-darker, $orange-darkest, $orange-light, $orange-lighter, $orange-lightest, $orange-hint;

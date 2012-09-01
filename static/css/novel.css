@@ -31,8 +31,8 @@ html { background: gray url('../images/noise.png?1340400763'); font-family: "Gre
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 
-a:link, a:visited { text-decoration: none; color: blue; }
-a:hover, a:focus, a:active { color: magenta; }
+a:link, a:visited { text-decoration: none; color: #bf00bf; }
+a:hover, a:focus, a:active { color: #0000bf; }
 
 /* ---------------------------------------------------------------------------- helpers */
 [rel="home"]:before { content: "\2617"; }
