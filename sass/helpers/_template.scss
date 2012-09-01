@@ -90,7 +90,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
   }
 
   // footer ---------------//
-  $footer-color: $mid;
+  $footer-color: $dark;
   $footer-highlight: $darker;
 
   [role="contentinfo"] {
@@ -107,6 +107,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     @extend %allcaps;
     @include adjust-font-size-to($smallpx,1.5);
   }
+  .author { font-weight: bold; }
   .social {
     @include adjust-font-size-to($largepx);
     li { display: inline-block; }

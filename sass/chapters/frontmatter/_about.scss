@@ -33,5 +33,4 @@ $eric     : '#{$pg}eric.png';
     .oddbird, .teacup { @include span-columns(5); }
     .teacup { @include omega; }
   }
-
 }
