@@ -1369,11 +1369,6 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 .swiping-prev:before { -moz-border-radius-topright: 2.5em; -webkit-border-top-right-radius: 2.5em; border-top-right-radius: 2.5em; -moz-border-radius-bottomright: 2.5em; -webkit-border-bottom-right-radius: 2.5em; border-bottom-right-radius: 2.5em; left: 0; padding-left: 0.41667em; }
 
-.page { -webkit-transition: left 200ms ease-in-out; -moz-transition: left 200ms ease-in-out; -ms-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; position: relative; left: 0; }
-.swiping-next .page { left: -1.875em; }
-.swiping-prev .page { left: 1.875em; }
-.swiping-next .page *, .swiping-prev .page * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -ms-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
-
 .enter-prev, .enter-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; }
 
 .exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -ms-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; }
