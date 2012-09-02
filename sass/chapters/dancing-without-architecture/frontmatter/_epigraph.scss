@@ -4,20 +4,22 @@
 $total-columns: 8;
 $grid-padding: 0;
 
+$bg-angle   : 95deg;
+$bg-details : rgba($orange-lighter,.75),
+              rgba($yellow-lightest,.75) 10%,
+              rgba($yellow-lighter,.5),
+              rgba($yellow-lighter,.25) 70%,
+              rgba($yellow-lighter,0);
+$bg-old     : linear-gradient($bg-angle, $bg-details...);
+$bg-new     : fix-linear($bg-angle, $bg-details...);
+
 $pg       : '#{$ch}epigraph/';
 $lennon   : '#{$pg}lennon.png';
 
 #epigraph {
   @extend %type;
-  @include background(
-    linear-gradient(95deg,
-      rgba($orange-lighter,.75),
-      rgba($yellow-lightest,.75) 10%,
-      rgba($yellow-lighter,.5),
-      rgba($yellow-lighter,.25) 70%,
-      rgba($yellow-lighter,0)
-    ) bottom right
-  );
+  @include background($bg-old bottom right);
+  background: $bg-new bottom right;
 
   [role="main"] {
     @extend %transition;

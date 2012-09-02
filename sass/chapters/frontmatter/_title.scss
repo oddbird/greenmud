@@ -1,30 +1,31 @@
 /* ----------------------------------------------------------------------------
    title: Into the Green Green Mud */
 
-$img        : 'frontmatter/';
-$scribble   : '#{$img}scribble.png';
+$img            : 'frontmatter/';
+$scribble       : '#{$img}scribble.png';
 
-$title-grad : linear-gradient(330deg,
-                $pink-hint,
-                $pink-hint 50%,
-                $off-green-lightest 50%,
-                $off-green-lightest
-              );
+$title-angle    : 330deg;
+$title-details  : $pink-hint,
+                  $pink-hint 50%,
+                  $off-green-lightest 50%,
+                  $off-green-lightest;
+$title-old      : linear-gradient($title-angle, $title-details);
+$title-new      : fix-linear($title-angle, $title-details);
 
-$titleimg   : '#{$img}titlepage/';
-$line       : '#{$titleimg}line.png';
-$left       : '#{$titleimg}strings_left.png';
-$right      : '#{$titleimg}strings_right.png';
-$angle      : '#{$titleimg}angle.svg';
+$titleimg       : '#{$img}titlepage/';
+$line           : '#{$titleimg}line.png';
+$left           : '#{$titleimg}strings_left.png';
+$right          : '#{$titleimg}strings_right.png';
+$angle          : '#{$titleimg}angle.svg';
 
-$bg         : $off-green-lightest;
-$line-pos   : 6;
-$string-pos : bottom;
-$grad-pos   : center;
-$line-break : base(30em);
+$bg             : $off-green-lightest;
+$line-pos       : 6;
+$string-pos     : bottom;
+$grad-pos       : center;
+$line-break     : base(30em);
 
-$line-start : image-width($line);
-$line-end   : 0;
+$line-start     : image-width($line);
+$line-end       : 0;
 
 @include keyframes(line) {
   0% { background-position: $line-start rhythm($line-pos); }
@@ -34,8 +35,9 @@ $line-end   : 0;
 #title {
   // --------------------------------------------
   // Page
-  @include background($bg $noise center);
-  @include background-image($noise, $title-grad);
+  @include background($bg $noise);
+  @include background($noise, $title-old, $bg);
+  background-image: $noise, $title-new;
 
   // --------------------------------------------
   // Main content

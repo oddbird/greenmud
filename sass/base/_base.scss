@@ -22,3 +22,29 @@ $experimental-support-for-svg           : true;
 $legacy-support-for-ie6                 : false;
 $legacy-support-for-ie7                 : false;
 $legacy-support-for-ie8                 : true;
+
+// ----------------------------------------------------------------------------
+// Temporary mod polyfill
+
+// Return the modulo of two numbers
+@function mod($dividend,$divisor) {
+  @return $dividend - (floor($dividend/$divisor)*$divisor);
+}
+
+// Return the corrected angle or position for a css gradient
+@function angle($deg) {
+  @if type-of($deg) == 'number' {
+    @return mod(abs($deg - 450), 360deg);
+  } @else {
+    $position: to + " ";
+    @each $pos in $deg {
+      $position: $position + opposite-position($pos) + " ";
+    }
+    @return $position;
+  }
+}
+
+// Return fixed linear gradient
+@function fix-linear($angle, $details...) {
+  @return linear-gradient(angle($angle), $details...);
+}

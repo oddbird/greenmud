@@ -1,22 +1,15 @@
 /* ----------------------------------------------------------------------------
    epigraph: cocorosie */
 
-$trans: rgba(0,0,0,0);
-
-@function grad() {
-  $one    : $trans;
-  $two    : rgba($darker,0);
-  $three  : rgba($off-blue-hint,.9);
-  $four   : $off-blue-light;
-  $split  : 50%;
-  $blur   : 0;
-  $angle  : 320deg;
-
-  @return linear-gradient($angle, $one, $two $split - $blur, $three $split + $blur, $four);
-}
-
 $bg           : $darkest;
-$fg-grad      : grad();
+
+$fg-angle     : 320deg;
+$fg-details   : rgba($off-blue-hint,0),
+                rgba($off-blue-hint,0) 50%,
+                rgba($off-blue-hint,.9) 50%,
+                rgba($off-blue-hint,.9);
+$fg-old       : linear-gradient($fg-angle, $fg-details...);
+$fg-new       : fix-linear($fg-angle, $fg-details...);
 
 $pg           : '#{$ch}epigraph/';
 $lightning    : image-url('#{$pg}lightning.png') no-repeat scroll center rhythm(-1);
@@ -46,7 +39,8 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
   .lightning {
     @include stretch;
     @include animation(lightning 10s infinite);
-    @include background($noise, $fg-grad, $lightning);
+    @include background($noise, $fg-old, $lightning);
+    background: $noise, $fg-new, $lightning;
   }
 
   blockquote {
