@@ -47,10 +47,6 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
     @include stretch;
     @include animation(lightning 10s infinite);
     @include background($noise, $fg-grad, $lightning);
-    .no-cssgradients & {
-      @include background($noise, $angle, $lightning);
-      @include background-size(auto,cover,auto);
-    }
   }
 
   blockquote {

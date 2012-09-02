@@ -36,10 +36,6 @@ $line-end   : 0;
   // Page
   @include background($bg $noise center);
   @include background-image($noise, $title-grad);
-  .no-cssgradients & {
-    @include background-image($noise, image-url($angle));
-    @include background-size(auto, cover);
-  }
 
   // --------------------------------------------
   // Main content
