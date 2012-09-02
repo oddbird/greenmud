@@ -1,3 +1,11 @@
+PATH
+  remote: ~/Sites/compass/
+  specs:
+    compass (0.13.alpha.1.d4db12f)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.2.0.alpha.93)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -8,10 +16,6 @@ GEM
       compass (>= 0.12.1)
       sass (>= 3.2.0)
     chunky_png (1.2.6)
-    compass (0.13.alpha.0)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.2.0.alpha.93)
     fssm (0.2.9)
     modular-scale (1.0.2)
       compass (>= 0.11.5)
@@ -30,7 +34,7 @@ DEPENDENCIES
   animate (~> 0.2.beta.0)
   breakpoint (~> 1.2)
   chunky_png (~> 1.2.6)
-  compass (~> 0.13.alpha.0)
+  compass (~> 0.13.alpha.1)!
   modular-scale (~> 1.0.2)
   sass (~> 3.2.1)
   susy (~> 1.0)
