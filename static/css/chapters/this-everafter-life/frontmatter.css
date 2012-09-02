@@ -31,8 +31,8 @@
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
 #titlepage [role="main"] { padding-top: 5em; text-align: center; text-transform: uppercase; }
-@media (min-height: 30em) { #titlepage [role="main"] { padding-top: 7.5em; } }
-@media (min-height: 40em) { #titlepage [role="main"] { padding-top: 13.75em; } }
+@media (min-height: 25em) { #titlepage [role="main"] { padding-top: 10em; padding-bottom: 1; } }
+@media (min-height: 50em) { #titlepage [role="main"] { padding-top: 15em; padding-bottom: 2; } }
 #titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
 #titlepage h2 { font-weight: bold; }
 @media (min-width: 40em) { #titlepage h1 { font-size: 2.25em; line-height: 1.11111em; }

@@ -24,8 +24,8 @@
 
 #home .license, #about .license, #title a:link, #title a:visited, #copyright a:link, #copyright a:visited, #copyright h1, #copyright strong, #thanks h1 { text-transform: uppercase; }
 
-#dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: 0.79167em; line-height: 1.57895em; }
-@media (min-width: 35em) { #dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
+#dedication h1, #dedication p, #contents li, #epigraph blockquote, #fourohfour blockquote { font-size: 0.79167em; line-height: 1.57895em; }
+@media (min-width: 35em) { #dedication h1, #dedication p, #contents li, #epigraph blockquote, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
 
 #home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1 { font-size: 1.5em; line-height: 1.25em; }
 #home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1, #home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-weight: bold; color: #404040; }
@@ -74,7 +74,7 @@
 #home [role="banner"]:hover h2, #about [role="banner"]:hover h2 { -webkit-animation: hinge 1.5s 10s ease both; -moz-animation: hinge 1.5s 10s ease both; -ms-animation: hinge 1.5s 10s ease both; -o-animation: hinge 1.5s 10s ease both; animation: hinge 1.5s 10s ease both; }
 #home .template, #about .template { background: #edf6ed url('../../images/noise.png?1340400763') repeat scroll; background: url('../../images/noise.png?1340400763'), -webkit-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1340400763'), -moz-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1340400763'), -o-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1340400763'), -ms-linear-gradient(bottom left, #ffffe5, #edf6ed); background: url('../../images/noise.png?1340400763'), linear-gradient(bottom left, #ffffe5, #edf6ed); }
 #home [role="main"], #about [role="main"] { padding-top: 1.25em; padding-bottom: 1.25em; }
-#home [role="contentinfo"], #about [role="contentinfo"] { border-top-style: solid; border-top-width: 0.08333em; padding-top: 0.54167em; padding-bottom: 1.875em; border-color: #404040; color: #606060; }
+#home [role="contentinfo"], #about [role="contentinfo"] { border-top-style: solid; border-top-width: 0.08333em; padding-top: 0.54167em; padding-bottom: 0.625em; border-color: #404040; color: #606060; }
 #home [role="contentinfo"] a:link, #about [role="contentinfo"] a:link, #home [role="contentinfo"] a:visited, #about [role="contentinfo"] a:visited { color: #606060; }
 #home [role="contentinfo"] a:hover, #about [role="contentinfo"] a:hover, #home [role="contentinfo"] a:focus, #about [role="contentinfo"] a:focus, #home [role="contentinfo"] a:active, #about [role="contentinfo"] a:active { color: #404040; }
 #home .license, #about .license { font-size: 0.79167em; line-height: 2.36842em; }
@@ -87,7 +87,7 @@
   #home .social, #about .social { float: right; margin-right: 0; text-align: right; }
   #home .social a, #about .social a { text-align: left; } }
 
-#home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer, #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited, #title .wrap1, #copyright h1, #dedication [role="main"], #dedication h1, #dedication p, #contents li, #fourohfour [role="main"], #fourohfour h1, #fourohfour blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer, #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited, #title .wrap1, #copyright h1, #dedication [role="main"], #dedication h1, #dedication p, #contents [role="main"], #contents li, #epigraph blockquote, #fourohfour [role="main"], #fourohfour h1, #fourohfour blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
 .enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -ms-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
 
@@ -117,60 +117,30 @@ html { background: #eaead4 url('../../images/noise.png?1340400763'); }
 .warning { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border-style: solid; border-width: 0.08333em; padding: 0.54167em; background: #ffbfbf; }
 
 /* ---------------------------------------------------------------------------- title: Into the Green Green Mud */
-@-moz-keyframes line1 { 0% { background-position: 1200px 7.5em; }
+@-moz-keyframes line { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-webkit-keyframes line1 { 0% { background-position: 1200px 7.5em; }
+@-webkit-keyframes line { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-o-keyframes line1 { 0% { background-position: 1200px 7.5em; }
+@-o-keyframes line { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-ms-keyframes line1 { 0% { background-position: 1200px 7.5em; }
+@-ms-keyframes line { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@keyframes line1 { 0% { background-position: 1200px 7.5em; }
+@keyframes line { 0% { background-position: 1200px 7.5em; }
   100% { background-position: 0 7.5em; } }
 
-@-moz-keyframes line2 { 0% { background-position: 1200px 11.25em; }
-  100% { background-position: 0 11.25em; } }
-
-@-webkit-keyframes line2 { 0% { background-position: 1200px 11.25em; }
-  100% { background-position: 0 11.25em; } }
-
-@-o-keyframes line2 { 0% { background-position: 1200px 11.25em; }
-  100% { background-position: 0 11.25em; } }
-
-@-ms-keyframes line2 { 0% { background-position: 1200px 11.25em; }
-  100% { background-position: 0 11.25em; } }
-
-@keyframes line2 { 0% { background-position: 1200px 11.25em; }
-  100% { background-position: 0 11.25em; } }
-
-@-moz-keyframes line3 { 0% { background-position: 1200px 17.5em; }
-  100% { background-position: 0 17.5em; } }
-
-@-webkit-keyframes line3 { 0% { background-position: 1200px 17.5em; }
-  100% { background-position: 0 17.5em; } }
-
-@-o-keyframes line3 { 0% { background-position: 1200px 17.5em; }
-  100% { background-position: 0 17.5em; } }
-
-@-ms-keyframes line3 { 0% { background-position: 1200px 17.5em; }
-  100% { background-position: 0 17.5em; } }
-
-@keyframes line3 { 0% { background-position: 1200px 17.5em; }
-  100% { background-position: 0 17.5em; } }
-
-#title { background: #d4ead4 url('../../images/noise.png?1340400763') center; background-image: url('../../images/noise.png?1340400763'), -webkit-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), -moz-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), -o-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), -ms-linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), linear-gradient(top left, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); }
+#title { background: #d4ead4 url('../../images/noise.png?1340400763') center; background-image: url('../../images/noise.png?1340400763'), -webkit-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), -moz-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), -o-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), -ms-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); background-image: url('../../images/noise.png?1340400763'), linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4); }
 .no-cssgradients #title { background-image: url('../../images/noise.png?1340400763'), url('../../images/frontmatter/titlepage/angle.svg?1344640499'); -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; }
-@media (min-width: 30em) { #title [role="main"] { -webkit-animation: line1 30s linear infinite both; -moz-animation: line1 30s linear infinite both; -ms-animation: line1 30s linear infinite both; -o-animation: line1 30s linear infinite both; animation: line1 30s linear infinite both; background: url('../../images/frontmatter/titlepage/line.png?1340400763') repeat-x scroll 1200px 7.5em; } }
-@media (min-width: 30em) and (min-height: 32em) { #title [role="main"] { -webkit-animation-name: line2; -moz-animation-name: line2; -ms-animation-name: line2; -o-animation-name: line2; animation-name: line2; background-position: 1200px 11.25em; } }
-@media (min-width: 30em) and (min-height: 50em) { #title [role="main"] { -webkit-animation-name: line3; -moz-animation-name: line3; -ms-animation-name: line3; -o-animation-name: line3; animation-name: line3; background-position: 1200px 17.5em; } }
-#title .wrap1 { padding-top: 1.875em; padding-bottom: 1.25em; background: url('../../images/frontmatter/titlepage/strings_left.png?1340400763') no-repeat scroll -376.5px bottom, url('../../images/frontmatter/titlepage/strings_right.png?1340400763') no-repeat scroll 947.5px bottom; }
-@media (min-width: 50em) { #title .wrap1 { background-position: left bottom, right bottom; } }
-@media (min-height: 32em) { #title .wrap1 { padding-top: 5.625em; } }
-@media (min-height: 50em) { #title .wrap1 { padding-top: 11.875em; } }
+#title [role="main"] { -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -ms-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; }
+@media (min-height: 31.25em) { #title [role="main"] { padding-top: 3.75em; padding-bottom: 1; } }
+@media (min-height: 50em) { #title [role="main"] { padding-top: 7.5em; padding-bottom: 2; } }
+@media (min-height: 62.5em) { #title [role="main"] { padding-top: 15em; padding-bottom: 4; } }
+@media (min-width: 45em) { #title [role="main"] { -webkit-animation: line 30s linear infinite both; -moz-animation: line 30s linear infinite both; -ms-animation: line 30s linear infinite both; -o-animation: line 30s linear infinite both; animation: line 30s linear infinite both; background: url('../../images/frontmatter/titlepage/line.png?1340400763') repeat-x scroll 1200px 7.5em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; } }
+#title .wrap1 { padding-top: 1.25em; padding-bottom: 1.25em; background: url('../../images/frontmatter/titlepage/strings_left.png?1340400763') no-repeat scroll -376.5px bottom, url('../../images/frontmatter/titlepage/strings_right.png?1340400763') no-repeat scroll 947.5px bottom; }
+@media (min-width: 45em) { #title .wrap1 { background-position: left bottom, right bottom; } }
 #title .wrap2 { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; color: #404040; text-align: center; }
 #title .wrap2:after { content: ""; display: table; clear: both; }
 #title h1, #title h2 { font-weight: bold; }
@@ -197,8 +167,7 @@ html { background: #eaead4 url('../../images/noise.png?1340400763'); }
 #dedication { background: #ffcc99 url('../../images/frontmatter/scribble.png?1345166290') no-repeat -4.375em -4.375em; background-image: url('../../images/frontmatter/scribble.png?1345166290'), url('../../images/noise.png?1340400763'), -webkit-radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972); background-image: url('../../images/frontmatter/scribble.png?1345166290'), url('../../images/noise.png?1340400763'), -moz-radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972); background-image: url('../../images/frontmatter/scribble.png?1345166290'), url('../../images/noise.png?1340400763'), -o-radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972); background-image: url('../../images/frontmatter/scribble.png?1345166290'), url('../../images/noise.png?1340400763'), -ms-radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972); background-image: url('../../images/frontmatter/scribble.png?1345166290'), url('../../images/noise.png?1340400763'), radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972); background-repeat: no-repeat, repeat; background-position: -4.375em -4.375em, 0, 0; color: #606060; }
 #dedication [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; padding-bottom: 0.625em; }
 #dedication [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 25em) { #dedication [role="main"] { padding-top: 5em; } }
-@media (min-height: 35em) { #dedication [role="main"] { padding-top: 7.5em; } }
+@media (min-height: 25em) { #dedication [role="main"] { padding-top: 7.5em; padding-bottom: 1; } }
 #dedication h1 { font-weight: bold; }
 #dedication p { margin-bottom: 1.25em; }
 
@@ -207,6 +176,7 @@ html { background: #eaead4 url('../../images/noise.png?1340400763'); }
 #contents [role="main"] { max-width: 15em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
 #contents [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-width: 48em) { #contents [role="main"] { max-width: 31em; } }
+@media (min-height: 37.5em) { #contents [role="main"] { padding-top: 5em; padding-bottom: 1; } }
 #contents a:link, #contents a:visited { color: #7f4000; }
 #contents a:hover, #contents a:focus, #contents a:active { color: #ff8000; }
 #contents li:before { color: #81813e; }
@@ -290,13 +260,9 @@ html { background: #eaead4 url('../../images/noise.png?1340400763'); }
   54% { background-position: top left, top left, 62.5em -6.25em; } }
 
 #epigraph { background: #202020 url('../../images/noise.png?1340400763'); position: relative; }
-@media (min-height: 30em) { #epigraph [role="main"] { padding-top: 3.75em; } }
-@media (min-height: 40em) { #epigraph [role="main"] { padding-top: 6.25em; } }
-@media (min-height: 50em) { #epigraph [role="main"] { padding-top: 12.5em; } }
 #epigraph .lightning { position: absolute; top: 0; bottom: 0; left: 0; right: 0; -webkit-animation: lightning 10s infinite; -moz-animation: lightning 10s infinite; -ms-animation: lightning 10s infinite; -o-animation: lightning 10s infinite; animation: lightning 10s infinite; background: url('../../images/noise.png?1340400763'), -webkit-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), -moz-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), -o-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), -ms-linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; background: url('../../images/noise.png?1340400763'), linear-gradient(320deg, rgba(0, 0, 0, 0), rgba(64, 64, 64, 0) 50%, rgba(237, 237, 246, 0.9) 50%, #a0a0d1), url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; }
 .no-cssgradients #epigraph .lightning { background: url('../../images/noise.png?1340400763'), url('../../images/frontmatter/epigraph/angle.svg?1344641700') no-repeat center, url('../../images/frontmatter/epigraph/lightning.png?1344558263') no-repeat scroll center -1.25em; -webkit-background-size: auto, cover, auto; -moz-background-size: auto, cover, auto; -o-background-size: auto, cover, auto; background-size: auto, cover, auto; }
-#epigraph blockquote { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; margin-top: 0em; padding-top: 0.625em; padding-bottom: 0.625em; margin-bottom: 0em; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; -ms-border-radius: 0.5em; -o-border-radius: 0.5em; border-radius: 0.5em; -webkit-box-shadow: #404040 0 0 0.25em; -moz-box-shadow: #404040 0 0 0.25em; box-shadow: #404040 0 0 0.25em; position: relative; background: rgba(237, 237, 246, 0.95); }
-#epigraph blockquote:after { content: ""; display: table; clear: both; }
+#epigraph blockquote { padding: 1.25em; }
 
 /* ---------------------------------------------------------------------------- about */
 #about .vcard :first-line { font-size: 0.79167em; line-height: 1.57895em; font-weight: bold; text-transform: uppercase; }

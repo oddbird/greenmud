@@ -22,9 +22,7 @@ $lennon   : '#{$pg}lennon.png';
   [role="main"] {
     @extend %transition;
     @include container;
-    @include breakpoint(min-height 30em) { @include padding-leader(2.5); }
-    @include breakpoint(min-height 40em) { @include padding-leader(4); }
-    @include breakpoint(min-height 60em) { @include padding-leader(8); }
+    @include pagepad(30 3, 40 6);
   }
 
   blockquote {

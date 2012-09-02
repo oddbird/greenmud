@@ -1,13 +1,10 @@
 /* ----------------------------------------------------------------------------
    title: Into the Green Green Mud */
 
-$height1    : 32em;
-$height2    : 50em;
-
 $img        : 'frontmatter/';
 $scribble   : '#{$img}scribble.png';
 
-$title-grad : linear-gradient(top left,
+$title-grad : linear-gradient(330deg,
                 $pink-hint,
                 $pink-hint 50%,
                 $off-green-lightest 50%,
@@ -22,32 +19,21 @@ $angle      : '#{$titleimg}angle.svg';
 
 $bg         : $off-green-lightest;
 $line-pos   : 6;
-$line-pos2  : $line-pos + 3;
-$line-pos3  : $line-pos + 8;
 $string-pos : bottom;
 $grad-pos   : center;
+$line-break : base(30em);
 
 $line-start : image-width($line);
 $line-end   : 0;
 
-@include keyframes(line1) {
+@include keyframes(line) {
   0% { background-position: $line-start rhythm($line-pos); }
   100% { background-position: $line-end rhythm($line-pos); }
 }
 
-@include keyframes(line2) {
-  0% { background-position: $line-start rhythm($line-pos2); }
-  100% { background-position: $line-end rhythm($line-pos2); }
-}
-
-@include keyframes(line3) {
-  0% { background-position: $line-start rhythm($line-pos3); }
-  100% { background-position: $line-end rhythm($line-pos3); }
-}
-
 #title {
   // --------------------------------------------
-  // Page background
+  // Page
   @include background($bg $noise center);
   @include background-image($noise, $title-grad);
   .no-cssgradients & {
@@ -58,33 +44,24 @@ $line-end   : 0;
   // --------------------------------------------
   // Main content
   [role="main"] {
-    @include breakpoint(30em) {
-      @include animation(line1 30s linear infinite both);
-      background: image-url($line) repeat-x scroll $line-start rhythm($line-pos);
-      @include breakpoint(min-height $height1) {
-         @include animation-name(line2);
-         background-position: $line-start rhythm($line-pos2);
-      }
-      @include breakpoint(min-height $height2) {
-         @include animation-name(line3);
-         background-position: $line-start rhythm($line-pos3);
-      }
+    @include transition(padding 300ms);
+    @include pagepad(25 3 1, 40 6 2, 50 12 4);
+    @include breakpoint($line-break) {
+      @include animation(line 30s linear infinite both);
+      @include background(image-url($line) repeat-x scroll $line-start rhythm($line-pos));
+      @include background-origin(content-box);
     }
   }
 
   .wrap1 {
     @extend %transition;
-    @include padding-leader(1.5);
+    @include padding-leader;
     @include padding-trailer;
     @include background(
       image-url($left) no-repeat scroll (0 - image-width($left)*1.5) $string-pos,
       image-url($right) no-repeat scroll (50*16px + image-width($right)*.5) $string-pos
     );
-    @include breakpoint(50em) {
-      background-position: left $string-pos, right $string-pos;
-    }
-    @include breakpoint(min-height $height1) { @include padding-leader(1.5 + 3); }
-    @include breakpoint(min-height $height2) { @include padding-leader(1.5 + 8); }
+    @include breakpoint($line-break) { background-position: left $string-pos, right $string-pos; }
   }
 
   .wrap2 {

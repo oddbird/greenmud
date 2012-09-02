@@ -14,8 +14,10 @@ $bg-grad      : linear-gradient(260deg, $yellow-hint, $yellow-hint, $orange-ligh
   background-position: $scribble-pos, 0, 0;
 
   [role="main"] {
+    @extend %transition;
     @include container($total-columns, $toc-break $toc-cols*2);
     @include padding-leader(2);
+    @include pagepad(30 4 1);
   }
 
   a {

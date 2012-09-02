@@ -13,3 +13,8 @@ $link : '&:link, &:visited';
 $focus: '&:hover, &:focus, &:active';
 
 $jj-stack: "GreenMudJJRegular", sans-serif;
+
+// ---------------------------------------------------------------------------
+// Base Ems (wrapper)
+
+@function base($em,$from: $base-font-size) { @return round(absolute-ems($em,$from)); }

@@ -19,8 +19,7 @@ $bg-grad   : radial-gradient(center rhythm(6), $orange-lightest, $orange-lighter
     @include container($total-columns);
     @include padding-leader(2);
     @include padding-trailer(.5);
-    @include breakpoint(min-height 25em) { @include padding-leader(4); }
-    @include breakpoint(min-height 35em) { @include padding-leader(6); }
+    @include pagepad(20 6 1);
   }
 
   h1, p {

@@ -27,6 +27,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ---------------------------------------------------------------------------- root */
 html { font-size: 150%; line-height: 1.25em; }
 
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
 html { background: gray url('../images/noise.png?1340400763'); font-family: "GreenMudJJRegular", sans-serif; color: #606060; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
@@ -1352,14 +1354,14 @@ a:hover, a:focus, a:active { color: #0000bf; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -ms-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }
-#toc .wrap { max-width: 31em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
+#toc .wrap { max-width: 33em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
 #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
 .demo .page { background: #ffe5ff url('../images/noise.png?1340400763'); }
-.demo .content { max-width: 31em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; position: relative; }
+.demo .content { max-width: 33em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; padding-top: 2.5em; position: relative; }
 .demo .content:after { content: ""; display: table; clear: both; }
 .demo .content:before { font-size: 0.79167em; line-height: 1.57895em; margin-bottom: 1.57895em; -webkit-border-radius: 0.512em; -moz-border-radius: 0.512em; -ms-border-radius: 0.512em; -o-border-radius: 0.512em; border-radius: 0.512em; content: "This page has not been designed yet."; display: block; padding: 0 1em; background: #ddbadd; color: #ffe5ff; font-weight: bold; }
 

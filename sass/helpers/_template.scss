@@ -95,7 +95,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   [role="contentinfo"] {
     @include leading-border($border-width,.5);
-    @include padding-trailer(1.5);
+    @include padding-trailer(.5);
     border-color: $darker;
     color: $footer-color;
     a {

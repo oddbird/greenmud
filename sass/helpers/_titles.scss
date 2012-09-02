@@ -5,10 +5,9 @@
   [role="main"] {
     @extend %transition;
     @include padding-leader(4);
+    @include pagepad(20 8 1, 40 12 2);
     text-align: center;
     text-transform: uppercase;
-    @include breakpoint(min-height 30em) { @include padding-leader(6); }
-    @include breakpoint(min-height 40em) { @include padding-leader(11); }
   }
 
   h1 { @include adjust-font-size-to($largepx); }
