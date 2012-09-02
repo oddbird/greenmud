@@ -57,6 +57,7 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
     @extend %shrink;
     @extend %transition;
     padding: rhythm(1);
+    color: $light;
   }
 
 }
