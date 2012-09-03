@@ -48,9 +48,9 @@ $bggrad     : radial-gradient(25% top, circle,
   a {
     #{$link} {
       @include transition(color 900ms);
-      color: $green-dark;
+      color: $green-darker;
     }
-    #{$focus} { color: $pink; }
+    #{$focus} { color: $pink-darker; }
   }
 
   @include at-breakpoint($break) {

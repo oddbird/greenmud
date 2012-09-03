@@ -85,6 +85,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   // main ---------------//
   .template {
+    @include back($temp-bg);
     @include background($noise-layer, $temp-old, $temp-bg);
     background: $noise-layer, $temp-new, $temp-bg; // @@@ gradient fix
   }

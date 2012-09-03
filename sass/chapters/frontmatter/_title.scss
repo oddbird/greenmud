@@ -4,13 +4,13 @@
 $img            : 'frontmatter/';
 $scribble       : '#{$img}scribble.png';
 
-$title-angle    : 330deg;
+$title-angle    : 5% 0%;
 $title-details  : $pink-hint,
                   $pink-hint 50%,
                   $off-green-lightest 50%,
                   $off-green-lightest;
 $title-old      : linear-gradient($title-angle, $title-details);
-$title-new      : fix-linear($title-angle, $title-details);
+$title-new      : linear-gradient(120deg, $title-details);
 
 $titleimg       : '#{$img}titlepage/';
 $line           : '#{$titleimg}line.png';

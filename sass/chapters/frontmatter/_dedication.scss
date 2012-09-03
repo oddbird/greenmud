@@ -4,9 +4,10 @@
 $total-columns    : 6;
 
 $bg               : $orange-lighter;
-$bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-lighter, $orange-light);
+$bg-grad          : radial-gradient(center rhythm(6), ellipse, $orange-lightest, $orange-lighter, $orange-light);
 
 #dedication {
+  @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
 
   [role="main"] {

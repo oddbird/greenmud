@@ -4,13 +4,14 @@
 $total-columns: $toc-cols;
 
 $bg           : $yellow-hint;
-$bg-angle     : 260deg;
+$bg-angle     : 55% 0%;
 $bg-details   : $yellow-hint, $yellow-hint, $orange-lightest;
 $bg-old       : linear-gradient($bg-angle, $bg-details);
-$bg-new       : fix-linear($bg-angle, $bg-details);
+$bg-new       : linear-gradient(190deg, $bg-details);
 
 #contents {
   @extend %toc-counter;
+  @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);
   background: $scribble-layer, $noise-layer, $bg-new, $bg;
 
