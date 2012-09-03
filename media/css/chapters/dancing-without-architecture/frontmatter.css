@@ -27,46 +27,39 @@
 @-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-@-ms-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
-
 @keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-#titlepage [role="main"] { padding-top: 5em; text-align: center; text-transform: uppercase; }
-@media (min-height: 30em) { #titlepage [role="main"] { padding-top: 7.5em; } }
-@media (min-height: 40em) { #titlepage [role="main"] { padding-top: 13.75em; } }
+#titlepage [role="main"] { padding-top: 3.75em; text-align: center; text-transform: uppercase; color: #404040; }
+@media (min-height: 28em) { #titlepage [role="main"] { padding-top: 7.5em; padding-bottom: 1; } }
 #titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
 #titlepage h2 { font-weight: bold; }
 @media (min-width: 40em) { #titlepage h1 { font-size: 2.25em; line-height: 1.11111em; }
   #titlepage h2 { margin-bottom: 0.625em; } }
 
-#titlepage [role="main"], #titlepage h1, #titlepage h2, #epigraph [role="main"], #epigraph blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -ms-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#titlepage [role="main"], #titlepage h1, #titlepage h2, #epigraph [role="main"], #epigraph blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
-.enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -ms-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
+.enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
 
-.exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -ms-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
+.exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #bfbfff url('../../../images/noise.png?1340400763'); background-image: url('../../../images/noise.png?1340400763'), -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), -ms-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); background-image: url('../../../images/noise.png?1340400763'), linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)); }
+html { background: #bfbfff url('../../../images/noise.png?1340400763'); background: url('../../../images/noise.png?1340400763') repeat 0, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjEwMCUiIHkxPSI5MCUiIHgyPSIwJSIgeTI9IjEwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAyNTUsIDAuMjUpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE1MywgMTUzLCAyNTUsIDApIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), #bfbfff; background: url('../../../images/noise.png?1340400763') repeat 0, -webkit-linear-gradient(100% 90%, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1340400763') repeat 0, -moz-linear-gradient(100% 90%, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1340400763') repeat 0, -o-linear-gradient(100% 90%, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1340400763') repeat 0, linear-gradient(100% 90%, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1340400763') repeat 0, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
 
-.enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; }
+.enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; }
 
-.exit-prev, .exit-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -ms-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; }
+.exit-prev, .exit-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; }
 
-.enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -ms-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
+.enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
 /* ---------------------------------------------------------------------------- epigraph: john lennon */
-#epigraph { background: -webkit-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -moz-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -o-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -ms-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; }
+#epigraph { background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUxJSIgeTE9IjEwMCUiIHgyPSI0OSUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsIDIwNCwgMTUzLCAwLjc1KSIvPjxzdG9wIG9mZnNldD0iMTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwgMjU1LCAxOTEsIDAuNzUpIi8+PHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9InJnYmEoMjU1LCAyNTUsIDE1MywgMC41KSIvPjxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwgMjU1LCAxNTMsIDAuMjUpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwgMjU1LCAxNTMsIDApIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g') bottom right; background: -webkit-linear-gradient(51% 100%, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -moz-linear-gradient(51% 100%, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -o-linear-gradient(51% 100%, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(51% 100%, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(355deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; }
 #epigraph [role="main"] { max-width: 31em; margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 30em) { #epigraph [role="main"] { padding-top: 3.125em; } }
-@media (min-height: 40em) { #epigraph [role="main"] { padding-top: 5em; } }
-@media (min-height: 60em) { #epigraph [role="main"] { padding-top: 10em; } }
+@media (min-height: 28em) { #epigraph [role="main"] { padding-top: 4.375em; padding-bottom: 1; } }
 #epigraph blockquote { padding-top: 5.625em; background: url('../../../images/dancing/epigraph/lennon.png?1346397390') no-repeat scroll center top; padding-left: 12.90323%; }
 @media (min-width: 22.5em) { #epigraph blockquote { padding-left: 26.66667%; } }
 @media (min-width: 28.5em) { #epigraph blockquote { padding-left: 42.10526%; } }
 @media (min-width: 34.5em) { #epigraph blockquote { padding-left: 52.17391%; } }
 
 /* ---------------------------------------------------------------------------- titlepage */
-#titlepage { color: #404040; }
