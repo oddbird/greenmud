@@ -12,9 +12,15 @@ $ch: 'dancing/';
 /* ----------------------------------------------------------------------------
    general */
 
+$bg         : $blue-lightest;
+$bg-angle   : 120deg;
+$bg-details : rgba($blue,.25), rgba($blue-lighter,0);
+$bg-old     : linear-gradient($bg-angle, $bg-details);
+$bg-new     : fix-linear($bg-angle, $bg-details);
+
 html {
-  @include background($blue-lightest $noise);
-  @include background-image($noise, linear-gradient(120deg, rgba($blue,.25), rgba($blue-lighter,0)));
+  @include background($noise-layer, $bg-old, $bg);
+  background: $noise-layer, $bg-new, $bg;
 }
 
 @include pageturn(
@@ -31,7 +37,4 @@ html {
 /* ----------------------------------------------------------------------------
   titlepage */
 
-#titlepage {
-  @extend %booktitle;
-  color: $darker;
-}
+#titlepage { @extend %booktitle; }

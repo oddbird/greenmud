@@ -7,10 +7,16 @@ $template-break : 10;
 $toc-break: 32em;
 $toc-cols: 4;
 
-$bg-color       : $off-green-hint;
+$bg             : $off-green-lightest;
 $noise          : image-url('noise.png');
-$background     : $bg-color $noise;
+$noise-layer    : $noise repeat 0;
 $border-width   : 2px;
+
+$temp-bg        : $off-green-hint;
+$temp-angle     : bottom left;
+$temp-details   : $yellow-hint, $off-green-hint;
+$temp-old       : linear-gradient($temp-angle, $temp-details);
+$temp-new       : fix-linear($temp-angle, $temp-details);
 
 $imgs     : 'frontmatter/';
 $burst    : '#{$imgs}burst.png';
@@ -35,8 +41,8 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 }
 
 %template {
+  @include back($bg);
   @include text-shadow(rgba($white,$small) 0 1px 1px);
-  @include background($off-green-lightest $noise);
   b {
     font-weight: bold;
     white-space: nowrap;
@@ -79,10 +85,8 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
   // main ---------------//
   .template {
-    @include background($background repeat scroll);
-    @include background($noise,
-      linear-gradient(bottom left, $yellow-hint, $off-green-hint)
-    );
+    @include background($noise-layer, $temp-old, $temp-bg);
+    background: $noise-layer, $temp-new, $temp-bg; // @@@ gradient fix
   }
   [role="main"] {
     @include padding-leader;

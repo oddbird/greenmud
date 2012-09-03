@@ -8,6 +8,7 @@
     @include pagepad(20 8 1, 40 12 2);
     text-align: center;
     text-transform: uppercase;
+    color: $darker;
   }
 
   h1 { @include adjust-font-size-to($largepx); }

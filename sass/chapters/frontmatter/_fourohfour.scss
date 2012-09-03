@@ -14,8 +14,8 @@ $bggrad     : radial-gradient(25% top, circle,
               );
 
 #fourohfour {
-  @include background($bgcolor $noise);
-  @include background($noise, $bggrad $bgcolor);
+  @include background($bgcolor $noise-layer);
+  @include background($noise-layer, $bggrad, $bgcolor);
 
   [role="main"] {
     @extend %transition;

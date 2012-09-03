@@ -4,14 +4,15 @@
 $total-columns: $toc-cols;
 
 $bg           : $yellow-hint;
-$bg-grad      : linear-gradient(260deg, $yellow-hint, $yellow-hint, $orange-lightest);
+$bg-angle     : 260deg;
+$bg-details   : $yellow-hint, $yellow-hint, $orange-lightest;
+$bg-old       : linear-gradient($bg-angle, $bg-details);
+$bg-new       : fix-linear($bg-angle, $bg-details);
 
 #contents {
   @extend %toc-counter;
-  @include background($bg image-url($scribble) no-repeat $scribble-pos);
-  @include background-image(image-url($scribble), $noise, $bg-grad);
-  background-repeat: no-repeat, repeat;
-  background-position: $scribble-pos, 0, 0;
+  @include background($scribble-layer, $noise-layer, $bg-old, $bg);
+  background: $scribble-layer, $noise-layer, $bg-new, $bg;
 
   [role="main"] {
     @extend %transition;

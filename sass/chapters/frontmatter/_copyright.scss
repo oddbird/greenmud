@@ -9,14 +9,17 @@ $color          : $off-red-hint;
 $shadow-color   : $red-darker;
 $shadow         : $shadow-color 1px 1px 0;
 
-$bg-grad        : linear-gradient(top, rgba($highlight,.25), rgba($highlight,0));
+$bg-angle       : top;
+$bg-details     : rgba($highlight,.375), rgba($highlight,0);
+$bg-old         : linear-gradient($bg-angle, $bg-details);
+$bg-new         : fix-linear($bg-angle, $bg-details);
+
 $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
+$scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 
 #copyright {
-  @include background($bg image-url($scribble) no-repeat $scribble-pos);
-  @include background-image(image-url($scribble), $noise, $bg-grad);
-  background-repeat: no-repeat, repeat;
-  background-position: $scribble-pos, 0, 0;
+  @include background($scribble-layer, $noise-layer, $bg-old, $bg);
+  background: $scribble-layer, $noise-layer, $bg-new, $bg;
   color: $color;
   overflow: hidden;
 

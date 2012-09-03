@@ -35,9 +35,8 @@ $line-end       : 0;
 #title {
   // --------------------------------------------
   // Page
-  @include background($bg $noise);
-  @include background($noise, $title-old, $bg);
-  background-image: $noise, $title-new;
+  @include background($noise-layer, $title-old, $bg);
+  background: $noise-layer, $title-new, $bg;
 
   // --------------------------------------------
   // Main content

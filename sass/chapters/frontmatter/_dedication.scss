@@ -1,18 +1,13 @@
 /* ----------------------------------------------------------------------------
    dedication */
 
-$total-columns: 6;
+$total-columns    : 6;
 
-$bg     : $orange-lighter;
-$color  : $base;
-$bg-grad   : radial-gradient(center rhythm(6), $orange-lightest, $orange-lighter, $orange-light);
+$bg               : $orange-lighter;
+$bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-lighter, $orange-light);
 
 #dedication {
-  @include background($bg image-url($scribble) no-repeat $scribble-pos);
-  @include background-image(image-url($scribble), $noise, $bg-grad);
-  background-repeat: no-repeat, repeat;
-  background-position: $scribble-pos, 0, 0;
-  color: $color;
+  @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
 
   [role="main"] {
     @extend %transition;

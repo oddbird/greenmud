@@ -21,13 +21,13 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
     background-position: $default-pos, $default-pos, center rhythm(-1);
   }
   50%{
-    background-position: $default-pos, $default-pos, rhythm(-3) rhythm(-10);
+    background-position: $default-pos, rhythm(-3) rhythm(-10);
   }
   52%, 56% {
-    background-position: $default-pos, $default-pos, center rhythm(-3);
+    background-position: $default-pos, center rhythm(-3);
   }
   54% {
-    background-position: $default-pos, $default-pos, rhythm(50) rhythm(-5);
+    background-position: $default-pos, rhythm(50) rhythm(-5);
   }
 }
 
@@ -39,8 +39,8 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
   .lightning {
     @include stretch;
     @include animation(lightning 10s infinite);
-    @include background($noise, $fg-old, $lightning);
-    background: $noise, $fg-new, $lightning;
+    @include background($fg-old, $lightning);
+    background: $fg-new, $lightning;
   }
 
   blockquote {

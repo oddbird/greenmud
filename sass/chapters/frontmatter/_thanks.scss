@@ -4,7 +4,11 @@
 $total-columns  : 6;
 
 $bg           : $off-green-lightest;
-$bg-grad      : linear-gradient(top left, $yellow-hint, $off-green-lightest);
+
+$bg-angle     : top left;
+$bg-details   : $yellow-hint, $off-green-lightest;
+$bg-old       : linear-gradient($bg-angle, $bg-details);
+$bg-new       : fix-linear($bg-angle, $bg-details);
 
 $pg           : '#{$ch}thanks/';
 $balloons     : image-url('#{$pg}balloon1.png'),
@@ -14,9 +18,6 @@ $balloons     : image-url('#{$pg}balloon1.png'),
                 image-url('#{$pg}balloon5.png'),
                 image-url('#{$pg}balloon6.png'),
                 image-url('#{$pg}balloon7.png');
-
-$scribble     : image-url($scribble) no-repeat $scribble-pos;
-;
 
 @include keyframes(balloons) {
   0% {
@@ -36,8 +37,8 @@ $scribble     : image-url($scribble) no-repeat $scribble-pos;
 
 #thanks {
   @extend %type;
-  @include background($bg $scribble);
-  @include background($scribble, $noise repeat, $bg-grad repeat);
+  @include background($scribble-layer, $noise-layer, $bg-old, $bg);
+  background: $scribble-layer, $noise-layer, $bg-new, $bg;
   overflow: hidden;
 
   h1, h2 { font-weight: bold; }

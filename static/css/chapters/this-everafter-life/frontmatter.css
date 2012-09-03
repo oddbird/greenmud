@@ -27,7 +27,7 @@
 @keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
-#titlepage [role="main"] { padding-top: 5em; text-align: center; text-transform: uppercase; }
+#titlepage [role="main"] { padding-top: 5em; text-align: center; text-transform: uppercase; color: #404040; }
 @media (min-height: 25em) { #titlepage [role="main"] { padding-top: 10em; padding-bottom: 1; } }
 @media (min-height: 50em) { #titlepage [role="main"] { padding-top: 15em; padding-bottom: 2; } }
 #titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
