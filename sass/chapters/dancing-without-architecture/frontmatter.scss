@@ -13,13 +13,12 @@ $ch: 'dancing/';
    general */
 
 $bg         : $blue-lightest;
-$bg-angle   : 100% 90%;
+$bg-angle   : 120deg;
 $bg-details : rgba($blue,.25), rgba($blue-lighter,0);
 $bg-old     : linear-gradient($bg-angle, $bg-details);
-$bg-new     : linear-gradient(330deg, $bg-details);
+$bg-new     : fix-linear($bg-angle, $bg-details);
 
 html {
-  @include back($bg);
   @include background($noise-layer, $bg-old, $bg);
   background: $noise-layer, $bg-new, $bg;
 }

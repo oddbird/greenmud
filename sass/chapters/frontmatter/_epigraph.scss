@@ -3,13 +3,13 @@
 
 $bg           : $darkest;
 
-$fg-angle     : 5% 0%;
+$fg-angle     : 320deg;
 $fg-details   : rgba($off-blue-hint,0),
                 rgba($off-blue-hint,0) 50%,
                 rgba($off-blue-hint,.9) 50%,
                 rgba($off-blue-hint,.9);
 $fg-old       : linear-gradient($fg-angle, $fg-details...);
-$fg-new       : linear-gradient(130deg, $fg-details...);
+$fg-new       : fix-linear($fg-angle, $fg-details...);
 
 $pg           : '#{$ch}epigraph/';
 $lightning    : image-url('#{$pg}lightning.png') no-repeat scroll center rhythm(-1);

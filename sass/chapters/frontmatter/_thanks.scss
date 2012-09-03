@@ -37,7 +37,6 @@ $balloons     : image-url('#{$pg}balloon1.png'),
 
 #thanks {
   @extend %type;
-  @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);
   background: $scribble-layer, $noise-layer, $bg-new, $bg;
   overflow: hidden;

@@ -18,7 +18,6 @@ $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 
 #copyright {
-  @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);
   background: $scribble-layer, $noise-layer, $bg-new, $bg;
   color: $color;
