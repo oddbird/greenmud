@@ -59,7 +59,7 @@ description   : 'Book 1: Dancing Without Architecture.'
 -->
 
 <!-- meta
-body_class    :
+body_class:
 -->
 
 ## Book 1
@@ -87,13 +87,20 @@ chapter       : 'In Which JJ.'
 description   : 'Chapter 1: In Which JJ.'
 
 voice         : jj
-extra_styles  :
+-->
+
+<!-- meta
+body_class:
 -->
 
 ## Chapter 1
 # In Which JJ.
 
 ------
+
+<!-- meta
+body_class:
+-->
 
 > Once upon a Sunday raining afternoon      <br />
   stood a man without a spoon,              <br />
@@ -106,7 +113,7 @@ extra_styles  :
   surely squirrelly be my friend            <br />
   and that’s just how this song must end.
 
-[pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot]
+<p class="pitpot">[pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot]</p>
 
 ------
 
