@@ -39,6 +39,7 @@ $balloons     : image-url('#{$pg}balloon1.png'),
   @extend %type;
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);
   background: $scribble-layer, $noise-layer, $bg-new, $bg;
+  position: relative;
   overflow: hidden;
 
   h1, h2 { font-weight: bold; }
@@ -89,43 +90,43 @@ $balloons     : image-url('#{$pg}balloon1.png'),
           @if $i == 1 { // RED
             @include animation-delay(2s);
             @include animation-duration(18s);
-            top: 0%;
+            top: rhythm(1);
             left: 80%;
           }
           @if $i == 2 { // ORANGE
             @include animation-delay(0s);
             @include animation-duration(10s);
-            top: 12%;
+            top: rhythm(8);
             right: 87%;
           }
           @if $i == 3 { // YELLOW
             @include animation-delay(6s);
             @include animation-duration(15s);
-            top: 32%;
+            top: rhythm(12);
             left: 75%;
           }
           @if $i == 4 { // GREEN
             @include animation-delay(3s);
             @include animation-duration(12s);
-            top: 40%;
+            top: rhythm(18);
             right: 79%;
           }
           @if $i == 5 {
             @include animation-delay(8s);
             @include animation-duration(20s);
-            top: 64%;
+            top: rhythm(28);
             left: 90%;
           }
           @if $i == 6 {
             @include animation-delay(10s);
             @include animation-duration(15s);
-            top: 78%;
+            top: rhythm(36);
             right: 92%;
           }
           @if $i == 7 {
             @include animation-delay(12s);
             @include animation-duration(10s);
-            top: 96%;
+            top: rhythm(42);
             left: 78%;
           }
         }

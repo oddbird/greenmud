@@ -12,13 +12,13 @@ $fg-old       : linear-gradient($fg-angle, $fg-details...);
 $fg-new       : fix-linear($fg-angle, $fg-details...);
 
 $pg           : '#{$ch}epigraph/';
-$lightning    : image-url('#{$pg}lightning.png') no-repeat scroll center rhythm(-1);
-$default-pos  : top left;
+$lightning    : image-url('#{$pg}lightning.png') no-repeat scroll 50% rhythm(-1);
 $angle        : image-url('#{$pg}angle.svg') no-repeat center;
+$default-pos  : top left;
 
 @include keyframes(lightning) {
   0%, 49%, 51%, 53%, 55%, 57%, 100% {
-    background-position: $default-pos, $default-pos, center rhythm(-1);
+    background-position: $default-pos, center rhythm(-1);
   }
   50%{
     background-position: $default-pos, rhythm(-3) rhythm(-10);
@@ -38,9 +38,14 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
 
   .lightning {
     @include stretch;
-    @include animation(lightning 10s infinite);
+    @include animation(lightning 10s infinite both);
+    @include background($lightning);
     @include background($fg-old, $lightning);
     background: $fg-new, $lightning;
+    .no-cssgradients & {
+      @include background($angle, $lightning);
+      @include background-size(cover, auto);
+    }
   }
 
   blockquote {

@@ -19,6 +19,7 @@ $bg-old     : linear-gradient($bg-angle, $bg-details);
 $bg-new     : fix-linear($bg-angle, $bg-details);
 
 html {
+  @include back($bg);
   @include background($noise-layer, $bg-old, $bg);
   background: $noise-layer, $bg-new, $bg;
 }

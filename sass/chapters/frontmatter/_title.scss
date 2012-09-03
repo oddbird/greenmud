@@ -18,6 +18,8 @@ $left           : '#{$titleimg}strings_left.png';
 $right          : '#{$titleimg}strings_right.png';
 $angle          : '#{$titleimg}angle.svg';
 
+$angle-layer    : image-url($angle) no-repeat scroll center;
+
 $bg             : $off-green-lightest;
 $line-pos       : 52%;
 $string-pos     : bottom;
@@ -33,8 +35,13 @@ $line-end       : 0;
 }
 
 #title {
+  @include back($bg);
   @include background($noise-layer, $title-old, $bg);
   background: $noise-layer, $title-new, $bg;
+  .no-cssgradients & {
+    @include background($noise-layer, $angle-layer);
+    @include background-size(auto, cover);
+  }
 
   // --------------------------------------------
   // Main content

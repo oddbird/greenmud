@@ -11,6 +11,7 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
 
 #contents {
   @extend %toc-counter;
+  @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);
   background: $scribble-layer, $noise-layer, $bg-new, $bg;
 
