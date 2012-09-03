@@ -25,8 +25,7 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 
   [role="main"] {
     @include container;
-    @include padding-leader(2);
-    @include padding-trailer(2);
+    @include rhythm-padding(2,0);
     @include text-shadow($shadow);
     text-align: center;
   }

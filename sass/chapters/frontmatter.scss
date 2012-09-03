@@ -12,7 +12,7 @@ $ch: 'frontmatter/';
 /* ----------------------------------------------------------------------------
    general */
 
-html { @include back($off-yellow-lightest); }
+html { @include back($off-green-lightest); }
 
 @include pageturn(
   '%fadeIn',

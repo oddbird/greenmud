@@ -19,7 +19,7 @@ $right          : '#{$titleimg}strings_right.png';
 $angle          : '#{$titleimg}angle.svg';
 
 $bg             : $off-green-lightest;
-$line-pos       : 6;
+$line-pos       : 52%;
 $string-pos     : bottom;
 $grad-pos       : center;
 $line-break     : base(30em);
@@ -28,13 +28,11 @@ $line-start     : image-width($line);
 $line-end       : 0;
 
 @include keyframes(line) {
-  0% { background-position: $line-start rhythm($line-pos); }
-  100% { background-position: $line-end rhythm($line-pos); }
+  0% { background-position: $line-start $line-pos; }
+  100% { background-position: $line-end $line-pos; }
 }
 
 #title {
-  // --------------------------------------------
-  // Page
   @include background($noise-layer, $title-old, $bg);
   background: $noise-layer, $title-new, $bg;
 
@@ -42,18 +40,17 @@ $line-end       : 0;
   // Main content
   [role="main"] {
     @include transition(padding 300ms);
-    @include pagepad(25 3 1, 40 6 2, 50 12 4);
+    @include pagepad(15 1, 18 2);
     @include breakpoint($line-break) {
       @include animation(line 30s linear infinite both);
-      @include background(image-url($line) repeat-x scroll $line-start rhythm($line-pos));
+      @include background(image-url($line) repeat-x scroll $line-start $line-pos);
       @include background-origin(content-box);
     }
   }
 
   .wrap1 {
     @extend %transition;
-    @include padding-leader;
-    @include padding-trailer;
+    @include rhythm-padding;
     @include background(
       image-url($left) no-repeat scroll (0 - image-width($left)*1.5) $string-pos,
       image-url($right) no-repeat scroll (50*16px + image-width($right)*.5) $string-pos

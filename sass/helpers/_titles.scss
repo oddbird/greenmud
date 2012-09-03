@@ -4,8 +4,8 @@
 %booktitle {
   [role="main"] {
     @extend %transition;
-    @include padding-leader(4);
-    @include pagepad(20 8 1, 40 12 2);
+    @include padding-leader(3);
+    @include pagepad(15 6 1);
     text-align: center;
     text-transform: uppercase;
     color: $darker;

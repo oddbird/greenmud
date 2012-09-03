@@ -12,9 +12,8 @@ $bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-
   [role="main"] {
     @extend %transition;
     @include container($total-columns);
-    @include padding-leader(2);
-    @include padding-trailer(.5);
-    @include pagepad(20 6 1);
+    @include rhythm-padding(2);
+    @include pagepad(15 3);
   }
 
   h1, p {

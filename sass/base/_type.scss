@@ -1,10 +1,11 @@
 // ---------------------------------------------------------------------------
 // type
 
-$base-font-size             : $normpx;
-$base-line-height           : $medpx;
+$base-font-size                   : $normpx;
+$base-line-height                 : $medpx;
 
-$round-to-nearest-half-line : true;
+$round-to-nearest-half-line       : true;
+$grid-background-baseline-height  : $base-line-height;
 
 // ---------------------------------------------------------------------------
 // variables
@@ -18,3 +19,8 @@ $jj-stack: "GreenMudJJRegular", sans-serif;
 // Base Ems (wrapper)
 
 @function base($em,$from: $base-font-size) { @return round(absolute-ems($em,$from)); }
+
+@mixin rhythm-padding($top: 1, $bottom: $top) {
+  @include padding-leader($top);
+  @include padding-trailer($bottom);
+}

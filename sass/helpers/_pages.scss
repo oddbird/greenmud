@@ -1,4 +1,15 @@
 // ----------------------------------------------------------------------------
+// show baseline grid
+
+%baseline {
+  &::before {
+    @include stretch;
+    @include baseline-grid-background;
+    content: " ";
+  }
+}
+
+// ----------------------------------------------------------------------------
 // pageturn mixin
 
 @mixin pageturn(
@@ -29,7 +40,7 @@
 
 @mixin pagepad($hpad...) {
   @each $pair in $hpad {
-    $height: rhythm(nth($pair,1));
+    $height: base(rhythm(nth($pair,1)));
     $top-padding: rhythm(nth($pair,2));
     $bottom-padding: $top-padding;
     @if length($pair) > 2 { $bottom-padding: nth($pair,3); }

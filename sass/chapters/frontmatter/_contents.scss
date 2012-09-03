@@ -18,7 +18,7 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
     @extend %transition;
     @include container($total-columns, $toc-break $toc-cols*2);
     @include padding-leader(2);
-    @include pagepad(30 4 1);
+    @include pagepad(20 3 0);
   }
 
   a {

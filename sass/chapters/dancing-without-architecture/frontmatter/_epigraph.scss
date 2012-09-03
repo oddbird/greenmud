@@ -24,7 +24,7 @@ $lennon   : '#{$pg}lennon.png';
   [role="main"] {
     @extend %transition;
     @include container;
-    @include pagepad(30 3, 40 6);
+    @include pagepad(15 3.5 1);
   }
 
   blockquote {

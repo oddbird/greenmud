@@ -44,10 +44,15 @@ $angle        : image-url('#{$pg}angle.svg') no-repeat center;
   }
 
   blockquote {
-    @extend %shrink;
     @extend %transition;
+    @include pagepad(15 2 1);
     padding: rhythm(1);
     color: $light;
+  }
+
+  p {
+    @extend %transition;
+    @extend %shrink;
   }
 
 }

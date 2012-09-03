@@ -5,13 +5,10 @@
 // temporary page styles
 
 .demo {
-  .page {
-    background: $pink-hint $noise;
-  }
+  .page { @include back($pink-hint); }
   .content {
     @extend %type;
     @include container;
-    @include susy-grid-background;
     @include padding-leader(2);
     position: relative;
     &:before {
