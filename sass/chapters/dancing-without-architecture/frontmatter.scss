@@ -18,10 +18,12 @@ $bg-details : rgba($blue,.25), rgba($blue-lighter,0);
 $bg-old     : linear-gradient($bg-angle, $bg-details);
 $bg-new     : fix-linear($bg-angle, $bg-details);
 
+$bg-layer   : no-repeat scroll;
+
 html {
   @include back($bg);
-  @include background($noise-layer, $bg-old, $bg);
-  background: $noise-layer, $bg-new, $bg;
+  @include background($noise-layer, $bg-old $bg-layer, $bg);
+  background: $noise-layer, $bg-new $bg-layer, $bg;
 }
 
 @include pageturn(
