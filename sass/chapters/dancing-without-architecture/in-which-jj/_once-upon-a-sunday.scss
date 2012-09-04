@@ -21,6 +21,7 @@ $layer2-end   : (- image-width($rain)*1.5) image-height($rain);
 $rain-anim    : rain 60s linear infinite both;
 
 $pitpot       : "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot ";
+$pitpot-deg   : 6deg;
 @for $i from 1 through 2 { $pitpot: $pitpot + $pitpot; }
 
 // ----------------------------------------------------------------------------
@@ -33,7 +34,7 @@ $pitpot       : "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot ";
 
 @include keyframes(pitpotIn) {
   0% { @include transform(translateY(150px) rotate(16deg)); }
-  100% { @include transform(translateY(0) rotate(6deg)); }
+  100% { @include transform(translateY(0) rotate($pitpot-deg)); }
 }
 
 // ----------------------------------------------------------------------------
@@ -77,12 +78,13 @@ $pitpot       : "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot ";
   }
 
   .pitpot {
-    @include rotate(6deg);
+    @include rotate($pitpot-deg);
     @include animation(pitpotIn 2s 2s both, fadeIn 2s 2s both);
     margin: 0 -200%;
-    text-align: center;
-    background: rgba($bg,.85);
+    background: rgba($off-orange,.75);
     color: $darkest;
+    text-align: center;
+    text-transform: uppercase;
     &::before { content: $pitpot; }
   }
 
@@ -91,10 +93,12 @@ $pitpot       : "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot ";
     display: none;
 
     @include at-breakpoint($break) {
-      @include stretch-y;
       @include background($drop-layer);
       @include background-size(contain);
       display: block;
+      position: absolute;
+      top: rhythm(1);
+      bottom: rhythm(-1);
       left: 0;
       width: columns(5);
     }
