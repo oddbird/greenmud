@@ -1,1 +1,100 @@
- 
+/* ---------------------------------------------------------------------------- helpers */
+[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+[data-icon]:before { content: attr(data-icon); }
+
+#titlepage h2 { letter-spacing: .05em; }
+
+#titlepage h2 { text-transform: uppercase; }
+
+#once-upon-a-sunday blockquote span { font-size: 0.79167em; line-height: 1.57895em; }
+@media (min-width: 35em) { #once-upon-a-sunday blockquote span { font-size: inherit; line-height: inherit; } }
+
+@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+#titlepage { padding-top: 3.75em; padding-bottom: 1.25em; overflow-x: hidden; }
+@media (min-height: 28em) { #titlepage { padding-top: 7.5em; padding-bottom: 1; } }
+#titlepage [role="main"] { max-width: 15em; position: relative; margin: 0 auto; padding: 1.875em 1em; text-align: center; }
+#titlepage [role="main"]::before, #titlepage [role="main"]::after { position: absolute; top: 0; bottom: 0; -webkit-box-shadow: rgba(32, 32, 32, 0.125) 0 0 0.25em; -moz-box-shadow: rgba(32, 32, 32, 0.125) 0 0 0.25em; box-shadow: rgba(32, 32, 32, 0.125) 0 0 0.25em; content: " "; left: -200%; right: -200%; z-index: 0; }
+#titlepage [role="main"]::before { -webkit-transform: rotate(-1.5deg); -moz-transform: rotate(-1.5deg); -ms-transform: rotate(-1.5deg); -o-transform: rotate(-1.5deg); transform: rotate(-1.5deg); }
+#titlepage [role="main"]::after { -webkit-transform: rotate(1.5deg); -moz-transform: rotate(1.5deg); -ms-transform: rotate(1.5deg); -o-transform: rotate(1.5deg); transform: rotate(1.5deg); }
+#titlepage [role="main"]:hover::before { -webkit-transform: rotate(0.5deg); -moz-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); transform: rotate(0.5deg); }
+#titlepage [role="main"]:hover::after { -webkit-transform: rotate(-0.5deg); -moz-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
+#titlepage h1, #titlepage h2 { position: relative; display: inline-block; vertical-align: middle; z-index: 1; }
+#titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
+#titlepage h2 { line-height: 1.875em; }
+#titlepage [role="main"]::before { background-color: rgba(255, 255, 255, 0.675); }
+#titlepage [role="main"]::after { background-color: rgba(255, 255, 255, 0.675); }
+@media (min-width: 49.5em) { #titlepage [role="main"] { max-width: 31em; }
+  #titlepage h1, #titlepage h2 { width: 48.3871%; }
+  #titlepage h1 { margin-right: -3.22581%; }
+  #titlepage h2 { margin-right: 3.22581%; } }
+
+#titlepage, #titlepage [role="main"]::before, #titlepage [role="main"]::after, #titlepage h1, #titlepage h2, #once-upon-a-sunday blockquote, #once-upon-a-sunday blockquote span { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+
+#titlepage [role="main"], #once-upon-a-sunday [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms; }
+
+.enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
+
+.exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
+
+/* ---------------------------------------------------------------------------- general */
+html { background: #ffffe5 url('../../../images/noise.png?1340400763'); }
+
+.enter-prev, .enter-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; }
+
+.exit-prev, .exit-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; }
+
+.enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
+
+@-moz-keyframes rain { 0% { background-position: 0 -850px, 425px -850px; }
+  100% { background-position: -850px 0, -1275px 850px; } }
+
+@-webkit-keyframes rain { 0% { background-position: 0 -850px, 425px -850px; }
+  100% { background-position: -850px 0, -1275px 850px; } }
+
+@-o-keyframes rain { 0% { background-position: 0 -850px, 425px -850px; }
+  100% { background-position: -850px 0, -1275px 850px; } }
+
+@keyframes rain { 0% { background-position: 0 -850px, 425px -850px; }
+  100% { background-position: -850px 0, -1275px 850px; } }
+
+@-moz-keyframes pitpotIn { 0% { -moz-transform: translateY(150px) rotate(16deg); transform: translateY(150px) rotate(16deg); }
+  100% { -moz-transform: translateY(0) rotate(6deg); transform: translateY(0) rotate(6deg); } }
+
+@-webkit-keyframes pitpotIn { 0% { -webkit-transform: translateY(150px) rotate(16deg); transform: translateY(150px) rotate(16deg); }
+  100% { -webkit-transform: translateY(0) rotate(6deg); transform: translateY(0) rotate(6deg); } }
+
+@-o-keyframes pitpotIn { 0% { -o-transform: translateY(150px) rotate(16deg); transform: translateY(150px) rotate(16deg); }
+  100% { -o-transform: translateY(0) rotate(6deg); transform: translateY(0) rotate(6deg); } }
+
+@keyframes pitpotIn { 0% { transform: translateY(150px) rotate(16deg); }
+  100% { transform: translateY(0) rotate(6deg); } }
+
+#once-upon-a-sunday { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: #564029 url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1346710075') repeat scroll; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1346710075') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1346710075') repeat scroll 425px -850px, url('../../../images/noise.png?1340400763') repeat 0 #564029; position: relative; overflow: hidden; }
+#once-upon-a-sunday.enter-prev { -webkit-animation: fadeIn 600ms ease, rain 60s linear infinite both; -moz-animation: fadeIn 600ms ease, rain 60s linear infinite both; -o-animation: fadeIn 600ms ease, rain 60s linear infinite both; animation: fadeIn 600ms ease, rain 60s linear infinite both; }
+#once-upon-a-sunday.enter-next { -webkit-animation: fadeIn 600ms ease, rain 60s linear infinite both; -moz-animation: fadeIn 600ms ease, rain 60s linear infinite both; -o-animation: fadeIn 600ms ease, rain 60s linear infinite both; animation: fadeIn 600ms ease, rain 60s linear infinite both; }
+#once-upon-a-sunday.exit-prev { -webkit-animation: fadeOut 600ms ease, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease, rain 60s linear infinite both; animation: fadeOut 600ms ease, rain 60s linear infinite both; }
+#once-upon-a-sunday.exit-next { -webkit-animation: fadeOut 600ms ease, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease, rain 60s linear infinite both; animation: fadeOut 600ms ease, rain 60s linear infinite both; }
+#once-upon-a-sunday [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; padding-bottom: 1.25em; position: relative; }
+#once-upon-a-sunday [role="main"]:after { content: ""; display: table; clear: both; }
+@media (min-height: 28em) { #once-upon-a-sunday [role="main"] { padding-top: 3.75em; padding-bottom: 3; } }
+@media (min-width: 46.5em) { #once-upon-a-sunday [role="main"] { max-width: 47em; } }
+#once-upon-a-sunday blockquote { font-style: italic; }
+#once-upon-a-sunday blockquote p { margin-bottom: 1.25em; -webkit-animation: fadeIn 4s 3s both; -moz-animation: fadeIn 4s 3s both; -o-animation: fadeIn 4s 3s both; animation: fadeIn 4s 3s both; }
+#once-upon-a-sunday blockquote span { display: inline-block; padding: 0.15625em 0.3125em 0.15625em; margin-bottom: -0.15625em; background: rgba(255, 255, 191, 0.75); }
+@media (min-width: 46.5em) { #once-upon-a-sunday blockquote { padding-left: 51.06383%; } }
+#once-upon-a-sunday .pitpot { -webkit-transform: rotate(6deg); -moz-transform: rotate(6deg); -ms-transform: rotate(6deg); -o-transform: rotate(6deg); transform: rotate(6deg); -webkit-animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; -moz-animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; -o-animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; margin: 0 -200%; background: rgba(172, 128, 83, 0.75); color: #202020; text-align: center; text-transform: uppercase; }
+#once-upon-a-sunday .pitpot::before { content: "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot "; }
+#once-upon-a-sunday .raindrop { -webkit-animation: fadeInDownBig 6s 4s both; -moz-animation: fadeInDownBig 6s 4s both; -o-animation: fadeInDownBig 6s 4s both; animation: fadeInDownBig 6s 4s both; display: none; }
+@media (min-width: 46.5em) { #once-upon-a-sunday .raindrop { background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/raindrop.png?1346737621') no-repeat scroll right; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; display: block; position: absolute; top: 1.25em; bottom: -1.25em; left: 0; width: 40.42553%; } }
