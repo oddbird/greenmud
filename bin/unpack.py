@@ -139,9 +139,10 @@ class Page(object):
             self.meta.setdefault("slug", "titlepage")
             self.meta.setdefault("url", "index.html")
         else:
+            tags_stripped = re.sub('<.*?>', '', self.markdown)
             self.meta.setdefault(
                 "slug",
-                slugify("-".join(self.markdown.split()[:5])).lstrip("-"),
+                slugify("-".join(tags_stripped.split()[:5])).lstrip("-"),
                 )
             self.meta.setdefault("url", u"{0}.html".format(self.meta["slug"]))
 

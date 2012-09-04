@@ -99,7 +99,6 @@ body_class:
 ------
 
 <!-- meta
-slug      : once-upon-a-sunday
 body_class:
 -->
 
