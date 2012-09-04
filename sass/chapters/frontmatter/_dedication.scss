@@ -11,7 +11,7 @@ $bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-
   @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
 
   [role="main"] {
-    @extend %transition;
+    @extend %transition-main;
     @include container($total-columns);
     @include rhythm-padding(2);
     @include pagepad(15 3);

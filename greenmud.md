@@ -40,13 +40,13 @@ prev:
 
 <div class="lightning"></div>
 
-> I once fell in love with you                      <br />
-  Just because the sky turned from gray into blue   <br />
-  It was a good Friday                              <br />
-  The streets were open and empty                   <br />
-  No more passion play                              <br />
-  On St. Nicholas avenue                            <br />
-  I believe in St. Nicholas                         <br />
+> I once fell in love with you                      </br>
+  Just because the sky turned from gray into blue   </br>
+  It was a good Friday                              </br>
+  The streets were open and empty                   </br>
+  No more passion play                              </br>
+  On St. Nicholas avenue                            </br>
+  I believe in St. Nicholas                         </br>
   It’s a different type of Santa Claus
 
 > <cite>— Cocorosie, “Good Friday”</cite>
@@ -99,21 +99,23 @@ body_class:
 ------
 
 <!-- meta
+slug      : once-upon-a-sunday
 body_class:
 -->
 
-> Once upon a Sunday raining afternoon      <br />
-  stood a man without a spoon,              <br />
-  and seeing what my hands be free          <br />
-  I double-dare and climb a tree!
+> <span> Once upon a Sunday raining afternoon       </span><br />
+  <span> stood a man without a spoon,               </span><br />
+  <span> and seeing what my hands be free           </span><br />
+  <span> I double-dare and climb a tree!            </span>
 
-> A simple song so sing along!
+> <span> A simple song so sing along!               </span>
 
-> Oh la la and la again,                    <br />
-  surely squirrelly be my friend            <br />
-  and that’s just how this song must end.
+> <span> Oh la la and la again,                     </span><br />
+  <span> surely squirrelly be my friend             </span><br />
+  <span> and that’s just how this song must end.    </span>
 
-<p class="pitpot">[pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot]</p>
+<p class="pitpot">pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot</p>
+<div class="raindrop"></div>
 
 ------
 

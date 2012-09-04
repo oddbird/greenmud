@@ -12,15 +12,16 @@ $ch: 'dancing/in-which-jj/';
 /* ----------------------------------------------------------------------------
    general */
 
-$bg         : $yellow-hint;
+$bg             : $yellow-hint;
 
 html { @include back($bg); }
 
-@include pageturn(
-  '%fadeIn',
-  '%fadeOut',
-  600ms
-);
+$page-enter     : fadeIn;
+$page-exit      : fadeOut;
+$page-time      : 600ms;
+$page-function  : ease;
+
+@include pageturn;
 
 // ----------------------------------------------------------------------------
 // pages

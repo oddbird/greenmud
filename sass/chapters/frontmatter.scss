@@ -12,13 +12,16 @@ $ch: 'frontmatter/';
 /* ----------------------------------------------------------------------------
    general */
 
-html { @include back($off-green-lightest); }
+$bg             : $off-green-lightest;
 
-@include pageturn(
-  '%fadeIn',
-  '%fadeOutLeft' '%fadeOutRight',
-  400ms
-);
+html { @include back($bg); }
+
+$page-enter     : fadeIn;
+$page-exit      : fadeOutLeft fadeOutRight;
+$page-time      : 400ms;
+$page-function  : ease;
+
+@include pageturn;
 
 // ----------------------------------------------------------------------------
 // pages

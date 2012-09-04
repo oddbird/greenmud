@@ -3,7 +3,7 @@
 
 %booktitle {
   [role="main"] {
-    @extend %transition;
+    @extend %transition-main;
     @include rhythm-padding(3,1);
     @include pagepad(15 6 1);
     text-align: center;
@@ -41,7 +41,7 @@ $break: 8;
   overflow-x: hidden;
 
   [role="main"] {
-    @extend %transition;
+    @extend %transition-main;
     @include set-container-width;
     position: relative;
     margin: 0 auto;
@@ -50,6 +50,7 @@ $break: 8;
     &::before, &::after {
       @extend %transition;
       @include stretch-y;
+      @include box-shadow(rgba($darkest,.125) 0 0 .25em);
       content: " ";
       left: -200%;
       right: -200%;

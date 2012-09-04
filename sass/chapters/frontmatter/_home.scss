@@ -12,7 +12,7 @@ $scribble : '#{$ch}scribble.png';
   @extend %template;
 
   [role="main"] {
-    @extend %transition;
+    @extend %transition-main;
     background: image-url($swing) no-repeat scroll 0 0 - image-height($swing);
     background: image-url($swing) no-repeat scroll, image-url($scribble) no-repeat scroll;
     background-position: 0 0 - image-height($swing), right rhythm(25);

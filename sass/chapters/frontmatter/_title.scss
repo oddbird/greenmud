@@ -46,7 +46,7 @@ $line-end       : 0;
   // --------------------------------------------
   // Main content
   [role="main"] {
-    @include transition(padding 300ms);
+    @extend %transition-main;
     @include pagepad(15 1, 18 2);
     @include breakpoint($line-break) {
       @include animation(line 30s linear infinite both);

@@ -18,7 +18,7 @@ $bggrad     : radial-gradient(25% top, circle,
   @include background($noise-layer, $bggrad, $bgcolor);
 
   [role="main"] {
-    @extend %transition;
+    @extend %transition-main;
     @include container($total-columns, $break);
     @include padding-leader(2);
     @include padding-trailer(2);

@@ -7,6 +7,7 @@ $total-columns: 5;
   @extend %type;
 
   [role="main"] {
+    @extend %transition-main;
     @include container;
     @include padding-leader(2);
     @include breakpoint(min-height 25em) { @include padding-leader(4); }

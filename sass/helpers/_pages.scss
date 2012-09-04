@@ -12,27 +12,67 @@
 // ----------------------------------------------------------------------------
 // pageturn mixin
 
-@mixin pageturn(
-  $enter    : '%fadeInLeft' '%fadeInRight',
-  $exit     : '%fadeOutLeft' '%fadeOutRight',
-  $time     : 200ms,
-  $function : ease
+$page-enter     : fadeInLeft fadeInRight;
+$page-exit      : fadeOutLeft fadeOutRight;
+$page-time      : 200ms;
+$page-function  : ease;
+
+@function get-pageturn(
+  $enter    : $page-enter,
+  $exit     : $page-exit,
+  $time     : $page-time,
+  $function : $page-function
 ) {
   $enter    : if(type-of($enter) != 'list', $enter $enter, $enter);
   $exit     : if(type-of($exit) != 'list', $exit $exit, $exit);
   $time     : if(type-of($time) != 'list', $time $time, $time);
 
-  .enter-prev { @extend #{nth($enter,1)}; }
-  .enter-next { @extend #{nth($enter,2)}; }
-  .exit-prev { @extend #{nth($exit,1)}; }
-  .exit-next { @extend #{nth($exit,2)}; }
+  $inPrev   : nth($enter,1) nth($time,1) $function;
+  $inNext   : nth($enter,2) nth($time,1) $function;
+  $outPrev  : nth($exit,1)  nth($time,2) $function;
+  $outNext  : nth($exit,2)  nth($time,2) $function;
 
-  .enter-prev, .enter-next { @include animation-duration(nth($time,1)); }
-  .exit-prev, .exit-next { @include animation-duration(nth($time,2)); }
+  @return $inPrev $inNext $outPrev $outNext;
+}
 
-  .enter-prev, .enter-next, .exit-prev, .exit-next {
+@mixin pageturn(
+  $enter    : $page-enter,
+  $exit     : $page-exit,
+  $time     : $page-time,
+  $function : $page-function,
+  $nested   : false
+) {
+  $enter    : if(type-of($enter) != 'list', $enter $enter, $enter);
+  $exit     : if(type-of($exit) != 'list', $exit $exit, $exit);
+  $time     : if(type-of($time) != 'list', $time $time, $time);
+
+  $inPrev   : if($nested, '&.enter-prev', '.enter-prev');
+  $inNext   : if($nested, '&.enter-next', '.enter-next');
+  $outPrev  : if($nested, '&.exit-prev', '.exit-prev');
+  $outNext  : if($nested, '&.exit-next', '.exit-next');
+
+  // output the animations
+  #{$inPrev}  { @extend %#{nth($enter,1)}; }
+  #{$inNext}  { @extend %#{nth($enter,2)}; }
+  #{$outPrev} { @extend %#{nth($exit,1)}; }
+  #{$outNext} { @extend %#{nth($exit,2)}; }
+
+  // set the duration
+  #{$inPrev}, #{$inNext}    { @include animation-duration(nth($time,1)); }
+  #{$outPrev}, #{$outNext}  { @include animation-duration(nth($time,2)); }
+
+  // set the function
+  #{$inPrev}, #{$inNext}, #{$outPrev}, #{$outNext} {
     @include animation-timing-function($function);
   }
+}
+
+@mixin page-animation($animations...) {
+  @include animation($animations...);
+  &.enter-prev { @include animation(nth(get-pageturn(),1), $animations); }
+  &.enter-next { @include animation(nth(get-pageturn(),2), $animations); }
+  &.exit-prev  { @include animation(nth(get-pageturn(),3), $animations); }
+  &.exit-next  { @include animation(nth(get-pageturn(),4), $animations); }
 }
 
 // ----------------------------------------------------------------------------

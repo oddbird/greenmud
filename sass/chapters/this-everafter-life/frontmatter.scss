@@ -17,11 +17,12 @@ html {
   @include background-image($noise, linear-gradient(120deg, rgba($orange,.5), rgba($orange-lighter,0)));
 }
 
-@include pageturn(
-  '%fadeIn',
-  '%fadeOut',
-  2s 600ms
-);
+$page-enter     : fadeIn;
+$page-exit      : fadeOut;
+$page-time      : 2s 600ms;
+$page-function  : ease;
+
+@include pageturn;
 
 // ----------------------------------------------------------------------------
 // pages
@@ -31,7 +32,4 @@ html {
 /* ----------------------------------------------------------------------------
   titlepage */
 
-#titlepage {
-  @extend %booktitle;
-  color: $darker;
-}
+#titlepage { @extend %booktitle; }

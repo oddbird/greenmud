@@ -16,7 +16,7 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
   background: $scribble-layer, $noise-layer, $bg-new, $bg;
 
   [role="main"] {
-    @extend %transition;
+    @extend %transition-main;
     @include container($total-columns, $toc-break $toc-cols*2);
     @include padding-leader(2);
     @include pagepad(20 3 0);

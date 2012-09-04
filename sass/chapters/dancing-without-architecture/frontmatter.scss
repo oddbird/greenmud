@@ -26,11 +26,12 @@ html {
   background: $noise-layer, $bg-new $bg-layer, $bg;
 }
 
-@include pageturn(
-  '%fadeIn',
-  '%fadeOut',
-  2s 600ms
-);
+$page-enter     : fadeIn;
+$page-exit      : fadeOut;
+$page-time      : 2s 600ms;
+$page-function  : ease;
+
+@include pageturn;
 
 // ----------------------------------------------------------------------------
 // pages

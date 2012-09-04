@@ -1,2 +1,102 @@
 // ----------------------------------------------------------------------------
+// settings
+
+$total-columns: 6;
+$break        : columns-width(8) 12;
+
+$bg           : $off-orange-darker;
+$text-bg      : rgba($yellow-lightest,.75);
+
+$pg           : '#{$ch}once-upon-a-sunday/';
+$rain         : '#{$pg}rain.png';
+$rain-layer   : image-url($rain) repeat scroll;
+$raindrop     : '#{$pg}raindrop.png';
+$drop-layer   : image-url($raindrop) no-repeat scroll right;
+
+$layer1-start : 0 (- image-height($rain));
+$layer1-end   : (- image-width($rain)) 0;
+$layer2-start : image-height($rain)*.5 (- image-height($rain));
+$layer2-end   : (- image-width($rain)*1.5) image-height($rain);
+
+$rain-anim    : rain 60s linear infinite both;
+
+$pitpot       : "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot ";
+@for $i from 1 through 2 { $pitpot: $pitpot + $pitpot; }
+
+// ----------------------------------------------------------------------------
+// animations
+
+@include keyframes(rain) {
+  0% { background-position: $layer1-start, $layer2-start; }
+  100% { background-position: $layer1-end, $layer2-end; }
+}
+
+@include keyframes(pitpotIn) {
+  0% { @include transform(translateY(150px) rotate(16deg)); }
+  100% { @include transform(translateY(0) rotate(6deg)); }
+}
+
+// ----------------------------------------------------------------------------
 // once-upon-a-sunday
+
+#once-upon-a-sunday {
+  @include page-animation($rain-anim);
+  @include background($bg $rain-layer);
+  @include background($rain-layer $layer1-start, $rain-layer $layer2-start, $noise-layer $bg);
+  position: relative;
+  overflow: hidden;
+
+  [role="main"] {
+    @extend %transition-main;
+    @include container;
+    @include rhythm-padding(2,1);
+    @include pagepad(15 3 3);
+    position: relative;
+
+    @include at-breakpoint($break) { @include set-container-width; }
+  }
+
+  blockquote {
+    @extend %transition;
+    font-style: italic;
+
+    p {
+      @include trailer;
+      @include animation(fadeIn 4s 3s both);
+    }
+    span {
+      @extend %transition;
+      @extend %shrink;
+      display: inline-block;
+      padding: rhythm(.125) rhythm(.25) rhythm(.125);
+      margin-bottom: rhythm(-.125);
+      background: $text-bg;
+    }
+
+    @include at-breakpoint($break) { @include prefix(6); }
+  }
+
+  .pitpot {
+    @include rotate(6deg);
+    @include animation(pitpotIn 2s 2s both, fadeIn 2s 2s both);
+    margin: 0 -200%;
+    text-align: center;
+    background: rgba($bg,.85);
+    color: $darkest;
+    &::before { content: $pitpot; }
+  }
+
+  .raindrop {
+    @include animation(fadeInDownBig 6s 4s both);
+    display: none;
+
+    @include at-breakpoint($break) {
+      @include stretch-y;
+      @include background($drop-layer);
+      @include background-size(contain);
+      display: block;
+      left: 0;
+      width: columns(5);
+    }
+  }
+}

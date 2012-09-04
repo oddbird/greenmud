@@ -22,7 +22,7 @@ $lennon   : '#{$pg}lennon.png';
   background: $bg-new bottom right;
 
   [role="main"] {
-    @extend %transition;
+    @extend %transition-main;
     @include container;
     @include pagepad(15 3.5 1);
   }
