@@ -1,0 +1,47 @@
+// ----------------------------------------------------------------------------
+// settings
+
+$total-columns  : 3;
+$original-cw    : $column-width;
+$column-width   : $column-width + 1.25;
+
+$grass-location : rhythm(15);
+$half-border    : (2px / $base-font-size)/2;
+$grass-color    : $off-yellow-lighter;
+$grass-dark     : $off-green;
+$bg-angle       : top;
+$bg-details     : rgba($grass-color,0),
+                  rgba($grass-color,0) $grass-location - $half-border,
+                  rgba($black,0) $grass-location - $half-border,
+                  rgba($black,1) $grass-location + $half-border,
+                  rgba($grass-color,1) $grass-location + $half-border,
+                  rgba($grass-color,1) $grass-location + rhythm(2),
+                  rgba($grass-dark,1) $grass-location * 3;
+$bg-old         : linear-gradient($bg-angle, $bg-details...);
+$bg-new         : fix-linear($bg-angle, $bg-details...);
+
+$swing    : 'frontmatter/home/swing.png';
+
+// ----------------------------------------------------------------------------
+// johnny-john-goes-sitting-on-a
+
+#johnny-john-goes-sitting-on-a {
+  @include background($noise-layer, $bg-old);
+  background: $noise-layer, $bg-new;
+
+  [role="main"] {
+    @extend %transition-main;
+    @include container;
+    @include rhythm-padding(2,4);
+    @include background(image-url($swing) no-repeat scroll top left);
+  }
+
+  p {
+    @extend %transition;
+    @include pad(ceil($total-columns/2), floor($total-columns/2) - 1);
+    text-align: right;
+  }
+}
+
+
+$column-width   : $original-cw;
