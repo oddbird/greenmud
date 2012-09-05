@@ -9,7 +9,8 @@ $toc-cols: 4;
 
 $bg             : $off-green-lightest;
 $noise          : image-url('noise.png');
-$noise-layer    : $noise repeat 0;
+$noise-position : 0;
+$noise-layer    : $noise repeat $noise-position;
 $border-width   : 2px;
 
 $temp-bg        : $off-green-hint;

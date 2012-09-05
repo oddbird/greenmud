@@ -20,20 +20,39 @@ $bg-details     : rgba($grass-color,0),
 $bg-old         : linear-gradient($bg-angle, $bg-details...);
 $bg-new         : fix-linear($bg-angle, $bg-details...);
 
-$swing    : 'frontmatter/home/swing.png';
+$pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
+$swing          : 'frontmatter/home/swing.png';
+$sunburst       : '#{$pg}sunburst.png';
+$treetrunk      : '#{$pg}treetrunk.png';
+$treetop        : '#{$pg}treetop.png';
+
+$tree-pos       : 0em 0em;
+$sunburst-pos   : bottom right;
+
+$swing-layer    : image-url($swing) no-repeat scroll top left;
+$sunburst-layer : image-url($sunburst) no-repeat scroll $sunburst-pos;
+$treetrunk-layer: image-url($treetrunk) no-repeat scroll $tree-pos;
+$treetop-layer  : image-url($treetop) no-repeat scroll $tree-pos;
 
 // ----------------------------------------------------------------------------
 // johnny-john-goes-sitting-on-a
 
 #johnny-john-goes-sitting-on-a {
-  @include background($noise-layer, $bg-old);
-  background: $noise-layer, $bg-new;
+  @include background($noise-layer, $treetrunk-layer, $treetop-layer, $bg-old);
+  background: $noise-layer, $treetrunk-layer, $treetop-layer, $bg-old;
 
   [role="main"] {
     @extend %transition-main;
     @include container;
     @include rhythm-padding(2,4);
-    @include background(image-url($swing) no-repeat scroll top left);
+    @include background($swing-layer);
+  }
+
+  i {
+    @include trailer;
+    display: block;
+    margin-left: - space(1);
+    font-weight: bold;
   }
 
   p {
