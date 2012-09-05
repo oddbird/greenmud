@@ -27,7 +27,7 @@ $treetrunk      : '#{$pg}treetrunk.png';
 $treetop        : '#{$pg}treetop.png';
 
 $tree-pos       : 0em 0em;
-$sunburst-pos   : bottom right;
+$sunburst-pos   : top right;
 
 $swing-layer    : image-url($swing) no-repeat scroll top left;
 $sunburst-layer : image-url($sunburst) no-repeat scroll $sunburst-pos;
@@ -38,8 +38,8 @@ $treetop-layer  : image-url($treetop) no-repeat scroll $tree-pos;
 // johnny-john-goes-sitting-on-a
 
 #johnny-john-goes-sitting-on-a {
-  @include background($noise-layer, $treetrunk-layer, $treetop-layer, $bg-old);
-  background: $noise-layer, $treetrunk-layer, $treetop-layer, $bg-old;
+  @include background($noise-layer, $treetrunk-layer, $treetop-layer, $bg-old, $sunburst-layer);
+  background: $noise-layer, $treetrunk-layer, $treetop-layer, $bg-old, $sunburst-layer;
 
   [role="main"] {
     @extend %transition-main;
