@@ -2,8 +2,8 @@
 // settings
 
 $total-columns  : 3;
-$original-cw    : $column-width;
-$column-width   : $column-width + 1.25;
+$original-col   : $column-width;
+$column-width   : $column-width +.5;
 
 $grass-location : rhythm(15);
 $half-border    : (2px / $base-font-size)/2;
@@ -24,43 +24,62 @@ $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : 'frontmatter/home/swing.png';
 $sunburst       : '#{$pg}sunburst.png';
 $treetrunk      : '#{$pg}treetrunk.png';
-$treetop        : '#{$pg}treetop.png';
+$rainish        : '#{$pg}rainish.png';
 
+$tree-hide      : -30em 0em;
 $tree-pos       : 0em 0em;
 $sunburst-pos   : top right;
+$rainish-pos    : rhythm(-4) rhythm(1);
+$rainish-pos1   : rhythm(-3) rhythm(2);
+$rainish-pos2   : rhythm(-2) rhythm(1);
+$rainish-pos3   : rhythm(-4) rhythm(3);
 
-$swing-layer    : image-url($swing) no-repeat scroll top left;
+$swing-layer    : image-url($swing) no-repeat scroll 0 rhythm(-3.25);
 $sunburst-layer : image-url($sunburst) no-repeat scroll $sunburst-pos;
-$treetrunk-layer: image-url($treetrunk) no-repeat scroll $tree-pos;
-$treetop-layer  : image-url($treetop) no-repeat scroll $tree-pos;
+$treetrunk-layer: image-url($treetrunk) no-repeat scroll $tree-hide;
+$rainish-layer  : image-url($rainish) no-repeat scroll rhythm(-6) rhythm(8);
+
+// ----------------------------------------------------------------------------
+// animation
+
+@include keyframes(rainish) {
+  0%, 50%, 65%, 100% { background-position: 0, $tree-pos, 0, $rainish-pos1, $rainish-pos, $sunburst-pos; }
+  55% { background-position: 0, $tree-pos, 0, $rainish-pos2, $rainish-pos, $sunburst-pos; }
+  60% { background-position: 0, $tree-pos, 0, $rainish-pos3, $rainish-pos, $sunburst-pos; }
+}
 
 // ----------------------------------------------------------------------------
 // johnny-john-goes-sitting-on-a
 
 #johnny-john-goes-sitting-on-a {
-  @include background($noise-layer, $treetrunk-layer, $treetop-layer, $bg-old, $sunburst-layer);
-  background: $noise-layer, $treetrunk-layer, $treetop-layer, $bg-old, $sunburst-layer;
+  @include transition(background 1s);
+  @include background($noise-layer, $treetrunk-layer, $bg-old, $rainish-layer, $sunburst-layer);
+  background: $noise-layer, $treetrunk-layer, $bg-new, $rainish-layer, $rainish-layer, $sunburst-layer;
+
+  @include at-breakpoint(columns-width(6) $total-columns) {
+    @include animation(rainish 10s infinite both);
+    background-position: 0, $tree-pos, 0, $rainish-pos1, $rainish-pos, $sunburst-pos;
+  }
 
   [role="main"] {
     @extend %transition-main;
     @include container;
-    @include rhythm-padding(2,4);
+    @include rhythm-padding(3,4);
     @include background($swing-layer);
   }
 
   i {
     @include trailer;
     display: block;
-    margin-left: - space(1);
+    margin-left: - space(2);
     font-weight: bold;
   }
 
   p {
     @extend %transition;
-    @include pad(ceil($total-columns/2), floor($total-columns/2) - 1);
+    @include prefix(2);
     text-align: right;
   }
 }
 
-
-$column-width   : $original-cw;
+$column-width: $original-col;

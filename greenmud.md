@@ -125,8 +125,6 @@ body_class:
 <i>Johnny-John</i> goes sitting on a Sunday bench
 in the parkest of trees.
 
-<div class="tree"></div>
-
 ------
 
 Shadow, shadow, park and shadow.

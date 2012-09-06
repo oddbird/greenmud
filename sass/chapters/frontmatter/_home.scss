@@ -1,21 +1,31 @@
 /* ----------------------------------------------------------------------------
    home page */
 
-$total-columns: 6;
-$minor-break: 24em;
+$total-columns    : 6;
+$minor-break      : 24em;
 
-$pg       : '#{$ch}home/';
-$swing    : '#{$pg}swing.png';
-$scribble : '#{$ch}scribble.png';
+$pg               : '#{$ch}home/';
+$swing            : '#{$pg}swing.png';
+$scribble         : '#{$ch}scribble.png';
+
+$swing-hide       : 0 0 - image-height($swing);
+$swing-pos        : $grid-padding rhythm(-4);
+$swing-layer      : image-url($swing) no-repeat scroll $swing-hide;
+
+$scribble-hide    : right rhythm(25);
+$scribble-pos     : right rhythm(8);
+$scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
+
+// ----------------------------------------------------------------------------
+// home
 
 #home {
   @extend %template;
 
   [role="main"] {
     @extend %transition-main;
-    background: image-url($swing) no-repeat scroll 0 0 - image-height($swing);
-    background: image-url($swing) no-repeat scroll, image-url($scribble) no-repeat scroll;
-    background-position: 0 0 - image-height($swing), right rhythm(25);
+    background: $swing-layer;
+    background: $swing-layer, $scribble-layer;
   }
 
   .intro, .instructions { @include clearfix; }
@@ -42,8 +52,8 @@ $scribble : '#{$ch}scribble.png';
     [role="banner"] { @include animation(template-burst 6s ease both); }
     [role="main"] {
       @include padding-leader(2);
-      background-position: 0 0;
-      background-position: 0 0, right rhythm(8);
+      background-position: $swing-pos;
+      background-position: $swing-pos, $scribble-pos;
     }
     .intro, .instructions {
       @include pad(2,2);

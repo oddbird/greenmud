@@ -20,9 +20,8 @@ $bggrad     : radial-gradient(25% top, circle,
   [role="main"] {
     @extend %transition-main;
     @include container($total-columns, $break);
-    @include padding-leader(2);
-    @include padding-trailer(2);
-    @include background(image-url($swing) no-repeat scroll 0 0 - image-height($swing));
+    @include rhythm-padding(2,2);
+    @include background($swing-layer);
   }
 
   h1 {
@@ -54,8 +53,7 @@ $bggrad     : radial-gradient(25% top, circle,
   }
 
   @include at-breakpoint($break) {
-    [role="main"] { background-position: 0 0; }
+    [role="main"] { background-position: $swing-pos; }
     h1, p { @include pre(2); }
-    h1 { @include trailer(3,$largepx); }
   }
 }
