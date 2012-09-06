@@ -6,29 +6,30 @@ $original-col   : $column-width;
 $column-width   : $column-width +.5;
 
 $grass-location : rhythm(15);
-$half-border    : (2px / $base-font-size)/2;
 $grass-color    : $off-yellow-lighter;
 $grass-dark     : $off-green;
 $bg-angle       : top;
-$bg-details     : rgba($grass-color,0),
-                  rgba($grass-color,0) $grass-location - $half-border,
-                  rgba($black,0) $grass-location - $half-border,
-                  rgba($black,1) $grass-location + $half-border,
-                  rgba($grass-color,1) $grass-location + $half-border,
+$bg-details     : rgba($black,0),
+                  rgba($black,0) $grass-location,
+                  rgba($grass-color,1) $grass-location,
                   rgba($grass-color,1) $grass-location + rhythm(2),
                   rgba($grass-dark,1) $grass-location * 3;
 $bg-old         : linear-gradient($bg-angle, $bg-details...);
 $bg-new         : fix-linear($bg-angle, $bg-details...);
+
+
 
 $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : 'frontmatter/home/swing.png';
 $sunburst       : '#{$pg}sunburst.png';
 $treetrunk      : '#{$pg}treetrunk.png';
 $rainish        : '#{$pg}rainish.png';
+$border         : '#{$pg}border.png';
 
 $tree-hide      : -30em 0em;
 $tree-pos       : 0em 0em;
 $sunburst-pos   : top right;
+$border-pos     : 0 $grass-location - .125em;
 $rainish-pos    : rhythm(-4) rhythm(1);
 $rainish-pos1   : rhythm(-3) rhythm(2);
 $rainish-pos2   : rhythm(-2) rhythm(1);
@@ -38,14 +39,17 @@ $swing-layer    : image-url($swing) no-repeat scroll 0 rhythm(-3.25);
 $sunburst-layer : image-url($sunburst) no-repeat scroll $sunburst-pos;
 $treetrunk-layer: image-url($treetrunk) no-repeat scroll $tree-hide;
 $rainish-layer  : image-url($rainish) no-repeat scroll rhythm(-6) rhythm(8);
+$border-layer   : image-url($border) repeat-x scroll $border-pos;
+$default-back   : $noise-layer, $treetrunk-layer, $border-layer, $bg-old, $rainish-layer, $rainish-layer, $sunburst-layer;
+$default-pos    : 0, $tree-pos, $border-pos, 0, $rainish-pos1, $rainish-pos, $sunburst-pos;
 
 // ----------------------------------------------------------------------------
 // animation
 
 @include keyframes(rainish) {
-  0%, 50%, 65%, 100% { background-position: 0, $tree-pos, 0, $rainish-pos1, $rainish-pos, $sunburst-pos; }
-  55% { background-position: 0, $tree-pos, 0, $rainish-pos2, $rainish-pos, $sunburst-pos; }
-  60% { background-position: 0, $tree-pos, 0, $rainish-pos3, $rainish-pos, $sunburst-pos; }
+  0%, 50%, 65%, 100% { background-position: $default-pos; }
+  55% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos2, $rainish-pos, $sunburst-pos; }
+  60% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos3, $rainish-pos, $sunburst-pos; }
 }
 
 // ----------------------------------------------------------------------------
@@ -53,12 +57,12 @@ $rainish-layer  : image-url($rainish) no-repeat scroll rhythm(-6) rhythm(8);
 
 #johnny-john-goes-sitting-on-a {
   @include transition(background 1s);
-  @include background($noise-layer, $treetrunk-layer, $bg-old, $rainish-layer, $sunburst-layer);
-  background: $noise-layer, $treetrunk-layer, $bg-new, $rainish-layer, $rainish-layer, $sunburst-layer;
+  @include background($default-back...);
+  background: $default-back;
 
   @include at-breakpoint(columns-width(6) $total-columns) {
     @include animation(rainish 10s infinite both);
-    background-position: 0, $tree-pos, 0, $rainish-pos1, $rainish-pos, $sunburst-pos;
+    background-position: $default-pos;
   }
 
   [role="main"] {
