@@ -5,3 +5,4 @@ output/
 .livereload
 .hyde_deps
 *.sublime-*
+-s-*/
