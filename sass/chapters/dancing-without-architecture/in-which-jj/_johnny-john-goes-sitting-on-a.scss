@@ -29,9 +29,8 @@ $tree-pos       : 0em 0em;
 $sunburst-pos   : top right;
 $border-pos     : 0 $grass-location - .125em;
 $rainish-pos    : rhythm(-4) rhythm(1);
-$rainish-pos1   : rhythm(-3) rhythm(2);
-$rainish-pos2   : rhythm(-2) rhythm(1);
-$rainish-pos3   : rhythm(-4) rhythm(3);
+$rainish-pos1   : rhythm(-3.5) rhythm(1.5);
+$rainish-pos2   : rhythm(-3) rhythm(1);
 
 $swing-layer    : image-url($swing) no-repeat scroll 0 rhythm(-3.25);
 $sunburst-layer : image-url($sunburst) no-repeat scroll $sunburst-pos;
@@ -45,9 +44,9 @@ $default-pos    : 0, $tree-pos, $border-pos, 0, $rainish-pos1, $rainish-pos, $su
 // animation
 
 @include keyframes(rainish) {
-  0%, 50%, 65%, 100% { background-position: $default-pos; }
-  55% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos2, $rainish-pos, $sunburst-pos; }
-  60% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos3, $rainish-pos, $sunburst-pos; }
+  0%, 100% { background-position: $default-pos; }
+  33% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos2, $rainish-pos1, $sunburst-pos; }
+  66% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos, $rainish-pos2, $sunburst-pos; }
 }
 
 // ----------------------------------------------------------------------------
@@ -59,7 +58,7 @@ $default-pos    : 0, $tree-pos, $border-pos, 0, $rainish-pos1, $rainish-pos, $su
   background: $default-back;
 
   @include at-breakpoint(columns-width(6) $total-columns) {
-    @include animation(rainish 10s infinite both);
+    @include animation(rainish 3s linear infinite both);
     background-position: $default-pos;
   }
 
