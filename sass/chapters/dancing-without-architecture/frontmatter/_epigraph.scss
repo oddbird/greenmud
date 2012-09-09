@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
-   epigraph: john lennon */
+// ----------------------------------------------------------------------------
+// settings
 
 $total-columns: 8;
 $grid-padding: 0;
@@ -16,6 +16,9 @@ $bg-new     : fix-linear($bg-angle, $bg-details...);
 $pg       : '#{$ch}epigraph/';
 $lennon   : '#{$pg}lennon.png';
 
+/* ----------------------------------------------------------------------------
+   epigraph: john lennon */
+
 #epigraph {
   @extend %type;
   @include background($bg-old bottom right);
@@ -26,6 +29,9 @@ $lennon   : '#{$pg}lennon.png';
     @include container;
     @include pagepad(15 3.5 1);
   }
+
+  // --------------------------------------------------------------------------
+  // elements
 
   blockquote {
     @extend %transition;

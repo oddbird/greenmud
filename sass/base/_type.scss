@@ -18,9 +18,16 @@ $jj-stack: "GreenMudJJRegular", sans-serif;
 // ---------------------------------------------------------------------------
 // Base Ems (wrapper)
 
-@function base($em,$from: $base-font-size) { @return round(absolute-ems($em,$from)); }
+@function base($em, $from: $base-font-size) { @return round(absolute-ems($em,$from)); }
 
-@mixin rhythm-padding($top: 1, $bottom: $top) {
-  @include padding-leader($top);
-  @include padding-trailer($bottom);
+@mixin rhythm-padding($top: 1, $bottom: $top, $from: $base-font-size) {
+  @include padding-leader($top, $from);
+  @include padding-trailer($bottom, $from);
+}
+
+// ---------------------------------------------------------------------------
+// Rhythm-image
+
+@function rhythm-image($image, $from: $base-font-size) {
+  @return rhythm(ceil(image-height($image) / $base-line-height), $from);
 }

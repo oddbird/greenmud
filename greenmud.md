@@ -10,9 +10,6 @@ next:
     url: copyright.html
 -->
 
-<div class="wrap1">
-<div class="wrap2">
-
 # Into the Green Green Mud
 ## a novel (with pictures)
 
@@ -24,9 +21,6 @@ by [Eric A. Meyer][eam]
 [tg]: http://teacupgorilla.com/
 [obc]: http://oddbird.net/
 
-</div>
-</div>
-
 ------
 
 <!-- meta
@@ -37,8 +31,6 @@ prev:
     slug: thanks
     url: thanks.html
 -->
-
-<div class="lightning"></div>
 
 > I once fell in love with you                      </br>
   Just because the sky turned from gray into blue   </br>

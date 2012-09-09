@@ -1,84 +1,87 @@
+// ----------------------------------------------------------------------------
+// settings
+
+$img                : 'frontmatter/';
+$scribble           : '#{$img}scribble.png';
+
+$title-angle        : 330deg;
+$title-details      : $pink-hint,
+                      $pink-hint 50%,
+                      $off-green-lightest 50%,
+                      $off-green-lightest;
+$title-old          : linear-gradient($title-angle, $title-details);
+$title-new          : fix-linear($title-angle, $title-details);
+
+$titleimg           : '#{$img}titlepage/';
+$line               : '#{$titleimg}line.png';
+$left               : '#{$titleimg}strings_left.png';
+$right              : '#{$titleimg}strings_right.png';
+$angle              : '#{$titleimg}angle.svg';
+
+$angle-layer        : image-url($angle) no-repeat scroll center;
+
+$bg                 : $off-green-lightest;
+$line-pos           : 52%;
+$grad-pos           : center;
+$line-break         : base(30em);
+
+$line-start         : image-width($line);
+$line-end           : 0;
+
+$line-layer         : image-url($line) repeat-x scroll $line-start $line-pos;
+
+$string-pos         : top;
+$show-left          : left $string-pos;
+$show-right         : right $string-pos;
+$string-left-layer  : image-url($left) no-repeat scroll $show-left;
+$string-right-layer : image-url($right) no-repeat scroll $show-right;
+
+// ----------------------------------------------------------------------------
+// animations
+
+@include keyframes(line) {
+  0% { background-position: $show-left, $show-right, $line-start $line-pos; }
+  100% { background-position: $show-left, $show-right, $line-end $line-pos; }
+}
+
 /* ----------------------------------------------------------------------------
    title: Into the Green Green Mud */
 
-$img            : 'frontmatter/';
-$scribble       : '#{$img}scribble.png';
-
-$title-angle    : 330deg;
-$title-details  : $pink-hint,
-                  $pink-hint 50%,
-                  $off-green-lightest 50%,
-                  $off-green-lightest;
-$title-old      : linear-gradient($title-angle, $title-details);
-$title-new      : fix-linear($title-angle, $title-details);
-
-$titleimg       : '#{$img}titlepage/';
-$line           : '#{$titleimg}line.png';
-$left           : '#{$titleimg}strings_left.png';
-$right          : '#{$titleimg}strings_right.png';
-$angle          : '#{$titleimg}angle.svg';
-
-$angle-layer    : image-url($angle) no-repeat scroll center;
-
-$bg             : $off-green-lightest;
-$line-pos       : 52%;
-$string-pos     : bottom;
-$grad-pos       : center;
-$line-break     : base(30em);
-
-$line-start     : image-width($line);
-$line-end       : 0;
-
-@include keyframes(line) {
-  0% { background-position: $line-start $line-pos; }
-  100% { background-position: $line-end $line-pos; }
-}
-
 #title {
+  @extend %transition;
   @include back($bg);
   @include background($noise-layer, $title-old, $bg);
   background: $noise-layer, $title-new, $bg;
+
   .no-cssgradients & {
-    @include background($noise-layer, $angle-layer);
+    @include background($noise-layer, $angle-layer, $bg);
     @include background-size(auto, cover);
   }
 
-  // --------------------------------------------
-  // Main content
+  // --------------------------------------------------------------------------
+  // structure
+
   [role="main"] {
-    @extend %transition-main;
+    @include transition(padding 300ms);
+    @include box-sizing(content-box);
+    @include rhythm-padding;
     @include pagepad(15 1, 18 2);
+    color: $darker;
+    text-align: center;
+
     @include breakpoint($line-break) {
       @include animation(line 30s linear infinite both);
-      @include background(image-url($line) repeat-x scroll $line-start $line-pos);
+      @include background($string-left-layer, $string-right-layer, $line-layer);
       @include background-origin(content-box);
+      height: rhythm-image($left);
     }
   }
 
-  .wrap1 {
-    @extend %transition;
-    @include rhythm-padding;
-    @include background(
-      image-url($left) no-repeat scroll (0 - image-width($left)*1.5) $string-pos,
-      image-url($right) no-repeat scroll (50*16px + image-width($right)*.5) $string-pos
-    );
-    @include breakpoint($line-break) { background-position: left $string-pos, right $string-pos; }
-  }
+  // ----------------------------------------------------------------------------
+  // elements
 
-  .wrap2 {
-    @include container;
-    color: $darker;
-    text-align: center;
-  }
-
-  // --------------------------------------------
-  // Elements
-  h1, h2 {
-    font-weight: bold;
-  }
-  h1 {
-    @include adjust-font-size-to($largepx);
-  }
+  h1, h2 { font-weight: bold; }
+  h1 { @include adjust-font-size-to($largepx); }
   h2 {
     @include padding-trailer(6.5);
     @include trailer(.5);

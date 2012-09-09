@@ -1,10 +1,13 @@
-/* ----------------------------------------------------------------------------
-   dedication */
+// ----------------------------------------------------------------------------
+// settings
 
 $total-columns    : 6;
 
 $bg               : $orange-lighter;
 $bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-lighter, $orange-light);
+
+/* ----------------------------------------------------------------------------
+   dedication */
 
 #dedication {
   @include back($bg);
@@ -16,6 +19,9 @@ $bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-
     @include rhythm-padding(2);
     @include pagepad(15 3);
   }
+
+  // --------------------------------------------------------------------------
+  // elements
 
   h1, p {
     @extend %transition;

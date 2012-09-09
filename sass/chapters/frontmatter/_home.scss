@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
-   home page */
+// ----------------------------------------------------------------------------
+// settings
 
 $total-columns    : 6;
 $minor-break      : 24em;
@@ -16,8 +16,8 @@ $scribble-hide    : right rhythm(25);
 $scribble-pos     : right rhythm(8);
 $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
 
-// ----------------------------------------------------------------------------
-// home
+/* ----------------------------------------------------------------------------
+   home page */
 
 #home {
   @extend %template;
@@ -27,6 +27,9 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     background: $swing-layer;
     background: $swing-layer, $scribble-layer;
   }
+
+  // --------------------------------------------------------------------------
+  // elements
 
   .intro, .instructions { @include clearfix; }
   .intro { @extend %type; }
@@ -48,6 +51,9 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     &.access { @extend %icon-cog; }
   }
 
+  // --------------------------------------------------------------------------
+  // breakpoints
+
   @include at-breakpoint($template-break) {
     [role="banner"] { @include animation(template-burst 6s ease both); }
     [role="main"] {
@@ -61,6 +67,9 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     }
   }
 }
+
+// ----------------------------------------------------------------------------
+// browser support warning
 
 .warning {
   @include border-radius;

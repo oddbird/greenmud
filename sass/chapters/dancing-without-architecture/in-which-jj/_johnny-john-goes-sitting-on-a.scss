@@ -17,8 +17,6 @@ $bg-details     : rgba($black,0),
 $bg-old         : linear-gradient($bg-angle, $bg-details...);
 $bg-new         : fix-linear($bg-angle, $bg-details...);
 
-
-
 $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : 'frontmatter/home/swing.png';
 $sunburst       : '#{$pg}sunburst.png';
@@ -71,6 +69,9 @@ $default-pos    : 0, $tree-pos, $border-pos, 0, $rainish-pos1, $rainish-pos, $su
     @include rhythm-padding(3,4);
     @include background($swing-layer);
   }
+
+  // --------------------------------------------------------------------------
+  // elements
 
   i {
     @include trailer;

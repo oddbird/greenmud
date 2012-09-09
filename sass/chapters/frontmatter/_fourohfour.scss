@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
-   404 */
+// ----------------------------------------------------------------------------
+// settings
 
 $total-columns: 6;
 $break        : 8;
@@ -13,6 +13,9 @@ $bggrad     : radial-gradient(25% top, circle,
                 $orange
               );
 
+/* ----------------------------------------------------------------------------
+   404 */
+
 #fourohfour {
   @include background($bgcolor $noise-layer);
   @include background($noise-layer, $bggrad, $bgcolor);
@@ -23,6 +26,9 @@ $bggrad     : radial-gradient(25% top, circle,
     @include rhythm-padding(2,2);
     @include background($swing-layer);
   }
+
+  // --------------------------------------------------------------------------
+  // elements
 
   h1 {
     @extend %transition;
@@ -51,6 +57,9 @@ $bggrad     : radial-gradient(25% top, circle,
     }
     #{$focus} { color: $pink; }
   }
+
+  // --------------------------------------------------------------------------
+  // breakpoint
 
   @include at-breakpoint($break) {
     [role="main"] { background-position: $swing-pos; }

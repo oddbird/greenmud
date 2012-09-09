@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
-   copyright */
+// ----------------------------------------------------------------------------
+// settings
 
 $total-columns  : 8;
 
@@ -17,6 +17,9 @@ $bg-new         : fix-linear($bg-angle, $bg-details);
 $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 
+/* ----------------------------------------------------------------------------
+   copyright */
+
 #copyright {
   @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);
@@ -31,13 +34,8 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
     text-align: center;
   }
 
-  a {
-    #{$link} {
-      @extend %allcaps;
-      color: $blue-lightest;
-    }
-    #{$focus} { color: $pink-lightest; }
-  }
+  // --------------------------------------------------------------------------
+  // elements
 
   h1 {
     @extend %allcaps;
@@ -69,6 +67,15 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
     @include trailer;
     text-align: left;
   }
+
+  a {
+    #{$link} {
+      @extend %allcaps;
+      color: $blue-lightest;
+    }
+    #{$focus} { color: $pink-lightest; }
+  }
+
   em { font-style: italic; }
   strong { @extend %allcaps; }
 }

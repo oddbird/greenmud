@@ -41,16 +41,19 @@ $pg           : '#{$ch}thanks/';
   position: relative;
   overflow: hidden;
 
-  h1, h2 { font-weight: bold; }
-  h1 {
-    @extend %allcaps;
-    @include adjust-font-size-to($xxlargepx);
-  }
-
   [role="main"] {
     @include container;
     @include padding-leader(2);
     div { @include trailer; }
+  }
+
+  // --------------------------------------------------------------------------
+  // elements
+
+  h1, h2 { font-weight: bold; }
+  h1 {
+    @extend %allcaps;
+    @include adjust-font-size-to($xxlargepx);
   }
 
   ul {
@@ -133,6 +136,9 @@ $balloon-count  : 7;
       }
     }
   }
+
+  // --------------------------------------------------------------------------
+  // breakpoints
 
   @include breakpoint(50em) {
     @include animation(balloons linear infinite both);

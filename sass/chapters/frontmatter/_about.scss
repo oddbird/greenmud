@@ -1,12 +1,18 @@
-/* ----------------------------------------------------------------------------
-   about */
+// ----------------------------------------------------------------------------
+// settings
 
 $pg       : '#{$ch}about/';
 $faces    : '#{$pg}faces.png';
 $eric     : '#{$pg}eric.png';
 
+/* ----------------------------------------------------------------------------
+   about */
+
 #about {
   @extend %template;
+
+  // --------------------------------------------------------------------------
+  // elements
 
   .vcard {
     @extend %type;
@@ -17,11 +23,13 @@ $eric     : '#{$pg}eric.png';
     }
   }
   .fn { @include adjust-font-size-to($medpx,1,$smallpx); }
-
   .eric {
     @include padding-leader(7);
     background: image-url($faces) no-repeat scroll top;
   }
+
+  // --------------------------------------------------------------------------
+  // breakpoints
 
   @include at-breakpoint($template-break) {
     .eric {

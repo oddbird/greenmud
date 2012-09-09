@@ -43,7 +43,7 @@
 .exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #ffdfbf url('../../../images/noise.png?1346882297'); background-image: url('../../../images/noise.png?1346882297'), -webkit-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1346882297'), -moz-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1346882297'), -o-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1346882297'), linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); }
+html { background: #ffdfbf url('../../../images/noise.png?1347221205'); background-image: url('../../../images/noise.png?1347221205'), -webkit-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1347221205'), -moz-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1347221205'), -o-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1347221205'), linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; }
 

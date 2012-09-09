@@ -1,52 +1,62 @@
-/* ----------------------------------------------------------------------------
-   epigraph: cocorosie */
+// ----------------------------------------------------------------------------
+// settings
 
-$bg           : $darkest;
+$bg               : $darkest;
 
-$fg-angle     : 320deg;
-$fg-details   : rgba($off-blue-hint,0),
-                rgba($off-blue-hint,0) 50%,
-                rgba($off-blue-hint,.9) 50%,
-                rgba($off-blue-hint,.9);
-$fg-old       : linear-gradient($fg-angle, $fg-details...);
-$fg-new       : fix-linear($fg-angle, $fg-details...);
+$fg-angle         : 320deg;
+$fg-details       : rgba($off-blue-hint,0),
+                    rgba($off-blue-hint,0) 50%,
+                    rgba($off-blue-hint,.9) 50%,
+                    rgba($off-blue-hint,.9);
+$fg-old           : linear-gradient($fg-angle, $fg-details...);
+$fg-new           : fix-linear($fg-angle, $fg-details...);
 
-$pg           : '#{$ch}epigraph/';
-$lightning    : image-url('#{$pg}lightning.png') no-repeat scroll 50% rhythm(-1);
-$angle        : image-url('#{$pg}angle.svg') no-repeat center;
-$default-pos  : top left;
+$pg               : '#{$ch}epigraph/';
+$lightning        : image-url('#{$pg}lightning.png') no-repeat scroll 50% rhythm(-1);
+$angle            : image-url('#{$pg}angle.svg') no-repeat center;
+$default-pos      : top left;
+
+// ----------------------------------------------------------------------------
+// animations
+
+$lightning-pos1   : center rhythm(-1);
+$lightning-pos2   : rhythm(-3) rhythm(-10);
+$lightning-pos3   : center rhythm(-3);
+$lightning-pos4   : rhythm(50) rhythm(-5);
 
 @include keyframes(lightning) {
   0%, 49%, 51%, 53%, 55%, 57%, 100% {
-    background-position: $default-pos, center rhythm(-1);
+    background-position: $default-pos, $default-pos, $lightning-pos1;
   }
   50%{
-    background-position: $default-pos, rhythm(-3) rhythm(-10);
+    background-position: $default-pos, $default-pos, $lightning-pos2;
   }
   52%, 56% {
-    background-position: $default-pos, center rhythm(-3);
+    background-position: $default-pos, $default-pos, $lightning-pos3;
   }
   54% {
-    background-position: $default-pos, rhythm(50) rhythm(-5);
+    background-position: $default-pos, $default-pos, $lightning-pos4;
   }
 }
 
+/* ----------------------------------------------------------------------------
+   epigraph: cocorosie */
+
 #epigraph {
   @extend %type;
-  @include back($bg);
-  position: relative;
+  @include animation(lightning 10s infinite both);
+  @include text-shadow($bg 0 1px 0);
+  @include background($lightning $bg);
+  @include background($noise-layer, $fg-old, $lightning, $bg);
+  background: $noise-layer, $fg-new, $lightning, $bg;
 
-  .lightning {
-    @include stretch;
-    @include animation(lightning 10s infinite both);
-    @include background($lightning);
-    @include background($fg-old, $lightning);
-    background: $fg-new, $lightning;
-    .no-cssgradients & {
-      @include background($angle, $lightning);
-      @include background-size(cover, auto);
-    }
+  .no-cssgradients & {
+    @include background($noise-layer, $angle, $lightning, $bg);
+    @include background-size(auto, cover, auto, auto);
   }
+
+  // --------------------------------------------------------------------------
+  // elements
 
   blockquote {
     @extend %transition;

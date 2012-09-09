@@ -57,6 +57,9 @@ $pitpot-deg   : 6deg;
     @include at-breakpoint($break) { @include set-container-width; }
   }
 
+  // --------------------------------------------------------------------------
+  // elements
+
   blockquote {
     @extend %transition;
     font-style: italic;

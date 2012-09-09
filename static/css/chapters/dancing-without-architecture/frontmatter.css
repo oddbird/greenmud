@@ -46,7 +46,7 @@
 .exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #bfbfff url('../../../images/noise.png?1346882297'); background: url('../../../images/noise.png?1346882297') repeat 0, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1346882297') repeat 0, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1346882297') repeat 0, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1346882297') repeat 0, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1346882297') repeat 0, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
+html { background: #bfbfff url('../../../images/noise.png?1347221205'); background: url('../../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1347221205') repeat 0, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; }
 
@@ -59,7 +59,7 @@ html { background: #bfbfff url('../../../images/noise.png?1346882297'); backgrou
 #epigraph [role="main"] { max-width: 31em; margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 28em) { #epigraph [role="main"] { padding-top: 4.375em; padding-bottom: 1; } }
-#epigraph blockquote { padding-top: 5.625em; background: url('../../../images/dancing/epigraph/lennon.png?1346397390') no-repeat scroll center top; padding-left: 12.90323%; }
+#epigraph blockquote { padding-top: 5.625em; background: url('../../../images/dancing/epigraph/lennon.png?1347221204') no-repeat scroll center top; padding-left: 12.90323%; }
 @media (min-width: 22.5em) { #epigraph blockquote { padding-left: 26.66667%; } }
 @media (min-width: 28.5em) { #epigraph blockquote { padding-left: 42.10526%; } }
 @media (min-width: 34.5em) { #epigraph blockquote { padding-left: 52.17391%; } }

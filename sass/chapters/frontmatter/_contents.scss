@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
-   contents */
+// ----------------------------------------------------------------------------
+// settings
 
 $total-columns: $toc-cols;
 
@@ -8,6 +8,9 @@ $bg-angle     : 260deg;
 $bg-details   : $yellow-hint, $yellow-hint, $orange-lightest;
 $bg-old       : linear-gradient($bg-angle, $bg-details);
 $bg-new       : fix-linear($bg-angle, $bg-details);
+
+/* ----------------------------------------------------------------------------
+   contents */
 
 #contents {
   @extend %toc-counter;
@@ -21,6 +24,9 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
     @include padding-leader(2);
     @include pagepad(20 3 0);
   }
+
+  // --------------------------------------------------------------------------
+  // elements
 
   a {
     #{$link} { color: $orange-darker; }
