@@ -211,7 +211,7 @@ html { background: #d4ead4 url('../../images/noise.png?1347221205'); }
 #thanks .collaborators ul li:after { content: ';'; }
 #thanks .collaborators ul li:last-child:after { content: '.'; }
 
-.-s-balloons-sprite, .balloon:nth-child(1), .balloon:nth-child(2), .balloon:nth-child(3), .balloon:nth-child(4), .balloon:nth-child(5), .balloon:nth-child(6), .balloon:nth-child(7) { background: url('../../images/frontmatter/thanks/-s-balloons-seeada82929.png') no-repeat; }
+.-s-balloons-sprite, .balloon:nth-child(1), .balloon:nth-child(2), .balloon:nth-child(3), .balloon:nth-child(4), .balloon:nth-child(5), .balloon:nth-child(6), .balloon:nth-child(7) { background: url('../../images/frontmatter/thanks/-s-balloons-sd59f55ff6f.png') no-repeat; }
 
 .balloon:nth-child(1) { background-position: 0 -2160px; -webkit-animation-delay: 2s; -moz-animation-delay: 2s; -o-animation-delay: 2s; animation-delay: 2s; -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; top: 1.25em; left: 80%; }
 .balloon:nth-child(2) { background-position: 0 -1440px; -webkit-animation-delay: 0s; -moz-animation-delay: 0s; -o-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: 10s; -moz-animation-duration: 10s; -o-animation-duration: 10s; animation-duration: 10s; top: 10em; right: 87%; }

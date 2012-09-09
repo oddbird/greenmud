@@ -85,12 +85,12 @@ $pg           : '#{$ch}thanks/';
 
 @import "frontmatter/thanks/-s-balloons/*.png";
 
-$balloon-count  : 7;
-
 .balloon {
-  @for $i from 1 through $balloon-count {
+  @each $color in $rainbow {
+    $i: index($rainbow, $color);
+
     &:nth-child(#{$i}) {
-      @include -s-balloons-sprite(balloon#{$i});
+      @include -s-balloons-sprite($color);
 
       @if $i == 1 { // RED
         @include animation-delay(2s);
@@ -144,7 +144,7 @@ $balloon-count  : 7;
     @include animation(balloons linear infinite both);
     display: block;
     position: absolute;
-    width: -s-balloons-sprite-width(balloon1);
-    height: -s-balloons-sprite-height(balloon1);
+    width: -s-balloons-sprite-width(red);
+    height: -s-balloons-sprite-height(red);
   }
 }
