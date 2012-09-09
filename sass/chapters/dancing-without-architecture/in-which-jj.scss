@@ -28,8 +28,9 @@ $page-function  : ease;
 
 @import "in-which-jj/once-upon-a-sunday";
 @import "in-which-jj/johnny-john-goes-sitting-on-a";
+@import "in-which-jj/shadow-shadow-park-and-shadow";
 
-// ----------------------------------------------------------------------------
-// title
+/* ----------------------------------------------------------------------------
+   titlepage */
 
 #titlepage { @extend %chaptertitle; }

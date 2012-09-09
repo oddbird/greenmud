@@ -49,8 +49,8 @@ $default-pos    : 0, $tree-pos, $border-pos, 0, $rainish-pos1, $rainish-pos, $su
   66% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos, $rainish-pos2, $sunburst-pos; }
 }
 
-// ----------------------------------------------------------------------------
-// johnny-john-goes-sitting-on-a
+/* ----------------------------------------------------------------------------
+   johnny-john-goes-sitting-on-a */
 
 #johnny-john-goes-sitting-on-a {
   @include transition(background 1s);

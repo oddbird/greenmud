@@ -37,8 +37,8 @@ $pitpot-deg   : 6deg;
   100% { @include transform(translateY(0) rotate($pitpot-deg)); }
 }
 
-// ----------------------------------------------------------------------------
-// once-upon-a-sunday
+/* ----------------------------------------------------------------------------
+   once-upon-a-sunday */
 
 #once-upon-a-sunday {
   @include page-animation($rain-anim);
