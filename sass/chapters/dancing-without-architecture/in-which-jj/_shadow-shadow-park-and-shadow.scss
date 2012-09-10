@@ -7,13 +7,14 @@ $pg             : '#{$ch}shadow-shadow-park-and-shadow/';
 $puddle-close   : '#{$pg}puddle-close.png';
 $puddle-far     : '#{$pg}puddle-far.png';
 
+$bg-location    : bottom right;
 $bg-angle       : 280deg;
 $bg-details     : rgba($off-blue-lighter,0),
                   rgba($off-blue-lighter,0) 80%,
                   rgba($off-blue-lighter,.25),
                   rgba($off-blue-light,.75);
-$bg-old         : linear-gradient($bg-angle, $bg-details...);
-$bg-new         : fix-linear($bg-angle, $bg-details...);
+$bg-old         : linear-gradient($bg-angle, $bg-details...) $bg-location;
+$bg-new         : fix-linear($bg-angle, $bg-details...) $bg-location;
 
 $puddle-height  : rhythm-image($puddle-far);
 
@@ -25,10 +26,16 @@ $puddle-height  : rhythm-image($puddle-far);
   75%, 100% { top: 100%; }
 }
 
+@include keyframes(shadow) {
+  0%    { @include background-size(auto, 100%); }
+  100%  { @include background-size(auto, 3000%); }
+}
+
 /* ----------------------------------------------------------------------------
    shadow-shadow-park-and-shadow */
 
 #shadow-shadow-park-and-shadow {
+  @include page-animation(shadow 30s linear infinite alternate both);
   @include background($noise-layer, $bg-old);
   background: $noise-layer, $bg-new;
   position: relative;
