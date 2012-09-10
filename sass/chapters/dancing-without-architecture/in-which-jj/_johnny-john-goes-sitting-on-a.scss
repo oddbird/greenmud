@@ -58,7 +58,7 @@ $default-pos    : 0, $tree-pos, $border-pos, 0, $rainish-pos1, $rainish-pos, $su
   background: $default-back;
 
   @include at-breakpoint(columns-width(6) $total-columns) {
-    @include animation(rainish 3s linear infinite both);
+    @include page-animation(rainish 3s linear infinite both);
     background-position: $default-pos;
   }
 

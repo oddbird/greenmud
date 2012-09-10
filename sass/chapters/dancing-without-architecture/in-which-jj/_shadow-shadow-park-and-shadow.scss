@@ -1,0 +1,103 @@
+// ----------------------------------------------------------------------------
+// settings
+
+$total-columns  : 6;
+
+$pg             : '#{$ch}shadow-shadow-park-and-shadow/';
+$puddle-close   : '#{$pg}puddle-close.png';
+$puddle-far     : '#{$pg}puddle-far.png';
+
+$bg-angle       : 280deg;
+$bg-details     : rgba($off-blue-lighter,0),
+                  rgba($off-blue-lighter,0) 80%,
+                  rgba($off-blue-lighter,.25),
+                  rgba($off-blue-light,.75);
+$bg-old         : linear-gradient($bg-angle, $bg-details...);
+$bg-new         : fix-linear($bg-angle, $bg-details...);
+
+$puddle-height  : rhythm-image($puddle-far);
+
+// ----------------------------------------------------------------------------
+// animations
+
+@include keyframes(drops) {
+  0%, 24% { top: rhythm(-4); }
+  75%, 100% { top: 100%; }
+}
+
+/* ----------------------------------------------------------------------------
+   shadow-shadow-park-and-shadow */
+
+#shadow-shadow-park-and-shadow {
+  @include background($noise-layer, $bg-old);
+  background: $noise-layer, $bg-new;
+  position: relative;
+  overflow: hidden;
+
+  [role="main"] {
+    @extend %transition-main;
+    @include rhythm-padding(2);
+    @include pagepad(15 3 2)
+  }
+
+  .puddle {
+    @include container;
+    position: relative;
+    padding-bottom: $puddle-height;
+    background: image-url($puddle-far) no-repeat bottom;
+    &::before {
+      @include stretch-x;
+      bottom: 0;
+      content: " ";
+      height: $puddle-height;
+      background: image-url($puddle-close) no-repeat bottom;
+      z-index: 500;
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // elements
+
+  p {
+    @extend %transition;
+    @include pad(1,1);
+    @include at-breakpoint(4) { @include pad(3,3,9); }
+  }
+
+}
+
+// ----------------------------------------------------------------------------
+// rain
+
+$-s-raindrops-position: 100%;
+
+@import "dancing/in-which-jj/shadow-shadow-park-and-shadow/-s-raindrops/*.png";
+
+.drop {
+  @include animation(drops 15s linear infinite both);
+  position: absolute;
+  top: rhythm(-4);
+
+  &::before {
+    @include adjust-font-size-to($smallpx);
+    content: "pit";
+    padding: 0 rhythm(.25,$smallpx);
+    background: rgba($red,.25);
+  }
+  &:last-child::before { content: "pot"; }
+
+  @each $color in $rainbow {
+    $i      : index($rainbow, $color);
+    $side   : if($i/2 == round($i/2), left, right);
+    $vert   : if($i/2 == round($i/2), top, bottom);
+    $round  : if($i/2 == round($i/2), up, down);
+
+    &:nth-child(#{$i}) {
+      @include animation-duration(60s - ($i * 6s));
+      @include -s-raindrops-sprite($color, $offset-x: 100%);
+      #{$side}: ($i * 20% / 3 * $i) / 4;
+      padding-#{$vert}: px-to-rhythm(-s-raindrops-sprite-height($color)) - rhythm(1);
+      padding-right: px-to-rhythm(-s-raindrops-sprite-width($color), $round: $round);
+    }
+  }
+}

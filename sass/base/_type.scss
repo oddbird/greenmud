@@ -28,6 +28,13 @@ $jj-stack: "GreenMudJJRegular", sans-serif;
 // ---------------------------------------------------------------------------
 // Rhythm-image
 
-@function rhythm-image($image, $from: $base-font-size) {
-  @return rhythm(ceil(image-height($image) / $base-line-height), $from);
+@function px-to-rhythm($px, $from: $base-font-size, $round: up) {
+  $rough: 2 * $px / $base-line-height;
+  $lines: if($round == down, floor($rough) / 2, ceil($rough) / 2);
+  @return rhythm($lines, $from);
+}
+
+
+@function rhythm-image($image, $from: $base-font-size, $round: up) {
+  @return px-to-rhythm(image-height($image), $from, $round);
 }

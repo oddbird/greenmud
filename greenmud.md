@@ -119,6 +119,12 @@ in the parkest of trees.
 
 ------
 
+<!-- meta
+body_class:
+-->
+
+<div class="puddle">
+
 Shadow, shadow, park and shadow.
 The rain falls slow,
 and the clouds fall too.
@@ -126,6 +132,16 @@ JJ sits to watch the trees.
 Watch the trees and the rain
 and the pit pit pit pit pit pot
 in the puddles before.
+</div>
+<aside class="rain">
+<div class="drop"></div>
+<div class="drop"></div>
+<div class="drop"></div>
+<div class="drop"></div>
+<div class="drop"></div>
+<div class="drop"></div>
+<div class="drop"></div>
+</aside>
 
 ------
 
