@@ -22,7 +22,7 @@ $puddle-height  : rhythm-image($puddle-far);
 // animations
 
 @include keyframes(drops) {
-  0%, 24% { top: rhythm(-4); }
+  0%, 24% { top: - 20%; }
   75%, 100% { top: 100%; }
 }
 
@@ -83,7 +83,7 @@ $-s-raindrops-position: 100%;
 .drop {
   @include animation(drops 15s linear infinite both);
   position: absolute;
-  top: rhythm(-4);
+  top: 0;
 
   &::before {
     @include adjust-font-size-to($smallpx);
@@ -94,15 +94,17 @@ $-s-raindrops-position: 100%;
   &:last-child::before { content: "pot"; }
 
   @each $color in $rainbow {
-    $i      : index($rainbow, $color);
-    $side   : if($i/2 == round($i/2), left, right);
-    $vert   : if($i/2 == round($i/2), top, bottom);
-    $round  : if($i/2 == round($i/2), up, down);
+    $i          : index($rainbow, $color);
+    $side       : if($i/2 == round($i/2), left, right);
+    $vert       : if($i/2 == round($i/2), top, bottom);
+    $round      : if($i/2 == round($i/2), up, down);
+    $equation   : ($i * 20% / 3 * $i) / 4;
 
     &:nth-child(#{$i}) {
       @include animation-duration(60s - ($i * 6s));
       @include -s-raindrops-sprite($color, $offset-x: 100%);
-      #{$side}: ($i * 20% / 3 * $i) / 4;
+      #{$side}: $equation;
+      top: mod($equation*6.25,100%);
       padding-#{$vert}: px-to-rhythm(-s-raindrops-sprite-height($color)) - rhythm(1);
       padding-right: px-to-rhythm(-s-raindrops-sprite-width($color), $round: $round);
     }

@@ -128,16 +128,16 @@ html { background: #ffffe5 url('../../../images/noise.png?1347221205'); }
 #johnny-john-goes-sitting-on-a i { margin-bottom: 1.25em; display: block; margin-left: -72%; font-weight: bold; }
 #johnny-john-goes-sitting-on-a p { padding-left: 72%; text-align: right; }
 
-@-moz-keyframes drops { 0%, 24% { top: -5em; }
+@-moz-keyframes drops { 0%, 24% { top: -20%; }
   75%, 100% { top: 100%; } }
 
-@-webkit-keyframes drops { 0%, 24% { top: -5em; }
+@-webkit-keyframes drops { 0%, 24% { top: -20%; }
   75%, 100% { top: 100%; } }
 
-@-o-keyframes drops { 0%, 24% { top: -5em; }
+@-o-keyframes drops { 0%, 24% { top: -20%; }
   75%, 100% { top: 100%; } }
 
-@keyframes drops { 0%, 24% { top: -5em; }
+@keyframes drops { 0%, 24% { top: -20%; }
   75%, 100% { top: 100%; } }
 
 @-moz-keyframes shadow { 0% { -moz-background-size: auto, 100%; background-size: auto, 100%; }
@@ -168,15 +168,15 @@ html { background: #ffffe5 url('../../../images/noise.png?1347221205'); }
 
 .-s-raindrops-sprite, .drop:nth-child(1), .drop:nth-child(2), .drop:nth-child(3), .drop:nth-child(4), .drop:nth-child(5), .drop:nth-child(6), .drop:nth-child(7) { background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/-s-raindrops-s5c3dd45feb.png') no-repeat; }
 
-.drop { -webkit-animation: drops 15s linear infinite both; -moz-animation: drops 15s linear infinite both; -o-animation: drops 15s linear infinite both; animation: drops 15s linear infinite both; position: absolute; top: -5em; }
+.drop { -webkit-animation: drops 15s linear infinite both; -moz-animation: drops 15s linear infinite both; -o-animation: drops 15s linear infinite both; animation: drops 15s linear infinite both; position: absolute; top: 0; }
 .drop::before { font-size: 0.79167em; line-height: 1.57895em; content: "pit"; padding: 0 0.39474em; background: rgba(255, 0, 0, 0.25); }
 .drop:last-child::before { content: "pot"; }
-.drop:nth-child(1) { -webkit-animation-duration: 54s; -moz-animation-duration: 54s; -o-animation-duration: 54s; animation-duration: 54s; background-position: 100% -270px; right: 1.66667%; padding-bottom: 2.5em; padding-right: 1.25em; }
-.drop:nth-child(2) { -webkit-animation-duration: 48s; -moz-animation-duration: 48s; -o-animation-duration: 48s; animation-duration: 48s; background-position: 100% 0; left: 6.66667%; padding-top: 2.5em; padding-right: 2.5em; }
-.drop:nth-child(3) { -webkit-animation-duration: 42s; -moz-animation-duration: 42s; -o-animation-duration: 42s; animation-duration: 42s; background-position: 100% -540px; right: 15%; padding-bottom: 2.5em; padding-right: 1.25em; }
-.drop:nth-child(4) { -webkit-animation-duration: 36s; -moz-animation-duration: 36s; -o-animation-duration: 36s; animation-duration: 36s; background-position: 100% -360px; left: 26.66667%; padding-top: 2.5em; padding-right: 1.875em; }
-.drop:nth-child(5) { -webkit-animation-duration: 30s; -moz-animation-duration: 30s; -o-animation-duration: 30s; animation-duration: 30s; background-position: 100% -90px; right: 41.66667%; padding-bottom: 2.5em; padding-right: 1.875em; }
-.drop:nth-child(6) { -webkit-animation-duration: 24s; -moz-animation-duration: 24s; -o-animation-duration: 24s; animation-duration: 24s; background-position: 100% -450px; left: 60%; padding-top: 2.5em; padding-right: 1.875em; }
-.drop:nth-child(7) { -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; background-position: 100% -180px; right: 81.66667%; padding-bottom: 2.5em; padding-right: 1.25em; }
+.drop:nth-child(1) { -webkit-animation-duration: 54s; -moz-animation-duration: 54s; -o-animation-duration: 54s; animation-duration: 54s; background-position: 100% -270px; right: 1.66667%; top: 10.41667%; padding-bottom: 2.5em; padding-right: 1.25em; }
+.drop:nth-child(2) { -webkit-animation-duration: 48s; -moz-animation-duration: 48s; -o-animation-duration: 48s; animation-duration: 48s; background-position: 100% 0; left: 6.66667%; top: 41.66667%; padding-top: 2.5em; padding-right: 2.5em; }
+.drop:nth-child(3) { -webkit-animation-duration: 42s; -moz-animation-duration: 42s; -o-animation-duration: 42s; animation-duration: 42s; background-position: 100% -540px; right: 15%; top: 93.75%; padding-bottom: 2.5em; padding-right: 1.25em; }
+.drop:nth-child(4) { -webkit-animation-duration: 36s; -moz-animation-duration: 36s; -o-animation-duration: 36s; animation-duration: 36s; background-position: 100% -360px; left: 26.66667%; top: 66.66667%; padding-top: 2.5em; padding-right: 1.875em; }
+.drop:nth-child(5) { -webkit-animation-duration: 30s; -moz-animation-duration: 30s; -o-animation-duration: 30s; animation-duration: 30s; background-position: 100% -90px; right: 41.66667%; top: 60.41667%; padding-bottom: 2.5em; padding-right: 1.875em; }
+.drop:nth-child(6) { -webkit-animation-duration: 24s; -moz-animation-duration: 24s; -o-animation-duration: 24s; animation-duration: 24s; background-position: 100% -450px; left: 60%; top: 75%; padding-top: 2.5em; padding-right: 1.875em; }
+.drop:nth-child(7) { -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; background-position: 100% -180px; right: 81.66667%; top: 10.41667%; padding-bottom: 2.5em; padding-right: 1.25em; }
 
 /* ---------------------------------------------------------------------------- titlepage */
