@@ -44,7 +44,7 @@ $lightning-pos4   : rhythm(50) rhythm(-5);
 
 #epigraph {
   @extend %type;
-  @include animation(lightning 10s infinite both);
+  @include page-animation(lightning 10s infinite both);
   @include text-shadow($bg 0 1px 0);
   @include background($lightning $bg);
   @include background($noise-layer, $fg-old, $lightning, $bg);
