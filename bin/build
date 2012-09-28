@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -rf content/
+bin/unpack.py
+hyde gen -r
