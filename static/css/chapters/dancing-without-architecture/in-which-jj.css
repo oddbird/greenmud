@@ -10,6 +10,18 @@
 #once-upon-a-sunday blockquote span { font-size: 0.79167em; line-height: 1.57895em; }
 @media (min-width: 35em) { #once-upon-a-sunday blockquote span { font-size: inherit; line-height: inherit; } }
 
+#his-shirt-is-wet-and [role="main"] h1 { font-size: 1.5em; line-height: 1.25em; }
+#his-shirt-is-wet-and [role="main"] h1, #his-shirt-is-wet-and [role="main"] h2, #his-shirt-is-wet-and [role="main"] h3, #his-shirt-is-wet-and [role="main"] h4 { font-weight: bold; color: #404040; }
+#his-shirt-is-wet-and [role="main"] h1:first-child, #his-shirt-is-wet-and [role="main"] h1 + h2, #his-shirt-is-wet-and [role="main"] h1 + h3, #his-shirt-is-wet-and [role="main"] h1 + h4, #his-shirt-is-wet-and [role="main"] h2:first-child, #his-shirt-is-wet-and [role="main"] h2 + h2, #his-shirt-is-wet-and [role="main"] h2 + h3, #his-shirt-is-wet-and [role="main"] h2 + h4, #his-shirt-is-wet-and [role="main"] h3:first-child, #his-shirt-is-wet-and [role="main"] h3 + h2, #his-shirt-is-wet-and [role="main"] h3 + h3, #his-shirt-is-wet-and [role="main"] h3 + h4, #his-shirt-is-wet-and [role="main"] h4:first-child, #his-shirt-is-wet-and [role="main"] h4 + h2, #his-shirt-is-wet-and [role="main"] h4 + h3, #his-shirt-is-wet-and [role="main"] h4 + h4 { margin-top: 0; }
+#his-shirt-is-wet-and [role="main"] h2, #his-shirt-is-wet-and [role="main"] h3, #his-shirt-is-wet-and [role="main"] h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
+#his-shirt-is-wet-and [role="main"] p, #his-shirt-is-wet-and [role="main"] ol, #his-shirt-is-wet-and [role="main"] ul, #his-shirt-is-wet-and [role="main"] blockquote { margin-bottom: 1.25em; }
+#his-shirt-is-wet-and [role="main"] ol { list-style-type: decimal; }
+#his-shirt-is-wet-and [role="main"] ul li { position: relative; }
+#his-shirt-is-wet-and [role="main"] ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
+#his-shirt-is-wet-and [role="main"] em, #his-shirt-is-wet-and [role="main"] blockquote { font-style: italic; }
+#his-shirt-is-wet-and [role="main"] blockquote cite { font-style: normal; }
+#his-shirt-is-wet-and [role="main"] blockquote :last-child { margin-bottom: 0em; }
+
 @-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
@@ -178,5 +190,9 @@ html { background: #ffffe5 url('../../../images/noise.png?1347221205'); }
 .drop:nth-child(5) { -webkit-animation-duration: 30s; -moz-animation-duration: 30s; -o-animation-duration: 30s; animation-duration: 30s; background-position: 100% -90px; right: 41.66667%; top: 60.41667%; padding-bottom: 2.5em; padding-right: 1.875em; }
 .drop:nth-child(6) { -webkit-animation-duration: 24s; -moz-animation-duration: 24s; -o-animation-duration: 24s; animation-duration: 24s; background-position: 100% -450px; left: 60%; top: 75%; padding-top: 2.5em; padding-right: 1.875em; }
 .drop:nth-child(7) { -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; background-position: 100% -180px; right: 81.66667%; top: 10.41667%; padding-bottom: 2.5em; padding-right: 1.25em; }
+
+/* ---------------------------------------------------------------------------- his-shirt-is-wet-and */
+#his-shirt-is-wet-and [role="main"] { max-width: 15em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 3.75em; padding-bottom: 5em; }
+#his-shirt-is-wet-and [role="main"]:after { content: ""; display: table; clear: both; }
 
 /* ---------------------------------------------------------------------------- titlepage */
