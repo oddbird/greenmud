@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+// settings
+
+$total-columns: 4;
+
+// ----------------------------------------------------------------------------
+// animation
+
+/* ----------------------------------------------------------------------------
+   his-shirt-is-wet-and */
+
+#his-shirt-is-wet-and {
+  [role="main"] {
+    @extend %transition-main;
+    @extend %type;
+    @include container;
+    @include rhythm-padding(3,4);
+  }
+}
