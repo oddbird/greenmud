@@ -24,8 +24,8 @@
 
 #home .license, #about .license, #title a:link, #title a:visited, #copyright h1, #copyright a:link, #copyright a:visited, #copyright strong, #thanks h1 { text-transform: uppercase; }
 
-#dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: 0.79167em; line-height: 1.57895em; }
-@media (min-width: 35em) { #dedication h1, #dedication p, #contents li, #epigraph p, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
+#dedication h1, #dedication p, #epigraph p, #fourohfour blockquote { font-size: 0.79167em; line-height: 1.57895em; }
+@media (min-width: 35em) { #dedication h1, #dedication p, #epigraph p, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
 
 #home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1 { font-size: 1.5em; line-height: 1.25em; }
 #home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1, #home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-weight: bold; color: #404040; }
@@ -63,7 +63,7 @@
 #home b, #about b { font-weight: bold; white-space: nowrap; color: #404040; }
 #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; }
 #home .site-title:after, #about .site-title:after, #home [role="main"]:after, #about [role="main"]:after, #home .footer:after, #about .footer:after { content: ""; display: table; clear: both; }
-@media (min-width: 61.5em) { #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 39em; } }
+@media (min-width: 58.5em) { #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 39em; } }
 #home [role="banner"], #about [role="banner"] { padding-top: 0.9375em; border-bottom-style: solid; border-bottom-width: 0.08333em; padding-bottom: 0.85417em; color: #404040; background: #ffe5ff url('../../images/noise.png?1347221205'); background: url('../../images/frontmatter/burst.png?1347221205') no-repeat scroll center -2.5em, #ffe5ff url('../../images/noise.png?1347221205'); border-color: #404040; }
 #home [role="banner"] h1, #about [role="banner"] h1 { font-size: 1.58333em; line-height: 1.18421em; font-weight: bold; }
 #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited { -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; display: inline-block; color: #404040; }
@@ -80,11 +80,11 @@
 #home .social li, #about .social li { display: inline-block; }
 #home .social a:link, #about .social a:link, #home .social a:visited, #about .social a:visited { color: rgba(96, 96, 96, 0.5); }
 #home .social a:hover, #about .social a:hover, #home .social a:focus, #about .social a:focus, #home .social a:active, #about .social a:active { color: #404040; }
-@media (min-width: 61.5em) { #home .license, #about .license, #home .social, #about .social { width: 48.71795%; float: left; margin-right: 2.5641%; }
+@media (min-width: 58.5em) { #home .license, #about .license, #home .social, #about .social { width: 48.71795%; float: left; margin-right: 2.5641%; }
   #home .social, #about .social { float: right; margin-right: 0; text-align: right; }
   #home .social a, #about .social a { text-align: left; } }
 
-#home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer, #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited, #title, #copyright h1, #dedication h1, #dedication p, #contents li, #epigraph blockquote, #epigraph p, #fourohfour h1, #fourohfour blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer, #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited, #title, #copyright h1, #dedication h1, #dedication p, #epigraph blockquote, #epigraph p, #fourohfour h1, #fourohfour blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
 #home [role="main"], #dedication [role="main"], #contents [role="main"], #fourohfour [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
@@ -109,7 +109,7 @@ html { background: #d4ead4 url('../../images/noise.png?1347221205'); }
 #home .inst { font-size: 1.25em; line-height: 1.5em; margin-bottom: 0.5em; }
 #home .inst:after { content: ""; display: table; clear: both; }
 #home .inst:before { font-size: 1.8em; line-height: 1.11111em; margin-right: 0.13889em; vertical-align: middle; }
-@media (min-width: 61.5em) { #home [role="banner"] { -webkit-animation: template-burst 6s ease both; -moz-animation: template-burst 6s ease both; -o-animation: template-burst 6s ease both; animation: template-burst 6s ease both; }
+@media (min-width: 58.5em) { #home [role="banner"] { -webkit-animation: template-burst 6s ease both; -moz-animation: template-burst 6s ease both; -o-animation: template-burst 6s ease both; animation: template-burst 6s ease both; }
   #home [role="main"] { padding-top: 2.5em; background-position: 1em -5em; background-position: 1em -5em, right 10em; }
   #home .intro, #home .instructions { padding-left: 20.51282%; padding-right: 20.51282%; clear: both; } }
 
@@ -131,9 +131,9 @@ html { background: #d4ead4 url('../../images/noise.png?1347221205'); }
 #title { background: #d4ead4 url('../../images/noise.png?1347221205'); background: url('../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4), #d4ead4; background: url('../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4), #d4ead4; background: url('../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4), #d4ead4; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4), #d4ead4; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(120deg, #ffe5ff, #ffe5ff 50%, #d4ead4 50%, #d4ead4), #d4ead4; }
 .no-cssgradients #title { background: url('../../images/noise.png?1347221205') repeat 0, url('../../images/frontmatter/titlepage/angle.svg?1347221205') no-repeat scroll center, #d4ead4; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; }
 #title [role="main"] { -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; padding-top: 1.25em; padding-bottom: 1.25em; color: #404040; text-align: center; }
-@media (min-height: 28em) { #title [role="main"] { padding-top: 1.25em; padding-bottom: 1.25em; } }
-@media (min-height: 34em) { #title [role="main"] { padding-top: 2.5em; padding-bottom: 2.5em; } }
-@media (min-width: 45em) { #title [role="main"] { -webkit-animation: line 30s linear infinite both; -moz-animation: line 30s linear infinite both; -o-animation: line 30s linear infinite both; animation: line 30s linear infinite both; background: url('../../images/frontmatter/titlepage/strings_left.png?1347221205') no-repeat scroll left top, url('../../images/frontmatter/titlepage/strings_right.png?1347221205') no-repeat scroll right top, url('../../images/frontmatter/titlepage/line.png?1347221205') repeat-x scroll 1200px 52%; -webkit-background-origin: content; -moz-background-origin: content; background-origin: content-box; height: 16.25em; } }
+@media (min-height: 18.75em) { #title [role="main"] { padding-top: 1.25em; padding-bottom: 1.25em; } }
+@media (min-height: 22.5em) { #title [role="main"] { padding-top: 2.5em; padding-bottom: 2.5em; } }
+@media (min-width: 40em) { #title [role="main"] { -webkit-animation: line 30s linear infinite both; -moz-animation: line 30s linear infinite both; -o-animation: line 30s linear infinite both; animation: line 30s linear infinite both; background: url('../../images/frontmatter/titlepage/strings_left.png?1347221205') no-repeat scroll left top, url('../../images/frontmatter/titlepage/strings_right.png?1347221205') no-repeat scroll right top, url('../../images/frontmatter/titlepage/line.png?1347221205') repeat-x scroll 1200px 52%; -webkit-background-origin: content; -moz-background-origin: content; background-origin: content-box; height: 16.25em; } }
 #title h1, #title h2 { font-weight: bold; }
 #title h1 { font-size: 1.5em; line-height: 1.25em; }
 #title h2 { padding-bottom: 8.125em; margin-bottom: 0.625em; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat scroll center bottom; }
@@ -158,16 +158,15 @@ html { background: #d4ead4 url('../../images/noise.png?1347221205'); }
 #dedication { background: #ffcc99 url('../../images/noise.png?1347221205'); background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, -webkit-radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972), #ffcc99; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, -moz-radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972), #ffcc99; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, -o-radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972), #ffcc99; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, radial-gradient(center 7.5em, #ffdfbf, #ffcc99, #ffb972), #ffcc99; }
 #dedication [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; padding-bottom: 2.5em; }
 #dedication [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 28em) { #dedication [role="main"] { padding-top: 3.75em; padding-bottom: 3.75em; } }
+@media (min-height: 18.75em) { #dedication [role="main"] { padding-top: 3.75em; padding-bottom: 3.75em; } }
 #dedication h1 { font-weight: bold; }
 #dedication p { margin-bottom: 1.25em; }
 
 /* ---------------------------------------------------------------------------- contents */
 #contents { background: #ffffe5 url('../../images/noise.png?1347221205'); background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375em -4.375em, url('../../images/noise.png?1347221205') repeat 0, linear-gradient(190deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; }
-#contents [role="main"] { max-width: 15em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
+#contents [role="main"] { max-width: 31em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
 #contents [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-width: 48em) { #contents [role="main"] { max-width: 31em; } }
-@media (min-height: 38em) { #contents [role="main"] { padding-top: 3.75em; padding-bottom: 0; } }
+@media (min-height: 25em) { #contents [role="main"] { padding-top: 3.75em; padding-bottom: 0; } }
 #contents a:link, #contents a:visited { color: #7f4000; }
 #contents a:hover, #contents a:focus, #contents a:active { color: #ff8000; }
 #contents li:before { color: #81813e; }
@@ -246,13 +245,13 @@ html { background: #d4ead4 url('../../images/noise.png?1347221205'); }
 #epigraph { -webkit-animation: lightning 10s infinite both; -moz-animation: lightning 10s infinite both; -o-animation: lightning 10s infinite both; animation: lightning 10s infinite both; text-shadow: #202020 0 1px 0; background: url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25em #202020; background: url('../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(320deg, rgba(237, 237, 246, 0), rgba(237, 237, 246, 0) 50%, rgba(237, 237, 246, 0.9) 50%, rgba(237, 237, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25em, #202020; background: url('../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(320deg, rgba(237, 237, 246, 0), rgba(237, 237, 246, 0) 50%, rgba(237, 237, 246, 0.9) 50%, rgba(237, 237, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25em, #202020; background: url('../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(320deg, rgba(237, 237, 246, 0), rgba(237, 237, 246, 0) 50%, rgba(237, 237, 246, 0.9) 50%, rgba(237, 237, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25em, #202020; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(320deg, rgba(237, 237, 246, 0), rgba(237, 237, 246, 0) 50%, rgba(237, 237, 246, 0.9) 50%, rgba(237, 237, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25em, #202020; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(130deg, rgba(237, 237, 246, 0), rgba(237, 237, 246, 0) 50%, rgba(237, 237, 246, 0.9) 50%, rgba(237, 237, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25em, #202020; }
 .no-cssgradients #epigraph { background: url('../../images/noise.png?1347221205') repeat 0, url('../../images/frontmatter/epigraph/angle.svg?1347221205') no-repeat center, url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25em, #202020; -webkit-background-size: auto, cover, auto, auto; -moz-background-size: auto, cover, auto, auto; -o-background-size: auto, cover, auto, auto; background-size: auto, cover, auto, auto; }
 #epigraph blockquote { padding: 1.25em; color: #b9b9b9; }
-@media (min-height: 28em) { #epigraph blockquote { padding-top: 2.5em; padding-bottom: 1; } }
+@media (min-height: 18.75em) { #epigraph blockquote { padding-top: 2.5em; padding-bottom: 1; } }
 
 /* ---------------------------------------------------------------------------- about */
 #about .vcard :first-line { font-size: 0.79167em; line-height: 1.57895em; font-weight: bold; text-transform: uppercase; }
 #about .fn { font-size: 1.57895em; line-height: 1em; }
 #about .eric { padding-top: 8.75em; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
-@media (min-width: 61.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5em; padding-bottom: 2.5em; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }
+@media (min-width: 58.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5em; padding-bottom: 2.5em; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }
   #about .oddbird, #about .teacup { width: 48.71795%; float: left; margin-right: 2.5641%; }
   #about .teacup { float: right; margin-right: 0; } }
 
@@ -260,13 +259,13 @@ html { background: #d4ead4 url('../../images/noise.png?1347221205'); }
 #fourohfour { background: #ffff99 url('../../images/noise.png?1347221205') repeat 0; background: url('../../images/noise.png?1347221205') repeat 0, -webkit-radial-gradient(25% top, circle, #ffff00, #ffff00 25%, rgba(255, 255, 0, 0) 45%, rgba(255, 255, 0, 0) 75%, #ff8000), #ffff99; background: url('../../images/noise.png?1347221205') repeat 0, -moz-radial-gradient(25% top, circle, #ffff00, #ffff00 25%, rgba(255, 255, 0, 0) 45%, rgba(255, 255, 0, 0) 75%, #ff8000), #ffff99; background: url('../../images/noise.png?1347221205') repeat 0, -o-radial-gradient(25% top, circle, #ffff00, #ffff00 25%, rgba(255, 255, 0, 0) 45%, rgba(255, 255, 0, 0) 75%, #ff8000), #ffff99; background: url('../../images/noise.png?1347221205') repeat 0, radial-gradient(25% top, circle, #ffff00, #ffff00 25%, rgba(255, 255, 0, 0) 45%, rgba(255, 255, 0, 0) 75%, #ff8000), #ffff99; }
 #fourohfour [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; padding-bottom: 2.5em; background: url('../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -391px; }
 #fourohfour [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-width: 49.5em) { #fourohfour [role="main"] { max-width: 31em; } }
+@media (min-width: 46.5em) { #fourohfour [role="main"] { max-width: 31em; } }
 #fourohfour h1 { margin-bottom: 1.25em; text-transform: uppercase; font-weight: bold; }
-@media (min-width: 40em) { #fourohfour h1 { font-size: 1.5em; line-height: 1.25em; margin-bottom: 0.83333em; }
+@media (min-width: 35em) { #fourohfour h1 { font-size: 1.5em; line-height: 1.25em; margin-bottom: 0.83333em; }
   #fourohfour h1 a::after { -webkit-animation: fadeIn 2s ease both infinite alternate; -moz-animation: fadeIn 2s ease both infinite alternate; -o-animation: fadeIn 2s ease both infinite alternate; animation: fadeIn 2s ease both infinite alternate; content: " »"; } }
 #fourohfour blockquote { font-style: italic; }
 #fourohfour p { margin-bottom: 1.25em; }
 #fourohfour a:link, #fourohfour a:visited { -webkit-transition: color 900ms; -moz-transition: color 900ms; -o-transition: color 900ms; transition: color 900ms; color: #00bf00; }
 #fourohfour a:hover, #fourohfour a:focus, #fourohfour a:active { color: magenta; }
-@media (min-width: 49.5em) { #fourohfour [role="main"] { background-position: 1em -5em; }
+@media (min-width: 46.5em) { #fourohfour [role="main"] { background-position: 1em -5em; }
   #fourohfour h1, #fourohfour p { margin-left: 25.80645%; } }

@@ -60,6 +60,9 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 .breadcrumb, [class^="toc-"] .book, [class^="toc-"] li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
+[class^="toc-"] .book, [class^="toc-"] li { font-size: 0.79167em; line-height: 1.57895em; }
+@media (min-width: 35em) { [class^="toc-"] .book, [class^="toc-"] li { font-size: inherit; line-height: inherit; } }
+
 .demo .content h1 { font-size: 1.5em; line-height: 1.25em; }
 .demo .content h1, .demo .content h2, .demo .content h3, .demo .content h4 { font-weight: bold; color: #404040; }
 .demo .content h1:first-child, .demo .content h1 + h2, .demo .content h1 + h3, .demo .content h1 + h4, .demo .content h2:first-child, .demo .content h2 + h2, .demo .content h2 + h3, .demo .content h2 + h4, .demo .content h3:first-child, .demo .content h3 + h2, .demo .content h3 + h3, .demo .content h3 + h4, .demo .content h4:first-child, .demo .content h4 + h2, .demo .content h4 + h3, .demo .content h4 + h4 { margin-top: 0; }
@@ -88,6 +91,8 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 @keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+
+[class^="toc-"] .book, [class^="toc-"] li, #toc .wrap { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
 .enter-prev { -webkit-animation-name: fadeInLeft; -moz-animation-name: fadeInLeft; -o-animation-name: fadeInLeft; animation-name: fadeInLeft; }
 
@@ -1081,7 +1086,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 #toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; line-height: 1.875em; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
 .no-touch #toggle:hover, .no-touch #toggle:focus, .no-touch #toggle:active { text-shadow: #202020 0 0 3px; }
 
-.controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875em 0 1em; min-width: 7.5em; background: rgba(32, 32, 32, 0.75); color: gray; z-index: 900; display: none; }
+.controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875em; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875em 0 1em; min-width: 11.25em; background: rgba(32, 32, 32, 0.75); color: gray; z-index: 900; display: none; }
 .controls.active, .showcontrols .controls { display: block; }
 
 .meta { margin: 0; padding: 0; border: 0; overflow: hidden; float: left; width: 3.75em; }
@@ -1106,11 +1111,11 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 /* ---------------------------------------------------------------------------- toc */
 [class^="toc-"] { margin-bottom: 1.25em; }
-@media (min-width: 48em) { [class^="toc-"] { width: 48.3871%; float: left; margin-right: 3.22581%; }
+@media (min-width: 21em) { [class^="toc-"] { width: 48.3871%; float: left; margin-right: 3.22581%; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 #toc { overflow: hidden; background: #202020; color: gray; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }
-#toc .wrap { max-width: 33em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
+#toc .wrap { max-width: 33em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; margin-left: 0; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
 #toc.active { max-height: 45em; }

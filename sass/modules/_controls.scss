@@ -56,7 +56,7 @@ $control-focus-color  : $white;
   @include adjust-leading-to($control-line);
   @include text-shadow(rgba($darkest,$small) 0 1px 0);
   padding: 0 rhythm($control-line) 0 $grid-padding;
-  min-width: rhythm($control-line*4);
+  min-width: rhythm($control-line*6);
   background: rgba($darkest,.75);
   color: $control-text-color;
   z-index: 900;

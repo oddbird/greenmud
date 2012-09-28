@@ -1,11 +1,13 @@
 /* ----------------------------------------------------------------------------
    toc */
 
-$toc-break: round(absolute-ems($toc-break));
-
 [class^="toc-"] {
   @include trailer;
-  .book, li { @extend %ellipsis; }
+  .book, li {
+    @extend %ellipsis;
+    @extend %shrink;
+    @extend %transition;
+  }
   @include breakpoint($toc-break) {
     @include span-columns($toc-cols,$total-columns);
     @include nth-omega(last);
@@ -23,8 +25,10 @@ $toc-break: round(absolute-ems($toc-break));
   color: $control-text-color;
   a { @extend %control-link; }
   .wrap {
+    @extend %transition;
     @include container;
     @include padding-leader($control-line+.5);
+    margin-left: 0;
     @include breakpoint($breadcrumb-break) { margin-left: rhythm($control-line*2); }
   }
 

@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns: 5;
+$total-columns: 6;
 
 /* ----------------------------------------------------------------------------
    epigraph: amiri baraka */
@@ -13,6 +13,6 @@ $total-columns: 5;
     @extend %transition-main;
     @include container;
     @include padding-leader(2);
-    @include breakpoint(min-height 25em) { @include padding-leader(4); }
+    @include pagepad(18 4 0);
   }
 }

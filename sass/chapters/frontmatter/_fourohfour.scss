@@ -35,7 +35,7 @@ $bggrad     : radial-gradient(25% top, circle,
     @include trailer;
     text-transform: uppercase;
     font-weight: bold;
-    @include breakpoint(40em) {
+    @include breakpoint(35em) {
       @include adjust-font-size-to($largepx);
       @include trailer(1, $largepx);
       a::after {

@@ -20,7 +20,7 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
 
   [role="main"] {
     @extend %transition-main;
-    @include container($total-columns, $toc-break $toc-cols*2);
+    @include layout($toc-cols*2) { @include container; }
     @include padding-leader(2);
     @include pagepad(20 3 0);
   }
@@ -33,11 +33,6 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
     #{$focus} { color: $orange; }
   }
 
-  li {
-    @extend %shrink;
-    @extend %transition;
-    &:before { color: $off-yellow-dark; }
-  }
-
+  li { &:before { color: $off-yellow-dark; } }
   .book { font-weight: bold; }
 }
