@@ -5,23 +5,12 @@
 // temporary page styles
 
 .demo {
-  .page { @include back($pink-hint); }
-  .content {
-    @extend %type;
-    @include container;
-    @include padding-leader(2);
-    position: relative;
-    &:before {
-      @extend %allcaps;
-      @include adjust-font-size-to($smallpx);
-      @include trailer(1,$smallpx);
-      @include border-radius($xxxsmallem);
-      content: "This page has not been designed yet.";
-      display: block;
-      padding: 0 $grid-padding;
-      background: $off-pink-lighter;
-      color: $pink-hint;
-      font-weight: bold;
+  @include layout(6) {
+    [role="main"] {
+      @extend %type;
+      @include container;
+      @include padding-leader(2);
+      position: relative;
     }
   }
 }

@@ -189,4 +189,4 @@ $all-colors       : join($colors, $off-colors);
 // ----------------------------------------------------------------------------
 // background
 
-@mixin back($background: $mid) { background: $background image-url('noise.png'); }
+@mixin back($background: $off-green-hint) { background: $background image-url('noise.png'); }
