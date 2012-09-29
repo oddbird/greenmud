@@ -24,8 +24,11 @@
 // ----------------------------------------------------------------------------
 // Chapter Titles
 
-$total-columns: 4;
-$break: 8;
+$total-columns    : 4;
+$break            : 8;
+
+$ch-title-wide    : 1deg;
+$ch-title-narrow  : .5deg;
 
 @mixin titlecolor($b: rgba(white,.675), $a: $b) {
   [role="main"] {
@@ -35,18 +38,19 @@ $break: 8;
 }
 
 %chaptertitle {
-  @extend %transition;
-  @include rhythm-padding(3,1);
-  @include pagepad(15 6 1);
   overflow-x: hidden;
 
   [role="main"] {
     @extend %transition-main;
     @include set-container-width;
+    @include leader(3);
+    @include trailer(1);
     position: relative;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: rhythm(1.5) $grid-padding;
     text-align: center;
+    @include breakpoint(min-height rhythm(18)) { @include leader(6); }
     &::before, &::after {
       @extend %transition;
       @include stretch-y;
@@ -56,11 +60,11 @@ $break: 8;
       right: -200%;
       z-index: 0;
     }
-    &::before { @include rotate(-1.5deg); }
-    &::after { @include rotate(1.5deg); }
+    &::before { @include rotate(- $ch-title-wide); }
+    &::after { @include rotate($ch-title-wide); }
     &:hover {
-      &::before { @include rotate(.5deg); }
-      &::after { @include rotate(-.5deg); }
+      &::before { @include rotate($ch-title-narrow); }
+      &::after { @include rotate(- $ch-title-narrow); }
     }
   }
 
