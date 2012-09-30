@@ -35,5 +35,5 @@
   // show and hide toc
   @include transition(max-height 600ms ease);
   max-height: 0;
-  &.active { max-height: 45em; }
+  .active + &.active { max-height: 45em; }
 }

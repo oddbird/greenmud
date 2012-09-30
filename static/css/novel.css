@@ -1114,7 +1114,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 #toc .wrap { max-width: 33em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; margin-left: 0; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 50em) { #toc .wrap { margin-left: 3.75em; } }
-#toc.active { max-height: 45em; }
+.active + #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
 .demo [role="main"] { max-width: 25em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; position: relative; }
