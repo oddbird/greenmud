@@ -5,10 +5,10 @@ $img                : 'frontmatter/';
 $scribble           : '#{$img}scribble.png';
 
 $title-angle        : 330deg;
-$title-details      : $pink-hint,
-                      $pink-hint 50%,
-                      $off-green-lightest 50%,
-                      $off-green-lightest;
+$title-details      : color($pink $hint),
+                      color($pink $hint) 50%,
+                      color($off $green $lightest) 50%,
+                      color($off $green $lightest);
 $title-old          : linear-gradient($title-angle, $title-details);
 $title-new          : fix-linear($title-angle, $title-details);
 
@@ -20,7 +20,7 @@ $angle              : '#{$titleimg}angle.svg';
 
 $angle-layer        : image-url($angle) no-repeat scroll center;
 
-$bg                 : $off-green-lightest;
+$bg                 : color($off $green $lightest);
 $line-pos           : 52%;
 $grad-pos           : center;
 $line-break         : 40em;
@@ -91,8 +91,8 @@ $string-right-layer : image-url($right) no-repeat scroll $show-right;
   a {
     #{$link} {
       @extend %allcaps;
-      color: $off-blue-dark;
+      color: color($off $blue $dark);
     }
-    #{$focus} { color: $off-pink-dark; }
+    #{$focus} { color: color($off $pink $dark); }
   }
 }

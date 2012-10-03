@@ -3,8 +3,12 @@
 
 $total-columns    : 6;
 
-$bg               : $orange-lighter;
-$bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-lighter, $orange-light);
+$bg               : color($orange $lighter);
+$bg-grad          : radial-gradient( center rhythm(6),
+                      color($orange $lightest),
+                      color($orange $lighter),
+                      color($orange $light)
+                    );
 
 /* ----------------------------------------------------------------------------
    dedication */
@@ -30,5 +34,4 @@ $bg-grad          : radial-gradient(center rhythm(6), $orange-lightest, $orange-
 
   h1 { font-weight: bold; }
   p { @include trailer; }
-
 }

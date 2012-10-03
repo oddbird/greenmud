@@ -7,15 +7,15 @@ $template-break : 10;
 $toc-break: 21em;
 $toc-cols: 4;
 
-$bg             : $off-green-lightest;
+$bg             : color($off $green $lightest);
 $noise          : image-url('noise.png');
 $noise-position : 0;
 $noise-layer    : $noise repeat $noise-position;
 $border-width   : 2px;
 
-$temp-bg        : $off-green-hint;
+$temp-bg        : color($off $green $hint);
 $temp-angle     : bottom left;
-$temp-details   : $yellow-hint, $off-green-hint;
+$temp-details   : color($yellow $hint), color($off $green $hint);
 $temp-old       : linear-gradient($temp-angle, $temp-details);
 $temp-new       : fix-linear($temp-angle, $temp-details);
 
@@ -25,11 +25,11 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
 @include keyframes(template-burst) {
   0% {
-    background-color: $blue-hint;
+    background-color: color($blue $hint);
     background-position: center rhythm(-8), center;
   }
   100% {
-    background-color: $pink-hint;
+    background-color: color($pink $hint);
     background-position: center rhythm(-2), center;
   }
 }
@@ -43,11 +43,11 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
 %template {
   @include back($bg);
-  @include text-shadow(rgba($white,$small) 0 1px 1px);
+  @include text-shadow(color($white,$small) 0 1px 1px);
   b {
     font-weight: bold;
     white-space: nowrap;
-    color: $darker;
+    color: color($darker);
   }
 
   .site-title,
@@ -61,9 +61,9 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
   [role="banner"] {
     @include padding-leader(.75);
     @include trailing-border($border-width,.75);
-    color: $darker;
-    background: $pink-hint $noise;
-    background: $bgburst, $pink-hint $noise;
+    color: color($darker);
+    background: color($pink $hint) $noise;
+    background: $bgburst, color($pink $hint) $noise;
     border-color: $base;
     h1 {
       @include adjust-font-size-to($xlargepx);
@@ -74,11 +74,11 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
         @extend %transition;
         @include transform-origin(0, 50%);
         display: inline-block;
-        color: $darker;
+        color: color($darker);
       }
       #{$focus} {
         @include scale(1.2);
-        color: $red-darker;
+        color: color($red $darker);
       }
     }
     &:hover { h2 { @include animation(hinge 1.5s 10s ease both); } }
@@ -96,13 +96,13 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
   }
 
   // footer ---------------//
-  $footer-color: $dark;
-  $footer-highlight: $darker;
+  $footer-color: color($dark);
+  $footer-highlight: color($darker);
 
   [role="contentinfo"] {
     @include leading-border($border-width,.5);
     @include padding-trailer(.5);
-    border-color: $darker;
+    border-color: $footer-highlight;
     color: $footer-color;
     a {
       #{$link} { color: $footer-color; }

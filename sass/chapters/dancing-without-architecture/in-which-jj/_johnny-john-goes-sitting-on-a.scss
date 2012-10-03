@@ -6,14 +6,14 @@ $original-col   : $column-width;
 $column-width   : $column-width +.5;
 
 $grass-location : rhythm(15);
-$grass-color    : $off-yellow-lighter;
-$grass-dark     : $off-green;
+$grass-color    : color($off $yellow $lighter);
+$grass-dark     : color($off $green);
 $bg-angle       : top;
-$bg-details     : rgba($black,0),
-                  rgba($black,0) $grass-location,
-                  rgba($grass-color,1) $grass-location,
-                  rgba($grass-color,1) $grass-location + rhythm(2),
-                  rgba($grass-dark,1) $grass-location * 3;
+$bg-details     : color($black,0),
+                  color($black,0) $grass-location,
+                  color($grass-color,1) $grass-location,
+                  color($grass-color,1) $grass-location + rhythm(2),
+                  color($grass-dark,1) $grass-location * 3;
 $bg-old         : linear-gradient($bg-angle, $bg-details...);
 $bg-new         : fix-linear($bg-angle, $bg-details...);
 

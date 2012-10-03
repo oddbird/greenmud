@@ -7,7 +7,7 @@ $pg             : '#{$ch}shadow-shadow-park-and-shadow/';
 $puddle-close   : '#{$pg}puddle-close.png';
 $puddle-far     : '#{$pg}puddle-far.png';
 
-$shadow-color   : $off-orange;
+$shadow-color   : color($off $orange);
 $bg-location    : bottom right;
 $bg-angle       : 280deg;
 $bg-details     : rgba($shadow-color,0),

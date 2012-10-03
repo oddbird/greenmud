@@ -1,13 +1,14 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$bg               : $darkest;
+$bg               : color($darkest);
 
 $fg-angle         : 320deg;
-$fg-details       : rgba($off-blue-hint,0),
-                    rgba($off-blue-hint,0) 50%,
-                    rgba($off-blue-hint,.9) 50%,
-                    rgba($off-blue-hint,.9);
+$fg-color         : color($off $blue $hint);
+$fg-details       : color($fg-color,0),
+                    color($fg-color,0) 50%,
+                    color($fg-color,.9) 50%,
+                    color($fg-color,.9);
 $fg-old           : linear-gradient($fg-angle, $fg-details...);
 $fg-new           : fix-linear($fg-angle, $fg-details...);
 
@@ -62,7 +63,7 @@ $lightning-pos4   : rhythm(50) rhythm(-5);
     @extend %transition;
     @include pagepad(15 2 1);
     padding: rhythm(1);
-    color: $light;
+    color: color($light);
   }
 
   p {

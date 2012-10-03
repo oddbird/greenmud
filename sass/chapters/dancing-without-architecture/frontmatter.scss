@@ -12,9 +12,9 @@ $ch: 'dancing/';
 /* ----------------------------------------------------------------------------
    general */
 
-$bg         : $blue-lightest;
+$bg         : color($blue $lightest);
 $bg-angle   : 120deg;
-$bg-details : rgba($blue,.25), rgba($blue-lighter,0);
+$bg-details : color($blue,.25), color($blue $lighter,0);
 $bg-old     : linear-gradient($bg-angle, $bg-details);
 $bg-new     : fix-linear($bg-angle, $bg-details);
 

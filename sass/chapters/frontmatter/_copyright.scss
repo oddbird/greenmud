@@ -3,10 +3,10 @@
 
 $total-columns  : 8;
 
-$bg             : $off-red-dark;
-$highlight      : $off-red-light;
-$color          : $off-red-hint;
-$shadow-color   : $red-darker;
+$bg             : color($off $red $dark);
+$highlight      : color($off $red $light);
+$color          : color($off $red $hint);
+$shadow-color   : color($red $darker);
 $shadow         : $shadow-color 1px 1px 0;
 
 $bg-angle       : top;
@@ -71,9 +71,9 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
   a {
     #{$link} {
       @extend %allcaps;
-      color: $blue-lightest;
+      color: color($blue $lightest);
     }
-    #{$focus} { color: $pink-lightest; }
+    #{$focus} { color: color($pink $lightest); }
   }
 
   em { font-style: italic; }

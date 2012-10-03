@@ -5,11 +5,11 @@ $total-columns: 8;
 $grid-padding: 0;
 
 $bg-angle   : 95deg;
-$bg-details : rgba($orange-lighter,.75),
-              rgba($yellow-lightest,.75) 10%,
-              rgba($yellow-lighter,.5),
-              rgba($yellow-lighter,.25) 70%,
-              rgba($yellow-lighter,0);
+$bg-details : color($orange $lighter, .75),
+              color($yellow $lightest, .75) 10%,
+              color($yellow $lighter, .5),
+              color($yellow $lighter, .25) 70%,
+              color($yellow $lighter, 0);
 $bg-old     : linear-gradient($bg-angle, $bg-details...);
 $bg-new     : fix-linear($bg-angle, $bg-details...);
 

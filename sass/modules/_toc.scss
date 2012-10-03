@@ -21,7 +21,7 @@
 #toc {
   @extend %toc-counter;
   @include clearfix;
-  background: $darkest;
+  background: color($darkest);
   color: $control-text-color;
   a { @extend %control-link; }
   .wrap {

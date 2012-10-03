@@ -74,5 +74,5 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
 .warning {
   @include border-radius;
   @include rhythm-borders(2px,.5);
-  background: $red-lightest;
+  background: color($red $lightest);
 }

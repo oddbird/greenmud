@@ -3,9 +3,9 @@
 
 $total-columns: $toc-cols;
 
-$bg           : $yellow-hint;
+$bg           : color($yellow $hint);
 $bg-angle     : 260deg;
-$bg-details   : $yellow-hint, $yellow-hint, $orange-lightest;
+$bg-details   : color($yellow $hint), color($yellow $hint), color($orange $lightest);
 $bg-old       : linear-gradient($bg-angle, $bg-details);
 $bg-new       : fix-linear($bg-angle, $bg-details);
 
@@ -29,10 +29,10 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
   // elements
 
   a {
-    #{$link} { color: $orange-darker; }
-    #{$focus} { color: $orange; }
+    #{$link} { color: color($orange $darker); }
+    #{$focus} { color: color($orange); }
   }
 
-  li { &:before { color: $off-yellow-dark; } }
+  li { &:before { color: color($off $yellow $dark); } }
   .book { font-weight: bold; }
 }

@@ -8,7 +8,7 @@
     @include pagepad(15 6 1);
     text-align: center;
     text-transform: uppercase;
-    color: $darker;
+    color: color($darker);
   }
 
   h1 { @include adjust-font-size-to($largepx); }
@@ -30,7 +30,7 @@ $break            : 8;
 $ch-title-wide    : 1deg;
 $ch-title-narrow  : .5deg;
 
-@mixin titlecolor($b: rgba(white,.675), $a: $b) {
+@mixin titlecolor($b: color($white,.675), $a: $b) {
   [role="main"] {
     &::before { background-color: $b; }
     &::after { background-color: $a; }
@@ -54,7 +54,7 @@ $ch-title-narrow  : .5deg;
     &::before, &::after {
       @extend %transition;
       @include stretch-y;
-      @include box-shadow(rgba($darkest,.125) 0 0 .25em);
+      @include box-shadow(color($darkest,.125) 0 0 .25em);
       content: " ";
       left: -200%;
       right: -200%;

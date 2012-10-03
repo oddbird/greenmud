@@ -4,8 +4,8 @@
 $total-columns: 6;
 $break        : columns-width(8) 12;
 
-$bg           : $off-orange-darker;
-$text-bg      : rgba($yellow-lightest,.75);
+$bg           : color($off $orange $darker);
+$text-bg      : color($yellow $lightest,.75);
 
 $pg           : '#{$ch}once-upon-a-sunday/';
 $rain         : '#{$pg}rain.png';
@@ -84,8 +84,8 @@ $pitpot-deg   : 6deg;
     @include rotate($pitpot-deg);
     @include animation(pitpotIn 2s 2s both, fadeIn 2s 2s both);
     margin: 0 -200%;
-    background: rgba($off-orange,.75);
-    color: $darkest;
+    background: color($off $orange,.75);
+    color: color($darkest);
     text-align: center;
     text-transform: uppercase;
     &::before { content: $pitpot; }

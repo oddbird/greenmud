@@ -3,10 +3,10 @@
 
 $total-columns  : 6;
 
-$bg           : $off-green-lightest;
+$bg           : color($off $green $lightest);
 
 $bg-angle     : top left;
-$bg-details   : $yellow-hint, $off-green-lightest;
+$bg-details   : color($yellow $hint), $bg;
 $bg-old       : linear-gradient($bg-angle, $bg-details);
 $bg-new       : fix-linear($bg-angle, $bg-details);
 

@@ -13,8 +13,8 @@ $ch: 'dancing-without-architecture/frontmatter/';
    general */
 
 html {
-  @include background($orange-lightest $noise);
-  @include background-image($noise, linear-gradient(120deg, rgba($orange,.5), rgba($orange-lighter,0)));
+  @include background(color($orange $lightest) $noise);
+  @include background-image($noise, linear-gradient(120deg, color($orange,.5), color($orange $lighter,0)));
 }
 
 $page-enter     : fadeIn;
