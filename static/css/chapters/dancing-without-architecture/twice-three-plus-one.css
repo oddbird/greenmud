@@ -30,6 +30,7 @@
 #titlepage h1, #titlepage h2 { position: relative; display: inline-block; vertical-align: middle; z-index: 1; }
 #titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
 #titlepage h2 { line-height: 1.875em; }
+#titlepage [role="main"] { color: #404040; }
 #titlepage [role="main"]::before { background-color: rgba(255, 255, 255, 0.675); }
 #titlepage [role="main"]::after { background-color: rgba(255, 255, 255, 0.675); }
 @media (min-width: 46.5em) { #titlepage [role="main"] { max-width: 31em; }
@@ -42,4 +43,9 @@
 #titlepage [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
 /* ---------------------------------------------------------------------------- general */
+html { background: #eeeef6 url('../../../images/noise.png?1347221205'); }
+
 /* ---------------------------------------------------------------------------- titlepage */
+#titlepage [role="main"] { color: #f2f2f2; }
+#titlepage [role="main"]::before { background-color: rgba(83, 45, 83, 0.5); }
+#titlepage [role="main"]::after { background-color: rgba(83, 45, 83, 0.5); }

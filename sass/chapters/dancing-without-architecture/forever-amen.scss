@@ -12,9 +12,9 @@
 /* ----------------------------------------------------------------------------
    general */
 
-// $bg             : $yellow-hint;
+$bg             : color($off $blue $hint);
 
-// html { @include back($bg); }
+html { @include back($bg); }
 
 // $page-enter     : fadeIn;
 // $page-exit      : fadeOut;

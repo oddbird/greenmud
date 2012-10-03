@@ -31,8 +31,10 @@ $ch-title-wide    : 1deg;
 $ch-title-narrow  : .5deg;
 
 @mixin titlecolor($b: color($white,.675), $a: $b) {
+  $c: if(lightness(mix($b,$a)) > 50%, $base, color($hint));
   [role="main"] {
-    &::before { background-color: $b; }
+    color: $c;
+    &::before { background-color: $b;  }
     &::after { background-color: $a; }
   }
 }

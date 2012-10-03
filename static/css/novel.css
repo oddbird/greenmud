@@ -29,7 +29,7 @@ html { font-size: 150%; line-height: 1.25em; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef7ee url('../images/noise.png?1347221205'); font-family: "GreenMudJJRegular", sans-serif; color: #404040; overflow-x: hidden; }
+html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee url('../images/noise.png?1347221205'); font-family: "GreenMudJJRegular", sans-serif; color: #404040; overflow-x: hidden; }
 
 .jj, .susy, .narrator { font-family: "GreenMudJJRegular", sans-serif; }
 

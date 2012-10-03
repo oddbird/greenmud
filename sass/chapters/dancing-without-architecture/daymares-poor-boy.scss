@@ -12,9 +12,9 @@ $ch: 'dancing/daymares-poor-boy/';
 /* ----------------------------------------------------------------------------
    general */
 
-// $bg             : $yellow-hint;
+$bg             : color($faded $yellow $hint);
 
-// html { @include back($bg); }
+html { @include back($bg); }
 
 // $page-enter     : fadeIn;
 // $page-exit      : fadeOut;
@@ -29,4 +29,7 @@ $ch: 'dancing/daymares-poor-boy/';
 /* ----------------------------------------------------------------------------
    titlepage */
 
-#titlepage { @extend %chaptertitle; }
+#titlepage {
+  @extend %chaptertitle;
+  @include titlecolor(color($off $orange $darker,.5));
+}
