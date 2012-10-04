@@ -1,16 +1,14 @@
 {% extends 'base.j2' %}
 
 {% block title -%}
-  GreenMud
-  {%- if resource.meta.book %}
-    : {{ resource.meta.book }}
-  {% endif %}
-  {% if resource.meta.chapter %}
-  : {{ resource.meta.chapter }}
-  {% endif %}
-  {% if resource.meta.title %}
-  : {{ resource.meta.title }}
+  {%- if resource.meta.chapter -%}
+    {{ resource.meta.chapter }} |
+  {% else -%}
+    {%- if resource.meta.book -%}
+      {{ resource.meta.book }} |
+    {% endif -%}
   {%- endif -%}
+  GreenMud
 {%- endblock %}
 
 {% block styles -%}
