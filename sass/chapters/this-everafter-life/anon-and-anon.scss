@@ -4,17 +4,12 @@
 @import "../../base/base";
 @import "../../helpers/helpers";
 
-// ----------------------------------------------------------------------------
-// settings
-
-// $ch: 'dancing/daymares-poor-boy/';
-
 /* ----------------------------------------------------------------------------
    general */
 
-// $bg             : $yellow-hint;
+$bg             : color($white);
 
-// html { @include back($bg); }
+html { @include back($bg); }
 
 // $page-enter     : fadeIn;
 // $page-exit      : fadeOut;
@@ -29,4 +24,10 @@
 /* ----------------------------------------------------------------------------
    titlepage */
 
-#titlepage { @extend %chaptertitle; }
+#titlepage {
+  @extend %chaptertitle;
+  @include titlecolor(
+    color($gray,.75),
+    color($lighter,.5)
+  );
+}

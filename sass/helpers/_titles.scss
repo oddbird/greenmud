@@ -31,8 +31,11 @@ $ch-title-wide    : 1deg;
 $ch-title-narrow  : .5deg;
 
 @mixin titlecolor($b: color($white,.675), $a: $b) {
-  $c: if(lightness(mix($b,$a)) > 50%, $base, color($hint));
+  $t: if(lightness(mix($b,$a)) > 50%, true, false);
+  $c: if($t, $base, color($hint));
+  $s: if(not $t, $base, color($hint));
   [role="main"] {
+    @include text-shadow(color($s,.5) 0 1px 0);
     color: $c;
     &::before { background-color: $b;  }
     &::after { background-color: $a; }
@@ -56,7 +59,8 @@ $ch-title-narrow  : .5deg;
     &::before, &::after {
       @extend %transition;
       @include stretch-y;
-      @include box-shadow(color($darkest,.125) 0 0 .25em);
+      @include box-shadow(color($darkest,.25) 0 0 .25em);
+      border: 1px solid color($darkest,.25);
       content: " ";
       left: -200%;
       right: -200%;

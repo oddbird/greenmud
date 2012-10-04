@@ -37,7 +37,7 @@
 #titlepage { overflow-x: hidden; }
 #titlepage [role="main"] { max-width: 15em; margin-top: 3.75em; margin-bottom: 1.25em; position: relative; margin-left: auto; margin-right: auto; padding: 1.875em 1em; text-align: center; }
 @media (min-height: 22.5em) { #titlepage [role="main"] { margin-top: 7.5em; } }
-#titlepage [role="main"]::before, #titlepage [role="main"]::after { position: absolute; top: 0; bottom: 0; -webkit-box-shadow: rgba(32, 32, 32, 0.125) 0 0 0.25em; -moz-box-shadow: rgba(32, 32, 32, 0.125) 0 0 0.25em; box-shadow: rgba(32, 32, 32, 0.125) 0 0 0.25em; content: " "; left: -200%; right: -200%; z-index: 0; }
+#titlepage [role="main"]::before, #titlepage [role="main"]::after { position: absolute; top: 0; bottom: 0; -webkit-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; -moz-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; border: 1px solid rgba(32, 32, 32, 0.25); content: " "; left: -200%; right: -200%; z-index: 0; }
 #titlepage [role="main"]::before { -webkit-transform: rotate(-1deg); -moz-transform: rotate(-1deg); -ms-transform: rotate(-1deg); -o-transform: rotate(-1deg); transform: rotate(-1deg); }
 #titlepage [role="main"]::after { -webkit-transform: rotate(1deg); -moz-transform: rotate(1deg); -ms-transform: rotate(1deg); -o-transform: rotate(1deg); transform: rotate(1deg); }
 #titlepage [role="main"]:hover::before { -webkit-transform: rotate(0.5deg); -moz-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); transform: rotate(0.5deg); }
@@ -45,7 +45,7 @@
 #titlepage h1, #titlepage h2 { position: relative; display: inline-block; vertical-align: middle; z-index: 1; }
 #titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
 #titlepage h2 { line-height: 1.875em; }
-#titlepage [role="main"] { color: #404040; }
+#titlepage [role="main"] { text-shadow: rgba(242, 242, 242, 0.5) 0 1px 0; color: #404040; }
 #titlepage [role="main"]::before { background-color: rgba(255, 255, 255, 0.675); }
 #titlepage [role="main"]::after { background-color: rgba(255, 255, 255, 0.675); }
 @media (min-width: 46.5em) { #titlepage [role="main"] { max-width: 31em; }
