@@ -28,7 +28,7 @@
   100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
 
 #titlepage [role="main"] { padding-top: 3.75em; padding-bottom: 1.25em; text-align: center; text-transform: uppercase; color: #404040; }
-@media (min-height: 28em) { #titlepage [role="main"] { padding-top: 7.5em; padding-bottom: 1; } }
+@media (min-height: 18.75em) { #titlepage [role="main"] { padding-top: 7.5em; padding-bottom: 1; } }
 #titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
 #titlepage h2 { font-weight: bold; }
 @media (min-width: 40em) { #titlepage h1 { font-size: 2.25em; line-height: 1.11111em; }
@@ -52,8 +52,8 @@ html { background: #ffdfbf url('../../../images/noise.png?1347221205'); backgrou
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
 /* ---------------------------------------------------------------------------- epigraph: amiri baraka */
-#epigraph [role="main"] { max-width: 19em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
+#epigraph [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 25em) { #epigraph [role="main"] { padding-top: 5em; } }
+@media (min-height: 22.5em) { #epigraph [role="main"] { padding-top: 5em; padding-bottom: 0; } }
 
 /* ---------------------------------------------------------------------------- titlepage */
