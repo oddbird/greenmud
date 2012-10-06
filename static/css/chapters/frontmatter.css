@@ -28,7 +28,7 @@
 @media (min-width: 35em) { #dedication h1, #dedication p, #epigraph p, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
 
 #home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1 { font-size: 1.5em; line-height: 1.25em; }
-#home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1, #home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-weight: bold; color: #404040; }
+#home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1, #home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-family: "GreenMudJJRegular", sans-serif; font-weight: bold; color: #404040; }
 #home .intro h1:first-child, #thanks h1:first-child, #epigraph h1:first-child, #about .vcard h1:first-child, #home .intro h1 + h2, #thanks h1 + h2, #epigraph h1 + h2, #about .vcard h1 + h2, #home .intro h1 + h3, #thanks h1 + h3, #epigraph h1 + h3, #about .vcard h1 + h3, #home .intro h1 + h4, #thanks h1 + h4, #epigraph h1 + h4, #about .vcard h1 + h4, #home .intro h2:first-child, #thanks h2:first-child, #epigraph h2:first-child, #about .vcard h2:first-child, #home .intro h2 + h2, #thanks h2 + h2, #epigraph h2 + h2, #about .vcard h2 + h2, #home .intro h2 + h3, #thanks h2 + h3, #epigraph h2 + h3, #about .vcard h2 + h3, #home .intro h2 + h4, #thanks h2 + h4, #epigraph h2 + h4, #about .vcard h2 + h4, #home .intro h3:first-child, #thanks h3:first-child, #epigraph h3:first-child, #about .vcard h3:first-child, #home .intro h3 + h2, #thanks h3 + h2, #epigraph h3 + h2, #about .vcard h3 + h2, #home .intro h3 + h3, #thanks h3 + h3, #epigraph h3 + h3, #about .vcard h3 + h3, #home .intro h3 + h4, #thanks h3 + h4, #epigraph h3 + h4, #about .vcard h3 + h4, #home .intro h4:first-child, #thanks h4:first-child, #epigraph h4:first-child, #about .vcard h4:first-child, #home .intro h4 + h2, #thanks h4 + h2, #epigraph h4 + h2, #about .vcard h4 + h2, #home .intro h4 + h3, #thanks h4 + h3, #epigraph h4 + h3, #about .vcard h4 + h3, #home .intro h4 + h4, #thanks h4 + h4, #epigraph h4 + h4, #about .vcard h4 + h4 { margin-top: 0; }
 #home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
 #home .intro p, #thanks p, #epigraph p, #about .vcard p, #home .intro ol, #thanks ol, #epigraph ol, #about .vcard ol, #home .intro ul, #thanks ul, #epigraph ul, #about .vcard ul, #home .intro blockquote, #thanks blockquote, #epigraph blockquote, #about .vcard blockquote { margin-bottom: 1.25em; }
@@ -59,13 +59,13 @@
 #home .social a, #about .social a { display: inline-block; width: 1.25em; }
 #home .social a:before, #about .social a:before { right: 0; }
 
-#home, #about { background: #d6e9d6 url('../../images/noise.png?1347221205'); text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px; }
-#home b, #about b { font-weight: bold; white-space: nowrap; color: #404040; }
+#home, #about { background: #d6e9d6 url('../../images/noise.png?1347221205'); text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px; font-family: "GreenMudSusyRegular", sans-serif; }
+#home b, #about b { font-family: "GreenMudJJRegular", sans-serif; font-weight: bold; white-space: nowrap; color: #404040; }
 #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; }
 #home .site-title:after, #about .site-title:after, #home [role="main"]:after, #about [role="main"]:after, #home .footer:after, #about .footer:after { content: ""; display: table; clear: both; }
 @media (min-width: 58.5em) { #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 39em; } }
 #home [role="banner"], #about [role="banner"] { padding-top: 0.9375em; border-bottom-style: solid; border-bottom-width: 0.08333em; padding-bottom: 0.85417em; color: #404040; background: #ffe5ff url('../../images/noise.png?1347221205'); background: url('../../images/frontmatter/burst.png?1347221205') no-repeat scroll center -2.5em, #ffe5ff url('../../images/noise.png?1347221205'); border-color: #404040; }
-#home [role="banner"] h1, #about [role="banner"] h1 { font-size: 1.58333em; line-height: 1.18421em; font-weight: bold; }
+#home [role="banner"] h1, #about [role="banner"] h1 { font-size: 1.58333em; line-height: 1.18421em; font-family: "GreenMudJJRegular", sans-serif; font-weight: bold; }
 #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited { -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; display: inline-block; color: #404040; }
 #home [role="banner"] a:hover, #about [role="banner"] a:hover, #home [role="banner"] a:focus, #about [role="banner"] a:focus, #home [role="banner"] a:active, #about [role="banner"] a:active { -webkit-transform: scale(1.2, 1.2); -moz-transform: scale(1.2, 1.2); -ms-transform: scale(1.2, 1.2); -o-transform: scale(1.2, 1.2); transform: scale(1.2, 1.2); color: maroon; }
 #home [role="banner"]:hover h2, #about [role="banner"]:hover h2 { -webkit-animation: hinge 1.5s 10s ease both; -moz-animation: hinge 1.5s 10s ease both; -o-animation: hinge 1.5s 10s ease both; animation: hinge 1.5s 10s ease both; }
@@ -75,7 +75,7 @@
 #home [role="contentinfo"] a:link, #about [role="contentinfo"] a:link, #home [role="contentinfo"] a:visited, #about [role="contentinfo"] a:visited { color: #606060; }
 #home [role="contentinfo"] a:hover, #about [role="contentinfo"] a:hover, #home [role="contentinfo"] a:focus, #about [role="contentinfo"] a:focus, #home [role="contentinfo"] a:active, #about [role="contentinfo"] a:active { color: #404040; }
 #home .license, #about .license { font-size: 0.79167em; line-height: 2.36842em; }
-#home .author, #about .author { font-weight: bold; }
+#home .author, #about .author { font-family: "GreenMudJJRegular", sans-serif; font-weight: bold; }
 #home .social, #about .social { font-size: 1.5em; line-height: 1.25em; }
 #home .social li, #about .social li { display: inline-block; }
 #home .social a:link, #about .social a:link, #home .social a:visited, #about .social a:visited { color: rgba(96, 96, 96, 0.5); }
@@ -106,9 +106,9 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 /* ---------------------------------------------------------------------------- home page */
 #home [role="main"] { background: url('../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -391px; background: url('../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -391px, url('../../images/frontmatter/scribble.png?1347221205') no-repeat scroll right 31.25em; }
 #home .intro, #home .instructions { overflow: hidden; }
-#home .inst { font-size: 1.25em; line-height: 1.5em; margin-bottom: 0.5em; }
+#home .inst { margin-bottom: 0.625em; }
 #home .inst:after { content: ""; display: table; clear: both; }
-#home .inst:before { font-size: 1.8em; line-height: 1.11111em; margin-right: 0.13889em; vertical-align: middle; }
+#home .inst:before { font-size: 2.25em; line-height: 1.11111em; margin-right: 0.13889em; vertical-align: middle; }
 @media (min-width: 58.5em) { #home [role="banner"] { -webkit-animation: template-burst 6s ease both; -moz-animation: template-burst 6s ease both; -o-animation: template-burst 6s ease both; animation: template-burst 6s ease both; }
   #home [role="main"] { padding-top: 2.5em; background-position: 1em -5em; background-position: 1em -5em, right 10em; }
   #home .intro, #home .instructions { padding-left: 20.51282%; padding-right: 20.51282%; clear: both; } }
@@ -252,7 +252,7 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 @media (min-height: 18.75em) { #epigraph blockquote { padding-top: 2.5em; padding-bottom: 1; } }
 
 /* ---------------------------------------------------------------------------- about */
-#about .vcard :first-line { font-size: 0.79167em; line-height: 1.57895em; font-weight: bold; text-transform: uppercase; }
+#about .vcard :first-line { font-size: 0.79167em; line-height: 1.57895em; font-family: "GreenMudJJRegular", sans-serif; font-weight: bold; text-transform: uppercase; }
 #about .fn { font-size: 1.57895em; line-height: 1em; }
 #about .eric { padding-top: 8.75em; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
 @media (min-width: 58.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5em; padding-bottom: 2.5em; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }

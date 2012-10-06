@@ -44,7 +44,10 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 %template {
   @include back($bg);
   @include text-shadow(color($white,$small) 0 1px 1px);
+  font-family: $susy-stack;
+
   b {
+    font-family: $jj-stack;
     font-weight: bold;
     white-space: nowrap;
     color: color($darker);
@@ -67,6 +70,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     border-color: $base;
     h1 {
       @include adjust-font-size-to($xlargepx);
+      font-family: $jj-stack;
       font-weight: bold;
     }
     a {
@@ -113,7 +117,10 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     @extend %allcaps;
     @include adjust-font-size-to($smallpx,1.5);
   }
-  .author { font-weight: bold; }
+  .author {
+    font-family: $jj-stack;
+    font-weight: bold;
+  }
   .social {
     @include adjust-font-size-to($largepx);
     li { display: inline-block; }

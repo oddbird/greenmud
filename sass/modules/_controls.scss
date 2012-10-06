@@ -59,6 +59,7 @@ $control-focus-color  : $white;
   min-width: rhythm($control-line*6);
   background: color($darkest,.75);
   color: $control-text-color;
+  font-family: $narrator-stack;
   z-index: 900;
   a { @extend %control-link; }
 

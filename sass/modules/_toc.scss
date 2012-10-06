@@ -23,6 +23,7 @@
   @include clearfix;
   background: color($darkest);
   color: $control-text-color;
+  font-family: $narrator-stack;
   a { @extend %control-link; }
   .wrap {
     @extend %transition;

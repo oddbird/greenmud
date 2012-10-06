@@ -12,14 +12,15 @@
 html {
   @include baseline-grid-background($base-line-height);
   @include back;
-  font-family: $jj-stack;
+  font-family: $narrator-stack;
   color: $base;
   overflow-x: hidden;
 }
 
-.jj, .susy, .narrator {
-  font-family: $jj-stack;
-}
+.jj { font-family: $jj-stack; }
+.susy { font-family: $susy-stack; }
+.narrator { font-family: $narrator-stack; }
+
 
 // ----------------------------------------------------------------------------
 // links

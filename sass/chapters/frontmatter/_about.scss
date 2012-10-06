@@ -18,6 +18,7 @@ $eric     : '#{$pg}eric.png';
     @extend %type;
     :first-line {
       @include adjust-font-size-to($smallpx,1);
+      font-family: $jj-stack;
       font-weight: bold;
       text-transform: uppercase;
     }

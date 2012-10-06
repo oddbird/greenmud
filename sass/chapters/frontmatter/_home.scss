@@ -34,16 +34,14 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
   .intro, .instructions { @include clearfix; }
   .intro { @extend %type; }
 
-  $inst-size      :$medpx ;
   $inst-ico-size  :$xxlargepx ;
 
   .inst {
     @extend %icon;
-    @include adjust-font-size-to($inst-size);
-    @include trailer(.5,$inst-size);
+    @include trailer(.5);
     @include pie-clearfix;
     &:before {
-      @include adjust-font-size-to($inst-ico-size, $from-size: $inst-size);
+      @include adjust-font-size-to($inst-ico-size);
       margin-right: rhythm(.25, $inst-ico-size);
       vertical-align: middle;
     }
