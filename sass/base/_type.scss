@@ -13,8 +13,9 @@ $grid-background-baseline-height  : $base-line-height;
 $link : '&:link, &:visited';
 $focus: '&:hover, &:focus, &:active';
 
-$jj-stack         : "GreenMudJJRegular", sans-serif;
-$susy-stack       : "GreenMudSusyRegular", sans-serif;
+$jj-stack         : "GreenMudJJ", sans-serif;
+$susy-stack       : "GreenMudSusy", sans-serif;
+$susy-smallcaps   : "GreenMudSusySC", sans-serif;
 $narrator-stack   : $jj-stack;
 
 // ---------------------------------------------------------------------------

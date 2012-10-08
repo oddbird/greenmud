@@ -7,7 +7,7 @@
 @media (min-width: 35em) { #epigraph p { font-size: inherit; line-height: inherit; } }
 
 #epigraph h1 { font-size: 1.5em; line-height: 1.25em; }
-#epigraph h1, #epigraph h2, #epigraph h3, #epigraph h4 { font-family: "GreenMudJJRegular", sans-serif; font-weight: bold; color: #404040; }
+#epigraph h1, #epigraph h2, #epigraph h3, #epigraph h4 { font-weight: bold; color: #404040; }
 #epigraph h1:first-child, #epigraph h1 + h2, #epigraph h1 + h3, #epigraph h1 + h4, #epigraph h2:first-child, #epigraph h2 + h2, #epigraph h2 + h3, #epigraph h2 + h4, #epigraph h3:first-child, #epigraph h3 + h2, #epigraph h3 + h3, #epigraph h3 + h4, #epigraph h4:first-child, #epigraph h4 + h2, #epigraph h4 + h3, #epigraph h4 + h4 { margin-top: 0; }
 #epigraph h2, #epigraph h3, #epigraph h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
 #epigraph p, #epigraph ol, #epigraph ul, #epigraph blockquote { margin-bottom: 1.25em; }

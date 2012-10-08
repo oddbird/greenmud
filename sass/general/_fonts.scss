@@ -4,13 +4,15 @@
 /* ----------------------------------------------------------------------------
   fonts */
 
-$icomoon          : IcoMoon             'icomoon/IcoMoon'                   normal  normal;
+$icomoon          : IcoMoon             'icomoon/IcoMoon'                               normal  normal;
 
-$jjregular        : GreenMudJJRegular   'jj/greenmudjj-regular-webfont'     normal  normal;
-$jjitalic         : GreenMudJJRegular   'jj/greenmudjj-italic-webfont'      normal  italic;
-$jjbold           : GreenMudJJRegular   'jj/greenmudjj-bold-webfont'        bold    normal;
+$jjregular        : GreenMudJJ      'jj/greenmudjj-regular-webfont'                 normal  normal;
+$jjitalic         : GreenMudJJ      'jj/greenmudjj-italic-webfont'                  normal  italic;
+$jjbold           : GreenMudJJ      'jj/greenmudjj-bold-webfont'                    bold    normal;
 
-$susyregular      : GreenMudSusyRegular 'susy/greenmudsusy-regular-webfont' normal  normal;
+$susyregular      : GreenMudSusy    'susy/greenmudsusy-regular-webfont'             normal  normal;
+$susybold         : GreenMudSusy    'susy/greenmudsusy-bold-webfont'                bold    normal;
+$susysc           : GreenMudSusySC  'susy/greenmudsusysmallcaps-smallcaps-webfont'  normal  normal;
 
 @mixin font($font, $exact: false) {
   $name: nth($font,1);
@@ -35,3 +37,5 @@ $susyregular      : GreenMudSusyRegular 'susy/greenmudsusy-regular-webfont' norm
 @include font($jjitalic);
 @include font($jjbold);
 @include font($susyregular);
+@include font($susybold);
+@include font($susysc);

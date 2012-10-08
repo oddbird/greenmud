@@ -32,7 +32,6 @@
 %type {
   h1 { @include adjust-font-size-to($largepx); }
   h1, h2, h3, h4 {
-    font-family: $jj-stack;
     font-weight: bold;
     color: color($darker);
     &:first-child, & + h2, & + h3, & + h4 { margin-top: 0; }

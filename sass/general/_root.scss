@@ -18,7 +18,10 @@ html {
 }
 
 .jj { font-family: $jj-stack; }
-.susy { font-family: $susy-stack; }
+.susy {
+  font-family: $susy-stack;
+  ul, ol { font-family: $susy-smallcaps; }
+}
 .narrator { font-family: $narrator-stack; }
 
 

@@ -17,13 +17,16 @@ $eric     : '#{$pg}eric.png';
   .vcard {
     @extend %type;
     :first-line {
-      @include adjust-font-size-to($smallpx,1);
-      font-family: $jj-stack;
-      font-weight: bold;
-      text-transform: uppercase;
+      font-family: $susy-smallcaps;
+      text-transform: lowercase;
     }
   }
-  .fn { @include adjust-font-size-to($medpx,1,$smallpx); }
+  .fn {
+    @include adjust-font-size-to($medpx);
+    font-family: $susy-stack;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
   .eric {
     @include padding-leader(7);
     background: image-url($faces) no-repeat scroll top;
