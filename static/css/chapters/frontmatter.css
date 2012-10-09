@@ -252,8 +252,8 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 @media (min-height: 18.75em) { #epigraph blockquote { padding-top: 2.5em; padding-bottom: 1; } }
 
 /* ---------------------------------------------------------------------------- about */
-#about .vcard :first-line { font-family: "GreenMudSusySC", sans-serif; text-transform: lowercase; }
-#about .fn { font-size: 1.25em; line-height: 1.5em; font-family: "GreenMudSusy", sans-serif; font-weight: bold; text-transform: uppercase; }
+#about .vcard :first-line { font-family: "GreenMudSusySC", sans-serif; text-transform: lowercase; font-weight: bold; }
+#about .fn { font-size: 1.25em; line-height: 1.5em; text-transform: uppercase; }
 #about .eric { padding-top: 8.75em; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
 @media (min-width: 58.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5em; padding-bottom: 2.5em; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }
   #about .oddbird, #about .teacup { width: 48.71795%; float: left; margin-right: 2.5641%; }

@@ -19,12 +19,11 @@ $eric     : '#{$pg}eric.png';
     :first-line {
       font-family: $susy-smallcaps;
       text-transform: lowercase;
+      font-weight: bold;
     }
   }
   .fn {
     @include adjust-font-size-to($medpx);
-    font-family: $susy-stack;
-    font-weight: bold;
     text-transform: uppercase;
   }
   .eric {
