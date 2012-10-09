@@ -59,7 +59,7 @@
 #home .social a, #about .social a { display: inline-block; width: 1.25em; }
 #home .social a:before, #about .social a:before { right: 0; }
 
-#home, #about { background: #d6e9d6 url('../../images/noise.png?1347221205'); text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px; }
+#home, #about { background: #d6e9d6 url('../../images/noise.png?1347221205'); text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px; font-family: "GreenMudSusy", sans-serif; }
 #home b, #about b { font-weight: bold; white-space: nowrap; color: #404040; }
 #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; }
 #home .site-title:after, #about .site-title:after, #home [role="main"]:after, #about [role="main"]:after, #home .footer:after, #about .footer:after { content: ""; display: table; clear: both; }
@@ -106,9 +106,9 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 /* ---------------------------------------------------------------------------- home page */
 #home [role="main"] { background: url('../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -391px; background: url('../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -391px, url('../../images/frontmatter/scribble.png?1347221205') no-repeat scroll right 31.25em; }
 #home .intro, #home .instructions { overflow: hidden; }
-#home .inst { font-size: 1.25em; line-height: 1.5em; margin-bottom: 0.5em; }
+#home .inst { margin-bottom: 0.625em; }
 #home .inst:after { content: ""; display: table; clear: both; }
-#home .inst:before { font-size: 1.8em; line-height: 1.11111em; margin-right: 0.13889em; vertical-align: middle; }
+#home .inst:before { font-size: 2.25em; line-height: 1.11111em; margin-right: 0.13889em; vertical-align: middle; }
 @media (min-width: 58.5em) { #home [role="banner"] { -webkit-animation: template-burst 6s ease both; -moz-animation: template-burst 6s ease both; -o-animation: template-burst 6s ease both; animation: template-burst 6s ease both; }
   #home [role="main"] { padding-top: 2.5em; background-position: 1em -5em; background-position: 1em -5em, right 10em; }
   #home .intro, #home .instructions { padding-left: 20.51282%; padding-right: 20.51282%; clear: both; } }
@@ -252,8 +252,8 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 @media (min-height: 18.75em) { #epigraph blockquote { padding-top: 2.5em; padding-bottom: 1; } }
 
 /* ---------------------------------------------------------------------------- about */
-#about .vcard :first-line { font-size: 0.79167em; line-height: 1.57895em; font-weight: bold; text-transform: uppercase; }
-#about .fn { font-size: 1.57895em; line-height: 1em; }
+#about .vcard :first-line { font-family: "GreenMudSusySC", sans-serif; text-transform: lowercase; font-weight: bold; }
+#about .fn { font-size: 1.25em; line-height: 1.5em; text-transform: uppercase; }
 #about .eric { padding-top: 8.75em; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
 @media (min-width: 58.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5em; padding-bottom: 2.5em; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }
   #about .oddbird, #about .teacup { width: 48.71795%; float: left; margin-right: 2.5641%; }
