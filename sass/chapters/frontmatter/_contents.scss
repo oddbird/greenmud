@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns: $toc-cols;
+$total-columns: $toc-cols*2;
 
 $bg           : color($yellow $hint);
 $bg-angle     : 260deg;
@@ -20,7 +20,7 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
 
   [role="main"] {
     @extend %transition-main;
-    @include layout($toc-cols*2) { @include container; }
+    @include container;
     @include padding-leader(2);
     @include pagepad(20 3 0);
   }
@@ -34,5 +34,4 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
   }
 
   li { &:before { color: color($off $yellow $dark); } }
-  .book { font-weight: bold; }
 }

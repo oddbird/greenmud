@@ -1,19 +1,27 @@
 // ----------------------------------------------------------------------------
-// imports
+// settings
+
+$icomoon          : IcoMoon           'icomoon/IcoMoon'                             normal  normal;
+
+$jjregular        : GreenMudJJ        'jj/greenmudjj-regular-webfont'               normal  normal;
+$jjitalic         : GreenMudJJ        'jj/greenmudjj-italic-webfont'                normal  italic;
+$jjbold           : GreenMudJJ        'jj/greenmudjj-bold-webfont'                  bold    normal;
+
+$susyregular      : GreenMudSusy      'susy/greenmudsusy-regular-webfont'           normal  normal;
+$susybold         : GreenMudSusy      'susy/greenmudsusy-bold-webfont'              bold    normal;
+$susysc           : GreenMudSusySC    'susy/greenmudsusy-smallcaps-webfont'         normal  normal;
+$susyscbold       : GreenMudSusySC    'susy/greenmudsusy-smallcapsbold-webfont'     bold    normal;
+
+$narrator         : GreenMudNarrator  'narrator/greenmudnarrator-regular-webfont'   normal  normal;
+$narratorbold     : GreenMudNarrator  'narrator/greenmudnarrator-bold-webfont'      bold    normal;
+
+$fonts: $icomoon,
+        $jjregular, $jjitalic, $jjbold,
+        $susyregular, $susybold, $susysc, $susyscbold,
+        $narrator, $narratorbold;
 
 /* ----------------------------------------------------------------------------
   fonts */
-
-$icomoon          : IcoMoon         'icomoon/IcoMoon'                               normal  normal;
-
-$jjregular        : GreenMudJJ      'jj/greenmudjj-regular-webfont'                 normal  normal;
-$jjitalic         : GreenMudJJ      'jj/greenmudjj-italic-webfont'                  normal  italic;
-$jjbold           : GreenMudJJ      'jj/greenmudjj-bold-webfont'                    bold    normal;
-
-$susyregular      : GreenMudSusy    'susy/greenmudsusy-regular-webfont'             normal  normal;
-$susybold         : GreenMudSusy    'susy/greenmudsusy-bold-webfont'                bold    normal;
-$susysc           : GreenMudSusySC  'susy/greenmudsusy-smallcaps-webfont'           normal  normal;
-$susyscbold       : GreenMudSusySC  'susy/greenmudsusy-smallcapsbold-webfont'       bold    normal;
 
 @mixin font($font, $exact: false) {
   $name: nth($font,1);
@@ -33,11 +41,4 @@ $susyscbold       : GreenMudSusySC  'susy/greenmudsusy-smallcapsbold-webfont'   
   );
 }
 
-@include font($icomoon);
-@include font($jjregular);
-@include font($jjitalic);
-@include font($jjbold);
-@include font($susyregular);
-@include font($susybold);
-@include font($susysc);
-@include font($susyscbold);
+@each $font in $fonts { @include font($font); }

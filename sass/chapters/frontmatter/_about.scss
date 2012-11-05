@@ -16,14 +16,10 @@ $eric     : '#{$pg}eric.png';
 
   .vcard {
     @extend %type;
-    :first-line {
-      font-family: $susy-smallcaps;
-      text-transform: lowercase;
-      font-weight: bold;
-    }
+    :first-line { font-weight: bold; }
   }
   .fn {
-    @include adjust-font-size-to($medpx);
+    @include adjust-font-size-to($medpx,1);
     text-transform: uppercase;
   }
   .eric {

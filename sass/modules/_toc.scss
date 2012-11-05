@@ -3,12 +3,16 @@
 
 [class^="toc-"] {
   @include trailer;
-  .book, li {
+  .book {
     @extend %ellipsis;
     @extend %shrink;
     @extend %transition;
   }
-  @include breakpoint($toc-break) {
+  li {
+    @extend %ellipsis;
+    @include adjust-font-size-to($smallpx);
+  }
+  @include at-breakpoint($toc-break $toc-cols*2) {
     @include span-columns($toc-cols,$total-columns);
     @include nth-omega(last);
   }
@@ -21,7 +25,7 @@
 #toc {
   @extend %toc-counter;
   @include clearfix;
-  background: color($darkest);
+  background: rgba(color($darkest),.75);
   color: $control-text-color;
   font-family: $narrator-stack;
   a { @extend %control-link; }

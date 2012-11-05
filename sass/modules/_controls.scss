@@ -6,7 +6,7 @@ $total-columns: 8;
 $control-icon: $medpx;
 $control-line: 1.5;
 
-$control-text-color   : $gray;
+$control-text-color   : color($light);
 $control-link-color   : color($lightest);
 $control-focus-color  : $white;
 
@@ -105,11 +105,7 @@ $breadcrumb-break: 50em;
     &:after { content: ":"; }
     &:last-child { &:after { content: ""; } }
   }
-  @include breakpoint($breadcrumb-break) {
-    @include adjust-font-size-to($base-font-size,$control-line);
-    max-height: rhythm($control-line);
-    text-align: left;
-  }
+  @include breakpoint($breadcrumb-break) { text-align: left; }
 }
 
 // ----------------------------------------------------------------------------

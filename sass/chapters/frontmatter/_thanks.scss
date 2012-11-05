@@ -50,7 +50,6 @@ $pg           : '#{$ch}thanks/';
   // --------------------------------------------------------------------------
   // elements
 
-  h1, h2 { font-weight: bold; }
   h1 {
     @extend %allcaps;
     @include adjust-font-size-to($xxlargepx);

@@ -23,7 +23,7 @@ $angle-layer        : image-url($angle) no-repeat scroll center;
 $bg                 : color($off $green $lightest);
 $line-pos           : 52%;
 $grad-pos           : center;
-$line-break         : 40em;
+$line-break         : 53em;
 
 $line-start         : image-width($line);
 $line-end           : 0;
@@ -80,8 +80,10 @@ $string-right-layer : image-url($right) no-repeat scroll $show-right;
   // ----------------------------------------------------------------------------
   // elements
 
-  h1, h2 { font-weight: bold; }
-  h1 { @include adjust-font-size-to($largepx); }
+  h1 {
+    @include adjust-font-size-to($largepx);
+    font-weight: bold;
+  }
   h2 {
     @include padding-trailer(6.5);
     @include trailer(.5);

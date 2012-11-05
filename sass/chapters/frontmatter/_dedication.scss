@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns    : 6;
+$total-columns    : 8;
 
 $bg               : color($orange $lighter);
 $bg-grad          : radial-gradient( center rhythm(6),
@@ -27,11 +27,14 @@ $bg-grad          : radial-gradient( center rhythm(6),
   // --------------------------------------------------------------------------
   // elements
 
-  h1, p {
+  h1 {
     @extend %transition;
     @extend %shrink;
+    font-weight: bold;
+    color: color($darkest);
   }
-
-  h1 { font-weight: bold; }
-  p { @include trailer; }
+  p {
+    @include adjust-font-size-to($smallpx);
+    @include trailer(1,$smallpx);
+  }
 }

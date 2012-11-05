@@ -42,11 +42,9 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     @include pie-clearfix;
     &:before {
       @include adjust-font-size-to($inst-ico-size);
-      margin-right: rhythm(.25, $inst-ico-size);
       vertical-align: middle;
     }
     &.turn { @extend %icon-swipe; }
-    &.access { @extend %icon-cog; }
   }
 
   // --------------------------------------------------------------------------

@@ -5,7 +5,7 @@ $total-columns  : 6;
 $template-break : 10;
 
 $toc-break: 21em;
-$toc-cols: 4;
+$toc-cols: 5;
 
 $bg             : color($off $green $lightest);
 $noise          : image-url('noise.png');
@@ -44,7 +44,6 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 %template {
   @include back($bg);
   @include text-shadow(color($white,$small) 0 1px 1px);
-  font-family: $susy-stack;
 
   b {
     font-weight: bold;
@@ -116,6 +115,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     @include adjust-font-size-to($smallpx,1.5);
   }
   .author {
+    color: $footer-highlight;
     font-weight: bold;
   }
   .social {
