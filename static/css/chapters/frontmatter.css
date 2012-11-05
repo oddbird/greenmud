@@ -250,8 +250,9 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 #epigraph p { margin-bottom: 1.25rem; }
 
 /* ---------------------------------------------------------------------------- about */
+#about .vcard { font-size: 0.79167rem; line-height: 1.25rem; }
 #about .vcard :first-line { font-weight: bold; }
-#about .fn { font-size: 1.25rem; line-height: 1.25rem; text-transform: uppercase; }
+#about .fn { font-size: 1rem; line-height: 1.25rem; text-transform: uppercase; }
 #about .eric { padding-top: 8.75rem; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
 @media (min-width: 58.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5rem; padding-bottom: 2.5rem; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }
   #about .oddbird, #about .teacup { width: 48.71795%; float: left; margin-right: 2.5641%; }

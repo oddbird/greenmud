@@ -16,10 +16,11 @@ $eric     : '#{$pg}eric.png';
 
   .vcard {
     @extend %type;
+    @include adjust-font-size-to($smallpx,1);
     :first-line { font-weight: bold; }
   }
   .fn {
-    @include adjust-font-size-to($medpx,1);
+    @include adjust-font-size-to($normpx,1);
     text-transform: uppercase;
   }
   .eric {
