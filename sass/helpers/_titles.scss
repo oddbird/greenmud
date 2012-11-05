@@ -24,7 +24,7 @@
 // Chapter Titles
 
 $total-columns    : 4;
-$break            : 8;
+$break            : container-outer-width(8) 12;
 
 $ch-title-wide    : 1deg;
 $ch-title-narrow  : .5deg;
@@ -81,7 +81,7 @@ $ch-title-narrow  : .5deg;
     z-index: 1;
   }
 
-  h1 { @include adjust-font-size-to($largepx,1.5); }
+  h1 { @include adjust-font-size-to($medpx,1.5); }
   h2 {
     @extend %allcaps;
     @include adjust-leading-to(1.5);
@@ -92,7 +92,7 @@ $ch-title-narrow  : .5deg;
   @include at-breakpoint($break) {
     [role="main"] { @include set-container-width; }
 
-    h1, h2 { width: columns(4); }
+    h1, h2 { width: columns(6); }
     h1 { margin-right: - gutter(); }
     h2 { margin-right: gutter(); }
   }
