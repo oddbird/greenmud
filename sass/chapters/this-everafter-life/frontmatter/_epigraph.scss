@@ -1,18 +1,18 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns: 6;
+$total-columns: 8;
 
 /* ----------------------------------------------------------------------------
    epigraph: amiri baraka */
 
 #epigraph {
-  @extend %type;
-
   [role="main"] {
     @extend %transition-main;
     @include container;
     @include padding-leader(2);
     @include pagepad(18 4 0);
   }
+
+  p { @include trailer; }
 }

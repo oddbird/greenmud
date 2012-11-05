@@ -61,14 +61,13 @@ $lightning-pos4   : rhythm(50) rhythm(-5);
 
   blockquote {
     @extend %transition;
-    @include pagepad(15 2 1);
-    padding: rhythm(1);
+    padding: rhythm(1.5) rhythm(1);
     color: color($light);
   }
 
   p {
     @extend %transition;
-    @extend %shrink;
+    @include adjust-font-size-to($smallpx);
   }
 
 }

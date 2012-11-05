@@ -3,39 +3,26 @@
 
 [data-icon]:before { content: attr(data-icon); }
 
-#epigraph p { font-size: 0.79167em; line-height: 1.57895em; }
+#epigraph p { font-size: 0.79167rem; line-height: 1.25rem; }
 @media (min-width: 35em) { #epigraph p { font-size: inherit; line-height: inherit; } }
 
-#epigraph h1 { font-size: 1.5em; line-height: 1.25em; }
-#epigraph h1, #epigraph h2, #epigraph h3, #epigraph h4 { font-weight: bold; color: #404040; }
-#epigraph h1:first-child, #epigraph h1 + h2, #epigraph h1 + h3, #epigraph h1 + h4, #epigraph h2:first-child, #epigraph h2 + h2, #epigraph h2 + h3, #epigraph h2 + h4, #epigraph h3:first-child, #epigraph h3 + h2, #epigraph h3 + h3, #epigraph h3 + h4, #epigraph h4:first-child, #epigraph h4 + h2, #epigraph h4 + h3, #epigraph h4 + h4 { margin-top: 0; }
-#epigraph h2, #epigraph h3, #epigraph h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
-#epigraph p, #epigraph ol, #epigraph ul, #epigraph blockquote { margin-bottom: 1.25em; }
-#epigraph ol { list-style-type: decimal; }
-#epigraph ul li { position: relative; }
-#epigraph ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
-#epigraph em, #epigraph blockquote { font-style: italic; }
-#epigraph blockquote cite { font-style: normal; }
-#epigraph blockquote :last-child { margin-bottom: 0em; }
+@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
-
-#titlepage [role="main"] { padding-top: 3.75em; padding-bottom: 1.25em; text-align: center; text-transform: uppercase; color: #404040; }
-@media (min-height: 18.75em) { #titlepage [role="main"] { padding-top: 7.5em; padding-bottom: 1; } }
-#titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
-#titlepage h2 { font-weight: bold; }
-@media (min-width: 40em) { #titlepage h1 { font-size: 2.25em; line-height: 1.11111em; }
-  #titlepage h2 { margin-bottom: 0.625em; } }
+#titlepage [role="main"] { padding-top: 3.75rem; padding-bottom: 1.25rem; text-align: center; text-transform: uppercase; color: #404040; }
+@media (min-height: 18.75rem) { #titlepage [role="main"] { padding-top: 7.5rem; padding-bottom: 1; } }
+#titlepage h1 { font-size: 1.5rem; line-height: 1.875rem; }
+@media (min-width: 40em) { #titlepage h1 { font-size: 1.58333rem; line-height: 1.875rem; }
+  #titlepage h2 { margin-bottom: 0.625rem; } }
 
 #titlepage h1, #titlepage h2, #epigraph blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
@@ -58,10 +45,11 @@ html { background: #bfbfff url('../../../images/noise.png?1347221205'); backgrou
 #epigraph { background: -webkit-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -moz-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -o-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(355deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; }
 #epigraph [role="main"] { max-width: 31em; margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 18.75em) { #epigraph [role="main"] { padding-top: 4.375em; padding-bottom: 1; } }
-#epigraph blockquote { padding-top: 5.625em; background: url('../../../images/dancing/epigraph/lennon.png?1347221204') no-repeat scroll center top; padding-left: 12.90323%; }
+@media (min-height: 18.75rem) { #epigraph [role="main"] { padding-top: 4.375rem; padding-bottom: 1; } }
+#epigraph blockquote { padding-top: 5.625rem; background: url('../../../images/dancing/epigraph/lennon.png?1347221204') no-repeat scroll center top; padding-left: 12.90323%; }
 @media (min-width: 22.5em) { #epigraph blockquote { padding-left: 26.66667%; } }
 @media (min-width: 28.5em) { #epigraph blockquote { padding-left: 42.10526%; } }
-@media (min-width: 34.5em) { #epigraph blockquote { padding-left: 52.17391%; } }
+@media (min-width: 46.5em) { #epigraph blockquote { padding-left: 51.6129%; } }
+#epigraph p { margin-bottom: 1.25rem; }
 
 /* ---------------------------------------------------------------------------- titlepage */

@@ -25,7 +25,7 @@
 #toc {
   @extend %toc-counter;
   @include clearfix;
-  background: rgba(color($darkest),.75);
+  background: color($darkest,.75);
   color: $control-text-color;
   font-family: $narrator-stack;
   a { @extend %control-link; }

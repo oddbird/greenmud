@@ -97,7 +97,7 @@ $breadcrumb-break: 50em;
   @extend %ellipsis;
   @include clearfix;
   @include adjust-font-size-to($breadcrumb-font-size,$control-line);
-  max-height: rhythm($control-line,$breadcrumb-font-size);
+  max-height: rhythm($control-line);
   text-align: center;
   width: auto;
   li {

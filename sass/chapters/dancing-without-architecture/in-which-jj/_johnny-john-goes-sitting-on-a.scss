@@ -24,10 +24,10 @@ $treetrunk      : '#{$pg}treetrunk.png';
 $rainish        : '#{$pg}rainish.png';
 $border         : '#{$pg}border.png';
 
-$tree-hide      : -30em 0em;
-$tree-pos       : 0em 0em;
+$tree-hide      : -30rem 0;
+$tree-pos       : 0 0;
 $sunburst-pos   : top right;
-$border-pos     : 0 $grass-location - .125em;
+$border-pos     : 0 $grass-location - .125rem;
 $rainish-pos    : rhythm(-4) rhythm(1);
 $rainish-pos1   : rhythm(-3.5) rhythm(1.5);
 $rainish-pos2   : rhythm(-3) rhythm(1);

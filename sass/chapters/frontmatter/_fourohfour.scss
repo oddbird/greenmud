@@ -37,7 +37,7 @@ $bggrad     : radial-gradient(25% top, circle,
     font-weight: bold;
     @include breakpoint(35em) {
       @include adjust-font-size-to($largepx);
-      @include trailer(1, $largepx);
+      @include trailer;
       a::after {
         @include animation(fadeIn 2s ease both infinite alternate);
         content: " »";

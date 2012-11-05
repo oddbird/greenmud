@@ -13,10 +13,9 @@
 
   h1 { @include adjust-font-size-to($largepx); }
   h1, h2 { @extend %transition; }
-  h2 { font-weight: bold; }
 
   @include breakpoint(40em) {
-    h1 { @include adjust-font-size-to($xxlargepx); }
+    h1 { @include adjust-font-size-to($xlargepx); }
     h2 { @include trailer(.5); }
   }
 }

@@ -34,11 +34,11 @@
   h1, h2, h3, h4 {
     font-weight: bold;
     color: color($darker);
-    &:first-child, & + h2, & + h3, & + h4 { margin-top: 0; }
+    &:first-child, & + h2, & + h3, & + h4 { @include leader(0); }
   }
   h2, h3, h4 {
     @include adjust-font-size-to($medpx);
-    @include leader(1,$largepx);
+    @include leader(1);
   }
   p, ol, ul, blockquote {
     @include trailer;
@@ -59,9 +59,7 @@
   em, blockquote { font-style: italic; }
   blockquote {
     cite { font-style: normal; }
-    :last-child {
-      @include trailer(0);
-    }
+    :last-child { @include trailer(0); }
   }
 }
 

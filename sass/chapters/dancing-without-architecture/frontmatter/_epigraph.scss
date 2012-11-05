@@ -20,7 +20,6 @@ $lennon   : '#{$pg}lennon.png';
    epigraph: john lennon */
 
 #epigraph {
-  @extend %type;
   @include background($bg-old bottom right);
   background: $bg-new bottom right;
 
@@ -41,8 +40,11 @@ $lennon   : '#{$pg}lennon.png';
     @include prefix(1);
     @include at-breakpoint(4) { @include prefix(1); }
     @include at-breakpoint(5) { @include prefix(2); }
-    @include at-breakpoint(6) { @include prefix(3); }
+    @include at-breakpoint(8) { @include prefix(4); }
   }
 
-  p { @extend %shrink; }
+  p {
+    @extend %shrink;
+    @include trailer;
+  }
 }

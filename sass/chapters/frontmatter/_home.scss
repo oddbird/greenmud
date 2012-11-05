@@ -34,14 +34,12 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
   .intro, .instructions { @include clearfix; }
   .intro { @extend %type; }
 
-  $inst-ico-size  :$xxlargepx ;
-
   .inst {
     @extend %icon;
     @include trailer(.5);
     @include pie-clearfix;
     &:before {
-      @include adjust-font-size-to($inst-ico-size);
+      @include adjust-font-size-to($xxlargepx);
       vertical-align: middle;
     }
     &.turn { @extend %icon-swipe; }

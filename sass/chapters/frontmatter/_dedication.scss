@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns    : 8;
+$total-columns    : 6;
 
 $bg               : color($orange $lighter);
 $bg-grad          : radial-gradient( center rhythm(6),
@@ -35,6 +35,6 @@ $bg-grad          : radial-gradient( center rhythm(6),
   }
   p {
     @include adjust-font-size-to($smallpx);
-    @include trailer(1,$smallpx);
+    @include trailer;
   }
 }

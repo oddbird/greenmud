@@ -89,7 +89,7 @@ $-s-raindrops-position: 100%;
   &::before {
     @include adjust-font-size-to($smallpx);
     content: "pit";
-    padding: 0 rhythm(.25,$smallpx);
+    padding: 0 rhythm(.25);
     background: rgba($red,.25);
   }
   &:last-child::before { content: "pot"; }
