@@ -7,51 +7,51 @@
 
 #titlepage h2 { text-transform: uppercase; }
 
-#once-upon-a-sunday blockquote span { font-size: 0.79167em; line-height: 1.57895em; }
+#once-upon-a-sunday blockquote span { font-size: 0.79167rem; line-height: 1.25rem; }
 @media (min-width: 35em) { #once-upon-a-sunday blockquote span { font-size: inherit; line-height: inherit; } }
 
-#his-shirt-is-wet-and [role="main"] h1 { font-size: 1.5em; line-height: 1.25em; }
+#his-shirt-is-wet-and [role="main"] h1 { font-size: 1.5rem; line-height: 1.875rem; }
 #his-shirt-is-wet-and [role="main"] h1, #his-shirt-is-wet-and [role="main"] h2, #his-shirt-is-wet-and [role="main"] h3, #his-shirt-is-wet-and [role="main"] h4 { font-weight: bold; color: #404040; }
-#his-shirt-is-wet-and [role="main"] h1:first-child, #his-shirt-is-wet-and [role="main"] h1 + h2, #his-shirt-is-wet-and [role="main"] h1 + h3, #his-shirt-is-wet-and [role="main"] h1 + h4, #his-shirt-is-wet-and [role="main"] h2:first-child, #his-shirt-is-wet-and [role="main"] h2 + h2, #his-shirt-is-wet-and [role="main"] h2 + h3, #his-shirt-is-wet-and [role="main"] h2 + h4, #his-shirt-is-wet-and [role="main"] h3:first-child, #his-shirt-is-wet-and [role="main"] h3 + h2, #his-shirt-is-wet-and [role="main"] h3 + h3, #his-shirt-is-wet-and [role="main"] h3 + h4, #his-shirt-is-wet-and [role="main"] h4:first-child, #his-shirt-is-wet-and [role="main"] h4 + h2, #his-shirt-is-wet-and [role="main"] h4 + h3, #his-shirt-is-wet-and [role="main"] h4 + h4 { margin-top: 0; }
-#his-shirt-is-wet-and [role="main"] h2, #his-shirt-is-wet-and [role="main"] h3, #his-shirt-is-wet-and [role="main"] h4 { font-size: 1.25em; line-height: 1.5em; margin-top: 0.83333em; }
-#his-shirt-is-wet-and [role="main"] p, #his-shirt-is-wet-and [role="main"] ol, #his-shirt-is-wet-and [role="main"] ul, #his-shirt-is-wet-and [role="main"] blockquote { margin-bottom: 1.25em; }
+#his-shirt-is-wet-and [role="main"] h1:first-child, #his-shirt-is-wet-and [role="main"] h1 + h2, #his-shirt-is-wet-and [role="main"] h1 + h3, #his-shirt-is-wet-and [role="main"] h1 + h4, #his-shirt-is-wet-and [role="main"] h2:first-child, #his-shirt-is-wet-and [role="main"] h2 + h2, #his-shirt-is-wet-and [role="main"] h2 + h3, #his-shirt-is-wet-and [role="main"] h2 + h4, #his-shirt-is-wet-and [role="main"] h3:first-child, #his-shirt-is-wet-and [role="main"] h3 + h2, #his-shirt-is-wet-and [role="main"] h3 + h3, #his-shirt-is-wet-and [role="main"] h3 + h4, #his-shirt-is-wet-and [role="main"] h4:first-child, #his-shirt-is-wet-and [role="main"] h4 + h2, #his-shirt-is-wet-and [role="main"] h4 + h3, #his-shirt-is-wet-and [role="main"] h4 + h4 { margin-top: 0rem; }
+#his-shirt-is-wet-and [role="main"] h2, #his-shirt-is-wet-and [role="main"] h3, #his-shirt-is-wet-and [role="main"] h4 { font-size: 1.25rem; line-height: 1.875rem; margin-top: 1.25rem; }
+#his-shirt-is-wet-and [role="main"] p, #his-shirt-is-wet-and [role="main"] ol, #his-shirt-is-wet-and [role="main"] ul, #his-shirt-is-wet-and [role="main"] blockquote { margin-bottom: 1.25rem; }
 #his-shirt-is-wet-and [role="main"] ol { list-style-type: decimal; }
 #his-shirt-is-wet-and [role="main"] ul li { position: relative; }
 #his-shirt-is-wet-and [role="main"] ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
 #his-shirt-is-wet-and [role="main"] em, #his-shirt-is-wet-and [role="main"] blockquote { font-style: italic; }
 #his-shirt-is-wet-and [role="main"] blockquote cite { font-style: normal; }
-#his-shirt-is-wet-and [role="main"] blockquote :last-child { margin-bottom: 0em; }
+#his-shirt-is-wet-and [role="main"] blockquote :last-child { margin-bottom: 0rem; }
 
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10em, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5em, center; } }
+@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
+  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
 #titlepage { overflow-x: hidden; }
-#titlepage [role="main"] { max-width: 15em; margin-top: 3.75em; margin-bottom: 1.25em; position: relative; margin-left: auto; margin-right: auto; padding: 1.875em 1em; text-align: center; }
-@media (min-height: 22.5em) { #titlepage [role="main"] { margin-top: 7.5em; } }
+#titlepage [role="main"] { max-width: 15em; margin-top: 3.75rem; margin-bottom: 1.25rem; position: relative; margin-left: auto; margin-right: auto; padding: 1.875rem 1em; text-align: center; }
+@media (min-height: 22.5rem) { #titlepage [role="main"] { margin-top: 7.5rem; } }
 #titlepage [role="main"]::before, #titlepage [role="main"]::after { position: absolute; top: 0; bottom: 0; -webkit-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; -moz-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; border: 1px solid rgba(32, 32, 32, 0.25); content: " "; left: -200%; right: -200%; z-index: 0; }
 #titlepage [role="main"]::before { -webkit-transform: rotate(-1deg); -moz-transform: rotate(-1deg); -ms-transform: rotate(-1deg); -o-transform: rotate(-1deg); transform: rotate(-1deg); }
 #titlepage [role="main"]::after { -webkit-transform: rotate(1deg); -moz-transform: rotate(1deg); -ms-transform: rotate(1deg); -o-transform: rotate(1deg); transform: rotate(1deg); }
 #titlepage [role="main"]:hover::before { -webkit-transform: rotate(0.5deg); -moz-transform: rotate(0.5deg); -ms-transform: rotate(0.5deg); -o-transform: rotate(0.5deg); transform: rotate(0.5deg); }
 #titlepage [role="main"]:hover::after { -webkit-transform: rotate(-0.5deg); -moz-transform: rotate(-0.5deg); -ms-transform: rotate(-0.5deg); -o-transform: rotate(-0.5deg); transform: rotate(-0.5deg); }
 #titlepage h1, #titlepage h2 { position: relative; display: inline-block; vertical-align: middle; z-index: 1; }
-#titlepage h1 { font-size: 1.5em; line-height: 1.25em; }
-#titlepage h2 { line-height: 1.875em; }
+#titlepage h1 { font-size: 1.25rem; line-height: 1.875rem; }
+#titlepage h2 { line-height: 1.875rem; }
 #titlepage [role="main"] { text-shadow: rgba(242, 242, 242, 0.5) 0 1px 0; color: #404040; }
 #titlepage [role="main"]::before { background-color: rgba(255, 255, 255, 0.675); }
 #titlepage [role="main"]::after { background-color: rgba(255, 255, 255, 0.675); }
-@media (min-width: 46.5em) { #titlepage [role="main"] { max-width: 31em; }
-  #titlepage h1, #titlepage h2 { width: 48.3871%; }
-  #titlepage h1 { margin-right: -3.22581%; }
-  #titlepage h2 { margin-right: 3.22581%; } }
+@media (min-width: 46.5em) { #titlepage [role="main"] { max-width: 47em; }
+  #titlepage h1, #titlepage h2 { width: 48.93617%; }
+  #titlepage h1 { margin-right: -2.12766%; }
+  #titlepage h2 { margin-right: 2.12766%; } }
 
 #titlepage [role="main"]::before, #titlepage [role="main"]::after, #titlepage h1, #titlepage h2, #once-upon-a-sunday blockquote, #once-upon-a-sunday blockquote span, #johnny-john-goes-sitting-on-a p, #shadow-shadow-park-and-shadow p { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
@@ -100,45 +100,45 @@ html { background: #fafaeb url('../../../images/noise.png?1347221205'); }
 #once-upon-a-sunday.enter-next { -webkit-animation: fadeIn 2s ease, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease, rain 60s linear infinite both; -o-animation: fadeIn 2s ease, rain 60s linear infinite both; animation: fadeIn 2s ease, rain 60s linear infinite both; }
 #once-upon-a-sunday.exit-prev { -webkit-animation: fadeOut 600ms ease, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease, rain 60s linear infinite both; animation: fadeOut 600ms ease, rain 60s linear infinite both; }
 #once-upon-a-sunday.exit-next { -webkit-animation: fadeOut 600ms ease, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease, rain 60s linear infinite both; animation: fadeOut 600ms ease, rain 60s linear infinite both; }
-#once-upon-a-sunday [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5em; padding-bottom: 1.25em; position: relative; }
+#once-upon-a-sunday [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5rem; padding-bottom: 1.25rem; position: relative; }
 #once-upon-a-sunday [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 18.75em) { #once-upon-a-sunday [role="main"] { padding-top: 3.75em; padding-bottom: 3; } }
+@media (min-height: 18.75rem) { #once-upon-a-sunday [role="main"] { padding-top: 3.75rem; padding-bottom: 3; } }
 @media (min-width: 46.5em) { #once-upon-a-sunday [role="main"] { max-width: 47em; } }
 #once-upon-a-sunday blockquote { font-style: italic; }
-#once-upon-a-sunday blockquote p { margin-bottom: 1.25em; -webkit-animation: fadeIn 4s 3s both; -moz-animation: fadeIn 4s 3s both; -o-animation: fadeIn 4s 3s both; animation: fadeIn 4s 3s both; }
-#once-upon-a-sunday blockquote span { display: inline-block; padding: 0.15625em 0.3125em 0.15625em; margin-bottom: -0.15625em; background: rgba(255, 255, 191, 0.75); }
+#once-upon-a-sunday blockquote p { margin-bottom: 1.25rem; -webkit-animation: fadeIn 4s 3s both; -moz-animation: fadeIn 4s 3s both; -o-animation: fadeIn 4s 3s both; animation: fadeIn 4s 3s both; }
+#once-upon-a-sunday blockquote span { display: inline-block; padding: 0.15625rem 0.3125rem 0.15625rem; margin-bottom: -0.15625rem; background: rgba(255, 255, 191, 0.75); }
 @media (min-width: 46.5em) { #once-upon-a-sunday blockquote { padding-left: 51.06383%; } }
 #once-upon-a-sunday .pitpot { -webkit-transform: rotate(6deg); -moz-transform: rotate(6deg); -ms-transform: rotate(6deg); -o-transform: rotate(6deg); transform: rotate(6deg); -webkit-animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; -moz-animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; -o-animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; animation: pitpotIn 2s 2s both, fadeIn 2s 2s both; margin: 0 -200%; background: rgba(166, 128, 89, 0.75); color: #202020; text-align: center; text-transform: uppercase; }
 #once-upon-a-sunday .pitpot::before { content: "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot "; }
 #once-upon-a-sunday .raindrop { -webkit-animation: fadeInDownBig 6s 4s both; -moz-animation: fadeInDownBig 6s 4s both; -o-animation: fadeInDownBig 6s 4s both; animation: fadeInDownBig 6s 4s both; display: none; }
-@media (min-width: 46.5em) { #once-upon-a-sunday .raindrop { background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/raindrop.png?1347221205') no-repeat scroll right; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; display: block; position: absolute; top: 1.25em; bottom: -1.25em; left: 0; width: 40.42553%; } }
+@media (min-width: 46.5em) { #once-upon-a-sunday .raindrop { background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/raindrop.png?1347221205') no-repeat scroll right; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; display: block; position: absolute; top: 1.25rem; bottom: -1.25rem; left: 0; width: 40.42553%; } }
 
-@-moz-keyframes rainish { 0%, 100% { background-position: 0, 0em 0em, 0 18.625em, 0, -4.375em 1.875em, -5em 1.25em, top right; }
-  33% { background-position: 0, 0em 0em, 0 18.625em, 0, -3.75em 1.25em, -4.375em 1.875em, top right; }
-  66% { background-position: 0, 0em 0em, 0 18.625em, 0, -5em 1.25em, -3.75em 1.25em, top right; } }
+@-moz-keyframes rainish { 0%, 100% { background-position: 0, 0 0, 0 18.625rem, 0, -4.375rem 1.875rem, -5rem 1.25rem, top right; }
+  33% { background-position: 0, 0 0, 0 18.625rem, 0, -3.75rem 1.25rem, -4.375rem 1.875rem, top right; }
+  66% { background-position: 0, 0 0, 0 18.625rem, 0, -5rem 1.25rem, -3.75rem 1.25rem, top right; } }
 
-@-webkit-keyframes rainish { 0%, 100% { background-position: 0, 0em 0em, 0 18.625em, 0, -4.375em 1.875em, -5em 1.25em, top right; }
-  33% { background-position: 0, 0em 0em, 0 18.625em, 0, -3.75em 1.25em, -4.375em 1.875em, top right; }
-  66% { background-position: 0, 0em 0em, 0 18.625em, 0, -5em 1.25em, -3.75em 1.25em, top right; } }
+@-webkit-keyframes rainish { 0%, 100% { background-position: 0, 0 0, 0 18.625rem, 0, -4.375rem 1.875rem, -5rem 1.25rem, top right; }
+  33% { background-position: 0, 0 0, 0 18.625rem, 0, -3.75rem 1.25rem, -4.375rem 1.875rem, top right; }
+  66% { background-position: 0, 0 0, 0 18.625rem, 0, -5rem 1.25rem, -3.75rem 1.25rem, top right; } }
 
-@-o-keyframes rainish { 0%, 100% { background-position: 0, 0em 0em, 0 18.625em, 0, -4.375em 1.875em, -5em 1.25em, top right; }
-  33% { background-position: 0, 0em 0em, 0 18.625em, 0, -3.75em 1.25em, -4.375em 1.875em, top right; }
-  66% { background-position: 0, 0em 0em, 0 18.625em, 0, -5em 1.25em, -3.75em 1.25em, top right; } }
+@-o-keyframes rainish { 0%, 100% { background-position: 0, 0 0, 0 18.625rem, 0, -4.375rem 1.875rem, -5rem 1.25rem, top right; }
+  33% { background-position: 0, 0 0, 0 18.625rem, 0, -3.75rem 1.25rem, -4.375rem 1.875rem, top right; }
+  66% { background-position: 0, 0 0, 0 18.625rem, 0, -5rem 1.25rem, -3.75rem 1.25rem, top right; } }
 
-@keyframes rainish { 0%, 100% { background-position: 0, 0em 0em, 0 18.625em, 0, -4.375em 1.875em, -5em 1.25em, top right; }
-  33% { background-position: 0, 0em 0em, 0 18.625em, 0, -3.75em 1.25em, -4.375em 1.875em, top right; }
-  66% { background-position: 0, 0em 0em, 0 18.625em, 0, -5em 1.25em, -3.75em 1.25em, top right; } }
+@keyframes rainish { 0%, 100% { background-position: 0, 0 0, 0 18.625rem, 0, -4.375rem 1.875rem, -5rem 1.25rem, top right; }
+  33% { background-position: 0, 0 0, 0 18.625rem, 0, -3.75rem 1.25rem, -4.375rem 1.875rem, top right; }
+  66% { background-position: 0, 0 0, 0 18.625rem, 0, -5rem 1.25rem, -3.75rem 1.25rem, top right; } }
 
 /* ---------------------------------------------------------------------------- johnny-john-goes-sitting-on-a */
-#johnny-john-goes-sitting-on-a { -webkit-transition: background 1s; -moz-transition: background 1s; -o-transition: background 1s; transition: background 1s; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30em 0em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625em, -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75em, #dbdbbd 18.75em, #dbdbbd 21.25em, #59a659 56.25em), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30em 0em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625em, -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75em, #dbdbbd 18.75em, #dbdbbd 21.25em, #59a659 56.25em), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30em 0em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625em, -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75em, #dbdbbd 18.75em, #dbdbbd 21.25em, #59a659 56.25em), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30em 0em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625em, linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75em, #dbdbbd 18.75em, #dbdbbd 21.25em, #59a659 56.25em), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30em 0em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625em, linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75em, #dbdbbd 18.75em, #dbdbbd 21.25em, #59a659 56.25em), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5em 10em, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; }
-@media (min-width: 39em) { #johnny-john-goes-sitting-on-a { -webkit-animation: rainish 3s linear infinite both; -moz-animation: rainish 3s linear infinite both; -o-animation: rainish 3s linear infinite both; animation: rainish 3s linear infinite both; background-position: 0, 0em 0em, 0 18.625em, 0, -4.375em 1.875em, -5em 1.25em, top right; }
+#johnny-john-goes-sitting-on-a { -webkit-transition: background 1s; -moz-transition: background 1s; -o-transition: background 1s; transition: background 1s; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30rem 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625rem, -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75rem, #dbdbbd 18.75rem, #dbdbbd 21.25rem, #59a659 56.25rem), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30rem 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625rem, -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75rem, #dbdbbd 18.75rem, #dbdbbd 21.25rem, #59a659 56.25rem), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30rem 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625rem, -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75rem, #dbdbbd 18.75rem, #dbdbbd 21.25rem, #59a659 56.25rem), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30rem 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625rem, linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75rem, #dbdbbd 18.75rem, #dbdbbd 21.25rem, #59a659 56.25rem), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; background: url('../../../images/noise.png?1347221205') repeat 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/treetrunk.png?1347221204') no-repeat scroll -30rem 0, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/border.png?1347221204') repeat-x scroll 0 18.625rem, linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 18.75rem, #dbdbbd 18.75rem, #dbdbbd 21.25rem, #59a659 56.25rem), url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.png?1347221204') no-repeat scroll -7.5rem 10rem, url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/sunburst.png?1347221204') no-repeat scroll top right; }
+@media (min-width: 39em) { #johnny-john-goes-sitting-on-a { -webkit-animation: rainish 3s linear infinite both; -moz-animation: rainish 3s linear infinite both; -o-animation: rainish 3s linear infinite both; animation: rainish 3s linear infinite both; background-position: 0, 0 0, 0 18.625rem, 0, -4.375rem 1.875rem, -5rem 1.25rem, top right; }
   #johnny-john-goes-sitting-on-a.enter-prev { -webkit-animation: fadeIn 2s ease, rainish 3s linear infinite both; -moz-animation: fadeIn 2s ease, rainish 3s linear infinite both; -o-animation: fadeIn 2s ease, rainish 3s linear infinite both; animation: fadeIn 2s ease, rainish 3s linear infinite both; }
   #johnny-john-goes-sitting-on-a.enter-next { -webkit-animation: fadeIn 2s ease, rainish 3s linear infinite both; -moz-animation: fadeIn 2s ease, rainish 3s linear infinite both; -o-animation: fadeIn 2s ease, rainish 3s linear infinite both; animation: fadeIn 2s ease, rainish 3s linear infinite both; }
   #johnny-john-goes-sitting-on-a.exit-prev { -webkit-animation: fadeOut 600ms ease, rainish 3s linear infinite both; -moz-animation: fadeOut 600ms ease, rainish 3s linear infinite both; -o-animation: fadeOut 600ms ease, rainish 3s linear infinite both; animation: fadeOut 600ms ease, rainish 3s linear infinite both; }
   #johnny-john-goes-sitting-on-a.exit-next { -webkit-animation: fadeOut 600ms ease, rainish 3s linear infinite both; -moz-animation: fadeOut 600ms ease, rainish 3s linear infinite both; -o-animation: fadeOut 600ms ease, rainish 3s linear infinite both; animation: fadeOut 600ms ease, rainish 3s linear infinite both; } }
-#johnny-john-goes-sitting-on-a [role="main"] { max-width: 12.5em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 3.75em; padding-bottom: 5em; background: url('../../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -4.0625em; }
+#johnny-john-goes-sitting-on-a [role="main"] { max-width: 12.5em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 3.75rem; padding-bottom: 5rem; background: url('../../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -4.0625rem; }
 #johnny-john-goes-sitting-on-a [role="main"]:after { content: ""; display: table; clear: both; }
-#johnny-john-goes-sitting-on-a i { margin-bottom: 1.25em; display: block; margin-left: -72%; font-weight: bold; }
+#johnny-john-goes-sitting-on-a i { margin-bottom: 1.25rem; display: block; margin-left: -72%; font-weight: bold; }
 #johnny-john-goes-sitting-on-a p { padding-left: 72%; text-align: right; }
 
 @-moz-keyframes drops { 0%, 24% { top: -20%; }
@@ -171,29 +171,29 @@ html { background: #fafaeb url('../../../images/noise.png?1347221205'); }
 #shadow-shadow-park-and-shadow.enter-next { -webkit-animation: fadeIn 2s ease, shadow 60s linear infinite alternate both; -moz-animation: fadeIn 2s ease, shadow 60s linear infinite alternate both; -o-animation: fadeIn 2s ease, shadow 60s linear infinite alternate both; animation: fadeIn 2s ease, shadow 60s linear infinite alternate both; }
 #shadow-shadow-park-and-shadow.exit-prev { -webkit-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -moz-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -o-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; }
 #shadow-shadow-park-and-shadow.exit-next { -webkit-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -moz-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -o-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; }
-#shadow-shadow-park-and-shadow [role="main"] { padding-top: 2.5em; padding-bottom: 2.5em; }
-@media (min-height: 18.75em) { #shadow-shadow-park-and-shadow [role="main"] { padding-top: 3.75em; padding-bottom: 2; } }
-#shadow-shadow-park-and-shadow .puddle { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; position: relative; padding-bottom: 5em; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-far.png?1347255590') no-repeat bottom; }
+#shadow-shadow-park-and-shadow [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+@media (min-height: 18.75rem) { #shadow-shadow-park-and-shadow [role="main"] { padding-top: 3.75rem; padding-bottom: 2; } }
+#shadow-shadow-park-and-shadow .puddle { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; position: relative; padding-bottom: 5rem; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-far.png?1347255590') no-repeat bottom; }
 #shadow-shadow-park-and-shadow .puddle:after { content: ""; display: table; clear: both; }
-#shadow-shadow-park-and-shadow .puddle::before { position: absolute; left: 0; right: 0; bottom: 0; content: " "; height: 5em; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-close.png?1347255570') no-repeat bottom; z-index: 500; }
+#shadow-shadow-park-and-shadow .puddle::before { position: absolute; left: 0; right: 0; bottom: 0; content: " "; height: 5rem; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-close.png?1347255570') no-repeat bottom; z-index: 500; }
 #shadow-shadow-park-and-shadow p { padding-left: 17.3913%; padding-right: 17.3913%; }
 @media (min-width: 22.5em) { #shadow-shadow-park-and-shadow p { padding-left: 34.28571%; padding-right: 34.28571%; } }
 
 .-s-raindrops-sprite, .drop:nth-child(1), .drop:nth-child(2), .drop:nth-child(3), .drop:nth-child(4), .drop:nth-child(5), .drop:nth-child(6), .drop:nth-child(7) { background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/-s-raindrops-s5c3dd45feb.png') no-repeat; }
 
 .drop { -webkit-animation: drops 15s linear infinite both; -moz-animation: drops 15s linear infinite both; -o-animation: drops 15s linear infinite both; animation: drops 15s linear infinite both; position: absolute; top: 0; }
-.drop::before { font-size: 0.79167em; line-height: 1.57895em; content: "pit"; padding: 0 0.39474em; background: rgba(255, 0, 0, 0.25); }
+.drop::before { font-size: 0.79167rem; line-height: 1.25rem; content: "pit"; padding: 0 0.3125rem; background: rgba(255, 0, 0, 0.25); }
 .drop:last-child::before { content: "pot"; }
-.drop:nth-child(1) { -webkit-animation-duration: 54s; -moz-animation-duration: 54s; -o-animation-duration: 54s; animation-duration: 54s; background-position: 100% -270px; right: 1.66667%; top: 10.41667%; padding-bottom: 2.5em; padding-right: 1.25em; }
-.drop:nth-child(2) { -webkit-animation-duration: 48s; -moz-animation-duration: 48s; -o-animation-duration: 48s; animation-duration: 48s; background-position: 100% 0; left: 6.66667%; top: 41.66667%; padding-top: 2.5em; padding-right: 2.5em; }
-.drop:nth-child(3) { -webkit-animation-duration: 42s; -moz-animation-duration: 42s; -o-animation-duration: 42s; animation-duration: 42s; background-position: 100% -540px; right: 15%; top: 93.75%; padding-bottom: 2.5em; padding-right: 1.25em; }
-.drop:nth-child(4) { -webkit-animation-duration: 36s; -moz-animation-duration: 36s; -o-animation-duration: 36s; animation-duration: 36s; background-position: 100% -360px; left: 26.66667%; top: 66.66667%; padding-top: 2.5em; padding-right: 1.875em; }
-.drop:nth-child(5) { -webkit-animation-duration: 30s; -moz-animation-duration: 30s; -o-animation-duration: 30s; animation-duration: 30s; background-position: 100% -90px; right: 41.66667%; top: 60.41667%; padding-bottom: 2.5em; padding-right: 1.875em; }
-.drop:nth-child(6) { -webkit-animation-duration: 24s; -moz-animation-duration: 24s; -o-animation-duration: 24s; animation-duration: 24s; background-position: 100% -450px; left: 60%; top: 75%; padding-top: 2.5em; padding-right: 1.875em; }
-.drop:nth-child(7) { -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; background-position: 100% -180px; right: 81.66667%; top: 10.41667%; padding-bottom: 2.5em; padding-right: 1.25em; }
+.drop:nth-child(1) { -webkit-animation-duration: 54s; -moz-animation-duration: 54s; -o-animation-duration: 54s; animation-duration: 54s; background-position: 100% -270px; right: 1.66667%; top: 10.41667%; padding-bottom: 2.5rem; padding-right: 1.25rem; }
+.drop:nth-child(2) { -webkit-animation-duration: 48s; -moz-animation-duration: 48s; -o-animation-duration: 48s; animation-duration: 48s; background-position: 100% 0; left: 6.66667%; top: 41.66667%; padding-top: 2.5rem; padding-right: 2.5rem; }
+.drop:nth-child(3) { -webkit-animation-duration: 42s; -moz-animation-duration: 42s; -o-animation-duration: 42s; animation-duration: 42s; background-position: 100% -540px; right: 15%; top: 93.75%; padding-bottom: 2.5rem; padding-right: 1.25rem; }
+.drop:nth-child(4) { -webkit-animation-duration: 36s; -moz-animation-duration: 36s; -o-animation-duration: 36s; animation-duration: 36s; background-position: 100% -360px; left: 26.66667%; top: 66.66667%; padding-top: 2.5rem; padding-right: 1.875rem; }
+.drop:nth-child(5) { -webkit-animation-duration: 30s; -moz-animation-duration: 30s; -o-animation-duration: 30s; animation-duration: 30s; background-position: 100% -90px; right: 41.66667%; top: 60.41667%; padding-bottom: 2.5rem; padding-right: 1.875rem; }
+.drop:nth-child(6) { -webkit-animation-duration: 24s; -moz-animation-duration: 24s; -o-animation-duration: 24s; animation-duration: 24s; background-position: 100% -450px; left: 60%; top: 75%; padding-top: 2.5rem; padding-right: 1.875rem; }
+.drop:nth-child(7) { -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; background-position: 100% -180px; right: 81.66667%; top: 10.41667%; padding-bottom: 2.5rem; padding-right: 1.25rem; }
 
 /* ---------------------------------------------------------------------------- his-shirt-is-wet-and */
-#his-shirt-is-wet-and [role="main"] { max-width: 15em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 3.75em; padding-bottom: 5em; }
+#his-shirt-is-wet-and [role="main"] { max-width: 15em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 3.75rem; padding-bottom: 5rem; }
 #his-shirt-is-wet-and [role="main"]:after { content: ""; display: table; clear: both; }
 
 /* ---------------------------------------------------------------------------- titlepage */
