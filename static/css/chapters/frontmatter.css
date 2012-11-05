@@ -25,17 +25,17 @@
 #dedication h1, #fourohfour blockquote { font-size: 0.79167rem; line-height: 1.25rem; }
 @media (min-width: 35em) { #dedication h1, #fourohfour blockquote { font-size: inherit; line-height: inherit; } }
 
-#home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1 { font-size: 1.5rem; line-height: 1.875rem; }
-#home .intro h1, #thanks h1, #epigraph h1, #about .vcard h1, #home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-weight: bold; color: #404040; }
-#home .intro h1:first-child, #thanks h1:first-child, #epigraph h1:first-child, #about .vcard h1:first-child, #home .intro h1 + h2, #thanks h1 + h2, #epigraph h1 + h2, #about .vcard h1 + h2, #home .intro h1 + h3, #thanks h1 + h3, #epigraph h1 + h3, #about .vcard h1 + h3, #home .intro h1 + h4, #thanks h1 + h4, #epigraph h1 + h4, #about .vcard h1 + h4, #home .intro h2:first-child, #thanks h2:first-child, #epigraph h2:first-child, #about .vcard h2:first-child, #home .intro h2 + h2, #thanks h2 + h2, #epigraph h2 + h2, #about .vcard h2 + h2, #home .intro h2 + h3, #thanks h2 + h3, #epigraph h2 + h3, #about .vcard h2 + h3, #home .intro h2 + h4, #thanks h2 + h4, #epigraph h2 + h4, #about .vcard h2 + h4, #home .intro h3:first-child, #thanks h3:first-child, #epigraph h3:first-child, #about .vcard h3:first-child, #home .intro h3 + h2, #thanks h3 + h2, #epigraph h3 + h2, #about .vcard h3 + h2, #home .intro h3 + h3, #thanks h3 + h3, #epigraph h3 + h3, #about .vcard h3 + h3, #home .intro h3 + h4, #thanks h3 + h4, #epigraph h3 + h4, #about .vcard h3 + h4, #home .intro h4:first-child, #thanks h4:first-child, #epigraph h4:first-child, #about .vcard h4:first-child, #home .intro h4 + h2, #thanks h4 + h2, #epigraph h4 + h2, #about .vcard h4 + h2, #home .intro h4 + h3, #thanks h4 + h3, #epigraph h4 + h3, #about .vcard h4 + h3, #home .intro h4 + h4, #thanks h4 + h4, #epigraph h4 + h4, #about .vcard h4 + h4 { margin-top: 0rem; }
-#home .intro h2, #thanks h2, #epigraph h2, #about .vcard h2, #home .intro h3, #thanks h3, #epigraph h3, #about .vcard h3, #home .intro h4, #thanks h4, #epigraph h4, #about .vcard h4 { font-size: 1.25rem; line-height: 1.875rem; margin-top: 1.25rem; }
-#home .intro p, #thanks p, #epigraph p, #about .vcard p, #home .intro ol, #thanks ol, #epigraph ol, #about .vcard ol, #home .intro ul, #thanks ul, #epigraph ul, #about .vcard ul, #home .intro blockquote, #thanks blockquote, #epigraph blockquote, #about .vcard blockquote { margin-bottom: 1.25rem; }
-#home .intro ol, #thanks ol, #epigraph ol, #about .vcard ol { list-style-type: decimal; }
-#home .intro ul li, #thanks ul li, #epigraph ul li, #about .vcard ul li { position: relative; }
-#home .intro ul li:before, #thanks ul li:before, #epigraph ul li:before, #about .vcard ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
-#home .intro em, #thanks em, #epigraph em, #about .vcard em, #home .intro blockquote, #thanks blockquote, #epigraph blockquote, #about .vcard blockquote { font-style: italic; }
-#home .intro blockquote cite, #thanks blockquote cite, #epigraph blockquote cite, #about .vcard blockquote cite { font-style: normal; }
-#home .intro blockquote :last-child, #thanks blockquote :last-child, #epigraph blockquote :last-child, #about .vcard blockquote :last-child { margin-bottom: 0rem; }
+#home .intro h1, #thanks h1, #about .vcard h1 { font-size: 1.5rem; line-height: 1.875rem; }
+#home .intro h1, #thanks h1, #about .vcard h1, #home .intro h2, #thanks h2, #about .vcard h2, #home .intro h3, #thanks h3, #about .vcard h3, #home .intro h4, #thanks h4, #about .vcard h4 { font-weight: bold; color: #404040; }
+#home .intro h1:first-child, #thanks h1:first-child, #about .vcard h1:first-child, #home .intro h1 + h2, #thanks h1 + h2, #about .vcard h1 + h2, #home .intro h1 + h3, #thanks h1 + h3, #about .vcard h1 + h3, #home .intro h1 + h4, #thanks h1 + h4, #about .vcard h1 + h4, #home .intro h2:first-child, #thanks h2:first-child, #about .vcard h2:first-child, #home .intro h2 + h2, #thanks h2 + h2, #about .vcard h2 + h2, #home .intro h2 + h3, #thanks h2 + h3, #about .vcard h2 + h3, #home .intro h2 + h4, #thanks h2 + h4, #about .vcard h2 + h4, #home .intro h3:first-child, #thanks h3:first-child, #about .vcard h3:first-child, #home .intro h3 + h2, #thanks h3 + h2, #about .vcard h3 + h2, #home .intro h3 + h3, #thanks h3 + h3, #about .vcard h3 + h3, #home .intro h3 + h4, #thanks h3 + h4, #about .vcard h3 + h4, #home .intro h4:first-child, #thanks h4:first-child, #about .vcard h4:first-child, #home .intro h4 + h2, #thanks h4 + h2, #about .vcard h4 + h2, #home .intro h4 + h3, #thanks h4 + h3, #about .vcard h4 + h3, #home .intro h4 + h4, #thanks h4 + h4, #about .vcard h4 + h4 { margin-top: 0rem; }
+#home .intro h2, #thanks h2, #about .vcard h2, #home .intro h3, #thanks h3, #about .vcard h3, #home .intro h4, #thanks h4, #about .vcard h4 { font-size: 1.25rem; line-height: 1.875rem; margin-top: 1.25rem; }
+#home .intro p, #thanks p, #about .vcard p, #home .intro ol, #thanks ol, #about .vcard ol, #home .intro ul, #thanks ul, #about .vcard ul, #home .intro blockquote, #thanks blockquote, #about .vcard blockquote { margin-bottom: 1.25rem; }
+#home .intro ol, #thanks ol, #about .vcard ol { list-style-type: decimal; }
+#home .intro ul li, #thanks ul li, #about .vcard ul li { position: relative; }
+#home .intro ul li:before, #thanks ul li:before, #about .vcard ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
+#home .intro em, #thanks em, #about .vcard em, #home .intro blockquote, #thanks blockquote, #about .vcard blockquote { font-style: italic; }
+#home .intro blockquote cite, #thanks blockquote cite, #about .vcard blockquote cite { font-style: normal; }
+#home .intro blockquote :last-child, #thanks blockquote :last-child, #about .vcard blockquote :last-child { margin-bottom: 0rem; }
 
 #contents { counter-reset: toc; }
 #contents ol { list-style-type: none; }
@@ -82,7 +82,7 @@
   #home .social, #about .social { float: right; margin-right: 0; text-align: right; }
   #home .social a, #about .social a { text-align: left; } }
 
-#home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer, #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited, #title, #copyright h1, #dedication h1, #epigraph blockquote, #epigraph p, #fourohfour h1, #fourohfour blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer, #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited, #title, #copyright h1, #dedication h1, #fourohfour h1, #fourohfour blockquote { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
 #home [role="main"], #dedication [role="main"], #contents [role="main"], #fourohfour [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
@@ -215,35 +215,39 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 .balloon:nth-child(7) { background-position: 0 -720px; -webkit-animation-delay: 12s; -moz-animation-delay: 12s; -o-animation-delay: 12s; animation-delay: 12s; -webkit-animation-duration: 10s; -moz-animation-duration: 10s; -o-animation-duration: 10s; animation-duration: 10s; top: 52.5rem; left: 78%; }
 @media (min-width: 50em) { .balloon { -webkit-animation: balloons linear infinite both; -moz-animation: balloons linear infinite both; -o-animation: balloons linear infinite both; animation: balloons linear infinite both; display: block; position: absolute; width: 120px; height: 360px; } }
 
-@-moz-keyframes lightning { 0%, 49%, 51%, 53%, 55%, 57%, 100% { background-position: top left, top left, center -1.25rem; }
-  50% { background-position: top left, top left, -3.75rem -12.5rem; }
-  52%, 56% { background-position: top left, top left, center -3.75rem; }
-  54% { background-position: top left, top left, 62.5rem -6.25rem; } }
+@-moz-keyframes lightning { 0%, 56%, 100% { background-position: top left, top left, -123.75rem; background-color: #202020; }
+  48%, 52%, 54% { background-position: top left, top left, center -10rem; background-color: #393946; }
+  49%, 53% { background-position: top left, top left, 15rem -6.25rem; background-color: #202020; }
+  50% { background-position: top left, top left, -3.75rem -3.75rem; background-color: #393946; }
+  51% { background-position: top left, top left, 1.25rem -1.25rem; background-color: #202020; } }
 
-@-webkit-keyframes lightning { 0%, 49%, 51%, 53%, 55%, 57%, 100% { background-position: top left, top left, center -1.25rem; }
-  50% { background-position: top left, top left, -3.75rem -12.5rem; }
-  52%, 56% { background-position: top left, top left, center -3.75rem; }
-  54% { background-position: top left, top left, 62.5rem -6.25rem; } }
+@-webkit-keyframes lightning { 0%, 56%, 100% { background-position: top left, top left, -123.75rem; background-color: #202020; }
+  48%, 52%, 54% { background-position: top left, top left, center -10rem; background-color: #393946; }
+  49%, 53% { background-position: top left, top left, 15rem -6.25rem; background-color: #202020; }
+  50% { background-position: top left, top left, -3.75rem -3.75rem; background-color: #393946; }
+  51% { background-position: top left, top left, 1.25rem -1.25rem; background-color: #202020; } }
 
-@-o-keyframes lightning { 0%, 49%, 51%, 53%, 55%, 57%, 100% { background-position: top left, top left, center -1.25rem; }
-  50% { background-position: top left, top left, -3.75rem -12.5rem; }
-  52%, 56% { background-position: top left, top left, center -3.75rem; }
-  54% { background-position: top left, top left, 62.5rem -6.25rem; } }
+@-o-keyframes lightning { 0%, 56%, 100% { background-position: top left, top left, -123.75rem; background-color: #202020; }
+  48%, 52%, 54% { background-position: top left, top left, center -10rem; background-color: #393946; }
+  49%, 53% { background-position: top left, top left, 15rem -6.25rem; background-color: #202020; }
+  50% { background-position: top left, top left, -3.75rem -3.75rem; background-color: #393946; }
+  51% { background-position: top left, top left, 1.25rem -1.25rem; background-color: #202020; } }
 
-@keyframes lightning { 0%, 49%, 51%, 53%, 55%, 57%, 100% { background-position: top left, top left, center -1.25rem; }
-  50% { background-position: top left, top left, -3.75rem -12.5rem; }
-  52%, 56% { background-position: top left, top left, center -3.75rem; }
-  54% { background-position: top left, top left, 62.5rem -6.25rem; } }
+@keyframes lightning { 0%, 56%, 100% { background-position: top left, top left, -123.75rem; background-color: #202020; }
+  48%, 52%, 54% { background-position: top left, top left, center -10rem; background-color: #393946; }
+  49%, 53% { background-position: top left, top left, 15rem -6.25rem; background-color: #202020; }
+  50% { background-position: top left, top left, -3.75rem -3.75rem; background-color: #393946; }
+  51% { background-position: top left, top left, 1.25rem -1.25rem; background-color: #202020; } }
 
 /* ---------------------------------------------------------------------------- epigraph: cocorosie */
-#epigraph { -webkit-animation: lightning 10s infinite both; -moz-animation: lightning 10s infinite both; -o-animation: lightning 10s infinite both; animation: lightning 10s infinite both; text-shadow: #202020 0 1px 0; background: url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25rem #202020; background: url('../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(130deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25rem, #202020; }
-#epigraph.enter-prev { -webkit-animation: fadeIn 400ms ease, lightning 10s infinite both; -moz-animation: fadeIn 400ms ease, lightning 10s infinite both; -o-animation: fadeIn 400ms ease, lightning 10s infinite both; animation: fadeIn 400ms ease, lightning 10s infinite both; }
-#epigraph.enter-next { -webkit-animation: fadeIn 400ms ease, lightning 10s infinite both; -moz-animation: fadeIn 400ms ease, lightning 10s infinite both; -o-animation: fadeIn 400ms ease, lightning 10s infinite both; animation: fadeIn 400ms ease, lightning 10s infinite both; }
-#epigraph.exit-prev { -webkit-animation: fadeOutLeft 400ms ease, lightning 10s infinite both; -moz-animation: fadeOutLeft 400ms ease, lightning 10s infinite both; -o-animation: fadeOutLeft 400ms ease, lightning 10s infinite both; animation: fadeOutLeft 400ms ease, lightning 10s infinite both; }
-#epigraph.exit-next { -webkit-animation: fadeOutRight 400ms ease, lightning 10s infinite both; -moz-animation: fadeOutRight 400ms ease, lightning 10s infinite both; -o-animation: fadeOutRight 400ms ease, lightning 10s infinite both; animation: fadeOutRight 400ms ease, lightning 10s infinite both; }
-.no-cssgradients #epigraph { background: url('../../images/noise.png?1347221205') repeat 0, url('../../images/frontmatter/epigraph/angle.svg?1347221205') no-repeat center, url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll 50% -1.25rem, #202020; -webkit-background-size: auto, cover, auto, auto; -moz-background-size: auto, cover, auto, auto; -o-background-size: auto, cover, auto, auto; background-size: auto, cover, auto, auto; }
-#epigraph blockquote { padding: 1.875rem 1.25rem; color: #b9b9b9; }
-#epigraph p { font-size: 0.79167rem; line-height: 1.25rem; }
+#epigraph { -webkit-animation: lightning 10s steps(1, end) infinite both; -moz-animation: lightning 10s steps(1, end) infinite both; -o-animation: lightning 10s steps(1, end) infinite both; animation: lightning 10s steps(1, end) infinite both; text-shadow: #202020 0 1px 0; background: url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll center -1.25rem #202020; background: url('../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll center -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll center -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll center -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll center -1.25rem, #202020; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(130deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)), url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll center -1.25rem, #202020; }
+#epigraph.enter-prev { -webkit-animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; -moz-animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; -o-animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; }
+#epigraph.enter-next { -webkit-animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; -moz-animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; -o-animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; animation: fadeIn 400ms ease, lightning 10s steps(1, end) infinite both; }
+#epigraph.exit-prev { -webkit-animation: fadeOutLeft 400ms ease, lightning 10s steps(1, end) infinite both; -moz-animation: fadeOutLeft 400ms ease, lightning 10s steps(1, end) infinite both; -o-animation: fadeOutLeft 400ms ease, lightning 10s steps(1, end) infinite both; animation: fadeOutLeft 400ms ease, lightning 10s steps(1, end) infinite both; }
+#epigraph.exit-next { -webkit-animation: fadeOutRight 400ms ease, lightning 10s steps(1, end) infinite both; -moz-animation: fadeOutRight 400ms ease, lightning 10s steps(1, end) infinite both; -o-animation: fadeOutRight 400ms ease, lightning 10s steps(1, end) infinite both; animation: fadeOutRight 400ms ease, lightning 10s steps(1, end) infinite both; }
+.no-cssgradients #epigraph { background: url('../../images/noise.png?1347221205') repeat 0, url('../../images/frontmatter/epigraph/angle.svg?1347221205') no-repeat center, url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll center -1.25rem, #202020; -webkit-background-size: auto, cover, auto, auto; -moz-background-size: auto, cover, auto, auto; -o-background-size: auto, cover, auto, auto; background-size: auto, cover, auto, auto; }
+#epigraph blockquote { font-size: 0.79167rem; line-height: 1.25rem; padding: 1.875rem 1.25rem; color: #b9b9b9; }
+#epigraph p { margin-bottom: 1.25rem; }
 
 /* ---------------------------------------------------------------------------- about */
 #about .vcard :first-line { font-weight: bold; }

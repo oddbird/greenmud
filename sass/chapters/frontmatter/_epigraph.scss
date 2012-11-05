@@ -13,30 +13,40 @@ $fg-old           : linear-gradient($fg-angle, $fg-details...);
 $fg-new           : fix-linear($fg-angle, $fg-details...);
 
 $pg               : '#{$ch}epigraph/';
-$lightning        : image-url('#{$pg}lightning.png') no-repeat scroll 50% rhythm(-1);
+$lightning        : image-url('#{$pg}lightning.png') no-repeat scroll center rhythm(-1);
 $angle            : image-url('#{$pg}angle.svg') no-repeat center;
 $default-pos      : top left;
+
+$lightning-color  : color($slight $blue $darker);
 
 // ----------------------------------------------------------------------------
 // animations
 
-$lightning-pos1   : center rhythm(-1);
-$lightning-pos2   : rhythm(-3) rhythm(-10);
-$lightning-pos3   : center rhythm(-3);
-$lightning-pos4   : rhythm(50) rhythm(-5);
+$lightning-pos1   : center rhythm(-8);
+$lightning-pos2   : rhythm(1) rhythm(-1);
+$lightning-pos3   : rhythm(12) rhythm(-5);
+$lightning-pos4   : rhythm(-3) rhythm(-3);
 
 @include keyframes(lightning) {
-  0%, 49%, 51%, 53%, 55%, 57%, 100% {
+  0%, 56%, 100% {
+    background-position: $default-pos, $default-pos, rhythm(-99);
+    background-color: $bg;
+  }
+  48%, 52%, 54% {
     background-position: $default-pos, $default-pos, $lightning-pos1;
+    background-color: $lightning-color;
   }
-  50%{
-    background-position: $default-pos, $default-pos, $lightning-pos2;
-  }
-  52%, 56% {
+  49%, 53% {
     background-position: $default-pos, $default-pos, $lightning-pos3;
+    background-color: $bg;
   }
-  54% {
+  50% {
     background-position: $default-pos, $default-pos, $lightning-pos4;
+    background-color: $lightning-color;
+  }
+  51% {
+    background-position: $default-pos, $default-pos, $lightning-pos2;
+    background-color: $bg;
   }
 }
 
@@ -44,8 +54,7 @@ $lightning-pos4   : rhythm(50) rhythm(-5);
    epigraph: cocorosie */
 
 #epigraph {
-  @extend %type;
-  @include page-animation(lightning 10s infinite both);
+  @include page-animation(lightning 10s steps(1,end) infinite both);
   @include text-shadow($bg 0 1px 0);
   @include background($lightning $bg);
   @include background($noise-layer, $fg-old, $lightning, $bg);
@@ -60,14 +69,10 @@ $lightning-pos4   : rhythm(50) rhythm(-5);
   // elements
 
   blockquote {
-    @extend %transition;
+    @include adjust-font-size-to($smallpx);
     padding: rhythm(1.5) rhythm(1);
     color: color($light);
   }
-
-  p {
-    @extend %transition;
-    @include adjust-font-size-to($smallpx);
-  }
+  p { @include trailer; }
 
 }
