@@ -49,12 +49,12 @@ $ch-title-narrow  : .5deg;
     @include set-container-width;
     @include leader(3);
     @include trailer(1);
+    @include pagemargin(18 6 1);
     position: relative;
     margin-left: auto;
     margin-right: auto;
     padding: rhythm(1.5) $grid-padding;
     text-align: center;
-    @include breakpoint(min-height rhythm(18)) { @include leader(6); }
     &::before, &::after {
       @extend %transition;
       @include stretch-y;

@@ -36,7 +36,7 @@
 
 #titlepage { overflow-x: hidden; }
 #titlepage [role="main"] { max-width: 15em; margin-top: 3.75rem; margin-bottom: 1.25rem; position: relative; margin-left: auto; margin-right: auto; padding: 1.875rem 1em; text-align: center; }
-@media (min-height: 22.5rem) { #titlepage [role="main"] { margin-top: 7.5rem; } }
+@media (min-height: 22.5em) { #titlepage [role="main"] { margin-top: 7.5rem; margin-bottom: 1; } }
 #titlepage [role="main"]::before, #titlepage [role="main"]::after { position: absolute; top: 0; bottom: 0; -webkit-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; -moz-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; border: 1px solid rgba(32, 32, 32, 0.25); content: " "; left: -200%; right: -200%; z-index: 0; }
 #titlepage [role="main"]::before { -webkit-transform: rotate(-1deg); -moz-transform: rotate(-1deg); -ms-transform: rotate(-1deg); -o-transform: rotate(-1deg); transform: rotate(-1deg); }
 #titlepage [role="main"]::after { -webkit-transform: rotate(1deg); -moz-transform: rotate(1deg); -ms-transform: rotate(1deg); -o-transform: rotate(1deg); transform: rotate(1deg); }
@@ -102,7 +102,7 @@ html { background: #fafaeb url('../../../images/noise.png?1347221205'); }
 #once-upon-a-sunday.exit-next { -webkit-animation: fadeOut 600ms ease, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease, rain 60s linear infinite both; animation: fadeOut 600ms ease, rain 60s linear infinite both; }
 #once-upon-a-sunday [role="main"] { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding-top: 2.5rem; padding-bottom: 1.25rem; position: relative; }
 #once-upon-a-sunday [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 18.75rem) { #once-upon-a-sunday [role="main"] { padding-top: 3.75rem; padding-bottom: 3; } }
+@media (min-height: 18.75em) { #once-upon-a-sunday [role="main"] { padding-top: 3.75rem; padding-bottom: 3; } }
 @media (min-width: 46.5em) { #once-upon-a-sunday [role="main"] { max-width: 47em; } }
 #once-upon-a-sunday blockquote { font-style: italic; }
 #once-upon-a-sunday blockquote p { margin-bottom: 1.25rem; -webkit-animation: fadeIn 4s 3s both; -moz-animation: fadeIn 4s 3s both; -o-animation: fadeIn 4s 3s both; animation: fadeIn 4s 3s both; }
@@ -172,7 +172,7 @@ html { background: #fafaeb url('../../../images/noise.png?1347221205'); }
 #shadow-shadow-park-and-shadow.exit-prev { -webkit-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -moz-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -o-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; }
 #shadow-shadow-park-and-shadow.exit-next { -webkit-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -moz-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; -o-animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; animation: fadeOut 600ms ease, shadow 60s linear infinite alternate both; }
 #shadow-shadow-park-and-shadow [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-@media (min-height: 18.75rem) { #shadow-shadow-park-and-shadow [role="main"] { padding-top: 3.75rem; padding-bottom: 2; } }
+@media (min-height: 18.75em) { #shadow-shadow-park-and-shadow [role="main"] { padding-top: 3.75rem; padding-bottom: 2; } }
 #shadow-shadow-park-and-shadow .puddle { max-width: 23em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; position: relative; padding-bottom: 5rem; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-far.png?1347255590') no-repeat bottom; }
 #shadow-shadow-park-and-shadow .puddle:after { content: ""; display: table; clear: both; }
 #shadow-shadow-park-and-shadow .puddle::before { position: absolute; left: 0; right: 0; bottom: 0; content: " "; height: 5rem; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-close.png?1347255570') no-repeat bottom; z-index: 500; }

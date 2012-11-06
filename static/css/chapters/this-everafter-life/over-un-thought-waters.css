@@ -21,7 +21,7 @@
 
 #titlepage { overflow-x: hidden; }
 #titlepage [role="main"] { max-width: 15em; margin-top: 3.75rem; margin-bottom: 1.25rem; position: relative; margin-left: auto; margin-right: auto; padding: 1.875rem 1em; text-align: center; }
-@media (min-height: 22.5rem) { #titlepage [role="main"] { margin-top: 7.5rem; } }
+@media (min-height: 22.5em) { #titlepage [role="main"] { margin-top: 7.5rem; margin-bottom: 1; } }
 #titlepage [role="main"]::before, #titlepage [role="main"]::after { position: absolute; top: 0; bottom: 0; -webkit-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; -moz-box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; box-shadow: rgba(32, 32, 32, 0.25) 0 0 0.25em; border: 1px solid rgba(32, 32, 32, 0.25); content: " "; left: -200%; right: -200%; z-index: 0; }
 #titlepage [role="main"]::before { -webkit-transform: rotate(-1deg); -moz-transform: rotate(-1deg); -ms-transform: rotate(-1deg); -o-transform: rotate(-1deg); transform: rotate(-1deg); }
 #titlepage [role="main"]::after { -webkit-transform: rotate(1deg); -moz-transform: rotate(1deg); -ms-transform: rotate(1deg); -o-transform: rotate(1deg); transform: rotate(1deg); }
