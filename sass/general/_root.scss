@@ -15,6 +15,7 @@ html {
   font-family: $narrator-stack;
   color: $base;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
 }
 
 .jj { font-family: $jj-stack; }
