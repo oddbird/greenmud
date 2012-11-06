@@ -113,17 +113,17 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 
 .warning { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border-width: 0.08333rem; border-style: solid; padding: 0.54167rem; background: #ffbfbf; }
 
-@-moz-keyframes line { 0% { background-position: left top, right top, 1200px 52%; }
-  100% { background-position: left top, right top, 0 52%; } }
+@-moz-keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
+  100% { background-position: left top, right top, 0 48%; } }
 
-@-webkit-keyframes line { 0% { background-position: left top, right top, 1200px 52%; }
-  100% { background-position: left top, right top, 0 52%; } }
+@-webkit-keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
+  100% { background-position: left top, right top, 0 48%; } }
 
-@-o-keyframes line { 0% { background-position: left top, right top, 1200px 52%; }
-  100% { background-position: left top, right top, 0 52%; } }
+@-o-keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
+  100% { background-position: left top, right top, 0 48%; } }
 
-@keyframes line { 0% { background-position: left top, right top, 1200px 52%; }
-  100% { background-position: left top, right top, 0 52%; } }
+@keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
+  100% { background-position: left top, right top, 0 48%; } }
 
 /* ---------------------------------------------------------------------------- title: Into the Green Green Mud */
 #title { background: #d6e9d6 url('../../images/noise.png?1347221205'); background: url('../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d6e9d6 50%, #d6e9d6), #d6e9d6; background: url('../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d6e9d6 50%, #d6e9d6), #d6e9d6; background: url('../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d6e9d6 50%, #d6e9d6), #d6e9d6; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d6e9d6 50%, #d6e9d6), #d6e9d6; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(120deg, #ffe5ff, #ffe5ff 50%, #d6e9d6 50%, #d6e9d6), #d6e9d6; }
@@ -131,7 +131,7 @@ html { background: #d6e9d6 url('../../images/noise.png?1347221205'); }
 #title [role="main"] { -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; padding-top: 1.25rem; padding-bottom: 1.25rem; color: -50%; text-align: center; }
 @media (min-height: 18.75em) { #title [role="main"] { padding-top: 1.25rem; padding-bottom: 1.25rem; } }
 @media (min-height: 22.5em) { #title [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; } }
-@media (min-width: 53em) { #title [role="main"] { -webkit-animation: line 30s linear infinite both; -moz-animation: line 30s linear infinite both; -o-animation: line 30s linear infinite both; animation: line 30s linear infinite both; background: url('../../images/frontmatter/titlepage/strings_left.png?1347221205') no-repeat scroll left top, url('../../images/frontmatter/titlepage/strings_right.png?1347221205') no-repeat scroll right top, url('../../images/frontmatter/titlepage/line.png?1347221205') repeat-x scroll 1200px 52%; -webkit-background-origin: content; -moz-background-origin: content; background-origin: content-box; height: 16.25rem; } }
+@media (min-width: 53em) { #title [role="main"] { -webkit-animation: line 30s linear infinite both; -moz-animation: line 30s linear infinite both; -o-animation: line 30s linear infinite both; animation: line 30s linear infinite both; background: url('../../images/frontmatter/titlepage/strings_left.png?1347221205') no-repeat scroll left top, url('../../images/frontmatter/titlepage/strings_right.png?1347221205') no-repeat scroll right top, url('../../images/frontmatter/titlepage/line.png?1347221205') repeat-x scroll 1200px 48%; -webkit-background-origin: content; -moz-background-origin: content; background-origin: content-box; height: 16.25rem; } }
 #title h1 { font-size: 1.5rem; line-height: 1.875rem; font-weight: bold; }
 #title h2 { padding-bottom: 8.125rem; margin-bottom: 0.625rem; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat scroll center bottom; }
 #title a:link, #title a:visited { color: #43437c; }
