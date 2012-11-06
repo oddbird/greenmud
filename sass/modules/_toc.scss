@@ -34,7 +34,7 @@
     @include container;
     @include padding-leader($control-line+.5);
     margin-left: 0;
-    @include breakpoint($breadcrumb-break) { margin-left: rhythm($control-line*2); }
+    @include breakpoint($breadcrumb-break) { margin-left: rhythm($control-line*2.125) - $grid-padding; }
   }
 
   // show and hide toc

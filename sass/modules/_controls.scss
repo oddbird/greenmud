@@ -55,7 +55,7 @@ $control-focus-color  : $white;
   @include stretch-x;
   @include adjust-leading-to($control-line);
   @include text-shadow(color($darkest,$small) 0 1px 0);
-  padding: 0 rhythm($control-line) 0 $grid-padding;
+  padding: 0 rhythm($control-line) 0 0;
   min-width: rhythm($control-line*6);
   background: color($darkest,.75);
   color: $control-text-color;
@@ -105,7 +105,10 @@ $breadcrumb-break: 50em;
     &:after { content: ":"; }
     &:last-child { &:after { content: ""; } }
   }
-  @include breakpoint($breadcrumb-break) { text-align: left; }
+  @include breakpoint($breadcrumb-break) {
+    padding-left: rhythm($control-line)*.125;
+    text-align: left;
+  }
 }
 
 // ----------------------------------------------------------------------------

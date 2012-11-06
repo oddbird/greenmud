@@ -1099,7 +1099,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 #toggle { text-shadow: rgba(32, 32, 32, 0.8) 0 0 3px; line-height: 1.875rem; position: absolute; top: 0; right: 0; color: white; cursor: pointer; z-index: 950; }
 .no-touch #toggle:hover, .no-touch #toggle:focus, .no-touch #toggle:active { text-shadow: #202020 0 0 3px; }
 
-.controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875rem; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875rem 0 1rem; min-width: 11.25rem; background: rgba(32, 32, 32, 0.75); color: #b9b9b9; font-family: "GreenMudNarrator", serif; z-index: 900; display: none; }
+.controls { overflow: hidden; position: absolute; left: 0; right: 0; line-height: 1.875rem; text-shadow: rgba(32, 32, 32, 0.8) 0 1px 0; padding: 0 1.875rem 0 0; min-width: 11.25rem; background: rgba(32, 32, 32, 0.75); color: #b9b9b9; font-family: "GreenMudNarrator", serif; z-index: 900; display: none; }
 .controls.active, .showcontrols .controls { display: block; }
 
 .meta { margin: 0; padding: 0; border: 0; overflow: hidden; float: left; width: 3.75rem; }
@@ -1112,7 +1112,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 .breadcrumb li { display: inline; }
 .breadcrumb li:after { content: ":"; }
 .breadcrumb li:last-child:after { content: ""; }
-@media (min-width: 50em) { .breadcrumb { text-align: left; } }
+@media (min-width: 50em) { .breadcrumb { padding-left: 0.23438rem; text-align: left; } }
 
 .pagenav { float: right; width: 3.75rem; }
 .pagenav a { display: block; }
@@ -1130,7 +1130,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 #toc { overflow: hidden; background: rgba(32, 32, 32, 0.75); color: #b9b9b9; font-family: "GreenMudNarrator", serif; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }
 #toc .wrap { max-width: 33rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; margin-left: 0; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
-@media (min-width: 50em) { #toc .wrap { margin-left: 3.75rem; } }
+@media (min-width: 50em) { #toc .wrap { margin-left: 2.98438rem; } }
 .active + #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
