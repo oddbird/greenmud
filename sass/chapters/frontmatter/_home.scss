@@ -13,7 +13,7 @@ $swing-pos        : $grid-padding rhythm(-4);
 $swing-layer      : image-url($swing) no-repeat scroll $swing-hide;
 
 $scribble-hide    : right rhythm(25);
-$scribble-pos     : right rhythm(8);
+$scribble-pos     : right rhythm(9);
 $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
 
 /* ----------------------------------------------------------------------------
@@ -31,7 +31,10 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
   // --------------------------------------------------------------------------
   // elements
 
-  .intro, .instructions { @include clearfix; }
+  .intro, .instructions {
+    @include clearfix;
+    @include adjust-font-size-to($smallpx);
+  }
   .intro { @extend %type; }
 
   .inst {
@@ -57,6 +60,7 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     }
     .intro, .instructions {
       @include pad(2,2);
+      @include adjust-font-size-to($normpx);
       clear: both;
     }
   }
