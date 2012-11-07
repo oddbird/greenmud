@@ -67,6 +67,9 @@ var GM = (function (GM, $) {
             // Continue as normal for external links, cmd clicks, etc.
             if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
                 return true;
+            } else if (e.shiftKey && thisLink.data('chapter')) {
+                e.preventDefault();
+                window.location = thisLink.data('chapter');
             } else if (href) {
                 e.preventDefault();
                 if ($(this).hasClass('break')) {
@@ -87,13 +90,24 @@ var GM = (function (GM, $) {
 
         // LEFT or RIGHT triggers page-turn click
         $(document).keydown(function (e) {
+            var link;
             if (e.which === GM.keycodes.LEFT) {
                 e.preventDefault();
-                pageControls.first().find('.pagenav .prev a').click();
+                link = pageControls.first().find('.pagenav .prev a');
+                if (e.shiftKey && link.data('chapter')) {
+                    window.location = link.data('chapter');
+                } else {
+                    link.click();
+                }
             }
             if (e.which === GM.keycodes.RIGHT) {
                 e.preventDefault();
-                pageControls.first().find('.pagenav .next a').click();
+                link = pageControls.first().find('.pagenav .next a');
+                if (e.shiftKey && link.data('chapter')) {
+                    window.location = link.data('chapter');
+                } else {
+                    link.click();
+                }
             }
         });
 
