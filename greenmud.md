@@ -125,7 +125,7 @@ in the parkest of trees.
 
 <!-- meta
 body_class:
-page_states: 3
+page_states:
 -->
 
 <div class="puddle">
