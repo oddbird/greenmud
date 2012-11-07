@@ -13,6 +13,8 @@ var GM = (function (GM, $) {
             body = $('body'),
             stateChange = false,
             pageturn,
+            pageState,
+            internalPages,
             // HTML Helper
             documentHtml = function (html) {
                 // Prepare
@@ -48,7 +50,7 @@ var GM = (function (GM, $) {
         // Hijack all internal links
         body.on('click', 'a', function (e) {
             var thisLink = $(this),
-                href = $(this).attr('href'),
+                href = thisLink.attr('href'),
                 page,
                 fallback = function (link) {
                     if ($('#toggle').hasClass('active')) {
@@ -64,27 +66,39 @@ var GM = (function (GM, $) {
             } else if (thisLink.parent().hasClass('next')) {
                 pageturn = 'next';
             }
-            // Continue as normal for external links, cmd clicks, etc.
-            if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
-                return true;
-            } else if (e.shiftKey && thisLink.data('chapter')) {
+            // Shift-pageturns go directly to prev/next chapter
+            if (e.shiftKey && thisLink.data('chapter')) {
                 e.preventDefault();
                 window.location = thisLink.data('chapter');
-            } else if (href) {
-                e.preventDefault();
-                if ($(this).hasClass('break')) {
-                    fallback(thisLink);
-                } else {
-                    if ($(this).data('id') && body.data($(this).data('id')) && History.enabled) {
-                        $('#toc, a[rel="contents"]').removeClass('active');
-                        page = body.data($(this).data('id'));
-                        turnToPage(page);
-                    } else {
-                        fallback(thisLink);
-                    }
-                }
             } else {
-                e.preventDefault();
+                // Perform internal page-state change, if applicable
+                if (internalPages > 1 && ((pageturn === 'next' && pageState < internalPages) || (pageturn === 'prev' && pageState > 1))) {
+                    e.preventDefault();
+                    if (pageturn === 'next') {
+                        pageState++;
+                    } else if (pageturn === 'prev') {
+                        pageState--;
+                    }
+                    $(pageSelector).attr('data-page-state', pageState);
+                // Continue as normal for external links, cmd clicks, etc.
+                } else if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
+                    return true;
+                } else if (href) {
+                    e.preventDefault();
+                    if (thisLink.hasClass('break')) {
+                        fallback(thisLink);
+                    } else {
+                        if (thisLink.data('id') && body.data(thisLink.data('id')) && History.enabled) {
+                            $('#toc, a[rel="contents"]').removeClass('active');
+                            page = body.data(thisLink.data('id'));
+                            turnToPage(page);
+                        } else {
+                            fallback(thisLink);
+                        }
+                    }
+                } else {
+                    e.preventDefault();
+                }
             }
         });
 
@@ -205,6 +219,9 @@ var GM = (function (GM, $) {
                             $(this).find('.pagenav').replaceWith(newPageNav.clone());
                         });
 
+                        pageState = newPage.attr('data-page-state');
+                        internalPages = newPage.attr('data-internal-pages');
+
                         ajaxFetchPages();
                     };
 
@@ -215,9 +232,11 @@ var GM = (function (GM, $) {
                         if (pageturn === 'prev') {
                             pageturnExitClass = 'exit-next';
                             pageturnEnterClass = 'enter-prev';
+                            thisPage.attr('data-page-state', thisPage.attr('data-internal-pages'));
                         } else if (pageturn === 'next') {
                             pageturnExitClass = 'exit-prev';
                             pageturnEnterClass = 'enter-next';
+                            thisPage.attr('data-page-state', 1);
                         }
                         $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
                         $.doTimeout(300, function () {
@@ -242,6 +261,8 @@ var GM = (function (GM, $) {
             thisPage.data('title', $('title').text());
             thisPage.data('pagenav', $('.controls .pagenav').first().clone());
             body.data(thisPage.attr('id'), thisPage.clone(true));
+            pageState = thisPage.attr('data-page-state');
+            internalPages = thisPage.attr('data-internal-pages');
             turnToPage(thisPage, true);
         }
     };
