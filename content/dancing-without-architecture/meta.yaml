@@ -3,3 +3,4 @@ book_slug: dancing-without-architecture
 chapter_slug: frontmatter
 description: 'Book 1: Dancing Without Architecture.'
 extra_styles: dancing-without-architecture/frontmatter.css
+next_chapter: in-which-jj/

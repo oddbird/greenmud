@@ -2,4 +2,6 @@ chapter: The Susy Within.
 chapter_slug: the-susy-within
 description: 'Chapter 3: The Susy Within.'
 extra_styles: dancing-without-architecture/the-susy-within.css
+next_chapter: ../yes-mother-goodnight/
+prev_chapter: daymares-poor-boy/
 voice: susy

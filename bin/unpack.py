@@ -94,11 +94,17 @@ class NovelParser(object):
     def unpack(self, source_file):
         self._ensure_output_dir()
         with codecs.open(source_file, encoding="UTF-8") as f:
+            pages_to_write = []
             slugs_in_chapter = set()
             last_page = None
+            last_chapter = None
             for page in Page.pages(f.xreadlines()):
                 if page.is_title:
                     slugs_in_chapter = set()
+                    if last_chapter is not None:
+                        last_chapter.next_chapter = page
+                        page.prev_chapter = last_chapter
+                    last_chapter = page
                 if page.is_book_title:
                     self.path_segments = [page.book_slug]
                 elif page.is_chapter_title:
@@ -111,9 +117,11 @@ class NovelParser(object):
                 if last_page is not None:
                     last_page.next = page
                     page.prev = last_page
-                    last_page.write(self.output_dir)
+                pages_to_write.append(page)
                 last_page = page
-            last_page.write(self.output_dir)
+
+        for page in pages_to_write:
+            page.write(self.output_dir)
 
 
     def _ensure_output_dir(self):
@@ -131,6 +139,8 @@ class Page(object):
         self.prev = prev_page
         self.book_meta = book_meta or {}
         self.chapter_meta = chapter_meta or {}
+        self.next_chapter = None
+        self.prev_chapter = None
         self.path_segments = path_segments or []
 
         self.meta.setdefault("body_class", "demo")
@@ -292,6 +302,34 @@ class Page(object):
                 else:
                     p["url"] = "../{0}".format(p["url"])
 
+        if self.prev_chapter is not None:
+            url = self.prev_chapter.meta["url"]
+            if self.prev_chapter.is_book_title:
+                url = "../{0}".format(url)
+            elif self.is_book_title:
+                url = "../{0}/{1}".format(
+                    "/".join(self.prev_chapter.path_segments), url)
+            else:
+                url = "{0}/{1}".format(
+                    self.prev_chapter.path_segments[-1], url)
+            if url.endswith("index.html"):
+                url = url[:-len("index.html")]
+            self.title_meta.setdefault("prev_chapter", url)
+        if self.next_chapter is not None:
+            url = self.next_chapter.meta["url"]
+            if self.next_chapter.is_book_title:
+                url = "../../{0}/{1}".format(
+                    "/".join(self.next_chapter.path_segments), url)
+            else:
+                url = "{0}/{1}".format(
+                    self.next_chapter.path_segments[-1], url)
+                if not self.is_book_title:
+                    url = "../{0}".format(url)
+            if url.endswith("index.html"):
+                url = url[:-len("index.html")]
+            self.title_meta.setdefault("next_chapter", url)
+
+
         if self.is_chapter_title:
             self.chapter_meta.setdefault("chapter_slug", self.chapter_slug)
             self.chapter_meta.setdefault("extra_styles", self.extra_styles)
@@ -306,7 +344,6 @@ class Page(object):
 
     def write(self, output_dir):
         """Write data given in arguments out as HTML file."""
-        # @@@ output meta.yaml and index.html instead for book/chapter titles
         self.ensure_meta_defaults()
 
         dest_dir = os.path.join(output_dir, *self.path_segments)
