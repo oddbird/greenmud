@@ -310,7 +310,7 @@ class Page(object):
                 url = "../{0}/{1}".format(
                     "/".join(self.prev_chapter.path_segments), url)
             else:
-                url = "{0}/{1}".format(
+                url = "../{0}/{1}".format(
                     self.prev_chapter.path_segments[-1], url)
             if url.endswith("index.html"):
                 url = url[:-len("index.html")]
