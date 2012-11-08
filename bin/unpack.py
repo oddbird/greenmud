@@ -315,7 +315,8 @@ class Page(object):
                         self.prev_chapter.path_segments[-1], url)
                 if url.endswith("index.html"):
                     url = url[:-len("index.html")]
-                self.title_meta.setdefault("prev_chapter", url)
+                self.meta.setdefault("prev_chapter", url)
+                self.title_meta.setdefault("prev_chapter", "./")
             else:
                 self.title_meta.setdefault("prev_chapter", "../")
             if self.next_chapter is not None:

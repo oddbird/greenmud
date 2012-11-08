@@ -3,5 +3,5 @@ chapter_slug: in-which-jj
 description: 'Chapter 1: In Which JJ.'
 extra_styles: dancing-without-architecture/in-which-jj.css
 next_chapter: ../daymares-poor-boy/
-prev_chapter: ../
+prev_chapter: ./
 voice: jj
