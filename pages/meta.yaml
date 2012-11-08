@@ -6,4 +6,5 @@ default_block: page
 chapter_slug: frontmatter
 extra_styles: frontmatter.css
 
-next_chapter  : /dancing-without-architecture/
+prev_chapter  : ./
+next_chapter  : dancing-without-architecture/
