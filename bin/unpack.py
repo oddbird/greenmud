@@ -302,32 +302,35 @@ class Page(object):
                 else:
                     p["url"] = "../{0}".format(p["url"])
 
-        if self.prev_chapter is not None:
-            url = self.prev_chapter.meta["url"]
-            if self.prev_chapter.is_book_title:
-                url = "../{0}".format(url)
-            elif self.is_book_title:
-                url = "../{0}/{1}".format(
-                    "/".join(self.prev_chapter.path_segments), url)
-            else:
-                url = "../{0}/{1}".format(
-                    self.prev_chapter.path_segments[-1], url)
-            if url.endswith("index.html"):
-                url = url[:-len("index.html")]
-            self.title_meta.setdefault("prev_chapter", url)
-        if self.next_chapter is not None:
-            url = self.next_chapter.meta["url"]
-            if self.next_chapter.is_book_title:
-                url = "../../{0}/{1}".format(
-                    "/".join(self.next_chapter.path_segments), url)
-            else:
-                url = "{0}/{1}".format(
-                    self.next_chapter.path_segments[-1], url)
-                if not self.is_book_title:
+        if self.is_title:
+            if self.prev_chapter is not None:
+                url = self.prev_chapter.meta["url"]
+                if self.prev_chapter.is_book_title:
                     url = "../{0}".format(url)
-            if url.endswith("index.html"):
-                url = url[:-len("index.html")]
-            self.title_meta.setdefault("next_chapter", url)
+                elif self.is_book_title:
+                    url = "../{0}/{1}".format(
+                        "/".join(self.prev_chapter.path_segments), url)
+                else:
+                    url = "../{0}/{1}".format(
+                        self.prev_chapter.path_segments[-1], url)
+                if url.endswith("index.html"):
+                    url = url[:-len("index.html")]
+                self.title_meta.setdefault("prev_chapter", url)
+            else:
+                self.title_meta.setdefault("prev_chapter", "../")
+            if self.next_chapter is not None:
+                url = self.next_chapter.meta["url"]
+                if self.next_chapter.is_book_title:
+                    url = "../../{0}/{1}".format(
+                        "/".join(self.next_chapter.path_segments), url)
+                else:
+                    url = "{0}/{1}".format(
+                        self.next_chapter.path_segments[-1], url)
+                    if not self.is_book_title:
+                        url = "../{0}".format(url)
+                if url.endswith("index.html"):
+                    url = url[:-len("index.html")]
+                self.title_meta.setdefault("next_chapter", url)
 
 
         if self.is_chapter_title:
