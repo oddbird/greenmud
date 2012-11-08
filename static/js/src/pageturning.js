@@ -69,7 +69,11 @@ var GM = (function (GM, $) {
             // Shift-pageturns go directly to prev/next chapter
             if (e.shiftKey && thisLink.data('chapter')) {
                 e.preventDefault();
-                window.location = thisLink.data('chapter');
+                if ($('#toggle').hasClass('active')) {
+                    window.location = thisLink.data('chapter') + '#controls';
+                } else {
+                    window.location = thisLink.data('chapter');
+                }
             } else {
                 // Perform internal page-state change, if applicable
                 if (internalPages > 1 && ((pageturn === 'next' && pageState < internalPages) || (pageturn === 'prev' && pageState > 1))) {
@@ -109,7 +113,11 @@ var GM = (function (GM, $) {
                 e.preventDefault();
                 link = pageControls.first().find('.pagenav .prev a');
                 if (e.shiftKey && link.data('chapter')) {
-                    window.location = link.data('chapter');
+                    if ($('#toggle').hasClass('active')) {
+                        window.location = link.data('chapter') + '#controls';
+                    } else {
+                        window.location = link.data('chapter');
+                    }
                 } else {
                     link.click();
                 }
@@ -118,7 +126,11 @@ var GM = (function (GM, $) {
                 e.preventDefault();
                 link = pageControls.first().find('.pagenav .next a');
                 if (e.shiftKey && link.data('chapter')) {
-                    window.location = link.data('chapter');
+                    if ($('#toggle').hasClass('active')) {
+                        window.location = link.data('chapter') + '#controls';
+                    } else {
+                        window.location = link.data('chapter');
+                    }
                 } else {
                     link.click();
                 }
