@@ -43,7 +43,7 @@ $swipe-radius   : rhythm(3);
   $anim: if($pos == left, fadeInRight, fadeInLeft);
   .prevnext {
     @extend %icon-arrow-#{$opp};
-    @include animation($anim 300ms 1 both, fadeOut 600ms 2s 1 forwards);
+    @include animation($anim 300ms 1 both);
     @if $pos == left { @include border-left-radius($swipe-radius); }
     @else { @include border-right-radius($swipe-radius); }
     #{$opp}: 0;
