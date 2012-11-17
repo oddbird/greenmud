@@ -58,13 +58,13 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 [rel="contents"]:before { content: "\2630"; }
 
-[rel="next"]:before, .swiping-next:before { content: "\2192"; }
+[rel="next"]:before, .swiping-next .prevnext:before { content: "\2192"; }
 
-[rel="prev"]:before, .swiping-prev:before { content: "\2190"; }
+[rel="prev"]:before, .swiping-prev .prevnext:before { content: "\2190"; }
 
 #toggle:before { content: "\2731"; }
 
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .swiping-next:before, .swiping-prev:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .prevnext:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
 
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; min-width: 1em; text-indent: -9999px; }
 #toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { position: absolute; top: 0; left: 0; text-indent: 0; }
@@ -1137,11 +1137,14 @@ a:hover, a:focus, a:active { color: #0000bf; }
 .demo [role="main"] { max-width: 25rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; position: relative; }
 .demo [role="main"]:after { content: ""; display: table; clear: both; }
 
-.swiping-next:before, .swiping-prev:before { font-size: 1.5rem; line-height: 1.875rem; position: absolute; position: fixed; top: 50%; display: block; margin-top: -2.5rem; padding: 2.5rem 1.25rem; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: 900; }
+.prevnext { font-size: 1.875rem; line-height: 1.875rem; opacity: 0; position: absolute; position: fixed; top: 50%; display: block; margin-top: -3.4375rem; padding: 2.5rem 1.25rem; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: -1; }
+.prevnext::before { vertical-align: middle; }
 
-.swiping-next:before { -moz-border-radius-topleft: 3.75rem; -webkit-border-top-left-radius: 3.75rem; border-top-left-radius: 3.75rem; -moz-border-radius-bottomleft: 3.75rem; -webkit-border-bottom-left-radius: 3.75rem; border-bottom-left-radius: 3.75rem; right: 0; padding-right: 0.625rem; }
+.swiping-next .prevnext, .swiping-prev .prevnext { opacity: 1; z-index: 900; }
 
-.swiping-prev:before { -moz-border-radius-topright: 3.75rem; -webkit-border-top-right-radius: 3.75rem; border-top-right-radius: 3.75rem; -moz-border-radius-bottomright: 3.75rem; -webkit-border-bottom-right-radius: 3.75rem; border-bottom-right-radius: 3.75rem; left: 0; padding-left: 0.625rem; }
+.swiping-next .prevnext { -webkit-animation: fadeInRight 300ms 1 both; -moz-animation: fadeInRight 300ms 1 both; -o-animation: fadeInRight 300ms 1 both; animation: fadeInRight 300ms 1 both; -moz-border-radius-topleft: 3.75rem; -webkit-border-top-left-radius: 3.75rem; border-top-left-radius: 3.75rem; -moz-border-radius-bottomleft: 3.75rem; -webkit-border-bottom-left-radius: 3.75rem; border-bottom-left-radius: 3.75rem; right: 0; padding-right: 0.625rem; }
+
+.swiping-prev .prevnext { -webkit-animation: fadeInLeft 300ms 1 both; -moz-animation: fadeInLeft 300ms 1 both; -o-animation: fadeInLeft 300ms 1 both; animation: fadeInLeft 300ms 1 both; -moz-border-radius-topright: 3.75rem; -webkit-border-top-right-radius: 3.75rem; border-top-right-radius: 3.75rem; -moz-border-radius-bottomright: 3.75rem; -webkit-border-bottom-right-radius: 3.75rem; border-bottom-right-radius: 3.75rem; left: 0; padding-left: 0.625rem; }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; }
 
