@@ -18,42 +18,47 @@
 // ----------------------------------------------------------------------------
 // pageturn
 
-$swipe-size     : $largepx;
-$swipe-margin   : 0;
+$swipe-size     : $base-line-height*1.5;
 $swipe-padding  : rhythm(1);
 $swipe-radius   : rhythm(3);
 
-.swiping-next, .swiping-prev {
+.prevnext {
   @extend %icon;
-  &:before {
-    @include adjust-font-size-to($swipe-size);
-    position: absolute;
-    position: fixed;
-    top: 50%;
-    display: block;
-    margin-top: - $swipe-padding*2;
-    padding: $swipe-padding*2 $swipe-padding;
-    color: color($hint,.75);
-    background: color($darker,.25);
+  @include adjust-font-size-to($swipe-size,1.5);
+  @include opacity(0);
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  display: block;
+  margin-top: - $swipe-padding*2.75;
+  padding: $swipe-padding*2 $swipe-padding;
+  color: color($hint,.75);
+  background: color($darker,.25);
+  z-index: -1;
+  &::before { vertical-align: middle; }
+}
+
+@mixin show-prevnext($pos: left) {
+  $opp: opposite-position($pos);
+  $anim: if($pos == left, fadeInRight, fadeInLeft);
+  .prevnext {
+    @extend %icon-arrow-#{$opp};
+    @include animation($anim 300ms 1 both, fadeOut 600ms 2s 1 forwards);
+    @if $pos == left { @include border-left-radius($swipe-radius); }
+    @else { @include border-right-radius($swipe-radius); }
+    #{$opp}: 0;
+    padding-#{$opp}: $swipe-padding/2;
+  }
+}
+
+.swiping-next, .swiping-prev {
+  .prevnext {
+    @include opacity(1);
     z-index: 900;
   }
 }
-.swiping-next {
-  @extend %icon-arrow-right;
-  &:before {
-    @include border-left-radius($swipe-radius);
-    right: $swipe-margin;
-    padding-right: $swipe-padding/2;
-  }
-}
-.swiping-prev {
-  @extend %icon-arrow-left;
-  &:before {
-    @include border-right-radius($swipe-radius);
-    left: $swipe-margin;
-    padding-left: $swipe-padding/2;
-  }
-}
+.swiping-next { @include show-prevnext(left); }
+.swiping-prev { @include show-prevnext(right); }
 
 @include pageturn;
 
