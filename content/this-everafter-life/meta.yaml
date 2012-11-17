@@ -5,3 +5,4 @@ description: 'Book 2: This EverAfter Life.'
 extra_styles: this-everafter-life/frontmatter.css
 next_chapter: stranger-than-a-sunny-day-on-the-beach/
 prev_chapter: ./
+root_url: ../../

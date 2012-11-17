@@ -1,13 +1,13 @@
 <!-- meta
-description: 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
-slug: title
-body_class:
+description : 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
+slug        : title
+body_class  :
 prev:
-    slug: home
-    url: index.html
+    slug    : home
+    url     : index.html
 next:
-    slug: copyright
-    url: copyright.html
+    slug    : copyright
+    url     : copyright.html
 -->
 
 # Into the Green Green Mud
@@ -24,12 +24,12 @@ by [Eric A. Meyer][eam]
 ------
 
 <!-- meta
-description: 'Epigraph: "Good Friday" by Cocorosie.'
-slug: epigraph
-body_class:
+description : 'Epigraph: "Good Friday" by Cocorosie.'
+slug        : epigraph
+body_class  :
 prev:
-    slug: thanks
-    url: thanks.html
+    slug    : thanks
+    url     : thanks.html
 -->
 
 > I once fell in love with you                      </br>
@@ -48,10 +48,12 @@ prev:
 <!-- book
 book          : 'Dancing Without Architecture.'
 description   : 'Book 1: Dancing Without Architecture.'
+root_url      : ../../
 -->
 
 <!-- meta
-body_class:
+body_class    :
+root_url      : ../
 -->
 
 ## Book 1
@@ -63,6 +65,7 @@ body_class:
 description   : 'Epigraph: "I Sat Belonely" by John Lennon.'
 slug          : epigraph
 body_class    :
+root_url      : ../
 -->
 
 > I sat belonely down a tree,     <br />
@@ -79,10 +82,6 @@ chapter       : 'In Which JJ.'
 description   : 'Chapter 1: In Which JJ.'
 
 voice         : jj
--->
-
-<!-- meta
-body_class:
 -->
 
 <!-- meta
@@ -1861,10 +1860,12 @@ So green!
 <!-- book
 book          : This EverAfter Life
 description   : 'Book 2: This EverAfter Life.'
+root_url      : ../../
 -->
 
 <!-- meta
 body_class    :
+root_url      : ../
 -->
 
 ## Book 2
@@ -1876,6 +1877,7 @@ body_class    :
 description   : 'Epigraph: "Preface to a Twenty Volume Suicide Note" by Amiri Baraka.'
 slug          : epigraph
 body_class    :
+root_url      : ../
 -->
 
 > And now, each night I count the stars.      <br />

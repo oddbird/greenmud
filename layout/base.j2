@@ -38,19 +38,19 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
   <!-- 320x460 for iPhone 3GS -->
-  <link rel="apple-touch-startup-image" media="screen and (max-device-width: 480px) and not (-webkit-min-device-pixel-ratio: 2)" href="{{ media_url('images/favicons/splash-iphone.png') }}" />
+  <link rel="apple-touch-startup-image" media="screen and (max-device-width: 480px) and not (-webkit-min-device-pixel-ratio: 2)" href="{{ resource.meta.root_url }}media/images/favicons/splash-iphone.png" />
   <!-- 640x920 for retina display -->
-  <link rel="apple-touch-startup-image" media="screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="{{ media_url('images/favicons/splash-iphone4.png') }}" />
+  <link rel="apple-touch-startup-image" media="screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="{{ resource.meta.root_url }}media/images/favicons/splash-iphone4.png" />
   <!-- iPad Portrait 768x1004 -->
-  <link rel="apple-touch-startup-image" media="screen and (min-device-width: 768px) and (orientation: portrait)" href="{{ media_url('images/favicons/splash-portrait.png') }}" />
+  <link rel="apple-touch-startup-image" media="screen and (min-device-width: 768px) and (orientation: portrait)" href="{{ resource.meta.root_url }}media/images/favicons/splash-portrait.png" />
   <!-- iPad Landscape 1024x748 -->
-  <link rel="apple-touch-startup-image" media="screen and (min-device-width: 768px) and (orientation: landscape)" href="{{ media_url('images/favicons/splash-landscape.png') }}" />
+  <link rel="apple-touch-startup-image" media="screen and (min-device-width: 768px) and (orientation: landscape)" href="{{ resource.meta.root_url }}media/images/favicons/splash-landscape.png" />
 
   <!-- favicon.ico -->
-  <link rel="shortcut icon" href="{{ media_url('images/favicons/favicon.ico') }}" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ media_url('images/favicons/apple-touch-icon-114x114-precomposed.png') }}">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ media_url('images/favicons/apple-touch-icon-72x72-precomposed.png') }}">
-  <link rel="apple-touch-icon-precomposed" href="{{ media_url('images/favicons/apple-touch-icon-precomposed.png') }}">
+  <link rel="shortcut icon" href="{{ resource.meta.root_url }}media/images/favicons/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ resource.meta.root_url }}media/images/favicons/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ resource.meta.root_url }}media/images/favicons/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ resource.meta.root_url }}media/images/favicons/apple-touch-icon-precomposed.png">
 
   <!-- Styles -->
   {% block styles -%}
@@ -58,8 +58,8 @@
 
   <!-- Modernizr -->
   {% block headjs -%}
-  <script src="{{ media_url('js/src/plugins/modernizr.js') }}"></script>
-  <script src="{{ media_url('js/src/plugins/modernizr.selectors.js') }}"></script>
+  <script src="{{ resource.meta.root_url }}media/js/src/plugins/modernizr.js"></script>
+  <script src="{{ resource.meta.root_url }}media/js/src/plugins/modernizr.selectors.js"></script>
   {% endblock headjs %}
 
   <!-- Page-Specific Head -->
@@ -70,7 +70,7 @@
 {% block body %}
 
   <header role="banner">
-    <h1 class="novel-title"><a href="/" rel="home">{{ resource.meta.novel }}</a></h1>
+    <h1 class="novel-title"><a href="/index.html" rel="home">{{ resource.meta.novel }}</a></h1>
     <h2 class="byline">by <a href="http://eric.andmeyer.com/">Eric A. Meyer</a></h2>
   </header>
 
@@ -87,18 +87,18 @@
 {% block js %}
 
   {% if site.config.mode == "production" %}
-    <script src="{{ media_url('js/dist/minified.js') }}"></script>
+    <script src="{{ resource.meta.root_url }}media/js/dist/minified.js"></script>
   {% else %}
-    <script src="{{ media_url('js/src/libs/jquery-1.7.2.js') }}"></script>
-    <script src="{{ media_url('js/src/plugins/jquery.history.js') }}"></script>
-    <script src="{{ media_url('js/src/plugins/jquery.touchSwipe-1.2.7.js') }}"></script>
-    <script src="{{ media_url('js/src/plugins/jquery.ba-dotimeout.js') }}"></script>
-    <script src="{{ media_url('js/src/plugins/jquery.placeholder.js') }}"></script>
-    <script src="{{ media_url('js/src/plugins/jquery.scrollTo.js') }}"></script>
-    <script src="{{ media_url('js/src/plugins/viewport.js') }}"></script>
-    <script src="{{ media_url('js/src/local.js') }}"></script>
-    <script src="{{ media_url('js/src/pageturning.js') }}"></script>
-    <script src="{{ media_url('js/src/init.js') }}"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/libs/jquery-1.7.2.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/plugins/jquery.history.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/plugins/jquery.touchSwipe-1.2.7.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/plugins/jquery.ba-dotimeout.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/plugins/jquery.placeholder.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/plugins/jquery.scrollTo.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/plugins/viewport.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/local.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/pageturning.js"></script>
+    <script src="{{ resource.meta.root_url }}media/js/src/init.js"></script>
     <!-- <script src="http://10.0.1.8:8000/target/target-script-min.js#anonymous"></script> -->
   {% endif %}
 

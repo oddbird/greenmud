@@ -18,3 +18,8 @@ line_comments = false
 preferred_syntax = :scss
 output_style = :compact
 relative_assets = true
+
+# remove cache-busting for mobile apps
+# asset_cache_buster do |http_path, real_path|
+#   nil
+# end

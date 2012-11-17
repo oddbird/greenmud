@@ -278,7 +278,7 @@ class Page(object):
             n.setdefault("slug", self.next.meta["slug"])
             if self.next.is_title:
                 self.meta.setdefault("chapter_break", "after")
-                n.setdefault("url", "{0}/".format(self.next.title_slug))
+                n.setdefault("url", "{0}/index.html".format(self.next.title_slug))
                 if len(self.path_segments) == 2:
                     n["url"] = "../{0}".format(n["url"])
                     if self.next.is_book_title:

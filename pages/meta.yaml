@@ -2,6 +2,7 @@ description   : Into the Green Green Mud
 
 extends: novel/page.j2
 default_block: page
+root_url: ./
 
 chapter_slug: frontmatter
 extra_styles: frontmatter.css

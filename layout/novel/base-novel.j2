@@ -12,10 +12,10 @@
 {%- endblock %}
 
 {% block styles -%}
-  <link rel="stylesheet" href="{{ media_url('css/novel.css') }}" />
+  <link rel="stylesheet" href="{{ resource.meta.root_url }}media/css/novel.css" />
   {% if resource.meta.extra_styles -%}
   {%- set style_url = 'css/chapters/' + resource.meta.extra_styles -%}
-  <link rel="stylesheet" href="{{ media_url(style_url) }}" />
+  <link rel="stylesheet" href="{{ resource.meta.root_url }}media/{{ style_url }}" />
   {% endif %}
 {% endblock styles %}
 

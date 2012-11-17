@@ -5,3 +5,4 @@ description: 'Book 1: Dancing Without Architecture.'
 extra_styles: dancing-without-architecture/frontmatter.css
 next_chapter: in-which-jj/
 prev_chapter: ../
+root_url: ../../
