@@ -20,7 +20,7 @@ DIST = os.path.join(JS, "dist")
 
 
 COMPILER_JAR = os.path.join(BIN, "compiler.jar")
-JS_FILE_RE = re.compile(r'<script src="{{ media_url\(\'(.+)\'\) }}"></script>')
+JS_FILE_RE = re.compile(r'<script src="{{ resource\.meta\.root_url }}media/(.+)"></script>')
 
 
 
