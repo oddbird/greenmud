@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// template
+// settings
 
 $total-columns  : 6;
 $template-break : 10;
@@ -23,6 +23,9 @@ $imgs     : 'frontmatter/';
 $burst    : '#{$imgs}burst.png';
 $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
+// ----------------------------------------------------------------------------
+// animations
+
 @include keyframes(template-burst) {
   0% {
     background-color: color($blue $hint);
@@ -33,6 +36,9 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     background-position: center rhythm(-2), center;
   }
 }
+
+// ----------------------------------------------------------------------------
+// template
 
 %social-icon {
   @extend %icon-replace;
@@ -58,7 +64,9 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     @include container($total-columns,$template-break);
   }
 
-  // banner ---------------//
+  // --------------------------------------------------------------------------
+  // banner
+
   [role="banner"] {
     @include padding-leader(.75);
     @include trailing-border($border-width,.75);
@@ -85,7 +93,9 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     &:hover { h2 { @include animation(hinge 1.5s 10s ease both); } }
   }
 
-  // main ---------------//
+  // --------------------------------------------------------------------------
+  // main
+
   .template {
     @include back($temp-bg);
     @include background($noise-layer, $temp-old, $temp-bg);
@@ -96,7 +106,9 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
     @include padding-trailer;
   }
 
-  // footer ---------------//
+  // --------------------------------------------------------------------------
+  // footer
+
   $footer-color: color($dark);
   $footer-highlight: color($darker);
 

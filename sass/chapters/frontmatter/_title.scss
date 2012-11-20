@@ -66,11 +66,12 @@ $string-right-layer : image-url($right) no-repeat scroll $show-right;
     @include box-sizing(content-box);
     @include rhythm-padding;
     @include pagepad(15 1, 18 2);
+    @include animation(fadeIn 3s 1 ease both);
     color: $darker;
     text-align: center;
 
     @include breakpoint($line-break) {
-      @include animation(line 30s linear infinite both);
+      @include animation(line 30s linear infinite both, fadeIn 3s 1 ease both);
       @include background($string-left-layer, $string-right-layer, $line-layer);
       @include background-origin(content-box);
       height: rhythm-image($left);
@@ -82,12 +83,19 @@ $string-right-layer : image-url($right) no-repeat scroll $show-right;
 
   h1 {
     @include adjust-font-size-to($largepx);
+    @include animation(fadeIn 2.5s 2s 1 ease both);
     font-weight: bold;
   }
   h2 {
     @include padding-trailer(6.5);
     @include trailer(.5);
+    @include animation(fadeInDown 2s 4s 1 ease both);
     background: image-url($scribble) no-repeat scroll center bottom;
+  }
+
+  p {
+    @include animation(fadeInLeft 2s 5s 1 ease both);
+    + p { @include animation-name(fadeInRight); }
   }
 
   a {

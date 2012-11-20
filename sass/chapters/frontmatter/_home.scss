@@ -16,6 +16,15 @@ $scribble-hide    : right rhythm(25);
 $scribble-pos     : right rhythm(9);
 $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
 
+// ----------------------------------------------------------------------------
+// animation
+
+@include keyframes(show-swing) {
+  0% { background-position: $swing-hide, $scribble-hide; }
+  50% { background-position: $swing-pos, $scribble-hide; }
+  100% { background-position: $swing-pos, $scribble-pos; }
+}
+
 /* ----------------------------------------------------------------------------
    home page */
 
@@ -24,7 +33,6 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
 
   [role="main"] {
     @extend %transition-main;
-    background: $swing-layer;
     background: $swing-layer, $scribble-layer;
   }
 
@@ -55,14 +63,15 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     [role="banner"] { @include animation(template-burst 6s ease both); }
     [role="main"] {
       @include padding-leader(2);
-      background-position: $swing-pos;
-      background-position: $swing-pos, $scribble-pos;
+      @include animation(show-swing 1s 2s 1 ease both);
     }
     .intro, .instructions {
       @include pad(2,2);
       @include adjust-font-size-to($normpx);
       clear: both;
     }
+    .intro { @include animation(fadeInDown 1s .5s 1 ease both); }
+    .instructions { @include animation(fadeInDown 1s 3.5s 1 ease both, shake .75s 3.5s linear); }
   }
 }
 

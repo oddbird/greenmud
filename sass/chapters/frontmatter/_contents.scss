@@ -9,6 +9,14 @@ $bg-details   : color($yellow $hint), color($yellow $hint), color($orange $light
 $bg-old       : linear-gradient($bg-angle, $bg-details);
 $bg-new       : fix-linear($bg-angle, $bg-details);
 
+// ----------------------------------------------------------------------------
+// animation
+
+@include keyframes(shadeIn) {
+  0% { max-height: 0; }
+  100% { max-height: rhythm(50); }
+}
+
 /* ----------------------------------------------------------------------------
    contents */
 
@@ -27,6 +35,17 @@ $bg-new       : fix-linear($bg-angle, $bg-details);
 
   // --------------------------------------------------------------------------
   // elements
+
+  .book { @include animation(fadeIn 2s 1 ease both); }
+  .toc-everafter .book {
+    @include animation-delay(.5s);
+    + ol { @include animation-delay(1.5s); }
+  }
+
+  ol {
+    @include animation(shadeIn 2s .5s 1 ease-out both);
+    overflow: hidden;
+  }
 
   a {
     #{$link} { color: color($orange $darker); }

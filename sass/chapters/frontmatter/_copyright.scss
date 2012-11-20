@@ -31,6 +31,7 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
     @include container;
     @include rhythm-padding(2,0);
     @include text-shadow($shadow);
+    @include animation(fadeIn 3s 1 ease backwards);
     text-align: center;
   }
 
@@ -39,9 +40,9 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 
   h1 {
     @extend %allcaps;
-    @extend %transition;
-    @include animation(hinge 1s 10s linear both, shake 500ms 3s linear);
-    @include animation-play-state(paused, paused);
+    @extend %transition-main;
+    @include animation(hinge 1s 10s linear forwards, shake 500ms 3s linear);
+    @include animation-play-state(paused);
     @include trailer;
     @include border-radius(3em);
     @include box-shadow($shadow);
@@ -50,7 +51,7 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
     padding: rhythm(.5,$largepx) rhythm(1,$largepx);
     background: $color $noise;
     color: mix($bg,$highlight);
-    &:hover { @include animation-play-state(running, running); }
+    &:hover { @include animation-play-state(running); }
     &:before, &:after { content: "•"; }
 
     @include breakpoint(40em) { @include adjust-font-size-to($largepx); }
