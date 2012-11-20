@@ -1,7 +1,7 @@
 {% extends 'novel/base-novel.j2' %}
 
 {% block main %}
-<section id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" {% if resource.meta.body_class %}data-body-class="{{ resource.meta.body_class }}"{% endif %} data-internal-pages="{{ resource.meta.page_states }}" data-page-state="1">
+<section id="{{ resource.meta.slug }}" class="page {{ resource.meta.book_slug }} {{ resource.meta.chapter_slug }} {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" {% if resource.meta.body_class %}data-body-class="{{ resource.meta.body_class }}"{% endif %} data-internal-pages="{{ resource.meta.page_states }}" data-page-state="1" data-exit-duration="{{ resource.meta.exit_duration }}">
   {% if resource.meta.template %}
   {% include "novel/_template-banner.j2" %}
   <div class="template">
