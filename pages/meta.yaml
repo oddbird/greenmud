@@ -1,7 +1,7 @@
 description   : Into the Green Green Mud
 
 page_states   : 1
-exit_duration : 300ms
+exit_duration : 300
 
 extends       : novel/page.j2
 default_block : page

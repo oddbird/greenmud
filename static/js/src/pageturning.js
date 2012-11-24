@@ -181,6 +181,7 @@ var GM = (function (GM, $) {
                 // Prepare Variables
                 var state = History.getState().data,
                     title = state.title,
+                    exitDuration,
                     pageNav,
                     prev,
                     next,
@@ -240,6 +241,7 @@ var GM = (function (GM, $) {
                 if ($(pageSelector).attr('id') !== state.id) {
                     thisPage = body.data(state.id);
                     pageNav = thisPage.data('pagenav');
+                    exitDuration = $(pageSelector).data('exit-duration');
                     if (pageturn === 'prev' || pageturn === 'next') {
                         if (pageturn === 'prev') {
                             pageturnExitClass = 'exit-next';
@@ -251,7 +253,7 @@ var GM = (function (GM, $) {
                             thisPage.attr('data-page-state', 1);
                         }
                         $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
-                        $.doTimeout(300, function () {
+                        $.doTimeout(exitDuration ? exitDuration : 300, function () {
                             replacePage(thisPage, pageNav);
                             $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
                             pageturn = null;
