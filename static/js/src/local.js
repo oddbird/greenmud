@@ -19,20 +19,32 @@ var GM = (function (GM, $) {
         DOWN: 40
     };
 
-    GM.toggleControls = function (toggle, controls, hash) {
+    GM.toggleControls = function (toggle, controls) {
         var doToggle = function () {
             $(controls).toggleClass('active');
             $(toggle).toggleClass('active');
         };
 
-        $(toggle).click(function (e) {
+        $(toggle).click(function () {
             doToggle();
+            if (Modernizr.sessionstorage) {
+                sessionStorage.setItem('controls', $(controls).hasClass('active'));
+            }
             return false;
         });
 
-        if (hash && window.location.hash === '#' + hash) {
-            doToggle();
+        if (Modernizr.sessionstorage && sessionStorage.getItem('controls') === 'true') {
+            $(controls).addClass('active');
+            $(toggle).addClass('active');
         }
+    };
+
+    GM.toc = function (toggle, controls) {
+        $(toggle).click(function () {
+            $(controls).toggleClass('active');
+            $(toggle).toggleClass('active');
+            return false;
+        });
     };
 
     GM.bodyHeight = function (element, property) {
