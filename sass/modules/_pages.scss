@@ -61,11 +61,3 @@ $swipe-radius   : rhythm(3);
 .swiping-prev { @include show-prevnext(right); }
 
 @include pageturn;
-
-.enter-prev, .enter-next, .exit-prev, .exit-next {
-  @include animation-fill-mode(both);
-}
-
-.exit-prev, .exit-next {
-  * { @include animation-play-state(paused !important); }
-}

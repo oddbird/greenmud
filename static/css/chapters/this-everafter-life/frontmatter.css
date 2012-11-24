@@ -32,15 +32,15 @@
 /* ---------------------------------------------------------------------------- general */
 html { background: #ffdfbf url('../../../images/noise.png?1347221205'); background-image: url('../../../images/noise.png?1347221205'), -webkit-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1347221205'), -moz-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1347221205'), -o-linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); background-image: url('../../../images/noise.png?1347221205'), linear-gradient(120deg, rgba(255, 128, 0, 0.5), rgba(255, 204, 153, 0)); }
 
-.enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; }
+.enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
 
-.exit-prev, .exit-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; }
+.exit-prev, .exit-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; -o-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
 /* ---------------------------------------------------------------------------- epigraph: amiri baraka */
 #epigraph { background: -webkit-linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: -moz-linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: -o-linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: linear-gradient(355deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; }
-#epigraph [role="main"] { max-width: 31rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; }
+#epigraph [role="main"] { max-width: 31rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 22.5em) { #epigraph [role="main"] { padding-top: 5rem; padding-bottom: 0; } }
 #epigraph p { margin-bottom: 1.25rem; }

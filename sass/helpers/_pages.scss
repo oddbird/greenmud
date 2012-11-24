@@ -10,7 +10,7 @@
 }
 
 // ----------------------------------------------------------------------------
-// pageturn mixin
+// chapterwide pageturn mixin
 
 $page-enter     : fadeInLeft fadeInRight;
 $page-exit      : fadeOutLeft fadeOutRight;
@@ -27,10 +27,10 @@ $page-function  : ease;
   $exit     : if(type-of($exit) != 'list', $exit $exit, $exit);
   $time     : if(type-of($time) != 'list', $time $time, $time);
 
-  $inPrev   : nth($enter,1) nth($time,1) $function;
-  $inNext   : nth($enter,2) nth($time,1) $function;
-  $outPrev  : nth($exit,1)  nth($time,2) $function;
-  $outNext  : nth($exit,2)  nth($time,2) $function;
+  $inPrev   : nth($enter,1) nth($time,1) $function backwards;
+  $inNext   : nth($enter,2) nth($time,1) $function backwards;
+  $outPrev  : nth($exit,1)  nth($time,2) $function forwards;
+  $outNext  : nth($exit,2)  nth($time,2) $function forwards;
 
   @return $inPrev $inNext $outPrev $outNext;
 }
@@ -57,9 +57,15 @@ $page-function  : ease;
   #{$outPrev} { @extend %#{nth($exit,1)}; }
   #{$outNext} { @extend %#{nth($exit,2)}; }
 
-  // set the duration
-  #{$inPrev}, #{$inNext}    { @include animation-duration(nth($time,1)); }
-  #{$outPrev}, #{$outNext}  { @include animation-duration(nth($time,2)); }
+  // set the duration and fill
+  #{$inPrev}, #{$inNext}    {
+    @include animation-duration(nth($time,1));
+    @include animation-fill-mode(backwards);
+  }
+  #{$outPrev}, #{$outNext}  {
+    @include animation-duration(nth($time,2));
+    @include animation-fill-mode(forwards);
+  }
 
   // set the function
   #{$inPrev}, #{$inNext}, #{$outPrev}, #{$outNext} {
@@ -67,12 +73,63 @@ $page-function  : ease;
   }
 }
 
+// ----------------------------------------------------------------------------
+// pageturn entrance mixins
+
+@mixin enter-prev($animations...) {
+  &.enter-prev {
+    @if $animations { @include animation($animations); }
+    @content;
+  }
+}
+
+@mixin enter-next($animations...) {
+  &.enter-next {
+    @if $animations { @include animation($animations); }
+    @content;
+  }
+}
+
+@mixin enter($animations...) {
+  &.enter-prev, &.enter-next {
+    @if $animations { @include animation($animations); }
+    @content;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// pageturn exit mixins
+
+@mixin exit-prev($animations...) {
+  &.exit-prev {
+    @if $animations { @include animation($animations); }
+    @content;
+  }
+}
+
+@mixin exit-next($animations...) {
+  &.exit-next {
+    @if $animations { @include animation($animations); }
+    @content;
+  }
+}
+
+@mixin exit($animations...) {
+  &.exit-prev, &.exit-next {
+    @if $animations { @include animation($animations); }
+    @content;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// pageturn mixin
+
 @mixin page-animation($animations...) {
   @include animation($animations...);
-  &.enter-prev { @include animation(nth(get-pageturn(),1), $animations); }
-  &.enter-next { @include animation(nth(get-pageturn(),2), $animations); }
-  &.exit-prev  { @include animation(nth(get-pageturn(),3), $animations); }
-  &.exit-next  { @include animation(nth(get-pageturn(),4), $animations); }
+  @include enter-prev (nth(get-pageturn(),1), $animations);
+  @include enter-next (nth(get-pageturn(),2), $animations);
+  @include exit-prev  (nth(get-pageturn(),3), $animations);
+  @include exit-next  (nth(get-pageturn(),4), $animations);
 }
 
 // ----------------------------------------------------------------------------

@@ -32,8 +32,15 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
   @extend %template;
 
   [role="main"] {
-    @extend %transition-main;
+    @include transition(width, padding, margin 300ms);
     background: $swing-layer, $scribble-layer;
+  }
+
+  @include exit {
+    [role="main"] {
+      @include transition(background 300ms);
+      @include animation(fadeOutUp 300ms forwards);
+    }
   }
 
   // --------------------------------------------------------------------------
@@ -43,24 +50,33 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     @include clearfix;
     @include adjust-font-size-to($smallpx);
   }
-  .intro { @extend %type; }
+  .intro {
+    @extend %type;
+    @include animation(fadeInDown 1s .5s 1 ease backwards);
+  }
+  .instructions {
+    @include animation(fadeIn 1s 2s 1 ease backwards, shake .75s 2s 1 linear);
+  }
 
   .inst {
     @extend %icon;
     @include trailer(.5);
     @include pie-clearfix;
-    &:before {
-      @include adjust-font-size-to($xxlargepx);
+    display: table;
+    &.turn { @extend %icon-swipe; }
+    p, &:before {
+      display: table-cell;
       vertical-align: middle;
     }
-    &.turn { @extend %icon-swipe; }
+    &:before { @include adjust-font-size-to($xxlargepx); }
+    p { padding-left: .4em; }
   }
 
   // --------------------------------------------------------------------------
   // breakpoints
 
   @include at-breakpoint($template-break) {
-    [role="banner"] { @include animation(template-burst 6s ease both); }
+    [role="banner"] { @include animation(template-burst 6s ease backwards); }
     [role="main"] {
       @include padding-leader(2);
       @include animation(show-swing 1s 2s 1 ease both);
@@ -70,8 +86,7 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
       @include adjust-font-size-to($normpx);
       clear: both;
     }
-    .intro { @include animation(fadeInDown 1s .5s 1 ease both); }
-    .instructions { @include animation(fadeInDown 1s 3.5s 1 ease both, shake .75s 3.5s linear); }
+    .instructions { @include animation-delay(3.5s); }
   }
 }
 

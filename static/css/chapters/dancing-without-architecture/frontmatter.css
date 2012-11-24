@@ -35,21 +35,21 @@
 /* ---------------------------------------------------------------------------- general */
 html { background: #bfbfff url('../../../images/noise.png?1347221205'); background: url('../../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1347221205') repeat 0, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
 
-.enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; }
+.enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
 
-.exit-prev, .exit-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; }
+.exit-prev, .exit-next { -webkit-animation-duration: 600ms; -moz-animation-duration: 600ms; -o-animation-duration: 600ms; animation-duration: 600ms; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; -o-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
 /* ---------------------------------------------------------------------------- epigraph: john lennon */
 #epigraph { background: -webkit-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -moz-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -o-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(355deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; }
-#epigraph [role="main"] { max-width: 31rem; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+#epigraph [role="main"] { max-width: 31rem; margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 18.75em) { #epigraph [role="main"] { padding-top: 4.375rem; padding-bottom: 1; } }
 #epigraph blockquote { padding-top: 5.625rem; background: url('../../../images/dancing/epigraph/lennon.png?1347221204') no-repeat scroll center top; padding-left: 12.90323%; }
-@media (min-width: 22.5em) { #epigraph blockquote { padding-left: 26.66667%; } }
-@media (min-width: 28.5em) { #epigraph blockquote { padding-left: 42.10526%; } }
-@media (min-width: 46.5em) { #epigraph blockquote { padding-left: 51.6129%; } }
+@media (min-width: 15rem) { #epigraph blockquote { padding-left: 26.66667%; } }
+@media (min-width: 19rem) { #epigraph blockquote { padding-left: 42.10526%; } }
+@media (min-width: 31rem) { #epigraph blockquote { padding-left: 51.6129%; } }
 #epigraph p { margin-bottom: 1.25rem; }
 
 /* ---------------------------------------------------------------------------- titlepage */

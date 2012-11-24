@@ -1128,13 +1128,13 @@ a:hover, a:focus, a:active { color: #0000bf; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 #toc { overflow: hidden; background: rgba(32, 32, 32, 0.75); color: #b9b9b9; font-family: "GreenMudNarrator", serif; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }
-#toc .wrap { max-width: 33rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; margin-left: 0; }
+#toc .wrap { max-width: 33rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; margin-left: 0; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 50em) { #toc .wrap { margin-left: 2.98438rem; } }
 .active + #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
-.demo [role="main"] { max-width: 25rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; position: relative; }
+.demo [role="main"] { max-width: 25rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; position: relative; }
 .demo [role="main"]:after { content: ""; display: table; clear: both; }
 
 .prevnext { font-size: 1.875rem; line-height: 1.875rem; opacity: 0; position: absolute; position: fixed; top: 50%; display: block; margin-top: -3.4375rem; padding: 2.5rem 1.25rem; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: -1; }
@@ -1146,12 +1146,8 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 .swiping-prev .prevnext { -webkit-animation: fadeInLeft 300ms 1 both; -moz-animation: fadeInLeft 300ms 1 both; -o-animation: fadeInLeft 300ms 1 both; animation: fadeInLeft 300ms 1 both; -moz-border-radius-topright: 3.75rem; -webkit-border-top-right-radius: 3.75rem; border-top-right-radius: 3.75rem; -moz-border-radius-bottomright: 3.75rem; -webkit-border-bottom-right-radius: 3.75rem; border-bottom-right-radius: 3.75rem; left: 0; padding-left: 0.625rem; }
 
-.enter-prev, .enter-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; }
+.enter-prev, .enter-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
 
-.exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; }
+.exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; -o-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
-
-.enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; }
-
-.exit-prev *, .exit-next * { -webkit-animation-play-state: paused !important; -moz-animation-play-state: paused !important; -o-animation-play-state: paused !important; animation-play-state: paused !important; }
