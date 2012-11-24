@@ -53,11 +53,7 @@ var GM = (function (GM, $) {
                 href = thisLink.attr('href'),
                 page,
                 fallback = function (link) {
-                    if ($('#toggle').hasClass('active')) {
-                        window.location = link.attr('href') + '#controls';
-                    } else {
-                        window.location = link.attr('href');
-                    }
+                    window.location = link.attr('href');
                 };
             stateChange = false;
             // Prev/Next page-turns use classes for css-animation
@@ -69,11 +65,7 @@ var GM = (function (GM, $) {
             // Shift-pageturns go directly to prev/next chapter
             if (e.shiftKey && thisLink.data('chapter')) {
                 e.preventDefault();
-                if ($('#toggle').hasClass('active')) {
-                    window.location = thisLink.data('chapter') + '#controls';
-                } else {
-                    window.location = thisLink.data('chapter');
-                }
+                window.location = thisLink.data('chapter');
             } else {
                 // Perform internal page-state change, if applicable
                 if (internalPages > 1 && ((pageturn === 'next' && pageState < internalPages) || (pageturn === 'prev' && pageState > 1))) {
@@ -113,11 +105,7 @@ var GM = (function (GM, $) {
                 e.preventDefault();
                 link = pageControls.first().find('.pagenav .prev a');
                 if (e.shiftKey && link.data('chapter')) {
-                    if ($('#toggle').hasClass('active')) {
-                        window.location = link.data('chapter') + '#controls';
-                    } else {
-                        window.location = link.data('chapter');
-                    }
+                    window.location = link.data('chapter');
                 } else {
                     link.click();
                 }
@@ -126,11 +114,7 @@ var GM = (function (GM, $) {
                 e.preventDefault();
                 link = pageControls.first().find('.pagenav .next a');
                 if (e.shiftKey && link.data('chapter')) {
-                    if ($('#toggle').hasClass('active')) {
-                        window.location = link.data('chapter') + '#controls';
-                    } else {
-                        window.location = link.data('chapter');
-                    }
+                    window.location = link.data('chapter');
                 } else {
                     link.click();
                 }
@@ -181,6 +165,7 @@ var GM = (function (GM, $) {
                 // Prepare Variables
                 var state = History.getState().data,
                     title = state.title,
+                    exitDuration,
                     pageNav,
                     prev,
                     next,
@@ -240,6 +225,7 @@ var GM = (function (GM, $) {
                 if ($(pageSelector).attr('id') !== state.id) {
                     thisPage = body.data(state.id);
                     pageNav = thisPage.data('pagenav');
+                    exitDuration = $(pageSelector).data('exit-duration');
                     if (pageturn === 'prev' || pageturn === 'next') {
                         if (pageturn === 'prev') {
                             pageturnExitClass = 'exit-next';
@@ -251,7 +237,8 @@ var GM = (function (GM, $) {
                             thisPage.attr('data-page-state', 1);
                         }
                         $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
-                        $.doTimeout(300, function () {
+                        $.doTimeout(exitDuration ? exitDuration : 300, function () {
+                            body.removeClass('swiping-next swiping-prev');
                             replacePage(thisPage, pageNav);
                             $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
                             pageturn = null;

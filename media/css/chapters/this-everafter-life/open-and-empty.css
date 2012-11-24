@@ -33,7 +33,7 @@
 #titlepage [role="main"] { text-shadow: rgba(242, 242, 242, 0.5) 0 1px 0; color: #404040; }
 #titlepage [role="main"]::before { background-color: rgba(255, 255, 255, 0.675); }
 #titlepage [role="main"]::after { background-color: rgba(255, 255, 255, 0.675); }
-@media (min-width: 46.5em) { #titlepage [role="main"] { max-width: 47rem; }
+@media (min-width: 31rem) { #titlepage [role="main"] { max-width: 47rem; }
   #titlepage h1, #titlepage h2 { width: 48.93617%; }
   #titlepage h1 { margin-right: -2.12766%; }
   #titlepage h2 { margin-right: 2.12766%; } }
