@@ -254,6 +254,7 @@ var GM = (function (GM, $) {
                         }
                         $(pageSelector).removeClass('enter-prev enter-next').addClass(pageturnExitClass);
                         $.doTimeout(exitDuration ? exitDuration : 300, function () {
+                            body.removeClass('swiping-next swiping-prev');
                             replacePage(thisPage, pageNav);
                             $(pageSelector).replaceWith(thisPage.clone(true).addClass(pageturnEnterClass));
                             pageturn = null;
