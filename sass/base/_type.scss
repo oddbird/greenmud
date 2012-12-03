@@ -20,22 +20,3 @@ $jj-stack         : "GreenMudJJ", sans-serif;
 $susy-stack       : "GreenMudSusy", sans-serif;
 $susy-smallcaps   : "GreenMudSusySC", sans-serif;
 $narrator-stack   : "GreenMudNarrator", serif;
-
-// ---------------------------------------------------------------------------
-// Base Ems (wrapper)
-
-@function base($em, $from: $base-font-size) { @return round(absolute-ems($em,$from)); }
-
-// ---------------------------------------------------------------------------
-// Rhythm-image
-
-@function px-to-rhythm($px, $from: $base-font-size, $round: up) {
-  $rough: 2 * $px / $base-line-height;
-  $lines: if($round == down, floor($rough) / 2, ceil($rough) / 2);
-  @return rhythm($lines, $from);
-}
-
-
-@function rhythm-image($image, $from: $base-font-size, $round: up) {
-  @return px-to-rhythm(image-height($image), $from, $round);
-}

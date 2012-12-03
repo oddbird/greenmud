@@ -5,7 +5,15 @@
   <meta charset="utf-8">
 
   <!-- Page Info -->
-  <title>{% block title %}{{ resource.meta.novel }}{% endblock %}</title>
+  <title>
+    {%- block title -%}
+    {%- if resource.meta.title -%}
+      {{ resource.meta.title }} | GreenMud
+    {%- else -%}
+      {{ resource.meta.novel }}
+    {%- endif -%}
+    {%- endblock -%}
+  </title>
   <meta name="description" content="{{ resource.meta.description }}">
 
   <!-- Facebook -->
@@ -54,6 +62,9 @@
 
   <!-- Styles -->
   {% block styles -%}
+  {% if resource.meta.styles -%}
+  <link rel="stylesheet" href="{{ resource.meta.root_url }}media/css/{{ resource.meta.styles }}" />
+  {% endif %}
   {% endblock styles %}
 
   <!-- Modernizr -->

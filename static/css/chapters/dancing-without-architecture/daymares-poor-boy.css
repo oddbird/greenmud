@@ -43,9 +43,9 @@
 #titlepage [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #fafaeb url('../../../images/noise.png?1347221205'); }
+html { background: #fafaea url('../../../images/noise.png?1347221205'); }
 
 /* ---------------------------------------------------------------------------- titlepage */
 #titlepage [role="main"] { text-shadow: rgba(64, 64, 64, 0.5) 0 1px 0; color: #f2f2f2; }
-#titlepage [role="main"]::before { background-color: rgba(83, 64, 45, 0.5); }
-#titlepage [role="main"]::after { background-color: rgba(83, 64, 45, 0.5); }
+#titlepage [role="main"]::before { background-color: rgba(83, 64, 44, 0.5); }
+#titlepage [role="main"]::after { background-color: rgba(83, 64, 44, 0.5); }

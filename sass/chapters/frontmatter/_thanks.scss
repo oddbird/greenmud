@@ -8,7 +8,7 @@ $bg             : color($off $green $lightest);
 $bg-angle       : top left;
 $bg-details     : color($yellow $hint), $bg;
 $bg-old         : linear-gradient($bg-angle, $bg-details);
-$bg-new         : fix-linear($bg-angle, $bg-details);
+$bg-new         : convert-gradient($bg-angle, $bg-details);
 
 $pg             : '#{$ch}thanks/';
 

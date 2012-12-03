@@ -62,7 +62,7 @@
 .exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #fafaeb url('../../../images/noise.png?1347221205'); }
+html { background: #fafaea url('../../../images/noise.png?1347221205'); }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
 
@@ -95,7 +95,7 @@ html { background: #fafaeb url('../../../images/noise.png?1347221205'); }
   100% { transform: translateY(0) rotate(6deg); } }
 
 /* ---------------------------------------------------------------------------- once-upon-a-sunday */
-#once-upon-a-sunday { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: #53402d url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat 0 #53402d; position: relative; overflow: hidden; }
+#once-upon-a-sunday { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: #53402c url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat 0 #53402c; position: relative; overflow: hidden; }
 #once-upon-a-sunday.enter-prev { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
 #once-upon-a-sunday.enter-next { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
 #once-upon-a-sunday.exit-prev { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }

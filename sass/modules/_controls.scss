@@ -34,7 +34,7 @@ $control-focus-color  : $white;
 #toggle {
   @extend %control-icon;
   @extend %icon-cog;
-  @include text-shadow(color($darkest,$small) 0 0 3px);
+  @include text-shadow(color($darkest,.75) 0 0 3px);
   @include adjust-leading-to($control-line);
   position: absolute;
   top: 0;
@@ -54,7 +54,7 @@ $control-focus-color  : $white;
   @include clearfix;
   @include stretch-x;
   @include adjust-leading-to($control-line);
-  @include text-shadow(color($darkest,$small) 0 1px 0);
+  @include text-shadow(color($darkest,.75) 0 1px 0);
   padding: 0 rhythm($control-line) 0 0;
   min-width: rhythm($control-line*6);
   background: color($darkest,.75);

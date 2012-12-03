@@ -15,7 +15,7 @@ $bg-details     : rgba($shadow-color,0),
                   rgba($shadow-color,.25),
                   rgba($shadow-color,.75);
 $bg-old         : linear-gradient($bg-angle, $bg-details...) $bg-location;
-$bg-new         : fix-linear($bg-angle, $bg-details...) $bg-location;
+$bg-new         : convert-gradient($bg-angle, $bg-details...) $bg-location;
 
 $puddle-height  : rhythm-image($puddle-far);
 

@@ -7,7 +7,7 @@ $bg           : color($yellow $hint);
 $bg-angle     : 260deg;
 $bg-details   : color($yellow $hint), color($yellow $hint), color($orange $lightest);
 $bg-old       : linear-gradient($bg-angle, $bg-details);
-$bg-new       : fix-linear($bg-angle, $bg-details);
+$bg-new       : convert-gradient($bg-angle, $bg-details);
 
 // ----------------------------------------------------------------------------
 // animation

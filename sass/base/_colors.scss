@@ -28,42 +28,13 @@ $lighter          : 60%;
 $lightest         : 75%;
 $hint             : 90%;
 
-// ----------------------------------------------------------------------------
-// function
-
-@function color($color: $gray, $alpha: 1) {
-  $c    : $gray;
-  $s    : 0%;
-  $l    : 0%;
-
-  @if type-of($color) == 'color' {
-    @return rgba($color,$alpha);
-  } @else {
-    @if type-of($color) == 'number' {
-      $l: $color;
-    }
-    @if length($color) == 3 {
-      $s: nth($color,1);
-      $c: nth($color,2);
-      $l: nth($color,3);
-    }
-    @if length($color) == 2 {
-      @if type-of(nth($color,1)) == 'number' {
-        $s: nth($color,1);
-        $c: nth($color,2);
-      } @else {
-        $c: nth($color,1);
-        $l: nth($color,2);
-      }
-    }
-    @return rgba(scale-color($c, $saturation: $s, $lightness: $l), $alpha);
-  }
-}
+$default-tints    : 45% 70% 90%;
+$default-shades   : 25% 50% 75%;
 
 // ----------------------------------------------------------------------------
 // basic palette
 
-$base   : color($darker);
+$base   : color($gray $darker);
 $alt    : color($pink $dark);
 $accent : color($blue $dark);
 

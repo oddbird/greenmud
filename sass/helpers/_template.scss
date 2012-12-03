@@ -17,7 +17,7 @@ $temp-bg        : color($off $green $hint);
 $temp-angle     : bottom left;
 $temp-details   : color($yellow $hint), color($off $green $hint);
 $temp-old       : linear-gradient($temp-angle, $temp-details);
-$temp-new       : fix-linear($temp-angle, $temp-details);
+$temp-new       : convert-gradient($temp-angle, $temp-details);
 
 $imgs     : 'frontmatter/';
 $burst    : '#{$imgs}burst.png';
@@ -49,7 +49,7 @@ $bgburst  : image-url($burst) no-repeat scroll center rhythm(-2);
 
 %template {
   @include back($bg);
-  @include text-shadow(color($white,$small) 0 1px 1px);
+  @include text-shadow(color($white,.75) 0 1px 1px);
 
   b {
     font-weight: bold;

@@ -9,7 +9,7 @@ $bg-details : color($blue 25%, .5),
               color($pink $lighter, .5) 60%,
               color($pink $lighter, 0);
 $bg-old     : linear-gradient($bg-angle, $bg-details...);
-$bg-new     : fix-linear($bg-angle, $bg-details...);
+$bg-new     : convert-gradient($bg-angle, $bg-details...);
 
 /* ----------------------------------------------------------------------------
    epigraph: amiri baraka */

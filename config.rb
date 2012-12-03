@@ -2,6 +2,7 @@
 
 require 'susy'
 require 'modular-scale'
+require 'accoutrement'
 require 'animate'
 require 'breakpoint'
 # Require any additional compass plugins here.

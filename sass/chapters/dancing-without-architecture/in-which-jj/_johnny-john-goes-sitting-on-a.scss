@@ -15,7 +15,7 @@ $bg-details     : color($black,0),
                   color($grass-color,1) $grass-location + rhythm(2),
                   color($grass-dark,1) $grass-location * 3;
 $bg-old         : linear-gradient($bg-angle, $bg-details...);
-$bg-new         : fix-linear($bg-angle, $bg-details...);
+$bg-new         : convert-gradient($bg-angle, $bg-details...);
 
 $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : 'frontmatter/home/swing.png';

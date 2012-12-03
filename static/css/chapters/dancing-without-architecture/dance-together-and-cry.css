@@ -47,5 +47,5 @@ html { background: #f6eef6 url('../../../images/noise.png?1347221205'); }
 
 /* ---------------------------------------------------------------------------- titlepage */
 #titlepage [role="main"] { text-shadow: rgba(64, 64, 64, 0.5) 0 1px 0; color: #f2f2f2; }
-#titlepage [role="main"]::before { background-color: rgba(45, 83, 83, 0.5); }
-#titlepage [role="main"]::after { background-color: rgba(45, 83, 83, 0.5); }
+#titlepage [role="main"]::before { background-color: rgba(44, 83, 83, 0.5); }
+#titlepage [role="main"]::after { background-color: rgba(44, 83, 83, 0.5); }

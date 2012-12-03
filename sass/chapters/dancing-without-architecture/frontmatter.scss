@@ -16,7 +16,7 @@ $bg         : color($blue $lightest);
 $bg-angle   : 120deg;
 $bg-details : color($blue,.25), color($blue $lighter,0);
 $bg-old     : linear-gradient($bg-angle, $bg-details);
-$bg-new     : fix-linear($bg-angle, $bg-details);
+$bg-new     : convert-gradient($bg-angle, $bg-details);
 
 html {
   @include back($bg);

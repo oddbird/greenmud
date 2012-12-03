@@ -11,8 +11,8 @@ $grid-padding   : $gutter-width;
 
 $grid-background-baseline-height  : $base-line-height;
 
-$grid-background-baseline-color   : color($base,.25);
-$grid-background-column-color     : color($blue $lightest,.25);
+$grid-background-baseline-color   : color($base, .25);
+$grid-background-column-color     : color($blue lightest, .25);
 
 $show-column-grid-backgrounds     : true;
 $show-baseline-grid-backgrounds   : true;

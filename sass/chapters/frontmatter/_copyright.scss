@@ -12,7 +12,7 @@ $shadow         : $shadow-color 1px 1px 0;
 $bg-angle       : top;
 $bg-details     : rgba($highlight,.375), rgba($highlight,0);
 $bg-old         : linear-gradient($bg-angle, $bg-details);
-$bg-new         : fix-linear($bg-angle, $bg-details);
+$bg-new         : convert-gradient($bg-angle, $bg-details);
 
 $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 $scribble-layer : image-url($scribble) no-repeat $scribble-pos;

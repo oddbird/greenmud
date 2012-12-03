@@ -10,7 +10,7 @@ $fg-details       : color($fg-color,0),
                     color($fg-color,.9) 50%,
                     color($fg-color,.9);
 $fg-old           : linear-gradient($fg-angle, $fg-details...);
-$fg-new           : fix-linear($fg-angle, $fg-details...);
+$fg-new           : convert-gradient($fg-angle, $fg-details...);
 
 $pg               : '#{$ch}epigraph/';
 $lightning        : image-url('#{$pg}lightning.png') no-repeat scroll rhythm(-99) rhythm(-99);

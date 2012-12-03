@@ -10,7 +10,7 @@ $title-details      : color($pink $hint),
                       color($off $green $lightest) 50%,
                       color($off $green $lightest);
 $title-old          : linear-gradient($title-angle, $title-details);
-$title-new          : fix-linear($title-angle, $title-details);
+$title-new          : convert-gradient($title-angle, $title-details);
 
 $titleimg           : '#{$img}titlepage/';
 $line               : '#{$titleimg}line.png';

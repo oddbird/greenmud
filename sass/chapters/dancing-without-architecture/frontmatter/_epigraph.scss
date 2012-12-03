@@ -11,7 +11,7 @@ $bg-details : color($orange $lighter, .75),
               color($yellow $lighter, .25) 70%,
               color($yellow $lighter, 0);
 $bg-old     : linear-gradient($bg-angle, $bg-details...);
-$bg-new     : fix-linear($bg-angle, $bg-details...);
+$bg-new     : convert-gradient($bg-angle, $bg-details...);
 
 $pg       : '#{$ch}epigraph/';
 $lennon   : '#{$pg}lennon.png';
