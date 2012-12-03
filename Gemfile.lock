@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: git://github.com/ericam/accoutrement
-  revision: a3efe51299e013fb7520ec618b2da8b9561e6dad
+  revision: 5d066cf5c8c62a4bf83c1999ea71e5e9525bb59a
   branch: master
   specs:
-    accoutrement (0.0.1)
+    accoutrement (0.0.2)
       compass (>= 0.12.2)
 
 GIT

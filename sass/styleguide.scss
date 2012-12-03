@@ -6,21 +6,6 @@
 @import "general/root";
 @import "helpers/helpers";
 
-$dark-text-color: black !default;
-$light-text-color: white !default;
-
-@function text-contrast($bg-color, $dark-text: $dark-text-color, $light-text: $light-text-color) {
-  $color-brightness: round((red($bg-color) * 299) + (green($bg-color) * 587) + (blue($bg-color) * 114) / 1000);
-  $light-text-brightness: round((red($light-text) * 299) + (green($light-text) * 587) + (blue($light-text) * 114) / 1000);
-  $dark-text-brightness: round((red($dark-text) * 299) + (green($dark-text) * 587) + (blue($dark-text) * 114) / 1000);
-
-  @if abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness) {
-    @return $light-text;
-  } @else {
-    @return $dark-text;
-  }
-}
-
 // ----------------------------------------------------------------------------
 // Layout
 
@@ -42,7 +27,7 @@ li {
     &:nth-child(#{$i}) {
       @include background(palette($color));
       @include before("#{nth($rainbow,$i)}");
-      color: text-contrast($color);
+      color: contrast($color);
     }
   }
 }
