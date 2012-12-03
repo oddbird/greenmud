@@ -1130,7 +1130,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
   [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 
 #toc { overflow: hidden; background: rgba(32, 32, 32, 0.75); color: #b9b9b9; font-family: "GreenMudNarrator", serif; -webkit-transition: max-height 600ms ease; -moz-transition: max-height 600ms ease; -o-transition: max-height 600ms ease; transition: max-height 600ms ease; max-height: 0; }
-#toc .wrap { max-width: 33rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; margin-left: 0; }
+#toc .wrap { max-width: 33rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; margin-left: 0; }
 #toc .wrap:after { content: ""; display: table; clear: both; }
 @media (min-width: 50em) { #toc .wrap { margin-left: 2.98438rem; } }
 .active + #toc.active { max-height: 45em; }
@@ -1138,7 +1138,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 /* ---------------------------------------------------------------------------- page */
 .page { min-height: 100%; }
 
-.demo [role="main"] { max-width: 25rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; position: relative; }
+.demo [role="main"] { max-width: 25rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; position: relative; }
 .demo [role="main"]:after { content: ""; display: table; clear: both; }
 
 .prevnext { font-size: 1.875rem; line-height: 1.875rem; opacity: 0; position: absolute; position: fixed; top: 50%; display: block; margin-top: -3.4375rem; padding: 2.5rem 1.25rem; color: rgba(242, 242, 242, 0.75); background: rgba(64, 64, 64, 0.25); z-index: -1; }
