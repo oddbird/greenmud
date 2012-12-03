@@ -9,7 +9,7 @@ var GM = (function (GM, $) {
         // local.js
         GM.toggleControls('#toggle', '.controls');
         GM.toc('a[rel="contents"]', '#toc');
-        GM.bodyHeight('.page', 'min-height');
+        // GM.bodyHeight('.page', 'min-height');
 
         // pageturning.js
         GM.pageTurning();
