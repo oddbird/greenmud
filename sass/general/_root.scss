@@ -18,6 +18,8 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+html, body { height: 100%; }
+
 .jj { font-family: $jj-stack; }
 .susy {
   font-family: $susy-stack;

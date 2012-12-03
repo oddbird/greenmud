@@ -43,6 +43,8 @@ html { font-size: 150%; line-height: 1.25em; }
 
 html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee url('../images/noise.png?1347221205'); font-family: "GreenMudNarrator", serif; color: #404040; overflow-x: hidden; text-rendering: optimizeLegibility; }
 
+html, body { height: 100%; }
+
 .jj { font-family: "GreenMudJJ", sans-serif; }
 
 .susy { font-family: "GreenMudSusy", sans-serif; }
@@ -1134,6 +1136,8 @@ a:hover, a:focus, a:active { color: #0000bf; }
 .active + #toc.active { max-height: 45em; }
 
 /* ---------------------------------------------------------------------------- page */
+.page { min-height: 100%; }
+
 .demo [role="main"] { max-width: 25rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; position: relative; }
 .demo [role="main"]:after { content: ""; display: table; clear: both; }
 
