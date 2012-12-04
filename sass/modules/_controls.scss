@@ -11,12 +11,18 @@ $control-link-color   : color($lightest);
 $control-focus-color  : $white;
 
 %control-icon {
-  @extend %icon-replace;
+  @extend %icon;
+  position: relative;
   width: rhythm($control-line);
+  height: rhythm($control-line);
+  overflow: hidden;
   &:before {
     @include adjust-font-size-to($control-icon,$control-line);
-    right: 0;
+    display: inline-block;
+    width: rhythm($control-line);
+    margin-right: 1em;
     text-align: center;
+    vertical-align: middle;
   }
 }
 
@@ -37,7 +43,6 @@ $control-focus-color  : $white;
   @include text-shadow(color($darkest,.75) 0 0 3px);
   @include adjust-leading-to($control-line);
   position: absolute;
-  top: 0;
   right: 0;
   color: $control-focus-color;
   cursor: pointer;

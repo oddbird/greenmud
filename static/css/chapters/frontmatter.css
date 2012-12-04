@@ -14,7 +14,7 @@
 #home .social a:before, #about .social a:before, #home .inst:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
 
 #home .social a, #about .social a { position: relative; min-width: 1em; text-indent: -9999px; }
-#home .social a:before, #about .social a:before { position: absolute; top: 0; left: 0; text-indent: 0; }
+#home .social a:before, #about .social a:before { position: absolute; top: 0; left: 0; bottom: 0; right: 0; text-indent: 0; }
 
 [data-icon]:before { content: attr(data-icon); }
 
