@@ -4,13 +4,13 @@
 $img                : 'frontmatter/';
 $scribble           : '#{$img}scribble.png';
 
-$title-angle        : 330deg;
+$title-angle        : 120deg;
 $title-details      : color($pink $hint),
                       color($pink $hint) 50%,
                       color($off $green $lightest) 50%,
                       color($off $green $lightest);
-$title-old          : linear-gradient($title-angle, $title-details);
-$title-new          : convert-gradient($title-angle, $title-details);
+$title-old          : convert-gradient($title-angle, $title-details);
+$title-new          : linear-gradient($title-angle, $title-details);
 
 $titleimg           : '#{$img}titlepage/';
 $line               : '#{$titleimg}line.png';
@@ -42,6 +42,10 @@ $string-right-layer : image-url($right) no-repeat scroll $show-right;
 @include keyframes(line) {
   0% { background-position: $show-left, $show-right, $line-start $line-pos; }
   100% { background-position: $show-left, $show-right, $line-end $line-pos; }
+}
+
+@include keyframes(show-strings) {
+
 }
 
 /* ----------------------------------------------------------------------------

@@ -119,7 +119,6 @@ html { background: #eef6ee url('../../images/noise.png?1347221205'); }
 
 /* ---------------------------------------------------------------------------- home page */
 #home [role="main"] { -webkit-transition: width, padding, margin 300ms; -moz-transition: width, padding, margin 300ms; -o-transition: width, padding, margin 300ms; transition: width, padding, margin 300ms; background: url('../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 0 -391px, url('../../images/frontmatter/scribble.png?1347221205') no-repeat scroll right 31.25rem; }
-#home.exit-prev [role="main"], #home.exit-next [role="main"] { -webkit-transition: background 300ms; -moz-transition: background 300ms; -o-transition: background 300ms; transition: background 300ms; -webkit-animation: fadeOutUp 300ms forwards; -moz-animation: fadeOutUp 300ms forwards; -o-animation: fadeOutUp 300ms forwards; animation: fadeOutUp 300ms forwards; }
 #home .intro, #home .instructions { overflow: hidden; font-size: 0.79167rem; line-height: 1.25rem; }
 #home .intro { -webkit-animation: fadeInDown 1s 0.5s 1 ease backwards; -moz-animation: fadeInDown 1s 0.5s 1 ease backwards; -o-animation: fadeInDown 1s 0.5s 1 ease backwards; animation: fadeInDown 1s 0.5s 1 ease backwards; }
 #home .instructions { -webkit-animation: fadeIn 1s 2s 1 ease backwards, shake 0.75s 2s 1 linear; -moz-animation: fadeIn 1s 2s 1 ease backwards, shake 0.75s 2s 1 linear; -o-animation: fadeIn 1s 2s 1 ease backwards, shake 0.75s 2s 1 linear; animation: fadeIn 1s 2s 1 ease backwards, shake 0.75s 2s 1 linear; }
@@ -132,8 +131,10 @@ html { background: #eef6ee url('../../images/noise.png?1347221205'); }
   #home [role="main"] { padding-top: 2.5rem; -webkit-animation: show-swing 1s 2s 1 ease both; -moz-animation: show-swing 1s 2s 1 ease both; -o-animation: show-swing 1s 2s 1 ease both; animation: show-swing 1s 2s 1 ease both; }
   #home .intro, #home .instructions { padding-left: 20.51282%; padding-right: 20.51282%; font-size: 1rem; line-height: 1.25rem; clear: both; }
   #home .instructions { -webkit-animation-delay: 3.5s; -moz-animation-delay: 3.5s; -o-animation-delay: 3.5s; animation-delay: 3.5s; } }
-
-.warning { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border-width: 0.08333rem; border-style: solid; padding: 0.54167rem; background: #ffbfbf; }
+#home.exit-prev [role="banner"], #home.exit-next [role="banner"] { -webkit-animation: none; -moz-animation: none; -o-animation: none; animation: none; }
+#home.exit-prev [role="main"], #home.exit-next [role="main"] { -webkit-transition: background 300ms; -moz-transition: background 300ms; -o-transition: background 300ms; transition: background 300ms; -webkit-animation: fadeOutUp 300ms forwards; -moz-animation: fadeOutUp 300ms forwards; -o-animation: fadeOutUp 300ms forwards; animation: fadeOutUp 300ms forwards; }
+#home.enter-prev [role="main"] { -webkit-animation: fadeInDown 300ms; -moz-animation: fadeInDown 300ms; -o-animation: fadeInDown 300ms; animation: fadeInDown 300ms; background-position: 1rem -5rem, right 11.25rem; }
+#home.enter-prev [role="banner"], #home.enter-prev .intro, #home.enter-prev .instructions { -webkit-animation: none; -moz-animation: none; -o-animation: none; animation: none; }
 
 @-moz-keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
   100% { background-position: left top, right top, 0 48%; } }
@@ -147,6 +148,10 @@ html { background: #eef6ee url('../../images/noise.png?1347221205'); }
 @keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
   100% { background-position: left top, right top, 0 48%; } }
 
+@-moz-keyframes show-strings {}
+@-webkit-keyframes show-strings {}
+@-o-keyframes show-strings {}
+@keyframes show-strings {}
 /* ---------------------------------------------------------------------------- title: Into the Green Green Mud */
 #title { background: #d5e9d5 url('../../images/noise.png?1347221205'); background: url('../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat 0, linear-gradient(120deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; }
 .no-cssgradients #title { background: url('../../images/noise.png?1347221205') repeat 0, url('../../images/frontmatter/titlepage/angle.svg?1347221205') no-repeat scroll center, #d5e9d5; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; }

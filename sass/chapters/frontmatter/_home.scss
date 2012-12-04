@@ -36,13 +36,6 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     background: $swing-layer, $scribble-layer;
   }
 
-  @include exit {
-    [role="main"] {
-      @include transition(background 300ms);
-      @include animation(fadeOutUp 300ms forwards);
-    }
-  }
-
   // --------------------------------------------------------------------------
   // elements
 
@@ -88,13 +81,23 @@ $scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
     }
     .instructions { @include animation-delay(3.5s); }
   }
-}
 
-// ----------------------------------------------------------------------------
-// browser support warning
+  // --------------------------------------------------------------------------
+  // pageturns
 
-.warning {
-  @include border-radius;
-  @include rhythm-borders(2px,.5);
-  background: color($red $lightest);
+  @include exit {
+    [role="banner"] { @include animation(none); }
+    [role="main"] {
+      @include transition(background 300ms);
+      @include animation(fadeOutUp 300ms forwards);
+    }
+  }
+
+  @include enter-prev {
+    [role="main"] {
+      @include animation(fadeInDown 300ms);
+      background-position: $swing-pos, $scribble-pos;
+    }
+    [role="banner"], .intro, .instructions { @include animation(none); }
+  }
 }
