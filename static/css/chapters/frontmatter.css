@@ -61,7 +61,7 @@
 #home b, #about b { font-weight: bold; white-space: nowrap; color: #404040; }
 #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; }
 #home .site-title:after, #about .site-title:after, #home [role="main"]:after, #about [role="main"]:after, #home .footer:after, #about .footer:after { content: ""; display: table; clear: both; }
-@media (min-width: 58.5em) { #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 39rem; } }
+@media (min-width: 45em) { #home .site-title, #about .site-title, #home [role="main"], #about [role="main"], #home .footer, #about .footer { max-width: 39rem; } }
 #home [role="banner"], #about [role="banner"] { padding-top: 0.9375rem; border-bottom-width: 0.08333rem; border-bottom-style: solid; padding-bottom: 0.85417rem; color: #404040; background: #ffe5ff url('../../images/noise.png?1347221205'); background: url('../../images/frontmatter/burst.png?1347221205') no-repeat scroll center -2.5rem, #ffe5ff url('../../images/noise.png?1347221205'); border-color: #404040; }
 #home [role="banner"] h1, #about [role="banner"] h1 { font-size: 1.58333rem; line-height: 1.875rem; font-weight: bold; }
 #home [role="banner"] a:link, #about [role="banner"] a:link, #home [role="banner"] a:visited, #about [role="banner"] a:visited { -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; display: inline-block; color: #404040; }
@@ -78,7 +78,7 @@
 #home .social li, #about .social li { display: inline-block; }
 #home .social a:link, #about .social a:link, #home .social a:visited, #about .social a:visited { color: rgba(96, 96, 96, 0.5); }
 #home .social a:hover, #about .social a:hover, #home .social a:focus, #about .social a:focus, #home .social a:active, #about .social a:active { color: #404040; }
-@media (min-width: 58.5em) { #home .license, #about .license, #home .social, #about .social { width: 48.71795%; float: left; margin-right: 2.5641%; }
+@media (min-width: 45em) { #home .license, #about .license, #home .social, #about .social { width: 48.71795%; float: left; margin-right: 2.5641%; }
   #home .social, #about .social { float: right; margin-right: 0; text-align: right; }
   #home .social a, #about .social a { text-align: left; } }
 
@@ -127,7 +127,7 @@ html { background: #eef6ee url('../../images/noise.png?1347221205'); }
 #home .inst p, #home .inst:before { display: table-cell; vertical-align: middle; }
 #home .inst:before { font-size: 2.25rem; line-height: 2.5rem; }
 #home .inst p { padding-left: .4em; }
-@media (min-width: 58.5em) { #home [role="banner"] { -webkit-animation: template-burst 6s ease backwards; -moz-animation: template-burst 6s ease backwards; -o-animation: template-burst 6s ease backwards; animation: template-burst 6s ease backwards; }
+@media (min-width: 45em) { #home [role="banner"] { -webkit-animation: template-burst 6s ease backwards; -moz-animation: template-burst 6s ease backwards; -o-animation: template-burst 6s ease backwards; animation: template-burst 6s ease backwards; }
   #home [role="main"] { padding-top: 2.5rem; -webkit-animation: show-swing 1s 2s 1 ease both; -moz-animation: show-swing 1s 2s 1 ease both; -o-animation: show-swing 1s 2s 1 ease both; animation: show-swing 1s 2s 1 ease both; }
   #home .intro, #home .instructions { padding-left: 20.51282%; padding-right: 20.51282%; font-size: 1rem; line-height: 1.25rem; clear: both; }
   #home .instructions { -webkit-animation-delay: 3.5s; -moz-animation-delay: 3.5s; -o-animation-delay: 3.5s; animation-delay: 3.5s; } }
@@ -299,7 +299,7 @@ html { background: #eef6ee url('../../images/noise.png?1347221205'); }
 #about .vcard :first-line { font-weight: bold; }
 #about .fn { font-size: 1rem; line-height: 1.25rem; text-transform: uppercase; }
 #about .eric { padding-top: 8.75rem; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
-@media (min-width: 58.5em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5rem; padding-bottom: 2.5rem; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }
+@media (min-width: 45em) { #about .eric { padding-left: 30.76923%; padding-right: 10.25641%; padding-top: 2.5rem; padding-bottom: 2.5rem; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll top left; }
   #about .oddbird, #about .teacup { width: 48.71795%; float: left; margin-right: 2.5641%; }
   #about .teacup { float: right; margin-right: 0; } }
 
