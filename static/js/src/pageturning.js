@@ -185,9 +185,6 @@ var GM = (function (GM, $) {
                         // Store the prev and next page-nav
                         dataContent.data('pagenav', dataControls);
 
-                        // Set min-height of new page to be window height
-                        // dataContent.css('min-height', $(window).height());
-
                         // Store the content as a data-attr on 'body'
                         body.data(id, dataContent);
                     },
