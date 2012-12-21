@@ -156,7 +156,7 @@ html { background: #eef6ee; }
 #thanks [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; }
 #thanks [role="main"]:after { content: ""; display: table; clear: both; }
 #thanks [role="main"] div { margin-bottom: 1.25rem; }
-#thanks h1 { font-size: 1.58333rem; line-height: 1.875rem; }
+#thanks h1 { font-size: 1.95833rem; line-height: 2.5rem; }
 #thanks p, #thanks ul { font-size: 0.79167rem; line-height: 1.25rem; }
 #thanks ul { list-style-type: none; }
 #thanks ul, #thanks ul li { margin: 0px; padding: 0px; display: inline; }

@@ -8,12 +8,12 @@ $ratio: major-third() fifth();
 // Variants
 
 $normpx       : $base-size;
-$medpx        : ms(1);
 $smallpx      : ms(-1);
 $xsmallpx     : ms(-2);
 $xxsmallpx    : ms(-3);
 $xxxsmallpx   : ms(-4);
+$medpx        : ms(1);
 $largepx      : ms(2);
-$xlargepx     : ms(3);
-$xxlargepx    : ms(5);
+$xlargepx     : ms(4);
+$xxlargepx    : ms(6);
 $xxxlargepx   : ms(8);

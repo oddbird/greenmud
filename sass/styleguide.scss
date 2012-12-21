@@ -7,27 +7,162 @@
 @import "general/root";
 
 // ----------------------------------------------------------------------------
+// Settings
+
+$colors: $gray $red $orange $yellow $green $cyan $blue $pink;
+$color-names: gray red orange yellow green cyan blue pink;
+
+$scale: $xxsmallpx $xsmallpx $smallpx $normpx $medpx $largepx $xlargepx $xxlargepx;
+
+@include tabs(narrator-regular narrator-bold, '.tabs' null);
+@include tabs(jj-regular jj-bold jj-italic, '.tabs' null);
+@include tabs(susy-regular susy-bold susy-smallcaps susy-sc-bold, '.tabs' null);
+
+// ----------------------------------------------------------------------------
 // Layout
 
-$total-columns: 8;
+$total-columns: 6;
+$default-border-radius: .25em;
 
-body {
-  @include container;
-  @include rhythm-padding;
+html { @include back(color(lightest)); }
+body { @include container; }
+
+[role="banner"], [role="contentinfo"] {
+  @include adjust-font-size-to($xsmallpx);
+  @include trailer;
+  clear: both;
 }
 
-$colors: $red $orange $yellow $green $cyan $blue $pink;
+[role="banner"] {
+  @include padding-leader(.5);
+  h1, h2 { display: inline; }
+}
 
-li {
-  @include rhythm-margins(.5);
-  padding: rhythm(1);
+[role="contentinfo"] { @include leader; }
+
+[role="main"] {
+  h2 {
+    @include rhythm-margins;
+    @include bleed;
+    @include border-radius;
+    background: color(darker);
+    color: color(lightest);
+    clear: both;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Tabs
+
+%hide-tab-content { display: none; }
+%show-tab-content { display: block; }
+
+.tabs {
+  @include leader(-1);
+  @include trailer;
+  text-align: right;
+}
+.tab {
+  @include adjust-font-size-to($smallpx);
+  @include border-bottom-radius;
+  display: inline-block;
+  min-width: columns(1);
+  padding: rhythm(.25);
+  background: color(lighter);
   text-align: center;
-  @each $color in $colors {
-    $i: index($colors, $color);
-    &:nth-child(#{$i}) {
-      @include background(palette($color));
-      @include before("#{nth($rainbow,$i)}");
-      color: contrast($color);
+  cursor: pointer;
+  &[for*="bold"] { font-weight: bold; }
+  &[for*="italic"] { font-style: italic; }
+  &[for*="smallcaps"] { font-family: $susy-smallcaps; }
+}
+
+%active-tab-title {
+  background: color(darker);
+  color: color(lightest);
+}
+
+// ----------------------------------------------------------------------------
+// Colors
+
+// @function match-brightness($colors, $adjust: light) {
+//   $bright: compact();
+//   $new-colors: compact();
+//   @each $color in $colors { $bright: join($bright, brightness($color)); }
+//   @if $adjust == dark {
+//     $bright: min($bright);
+//   }
+
+
+//   @return $bright;
+// }
+
+// @debug match-brightness($colors);
+
+.colors {
+  @include adjust-font-size-to($xsmallpx);
+  text-transform: uppercase;
+
+  li {
+    @include rhythm-borders(3px,.25);
+    display: none;
+    text-align: center;
+    @each $color in $colors {
+      $i: index($colors, $color);
+      &:nth-child(#{$i}) {
+        @include background(palette($color));
+        @include before("#{nth($color-names,$i)}");
+        display: block;
+        color: contrast($color);
+        border-color: $color;
+      }
     }
   }
 }
+
+// ----------------------------------------------------------------------------
+// Scale
+
+.scale {
+  @include baseline-grid-background;
+  @include rhythm(-1,1,.5,0);
+  &[class*="bold"] { font-weight: bold; }
+  &[class*="italic"] { font-style: italic; }
+  &[class*="smallcaps"] { font-family: $susy-smallcaps; }
+
+  li {
+    display: none;
+    position: relative;
+
+    &:after {
+      @include ellipsis;
+      content: "The quick brown fox jumps over the lazy god.";
+      display: block;
+      width: 100%;
+    }
+    &:before {
+      @include adjust-font-size-to($smallpx);
+      position: absolute;
+      right: 100%;
+      margin-right: .5rem;
+    }
+    &:hover {
+      background: color(lighter,.5);
+      &:after { text-transform: uppercase; }
+    }
+
+    @each $size in $scale {
+      $i      : index($scale, $size);
+      $this   : nth($scale,$i);
+
+      &:nth-child(#{$i}) {
+        @include adjust-font-size-to($this);
+        display: block;
+        &:before { content: "#{$this}"; }
+      }
+    }
+  }
+}
+
+
+
+
