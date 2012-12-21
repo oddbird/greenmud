@@ -37,10 +37,3 @@ $default-shades   : 25% 50% 75%;
 $base   : color($gray $darker);
 $alt    : color($pink $dark);
 $accent : color($blue $dark);
-
-// ----------------------------------------------------------------------------
-// background
-
-@mixin back($bg: color($off $green $hint)) {
-  background: $bg image-url('noise.png');
-}

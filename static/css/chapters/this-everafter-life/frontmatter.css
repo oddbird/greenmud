@@ -3,18 +3,6 @@
 
 [data-icon]:before { content: attr(data-icon); }
 
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
 #titlepage [role="main"] { padding-top: 3.75rem; padding-bottom: 1.25rem; text-align: center; text-transform: uppercase; color: #404040; }
 @media (min-height: 18.75em) { #titlepage [role="main"] { padding-top: 7.5rem; padding-bottom: 1; } }
 #titlepage h1 { font-size: 1.5rem; line-height: 1.875rem; }

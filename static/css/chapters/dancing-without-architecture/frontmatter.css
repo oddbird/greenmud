@@ -6,18 +6,6 @@
 #epigraph p { font-size: 0.79167rem; line-height: 1.25rem; }
 @media (min-width: 35em) { #epigraph p { font-size: inherit; line-height: inherit; } }
 
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
 #titlepage [role="main"] { padding-top: 3.75rem; padding-bottom: 1.25rem; text-align: center; text-transform: uppercase; color: #404040; }
 @media (min-height: 18.75em) { #titlepage [role="main"] { padding-top: 7.5rem; padding-bottom: 1; } }
 #titlepage h1 { font-size: 1.5rem; line-height: 1.875rem; }
@@ -33,7 +21,7 @@
 .exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #bfbfff url('../../../images/noise.png?1347221205'); background: url('../../../images/noise.png?1347221205') repeat 0, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat 0, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1347221205') repeat 0, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
+html { background: #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
 

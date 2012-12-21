@@ -1,103 +1,35 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns    : 6;
-$minor-break      : 24em;
-
 $pg               : '#{$ch}home/';
 $swing            : '#{$pg}swing.png';
 $scribble         : '#{$ch}scribble.png';
 
-$swing-hide       : 0 0 - image-height($swing);
-$swing-pos        : $grid-padding rhythm(-4);
-$swing-layer      : image-url($swing) no-repeat scroll $swing-hide;
+$hide-swing       : - image-height($swing);
+$show-swing       : rhythm(-4);
 
-$scribble-hide    : right rhythm(25);
-$scribble-pos     : right rhythm(9);
-$scribble-layer   : image-url($scribble) no-repeat scroll $scribble-hide;
-
-// ----------------------------------------------------------------------------
-// animation
-
-@include keyframes(show-swing) {
-  0% { background-position: $swing-hide, $scribble-hide; }
-  50% { background-position: $swing-pos, $scribble-hide; }
-  100% { background-position: $swing-pos, $scribble-pos; }
-}
+$total-columns    : 10;
+$break            : 35em;
 
 /* ----------------------------------------------------------------------------
-   home page */
+   home */
 
 #home {
-  @extend %template;
+  @extend %type;
+  @include container;
+  @include transition(padding 300ms);
+  background: image-url($swing) no-repeat scroll $grid-padding $hide-swing;
 
-  [role="main"] {
-    @include transition(width, padding, margin 300ms);
-    background: $swing-layer, $scribble-layer;
+  @include breakpoint($break) { @include pad(2,2); }
+  @include at-breakpoint($total-columns) {
+    background-position: $grid-padding $show-swing;
   }
 
-  // --------------------------------------------------------------------------
-  // elements
 
-  .intro, .instructions {
-    @include clearfix;
-    @include adjust-font-size-to($smallpx);
-  }
-  .intro {
-    @extend %type;
-    @include animation(fadeInDown 1s .5s 1 ease backwards);
-  }
-  .instructions {
-    @include animation(fadeIn 1s 2s 1 ease backwards, shake .75s 2s 1 linear);
-  }
+  .byline { display: none; }
 
-  .inst {
-    @extend %icon;
-    @include trailer(.5);
-    @include pie-clearfix;
-    display: table;
-    &.turn { @extend %icon-swipe; }
-    p, &:before {
-      display: table-cell;
-      vertical-align: middle;
-    }
-    &:before { @include adjust-font-size-to($xxlargepx); }
-    p { padding-left: .4em; }
-  }
-
-  // --------------------------------------------------------------------------
-  // breakpoints
-
-  @include at-breakpoint($template-break) {
-    [role="banner"] { @include animation(template-burst 6s ease backwards); }
-    [role="main"] {
-      @include padding-leader(2);
-      @include animation(show-swing 1s 2s 1 ease both);
-    }
-    .intro, .instructions {
-      @include pad(2,2);
-      @include adjust-font-size-to($normpx);
-      clear: both;
-    }
-    .instructions { @include animation-delay(3.5s); }
-  }
-
-  // --------------------------------------------------------------------------
-  // pageturns
-
-  @include exit {
-    [role="banner"] { @include animation(none); }
-    [role="main"] {
-      @include transition(background 300ms);
-      @include animation(fadeOutUp 300ms forwards);
-    }
-  }
-
-  @include enter-prev {
-    [role="main"] {
-      @include animation(fadeInDown 300ms);
-      background-position: $swing-pos, $scribble-pos;
-    }
-    [role="banner"], .intro, .instructions { @include animation(none); }
+  &[data-page-state="2"] {
+    .byline { display: block; }
+    .intro, .instructions, [role="contentinfo"] { display: none; }
   }
 }

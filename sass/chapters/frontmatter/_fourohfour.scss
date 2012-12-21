@@ -1,68 +1,7 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns: 6;
-$break        : 8;
-
-$bgcolor    : color($yellow $lighter);
-$bggrad     : radial-gradient(25% top, circle,
-                $yellow,
-                $yellow           25%,
-                color($yellow,0)   45%,
-                color($yellow,0)   75%,
-                $orange
-              );
 
 /* ----------------------------------------------------------------------------
    404 */
 
-#fourohfour {
-  @include background($bgcolor $noise-layer);
-  @include background($noise-layer, $bggrad, $bgcolor);
-
-  [role="main"] {
-    @extend %transition-main;
-    @include container($total-columns, $break);
-    @include rhythm-padding(2,2);
-    @include background($swing-layer);
-  }
-
-  // --------------------------------------------------------------------------
-  // elements
-
-  h1 {
-    @extend %transition;
-    @include trailer;
-    text-transform: uppercase;
-    font-weight: bold;
-    @include breakpoint(35em) {
-      @include adjust-font-size-to($largepx);
-      @include trailer;
-      a::after {
-        @include animation(fadeIn 2s ease both infinite alternate);
-        content: " »";
-      }
-    }
-  }
-  blockquote {
-    @extend %shrink;
-    @extend %transition;
-    font-style: italic;
-  }
-  p { @include trailer; }
-  a {
-    #{$link} {
-      @include transition(color 900ms);
-      color: color($green $dark);
-    }
-    #{$focus} { color: $pink; }
-  }
-
-  // --------------------------------------------------------------------------
-  // breakpoint
-
-  @include at-breakpoint($break) {
-    [role="main"] { background-position: $swing-pos; }
-    h1, p { @include pre(2); }
-  }
-}

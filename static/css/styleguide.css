@@ -15,6 +15,11 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
+/* ---------------------------------------------------------------------------- helpers */
+[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+
+[data-icon]:before { content: attr(data-icon); }
+
 /* ---------------------------------------------------------------------------- fonts */
 @font-face { font-family: "IcoMoon"; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format('eot'), url('../fonts/icomoon/IcoMoon.woff') format('woff'), url('../fonts/icomoon/IcoMoon.ttf') format('truetype'), url('../fonts/icomoon/IcoMoon.svg#IcoMoon') format('svg'); font-weight: normal; font-style: normal; }
 
@@ -41,7 +46,7 @@ html { font-size: 150%; line-height: 1.25em; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee url('../images/noise.png?1347221205'); font-family: "GreenMudNarrator", serif; color: #404040; overflow-x: hidden; text-rendering: optimizeLegibility; }
+html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee; font-family: "GreenMudNarrator", serif; color: #404040; overflow-x: hidden; text-rendering: optimizeLegibility; }
 
 html, body { height: 100%; }
 
@@ -54,23 +59,6 @@ html, body { height: 100%; }
 
 a:link, a:visited { text-decoration: none; color: #bf00bf; }
 a:hover, a:focus, a:active { color: #0000bf; }
-
-/* ---------------------------------------------------------------------------- helpers */
-[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
-
-[data-icon]:before { content: attr(data-icon); }
-
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
 
 body { max-width: 33rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 1.25rem; padding-bottom: 1.25rem; }
 body:after { content: ""; display: table; clear: both; }

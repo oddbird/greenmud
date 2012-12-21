@@ -9,7 +9,6 @@ $eric     : '#{$pg}eric.png';
    about */
 
 #about {
-  @extend %template;
 
   // --------------------------------------------------------------------------
   // elements
@@ -31,14 +30,14 @@ $eric     : '#{$pg}eric.png';
   // --------------------------------------------------------------------------
   // breakpoints
 
-  @include at-breakpoint($template-break) {
-    .eric {
-      @include pad(3,1);
-      @include padding-leader(2);
-      @include padding-trailer(2);
-      background: image-url($eric) no-repeat scroll top left;
-    }
-    .oddbird, .teacup { @include span-columns(5); }
-    .teacup { @include omega; }
-  }
+  // @include at-breakpoint($template-break) {
+  //   .eric {
+  //     @include pad(3,1);
+  //     @include padding-leader(2);
+  //     @include padding-trailer(2);
+  //     background: image-url($eric) no-repeat scroll top left;
+  //   }
+  //   .oddbird, .teacup { @include span-columns(5); }
+  //   .teacup { @include omega; }
+  // }
 }
