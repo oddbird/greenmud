@@ -12,7 +12,7 @@
 $colors: $gray $red $orange $yellow $green $cyan $blue $pink;
 $color-names: gray red orange yellow green cyan blue pink;
 
-$scale: $xxsmallpx $xsmallpx $smallpx $normpx $medpx $largepx $xlargepx $xxlargepx;
+$scale: $xxxsmallpx $xxsmallpx $xsmallpx $smallpx $normpx $medpx $largepx $xlargepx $xxlargepx;
 
 @include tabs(narrator-regular narrator-bold, '.tabs' null);
 @include tabs(jj-regular jj-bold jj-italic, '.tabs' null);
@@ -84,20 +84,6 @@ body { @include container; }
 // ----------------------------------------------------------------------------
 // Colors
 
-// @function match-brightness($colors, $adjust: light) {
-//   $bright: compact();
-//   $new-colors: compact();
-//   @each $color in $colors { $bright: join($bright, brightness($color)); }
-//   @if $adjust == dark {
-//     $bright: min($bright);
-//   }
-
-
-//   @return $bright;
-// }
-
-// @debug match-brightness($colors);
-
 .colors {
   @include adjust-font-size-to($xsmallpx);
   text-transform: uppercase;
@@ -156,6 +142,9 @@ body { @include container; }
 
       &:nth-child(#{$i}) {
         @include adjust-font-size-to($this);
+        @if round(lines-for-font-size($this)) != lines-for-font-size($this) {
+          @include trailer(.5);
+        }
         display: block;
         &:before { content: "#{$this}"; }
       }

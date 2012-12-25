@@ -117,19 +117,21 @@ body:after { content: ""; display: table; clear: both; }
 .scale li:before { font-size: 0.79167rem; line-height: 1.25rem; position: absolute; right: 100%; margin-right: .5rem; }
 .scale li:hover { background: rgba(216, 216, 216, 0.5); }
 .scale li:hover:after { text-transform: uppercase; }
-.scale li:nth-child(1) { font-size: 0.625rem; line-height: 1.25rem; display: block; }
-.scale li:nth-child(1):before { content: "15px"; }
-.scale li:nth-child(2) { font-size: 0.66667rem; line-height: 1.25rem; display: block; }
-.scale li:nth-child(2):before { content: "16px"; }
-.scale li:nth-child(3) { font-size: 0.79167rem; line-height: 1.25rem; display: block; }
-.scale li:nth-child(3):before { content: "19px"; }
-.scale li:nth-child(4) { font-size: 1rem; line-height: 1.25rem; display: block; }
-.scale li:nth-child(4):before { content: "24px"; }
-.scale li:nth-child(5) { font-size: 1.25rem; line-height: 1.875rem; display: block; }
-.scale li:nth-child(5):before { content: "30px"; }
-.scale li:nth-child(6) { font-size: 1.5rem; line-height: 1.875rem; display: block; }
-.scale li:nth-child(6):before { content: "36px"; }
-.scale li:nth-child(7) { font-size: 1.95833rem; line-height: 2.5rem; display: block; }
-.scale li:nth-child(7):before { content: "47px"; }
-.scale li:nth-child(8) { font-size: 2.45833rem; line-height: 3.125rem; display: block; }
-.scale li:nth-child(8):before { content: "59px"; }
+.scale li:nth-child(1) { font-size: 0.5rem; line-height: 1.25rem; display: block; }
+.scale li:nth-child(1):before { content: "12px"; }
+.scale li:nth-child(2) { font-size: 0.625rem; line-height: 1.25rem; display: block; }
+.scale li:nth-child(2):before { content: "15px"; }
+.scale li:nth-child(3) { font-size: 0.66667rem; line-height: 1.25rem; display: block; }
+.scale li:nth-child(3):before { content: "16px"; }
+.scale li:nth-child(4) { font-size: 0.79167rem; line-height: 1.25rem; display: block; }
+.scale li:nth-child(4):before { content: "19px"; }
+.scale li:nth-child(5) { font-size: 1rem; line-height: 1.25rem; display: block; }
+.scale li:nth-child(5):before { content: "24px"; }
+.scale li:nth-child(6) { font-size: 1.25rem; line-height: 1.875rem; margin-bottom: 0.625rem; display: block; }
+.scale li:nth-child(6):before { content: "30px"; }
+.scale li:nth-child(7) { font-size: 1.5rem; line-height: 1.875rem; margin-bottom: 0.625rem; display: block; }
+.scale li:nth-child(7):before { content: "36px"; }
+.scale li:nth-child(8) { font-size: 1.95833rem; line-height: 2.5rem; display: block; }
+.scale li:nth-child(8):before { content: "47px"; }
+.scale li:nth-child(9) { font-size: 2.45833rem; line-height: 3.125rem; margin-bottom: 0.625rem; display: block; }
+.scale li:nth-child(9):before { content: "59px"; }
