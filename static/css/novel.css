@@ -24,9 +24,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 [rel="prev"]:before, .swiping-prev .prevnext:before { content: "\2190"; }
 
-#toggle:before { content: "\2731"; }
+#toggle:before, .help-pageturn .gear:before { content: "\2731"; }
 
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .prevnext:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+.help-pageturn:before { content: "\e005"; }
+
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before, .prevnext:before, .extra-help i:before, .help-pageturn:before, [data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -1140,6 +1142,18 @@ a:hover, a:focus, a:active { color: #0000bf; }
 .exit-prev, .exit-next { -webkit-animation-duration: 200ms; -moz-animation-duration: 200ms; -o-animation-duration: 200ms; animation-duration: 200ms; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; -o-animation-fill-mode: forwards; animation-fill-mode: forwards; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
+
+/* ---------------------------------------------------------------------------- instructions */
+.instructions { display: none; font-size: 1.25rem; line-height: 1.875rem; text-shadow: black 0 1px 0; position: absolute; left: 0; right: 0; padding-bottom: 1.25rem; top: 3.75rem; max-width: 30rem; margin: 0 auto; color: #f2f2f2; text-align: center; z-index: 500; }
+.instructions b { text-transform: uppercase; font-weight: bold; }
+.instructions:before { position: absolute; top: 0; bottom: 0; left: 0; right: 0; position: fixed; content: " "; background: rgba(32, 32, 32, 0.9); z-index: -1; }
+
+.extra-help { font-size: 0.79167rem; line-height: 1.25rem; display: block; color: gray; }
+.extra-help i { text-transform: uppercase; }
+.extra-help i:before { font-size: 0.66667rem; line-height: 1.25rem; margin-right: .4em; }
+
+.help-pageturn:before { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; font-size: 3.375rem; line-height: 3.75rem; display: block; }
+@media (min-width: 30em) { .help-pageturn:before { font-size: 6.75rem; line-height: 7.5rem; } }
 
 /* ---------------------------------------------------------------------------- browser warning */
 .warning { display: none; padding: 1.5em; background: #ffb2b2; border: 3px solid red; font-family: helvetica, arial, sans-serif; }

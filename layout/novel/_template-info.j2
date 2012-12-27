@@ -1,10 +1,6 @@
 <footer role="contentinfo">
 <div class="footer">
   {% filter typogrify %}
-  <p class="license">
-    <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">Copyright ©</a>
-    2006-2012 <a href="{{ resource.meta.root_url }}about.html" class="author">{{ resource.meta.author }}</a>
-  </p>
   <ul class="social">
     <li><a title="blog" href="http://eric.andmeyer.com/">blog</a></li>
     <li><a title="twitter" href="http://twitter.com/eriiicam/">twitter</a></li>
@@ -12,6 +8,10 @@
     <li><a title="video" href="http://vimeo.com/album/1858141/">video</a></li>
     <li><a title="code on github" href="http://github.com/oddbird/greenmud/">github</a></li>
   </ul>
+  <p class="license">
+    <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">Copyright ©</a>
+    2006-2012 <a href="{{ resource.meta.root_url }}about.html" class="author">{{ resource.meta.author }}</a>
+  </p>
   {% endfilter %}
 </div>
 </footer>

@@ -1,28 +1,37 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$img                : 'frontmatter/';
-$scribble           : '#{$img}scribble.png';
+$pg                 : '#{$ch}titlepage/';
 
-$title-angle        : 120deg;
-$title-details      : color($pink $hint),
-                      color($pink $hint) 50%,
-                      color($off $green $lightest) 50%,
-                      color($off $green $lightest);
-$title-old          : convert-gradient($title-angle, $title-details);
-$title-new          : linear-gradient($title-angle, $title-details);
+// ----------------------------------------------------------------------------
+// images
 
-$titleimg           : '#{$img}titlepage/';
-$line               : '#{$titleimg}line.png';
-$left               : '#{$titleimg}strings_left.png';
-$right              : '#{$titleimg}strings_right.png';
-$angle              : '#{$titleimg}angle.svg';
+$scribble           : '#{$ch}scribble.png';
+$line               : '#{$pg}line.png';
+$left               : '#{$pg}strings_left.png';
+$right              : '#{$pg}strings_right.png';
 
-$angle-layer        : image-url($angle) no-repeat scroll center;
+// ----------------------------------------------------------------------------
+// background
 
-$bg                 : color($off $green $lightest);
-$line-pos           : 48%;
+$bg                 : color($pink $hint);
+
+$bg-angle           : 120deg;
+$bg-details         : color($off $green lightest, 0) 50%,
+                      color($off $green lightest) 50%;
+$bg-old             : convert-gradient($bg-angle, $bg-details);
+$bg-grad            : linear-gradient($bg-angle, $bg-details);
+
+$grad-hide          : 9999px 0;
 $grad-pos           : center;
+
+$bg-layer-old       : $bg $bg-old no-repeat $grad-pos;
+$bg-layer           : $bg $bg-grad no-repeat $grad-pos;
+
+// ----------------------------------------------------------------------------
+// line
+
+$line-pos           : 48%;
 $line-break         : 53em;
 
 $line-start         : image-width($line);
@@ -30,83 +39,24 @@ $line-end           : 0;
 
 $line-layer         : image-url($line) repeat-x scroll $line-start $line-pos;
 
-$string-pos         : top;
-$show-left          : left $string-pos;
-$show-right         : right $string-pos;
-$string-left-layer  : image-url($left) no-repeat scroll $show-left;
-$string-right-layer : image-url($right) no-repeat scroll $show-right;
-
 // ----------------------------------------------------------------------------
 // animations
 
-@include keyframes(line) {
-  0% { background-position: $show-left, $show-right, $line-start $line-pos; }
-  100% { background-position: $show-left, $show-right, $line-end $line-pos; }
-}
-
-@include keyframes(show-strings) {
-
+@include keyframes(gradientIn) {
+  0% { background-position: center, $grad-hide; }
+  100% { background-position: center, $grad-pos; }
 }
 
 /* ----------------------------------------------------------------------------
    title: Into the Green Green Mud */
 
 #title {
-  @extend %transition;
-  @include back($bg);
-  @include background($noise-layer, $title-old, $bg);
-  background: $noise-layer, $title-new, $bg;
+  @include background($noise-layer, $bg-layer-old);
+  background: $noise-layer, $bg-layer;
 
-  .no-cssgradients & {
-    @include background($noise-layer, $angle-layer, $bg);
-    @include background-size(auto, cover);
-  }
 
   // --------------------------------------------------------------------------
-  // structure
+  // page turns
 
-  [role="main"] {
-    @include transition(padding 300ms);
-    @include box-sizing(content-box);
-    @include rhythm-padding;
-    @include pagepad(15 1, 18 2);
-    @include animation(fadeIn 3s 1 ease both);
-    color: $darker;
-    text-align: center;
-
-    @include breakpoint($line-break) {
-      @include animation(line 30s linear infinite both, fadeIn 3s 1 ease both);
-      @include background($string-left-layer, $string-right-layer, $line-layer);
-      @include background-origin(content-box);
-      height: rhythm-image($left);
-    }
-  }
-
-  // ----------------------------------------------------------------------------
-  // elements
-
-  h1 {
-    @include adjust-font-size-to($largepx);
-    @include animation(fadeIn 2.5s 2s 1 ease both);
-    font-weight: bold;
-  }
-  h2 {
-    @include padding-trailer(6.5);
-    @include trailer(.5);
-    @include animation(fadeInDown 2s 4s 1 ease both);
-    background: image-url($scribble) no-repeat scroll center bottom;
-  }
-
-  p {
-    @include animation(fadeInLeft 2s 5s 1 ease both);
-    + p { @include animation-name(fadeInRight); }
-  }
-
-  a {
-    #{$link} {
-      @extend %allcaps;
-      color: color($off $blue $dark);
-    }
-    #{$focus} { color: color($off $pink $dark); }
-  }
+  @include enter { @include animation(gradientIn 3s 1s 1 backwards); }
 }

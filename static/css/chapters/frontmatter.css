@@ -3,31 +3,31 @@
 
 [data-icon]:before { content: attr(data-icon); }
 
-#title a:link, #title a:visited, #copyright h1, #copyright a:link, #copyright a:visited, #copyright strong, #thanks h1 { letter-spacing: .05em; }
+#copyright h1, #copyright a:link, #copyright a:visited, #copyright strong, #thanks h1 { letter-spacing: .05em; }
 
-#title a:link, #title a:visited, #copyright h1, #copyright a:link, #copyright a:visited, #copyright strong, #thanks h1 { text-transform: uppercase; }
+#copyright h1, #copyright a:link, #copyright a:visited, #copyright strong, #thanks h1 { text-transform: uppercase; }
 
 #dedication h1 { font-size: 0.79167rem; line-height: 1.25rem; }
 @media (min-width: 35em) { #dedication h1 { font-size: inherit; line-height: inherit; } }
 
-#home h1, #thanks h1, #about .vcard h1 { font-size: 1.5rem; line-height: 1.875rem; }
-#home h1, #thanks h1, #about .vcard h1, #home h2, #thanks h2, #about .vcard h2, #home h3, #thanks h3, #about .vcard h3, #home h4, #thanks h4, #about .vcard h4 { font-weight: bold; color: #404040; }
-#home h1:first-child, #thanks h1:first-child, #about .vcard h1:first-child, #home h1 + h2, #thanks h1 + h2, #about .vcard h1 + h2, #home h1 + h3, #thanks h1 + h3, #about .vcard h1 + h3, #home h1 + h4, #thanks h1 + h4, #about .vcard h1 + h4, #home h2:first-child, #thanks h2:first-child, #about .vcard h2:first-child, #home h2 + h2, #thanks h2 + h2, #about .vcard h2 + h2, #home h2 + h3, #thanks h2 + h3, #about .vcard h2 + h3, #home h2 + h4, #thanks h2 + h4, #about .vcard h2 + h4, #home h3:first-child, #thanks h3:first-child, #about .vcard h3:first-child, #home h3 + h2, #thanks h3 + h2, #about .vcard h3 + h2, #home h3 + h3, #thanks h3 + h3, #about .vcard h3 + h3, #home h3 + h4, #thanks h3 + h4, #about .vcard h3 + h4, #home h4:first-child, #thanks h4:first-child, #about .vcard h4:first-child, #home h4 + h2, #thanks h4 + h2, #about .vcard h4 + h2, #home h4 + h3, #thanks h4 + h3, #about .vcard h4 + h3, #home h4 + h4, #thanks h4 + h4, #about .vcard h4 + h4 { margin-top: 0rem; }
-#home h2, #thanks h2, #about .vcard h2, #home h3, #thanks h3, #about .vcard h3, #home h4, #thanks h4, #about .vcard h4 { font-size: 1.25rem; line-height: 1.875rem; margin-top: 1.25rem; }
-#home p, #thanks p, #about .vcard p, #home ol, #thanks ol, #about .vcard ol, #home ul, #thanks ul, #about .vcard ul, #home blockquote, #thanks blockquote, #about .vcard blockquote { margin-bottom: 1.25rem; }
-#home ol, #thanks ol, #about .vcard ol { list-style-type: decimal; }
-#home ul li, #thanks ul li, #about .vcard ul li { position: relative; }
-#home ul li:before, #thanks ul li:before, #about .vcard ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
-#home em, #thanks em, #about .vcard em, #home blockquote, #thanks blockquote, #about .vcard blockquote { font-style: italic; }
-#home blockquote cite, #thanks blockquote cite, #about .vcard blockquote cite { font-style: normal; }
-#home blockquote :last-child, #thanks blockquote :last-child, #about .vcard blockquote :last-child { margin-bottom: 0rem; }
+#thanks h1, #about .vcard h1 { font-size: 1.5rem; line-height: 1.875rem; }
+#thanks h1, #about .vcard h1, #thanks h2, #about .vcard h2, #thanks h3, #about .vcard h3, #thanks h4, #about .vcard h4 { font-weight: bold; color: #404040; }
+#thanks h1:first-child, #about .vcard h1:first-child, #thanks h1 + h2, #about .vcard h1 + h2, #thanks h1 + h3, #about .vcard h1 + h3, #thanks h1 + h4, #about .vcard h1 + h4, #thanks h2:first-child, #about .vcard h2:first-child, #thanks h2 + h2, #about .vcard h2 + h2, #thanks h2 + h3, #about .vcard h2 + h3, #thanks h2 + h4, #about .vcard h2 + h4, #thanks h3:first-child, #about .vcard h3:first-child, #thanks h3 + h2, #about .vcard h3 + h2, #thanks h3 + h3, #about .vcard h3 + h3, #thanks h3 + h4, #about .vcard h3 + h4, #thanks h4:first-child, #about .vcard h4:first-child, #thanks h4 + h2, #about .vcard h4 + h2, #thanks h4 + h3, #about .vcard h4 + h3, #thanks h4 + h4, #about .vcard h4 + h4 { margin-top: 0rem; }
+#thanks h2, #about .vcard h2, #thanks h3, #about .vcard h3, #thanks h4, #about .vcard h4 { font-size: 1.25rem; line-height: 1.875rem; margin-top: 1.25rem; }
+#thanks p, #about .vcard p, #thanks ol, #about .vcard ol, #thanks ul, #about .vcard ul, #thanks blockquote, #about .vcard blockquote { margin-bottom: 1.25rem; }
+#thanks ol, #about .vcard ol { list-style-type: decimal; }
+#thanks ul li, #about .vcard ul li { position: relative; }
+#thanks ul li:before, #about .vcard ul li:before { content: "•"; position: absolute; top: 0; right: 100%; margin-right: .2em; }
+#thanks em, #about .vcard em, #thanks blockquote, #about .vcard blockquote { font-style: italic; }
+#thanks blockquote cite, #about .vcard blockquote cite { font-style: normal; }
+#thanks blockquote :last-child, #about .vcard blockquote :last-child { margin-bottom: 0rem; }
 
 #contents { counter-reset: toc; }
 #contents ol { list-style-type: none; }
 #contents li { counter-increment: toc; }
 #contents li:before { content: counter(toc, decimal-leading-zero) ". "; }
 
-#title, #dedication h1 { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#dedication h1 { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
 #copyright h1, #dedication [role="main"], #contents [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
@@ -46,44 +46,21 @@ html { background: #eef6ee; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
-/* ---------------------------------------------------------------------------- home */
-#home { max-width: 39rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; background: url('../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll 1rem -391px; }
-#home:after { content: ""; display: table; clear: both; }
-@media (min-width: 35em) { #home { padding-left: 20.51282%; padding-right: 20.51282%; } }
-@media (min-width: 58.5em) { #home { background-position: 1rem -5rem; } }
-#home .byline { display: none; }
-#home[data-page-state="2"] .byline { display: block; }
-#home[data-page-state="2"] .intro, #home[data-page-state="2"] .instructions, #home[data-page-state="2"] [role="contentinfo"] { display: none; }
+@-moz-keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+  100% { background-position: center, center; } }
 
-@-moz-keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
-  100% { background-position: left top, right top, 0 48%; } }
+@-webkit-keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+  100% { background-position: center, center; } }
 
-@-webkit-keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
-  100% { background-position: left top, right top, 0 48%; } }
+@-o-keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+  100% { background-position: center, center; } }
 
-@-o-keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
-  100% { background-position: left top, right top, 0 48%; } }
+@keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+  100% { background-position: center, center; } }
 
-@keyframes line { 0% { background-position: left top, right top, 1200px 48%; }
-  100% { background-position: left top, right top, 0 48%; } }
-
-@-moz-keyframes show-strings {}
-@-webkit-keyframes show-strings {}
-@-o-keyframes show-strings {}
-@keyframes show-strings {}
 /* ---------------------------------------------------------------------------- title: Into the Green Green Mud */
-#title { background: #d5e9d5; background: url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat, linear-gradient(330deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; background: url('../../images/noise.png?1347221205') repeat, linear-gradient(120deg, #ffe5ff, #ffe5ff 50%, #d5e9d5 50%, #d5e9d5), #d5e9d5; }
-.no-cssgradients #title { background: url('../../images/noise.png?1347221205') repeat, url('../../images/frontmatter/titlepage/angle.svg?1347221205') no-repeat scroll center, #d5e9d5; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; }
-#title [role="main"] { -webkit-transition: padding 300ms; -moz-transition: padding 300ms; -o-transition: padding 300ms; transition: padding 300ms; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; padding-top: 1.25rem; padding-bottom: 1.25rem; -webkit-animation: fadeIn 3s 1 ease both; -moz-animation: fadeIn 3s 1 ease both; -o-animation: fadeIn 3s 1 ease both; animation: fadeIn 3s 1 ease both; color: -50%; text-align: center; }
-@media (min-height: 18.75em) { #title [role="main"] { padding-top: 1.25rem; padding-bottom: 1.25rem; } }
-@media (min-height: 22.5em) { #title [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; } }
-@media (min-width: 53em) { #title [role="main"] { -webkit-animation: line 30s linear infinite both, fadeIn 3s 1 ease both; -moz-animation: line 30s linear infinite both, fadeIn 3s 1 ease both; -o-animation: line 30s linear infinite both, fadeIn 3s 1 ease both; animation: line 30s linear infinite both, fadeIn 3s 1 ease both; background: url('../../images/frontmatter/titlepage/strings_left.png?1347221205') no-repeat scroll left top, url('../../images/frontmatter/titlepage/strings_right.png?1347221205') no-repeat scroll right top, url('../../images/frontmatter/titlepage/line.png?1347221205') repeat-x scroll 1200px 48%; -webkit-background-origin: content; -moz-background-origin: content; background-origin: content-box; height: 16.25rem; } }
-#title h1 { font-size: 1.5rem; line-height: 1.875rem; -webkit-animation: fadeIn 2.5s 2s 1 ease both; -moz-animation: fadeIn 2.5s 2s 1 ease both; -o-animation: fadeIn 2.5s 2s 1 ease both; animation: fadeIn 2.5s 2s 1 ease both; font-weight: bold; }
-#title h2 { padding-bottom: 8.125rem; margin-bottom: 0.625rem; -webkit-animation: fadeInDown 2s 4s 1 ease both; -moz-animation: fadeInDown 2s 4s 1 ease both; -o-animation: fadeInDown 2s 4s 1 ease both; animation: fadeInDown 2s 4s 1 ease both; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat scroll center bottom; }
-#title p { -webkit-animation: fadeInLeft 2s 5s 1 ease both; -moz-animation: fadeInLeft 2s 5s 1 ease both; -o-animation: fadeInLeft 2s 5s 1 ease both; animation: fadeInLeft 2s 5s 1 ease both; }
-#title p + p { -webkit-animation-name: fadeInRight; -moz-animation-name: fadeInRight; -o-animation-name: fadeInRight; animation-name: fadeInRight; }
-#title a:link, #title a:visited { color: #43437c; }
-#title a:hover, #title a:focus, #title a:active { color: #7c437c; }
+#title { background: url('../../images/noise.png?1347221205') repeat, #ffe5ff -webkit-linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff -moz-linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff -o-linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff linear-gradient(120deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; }
+#title.enter-prev, #title.enter-next { -webkit-animation: gradientIn 3s 1s 1 backwards; -moz-animation: gradientIn 3s 1s 1 backwards; -o-animation: gradientIn 3s 1s 1 backwards; animation: gradientIn 3s 1s 1 backwards; }
 
 /* ---------------------------------------------------------------------------- copyright */
 #copyright { background: #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; color: #f6eeee; overflow: hidden; }
