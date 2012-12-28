@@ -46,21 +46,82 @@ html { background: #eef6ee; }
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
-@-moz-keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+@-moz-keyframes gradientIn { 0% { background-position: center, -9999px 0; }
   100% { background-position: center, center; } }
 
-@-webkit-keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+@-webkit-keyframes gradientIn { 0% { background-position: center, -9999px 0; }
   100% { background-position: center, center; } }
 
-@-o-keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+@-o-keyframes gradientIn { 0% { background-position: center, -9999px 0; }
   100% { background-position: center, center; } }
 
-@keyframes gradientIn { 0% { background-position: center, 9999px 0; }
+@keyframes gradientIn { 0% { background-position: center, -9999px 0; }
   100% { background-position: center, center; } }
 
-/* ---------------------------------------------------------------------------- title: Into the Green Green Mud */
-#title { background: url('../../images/noise.png?1347221205') repeat, #ffe5ff -webkit-linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff -moz-linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff -o-linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff linear-gradient(330deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, #ffe5ff linear-gradient(120deg, rgba(238, 246, 238, 0) 50%, #eef6ee 50%) no-repeat center; }
-#title.enter-prev, #title.enter-next { -webkit-animation: gradientIn 3s 1s 1 backwards; -moz-animation: gradientIn 3s 1s 1 backwards; -o-animation: gradientIn 3s 1s 1 backwards; animation: gradientIn 3s 1s 1 backwards; }
+@-moz-keyframes lineLeft { 0% { background-position: 1200px; }
+  100% { background-position: 0; } }
+
+@-webkit-keyframes lineLeft { 0% { background-position: 1200px; }
+  100% { background-position: 0; } }
+
+@-o-keyframes lineLeft { 0% { background-position: 1200px; }
+  100% { background-position: 0; } }
+
+@keyframes lineLeft { 0% { background-position: 1200px; }
+  100% { background-position: 0; } }
+
+@-moz-keyframes slideInLeft { 0% { -moz-transform: translateX(100%); transform: translateX(100%); }
+  100% { -moz-transform: translateX(0%); transform: translateX(0%); } }
+
+@-webkit-keyframes slideInLeft { 0% { -webkit-transform: translateX(100%); transform: translateX(100%); }
+  100% { -webkit-transform: translateX(0%); transform: translateX(0%); } }
+
+@-o-keyframes slideInLeft { 0% { -o-transform: translateX(100%); transform: translateX(100%); }
+  100% { -o-transform: translateX(0%); transform: translateX(0%); } }
+
+@keyframes slideInLeft { 0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); } }
+
+@-moz-keyframes slideInRight { 0% { -moz-transform: translateX(-100%); transform: translateX(-100%); }
+  100% { -moz-transform: translateX(0%); transform: translateX(0%); } }
+
+@-webkit-keyframes slideInRight { 0% { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  100% { -webkit-transform: translateX(0%); transform: translateX(0%); } }
+
+@-o-keyframes slideInRight { 0% { -o-transform: translateX(-100%); transform: translateX(-100%); }
+  100% { -o-transform: translateX(0%); transform: translateX(0%); } }
+
+@keyframes slideInRight { 0% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); } }
+
+#title { background: url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, linear-gradient(300deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; }
+#title [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; position: relative; text-align: center; overflow: hidden; }
+#title .title { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; margin-top: 1.25rem; font-size: 1.5rem; line-height: 1.875rem; }
+@media (min-width: 58.5em) { #title .title { margin-top: 0.625rem; font-size: 1.95833rem; line-height: 2.5rem; } }
+@media (min-width: 70.5em) { #title .title { margin-top: 0rem; font-size: 2.45833rem; line-height: 3.125rem; } }
+#title .tagline { font-size: 0.79167rem; line-height: 1.25rem; margin-bottom: 1.25rem; }
+#title .line { -webkit-animation: lineLeft 40s linear infinite; -moz-animation: lineLeft 40s linear infinite; -o-animation: lineLeft 40s linear infinite; animation: lineLeft 40s linear infinite; position: absolute; left: 0; right: 0; min-height: 180px; background: url('../../images/frontmatter/titlepage/line.png?1347221205') repeat-x scroll 1200px center; }
+#title .scribble { -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; min-width: 180px; min-height: 180px; background-image: url('../../images/frontmatter/scribble.png?1347221205'); background-repeat: no-repeat; background-position: center; display: block; }
+#title [class*="-left"] { -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 251px; min-height: 390px; background-image: url('../../images/frontmatter/titlepage/strings_left.png?1347221205'); background-repeat: no-repeat; background-position: center; -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -ms-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); left: 0; }
+#title [class*="-right"] { -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 295px; min-height: 390px; background-image: url('../../images/frontmatter/titlepage/strings_right.png?1347221205'); background-repeat: no-repeat; background-position: center; -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%); transform: translateX(100%); right: 0; }
+#title [class*="strings-"] { position: absolute; top: 0; bottom: 0; -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; background-position: center 3.75rem; }
+@media (min-width: 52.5em) { #title [class*="strings-"] { -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); } }
+#title .vcard { margin-top: 1.25rem; }
+#title .vcard a:link, #title .vcard a:visited { color: #8f008f; font-weight: bold; text-transform: uppercase; }
+#title .vcard a:hover, #title .vcard a:focus, #title .vcard a:active { color: #00008f; }
+#title .publishers { font-size: 0.79167rem; line-height: 1.25rem; list-style-type: none; }
+#title .publishers, #title .publishers li { margin: 0px; padding: 0px; display: inline; }
+#title .publishers li:after { content: " | "; }
+#title .publishers li:last-child:after { content: ""; }
+#title .publishers a { color: inherit; text-transform: uppercase; }
+#title.enter-prev, #title.enter-next { -webkit-animation: gradientIn 800ms 1 backwards; -moz-animation: gradientIn 800ms 1 backwards; -o-animation: gradientIn 800ms 1 backwards; animation: gradientIn 800ms 1 backwards; }
+#title.enter-prev .line, #title.enter-next .line { -webkit-animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; -moz-animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; -o-animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; }
+#title.enter-prev .scribble, #title.enter-next .scribble { -webkit-animation: fadeIn 1s 600ms backwards; -moz-animation: fadeIn 1s 600ms backwards; -o-animation: fadeIn 1s 600ms backwards; animation: fadeIn 1s 600ms backwards; }
+#title.enter-prev .title, #title.enter-prev .tagline, #title.enter-next .title, #title.enter-next .tagline { -webkit-animation: fadeInDown 1s 1.5s backwards; -moz-animation: fadeInDown 1s 1.5s backwards; -o-animation: fadeInDown 1s 1.5s backwards; animation: fadeInDown 1s 1.5s backwards; }
+#title.enter-prev .vcard, #title.enter-prev .publishers, #title.enter-next .vcard, #title.enter-next .publishers { -webkit-animation: fadeInUp 1.5s 2.5s backwards; -moz-animation: fadeInUp 1.5s 2.5s backwards; -o-animation: fadeInUp 1.5s 2.5s backwards; animation: fadeInUp 1.5s 2.5s backwards; }
+@media (min-width: 52.5em) { #title.enter-prev [class*="strings-"], #title.enter-next [class*="strings-"] { -webkit-transition: none; -moz-transition: none; -o-transition: none; transition: none; -webkit-animation: 300ms 600ms 1 backwards; -moz-animation: 300ms 600ms 1 backwards; -o-animation: 300ms 600ms 1 backwards; animation: 300ms 600ms 1 backwards; }
+  #title.enter-prev [class*="-left"], #title.enter-next [class*="-left"] { -webkit-animation-name: slideInRight; -moz-animation-name: slideInRight; -o-animation-name: slideInRight; animation-name: slideInRight; }
+  #title.enter-prev [class*="-right"], #title.enter-next [class*="-right"] { -webkit-animation-name: slideInLeft; -moz-animation-name: slideInLeft; -o-animation-name: slideInLeft; animation-name: slideInLeft; } }
 
 /* ---------------------------------------------------------------------------- copyright */
 #copyright { background: #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; color: #f6eeee; overflow: hidden; }

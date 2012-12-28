@@ -1,26 +1,28 @@
 <!-- meta
-description : 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
-slug        : title
-url         : index.html
-body_class  :
+description   : 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
+slug          : title
+url           : index.html
+body_class    :
+exit_duration : 600
 prev:
-    slug    : home
-    url     : index.html
+    slug      : home
+    url       : index.html
 next:
-    slug    : copyright
-    url     : copyright.html
+    slug      : copyright
+    url       : copyright.html
 -->
 
 <h1 class="title">Into the Green Green Mud</h1>
 <h2 class="tagline">a novel (with pictures)</h2>
-<span class="scribble"></span>
+<div class="line"></div>
+<div class="scribble"></div>
 <p class="vcard">by <a href="about.html" class="fn">Eric A. Meyer</a></p>
 <ul class="publishers">
-  <li class="publish"><a href="http://teacupgorilla.com/">Teacup Gorilla</a></li>
-  <li class="publish"><a href="http://oddbird.net/">OddBird</a></li>
+  <li class="publish"><a href="about.html">Teacup Gorilla</a></li>
+  <li class="publish"><a href="about.html">OddBird</a></li>
 </ul>
-<span class="strings-left"></span>
-<span class="strings-right"></span>
+<div class="strings-left"></div>
+<div class="strings-right"></div>
 
 ------
 

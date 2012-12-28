@@ -11,28 +11,34 @@ $line               : '#{$pg}line.png';
 $left               : '#{$pg}strings_left.png';
 $right              : '#{$pg}strings_right.png';
 
+@mixin contain-image($img, $width: 'min-', $height: $width) {
+  @include background-size(contain);
+  #{$width}width: image-width($img);
+  #{$height}height: image-height($img);
+  background-image: image-url($img);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 // ----------------------------------------------------------------------------
 // background
 
-$bg                 : color($pink $hint);
-
 $bg-angle           : 120deg;
-$bg-details         : color($off $green lightest, 0) 50%,
-                      color($off $green lightest) 50%;
-$bg-old             : convert-gradient($bg-angle, $bg-details);
-$bg-grad            : linear-gradient($bg-angle, $bg-details);
+$pink-details       : color($off $pink lightest, 0) 50%,
+                      color($off $pink lightest) 50%;
+$pink-old           : convert-gradient($bg-angle + 180, $pink-details);
+$pink-grad          : linear-gradient($bg-angle + 180, $pink-details);
 
-$grad-hide          : 9999px 0;
+$pink-hide          : -9999px 0;
 $grad-pos           : center;
 
-$bg-layer-old       : $bg $bg-old no-repeat $grad-pos;
-$bg-layer           : $bg $bg-grad no-repeat $grad-pos;
+$pink-layer-old     : $pink-old no-repeat $grad-pos;
+$pink-layer         : $pink-grad no-repeat $grad-pos;
 
 // ----------------------------------------------------------------------------
 // line
 
-$line-pos           : 48%;
-$line-break         : 53em;
+$line-pos           : center;
 
 $line-start         : image-width($line);
 $line-end           : 0;
@@ -42,21 +48,146 @@ $line-layer         : image-url($line) repeat-x scroll $line-start $line-pos;
 // ----------------------------------------------------------------------------
 // animations
 
+$gradientIn: gradientIn 800ms 1 backwards;
+
 @include keyframes(gradientIn) {
-  0% { background-position: center, $grad-hide; }
+  0% { background-position: center, $pink-hide; }
   100% { background-position: center, $grad-pos; }
 }
 
-/* ----------------------------------------------------------------------------
-   title: Into the Green Green Mud */
+$lineLeft: lineLeft 40s linear infinite;
+
+@include keyframes(lineLeft) {
+  0% { background-position: $line-start; }
+  100% { background-position: $line-end; }
+}
+
+$slideIn: 300ms 600ms 1 backwards;
+
+@include keyframes(slideInLeft) {
+  0% { @include translateX(100%); }
+  100% { @include translateX(0%); }
+}
+
+@include keyframes(slideInRight) {
+  0% { @include translateX(-100%); }
+  100% { @include translateX(0%); }
+}
+
+// ----------------------------------------------------------------------------
+// title: Into the Green Green Mud
 
 #title {
-  @include background($noise-layer, $bg-layer-old);
-  background: $noise-layer, $bg-layer;
+  @include background($noise-layer, $pink-layer-old);
+  background: $noise-layer, $pink-layer;
 
+  // --------------------------------------------------------------------------
+  // main
+
+  [role="main"] {
+    @include rhythm-padding(2);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  // --------------------------------------------------------------------------
+  // title
+
+  .title {
+    @include transition(all 300ms);
+    @include leader;
+    @include adjust-font-size-to($largepx);
+    @include at-breakpoint(10) {
+      @include leader(.5);
+      @include adjust-font-size-to($xlargepx);
+    }
+    @include at-breakpoint(12) {
+      @include leader(0);
+      @include adjust-font-size-to($xxlargepx);
+    }
+  }
+  .tagline {
+    @include adjust-font-size-to($smallpx);
+    @include trailer;
+  }
+
+  // --------------------------------------------------------------------------
+  // scribbles
+
+  .line {
+    @include animation($lineLeft);
+    @include stretch-x;
+    min-height: image-height($scribble);
+    background: $line-layer;
+  }
+
+  .scribble {
+    @include contain-image($scribble);
+    display: block;
+  }
+
+  [class*="-left"] {
+    @include contain-image($left, null, min-);
+    @include translateX(-100%);
+    left: 0;
+  }
+
+  [class*="-right"] {
+    @include contain-image($right, null, min-);
+    @include translateX(100%);
+    right: 0;
+  }
+
+  [class*="strings-"] {
+    @include stretch-y;
+    @include transition(all 300ms);
+    background-position: center rhythm(3);
+    @include at-breakpoint(9) { @include translateX(0); }
+  }
+
+  // --------------------------------------------------------------------------
+  // credits
+
+  .vcard {
+    @include leader;
+    a {
+      #{$link} {
+        color: color($alt dark);
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      #{$focus} {
+        color: color($accent dark);
+      }
+    }
+  }
+
+  .publishers {
+    @include adjust-font-size-to($smallpx);
+    @include delimited-list(" | ");
+    a {
+      color: inherit;
+      text-transform: uppercase;
+    }
+  }
 
   // --------------------------------------------------------------------------
   // page turns
 
-  @include enter { @include animation(gradientIn 3s 1s 1 backwards); }
+  @include enter {
+    @include animation($gradientIn);
+    .line { @include animation(fadeIn 1s 600ms backwards, $lineLeft) }
+    .scribble { @include animation(fadeIn 1s 600ms backwards); }
+    .title, .tagline { @include animation(fadeInDown 1s 1.5s backwards); }
+    .vcard, .publishers { @include animation(fadeInUp 1.5s 2.5s backwards); }
+    @include at-breakpoint(9) {
+      [class*="strings-"] {
+        @include transition(none);
+        @include animation($slideIn);
+      }
+      [class*="-left"] { @include animation-name(slideInRight); }
+      [class*="-right"] { @include animation-name(slideInLeft); }
+    }
+  }
 }
