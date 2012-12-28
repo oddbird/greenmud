@@ -1,6 +1,1 @@
-title         : Styleguide
-
-extends       : base.j2
-default_block : main
-
-styles        : styleguide.css
+../../pages/styleguide/meta.yaml
