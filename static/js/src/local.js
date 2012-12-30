@@ -49,18 +49,6 @@ var GM = (function (GM, $) {
         });
     };
 
-    // GM.bodyHeight = function (element, property) {
-    //     var updateHeight = function (target) {
-    //         $(target).css(property, $(window).height());
-    //     };
-    //     updateHeight(element);
-    //     $(window).resize(function () {
-    //         $.doTimeout('resize', 250, function () {
-    //             updateHeight(element);
-    //         });
-    //     });
-    // };
-
     return GM;
 
 }(GM || {}, jQuery));
