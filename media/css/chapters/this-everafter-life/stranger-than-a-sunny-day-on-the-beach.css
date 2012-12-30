@@ -7,18 +7,6 @@
 
 #titlepage h2 { text-transform: uppercase; }
 
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
 #titlepage { overflow-x: hidden; }
 #titlepage [role="main"] { max-width: 15rem; margin-top: 3.75rem; margin-bottom: 1.25rem; position: relative; margin-left: auto; margin-right: auto; padding: 1.875rem 1rem; text-align: center; }
 @media (min-height: 22.5em) { #titlepage [role="main"] { margin-top: 7.5rem; margin-bottom: 1; } }
@@ -33,7 +21,7 @@
 #titlepage [role="main"] { text-shadow: rgba(242, 242, 242, 0.5) 0 1px 0; color: #404040; }
 #titlepage [role="main"]::before { background-color: rgba(255, 255, 255, 0.675); }
 #titlepage [role="main"]::after { background-color: rgba(255, 255, 255, 0.675); }
-@media (min-width: 31rem) { #titlepage [role="main"] { max-width: 47rem; }
+@media (min-width: 46.5em) { #titlepage [role="main"] { max-width: 47rem; }
   #titlepage h1, #titlepage h2 { width: 48.93617%; }
   #titlepage h1 { margin-right: -2.12766%; }
   #titlepage h2 { margin-right: 2.12766%; } }
@@ -43,7 +31,7 @@
 #titlepage [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
 /* ---------------------------------------------------------------------------- general */
-html { background: #ff8000 url('../../../images/noise.png?1347221205'); }
+html { background: #ff8000; }
 
 /* ---------------------------------------------------------------------------- titlepage */
 #titlepage [role="main"] { text-shadow: rgba(64, 64, 64, 0.5) 0 1px 0; color: #f2f2f2; }

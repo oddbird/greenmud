@@ -3,22 +3,10 @@
 
 [data-icon]:before { content: attr(data-icon); }
 
-@-moz-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-webkit-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@-o-keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
-@keyframes template-burst { 0% { background-color: #e5e5ff; background-position: center -10rem, center; }
-  100% { background-color: #ffe5ff; background-position: center -2.5rem, center; } }
-
 #titlepage [role="main"] { padding-top: 3.75rem; padding-bottom: 1.25rem; text-align: center; text-transform: uppercase; color: #404040; }
 @media (min-height: 18.75em) { #titlepage [role="main"] { padding-top: 7.5rem; padding-bottom: 1; } }
 #titlepage h1 { font-size: 1.5rem; line-height: 1.875rem; }
-@media (min-width: 40em) { #titlepage h1 { font-size: 1.58333rem; line-height: 1.875rem; }
+@media (min-width: 40em) { #titlepage h1 { font-size: 1.95833rem; line-height: 2.5rem; }
   #titlepage h2 { margin-bottom: 0.625rem; } }
 
 #titlepage h1, #titlepage h2 { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
@@ -39,8 +27,8 @@ html { background: #ffdfbf url('../../../images/noise.png?1347221205'); backgrou
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
 /* ---------------------------------------------------------------------------- epigraph: amiri baraka */
-#epigraph { background: -webkit-linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: -moz-linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: -o-linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: linear-gradient(95deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: linear-gradient(355deg, rgba(64, 64, 255, 0.5), rgba(185, 115, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; }
-#epigraph [role="main"] { max-width: 31rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; }
+#epigraph { background: -webkit-linear-gradient(95deg, rgba(63, 63, 255, 0.5), rgba(184, 114, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: -moz-linear-gradient(95deg, rgba(63, 63, 255, 0.5), rgba(184, 114, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: -o-linear-gradient(95deg, rgba(63, 63, 255, 0.5), rgba(184, 114, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: linear-gradient(95deg, rgba(63, 63, 255, 0.5), rgba(184, 114, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; background: linear-gradient(355deg, rgba(63, 63, 255, 0.5), rgba(184, 114, 255, 0.5), rgba(255, 153, 255, 0.5) 60%, rgba(255, 153, 255, 0)) bottom right; }
+#epigraph [role="main"] { max-width: 31rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 22.5em) { #epigraph [role="main"] { padding-top: 5rem; padding-bottom: 0; } }
 #epigraph p { margin-bottom: 1.25rem; }

@@ -49,7 +49,7 @@ var GM = (function (GM, $) {
 
         // Hijack all internal links
         body.on('click', 'a', function (e) {
-            var thisLink = $(this),
+            var thisLink = $(this).blur(),
                 href = thisLink.attr('href'),
                 page,
                 fallback = function (link) {
@@ -122,42 +122,41 @@ var GM = (function (GM, $) {
         });
 
         // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
-        if ('ontouchstart' in window) {
-            $(document).swipe({
-                swipeStatus: function (event, phase, direction, distance) {
-                    if (phase === 'end') {
-                        if (direction === 'left') {
-                            pageControls.first().find('.pagenav .next a').click();
-                        } else if (direction === 'right') {
-                            pageControls.first().find('.pagenav .prev a').click();
-                        } else {
-                            body.removeClass('swiping-next swiping-prev');
-                        }
-                    } else if (phase === 'cancel') {
+        $(document).swipe({
+            swipeStatus: function (event, phase, direction, distance) {
+                if (phase === 'end') {
+                    if (direction === 'left') {
+                        pageControls.first().find('.pagenav .next a').click();
+                    } else if (direction === 'right') {
+                        pageControls.first().find('.pagenav .prev a').click();
+                    } else {
                         body.removeClass('swiping-next swiping-prev');
-                    } else if (phase === 'move') {
-                        if (distance >= 50) {
-                            if (direction === 'left') {
-                                body.removeClass('swiping-prev');
-                                if (pageControls.first().find('.pagenav .next a').attr('href')) {
-                                    body.addClass('swiping-next');
-                                }
-                            } else if (direction === 'right') {
-                                body.removeClass('swiping-next');
-                                if (pageControls.first().find('.pagenav .prev a').attr('href')) {
-                                    body.addClass('swiping-prev');
-                                }
-                            } else {
-                                body.removeClass('swiping-next swiping-prev');
+                    }
+                } else if (phase === 'cancel') {
+                    body.removeClass('swiping-next swiping-prev');
+                } else if (phase === 'move') {
+                    if (distance >= 50) {
+                        if (direction === 'left') {
+                            body.removeClass('swiping-prev');
+                            if (pageControls.first().find('.pagenav .next a').attr('href')) {
+                                body.addClass('swiping-next');
+                            }
+                        } else if (direction === 'right') {
+                            body.removeClass('swiping-next');
+                            if (pageControls.first().find('.pagenav .prev a').attr('href')) {
+                                body.addClass('swiping-prev');
                             }
                         } else {
                             body.removeClass('swiping-next swiping-prev');
                         }
+                    } else {
+                        body.removeClass('swiping-next swiping-prev');
                     }
-                },
-                allowPageScroll: 'vertical'
-            });
-        }
+                }
+            },
+            allowPageScroll: 'vertical',
+            fallbackToMouseEvents: false
+        });
 
         if (History.enabled) {
             // Hook into State Changes
@@ -185,9 +184,6 @@ var GM = (function (GM, $) {
 
                         // Store the prev and next page-nav
                         dataContent.data('pagenav', dataControls);
-
-                        // Set min-height of new page to be window height
-                        dataContent.css('min-height', $(window).height());
 
                         // Store the content as a data-attr on 'body'
                         body.data(id, dataContent);

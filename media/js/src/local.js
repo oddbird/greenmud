@@ -26,6 +26,7 @@ var GM = (function (GM, $) {
         };
 
         $(toggle).click(function () {
+            $(this).blur();
             doToggle();
             if (Modernizr.sessionstorage) {
                 sessionStorage.setItem('controls', $(controls).hasClass('active'));
@@ -41,21 +42,10 @@ var GM = (function (GM, $) {
 
     GM.toc = function (toggle, controls) {
         $(toggle).click(function () {
+            $(this).blur();
             $(controls).toggleClass('active');
             $(toggle).toggleClass('active');
             return false;
-        });
-    };
-
-    GM.bodyHeight = function (element, property) {
-        var updateHeight = function (target) {
-            $(target).css(property, $(window).height());
-        };
-        updateHeight(element);
-        $(window).resize(function () {
-            $.doTimeout('resize', 250, function () {
-                updateHeight(element);
-            });
         });
     };
 
