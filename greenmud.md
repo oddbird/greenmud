@@ -3,10 +3,6 @@ description   : 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
 slug          : title
 url           : index.html
 body_class    :
-exit_duration : 600
-prev:
-    slug      : home
-    url       : index.html
 next:
     slug      : copyright
     url       : copyright.html
@@ -34,6 +30,9 @@ prev:
     slug    : thanks
     url     : thanks.html
 -->
+
+<div class="lightning"></div>
+<div class="blue"></div>
 
 > I once fell in love with you                      </br>
   Just because the sky turned from gray into blue   </br>

@@ -11,11 +11,12 @@ $fg-details       : color($fg-color,0),
                     color($fg-color,.9);
 $fg-old           : linear-gradient($fg-angle, $fg-details...);
 $fg-new           : convert-gradient($fg-angle, $fg-details...);
+$fg-hide          : top 9999px;
 
 $pg               : '#{$ch}epigraph/';
-$lightning        : image-url('#{$pg}lightning.png') no-repeat scroll rhythm(-99) rhythm(-99);
-$angle            : image-url('#{$pg}angle.svg') no-repeat center;
-$default-pos      : top left;
+$lightning-hide   : rhythm(-99) rhythm(-99);
+$lightning        : image-url('#{$pg}lightning.png') no-repeat scroll $lightning-hide;
+$noise-pos        : top left;
 
 $lightning-color  : color($slight $blue $darker);
 
@@ -27,27 +28,28 @@ $lightning-pos2   : rhythm(1) rhythm(-1);
 $lightning-pos3   : rhythm(12) rhythm(-5);
 $lightning-pos4   : rhythm(-3) rhythm(-3);
 
-@include keyframes(lightning) {
+$lightning-animation: lightning 10s steps(1,end) infinite;
 
-  0%, 56%, 100% {
-    background-position: $default-pos, $default-pos, rhythm(-99) rhythm(-99);
-    background-color: $bg;
+@include keyframes(lightning) {
+  0%, 26%, 100% {
+    background-position: $noise-pos, $lightning-hide;
+    background-color: color($lightning-color,0);
   }
-  48%, 52%, 54% {
-    background-position: $default-pos, $default-pos, $lightning-pos1;
+  18%, 22%, 24% {
+    background-position: $noise-pos, $lightning-pos1;
     background-color: $lightning-color;
   }
-  49%, 53% {
-    background-position: $default-pos, $default-pos, $lightning-pos3;
-    background-color: $bg;
+  19%, 23% {
+    background-position: $noise-pos, $lightning-pos3;
+    background-color: color($lightning-color,0);
   }
-  50% {
-    background-position: $default-pos, $default-pos, $lightning-pos4;
+  20% {
+    background-position: $noise-pos, $lightning-pos4;
     background-color: $lightning-color;
   }
-  51% {
-    background-position: $default-pos, $default-pos, $lightning-pos2;
-    background-color: $bg;
+  21% {
+    background-position: $noise-pos, $lightning-pos2;
+    background-color: color($lightning-color,0);
   }
 }
 
@@ -55,25 +57,45 @@ $lightning-pos4   : rhythm(-3) rhythm(-3);
    epigraph: cocorosie */
 
 #epigraph {
-  @include page-animation(lightning 10s steps(1,end) infinite both);
   @include text-shadow($bg 0 1px 0);
-  @include background($lightning $bg);
-  @include background($noise-layer, $fg-old, $lightning, $bg);
-  background: $noise-layer, $fg-new, $lightning, $bg;
-
-  .no-cssgradients & {
-    @include background($noise-layer, $angle, $lightning, $bg);
-    @include background-size(auto, cover, auto, auto);
-  }
+  background: $bg;
 
   // --------------------------------------------------------------------------
   // elements
 
+  .lightning, .blue {
+    @include stretch;
+  }
+
+  .lightning {
+    @include animation($lightning-animation);
+    background: $noise-layer, $lightning;
+  }
+  .blue {
+    @include background($fg-old);
+    background: $fg-new;
+  }
+
   blockquote {
     @include adjust-font-size-to($smallpx);
+    position: relative;
     padding: rhythm(1.5) rhythm(1);
     color: color($light);
   }
   p { @include trailer; }
 
+  // --------------------------------------------------------------------------
+  // pageturn
+
+  @include enter {
+    .gray { @include animation(fadeIn 2s ease backwards); }
+    .blue { @include animation(slideInLeft 300ms 1s linear backwards); }
+    blockquote { @include animation(fadeInLeftBig 300ms 1s ease backwards); }
+  }
+  @include exit {
+    background-position: $noise-pos, $lightning-hide !important;
+    .gray { @include animation(fadeOut 400ms ease forwards); }
+    .blue { @include animation(slideOutRight 600ms linear forwards); }
+    blockquote { @include animation(fadeOutLeft 400ms ease forwards); }
+  }
 }

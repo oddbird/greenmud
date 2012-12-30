@@ -17,8 +17,13 @@ $bg-new       : convert-gradient($bg-angle, $bg-details);
   100% { max-height: rhythm(50); }
 }
 
-/* ----------------------------------------------------------------------------
-   contents */
+@include keyframes(shadeOut) {
+  0% { max-height: rhythm(50); }
+  100% { max-height: 0; }
+}
+
+// ----------------------------------------------------------------------------
+// contents
 
 #contents {
   @extend %toc-counter;
@@ -36,14 +41,8 @@ $bg-new       : convert-gradient($bg-angle, $bg-details);
   // --------------------------------------------------------------------------
   // elements
 
-  .book { @include animation(fadeIn 2s 1 ease both); }
-  .toc-everafter .book {
-    @include animation-delay(.5s);
-    + ol { @include animation-delay(1.5s); }
-  }
-
   ol {
-    @include animation(shadeIn 2s .5s 1 ease-out both);
+    max-height: rhythm(50);
     overflow: hidden;
   }
 
@@ -53,4 +52,22 @@ $bg-new       : convert-gradient($bg-angle, $bg-details);
   }
 
   li { &:before { color: color($off $yellow $dark); } }
+
+  // --------------------------------------------------------------------------
+  // pageturn
+
+  @include enter {
+    @include animation(fadeIn 300ms 1 ease-out backwards);
+    ol { @include animation(shadeIn 2s .5s 1 ease-out backwards); }
+    .book { @include animation(fadeIn 2s 1 ease backwards); }
+    .toc-everafter .book {
+      @include animation-delay(.5s);
+      + ol { @include animation-delay(1.5s); }
+    }
+  }
+
+  @include exit {
+    @include animation(fadeOutUp 300ms 300ms forwards);
+    ol { @include animation(shadeOut 600ms ease-out forwards); }
+  }
 }

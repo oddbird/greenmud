@@ -17,14 +17,15 @@ $bg-new         : convert-gradient($bg-angle, $bg-details);
 $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 
-/* ----------------------------------------------------------------------------
-   copyright */
+// ----------------------------------------------------------------------------
+// copyright
 
 #copyright {
   @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);
   background: $scribble-layer, $noise-layer, $bg-new, $bg;
   color: $color;
+  border: 2px solid color(darkest);
   overflow: hidden;
 
   [role="main"] {
@@ -73,4 +74,10 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 
   em { font-style: italic; }
   strong { @extend %allcaps; }
+
+  // --------------------------------------------------------------------------
+  // pageturn
+
+  @include enter { @include animation(fadeInDownBig 600ms linear backwards); }
+  @include exit { @include animation(fadeOutUpBig 800ms ease forwards); }
 }

@@ -55,6 +55,13 @@ $gradientIn: gradientIn 800ms 1 backwards;
   100% { background-position: center, $grad-pos; }
 }
 
+$gradientOut: gradientOut 1.5s 1 ease both;
+
+@include keyframes(gradientOut) {
+  0% { background-position: center, $grad-pos; }
+  100% { background-position: center, $pink-hide; }
+}
+
 $lineLeft: lineLeft 40s linear infinite;
 
 @include keyframes(lineLeft) {
@@ -62,7 +69,7 @@ $lineLeft: lineLeft 40s linear infinite;
   100% { background-position: $line-end; }
 }
 
-$slideIn: 300ms 600ms 1 backwards;
+$slideIn: fadeIn 300ms 600ms 1 backwards;
 
 @include keyframes(slideInLeft) {
   0% { @include translateX(100%); }
@@ -72,6 +79,18 @@ $slideIn: 300ms 600ms 1 backwards;
 @include keyframes(slideInRight) {
   0% { @include translateX(-100%); }
   100% { @include translateX(0%); }
+}
+
+$slideOut: fadeOut 300ms 1 forwards;
+
+@include keyframes(slideOutRight) {
+  0% { @include translateX(0%); }
+  100% { @include translateX(100%); }
+}
+
+@include keyframes(slideOutLeft) {
+  0% { @include translateX(0%); }
+  100% { @include translateX(-100%); }
 }
 
 // ----------------------------------------------------------------------------
@@ -95,7 +114,7 @@ $slideIn: 300ms 600ms 1 backwards;
   // title
 
   .title {
-    @include transition(all 300ms);
+    @include transition(font-size, margin 300ms);
     @include leader;
     @include adjust-font-size-to($largepx);
     @include at-breakpoint(10) {
@@ -166,6 +185,7 @@ $slideIn: 300ms 600ms 1 backwards;
   .publishers {
     @include adjust-font-size-to($smallpx);
     @include delimited-list(" | ");
+    display: block !important;
     a {
       color: inherit;
       text-transform: uppercase;
@@ -177,10 +197,10 @@ $slideIn: 300ms 600ms 1 backwards;
 
   @include enter {
     @include animation($gradientIn);
-    .line { @include animation(fadeIn 1s 600ms backwards, $lineLeft) }
+    .line { @include animation(fadeIn 1s 600ms backwards, $lineLeft); }
     .scribble { @include animation(fadeIn 1s 600ms backwards); }
-    .title, .tagline { @include animation(fadeInDown 1s 1.5s backwards); }
-    .vcard, .publishers { @include animation(fadeInUp 1.5s 2.5s backwards); }
+    .title, .tagline { @include animation(fadeInDown 400ms 1s backwards); }
+    .vcard, .publishers { @include animation(fadeInUp 800ms 1s backwards); }
     @include at-breakpoint(9) {
       [class*="strings-"] {
         @include transition(none);
@@ -189,5 +209,15 @@ $slideIn: 300ms 600ms 1 backwards;
       [class*="-left"] { @include animation-name(slideInRight); }
       [class*="-right"] { @include animation-name(slideInLeft); }
     }
+  }
+  @include exit {
+    @include animation($gradientOut);
+    .line { @include animation(fadeOut 300ms forwards, $lineLeft); }
+    .scribble { @include animation(fadeOut 300ms forwards); }
+    .title, .tagline { @include animation(fadeOutUp 300ms forwards); }
+    .vcard, .publishers { @include animation(fadeOutDown 300ms forwards); }
+    [class*="strings-"] { @include animation($slideOut); }
+    [class*="-left"] { @include animation-name(slideOutLeft); }
+    [class*="-right"] { @include animation-name(slideOutRight); }
   }
 }

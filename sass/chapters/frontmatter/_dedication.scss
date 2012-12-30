@@ -10,8 +10,8 @@ $bg-grad          : radial-gradient( center rhythm(6),
                       color($orange $light)
                     );
 
-/* ----------------------------------------------------------------------------
-   dedication */
+// ----------------------------------------------------------------------------
+// dedication
 
 #dedication {
   @include back($bg);
@@ -22,7 +22,6 @@ $bg-grad          : radial-gradient( center rhythm(6),
     @include container($total-columns);
     @include rhythm-padding(2);
     @include pagepad(15 3);
-    @include animation(fadeIn 4s 1 ease both);
   }
 
   // --------------------------------------------------------------------------
@@ -38,4 +37,10 @@ $bg-grad          : radial-gradient( center rhythm(6),
     @include adjust-font-size-to($smallpx);
     @include trailer;
   }
+
+  // --------------------------------------------------------------------------
+  // pageturn
+
+  @include enter { @include animation(fadeIn 4s 1 ease backwards); }
+  @include exit { @include animation(fadeOut 600ms 1 ease forwards); }
 }
