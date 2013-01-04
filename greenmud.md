@@ -56,6 +56,7 @@ root_url      : ../../
 <!-- meta
 body_class    :
 root_url      : ../
+exit_duration : 600
 -->
 
 ## Book 1
@@ -68,7 +69,10 @@ description   : 'Epigraph: "I Sat Belonely" by John Lennon.'
 slug          : epigraph
 body_class    :
 root_url      : ../
+exit_duration : 1000
 -->
+
+<div class="lennon"></div>
 
 > I sat belonely down a tree,     <br />
   humbled fat and small.          <br />

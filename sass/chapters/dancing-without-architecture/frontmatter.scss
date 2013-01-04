@@ -9,8 +9,8 @@
 
 $ch: 'dancing/';
 
-/* ----------------------------------------------------------------------------
-   general */
+// ----------------------------------------------------------------------------
+// general
 
 $bg         : color($blue $lightest);
 $bg-angle   : 120deg;
@@ -19,7 +19,6 @@ $bg-old     : linear-gradient($bg-angle, $bg-details);
 $bg-new     : convert-gradient($bg-angle, $bg-details);
 
 html {
-  @include back($bg);
   @include background($noise-layer, $bg-old, $bg);
   @include background-size(auto, cover);
   background: $noise-layer, $bg-new, $bg;
@@ -37,7 +36,7 @@ $page-function  : ease;
 
 @import "frontmatter/epigraph";
 
-/* ----------------------------------------------------------------------------
-  titlepage */
+// ----------------------------------------------------------------------------
+// titlepage
 
 #titlepage { @extend %booktitle; }

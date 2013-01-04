@@ -35,7 +35,6 @@
 
 .exit-prev, .exit-next { -webkit-animation-name: fadeOutUp; -moz-animation-name: fadeOutUp; -o-animation-name: fadeOutUp; animation-name: fadeOutUp; }
 
-/* ---------------------------------------------------------------------------- general */
 html { background: #eef6ee; }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
@@ -248,7 +247,6 @@ html { background: #eef6ee; }
   75% { opacity: 1; }
   100% { opacity: 0; transform: translateY(-45rem); } }
 
-/* ---------------------------------------------------------------------------- thanks */
 #thanks { background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom right, #ffffe5, #d5e9d5), #d5e9d5; position: relative; overflow: hidden; }
 #thanks [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; }
 #thanks [role="main"]:after { content: ""; display: table; clear: both; }
@@ -315,7 +313,6 @@ html { background: #eef6ee; }
 #epigraph.exit-prev .blue, #epigraph.exit-next .blue { -webkit-animation: slideOutRight 600ms linear forwards; -moz-animation: slideOutRight 600ms linear forwards; -o-animation: slideOutRight 600ms linear forwards; animation: slideOutRight 600ms linear forwards; }
 #epigraph.exit-prev blockquote, #epigraph.exit-next blockquote { -webkit-animation: fadeOutLeft 400ms ease forwards; -moz-animation: fadeOutLeft 400ms ease forwards; -o-animation: fadeOutLeft 400ms ease forwards; animation: fadeOutLeft 400ms ease forwards; }
 
-/* ---------------------------------------------------------------------------- about */
 #about .vcard { font-size: 0.79167rem; line-height: 1.25rem; }
 #about .vcard :first-line { font-weight: bold; }
 #about .fn { font-size: 1rem; line-height: 1.25rem; text-transform: uppercase; }

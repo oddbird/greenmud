@@ -1,27 +1,58 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns: 8;
-$grid-padding: 0;
+$total-columns  : 8;
+$grid-padding   : 0;
 
-$bg-angle   : 95deg;
-$bg-details : color($orange $lighter, .75),
-              color($yellow $lightest, .75) 10%,
-              color($yellow $lighter, .5),
-              color($yellow $lighter, .25) 70%,
-              color($yellow $lighter, 0);
-$bg-old     : linear-gradient($bg-angle, $bg-details...);
-$bg-new     : convert-gradient($bg-angle, $bg-details...);
+$bg-angle       : 95deg;
+$bg-details     : color($orange $lighter, .75),
+                  color($yellow $lightest, .75) 10%,
+                  color($yellow $lighter, .5),
+                  color($yellow $lighter, .25) 70%,
+                  color($yellow $lighter, 0);
+$bg-old         : linear-gradient($bg-angle, $bg-details...);
+$bg-new         : convert-gradient($bg-angle, $bg-details...);
+$bg-pos         : bottom right;
 
-$pg       : '#{$ch}epigraph/';
-$lennon   : '#{$pg}lennon.png';
+$pg             : '#{$ch}epigraph/';
+$lennon         : '#{$pg}lennon.png';
 
-/* ----------------------------------------------------------------------------
-   epigraph: john lennon */
+$lennon-height  : rhythm-image($lennon);
+$lennon-angle   : -8deg;
+
+// ----------------------------------------------------------------------------
+// animations
+
+@include keyframes(lennonIn) {
+  0% {
+    @include translateY(-20em);
+    @include animation-timing-function(ease-in);
+  }
+  70% {
+    @include translateY(.25em);
+    @include animation-timing-function(ease-in-out);
+  }
+  80% {
+    @include translateY(-1em);
+    @include animation-timing-function(ease-in-out);
+  }
+  100% {
+    @include transform(translateY(0em) rotate($lennon-angle));
+    @include animation-timing-function(ease-in-out);
+  }
+}
+
+@include keyframes(gradOut) {
+  0% { background-position: $bg-pos; }
+  100% { background-position: right 9999px ; }
+}
+
+// ----------------------------------------------------------------------------
+// epigraph: john lennon
 
 #epigraph {
-  @include background($bg-old bottom right);
-  background: $bg-new bottom right;
+  @include background($bg-old no-repeat $bg-pos);
+  background-image: $bg-new;
 
   [role="main"] {
     @extend %transition-main;
@@ -32,10 +63,14 @@ $lennon   : '#{$pg}lennon.png';
   // --------------------------------------------------------------------------
   // elements
 
+  .lennon {
+    @include background(image-url($lennon) no-repeat scroll center top);
+    @include rotate($lennon-angle);
+    height: $lennon-height;
+  }
+
   blockquote {
     @extend %transition;
-    @include padding-leader(4.5);
-    @include background(image-url($lennon) no-repeat scroll center top);
 
     @include prefix(1);
     @include at-breakpoint(4) { @include prefix(1); }
@@ -47,4 +82,17 @@ $lennon   : '#{$pg}lennon.png';
     @extend %shrink;
     @include trailer;
   }
+
+  // --------------------------------------------------------------------------
+  // pageturn
+
+  @include enter {
+    .lennon { @include animation(lennonIn 600ms 3s backwards); }
+  }
+  @include exit {
+    @include animation(gradOut 1.5s forwards);
+    blockquote { @include animation(fadeOut 500ms forwards); }
+    .lennon { @include animation(hinge 750ms 300ms forwards); }
+  }
+
 }

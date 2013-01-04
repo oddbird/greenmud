@@ -20,8 +20,7 @@
 
 .exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
-/* ---------------------------------------------------------------------------- general */
-html { background: #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
+html { background: url('../../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
 
@@ -29,15 +28,49 @@ html { background: #bfbfff; background: url('../../../images/noise.png?134722120
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
-/* ---------------------------------------------------------------------------- epigraph: john lennon */
-#epigraph { background: -webkit-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -moz-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: -o-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; background: linear-gradient(355deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) bottom right; }
+@-moz-keyframes lennonIn { 0% { -moz-transform: translateY(-20em); transform: translateY(-20em); -moz-animation-timing-function: ease-in; animation-timing-function: ease-in; }
+  70% { -moz-transform: translateY(0.25em); transform: translateY(0.25em); -moz-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+  80% { -moz-transform: translateY(-1em); transform: translateY(-1em); -moz-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+  100% { -moz-transform: translateY(0em) rotate(-8deg); transform: translateY(0em) rotate(-8deg); -moz-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; } }
+
+@-webkit-keyframes lennonIn { 0% { -webkit-transform: translateY(-20em); transform: translateY(-20em); -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; }
+  70% { -webkit-transform: translateY(0.25em); transform: translateY(0.25em); -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+  80% { -webkit-transform: translateY(-1em); transform: translateY(-1em); -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+  100% { -webkit-transform: translateY(0em) rotate(-8deg); transform: translateY(0em) rotate(-8deg); -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; } }
+
+@-o-keyframes lennonIn { 0% { -o-transform: translateY(-20em); transform: translateY(-20em); -o-animation-timing-function: ease-in; animation-timing-function: ease-in; }
+  70% { -o-transform: translateY(0.25em); transform: translateY(0.25em); -o-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+  80% { -o-transform: translateY(-1em); transform: translateY(-1em); -o-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+  100% { -o-transform: translateY(0em) rotate(-8deg); transform: translateY(0em) rotate(-8deg); -o-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; } }
+
+@keyframes lennonIn { 0% { transform: translateY(-20em); animation-timing-function: ease-in; }
+  70% { transform: translateY(0.25em); animation-timing-function: ease-in-out; }
+  80% { transform: translateY(-1em); animation-timing-function: ease-in-out; }
+  100% { transform: translateY(0em) rotate(-8deg); animation-timing-function: ease-in-out; } }
+
+@-moz-keyframes gradOut { 0% { background-position: bottom right; }
+  100% { background-position: right 9999px; } }
+
+@-webkit-keyframes gradOut { 0% { background-position: bottom right; }
+  100% { background-position: right 9999px; } }
+
+@-o-keyframes gradOut { 0% { background-position: bottom right; }
+  100% { background-position: right 9999px; } }
+
+@keyframes gradOut { 0% { background-position: bottom right; }
+  100% { background-position: right 9999px; } }
+
+#epigraph { background: -webkit-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: -moz-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: -o-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background-image: linear-gradient(355deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)); }
 #epigraph [role="main"] { max-width: 31rem; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 18.75em) { #epigraph [role="main"] { padding-top: 4.375rem; padding-bottom: 1; } }
-#epigraph blockquote { padding-top: 5.625rem; background: url('../../../images/dancing/epigraph/lennon.png?1347221204') no-repeat scroll center top; padding-left: 12.90323%; }
+#epigraph .lennon { background: url('../../../images/dancing/epigraph/lennon.png?1347221204') no-repeat scroll center top; -webkit-transform: rotate(-8deg); -moz-transform: rotate(-8deg); -ms-transform: rotate(-8deg); -o-transform: rotate(-8deg); transform: rotate(-8deg); height: 5rem; }
+#epigraph blockquote { padding-left: 12.90323%; }
 @media (min-width: 22.5em) { #epigraph blockquote { padding-left: 26.66667%; } }
 @media (min-width: 28.5em) { #epigraph blockquote { padding-left: 42.10526%; } }
 @media (min-width: 46.5em) { #epigraph blockquote { padding-left: 51.6129%; } }
 #epigraph p { margin-bottom: 1.25rem; }
-
-/* ---------------------------------------------------------------------------- titlepage */
+#epigraph.enter-prev .lennon, #epigraph.enter-next .lennon { -webkit-animation: lennonIn 600ms 3s backwards; -moz-animation: lennonIn 600ms 3s backwards; -o-animation: lennonIn 600ms 3s backwards; animation: lennonIn 600ms 3s backwards; }
+#epigraph.exit-prev, #epigraph.exit-next { -webkit-animation: gradOut 1.5s forwards; -moz-animation: gradOut 1.5s forwards; -o-animation: gradOut 1.5s forwards; animation: gradOut 1.5s forwards; }
+#epigraph.exit-prev blockquote, #epigraph.exit-next blockquote { -webkit-animation: fadeOut 500ms forwards; -moz-animation: fadeOut 500ms forwards; -o-animation: fadeOut 500ms forwards; animation: fadeOut 500ms forwards; }
+#epigraph.exit-prev .lennon, #epigraph.exit-next .lennon { -webkit-animation: hinge 750ms 300ms forwards; -moz-animation: hinge 750ms 300ms forwards; -o-animation: hinge 750ms 300ms forwards; animation: hinge 750ms 300ms forwards; }
