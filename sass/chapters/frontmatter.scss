@@ -16,8 +16,8 @@ $bg             : color($off $green lightest);
 
 html { @include back($bg); }
 
-$page-enter     : fadeIn;
-$page-exit      : fadeOutUp;
+$page-enter     : fadeInDown;
+$page-exit      : fadeOutDown;
 $page-time      : 1s 400ms;
 $page-function  : ease;
 

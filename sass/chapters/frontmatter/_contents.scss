@@ -67,7 +67,7 @@ $bg-new       : convert-gradient($bg-angle, $bg-details);
   }
 
   @include exit {
-    @include animation(fadeOutUp 300ms 300ms forwards);
+    @include animation(fadeOut 300ms 300ms forwards);
     ol { @include animation(shadeOut 600ms ease-out forwards); }
   }
 }
