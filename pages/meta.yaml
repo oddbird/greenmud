@@ -1,14 +1,15 @@
-description   : Into the Green Green Mud
+description     : Into the Green Green Mud
 
-page_states   : 1
-exit_duration : 300
+page_states     : 1
+exit_duration   : 300
+vertical_align  : top
 
-extends       : novel/page.j2
-default_block : page
-root_url      : ./
+extends         : novel/page.j2
+default_block   : page
+root_url        : ./
 
-chapter_slug  : frontmatter
-extra_styles  : frontmatter.css
+chapter_slug    : frontmatter
+extra_styles    : frontmatter.css
 
-prev_chapter  : ./
-next_chapter  : dancing-without-architecture/
+prev_chapter    : ./
+next_chapter    : dancing-without-architecture/

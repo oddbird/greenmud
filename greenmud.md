@@ -1,11 +1,12 @@
 <!-- meta
-description   : 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
-slug          : title
-url           : index.html
-body_class    :
+description     : 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
+slug            : title
+url             : index.html
+vertical_align  : center
+body_class      :
 next:
-    slug      : copyright
-    url       : copyright.html
+    slug        : copyright
+    url         : copyright.html
 -->
 
 <h1 class="title">Into the Green Green Mud</h1>
@@ -48,15 +49,16 @@ prev:
 ------
 
 <!-- book
-book          : 'Dancing Without Architecture.'
-description   : 'Book 1: Dancing Without Architecture.'
-root_url      : ../../
+book            : 'Dancing Without Architecture.'
+description     : 'Book 1: Dancing Without Architecture.'
+root_url        : ../../
 -->
 
 <!-- meta
-body_class    :
-root_url      : ../
-exit_duration : 600
+body_class      :
+root_url        : ../
+exit_duration   : 600
+vertical_align  : center
 -->
 
 ## Book 1
@@ -1864,14 +1866,15 @@ So green!
 ------
 
 <!-- book
-book          : This EverAfter Life
-description   : 'Book 2: This EverAfter Life.'
-root_url      : ../../
+book            : This EverAfter Life
+description     : 'Book 2: This EverAfter Life.'
+root_url        : ../../
 -->
 
 <!-- meta
-body_class    :
-root_url      : ../
+vertical_align  : center
+body_class      :
+root_url        : ../
 -->
 
 ## Book 2
