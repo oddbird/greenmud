@@ -26,6 +26,7 @@ $bg-new       : convert-gradient($bg-angle, $bg-details);
 // contents
 
 #contents {
+  @extend %center-content;
   @extend %toc-counter;
   @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-old, $bg);

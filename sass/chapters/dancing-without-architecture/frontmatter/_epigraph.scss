@@ -27,10 +27,12 @@ $lennon-angle   : -8deg;
   0% {
     @include translateY(-20em);
     @include animation-timing-function(ease-in);
+    opacity: 0;
   }
   70% {
     @include translateY(.25em);
     @include animation-timing-function(ease-in-out);
+    opacity: 1;
   }
   80% {
     @include translateY(-1em);
@@ -51,6 +53,7 @@ $lennon-angle   : -8deg;
 // epigraph: john lennon
 
 #epigraph {
+  @extend %center-content;
   @include background($bg-old no-repeat $bg-pos);
   background-image: $bg-new;
 

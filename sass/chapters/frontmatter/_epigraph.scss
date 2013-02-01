@@ -88,11 +88,13 @@ $lightning-animation: lightning 10s steps(1,end) infinite;
   // pageturn
 
   @include enter {
+    @include animation-name(fadeIn);
     .gray { @include animation(fadeIn 2s ease backwards); }
     .blue { @include animation(slideInLeft 300ms 1s linear backwards); }
     blockquote { @include animation(fadeInLeftBig 300ms 1s ease backwards); }
   }
   @include exit {
+    @include animation-name(fadeOut);
     background-position: $noise-pos, $lightning-hide !important;
     .gray { @include animation(fadeOut 400ms ease forwards); }
     .blue { @include animation(slideOutRight 600ms linear forwards); }

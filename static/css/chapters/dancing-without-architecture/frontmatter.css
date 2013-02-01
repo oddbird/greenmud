@@ -6,8 +6,11 @@
 #epigraph p { font-size: 0.79167rem; line-height: 1.25rem; }
 @media (min-width: 35em) { #epigraph p { font-size: inherit; line-height: inherit; } }
 
-#titlepage [role="main"] { padding-top: 3.75rem; padding-bottom: 1.25rem; text-align: center; text-transform: uppercase; color: #404040; }
-@media (min-height: 18.75em) { #titlepage [role="main"] { padding-top: 7.5rem; padding-bottom: 1; } }
+#titlepage, #epigraph { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+#titlepage [role="main"], #epigraph [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+
+#titlepage [role="main"] { padding-top: 3.75rem; padding-bottom: 3.75rem; text-align: center; text-transform: uppercase; color: #404040; }
+@media (min-height: 18.75em) { .no-flexbox #titlepage [role="main"] { padding-top: 7.5rem; padding-bottom: 1; } }
 #titlepage h1 { font-size: 1.5rem; line-height: 1.875rem; }
 @media (min-width: 40em) { #titlepage h1 { font-size: 1.95833rem; line-height: 2.5rem; }
   #titlepage h2 { margin-bottom: 0.625rem; } }
@@ -28,23 +31,23 @@ html { background: url('../../../images/noise.png?1347221205') repeat, -webkit-l
 
 .enter-prev, .enter-next, .exit-prev, .exit-next { -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; }
 
-@-moz-keyframes lennonIn { 0% { -moz-transform: translateY(-20em); transform: translateY(-20em); -moz-animation-timing-function: ease-in; animation-timing-function: ease-in; }
-  70% { -moz-transform: translateY(0.25em); transform: translateY(0.25em); -moz-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+@-moz-keyframes lennonIn { 0% { -moz-transform: translateY(-20em); transform: translateY(-20em); -moz-animation-timing-function: ease-in; animation-timing-function: ease-in; opacity: 0; }
+  70% { -moz-transform: translateY(0.25em); transform: translateY(0.25em); -moz-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; opacity: 1; }
   80% { -moz-transform: translateY(-1em); transform: translateY(-1em); -moz-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
   100% { -moz-transform: translateY(0em) rotate(-8deg); transform: translateY(0em) rotate(-8deg); -moz-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; } }
 
-@-webkit-keyframes lennonIn { 0% { -webkit-transform: translateY(-20em); transform: translateY(-20em); -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; }
-  70% { -webkit-transform: translateY(0.25em); transform: translateY(0.25em); -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+@-webkit-keyframes lennonIn { 0% { -webkit-transform: translateY(-20em); transform: translateY(-20em); -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; opacity: 0; }
+  70% { -webkit-transform: translateY(0.25em); transform: translateY(0.25em); -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; opacity: 1; }
   80% { -webkit-transform: translateY(-1em); transform: translateY(-1em); -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
   100% { -webkit-transform: translateY(0em) rotate(-8deg); transform: translateY(0em) rotate(-8deg); -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; } }
 
-@-o-keyframes lennonIn { 0% { -o-transform: translateY(-20em); transform: translateY(-20em); -o-animation-timing-function: ease-in; animation-timing-function: ease-in; }
-  70% { -o-transform: translateY(0.25em); transform: translateY(0.25em); -o-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+@-o-keyframes lennonIn { 0% { -o-transform: translateY(-20em); transform: translateY(-20em); -o-animation-timing-function: ease-in; animation-timing-function: ease-in; opacity: 0; }
+  70% { -o-transform: translateY(0.25em); transform: translateY(0.25em); -o-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; opacity: 1; }
   80% { -o-transform: translateY(-1em); transform: translateY(-1em); -o-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
   100% { -o-transform: translateY(0em) rotate(-8deg); transform: translateY(0em) rotate(-8deg); -o-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; } }
 
-@keyframes lennonIn { 0% { transform: translateY(-20em); animation-timing-function: ease-in; }
-  70% { transform: translateY(0.25em); animation-timing-function: ease-in-out; }
+@keyframes lennonIn { 0% { transform: translateY(-20em); animation-timing-function: ease-in; opacity: 0; }
+  70% { transform: translateY(0.25em); animation-timing-function: ease-in-out; opacity: 1; }
   80% { transform: translateY(-1em); animation-timing-function: ease-in-out; }
   100% { transform: translateY(0em) rotate(-8deg); animation-timing-function: ease-in-out; } }
 

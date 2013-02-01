@@ -2,10 +2,12 @@
 // Book Titles
 
 %booktitle {
+  @extend %center-content;
+
   [role="main"] {
     @extend %transition-main;
-    @include rhythm-padding(3,1);
-    @include pagepad(15 6 1);
+    @include rhythm-padding(3);
+    .no-flexbox & { @include pagepad(15 6 1); }
     text-align: center;
     text-transform: uppercase;
     color: color($darker);
@@ -42,14 +44,13 @@ $ch-title-narrow  : .5deg;
 }
 
 %chaptertitle {
+  @extend %center-content;
   overflow-x: hidden;
 
   [role="main"] {
     @extend %transition-main;
     @include set-container-width;
-    @include leader(3);
-    @include trailer(1);
-    @include pagemargin(18 6 1);
+    @include rhythm-margins(3);
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -71,6 +72,8 @@ $ch-title-narrow  : .5deg;
       &::before { @include rotate($ch-title-narrow); }
       &::after { @include rotate(- $ch-title-narrow); }
     }
+
+    .no-flexbox & { @include pagemargin(18 6 1); }
   }
 
   h1, h2 {

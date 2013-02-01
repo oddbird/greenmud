@@ -102,7 +102,8 @@ body_class:
 ------
 
 <!-- meta
-body_class:
+body_class    :
+exit_duration : 600
 -->
 
 > <span> Once upon a Sunday raining afternoon       </span><br />

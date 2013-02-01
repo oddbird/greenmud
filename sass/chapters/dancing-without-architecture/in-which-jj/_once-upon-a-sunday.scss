@@ -41,6 +41,7 @@ $pitpot-deg   : 6deg;
    once-upon-a-sunday */
 
 #once-upon-a-sunday {
+  @extend %center-content;
   @include page-animation($rain-anim);
   @include background($bg $rain-layer);
   @include background($rain-layer $layer1-start, $rain-layer $layer2-start, $noise-layer $bg);
@@ -64,10 +65,7 @@ $pitpot-deg   : 6deg;
     @extend %transition;
     font-style: italic;
 
-    p {
-      @include trailer;
-      @include animation(fadeIn 4s 3s both);
-    }
+    p { @include trailer; }
     span {
       @extend %transition;
       @extend %shrink;
@@ -82,7 +80,6 @@ $pitpot-deg   : 6deg;
 
   .pitpot {
     @include rotate($pitpot-deg);
-    @include animation(pitpotIn 2s 2s both, fadeIn 2s 2s both);
     margin: 0 -200%;
     background: color($off $orange,.75);
     color: color($darkest);
@@ -92,7 +89,6 @@ $pitpot-deg   : 6deg;
   }
 
   .raindrop {
-    @include animation(fadeInDownBig 6s 4s both);
     display: none;
 
     @include at-breakpoint($break) {
@@ -105,5 +101,16 @@ $pitpot-deg   : 6deg;
       left: 0;
       width: columns(5);
     }
+  }
+
+  @include enter{
+    blockquote p { @include animation(fadeIn 4s 3s backwards); }
+    .pitpot { @include animation(pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards); }
+    .raindrop { @include animation(fadeInDownBig 6s 4s backwards); }
+  }
+  @include exit {
+    blockquote p { @include animation(fadeOut 400ms forwards); }
+    .pitpot { @include animation(fadeOut 600ms forwards); }
+    .raindrop { @include animation(fadeOutDownBig 1s forwards); }
   }
 }

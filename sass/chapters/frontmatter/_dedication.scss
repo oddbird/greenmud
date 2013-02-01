@@ -14,6 +14,7 @@ $bg-grad          : radial-gradient( center rhythm(6),
 // dedication
 
 #dedication {
+  @extend %center-content;
   @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
 

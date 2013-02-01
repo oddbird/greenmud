@@ -97,6 +97,7 @@ $slideOut: fadeOut 300ms 1 forwards;
 // title: Into the Green Green Mud
 
 #title {
+  @extend %center-content;
   @include background($noise-layer, $pink-layer-old);
   background: $noise-layer, $pink-layer;
 

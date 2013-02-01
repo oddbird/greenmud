@@ -10,6 +10,27 @@
 }
 
 // ----------------------------------------------------------------------------
+// vertical center
+
+@mixin vertical-center(
+  $container  : '&',
+  $page: '[role="main"]'
+) {
+  $container  : unquote($container);
+  $page: unquote($page);
+
+  #{$container} {
+    @include display-flex;
+    @include align-items(center);
+  }
+  #{$page} { @include flex(1); }
+}
+
+%center-content {
+  @include vertical-center;
+}
+
+// ----------------------------------------------------------------------------
 // chapterwide pageturn mixin
 
 $page-enter     : fadeInLeft fadeInRight;
