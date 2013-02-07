@@ -194,12 +194,18 @@ var GM = (function (GM, $) {
 
                         if (!(prev.hasClass('break')) && prev.attr('href') && !(body.data(prev.data('id')))) {
                             // Ajax Request the Prev Page
-                            $.get(prev.attr('href'), preparePage);
+                            $.get(prev.attr('href'), {
+                                dataType: 'html',
+                                success: preparePage
+                            });
                         }
 
                         if (!(next.hasClass('break')) && next.attr('href') && !(body.data(next.data('id')))) {
                             // Ajax Request the Next Page
-                            $.get(next.attr('href'), preparePage);
+                            $.get(next.attr('href'), {
+                                dataType: 'html',
+                                success: preparePage
+                            });
                         }
                     },
                     replacePage = function (newPage, newPageNav) {
