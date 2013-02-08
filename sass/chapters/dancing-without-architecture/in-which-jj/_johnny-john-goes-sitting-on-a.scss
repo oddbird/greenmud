@@ -1,89 +1,71 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$total-columns  : 3;
-$original-col   : $column-width;
-$column-width   : $column-width +.5;
-
-$grass-location : rhythm(15);
-$grass-color    : color($off $yellow $lighter);
-$grass-dark     : color($off $green);
-$bg-angle       : top;
-$bg-details     : color($black,0),
-                  color($black,0) $grass-location,
-                  color($grass-color,1) $grass-location,
-                  color($grass-color,1) $grass-location + rhythm(2),
-                  color($grass-dark,1) $grass-location * 3;
-$bg-old         : linear-gradient($bg-angle, $bg-details...);
-$bg-new         : convert-gradient($bg-angle, $bg-details...);
+$total-columns  : 11;
 
 $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : 'frontmatter/home/swing.png';
-$sunburst       : '#{$pg}sunburst.png';
-$treetrunk      : '#{$pg}treetrunk.png';
-$rainish        : '#{$pg}rainish.png';
-$border         : '#{$pg}border.png';
-
-$tree-hide      : -30rem 0;
-$tree-pos       : 0 0;
-$sunburst-pos   : top right;
-$border-pos     : 0 $grass-location - .125rem;
-$rainish-pos    : rhythm(-4) rhythm(1);
-$rainish-pos1   : rhythm(-3.5) rhythm(1.5);
-$rainish-pos2   : rhythm(-3) rhythm(1);
-
-$swing-layer    : image-url($swing) no-repeat scroll 0 rhythm(-3.25);
-$sunburst-layer : image-url($sunburst) no-repeat scroll $sunburst-pos;
-$treetrunk-layer: image-url($treetrunk) no-repeat scroll $tree-hide;
-$rainish-layer  : image-url($rainish) no-repeat scroll rhythm(-6) rhythm(8);
-$border-layer   : image-url($border) repeat-x scroll $border-pos;
-$default-back   : $noise-layer, $treetrunk-layer, $border-layer, $bg-old, $rainish-layer, $rainish-layer, $sunburst-layer;
-$default-pos    : 0, $tree-pos, $border-pos, 0, $rainish-pos1, $rainish-pos, $sunburst-pos;
 
 // ----------------------------------------------------------------------------
 // animation
 
-@include keyframes(rainish) {
-  0%, 100% { background-position: $default-pos; }
-  33% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos2, $rainish-pos1, $sunburst-pos; }
-  66% { background-position: 0, $tree-pos, $border-pos, 0, $rainish-pos, $rainish-pos2, $sunburst-pos; }
-}
 
-/* ----------------------------------------------------------------------------
-   johnny-john-goes-sitting-on-a */
+// ----------------------------------------------------------------------------
+// johnny-john-goes-sitting-on-a
 
 #johnny-john-goes-sitting-on-a {
-  @include transition(background 1s);
-  @include background($default-back...);
-  background: $default-back;
-
-  @include at-breakpoint(columns-width(6) $total-columns) {
-    @include page-animation(rainish 3s linear infinite both);
-    background-position: $default-pos;
-  }
+  @extend %center-content;
+  background: -webkit-linear-gradient(top, color($orange lighter) 20%, transparent 20%);
+  background: linear-gradient(to bottom, color($orange lighter) 20%, transparent 20%);
 
   [role="main"] {
     @extend %transition-main;
     @include container;
     @include rhythm-padding(3,4);
-    @include background($swing-layer);
+    max-width: 100%;
   }
 
   // --------------------------------------------------------------------------
   // elements
 
-  i {
-    @include trailer;
-    display: block;
-    margin-left: - space(2);
-    font-weight: bold;
-  }
-
   p {
     @extend %transition;
-    @include prefix(2);
+    @include suffix(1);
+    position: relative;
+    float: right;
+    padding-left: rhythm(.5);
     text-align: right;
+    z-index: 10;
   }
-}
+  span { display: block; }
 
-$column-width: $original-col;
+  // --------------------------------------------------------------------------
+  // tree
+
+  .trunk {
+    position: absolute;
+    top: 0;
+    right: space(4);
+    bottom: 0;
+    left: space(4);
+    background: color($faded $yellow lighter);
+    z-index: 10;
+  }
+
+  .swing {
+    @include translateY(rhythm(-5.25));
+    position: relative;
+    overflow: hidden;
+    height: rhythm(12);
+    background: image-url($swing) no-repeat scroll bottom right;
+    z-index: 20;
+  }
+
+  .rain {
+    @include stretch-y;
+    left: 0;
+    right: space(3);
+    background: color($base,.25);
+  }
+
+}
