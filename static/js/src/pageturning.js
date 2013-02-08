@@ -204,7 +204,7 @@ var GM = (function (GM, $) {
                         }
                     },
                     replacePage = function (newPage, newPageNav) {
-                        body.attr('class', newPage.data('body-class'));
+                        body.removeClass().addClass(newPage.data('body-class'));
                         document.title = title;
                         $('title').text(title);
                         $.scrollTo(0);
