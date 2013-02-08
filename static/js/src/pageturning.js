@@ -24,7 +24,7 @@ var GM = (function (GM, $) {
                     .replace(/<\/(html|head|body|title|meta|script)\>/gi, '</div>');
 
                 // Return
-                return result;
+                return $.parseHTML(result);
             },
             turnToPage = function (page, replaceState) {
                 var state = {},
@@ -194,18 +194,12 @@ var GM = (function (GM, $) {
 
                         if (!(prev.hasClass('break')) && prev.attr('href') && !(body.data(prev.data('id')))) {
                             // Ajax Request the Prev Page
-                            $.get(prev.attr('href'), {
-                                dataType: 'html',
-                                success: preparePage
-                            });
+                            $.get(prev.attr('href'), preparePage);
                         }
 
                         if (!(next.hasClass('break')) && next.attr('href') && !(body.data(next.data('id')))) {
                             // Ajax Request the Next Page
-                            $.get(next.attr('href'), {
-                                dataType: 'html',
-                                success: preparePage
-                            });
+                            $.get(next.attr('href'), preparePage);
                         }
                     },
                     replacePage = function (newPage, newPageNav) {
