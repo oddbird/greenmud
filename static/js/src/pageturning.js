@@ -124,6 +124,7 @@ var GM = (function (GM, $) {
         // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
         $(document).swipe({
             swipeStatus: function (event, phase, direction, distance) {
+                $('.instructions').fadeOut('fast');
                 if (phase === 'end') {
                     if (direction === 'left') {
                         pageControls.first().find('.pagenav .next a').click();

@@ -25,13 +25,13 @@ var GM = (function (GM, $) {
             $(toggle).toggleClass('active');
         };
 
-        $(toggle).click(function () {
+        $(toggle).click(function (e) {
+            e.preventDefault();
             $(this).blur();
             doToggle();
             if (Modernizr.sessionstorage) {
                 sessionStorage.setItem('controls', $(controls).hasClass('active'));
             }
-            return false;
         });
 
         if (Modernizr.sessionstorage && sessionStorage.getItem('controls') === 'true') {
@@ -41,12 +41,25 @@ var GM = (function (GM, $) {
     };
 
     GM.toc = function (toggle, controls) {
-        $(toggle).click(function () {
+        $(toggle).click(function (e) {
+            e.preventDefault();
             $(this).blur();
             $(controls).toggleClass('active');
             $(toggle).toggleClass('active');
-            return false;
         });
+    };
+
+    GM.instructions = function (selector) {
+        if (Modernizr.sessionstorage) {
+            var instructions = $(selector);
+            if (sessionStorage.getItem('instructions') !== 'false') {
+                instructions.fadeIn('fast');
+                sessionStorage.setItem('instructions', 'false');
+                $(document).one('tap keydown', function () {
+                    instructions.fadeOut('fast');
+                });
+            }
+        }
     };
 
     return GM;
