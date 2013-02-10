@@ -76,7 +76,7 @@
   {% block extrahead %}{% endblock %}
 
 </head>
-<body id="greengreenmud-com" {% if resource.meta.body_class %}class="{{ resource.meta.body_class }}"{% endif %}>
+<body id="greengreenmud-com" class="{{ resource.meta.slug }}{% if resource.meta.body_class %} {{ resource.meta.body_class }}{% endif %}">
 {% block body %}
 
   <header role="banner">
