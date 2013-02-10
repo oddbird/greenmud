@@ -54,10 +54,6 @@ var GM = (function (GM, $) {
             var instructions = $(selector);
             if (localStorage.getItem('instructions') !== 'false') {
                 instructions.fadeIn('fast');
-                localStorage.setItem('instructions', 'false');
-                $(document).one('tap keydown', function () {
-                    instructions.fadeOut('fast');
-                });
             }
         }
     };

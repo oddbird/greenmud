@@ -55,45 +55,54 @@ var GM = (function (GM, $) {
                 fallback = function (link) {
                     window.location = link.attr('href');
                 };
-            stateChange = false;
-            // Prev/Next page-turns use classes for css-animation
-            if (thisLink.parent().hasClass('prev')) {
-                pageturn = 'prev';
-            } else if (thisLink.parent().hasClass('next')) {
-                pageturn = 'next';
-            }
-            // Shift-pageturns go directly to prev/next chapter
-            if (e.shiftKey && thisLink.data('chapter')) {
+            if ($('.instructions').is(':visible')) {
+                $('.instructions').fadeOut('fast');
+                body.removeClass('swiping-next swiping-prev');
+                if (Modernizr.localstorage) {
+                    localStorage.setItem('instructions', 'false');
+                }
                 e.preventDefault();
-                window.location = thisLink.data('chapter');
             } else {
-                // Perform internal page-state change, if applicable
-                if (internalPages > 1 && ((pageturn === 'next' && pageState < internalPages) || (pageturn === 'prev' && pageState > 1))) {
+                stateChange = false;
+                // Prev/Next page-turns use classes for css-animation
+                if (thisLink.parent().hasClass('prev')) {
+                    pageturn = 'prev';
+                } else if (thisLink.parent().hasClass('next')) {
+                    pageturn = 'next';
+                }
+                // Shift-pageturns go directly to prev/next chapter
+                if (e.shiftKey && thisLink.data('chapter')) {
                     e.preventDefault();
-                    if (pageturn === 'next') {
-                        pageState++;
-                    } else if (pageturn === 'prev') {
-                        pageState--;
-                    }
-                    $(pageSelector).attr('data-page-state', pageState);
-                // Continue as normal for external links, cmd clicks, etc.
-                } else if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
-                    return true;
-                } else if (href) {
-                    e.preventDefault();
-                    if (thisLink.hasClass('break')) {
-                        fallback(thisLink);
-                    } else {
-                        if (thisLink.data('id') && body.data(thisLink.data('id')) && History.enabled) {
-                            $('#toc, a[rel="contents"]').removeClass('active');
-                            page = body.data(thisLink.data('id'));
-                            turnToPage(page);
-                        } else {
-                            fallback(thisLink);
-                        }
-                    }
+                    window.location = thisLink.data('chapter');
                 } else {
-                    e.preventDefault();
+                    // Perform internal page-state change, if applicable
+                    if (internalPages > 1 && ((pageturn === 'next' && pageState < internalPages) || (pageturn === 'prev' && pageState > 1))) {
+                        e.preventDefault();
+                        if (pageturn === 'next') {
+                            pageState++;
+                        } else if (pageturn === 'prev') {
+                            pageState--;
+                        }
+                        $(pageSelector).attr('data-page-state', pageState);
+                    // Continue as normal for external links, cmd clicks, etc.
+                    } else if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
+                        return true;
+                    } else if (href) {
+                        e.preventDefault();
+                        if (thisLink.hasClass('break')) {
+                            fallback(thisLink);
+                        } else {
+                            if (thisLink.data('id') && body.data(thisLink.data('id')) && History.enabled) {
+                                $('#toc, a[rel="contents"]').removeClass('active');
+                                page = body.data(thisLink.data('id'));
+                                turnToPage(page);
+                            } else {
+                                fallback(thisLink);
+                            }
+                        }
+                    } else {
+                        e.preventDefault();
+                    }
                 }
             }
         });
@@ -124,7 +133,6 @@ var GM = (function (GM, $) {
         // SWIPELEFT or SWIPERIGHT gestures trigger page-turn click
         $(document).swipe({
             swipeStatus: function (event, phase, direction, distance) {
-                $('.instructions').fadeOut('fast');
                 if (phase === 'end') {
                     if (direction === 'left') {
                         pageControls.first().find('.pagenav .next a').click();
