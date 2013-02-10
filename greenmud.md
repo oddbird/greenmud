@@ -124,20 +124,23 @@ exit_duration : 600
 body_class:
 -->
 
-<span>Johnny-John</span>
-<span>goes</span>
-<span>sitting on</span>
-<span>a</span>
-<span>Sunday</span>
-<span>bench in</span>
-<span>the</span>
-<span>parkest</span>
-<span>of trees.</span>
-
 <div class="rain"></div>
 <div class="leaves"></div>
 <div class="trunk"></div>
-<div class="swing"></div>
+<div class="words">
+  <p>
+    <span>Johnny-John</span>
+    <span>goes</span>
+    <span>sitting on</span>
+    <span>a</span>
+    <span>Sunday</span>
+    <span>bench in</span>
+    <span>the</span>
+    <span>parkest</span>
+    <span>of trees.</span>
+  </p>
+  <div class="swing"></div>
+</div>
 
 ------
 
