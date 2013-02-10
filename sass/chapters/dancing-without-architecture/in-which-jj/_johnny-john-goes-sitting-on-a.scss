@@ -16,7 +16,6 @@ $swing-height   : px-to-rhythm(714px);
 // animation
 
 
-
 // ----------------------------------------------------------------------------
 // johnny-john-goes-sitting-on-a
 
@@ -58,11 +57,9 @@ $swing-height   : px-to-rhythm(714px);
   // tree
 
   .rain {
-    @include stretch(space(-2), space(6), space(-2), space(-2));
+    @include stretch(space(-4), space(6), 0, space(-4));
     @include transition(right 300ms);
-    @include background(
-      image-url($rainish) no-repeat right
-    );
+    @include background(image-url($rainish) no-repeat right);
     @include background-size(cover);
   }
 
