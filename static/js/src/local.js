@@ -50,11 +50,11 @@ var GM = (function (GM, $) {
     };
 
     GM.instructions = function (selector) {
-        if (Modernizr.sessionstorage) {
+        if (Modernizr.localstorage) {
             var instructions = $(selector);
-            if (sessionStorage.getItem('instructions') !== 'false') {
+            if (localStorage.getItem('instructions') !== 'false') {
                 instructions.fadeIn('fast');
-                sessionStorage.setItem('instructions', 'false');
+                localStorage.setItem('instructions', 'false');
                 $(document).one('tap keydown', function () {
                     instructions.fadeOut('fast');
                 });
