@@ -25,13 +25,13 @@ var GM = (function (GM, $) {
             $(toggle).toggleClass('active');
         };
 
-        $(toggle).click(function (e) {
-            e.preventDefault();
+        $(toggle).click(function () {
             $(this).blur();
             doToggle();
             if (Modernizr.sessionstorage) {
                 sessionStorage.setItem('controls', $(controls).hasClass('active'));
             }
+            return false;
         });
 
         if (Modernizr.sessionstorage && sessionStorage.getItem('controls') === 'true') {
@@ -41,11 +41,11 @@ var GM = (function (GM, $) {
     };
 
     GM.toc = function (toggle, controls) {
-        $(toggle).click(function (e) {
-            e.preventDefault();
+        $(toggle).click(function () {
             $(this).blur();
             $(controls).toggleClass('active');
             $(toggle).toggleClass('active');
+            return false;
         });
     };
 
