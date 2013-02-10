@@ -6,13 +6,16 @@ $total-columns  : 11;
 $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : '#{$pg}swing.svg';
 $trunk          : '#{$pg}trunk.svg';
-$leaves         : '#{$pg}leaves.svg';
+$leaves        : '#{$pg}leaves.svg';
+$rainish        : '#{$pg}rainish.svg';
 
 $swing-width    : px-to-rhythm(162px);
 $swing-height   : px-to-rhythm(714px);
 
 // ----------------------------------------------------------------------------
 // animation
+
+
 
 // ----------------------------------------------------------------------------
 // johnny-john-goes-sitting-on-a
@@ -55,11 +58,12 @@ $swing-height   : px-to-rhythm(714px);
   // tree
 
   .rain {
-    @include stretch-y;
+    @include stretch(space(-2), space(6), space(-2), space(-2));
     @include transition(right 300ms);
-    left: 0;
-    right: space(7);
-    background: color($base,.25);
+    @include background(
+      image-url($rainish) no-repeat right
+    );
+    @include background-size(cover);
   }
 
   .leaves {
@@ -81,7 +85,7 @@ $swing-height   : px-to-rhythm(714px);
 
   @include breakpoint(40em) {
     .words { @include suffix(1); }
-    .rain { right: space(5); }
     .trunk { right: space(4); }
+    .rain { right: space(4); }
   }
 }
