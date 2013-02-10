@@ -134,9 +134,10 @@ body_class:
 <span>parkest</span>
 <span>of trees.</span>
 
+<div class="rain"></div>
+<div class="leaves"></div>
 <div class="trunk"></div>
 <div class="swing"></div>
-<div class="rain"></div>
 
 ------
 

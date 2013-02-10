@@ -110,14 +110,19 @@ html { background: #fafaea; }
 #once-upon-a-sunday.exit-prev .pitpot, #once-upon-a-sunday.exit-next .pitpot { -webkit-animation: fadeOut 600ms forwards; -moz-animation: fadeOut 600ms forwards; -o-animation: fadeOut 600ms forwards; animation: fadeOut 600ms forwards; }
 #once-upon-a-sunday.exit-prev .raindrop, #once-upon-a-sunday.exit-next .raindrop { -webkit-animation: fadeOutDownBig 1s forwards; -moz-animation: fadeOutDownBig 1s forwards; -o-animation: fadeOutDownBig 1s forwards; animation: fadeOutDownBig 1s forwards; }
 
-#johnny-john-goes-sitting-on-a { background: -webkit-linear-gradient(top, #ffd8b2 20%, transparent 20%); background: linear-gradient(to bottom, #ffd8b2 20%, transparent 20%); }
-#johnny-john-goes-sitting-on-a [role="main"] { max-width: 43rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 3.75rem; padding-bottom: 5rem; max-width: 100%; }
+#johnny-john-goes-sitting-on-a { position: relative; }
+#johnny-john-goes-sitting-on-a [role="main"] { max-width: 43rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; padding-bottom: 2.5rem; max-width: 100%; }
 #johnny-john-goes-sitting-on-a [role="main"]:after { content: ""; display: table; clear: both; }
-#johnny-john-goes-sitting-on-a p { padding-right: 9.30233%; position: relative; float: right; padding-left: 0.625rem; text-align: right; z-index: 10; }
+#johnny-john-goes-sitting-on-a p { position: relative; float: right; padding-left: 0.625rem; text-align: right; z-index: 10; }
 #johnny-john-goes-sitting-on-a span { display: block; }
-#johnny-john-goes-sitting-on-a .trunk { position: absolute; top: 0; right: 37.2093%; bottom: 0; left: 37.2093%; background: #f0f0c1; z-index: 10; }
-#johnny-john-goes-sitting-on-a .swing { -webkit-transform: translateY(-6.5625rem); -moz-transform: translateY(-6.5625rem); -ms-transform: translateY(-6.5625rem); -o-transform: translateY(-6.5625rem); transform: translateY(-6.5625rem); position: relative; overflow: hidden; height: 15rem; background: url('../../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll bottom right; z-index: 20; }
-#johnny-john-goes-sitting-on-a .rain { position: absolute; top: 0; bottom: 0; left: 0; right: 27.90698%; background: rgba(64, 64, 64, 0.25); }
+#johnny-john-goes-sitting-on-a .rain { position: absolute; top: 0; bottom: 0; -webkit-transition: right 300ms; -moz-transition: right 300ms; -o-transition: right 300ms; transition: right 300ms; left: 0; right: 37.2093%; background: rgba(64, 64, 64, 0.25); }
+#johnny-john-goes-sitting-on-a .leaves { position: absolute; left: 0; right: 0; top: 0; height: 20%; background: #ffd8b2; }
+#johnny-john-goes-sitting-on-a .trunk { position: absolute; top: 0; bottom: 0; -webkit-transition: left 300ms, right 300ms; -moz-transition: left 300ms, right 300ms; -o-transition: left 300ms, right 300ms; transition: left 300ms, right 300ms; left: 0; right: 74.4186%; background: #f0f0c1; }
+#johnny-john-goes-sitting-on-a .swing { display: table-cell; *display: block; *zoom: 1; float: none; _position: relative; _left: -3px; _margin-right: -3px; width: auto; -webkit-transform: translateY(-6.5625rem); -moz-transform: translateY(-6.5625rem); -ms-transform: translateY(-6.5625rem); -o-transform: translateY(-6.5625rem); transform: translateY(-6.5625rem); position: relative; height: 15rem; margin-right: 18.60465%; background: url('../../../images/frontmatter/home/swing.png?1347221205') no-repeat scroll bottom right; z-index: 10; }
+#johnny-john-goes-sitting-on-a .swing:after { content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "; visibility: hidden; clear: both; height: 0 !important; display: block; line-height: 0; }
+@media (min-width: 30em) { #johnny-john-goes-sitting-on-a .trunk { left: 27.90698%; right: 46.51163%; } }
+@media (min-width: 45em) { #johnny-john-goes-sitting-on-a .rain { right: 27.90698%; }
+  #johnny-john-goes-sitting-on-a .trunk { left: 37.2093%; right: 37.2093%; } }
 
 @-moz-keyframes drops { 0%, 24% { top: -20%; }
   75%, 100% { top: 100%; } }

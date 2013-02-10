@@ -15,13 +15,12 @@ $swing          : 'frontmatter/home/swing.png';
 
 #johnny-john-goes-sitting-on-a {
   @extend %center-content;
-  background: -webkit-linear-gradient(top, color($orange lighter) 20%, transparent 20%);
-  background: linear-gradient(to bottom, color($orange lighter) 20%, transparent 20%);
+  position: relative;
 
   [role="main"] {
     @extend %transition-main;
     @include container;
-    @include rhythm-padding(3,4);
+    @include rhythm-padding(2,2);
     max-width: 100%;
   }
 
@@ -30,7 +29,6 @@ $swing          : 'frontmatter/home/swing.png';
 
   p {
     @extend %transition;
-    @include suffix(1);
     position: relative;
     float: right;
     padding-left: rhythm(.5);
@@ -42,30 +40,69 @@ $swing          : 'frontmatter/home/swing.png';
   // --------------------------------------------------------------------------
   // tree
 
-  .trunk {
-    position: absolute;
-    top: 0;
-    right: space(4);
-    bottom: 0;
-    left: space(4);
-    background: color($faded $yellow lighter);
-    z-index: 10;
-  }
-
-  .swing {
-    @include translateY(rhythm(-5.25));
-    position: relative;
-    overflow: hidden;
-    height: rhythm(12);
-    background: image-url($swing) no-repeat scroll bottom right;
-    z-index: 20;
+  @mixin lastunit {
+    display: table-cell;
+    *display: block;
+    *zoom: 1;
+    float: none;
+    _position: relative;
+    _left: -3px;
+    _margin-right: -3px;
+    width: auto;
+    &:after {
+      content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+      visibility: hidden;
+      clear: both;
+      height: 0 !important;
+      display: block;
+      line-height: 0;
+    }
   }
 
   .rain {
     @include stretch-y;
+    @include transition(right 300ms);
     left: 0;
-    right: space(3);
+    right: space(4);
     background: color($base,.25);
   }
 
+  .leaves {
+    @include stretch-x;
+    top: 0;
+    height: 20%;
+    background: color($orange lighter);
+  }
+
+  .trunk {
+    @include stretch-y;
+    @include transition(left 300ms, right 300ms);
+    left: 0;
+    right: space(8);
+    background: color($faded $yellow lighter);
+  }
+
+  .swing {
+    @include lastunit;
+    @include translateY(rhythm(-5.25));
+    position: relative;
+    height: rhythm(12);
+    margin-right: space(2);
+    background: image-url($swing) no-repeat scroll bottom right;
+    z-index: 10;
+  }
+
+  @include breakpoint(30em) {
+    .trunk {
+      left: space(3);
+      right: space(5);
+    }
+  }
+  @include breakpoint(45em) {
+    .rain { right: space(3); }
+    .trunk {
+      left: space(4);
+      right: space(4);
+    }
+  }
 }
