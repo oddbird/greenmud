@@ -6,8 +6,9 @@ $total-columns  : 11;
 $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : '#{$pg}swing.svg';
 $trunk          : '#{$pg}trunk.svg';
-$leaves        : '#{$pg}leaves.svg';
+$leaves         : '#{$pg}leaves.svg';
 $rainish        : '#{$pg}rainish.svg';
+$burst          : '#{$pg}burst.svg';
 
 $swing-width    : px-to-rhythm(162px);
 $swing-height   : px-to-rhythm(714px);
@@ -21,6 +22,11 @@ $swing-height   : px-to-rhythm(714px);
 
 #johnny-john-goes-sitting-on-a {
   @extend %center-content;
+  @include background(
+    image-url($burst) no-repeat bottom,
+    linear-gradient(left, color($faded $yellow lighter), color($faded $yellow lighter,0))
+  );
+  @include background-size(cover, auto);
   position: relative;
 
   [role="main"] {

@@ -12,7 +12,7 @@ $ch: 'dancing/in-which-jj/';
 /* ----------------------------------------------------------------------------
    general */
 
-$bg             : color($faded $yellow $hint);
+$bg             : color($faded $yellow lightest);
 
 html { @include back($bg); }
 
