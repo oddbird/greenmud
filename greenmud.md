@@ -60,7 +60,7 @@ exit_duration : 600
 -->
 
 ## Book 1
-# Dancing Without Architecture.
+# Dancing Without Architecture
 
 ------
 
@@ -84,8 +84,8 @@ exit_duration : 1000
 ------
 
 <!-- chapter
-chapter       : 'In Which JJ.'
-description   : 'Chapter 1: In Which JJ.'
+chapter       : 'In Which JJ'
+description   : 'Chapter 1: In Which JJ'
 
 voice         : jj
 -->
@@ -95,7 +95,7 @@ body_class:
 -->
 
 ## Chapter 1
-# In Which JJ.
+# In Which JJ
 
 ------
 
@@ -419,8 +419,8 @@ Do without!
 ------
 
 <!-- chapter
-chapter       : 'Daymares, Poor Boy.'
-description   : 'Chapter 2: Daymares, Poor Boy.'
+chapter       : 'Daymares, Poor Boy'
+description   : 'Chapter 2: Daymares, Poor Boy'
 -->
 
 <!-- meta
@@ -428,7 +428,7 @@ body_class:
 -->
 
 ## Chapter 2
-# Daymares, Poor Boy.
+# Daymares, Poor Boy
 
 ------
 
@@ -473,8 +473,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'The Susy Within.'
-description   : 'Chapter 3: The Susy Within.'
+chapter       : 'The Susy Within'
+description   : 'Chapter 3: The Susy Within'
 
 voice         : susy
 -->
@@ -484,7 +484,7 @@ body_class:
 -->
 
 ## Chapter 3
-# The Susy Within.
+# The Susy Within
 
 ------
 
@@ -682,8 +682,8 @@ with an exposure to match the length of the moon-lit night.
 ------
 
 <!-- chapter
-chapter       : 'Yes Mother, Goodnight.'
-description   : 'Chapter 4: Yes Mother, Goodnight.'
+chapter       : 'Yes Mother, Goodnight'
+description   : 'Chapter 4: Yes Mother, Goodnight'
 -->
 
 <!-- meta
@@ -691,7 +691,7 @@ body_class:
 -->
 
 ## Chapter 4
-# Yes Mother, Goodnight.
+# Yes Mother, Goodnight
 
 ------
 
@@ -723,8 +723,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'Bring Down the House House.'
-description   : 'Chapter 5: Bring Down the House House.'
+chapter       : 'Bring Down the House House'
+description   : 'Chapter 5: Bring Down the House House'
 
 voice         : jj
 -->
@@ -734,7 +734,7 @@ body_class:
 -->
 
 ## Chapter 5
-# Bring Down the House House.
+# Bring Down the House House
 
 ------
 
@@ -957,8 +957,8 @@ bring down the house house.
 ------
 
 <!-- chapter
-chapter       : 'Dance Together and Cry.'
-description   : 'Chapter 6: Dance Together and Cry.'
+chapter       : 'Dance Together and Cry'
+description   : 'Chapter 6: Dance Together and Cry'
 -->
 
 <!-- meta
@@ -966,7 +966,7 @@ body_class:
 -->
 
 ## Chapter 6
-# Dance Together and Cry.
+# Dance Together and Cry
 
 ------
 
@@ -1000,8 +1000,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'Forever Amen.'
-description   : 'Chapter 7: Forever Amen.'
+chapter       : 'Forever Amen'
+description   : 'Chapter 7: Forever Amen'
 
 voice         : susy
 -->
@@ -1011,7 +1011,7 @@ body_class:
 -->
 
 ## Chapter 7
-# Forever Amen.
+# Forever Amen
 
 ------
 
@@ -1200,8 +1200,8 @@ Take the weekend off and write a novel.
 ------
 
 <!-- chapter
-chapter       : 'Twice Three, Plus One.'
-description   : 'Chapter 8: Twice Three, Plus One.'
+chapter       : 'Twice Three, Plus One'
+description   : 'Chapter 8: Twice Three, Plus One'
 -->
 
 <!-- meta
@@ -1209,7 +1209,7 @@ body_class:
 -->
 
 ## Chapter 8
-# Twice Three, Plus One.
+# Twice Three, Plus One
 
 ------
 
@@ -1262,8 +1262,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'Love in the Time of Dandelions.'
-description   : 'Chapter 9: Love in the Time of Dandelions.'
+chapter       : 'Love in the Time of Dandelions'
+description   : 'Chapter 9: Love in the Time of Dandelions'
 
 voice         : jj
 -->
@@ -1273,7 +1273,7 @@ body_class:
 -->
 
 ## Chapter 9
-# Love in the Time of Dandelions.
+# Love in the Time of Dandelions
 
 ------
 
@@ -1475,8 +1475,8 @@ and make it jump jump jump jump jump jump jump!
 ------
 
 <!-- chapter
-chapter       : 'Those Nice Bright Colors.'
-description   : 'Chapter 10: Those Nice Bright Colors.'
+chapter       : 'Those Nice Bright Colors'
+description   : 'Chapter 10: Those Nice Bright Colors'
 -->
 
 <!-- meta
@@ -1484,7 +1484,7 @@ body_class:
 -->
 
 ## Chapter 10
-# Those Nice Bright Colors.
+# Those Nice Bright Colors
 
 ------
 
@@ -1516,8 +1516,8 @@ Also:
 ------
 
 <!-- chapter
-chapter       : 'Into the Green Green Mud.'
-description   : 'Chapter 11: Into the Green Green Mud.'
+chapter       : 'Into the Green Green Mud'
+description   : 'Chapter 11: Into the Green Green Mud'
 
 voice         : jj
 -->
@@ -1527,7 +1527,7 @@ body_class:
 -->
 
 ## Chapter 11
-# Into the Green Green Mud.
+# Into the Green Green Mud
 
 ------
 
@@ -1746,8 +1746,8 @@ Life is a miracle after all.
 ------
 
 <!-- chapter
-chapter       : 'Given Time, Silence.'
-description   : 'Chapter 12: Given Time, Silence.'
+chapter       : 'Given Time, Silence'
+description   : 'Chapter 12: Given Time, Silence'
 -->
 
 <!-- meta
@@ -1755,7 +1755,7 @@ body_class:
 -->
 
 ## Chapter 12
-# Given Time, Silence.
+# Given Time, Silence
 
 ------
 
@@ -1891,7 +1891,7 @@ root_url      : ../
 -->
 
 ## Book 2
-# This EverAfter Life.
+# This EverAfter Life
 
 ------
 
@@ -1912,8 +1912,8 @@ root_url      : ../
 ------
 
 <!-- chapter
-chapter       : 'Stranger Than a Sunny Day on the Beach.'
-description   : 'Chapter 13: Stranger Than a Sunny Day on the Beach.'
+chapter       : 'Stranger Than a Sunny Day on the Beach'
+description   : 'Chapter 13: Stranger Than a Sunny Day on the Beach'
 -->
 
 <!-- meta
@@ -1921,7 +1921,7 @@ body_class:
 -->
 
 ## Chapter 13
-# Stranger Than a Sunny Day on the Beach.
+# Stranger Than a Sunny Day on the Beach
 
 ------
 
@@ -1969,8 +1969,8 @@ Sincerely, JJJJJJjjj
 ------
 
 <!-- chapter
-chapter       : 'Once upon a Sunday Raining.'
-description   : 'Chapter 14: Once upon a Sunday Raining.'
+chapter       : 'Once upon a Sunday Raining'
+description   : 'Chapter 14: Once upon a Sunday Raining'
 
 voice         : susy
 -->
@@ -1980,7 +1980,7 @@ body_class:
 -->
 
 ## Chapter 14
-# Once upon a Sunday Raining.
+# Once upon a Sunday Raining
 
 ------
 
@@ -2271,8 +2271,8 @@ Someone's got to do it.
 ------
 
 <!-- chapter
-chapter       : 'Open and Empty.'
-description   : 'Chapter 15: Open and Empty.'
+chapter       : 'Open and Empty'
+description   : 'Chapter 15: Open and Empty'
 -->
 
 <!-- meta
@@ -2280,7 +2280,7 @@ body_class:
 -->
 
 ## Chapter 15
-# Open and Empty.
+# Open and Empty
 
 ------
 
@@ -2314,8 +2314,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'Not a Susy in Sight for Miles and Miles.'
-description   : 'Chapter 16: Not a Susy in Sight for Miles and Miles.'
+chapter       : 'Not a Susy in Sight for Miles and Miles'
+description   : 'Chapter 16: Not a Susy in Sight for Miles and Miles'
 
 voice         : jj
 -->
@@ -2325,7 +2325,7 @@ body_class:
 -->
 
 ## Chapter 16
-# Not a Susy in Sight for Miles and Miles.
+# Not a Susy in Sight for Miles and Miles
 
 ------
 
@@ -2581,8 +2581,8 @@ Let us bow our heads and cry.
 ------
 
 <!-- chapter
-chapter       : 'Of Blood.'
-description   : 'Chapter 17: Of Blood.'
+chapter       : 'Of Blood'
+description   : 'Chapter 17: Of Blood'
 -->
 
 <!-- meta
@@ -2590,7 +2590,7 @@ body_class:
 -->
 
 ## Chapter 17
-# Of Blood.
+# Of Blood
 
 ------
 
@@ -2608,8 +2608,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'Anon and Anon.'
-description   : 'Chapter 18: Anon and Anon.'
+chapter       : 'Anon and Anon'
+description   : 'Chapter 18: Anon and Anon'
 
 voice         : susy
 -->
@@ -2619,7 +2619,7 @@ body_class:
 -->
 
 ## Chapter 18
-# Anon and Anon.
+# Anon and Anon
 
 ------
 
@@ -2846,8 +2846,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'There and Back Again, Forever.'
-description   : 'Chapter 20: There and Back Again, Forever.'
+chapter       : 'There and Back Again, Forever'
+description   : 'Chapter 20: There and Back Again, Forever'
 
 voice         : jj
 -->
@@ -2857,7 +2857,7 @@ body_class:
 -->
 
 ## Chapter 20
-# There and Back Again, Forever.
+# There and Back Again, Forever
 
 ------
 
@@ -3091,8 +3091,8 @@ Nothing is nothing.
 ------
 
 <!-- chapter
-chapter       : 'Nothing.'
-description   : 'Chapter 21: Nothing.'
+chapter       : 'Nothing'
+description   : 'Chapter 21: Nothing'
 -->
 
 <!-- meta
@@ -3100,7 +3100,7 @@ body_class:
 -->
 
 ## Chapter 21
-# Nothing.
+# Nothing
 
 ------
 
@@ -3109,8 +3109,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'Under the Sky is Gray.'
-description   : 'Chapter 22: Under the Sky is Gray.'
+chapter       : 'Under the Sky is Gray'
+description   : 'Chapter 22: Under the Sky is Gray'
 
 voice         : susy
 -->
@@ -3120,7 +3120,7 @@ body_class:
 -->
 
 ## Chapter 22
-# Under the Sky is Gray.
+# Under the Sky is Gray
 
 ------
 
@@ -3241,8 +3241,8 @@ She rolls it around on her tongue as she falls off the edge of awake.
 ------
 
 <!-- chapter
-chapter       : 'Still.'
-description   : 'Chapter 23: Still.'
+chapter       : 'Still'
+description   : 'Chapter 23: Still'
 -->
 
 <!-- meta
@@ -3250,7 +3250,7 @@ body_class:
 -->
 
 ## Chapter 23
-# Still.
+# Still
 
 ------
 
@@ -3276,8 +3276,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'Whence, from Two.'
-description   : 'Chapter 24: Whence, from Two.'
+chapter       : 'Whence, from Two'
+description   : 'Chapter 24: Whence, from Two'
 -->
 
 <!-- meta
@@ -3285,7 +3285,7 @@ body_class:
 -->
 
 ## Chapter 24
-# Whence, from Two.
+# Whence, from Two
 
 ------
 
@@ -3316,8 +3316,8 @@ body_class:
 ------
 
 <!-- chapter
-chapter       : 'This Road Full Glittered.'
-description   : 'Chapter 25: This Road Full Glittered.'
+chapter       : 'This Road Full Glittered'
+description   : 'Chapter 25: This Road Full Glittered'
 -->
 
 <!-- meta
@@ -3325,7 +3325,7 @@ body_class:
 -->
 
 ## Chapter 25
-# This Road Full Glittered.
+# This Road Full Glittered
 
 ------
 
@@ -3361,8 +3361,8 @@ JJ and Susy on the bench and sighing:
 ------
 
 <!-- chapter
-chapter       : 'Over Un-Thought Waters.'
-description   : 'Chapter 26: Over Un-Thought Waters.'
+chapter       : 'Over Un-Thought Waters'
+description   : 'Chapter 26: Over Un-Thought Waters'
 -->
 
 <!-- meta
@@ -3370,7 +3370,7 @@ body_class:
 -->
 
 ## Chapter 26
-# Over Un-Thought Waters.
+# Over Un-Thought Waters
 
 ------
 
