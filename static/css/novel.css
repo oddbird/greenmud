@@ -1079,7 +1079,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 /* ---------------------------------------------------------------------------- controls */
 #toggle, .meta a:link, .meta a:visited, [rel="prev"], [rel="next"] { position: relative; width: 1.875rem; height: 1.875rem; overflow: hidden; }
-#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1.25rem; line-height: 1.875rem; display: inline-block; width: 1.875rem; margin-right: 1em; text-align: center; vertical-align: middle; }
+#toggle:before, .meta a:link:before, .meta a:visited:before, [rel="prev"]:before, [rel="next"]:before { font-size: 1rem; line-height: 1.875rem; display: inline-block; width: 1.875rem; margin-right: 1em; text-align: center; vertical-align: middle; }
 
 .controls a:link, #toc a:link, .controls a:visited, #toc a:visited { color: #dfdfdf; }
 .no-touch .controls a:hover, .controls .no-touch a:hover, .no-touch #toc a:hover, #toc .no-touch a:hover, .no-touch .controls a:focus, .controls .no-touch a:focus, .no-touch #toc a:focus, #toc .no-touch a:focus, .no-touch .controls a:active, .controls .no-touch a:active, .no-touch #toc a:active, #toc .no-touch a:active { color: #b9b9b9; }
