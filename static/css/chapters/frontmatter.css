@@ -317,9 +317,12 @@ html { background: #eef6ee; }
 #epigraph.exit-prev .blue, #epigraph.exit-next .blue { -webkit-animation: slideOutRight 600ms linear forwards; -moz-animation: slideOutRight 600ms linear forwards; -o-animation: slideOutRight 600ms linear forwards; animation: slideOutRight 600ms linear forwards; }
 #epigraph.exit-prev blockquote, #epigraph.exit-next blockquote { -webkit-animation: fadeOutLeft 400ms ease forwards; -moz-animation: fadeOutLeft 400ms ease forwards; -o-animation: fadeOutLeft 400ms ease forwards; animation: fadeOutLeft 400ms ease forwards; }
 
+#about [role="main"] { max-width: 31rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 12.5rem; padding-bottom: 2.5rem; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll center 2.5rem; }
+#about [role="main"]:after { content: ""; display: table; clear: both; }
 #about .vcard { font-size: 0.79167rem; line-height: 1.25rem; }
 #about .vcard :first-line { font-weight: bold; }
+@media (min-width: 40em) { #about .vcard:nth-child(even) { width: 48.3871%; float: left; margin-right: 3.22581%; }
+  #about .vcard:nth-child(2n+3) { width: 48.3871%; float: right; margin-right: 0; } }
 #about .fn { font-size: 1rem; line-height: 1.25rem; text-transform: uppercase; }
-#about .eric { padding-top: 8.75rem; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
 
 /* ---------------------------------------------------------------------------- 404 */

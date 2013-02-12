@@ -1,14 +1,21 @@
 // ----------------------------------------------------------------------------
 // settings
 
-$pg       : '#{$ch}about/';
-$faces    : '#{$pg}faces.png';
-$eric     : '#{$pg}eric.png';
+$total-columns  : 8;
+
+$pg             : '#{$ch}about/';
+$faces          : '#{$pg}faces.png';
 
 // ----------------------------------------------------------------------------
 // about
 
 #about {
+
+  [role="main"] {
+    @include container;
+    @include rhythm-padding(10,2);
+    background: image-url($faces) no-repeat scroll center rhythm(2);
+  }
 
   // --------------------------------------------------------------------------
   // elements
@@ -17,27 +24,15 @@ $eric     : '#{$pg}eric.png';
     @extend %type;
     @include adjust-font-size-to($smallpx,1);
     :first-line { font-weight: bold; }
+
+    @include breakpoint(40em) {
+      &:nth-child(even) { @include span-columns(4); }
+      &:nth-child(2n+3) { @include span-columns(4 omega); }
+    }
   }
   .fn {
     @include adjust-font-size-to($normpx,1);
     text-transform: uppercase;
   }
-  .eric {
-    @include padding-leader(7);
-    background: image-url($faces) no-repeat scroll top;
-  }
 
-  // --------------------------------------------------------------------------
-  // breakpoints
-
-  // @include at-breakpoint($template-break) {
-  //   .eric {
-  //     @include pad(3,1);
-  //     @include padding-leader(2);
-  //     @include padding-trailer(2);
-  //     background: image-url($eric) no-repeat scroll top left;
-  //   }
-  //   .oddbird, .teacup { @include span-columns(5); }
-  //   .teacup { @include omega; }
-  // }
 }
