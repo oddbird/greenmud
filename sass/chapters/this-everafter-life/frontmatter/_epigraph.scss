@@ -3,20 +3,18 @@
 
 $total-columns: 8;
 
-$bg-angle   : 95deg;
+$bg-angle   : 355deg;
 $bg-details : color($blue 25%, .5),
               color(mix($pink,$blue) $light, .5),
               color($pink $lighter, .5) 60%,
               color($pink $lighter, 0);
-$bg-old     : linear-gradient($bg-angle, $bg-details...);
-$bg-new     : convert-gradient($bg-angle, $bg-details...);
+$bg-grad    : linear-gradient($bg-angle, $bg-details...);
 
 /* ----------------------------------------------------------------------------
    epigraph: amiri baraka */
 
 #epigraph {
-  @include background($bg-old bottom right);
-  background: $bg-new bottom right;
+  @include background($bg-grad bottom right);
 
   [role="main"] {
     @extend %transition-main;

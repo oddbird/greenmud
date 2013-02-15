@@ -24,7 +24,7 @@ $swing-height   : px-to-rhythm(714px);
   @extend %center-content;
   @include background(
     image-url($burst) no-repeat bottom,
-    linear-gradient(left, color($faded $yellow lighter), color($faded $yellow lighter,0))
+    linear-gradient(to right, color($faded $yellow lighter), color($faded $yellow lighter,0))
   );
   @include background-size(cover, auto);
   position: relative;

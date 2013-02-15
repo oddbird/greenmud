@@ -4,10 +4,9 @@
 $total-columns: $toc-cols*2;
 
 $bg           : color($yellow $hint);
-$bg-angle     : 260deg;
+$bg-angle     : 190deg;
 $bg-details   : color($yellow $hint), color($yellow $hint), color($orange $lightest);
-$bg-old       : linear-gradient($bg-angle, $bg-details);
-$bg-new       : convert-gradient($bg-angle, $bg-details);
+$bg-grad      : linear-gradient($bg-angle, $bg-details);
 
 // ----------------------------------------------------------------------------
 // animation
@@ -29,8 +28,7 @@ $bg-new       : convert-gradient($bg-angle, $bg-details);
   @extend %center-content;
   @extend %toc-counter;
   @include back($bg);
-  @include background($scribble-layer, $noise-layer, $bg-old, $bg);
-  background: $scribble-layer, $noise-layer, $bg-new, $bg;
+  @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
 
   [role="main"] {
     @extend %transition-main;

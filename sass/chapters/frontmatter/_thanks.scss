@@ -5,10 +5,9 @@ $total-columns  : 6;
 
 $bg             : color($off $green $lightest);
 
-$bg-angle       : top left;
+$bg-angle       : to bottom right;
 $bg-details     : color($yellow $hint), $bg;
-$bg-old         : linear-gradient($bg-angle, $bg-details);
-$bg-new         : convert-gradient($bg-angle, $bg-details);
+$bg-grad        : linear-gradient($bg-angle, $bg-details);
 
 $pg             : '#{$ch}thanks/';
 
@@ -36,8 +35,7 @@ $pg             : '#{$ch}thanks/';
 
 #thanks {
   @extend %type;
-  @include background($scribble-layer, $noise-layer, $bg-old, $bg);
-  background: $scribble-layer, $noise-layer, $bg-new, $bg;
+  @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
   position: relative;
   overflow: hidden;
 

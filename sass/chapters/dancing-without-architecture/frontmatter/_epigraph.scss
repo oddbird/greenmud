@@ -4,14 +4,13 @@
 $total-columns  : 8;
 $grid-padding   : 0;
 
-$bg-angle       : 95deg;
+$bg-angle       : 355deg;
 $bg-details     : color($orange $lighter, .75),
                   color($yellow $lightest, .75) 10%,
                   color($yellow $lighter, .5),
                   color($yellow $lighter, .25) 70%,
                   color($yellow $lighter, 0);
-$bg-old         : linear-gradient($bg-angle, $bg-details...);
-$bg-new         : convert-gradient($bg-angle, $bg-details...);
+$bg-grad        : linear-gradient($bg-angle, $bg-details...);
 $bg-pos         : bottom right;
 
 $pg             : '#{$ch}epigraph/';
@@ -54,8 +53,7 @@ $lennon-angle   : -8deg;
 
 #epigraph {
   @extend %center-content;
-  @include background($bg-old no-repeat $bg-pos);
-  background-image: $bg-new;
+  @include background($bg-grad no-repeat $bg-pos);
 
   [role="main"] {
     @extend %transition-main;

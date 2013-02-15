@@ -9,13 +9,12 @@ $puddle-far     : '#{$pg}puddle-far.png';
 
 $shadow-color   : color($off $orange);
 $bg-location    : bottom right;
-$bg-angle       : 280deg;
+$bg-angle       : 170deg;
 $bg-details     : rgba($shadow-color,0),
                   rgba($shadow-color,0) 80%,
                   rgba($shadow-color,.25),
                   rgba($shadow-color,.75);
-$bg-old         : linear-gradient($bg-angle, $bg-details...) $bg-location;
-$bg-new         : convert-gradient($bg-angle, $bg-details...) $bg-location;
+$bg-grad        : linear-gradient($bg-angle, $bg-details...) $bg-location;
 
 $puddle-height  : rhythm-image($puddle-far);
 
@@ -37,8 +36,7 @@ $puddle-height  : rhythm-image($puddle-far);
 
 #shadow-shadow-park-and-shadow {
   @include page-animation(shadow 60s linear infinite alternate both);
-  @include background($noise-layer, $bg-old);
-  background: $noise-layer, $bg-new;
+  @include background($noise-layer, $bg-grad);
   position: relative;
   overflow: hidden;
 

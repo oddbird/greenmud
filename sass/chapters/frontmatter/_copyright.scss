@@ -9,10 +9,9 @@ $color          : color($off $red $hint);
 $shadow-color   : color($red $darker);
 $shadow         : $shadow-color 1px 1px 0;
 
-$bg-angle       : top;
+$bg-angle       : to bottom;
 $bg-details     : rgba($highlight,.375), rgba($highlight,0);
-$bg-old         : linear-gradient($bg-angle, $bg-details);
-$bg-new         : convert-gradient($bg-angle, $bg-details);
+$bg-grad        : linear-gradient($bg-angle, $bg-details);
 
 $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
@@ -23,8 +22,7 @@ $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
 #copyright {
   @extend %center-content;
   @include back($bg);
-  @include background($scribble-layer, $noise-layer, $bg-old, $bg);
-  background: $scribble-layer, $noise-layer, $bg-new, $bg;
+  @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
   color: $color;
   border: 2px solid color(darkest);
   overflow: hidden;

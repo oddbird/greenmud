@@ -3,14 +3,13 @@
 
 $bg               : color($darkest);
 
-$fg-angle         : 320deg;
+$fg-angle         : 130deg;
 $fg-color         : color($off $blue $hint);
 $fg-details       : color($fg-color,0),
                     color($fg-color,0) 50%,
                     color($fg-color,.9) 50%,
                     color($fg-color,.9);
-$fg-old           : linear-gradient($fg-angle, $fg-details...);
-$fg-new           : convert-gradient($fg-angle, $fg-details...);
+$fg-grad          : linear-gradient($fg-angle, $fg-details...);
 $fg-hide          : top 9999px;
 
 $pg               : '#{$ch}epigraph/';
@@ -71,10 +70,7 @@ $lightning-animation: lightning 10s steps(1,end) infinite;
     @include animation($lightning-animation);
     background: $noise-layer, $lightning;
   }
-  .blue {
-    @include background($fg-old);
-    background: $fg-new;
-  }
+  .blue { @include background($fg-grad); }
 
   blockquote {
     @include adjust-font-size-to($smallpx);

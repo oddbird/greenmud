@@ -26,13 +26,11 @@ $right              : '#{$pg}strings_right.png';
 $bg-angle           : 120deg;
 $pink-details       : color($off $pink lightest, 0) 50%,
                       color($off $pink lightest) 50%;
-$pink-old           : convert-gradient($bg-angle + 180, $pink-details);
 $pink-grad          : linear-gradient($bg-angle + 180, $pink-details);
 
 $pink-hide          : -9999px 0;
 $grad-pos           : center;
 
-$pink-layer-old     : $pink-old no-repeat $grad-pos;
 $pink-layer         : $pink-grad no-repeat $grad-pos;
 
 // ----------------------------------------------------------------------------
@@ -98,8 +96,7 @@ $slideOut: fadeOut 300ms 1 forwards;
 
 #title {
   @extend %center-content;
-  @include background($noise-layer, $pink-layer-old);
-  background: $noise-layer, $pink-layer;
+  @include background($noise-layer, $pink-layer);
 
   // --------------------------------------------------------------------------
   // main
