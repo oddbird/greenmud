@@ -4,6 +4,7 @@
 $total-columns  : 8;
 
 $pg             : '#{$ch}about/';
+$eric           : '#{$pg}eric.png';
 $faces          : '#{$pg}faces.png';
 
 // ----------------------------------------------------------------------------
@@ -13,8 +14,13 @@ $faces          : '#{$pg}faces.png';
 
   [role="main"] {
     @include container;
-    @include rhythm-padding(10,2);
-    background: image-url($faces) no-repeat scroll center rhythm(2);
+    @include rhythm-padding(11,2);
+    @include transition(all 300ms);
+    background: image-url($eric) no-repeat scroll center rhythm(1.25);
+    @include at-breakpoint(8) {
+      @include rhythm-padding(9,2);
+      background-image: image-url($faces);
+    }
   }
 
   // --------------------------------------------------------------------------
