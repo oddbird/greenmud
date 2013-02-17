@@ -1156,7 +1156,8 @@ a:hover, a:focus, a:active { color: #0000bf; }
 @media (min-width: 30em) { .help-pageturn:before { font-size: 6.75rem; line-height: 7.5rem; } }
 
 /* ---------------------------------------------------------------------------- browser warning */
-.warning { display: none; padding: 1.5em; background: #ffb2b2; border: 3px solid red; font-family: helvetica, arial, sans-serif; }
-.warning h2, .warning p { max-width: 30em; margin: 0 auto; }
+.warning { display: none; padding: 1.5em; background: #ffb2b2; border: 3px solid red; font-family: helvetica, arial, sans-serif; z-index: 900; }
+.warning h2, .warning p { max-width: 800px; max-width: 30rem; margin: 0 auto; }
 .warning h2 { margin-bottom: .25em; font-weight: bold; }
+.warning p { font-size: 0.79167rem; line-height: 1.25rem; }
 .no-js .warning, .no-cssanimations .warning, .no-cssgradients .warning, .no-multiplebgs .warning { display: block; }

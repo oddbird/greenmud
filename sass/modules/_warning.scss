@@ -7,14 +7,17 @@
   background: color($red lighter);
   border: 3px solid $red;
   font-family: helvetica, arial, sans-serif;
+  z-index: 900;
   h2, p {
-    max-width: 30em;
+    max-width: 800px;
+    max-width: 30rem;
     margin: 0 auto;
   }
   h2 {
     margin-bottom: .25em;
     font-weight: bold;
   }
+  p { @include adjust-font-size-to($smallpx); }
   .no-js &,
   .no-cssanimations &,
   .no-cssgradients &,
