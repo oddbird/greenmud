@@ -46,6 +46,11 @@ $control-focus-color  : $white;
     left: rhythm($control-padding);
   }
   border-color: color(darkest,.5);
+  &.active {
+    @include box-shadow(color(darkest) 0 0 rhythm($control-padding/2) inset);
+    background: color($off $blue dark);
+    color: $control-focus-color;
+  }
 }
 
 // ----------------------------------------------------------------------------
@@ -100,12 +105,15 @@ $control-focus-color  : $white;
 
   // toggle controls ------//
   @include transition(margin-left 300ms ease);
-  &.active, .showcontrols & {
+  &.active {
     margin-left: 0;
     border-right: 1px solid color(dark);
     + .novel { margin-right: -100%; }
   }
 }
+
+// ----------------------------------------------------------------------------
+// banner
 
 [role="banner"] {
   background: color(darkest);
@@ -114,6 +122,14 @@ $control-focus-color  : $white;
     @extend %icon-home;
   }
 }
+
+// ----------------------------------------------------------------------------
+// pagenav
+
+.pagenav { @include gone; }
+
+// ----------------------------------------------------------------------------
+// extras
 
 .extras {
   background: color(darkest,.5);
@@ -126,8 +142,3 @@ $control-focus-color  : $white;
     @extend %icon-help;
   }
 }
-
-// ----------------------------------------------------------------------------
-// pagenav
-
-.pagenav { @include gone; }

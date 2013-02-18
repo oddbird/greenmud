@@ -28,11 +28,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 [role="banner"] [rel="home"]:before { content: "\e00a"; }
 
-#toggle:before, .help-pageturn .gear:before { content: "\e012"; }
+#toggle:before, .extra-help .menu:before, .help-pageturn .gear:before { content: "\e012"; }
 
 .extras [href='#instructions']:before { content: "\e00b"; }
 
-#toggle:before, [role="banner"] [rel="home"]:before, .extras [href$='about.html']:before, .extras [href='#instructions']:before, .menu-toc .book a:before, .prevnext:before, .extra-help i:before, .help-pageturn:before, [data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
+#toggle:before, [role="banner"] [rel="home"]:before, .extras [href$='about.html']:before, .extras [href='#instructions']:before, .menu-toc .book a:before, .prevnext:before, .extra-help .menu:before, .help-pageturn:before, [data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -1085,20 +1085,21 @@ a:hover, a:focus, a:active { color: #0000bf; }
 .no-touch .controls a[href]:hover, .controls .no-touch a[href]:hover, .no-touch .controls a[href]:focus, .controls .no-touch a[href]:focus, .no-touch .controls a[href]:active, .controls .no-touch a[href]:active { color: white; }
 
 .controls a { border-bottom-width: 0.04167rem; border-bottom-style: solid; padding-bottom: 0.27083rem; display: block; padding-top: 0.3125rem; padding-right: 0.3125rem; padding-left: 0.3125rem; border-color: rgba(32, 32, 32, 0.5); }
+.controls a.active { -webkit-box-shadow: #202020 0 0 0.15625rem inset; -moz-box-shadow: #202020 0 0 0.15625rem inset; box-shadow: #202020 0 0 0.15625rem inset; background: #43437c; color: white; }
 
 #toggle { line-height: 1.875rem; text-shadow: #404040 0 0 0.15625rem; position: absolute; top: 0; left: 0; color: white; cursor: pointer; z-index: 950; }
 .no-touch #toggle:hover, .no-touch #toggle:focus, .no-touch #toggle:active { text-shadow: #202020 0 0 3px; }
 
 .controls { overflow: hidden; font-size: 0.66667rem; line-height: 1.25rem; text-shadow: rgba(32, 32, 32, 0.75) 0 1px 0; width: 80%; width: -webkit-calc(100% - 1.875rem); width: -moz-calc(100% - 1.875rem); width: -o-calc(100% - 1.875rem); width: calc(100% - 1.875rem); position: relative; float: left; height: 100%; margin-left: -100%; max-width: 15rem; background: #404040; color: #b9b9b9; font-family: "GreenMudNarrator", serif; overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 900; -webkit-transition: margin-left 300ms ease; -moz-transition: margin-left 300ms ease; -o-transition: margin-left 300ms ease; transition: margin-left 300ms ease; }
 .controls a:before { display: inline-block; min-width: 0.9375rem; margin-right: 0.3125rem; color: gray; text-align: right; }
-.controls.active, .showcontrols .controls { margin-left: 0; border-right: 1px solid #606060; }
-.controls.active + .novel, .showcontrols .controls + .novel { margin-right: -100%; }
+.controls.active { margin-left: 0; border-right: 1px solid #606060; }
+.controls.active + .novel { margin-right: -100%; }
 
 [role="banner"] { background: #202020; }
 
-.extras { background: rgba(32, 32, 32, 0.5); }
-
 .pagenav { position: absolute; top: -9999px; left: -9999px; }
+
+.extras { background: rgba(32, 32, 32, 0.5); }
 
 .menu-toc { overflow: hidden; background: -webkit-linear-gradient(right, #202020, #404040 1.875rem); background: -moz-linear-gradient(right, #202020, #404040 1.875rem); background: -o-linear-gradient(right, #202020, #404040 1.875rem); background: linear-gradient(to left, #202020, #404040 1.875rem); font-family: "GreenMudNarrator", serif; }
 .menu-toc .book { background: rgba(32, 32, 32, 0.5); }
@@ -1134,8 +1135,8 @@ a:hover, a:focus, a:active { color: #0000bf; }
 .instructions:before { position: absolute; top: 0; bottom: 0; left: 0; right: 0; position: fixed; content: " "; background: rgba(32, 32, 32, 0.9); z-index: -1; }
 
 .extra-help { font-size: 0.79167rem; line-height: 1.25rem; display: block; color: gray; }
-.extra-help i { text-transform: uppercase; }
-.extra-help i:before { font-size: 0.66667rem; line-height: 1.25rem; margin-right: .4em; }
+.extra-help .menu { margin: 0 0.4em; text-transform: uppercase; }
+.extra-help .menu:before { font-size: 0.66667rem; line-height: 1.25rem; margin-right: .4em; }
 
 .help-pageturn:before { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; font-size: 3.375rem; line-height: 3.75rem; display: block; }
 @media (min-width: 30em) { .help-pageturn:before { font-size: 6.75rem; line-height: 7.5rem; } }

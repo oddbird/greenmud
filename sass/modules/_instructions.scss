@@ -31,8 +31,10 @@
   @include adjust-font-size-to($smallpx);
   display: block;
   color: $gray;
-  i {
+  .menu {
     @extend %icon;
+    @extend %icon-reorder;
+    margin: 0 .4em;
     text-transform: uppercase;
     &:before {
       @include adjust-font-size-to($xsmallpx);

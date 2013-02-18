@@ -3,7 +3,7 @@
     {% include "novel/_toc-lists.j2" %}
   </div>
   <ul class="extras">
-    <li><a href="{{ resource.meta.root_url }}about.html">About the Authors</a></li>
+    <li><a href="{{ resource.meta.root_url }}about.html" {% if resource.meta.url == 'about.html' %}class="active"{% endif %}>About the Authors</a></li>
     <li><a href="#instructions">Instructions</a></li>
   </ul>
 </nav>
