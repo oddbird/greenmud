@@ -18,7 +18,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ---------------------------------------------------------------------------- helpers */
 .help-pageturn:before { content: "\e000"; }
 
-#toc .book a:before { content: "\e006"; }
+.menu-toc .book a:before { content: "\e006"; }
 
 .extras [href$='about.html']:before { content: "\e007"; }
 
@@ -26,13 +26,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .swiping-prev .prevnext:before { content: "\e009"; }
 
-.novel-title [rel="home"]:before { content: "\e00a"; }
+[role="banner"] [rel="home"]:before { content: "\e00a"; }
 
 #toggle:before, .help-pageturn .gear:before { content: "\e012"; }
 
 .extras [href='#instructions']:before { content: "\e00b"; }
 
-#toggle:before, .novel-title [rel="home"]:before, .extras [href$='about.html']:before, .extras [href='#instructions']:before, #toc .book a:before, .prevnext:before, .extra-help i:before, .help-pageturn:before, [data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
+#toggle:before, [role="banner"] [rel="home"]:before, .extras [href$='about.html']:before, .extras [href='#instructions']:before, .menu-toc .book a:before, .prevnext:before, .extra-help i:before, .help-pageturn:before, [data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -50,10 +50,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .demo [role="main"] blockquote cite { font-style: normal; }
 .demo [role="main"] blockquote :last-child { margin-bottom: 0rem; }
 
-#toc { counter-reset: toc; }
-#toc ol { list-style-type: none; }
-#toc li { counter-increment: toc; }
-#toc li a:before { content: counter(toc, decimal-leading-zero) ". "; }
+.menu-toc { counter-reset: toc; }
+.menu-toc ol { list-style-type: none; }
+.menu-toc li { counter-increment: toc; }
+.menu-toc li a:before { content: counter(toc, decimal-leading-zero) ". "; }
 
 .enter-prev { -webkit-animation-name: fadeInLeft; -moz-animation-name: fadeInLeft; -o-animation-name: fadeInLeft; animation-name: fadeInLeft; }
 
@@ -1094,17 +1094,19 @@ a:hover, a:focus, a:active { color: #0000bf; }
 .controls.active, .showcontrols .controls { margin-left: 0; border-right: 1px solid #606060; }
 .controls.active + .novel, .showcontrols .controls + .novel { margin-right: -100%; }
 
-.novel-title { background: #202020; }
+[role="banner"] { background: #202020; }
 
 .extras { background: rgba(32, 32, 32, 0.5); }
 
 .pagenav { position: absolute; top: -9999px; left: -9999px; }
 
-#toc { overflow: hidden; background: -webkit-linear-gradient(right, #202020, #404040 1.875rem); background: -moz-linear-gradient(right, #202020, #404040 1.875rem); background: -o-linear-gradient(right, #202020, #404040 1.875rem); background: linear-gradient(to left, #202020, #404040 1.875rem); font-family: "GreenMudNarrator", serif; }
-#toc .book { background: rgba(32, 32, 32, 0.5); }
+.menu-toc { overflow: hidden; background: -webkit-linear-gradient(right, #202020, #404040 1.875rem); background: -moz-linear-gradient(right, #202020, #404040 1.875rem); background: -o-linear-gradient(right, #202020, #404040 1.875rem); background: linear-gradient(to left, #202020, #404040 1.875rem); font-family: "GreenMudNarrator", serif; }
+.menu-toc .book { background: rgba(32, 32, 32, 0.5); }
 
 /* ---------------------------------------------------------------------------- page */
-.novel { -webkit-transition: margin-right 300ms ease; -moz-transition: margin-right 300ms ease; -o-transition: margin-right 300ms ease; transition: margin-right 300ms ease; position: relative; float: left; height: 100%; width: 100%; overflow-y: auto; }
+.novel { -webkit-transition: margin-right 300ms ease; -moz-transition: margin-right 300ms ease; -o-transition: margin-right 300ms ease; transition: margin-right 300ms ease; position: relative; float: left; width: 100%; height: 100%; }
+
+.inner-body { height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 
 .page { min-height: 100%; }
 

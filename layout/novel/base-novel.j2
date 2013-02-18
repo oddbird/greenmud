@@ -26,23 +26,21 @@
     <p>Chrome, Firefox, & Safari currently offer the best support for this&nbsp;technology.</p>
   </aside>
 
-  <nav class="controls" role="navigation">
-    <h1 class="novel-title">
+  <header class="controls">
+    <h1 role="banner">
       <a href="{{ resource.meta.root_url }}index.html" rel="home">
         {{ node.meta.novel }}
       </a>
     </h1>
     {% include "novel/_page-nav.j2" %}
     {% include "novel/_toc.j2" %}
-    <ul class="extras">
-      <li><a href="{{ resource.meta.root_url }}about.html">About the Authors</a></li>
-      <li><a href="#instructions">Instructions</a></li>
-    </ul>
-  </nav>
+  </header>
 
   <div class="novel">
     <a id="toggle" title="show/hide controls">show/hide controls</a>
-    {% block main %}{% endblock main %}
+    <div class="inner-body">
+      {% block main %}{% endblock main %}
+    </div>
   </div>
 
   <aside class="instructions">

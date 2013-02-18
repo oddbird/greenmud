@@ -107,7 +107,7 @@ $control-focus-color  : $white;
   }
 }
 
-.novel-title {
+[role="banner"] {
   background: color(darkest);
   [rel="home"] {
     @extend %icon;

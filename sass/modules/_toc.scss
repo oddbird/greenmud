@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
-// header toc
+// menu toc
 
-#toc {
+.menu-toc {
   @extend %toc-counter;
   @include clearfix;
   @include background(linear-gradient(to left, color(darkest), color(darker) rhythm(1.5)));

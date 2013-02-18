@@ -5,9 +5,14 @@
   @include transition(margin-right 300ms ease);
   position: relative;
   float: left;
-  height: 100%;
   width: 100%;
+  height: 100%;
+}
+
+.inner-body {
+  height: 100%;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .page { min-height: 100%; }
