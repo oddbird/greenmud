@@ -53,5 +53,5 @@
     display: block;
     @include breakpoint(30em) { @include adjust-font-size-to($xxxlargepx*2); }
   }
-  .gear { @extend %icon-cog; }
+  .gear { @extend %icon-reorder; }
 }

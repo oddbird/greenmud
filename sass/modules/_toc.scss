@@ -1,44 +1,17 @@
-/* ----------------------------------------------------------------------------
-   toc */
-
-[class^="toc-"] {
-  @include trailer;
-  .book {
-    @extend %ellipsis;
-    @extend %shrink;
-    @extend %transition;
-  }
-  li {
-    @extend %ellipsis;
-    @include adjust-font-size-to($smallpx);
-  }
-  @include at-breakpoint($toc-break $toc-cols*2) {
-    @include span-columns($toc-cols,$total-columns);
-    @include nth-omega(last);
-  }
-}
-
-
 // ----------------------------------------------------------------------------
 // header toc
 
 #toc {
   @extend %toc-counter;
   @include clearfix;
-  background: color($darkest,.75);
-  color: $control-text-color;
+  @include background(linear-gradient(to left, color(darkest), color(darker) rhythm(1.5)));
   font-family: $narrator-stack;
-  a { @extend %control-link; }
-  .wrap {
-    @extend %transition;
-    @include container;
-    @include padding-leader($control-line+.5);
-    margin-left: 0;
-    @include breakpoint($breadcrumb-break) { margin-left: rhythm($control-line*2.125) - $grid-padding; }
-  }
 
-  // show and hide toc
-  @include transition(max-height 600ms ease);
-  max-height: 0;
-  .active + &.active { max-height: 45em; }
+  .book {
+    background: color(darkest,.5);
+    a {
+      @extend %icon;
+      @extend %icon-bookmark;
+    }
+  }
 }

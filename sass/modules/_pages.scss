@@ -1,9 +1,16 @@
 /* ----------------------------------------------------------------------------
   page */
 
-.page {
-  min-height: 100%;
+.novel {
+  @include transition(margin-right 300ms ease);
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 }
+
+.page { min-height: 100%; }
 
 // ----------------------------------------------------------------------------
 // temporary page styles

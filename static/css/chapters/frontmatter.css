@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------- helpers */
-[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+[data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -7,8 +7,10 @@
 
 #copyright h1, #copyright a:link, #copyright a:visited, #copyright strong, #thanks h1 { text-transform: uppercase; }
 
-#dedication h1 { font-size: 0.79167rem; line-height: 1.25rem; }
-@media (min-width: 35em) { #dedication h1 { font-size: inherit; line-height: inherit; } }
+#contents .book, #contents li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+#dedication h1, #contents .book { font-size: 0.79167rem; line-height: 1.25rem; }
+@media (min-width: 35em) { #dedication h1, #contents .book { font-size: inherit; line-height: inherit; } }
 
 #thanks h1, #about .vcard h1 { font-size: 1.5rem; line-height: 1.875rem; }
 #thanks h1, #about .vcard h1, #thanks h2, #about .vcard h2, #thanks h3, #about .vcard h3, #thanks h4, #about .vcard h4 { font-weight: bold; color: #404040; }
@@ -25,12 +27,12 @@
 #contents { counter-reset: toc; }
 #contents ol { list-style-type: none; }
 #contents li { counter-increment: toc; }
-#contents li:before { content: counter(toc, decimal-leading-zero) ". "; }
+#contents li a:before { content: counter(toc, decimal-leading-zero) ". "; }
 
 #title, #copyright, #dedication, #contents, #fourohfour { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
 #title [role="main"], #copyright [role="main"], #dedication [role="main"], #contents [role="main"], #fourohfour [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
-#dedication h1 { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#dedication h1, #contents .book { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
 #copyright h1, #dedication [role="main"], #contents [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
@@ -218,10 +220,14 @@ html { background: #eef6ee; }
 #contents [role="main"] { max-width: 39rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; }
 #contents [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 25em) { #contents [role="main"] { padding-top: 3.75rem; padding-bottom: 0; } }
+#contents [class^="toc-"] { margin-bottom: 1.25rem; }
+@media (min-width: 31.5em) { #contents [class^="toc-"] { width: 48.71795%; float: left; margin-right: 2.5641%; }
+  #contents [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 #contents ol { max-height: 62.5rem; overflow: hidden; }
+#contents li { font-size: 0.79167rem; line-height: 1.25rem; }
+#contents li:before { color: #7c7c43; }
 #contents a:link, #contents a:visited { color: #7f4000; }
 #contents a:hover, #contents a:focus, #contents a:active { color: #ff8000; }
-#contents li:before { color: #7c7c43; }
 #contents.enter-prev, #contents.enter-next { -webkit-animation: fadeIn 300ms 1 ease-out backwards; -moz-animation: fadeIn 300ms 1 ease-out backwards; -o-animation: fadeIn 300ms 1 ease-out backwards; animation: fadeIn 300ms 1 ease-out backwards; }
 #contents.enter-prev ol, #contents.enter-next ol { -webkit-animation: shadeIn 2s 0.5s 1 ease-out backwards; -moz-animation: shadeIn 2s 0.5s 1 ease-out backwards; -o-animation: shadeIn 2s 0.5s 1 ease-out backwards; animation: shadeIn 2s 0.5s 1 ease-out backwards; }
 #contents.enter-prev .book, #contents.enter-next .book { -webkit-animation: fadeIn 2s 1 ease backwards; -moz-animation: fadeIn 2s 1 ease backwards; -o-animation: fadeIn 2s 1 ease backwards; animation: fadeIn 2s 1 ease backwards; }

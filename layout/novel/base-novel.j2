@@ -26,26 +26,30 @@
     <p>Chrome, Firefox, & Safari currently offer the best support for this&nbsp;technology.</p>
   </aside>
 
-  <a id="toggle" title="show/hide controls">show/hide controls</a>
-  <div class="controls">
-  {% block header -%}
+  <nav class="controls" role="navigation">
+    <h1 class="novel-title">
+      <a href="{{ resource.meta.root_url }}index.html" rel="home">
+        {{ node.meta.novel }}
+      </a>
+    </h1>
     {% include "novel/_page-nav.j2" %}
-    <nav role="navigation">
-      {% include "novel/_meta-nav.j2" %}
-      {% include "novel/_breadcrumb.j2" %}
-    </nav>
-  {%- endblock %}
+    {% include "novel/_toc.j2" %}
+    <ul class="extras">
+      <li><a href="{{ resource.meta.root_url }}about.html">About the Authors</a></li>
+      <li><a href="#instructions">Instructions</a></li>
+    </ul>
+  </nav>
+
+  <div class="novel">
+    <a id="toggle" title="show/hide controls">show/hide controls</a>
+    {% block main %}{% endblock main %}
   </div>
-
-  {% include "novel/_toc.j2" %}
-
-  {% block main %}{% endblock main %}
 
   <aside class="instructions">
     <p class="help-pageturn">
       <b>Swipe</b> or use <b>arrow keys</b> to turn the&nbsp;page.
       <span class="extra-help">
-        (tap the <i class="gear">gear icon</i> for more&nbsp;controls)
+        (tap the <i class="gear">menu icon</i> for more&nbsp;controls)
       </span>
     </p>
   </aside>

@@ -3,8 +3,9 @@
 
 $total-columns: 8;
 
-$control-icon: $normpx;
+$control-icon: $xsmallpx;
 $control-line: 1.5;
+$control-padding: .25;
 
 $control-text-color   : color($light);
 $control-link-color   : color($lightest);
@@ -34,16 +35,30 @@ $control-focus-color  : $white;
   }
 }
 
+%control-select {
+  @extend %control-link;
+  @extend %ellipsis;
+  @include trailing-border(1px,.25);
+  display: block;
+  padding: {
+    top: rhythm($control-padding);
+    right: rhythm($control-padding);
+    left: rhythm($control-padding);
+  }
+  border-color: color(darkest,.5);
+}
+
 // ----------------------------------------------------------------------------
 // toggle
 
 #toggle {
   @extend %control-icon;
-  @extend %icon-cog;
-  @include text-shadow(color($darkest,.75) 0 0 3px);
+  @extend %icon-reorder;
   @include adjust-leading-to($control-line);
+  @include text-shadow(color(darker) 0 0 rhythm(.125));
   position: absolute;
-  right: 0;
+  top: 0;
+  left: 0;
   color: $control-focus-color;
   cursor: pointer;
   z-index: 950;
@@ -57,82 +72,62 @@ $control-focus-color  : $white;
 
 .controls {
   @include clearfix;
-  @include stretch-x;
-  @include adjust-leading-to($control-line);
+  @include adjust-font-size-to($xsmallpx);
   @include text-shadow(color($darkest,.75) 0 1px 0);
-  padding: 0 rhythm($control-line) 0 0;
-  min-width: rhythm($control-line*6);
-  background: color($darkest,.75);
+  @include calc(width, "100% - #{rhythm($control-line)}", 80%);
+  position: relative;
+  float: left;
+  height: 100%;
+  margin-left: -100%;
+  max-width: rhythm(12);
+  background: color(darker);
   color: $control-text-color;
   font-family: $narrator-stack;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   z-index: 900;
-  a { @extend %control-link; }
 
-  // toggle controls ------//
-  display: none;
-  &.active, .showcontrols & { display: block; }
-}
-
-// ----------------------------------------------------------------------------
-// meta
-
-.meta {
-  @include horizontal-list(0);
-  float: left;
-  width: rhythm($control-line*2);
   a {
-    #{$link} {
-      @extend %control-icon;
-      float: left;
-      width: rhythm($control-line);
+    @extend %control-select;
+    &:before {
+      display: inline-block;
+      min-width: rhythm(.75);
+      margin-right: rhythm(.25);
+      color: color(mid);
+      text-align: right;
     }
   }
+
+  // toggle controls ------//
+  @include transition(margin-left 300ms ease);
+  &.active, .showcontrols & {
+    margin-left: 0;
+    border-right: 1px solid color(dark);
+    + .novel { margin-right: -100%; }
+  }
 }
 
-[rel="contents"] { @extend %icon-list; }
-[rel="home"] { @extend %icon-home; }
-
-// ----------------------------------------------------------------------------
-// breadcrumb
-
-$breadcrumb-font-size: $smallpx;
-$breadcrumb-break: 50em;
-
-.breadcrumb {
-  @extend %ellipsis;
-  @include clearfix;
-  @include adjust-font-size-to($breadcrumb-font-size,$control-line);
-  max-height: rhythm($control-line);
-  text-align: center;
-  width: auto;
-  li {
-    display: inline;
-    &:after { content: ":"; }
-    &:last-child { &:after { content: ""; } }
+.novel-title {
+  background: color(darkest);
+  [rel="home"] {
+    @extend %icon;
+    @extend %icon-home;
   }
-  @include breakpoint($breadcrumb-break) {
-    padding-left: rhythm($control-line)*.125;
-    text-align: left;
+}
+
+.extras {
+  background: color(darkest,.5);
+  [href$='about.html'] {
+    @extend %icon;
+    @extend %icon-users;
+  }
+  [href='#instructions'] {
+    @extend %icon;
+    @extend %icon-help;
   }
 }
 
 // ----------------------------------------------------------------------------
 // pagenav
 
-.pagenav {
-  float: right;
-  width: rhythm($control-line*2);
-  a { display: block; }
-}
-.prev { float: left; }
-.next { float: right; }
-
-[rel="prev"] {
-  @extend %control-icon;
-  @extend %icon-arrow-left;
-}
-
-[rel="next"] {
-  @extend %control-icon;
-  @extend %icon-arrow-right;
-}
+.pagenav { @include gone; }

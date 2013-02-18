@@ -18,12 +18,12 @@ a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
 /* ---------------------------------------------------------------------------- helpers */
-[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+[data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 
 /* ---------------------------------------------------------------------------- fonts */
-@font-face { font-family: "IcoMoon"; src: url('../fonts/icomoon/IcoMoon.eot'); src: url('../fonts/icomoon/IcoMoon.eot?#iefix') format('eot'), url('../fonts/icomoon/IcoMoon.woff') format('woff'), url('../fonts/icomoon/IcoMoon.ttf') format('truetype'), url('../fonts/icomoon/IcoMoon.svg#IcoMoon') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "greenmud"; src: url('../fonts/icomoon/greenmud.eot'); src: url('../fonts/icomoon/greenmud.eot?#iefix') format('eot'), url('../fonts/icomoon/greenmud.woff') format('woff'), url('../fonts/icomoon/greenmud.ttf') format('truetype'), url('../fonts/icomoon/greenmud.svg#greenmud') format('svg'); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: "GreenMudJJ"; src: url('../fonts/jj/greenmudjj-regular-webfont.eot'); src: url('../fonts/jj/greenmudjj-regular-webfont.eot?#iefix') format('eot'), url('../fonts/jj/greenmudjj-regular-webfont.woff') format('woff'), url('../fonts/jj/greenmudjj-regular-webfont.ttf') format('truetype'), url('../fonts/jj/greenmudjj-regular-webfont.svg#GreenMudJJ') format('svg'); font-weight: normal; font-style: normal; }
 

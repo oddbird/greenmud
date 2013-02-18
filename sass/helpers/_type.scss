@@ -68,7 +68,7 @@
   ol { list-style-type: none; }
   li {
     counter-increment: toc;
-    &:before { content: counter(toc, decimal-leading-zero) ". "; }
+    a:before { content: counter(toc, decimal-leading-zero) ". "; }
   }
 }
 

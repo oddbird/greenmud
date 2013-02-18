@@ -40,17 +40,35 @@ $bg-grad      : linear-gradient($bg-angle, $bg-details);
   // --------------------------------------------------------------------------
   // elements
 
+  [class^="toc-"] {
+    @include trailer;
+    @include at-breakpoint($toc-break $toc-cols*2) {
+      @include span-columns($toc-cols,$total-columns);
+      @include nth-omega(last);
+    }
+  }
+
+  .book {
+    @extend %ellipsis;
+    @extend %shrink;
+    @extend %transition;
+  }
+
   ol {
     max-height: rhythm(50);
     overflow: hidden;
+  }
+
+  li {
+    @extend %ellipsis;
+    @include adjust-font-size-to($smallpx);
+    &:before { color: color($off $yellow $dark); }
   }
 
   a {
     #{$link} { color: color($orange $darker); }
     #{$focus} { color: color($orange); }
   }
-
-  li { &:before { color: color($off $yellow $dark); } }
 
   // --------------------------------------------------------------------------
   // pageturn
