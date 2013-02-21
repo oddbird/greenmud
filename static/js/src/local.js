@@ -19,25 +19,30 @@ var GM = (function (GM, $) {
         DOWN: 40
     };
 
-    GM.toggleControls = function (toggle, controls) {
+    GM.toggleControls = function (tog, cont) {
+        var toggle = $(tog);
+        var controls = $(cont);
+
         var doToggle = function () {
-            $(controls).toggleClass('active');
-            $(toggle).toggleClass('active');
+            controls.toggleClass('active');
+            toggle.toggleClass('active');
         };
 
-        $(toggle).click(function () {
+        toggle.click(function () {
             $(this).blur();
             doToggle();
-            if (Modernizr.sessionstorage) {
-                sessionStorage.setItem('controls', $(controls).hasClass('active'));
-            }
             return false;
         });
 
-        if (Modernizr.sessionstorage && sessionStorage.getItem('controls') === 'true') {
-            $(controls).addClass('active');
-            $(toggle).addClass('active');
-        }
+        controls.on('click', 'nav a', function () {
+            doToggle();
+        });
+
+        controls.on('click', '.pagenav a', function () {
+            if (controls.hasClass('active')) {
+                doToggle();
+            }
+        });
     };
 
     GM.toc = function (toggle, controls) {
