@@ -49,19 +49,48 @@ var GM = (function (GM, $) {
         });
     };
 
-    GM.instructions = function (selector) {
-        if (Modernizr.localstorage) {
-            var instructions = $(selector);
-            if (localStorage.getItem('instructions') !== 'false') {
-                instructions.fadeIn('fast');
-                $('#toggle').one('click.instructions', function () {
-                    if (instructions.is(':visible')) {
-                        instructions.fadeOut('fast');
-                        localStorage.setItem('instructions', 'false');
-                    }
-                });
+    GM.instructions = function () {
+        var instructions = $('.instructions');
+        var toggle = $('#toggle');
+        var controls = $('.controls');
+        var showInstructions = function () {
+            instructions.fadeIn('fast');
+            attachHandlers();
+        };
+        var hideInstructions = function () {
+            instructions.fadeOut('fast');
+            detachHandlers();
+            if (Modernizr.localstorage) {
+                localStorage.setItem('instructions', 'false');
             }
+        };
+        var attachHandlers = function () {
+            toggle.one('click.instructions', function () {
+                if (instructions.is(':visible')) {
+                    hideInstructions();
+                }
+            });
+            controls.one('click.instructions', '.pagenav a', function () {
+                if (instructions.is(':visible')) {
+                    hideInstructions();
+                    $('body').removeClass('swiping-next swiping-prev');
+                    return false;
+                }
+            });
+        };
+        var detachHandlers = function () {
+            toggle.off('click.instructions');
+            controls.off('click.instructions', '.pagenav a');
+        };
+
+        if (Modernizr.localstorage && localStorage.getItem('instructions') !== 'false') {
+            showInstructions();
         }
+
+        controls.on('click', 'a[href="#instructions"]', function () {
+            showInstructions();
+            return false;
+        });
     };
 
     return GM;

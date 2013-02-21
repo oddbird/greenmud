@@ -9,7 +9,7 @@ var GM = (function (GM, $) {
         // local.js
         GM.toggleControls('#toggle', '.controls');
         GM.toc('a[rel="contents"]', '#toc');
-        GM.instructions('.instructions');
+        GM.instructions();
 
         // pageturning.js
         GM.pageTurning();

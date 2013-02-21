@@ -49,61 +49,51 @@ var GM = (function (GM, $) {
 
         // Hijack all internal links
         body.on('click', 'a', function (e) {
-            var thisLink = $(this).blur(),
-                href = thisLink.attr('href'),
-                page,
-                fallback = function (link) {
-                    window.location = link.attr('href');
-                };
-            if ($('.instructions').is(':visible')) {
-                $('.instructions').fadeOut('fast');
-                body.removeClass('swiping-next swiping-prev');
-                $('#toggle').off('click.instructions');
-                if (Modernizr.localstorage) {
-                    localStorage.setItem('instructions', 'false');
-                }
+            var thisLink = $(this).blur();
+            var href = thisLink.attr('href');
+            var page;
+            var fallback = function (link) {
+                window.location = link.attr('href');
+            };
+            stateChange = false;
+            // Prev/Next page-turns use classes for css-animation
+            if (thisLink.parent().hasClass('prev')) {
+                pageturn = 'prev';
+            } else if (thisLink.parent().hasClass('next')) {
+                pageturn = 'next';
+            }
+            // Shift-pageturns go directly to prev/next chapter
+            if (e.shiftKey && thisLink.data('chapter')) {
                 e.preventDefault();
+                window.location = thisLink.data('chapter');
             } else {
-                stateChange = false;
-                // Prev/Next page-turns use classes for css-animation
-                if (thisLink.parent().hasClass('prev')) {
-                    pageturn = 'prev';
-                } else if (thisLink.parent().hasClass('next')) {
-                    pageturn = 'next';
-                }
-                // Shift-pageturns go directly to prev/next chapter
-                if (e.shiftKey && thisLink.data('chapter')) {
+                // Perform internal page-state change, if applicable
+                if (internalPages > 1 && ((pageturn === 'next' && pageState < internalPages) || (pageturn === 'prev' && pageState > 1))) {
                     e.preventDefault();
-                    window.location = thisLink.data('chapter');
-                } else {
-                    // Perform internal page-state change, if applicable
-                    if (internalPages > 1 && ((pageturn === 'next' && pageState < internalPages) || (pageturn === 'prev' && pageState > 1))) {
-                        e.preventDefault();
-                        if (pageturn === 'next') {
-                            pageState++;
-                        } else if (pageturn === 'prev') {
-                            pageState--;
-                        }
-                        $(pageSelector).attr('data-page-state', pageState);
-                    // Continue as normal for external links, cmd clicks, etc.
-                    } else if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
-                        return true;
-                    } else if (href) {
-                        e.preventDefault();
-                        if (thisLink.hasClass('break')) {
-                            fallback(thisLink);
-                        } else {
-                            if (thisLink.data('id') && body.data(thisLink.data('id')) && History.enabled) {
-                                $('#toc, a[rel="contents"]').removeClass('active');
-                                page = body.data(thisLink.data('id'));
-                                turnToPage(page);
-                            } else {
-                                fallback(thisLink);
-                            }
-                        }
-                    } else {
-                        e.preventDefault();
+                    if (pageturn === 'next') {
+                        pageState++;
+                    } else if (pageturn === 'prev') {
+                        pageState--;
                     }
+                    $(pageSelector).attr('data-page-state', pageState);
+                // Continue as normal for external links, cmd clicks, etc.
+                } else if (e.which === 2 || e.metaKey || (href && href.indexOf('http://') === 0)) {
+                    return true;
+                } else if (href) {
+                    e.preventDefault();
+                    if (thisLink.hasClass('break')) {
+                        fallback(thisLink);
+                    } else {
+                        if (thisLink.data('id') && body.data(thisLink.data('id')) && History.enabled) {
+                            $('#toc, a[rel="contents"]').removeClass('active');
+                            page = body.data(thisLink.data('id'));
+                            turnToPage(page);
+                        } else {
+                            fallback(thisLink);
+                        }
+                    }
+                } else {
+                    e.preventDefault();
                 }
             }
         });
