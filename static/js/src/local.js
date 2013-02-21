@@ -45,15 +45,6 @@ var GM = (function (GM, $) {
         });
     };
 
-    GM.toc = function (toggle, controls) {
-        $(toggle).click(function () {
-            $(this).blur();
-            $(controls).toggleClass('active');
-            $(toggle).toggleClass('active');
-            return false;
-        });
-    };
-
     GM.instructions = function () {
         var instructions = $('.instructions');
         var toggle = $('#toggle');
