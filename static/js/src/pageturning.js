@@ -58,6 +58,7 @@ var GM = (function (GM, $) {
             if ($('.instructions').is(':visible')) {
                 $('.instructions').fadeOut('fast');
                 body.removeClass('swiping-next swiping-prev');
+                $('#toggle').off('click.instructions');
                 if (Modernizr.localstorage) {
                     localStorage.setItem('instructions', 'false');
                 }

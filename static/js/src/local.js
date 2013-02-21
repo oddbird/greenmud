@@ -54,6 +54,12 @@ var GM = (function (GM, $) {
             var instructions = $(selector);
             if (localStorage.getItem('instructions') !== 'false') {
                 instructions.fadeIn('fast');
+                $('#toggle').one('click.instructions', function () {
+                    if (instructions.is(':visible')) {
+                        instructions.fadeOut('fast');
+                        localStorage.setItem('instructions', 'false');
+                    }
+                });
             }
         }
     };
