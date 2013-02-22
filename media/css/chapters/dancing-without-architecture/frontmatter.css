@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------- helpers */
-[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+[data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -23,7 +23,7 @@
 
 .exit-prev, .exit-next { -webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
 
-html { background: url('../../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; }
+html { background: url('../../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -moz-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, -o-linear-gradient(120deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(330deg, rgba(0, 0, 255, 0.25), rgba(153, 153, 255, 0)), #bfbfff; -webkit-background-size: auto, cover; -moz-background-size: auto, cover; -o-background-size: auto, cover; background-size: auto, cover; }
 
 .enter-prev, .enter-next { -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s; -webkit-animation-fill-mode: backwards; -moz-animation-fill-mode: backwards; -o-animation-fill-mode: backwards; animation-fill-mode: backwards; }
 
@@ -63,7 +63,7 @@ html { background: url('../../../images/noise.png?1347221205') repeat, -webkit-l
 @keyframes gradOut { 0% { background-position: bottom right; }
   100% { background-position: right 9999px; } }
 
-#epigraph { background: -webkit-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: -moz-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: -o-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background-image: linear-gradient(355deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)); }
+#epigraph { background: -webkit-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: -moz-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: -o-linear-gradient(95deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; background: linear-gradient(355deg, rgba(255, 204, 153, 0.75), rgba(255, 255, 191, 0.75) 10%, rgba(255, 255, 153, 0.5), rgba(255, 255, 153, 0.25) 70%, rgba(255, 255, 153, 0)) no-repeat bottom right; }
 #epigraph [role="main"] { max-width: 31rem; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
 #epigraph [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 18.75em) { #epigraph [role="main"] { padding-top: 4.375rem; padding-bottom: 1; } }

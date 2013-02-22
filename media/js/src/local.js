@@ -19,32 +19,72 @@ var GM = (function (GM, $) {
         DOWN: 40
     };
 
-    GM.toggleControls = function (toggle, controls) {
+    GM.toggleControls = function (tog, cont) {
+        var toggle = $(tog);
+        var controls = $(cont);
+
         var doToggle = function () {
-            $(controls).toggleClass('active');
-            $(toggle).toggleClass('active');
+            controls.toggleClass('active');
+            toggle.toggleClass('active');
         };
 
-        $(toggle).click(function () {
+        toggle.click(function () {
             $(this).blur();
             doToggle();
-            if (Modernizr.sessionstorage) {
-                sessionStorage.setItem('controls', $(controls).hasClass('active'));
-            }
             return false;
         });
 
-        if (Modernizr.sessionstorage && sessionStorage.getItem('controls') === 'true') {
-            $(controls).addClass('active');
-            $(toggle).addClass('active');
-        }
+        controls.on('click', 'nav a', function () {
+            doToggle();
+        });
+
+        controls.on('click', '.pagenav a', function () {
+            if (controls.hasClass('active')) {
+                doToggle();
+            }
+        });
     };
 
-    GM.toc = function (toggle, controls) {
-        $(toggle).click(function () {
-            $(this).blur();
-            $(controls).toggleClass('active');
-            $(toggle).toggleClass('active');
+    GM.instructions = function () {
+        var instructions = $('.instructions');
+        var toggle = $('#toggle');
+        var controls = $('.controls');
+        var showInstructions = function () {
+            instructions.fadeIn('fast');
+            attachHandlers();
+        };
+        var hideInstructions = function () {
+            instructions.fadeOut('fast');
+            detachHandlers();
+            if (Modernizr.localstorage) {
+                localStorage.setItem('instructions', 'false');
+            }
+        };
+        var attachHandlers = function () {
+            toggle.one('click.instructions', function () {
+                if (instructions.is(':visible')) {
+                    hideInstructions();
+                }
+            });
+            controls.one('click.instructions', '.pagenav a', function () {
+                if (instructions.is(':visible')) {
+                    hideInstructions();
+                    $('body').removeClass('swiping-next swiping-prev');
+                    return false;
+                }
+            });
+        };
+        var detachHandlers = function () {
+            toggle.off('click.instructions');
+            controls.off('click.instructions', '.pagenav a');
+        };
+
+        if (Modernizr.localstorage && localStorage.getItem('instructions') !== 'false') {
+            showInstructions();
+        }
+
+        controls.on('click', 'a[href="#instructions"]', function () {
+            showInstructions();
             return false;
         });
     };

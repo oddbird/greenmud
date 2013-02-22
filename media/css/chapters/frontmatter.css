@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------- helpers */
-[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+[data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -7,8 +7,10 @@
 
 #copyright h1, #copyright a:link, #copyright a:visited, #copyright strong, #thanks h1 { text-transform: uppercase; }
 
-#dedication h1 { font-size: 0.79167rem; line-height: 1.25rem; }
-@media (min-width: 35em) { #dedication h1 { font-size: inherit; line-height: inherit; } }
+#contents .book, #contents li { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+#dedication h1, #contents .book { font-size: 0.79167rem; line-height: 1.25rem; }
+@media (min-width: 35em) { #dedication h1, #contents .book { font-size: inherit; line-height: inherit; } }
 
 #thanks h1, #about .vcard h1 { font-size: 1.5rem; line-height: 1.875rem; }
 #thanks h1, #about .vcard h1, #thanks h2, #about .vcard h2, #thanks h3, #about .vcard h3, #thanks h4, #about .vcard h4 { font-weight: bold; color: #404040; }
@@ -25,12 +27,12 @@
 #contents { counter-reset: toc; }
 #contents ol { list-style-type: none; }
 #contents li { counter-increment: toc; }
-#contents li:before { content: counter(toc, decimal-leading-zero) ". "; }
+#contents li a:before { content: counter(toc, decimal-leading-zero) ". "; }
 
-#title, #copyright, #dedication, #contents { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
-#title [role="main"], #copyright [role="main"], #dedication [role="main"], #contents [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+#title, #copyright, #dedication, #contents, #about, #fourohfour { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+#title [role="main"], #copyright [role="main"], #dedication [role="main"], #contents [role="main"], #about [role="main"], #fourohfour [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
-#dedication h1 { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#dedication h1, #contents .book { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
 #copyright h1, #dedication [role="main"], #contents [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
@@ -130,7 +132,7 @@ html { background: #eef6ee; }
 @keyframes slideOutLeft { 0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); } }
 
-#title { background: url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, linear-gradient(300deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; }
+#title { background: url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(150deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; background: url('../../images/noise.png?1347221205') repeat, linear-gradient(300deg, rgba(246, 238, 246, 0) 50%, #f6eef6 50%) no-repeat center; }
 #title [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; position: relative; text-align: center; overflow: hidden; }
 #title .title { -webkit-transition: font-size, margin 300ms; -moz-transition: font-size, margin 300ms; -o-transition: font-size, margin 300ms; transition: font-size, margin 300ms; margin-top: 1.25rem; font-size: 1.5rem; line-height: 1.875rem; }
 @media (min-width: 58.5em) { #title .title { margin-top: 0.625rem; font-size: 1.95833rem; line-height: 2.5rem; } }
@@ -167,11 +169,10 @@ html { background: #eef6ee; }
 #title.exit-prev [class*="-left"], #title.exit-next [class*="-left"] { -webkit-animation-name: slideOutLeft; -moz-animation-name: slideOutLeft; -o-animation-name: slideOutLeft; animation-name: slideOutLeft; }
 #title.exit-prev [class*="-right"], #title.exit-next [class*="-right"] { -webkit-animation-name: slideOutRight; -moz-animation-name: slideOutRight; -o-animation-name: slideOutRight; animation-name: slideOutRight; }
 
-#copyright { background: #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; color: #f6eeee; border: 2px solid #202020; overflow: hidden; }
+#copyright { background: #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; color: #f6eeee; border: 2px solid #202020; overflow: hidden; }
 #copyright [role="main"] { max-width: 31rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; padding-bottom: 0rem; text-shadow: #7f0000 1px 1px 0; -webkit-animation: fadeIn 3s 1 ease backwards; -moz-animation: fadeIn 3s 1 ease backwards; -o-animation: fadeIn 3s 1 ease backwards; animation: fadeIn 3s 1 ease backwards; text-align: center; }
 #copyright [role="main"]:after { content: ""; display: table; clear: both; }
-#copyright h1 { -webkit-animation: hinge 1s 10s linear forwards, shake 500ms 3s linear; -moz-animation: hinge 1s 10s linear forwards, shake 500ms 3s linear; -o-animation: hinge 1s 10s linear forwards, shake 500ms 3s linear; animation: hinge 1s 10s linear forwards, shake 500ms 3s linear; -webkit-animation-play-state: paused; -moz-animation-play-state: paused; -o-animation-play-state: paused; animation-play-state: paused; margin-bottom: 1.25rem; -webkit-border-radius: 3em; -moz-border-radius: 3em; border-radius: 3em; -webkit-box-shadow: #7f0000 1px 1px 0; -moz-box-shadow: #7f0000 1px 1px 0; box-shadow: #7f0000 1px 1px 0; text-shadow: #7f0000 -1px -1px 0; display: inline-block; padding: 0.625rem 1.25rem; background: #f6eeee url('../../images/noise.png?1347221205'); color: #a57373; }
-#copyright h1:hover { -webkit-animation-play-state: running; -moz-animation-play-state: running; -o-animation-play-state: running; animation-play-state: running; }
+#copyright h1 { margin-bottom: 1.25rem; -webkit-border-radius: 3em; -moz-border-radius: 3em; border-radius: 3em; -webkit-box-shadow: #7f0000 1px 1px 0; -moz-box-shadow: #7f0000 1px 1px 0; box-shadow: #7f0000 1px 1px 0; text-shadow: #7f0000 -1px -1px 0; -webkit-animation: hinge 1s 20s linear both, shake 500ms 10s linear; -moz-animation: hinge 1s 20s linear both, shake 500ms 10s linear; -o-animation: hinge 1s 20s linear both, shake 500ms 10s linear; animation: hinge 1s 20s linear both, shake 500ms 10s linear; display: inline-block; padding: 0.625rem 1.25rem; background: #f6eeee url('../../images/noise.png?1347221205'); color: #a57373; }
 #copyright h1:before, #copyright h1:after { content: "•"; }
 @media (min-width: 40em) { #copyright h1 { font-size: 1.5rem; line-height: 1.875rem; } }
 #copyright p { font-size: 0.79167rem; line-height: 1.25rem; margin-bottom: 1.25rem; text-align: left; }
@@ -214,14 +215,18 @@ html { background: #eef6ee; }
 @keyframes shadeOut { 0% { max-height: 62.5rem; }
   100% { max-height: 0; } }
 
-#contents { background: #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(190deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; }
+#contents { background: #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(260deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(190deg, #ffffe5, #ffffe5, #ffdfbf), #ffffe5; }
 #contents [role="main"] { max-width: 39rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; }
 #contents [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 25em) { #contents [role="main"] { padding-top: 3.75rem; padding-bottom: 0; } }
+#contents [class^="toc-"] { margin-bottom: 1.25rem; }
+@media (min-width: 31.5em) { #contents [class^="toc-"] { width: 48.71795%; float: left; margin-right: 2.5641%; }
+  #contents [class^="toc-"]:last-child { float: right; margin-right: 0; } }
 #contents ol { max-height: 62.5rem; overflow: hidden; }
+#contents li { font-size: 0.79167rem; line-height: 1.25rem; }
+#contents li:before { color: #7c7c43; }
 #contents a:link, #contents a:visited { color: #7f4000; }
 #contents a:hover, #contents a:focus, #contents a:active { color: #ff8000; }
-#contents li:before { color: #7c7c43; }
 #contents.enter-prev, #contents.enter-next { -webkit-animation: fadeIn 300ms 1 ease-out backwards; -moz-animation: fadeIn 300ms 1 ease-out backwards; -o-animation: fadeIn 300ms 1 ease-out backwards; animation: fadeIn 300ms 1 ease-out backwards; }
 #contents.enter-prev ol, #contents.enter-next ol { -webkit-animation: shadeIn 2s 0.5s 1 ease-out backwards; -moz-animation: shadeIn 2s 0.5s 1 ease-out backwards; -o-animation: shadeIn 2s 0.5s 1 ease-out backwards; animation: shadeIn 2s 0.5s 1 ease-out backwards; }
 #contents.enter-prev .book, #contents.enter-next .book { -webkit-animation: fadeIn 2s 1 ease backwards; -moz-animation: fadeIn 2s 1 ease backwards; -o-animation: fadeIn 2s 1 ease backwards; animation: fadeIn 2s 1 ease backwards; }
@@ -250,7 +255,7 @@ html { background: #eef6ee; }
   75% { opacity: 1; }
   100% { opacity: 0; transform: translateY(-45rem); } }
 
-#thanks { background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(top left, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom right, #ffffe5, #d5e9d5), #d5e9d5; position: relative; overflow: hidden; }
+#thanks { background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top, #ffffe5, #d5e9d5), #d5e9d5; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom right, #ffffe5, #d5e9d5), #d5e9d5; position: relative; overflow: hidden; }
 #thanks [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; }
 #thanks [role="main"]:after { content: ""; display: table; clear: both; }
 #thanks [role="main"] div { margin-bottom: 1.25rem; }
@@ -305,7 +310,7 @@ html { background: #eef6ee; }
 #epigraph { text-shadow: #202020 0 1px 0; background: #202020; }
 #epigraph .lightning, #epigraph .blue { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
 #epigraph .lightning { -webkit-animation: lightning 10s steps(1, end) infinite; -moz-animation: lightning 10s steps(1, end) infinite; -o-animation: lightning 10s steps(1, end) infinite; animation: lightning 10s steps(1, end) infinite; background: url('../../images/noise.png?1347221205') repeat, url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll -123.75rem -123.75rem; }
-#epigraph .blue { background: -webkit-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: -moz-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: -o-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: linear-gradient(130deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); }
+#epigraph .blue { background: -webkit-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: -moz-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: -o-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: linear-gradient(130deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); }
 #epigraph blockquote { font-size: 0.79167rem; line-height: 1.25rem; position: relative; padding: 1.875rem 1.25rem; color: #b9b9b9; }
 #epigraph p { margin-bottom: 1.25rem; }
 #epigraph.enter-prev, #epigraph.enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
@@ -317,9 +322,14 @@ html { background: #eef6ee; }
 #epigraph.exit-prev .blue, #epigraph.exit-next .blue { -webkit-animation: slideOutRight 600ms linear forwards; -moz-animation: slideOutRight 600ms linear forwards; -o-animation: slideOutRight 600ms linear forwards; animation: slideOutRight 600ms linear forwards; }
 #epigraph.exit-prev blockquote, #epigraph.exit-next blockquote { -webkit-animation: fadeOutLeft 400ms ease forwards; -moz-animation: fadeOutLeft 400ms ease forwards; -o-animation: fadeOutLeft 400ms ease forwards; animation: fadeOutLeft 400ms ease forwards; }
 
+#about [role="main"] { max-width: 31rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 11.875rem; -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; background: url('../../images/frontmatter/about/eric.png?1347221205') no-repeat scroll center top; }
+#about [role="main"]:after { content: ""; display: table; clear: both; }
+@media (min-width: 46.5em) { #about [role="main"] { padding-top: 8.75rem; background-image: url('../../images/frontmatter/about/faces.png?1347221205'); } }
 #about .vcard { font-size: 0.79167rem; line-height: 1.25rem; }
 #about .vcard :first-line { font-weight: bold; }
+@media (min-width: 40em) { #about .vcard:nth-child(even) { width: 48.3871%; float: left; margin-right: 3.22581%; }
+  #about .vcard:nth-child(2n+3) { width: 48.3871%; float: right; margin-right: 0; } }
 #about .fn { font-size: 1rem; line-height: 1.25rem; text-transform: uppercase; }
-#about .eric { padding-top: 8.75rem; background: url('../../images/frontmatter/about/faces.png?1347221205') no-repeat scroll top; }
 
-/* ---------------------------------------------------------------------------- 404 */
+#fourohfour [role="main"] { padding-top: 3.75rem; padding-bottom: 3.75rem; text-align: center; }
+#fourohfour h1 { font-size: 1.95833rem; line-height: 2.5rem; }

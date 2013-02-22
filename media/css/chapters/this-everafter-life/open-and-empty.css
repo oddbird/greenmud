@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------- helpers */
-[data-icon]:before { font-family: 'IcoMoon'; font-style: normal; speak: none; }
+[data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
 [data-icon]:before { content: attr(data-icon); }
 

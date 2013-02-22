@@ -24,7 +24,7 @@ var GM = (function (GM, $) {
                     .replace(/<\/(html|head|body|title|meta|script)\>/gi, '</div>');
 
                 // Return
-                return result;
+                return $.parseHTML(result);
             },
             turnToPage = function (page, replaceState) {
                 var state = {},
@@ -49,12 +49,12 @@ var GM = (function (GM, $) {
 
         // Hijack all internal links
         body.on('click', 'a', function (e) {
-            var thisLink = $(this).blur(),
-                href = thisLink.attr('href'),
-                page,
-                fallback = function (link) {
-                    window.location = link.attr('href');
-                };
+            var thisLink = $(this).blur();
+            var href = thisLink.attr('href');
+            var page;
+            var fallback = function (link) {
+                window.location = link.attr('href');
+            };
             stateChange = false;
             // Prev/Next page-turns use classes for css-animation
             if (thisLink.parent().hasClass('prev')) {
@@ -203,7 +203,7 @@ var GM = (function (GM, $) {
                         }
                     },
                     replacePage = function (newPage, newPageNav) {
-                        body.attr('class', newPage.data('body-class'));
+                        body.removeClass().addClass(newPage.data('body-class'));
                         document.title = title;
                         $('title').text(title);
                         $.scrollTo(0);
