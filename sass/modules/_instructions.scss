@@ -2,7 +2,7 @@
    instructions */
 
 .instructions {
-  display: none; // temporary hiding of instructions
+  display: none;
 
   @include adjust-font-size-to($medpx);
   @include text-shadow(black 0 1px 0);
@@ -15,45 +15,66 @@
   text-align: center;
   z-index: 500;
   b {
-    text-transform: uppercase;
     font-weight: bold;
+    text-transform: uppercase;
   }
   &:before {
     @include stretch;
     position: fixed;
     content: " ";
-    background: color(darkest,.9);
+    background: color($off $green darkest,.98);
     z-index: -1;
-  }
-}
-
-.extra-help {
-  @include adjust-font-size-to($smallpx);
-  display: block;
-  color: $gray;
-  .menu {
-    @extend %icon;
-    @extend %icon-reorder;
-    margin: 0 .4em;
-    text-transform: uppercase;
-    &:before {
-      @include adjust-font-size-to($xsmallpx);
-      margin-right: .4em;
-    }
   }
 }
 
 // ----------------------------------------------------------------------------
 // pageturn
 
+%help-icon {
+  @extend %icon;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:before {
+    @include adjust-font-size-to($smallpx);
+    margin-right: .4em;
+  }
+}
+
 .help-pageturn {
   @extend %icon;
   @extend %icon-swipe;
+  .no-touch & {
+    @extend %icon-arrows;
+    .swipe, .or { display: none; }
+    .use { text-transform: capitalize; }
+  }
+  .touch & {
+    .or, .use, .arrows { display: none; }
+  }
   &:before {
     @include transition(all 300ms);
     @include adjust-font-size-to($xxxlargepx);
     display: block;
     @include breakpoint(30em) { @include adjust-font-size-to($xxxlargepx*2); }
   }
-  .gear { @extend %icon-reorder; }
 }
+
+// ----------------------------------------------------------------------------
+// extra help
+
+.extra-help {
+  @include adjust-font-size-to($smallpx);
+  @include trailer;
+  display: block;
+  color: $gray;
+  .menu {
+    @extend %help-icon;
+    @extend %icon-reorder;
+    &:before { @include adjust-font-size-to($xsmallpx); }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// try now
+
+.try-now { @include animation(tada 1s 3s); }

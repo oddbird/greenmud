@@ -20,21 +20,8 @@
 {% endblock styles %}
 
 {% block body %}
-
-  <aside class="warning">
-    <h2>Please <a href="http://browsehappy.com/">upgrade your&nbsp;browser</a>.</h2>
-    <p>Chrome, Firefox, & Safari currently offer the best support for this&nbsp;technology.</p>
-  </aside>
-
-  <header class="controls">
-    <h1 role="banner">
-      <a href="{{ resource.meta.root_url }}index.html" rel="home">
-        {{ node.meta.novel }}
-      </a>
-    </h1>
-    {% include "novel/_page-nav.j2" %}
-    {% include "novel/_toc.j2" %}
-  </header>
+  {% include "novel/_browser-warning.j2" %}
+  {% include "novel/_controls.j2" %}
 
   <div class="novel">
     <a id="toggle" title="show/hide controls">show/hide controls</a>
@@ -43,13 +30,5 @@
     </div>
   </div>
 
-  <aside class="instructions">
-    <p class="help-pageturn">
-      <b>Swipe</b> or use <b>arrow keys</b> to turn the&nbsp;page.
-      <span class="extra-help">
-        (use the <i class="menu">menu icon</i> for&nbsp;navigation)
-      </span>
-    </p>
-  </aside>
-
+  {% include "novel/_instructions.j2" %}
 {% endblock body%}

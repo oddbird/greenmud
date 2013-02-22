@@ -22,15 +22,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .extras [href$='about.html']:before { content: "\e007"; }
 
-.swiping-next .prevnext:before { content: "\e008"; }
-
-.swiping-prev .prevnext:before { content: "\e009"; }
-
 [role="banner"] [rel="home"]:before { content: "\e00a"; }
 
-#toggle:before, .extra-help .menu:before, .help-pageturn .gear:before { content: "\e012"; }
+#toggle:before, .extra-help .menu:before { content: "\e012"; }
 
 .extras [href='#instructions']:before { content: "\e00b"; }
+
+.no-touch .help-pageturn:before { content: "\e00c"; }
+
+.swiping-prev .prevnext:before { content: "\f060"; }
+
+.swiping-next .prevnext:before { content: "\f061"; }
 
 #toggle:before, [role="banner"] [rel="home"]:before, .extras [href$='about.html']:before, .extras [href='#instructions']:before, .menu-toc .book a:before, .prevnext:before, .extra-help .menu:before, .help-pageturn:before, [data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
 
@@ -1131,15 +1133,22 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 /* ---------------------------------------------------------------------------- instructions */
 .instructions { display: none; font-size: 1.25rem; line-height: 1.875rem; text-shadow: black 0 1px 0; position: absolute; left: 0; right: 0; padding-bottom: 1.25rem; top: 3.75rem; max-width: 30rem; margin: 0 auto; color: #f2f2f2; text-align: center; z-index: 500; }
-.instructions b { text-transform: uppercase; font-weight: bold; }
-.instructions:before { position: absolute; top: 0; bottom: 0; left: 0; right: 0; position: fixed; content: " "; background: rgba(32, 32, 32, 0.9); z-index: -1; }
+.instructions b { font-weight: bold; text-transform: uppercase; }
+.instructions:before { position: absolute; top: 0; bottom: 0; left: 0; right: 0; position: fixed; content: " "; background: rgba(22, 41, 22, 0.98); z-index: -1; }
 
-.extra-help { font-size: 0.79167rem; line-height: 1.25rem; display: block; color: gray; }
-.extra-help .menu { margin: 0 0.4em; text-transform: uppercase; }
-.extra-help .menu:before { font-size: 0.66667rem; line-height: 1.25rem; margin-right: .4em; }
+.extra-help .menu { font-weight: bold; text-transform: uppercase; }
+.extra-help .menu:before { font-size: 0.79167rem; line-height: 1.25rem; margin-right: .4em; }
 
+.no-touch .help-pageturn .swipe, .no-touch .help-pageturn .or { display: none; }
+.no-touch .help-pageturn .use { text-transform: capitalize; }
+.touch .help-pageturn .or, .touch .help-pageturn .use, .touch .help-pageturn .arrows { display: none; }
 .help-pageturn:before { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; font-size: 3.375rem; line-height: 3.75rem; display: block; }
 @media (min-width: 30em) { .help-pageturn:before { font-size: 6.75rem; line-height: 7.5rem; } }
+
+.extra-help { font-size: 0.79167rem; line-height: 1.25rem; margin-bottom: 1.25rem; display: block; color: gray; }
+.extra-help .menu:before { font-size: 0.66667rem; line-height: 1.25rem; }
+
+.try-now { -webkit-animation: tada 1s 3s; -moz-animation: tada 1s 3s; -o-animation: tada 1s 3s; animation: tada 1s 3s; }
 
 /* ---------------------------------------------------------------------------- browser warning */
 .warning { display: none; padding: 1.5em; background: #ffb2b2; border: 3px solid red; font-family: helvetica, arial, sans-serif; z-index: 900; }
