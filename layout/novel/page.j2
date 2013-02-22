@@ -11,11 +11,11 @@
     {% filter typogrify %}
     {% block page %}{% endblock page %}
     {% endfilter %}
-  </div>
 
-  {% if resource.meta.template %}
-  {% include "novel/_template-info.j2" %}
-  {% endif %}
+    {% if resource.meta.template %}
+    {% include "novel/_template-info.j2" %}
+    {% endif %}
+  </div>
 
   <span class="prevnext"></span>
 </section>

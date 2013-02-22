@@ -11,14 +11,15 @@ $faces          : '#{$pg}faces.png';
 // about
 
 #about {
+  @extend %center-content;
 
   [role="main"] {
     @include container;
-    @include rhythm-padding(11,2);
+    @include padding-leader(9.5);
     @include transition(all 300ms);
-    background: image-url($eric) no-repeat scroll center rhythm(1.25);
-    @include at-breakpoint(8) {
-      @include rhythm-padding(9,2);
+    background: image-url($eric) no-repeat scroll center top;
+    @include at-breakpoint($total-columns) {
+      @include padding-leader(7);
       background-image: image-url($faces);
     }
   }

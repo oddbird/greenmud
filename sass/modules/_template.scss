@@ -1,0 +1,59 @@
+// ----------------------------------------------------------------------------
+// footer
+
+[role="contentinfo"] {
+  @include adjust-font-size-to($smallpx);
+  @include leading-border(1px,.5);
+  @include trailer;
+  clear: both;
+  border-color: color($base, .25);
+}
+
+@mixin social($slug) {
+  $slug: compact($slug);
+  $icon: false;
+  @if length($slug) > 1 {
+    $icon: nth($slug,2);
+    $slug: nth($slug,1);
+  } @else {
+    $slug: nth($slug,1);
+    $icon: $slug;
+  }
+
+  [href*="#{$slug}"] {
+    @extend %icon-replace;
+    @extend %icon-#{$icon};
+  }
+}
+
+// ----------------------------------------------------------------------------
+// social
+
+.social {
+  @include inline-block-list;
+  text-align: center;
+
+  a {
+    #{$link} {
+      @include border-radius(rhythm(.25));
+      display: inline-block;
+      padding: 0 rhythm(.75);
+      width: rhythm(1);
+      color: color(dark, .5);
+      border: 1px solid color($base,0);
+      text-align: left;
+      &:before { text-align: center; }
+    }
+    #{$focus} {
+      color: $alt;
+      border-color: color($base,.5);
+    }
+  }
+
+  @include social(twitter);
+  @include social(facebook);
+  @include social(vimeo);
+  @include social(github);
+  @include social(andmeyer bubbles);
+  @include social('/index.html' home);
+}

@@ -18,11 +18,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ---------------------------------------------------------------------------- helpers */
 .help-pageturn:before { content: "\e000"; }
 
+.social [href*="facebook"]:before { content: "\e001"; }
+
+.social [href*="twitter"]:before { content: "\e002"; }
+
+.social [href*="vimeo"]:before { content: "\e003"; }
+
+.social [href*="github"]:before { content: "\e004"; }
+
+.social [href*="andmeyer"]:before { content: "\e005"; }
+
 .menu-toc .book a:before { content: "\e006"; }
 
 .extras [href$='about.html']:before { content: "\e007"; }
 
-[role="banner"] [rel="home"]:before { content: "\e00a"; }
+[role="banner"] [rel="home"]:before, .social [href*="/index.html"]:before { content: "\e00a"; }
 
 #toggle:before, .extra-help .menu:before { content: "\e012"; }
 
@@ -34,7 +44,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .swiping-next .prevnext:before { content: "\f061"; }
 
-#toggle:before, [role="banner"] [rel="home"]:before, .extras [href$='about.html']:before, .extras [href='#instructions']:before, .menu-toc .book a:before, .prevnext:before, .extra-help .menu:before, .help-pageturn:before, [data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
+.social [href*="twitter"]:before, .social [href*="facebook"]:before, .social [href*="vimeo"]:before, .social [href*="github"]:before, .social [href*="andmeyer"]:before, .social [href*="/index.html"]:before, #toggle:before, [role="banner"] [rel="home"]:before, .extras [href$='about.html']:before, .extras [href='#instructions']:before, .menu-toc .book a:before, .prevnext:before, .extra-help .menu:before, .help-pageturn:before, [data-icon]:before { font-family: 'greenmud'; font-style: normal; speak: none; }
+
+.social [href*="twitter"], .social [href*="facebook"], .social [href*="vimeo"], .social [href*="github"], .social [href*="andmeyer"], .social [href*="/index.html"] { position: relative; min-width: 1em; text-indent: -9999px; }
+.social [href*="twitter"]:before, .social [href*="facebook"]:before, .social [href*="vimeo"]:before, .social [href*="github"]:before, .social [href*="andmeyer"]:before, .social [href*="/index.html"]:before { position: absolute; top: 0; left: 0; bottom: 0; right: 0; text-indent: 0; }
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -1105,6 +1118,14 @@ a:hover, a:focus, a:active { color: #0000bf; }
 
 .menu-toc { overflow: hidden; background: -webkit-linear-gradient(right, #202020, #404040 1.875rem); background: -moz-linear-gradient(right, #202020, #404040 1.875rem); background: -o-linear-gradient(right, #202020, #404040 1.875rem); background: linear-gradient(to left, #202020, #404040 1.875rem); font-family: "GreenMudNarrator", serif; }
 .menu-toc .book { background: rgba(32, 32, 32, 0.5); }
+
+[role="contentinfo"] { font-size: 0.79167rem; line-height: 1.25rem; border-top-width: 0.04167rem; border-top-style: solid; padding-top: 0.58333rem; margin-bottom: 1.25rem; clear: both; border-color: rgba(64, 64, 64, 0.25); }
+
+.social { margin: 0; padding: 0; border: 0; overflow: hidden; text-align: center; }
+.social li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; white-space: nowrap; }
+.social a:link, .social a:visited { -webkit-border-radius: 0.3125rem; -moz-border-radius: 0.3125rem; border-radius: 0.3125rem; display: inline-block; padding: 0 0.9375rem; width: 1.25rem; color: rgba(96, 96, 96, 0.5); border: 1px solid rgba(64, 64, 64, 0); text-align: left; }
+.social a:link:before, .social a:visited:before { text-align: center; }
+.social a:hover, .social a:focus, .social a:active { color: #bf00bf; border-color: rgba(64, 64, 64, 0.5); }
 
 /* ---------------------------------------------------------------------------- page */
 .novel { -webkit-transition: margin-right 300ms ease; -moz-transition: margin-right 300ms ease; -o-transition: margin-right 300ms ease; transition: margin-right 300ms ease; position: relative; float: left; width: 100%; height: 100%; }

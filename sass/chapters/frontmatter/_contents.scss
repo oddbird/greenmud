@@ -1,6 +1,9 @@
 // ----------------------------------------------------------------------------
 // settings
 
+$toc-break      : 21em;
+$toc-cols       : 5;
+
 $total-columns: $toc-cols*2;
 
 $bg           : color($yellow $hint);
