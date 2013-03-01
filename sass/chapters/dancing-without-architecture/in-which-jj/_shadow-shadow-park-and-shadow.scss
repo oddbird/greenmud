@@ -11,10 +11,10 @@ $shadow-color   : color($off $orange);
 $bg-location    : bottom right;
 $bg-angle       : 170deg;
 $bg-details     : rgba($shadow-color,0),
-                  rgba($shadow-color,0) 80%,
+                  rgba($shadow-color,0) 60%,
                   rgba($shadow-color,.25),
                   rgba($shadow-color,.75);
-$bg-grad        : linear-gradient($bg-angle, $bg-details...) $bg-location;
+$bg-grad        : linear-gradient($bg-angle, $bg-details...) $bg-location no-repeat;
 
 $puddle-height  : rhythm-image($puddle-far);
 
@@ -27,23 +27,28 @@ $puddle-height  : rhythm-image($puddle-far);
 }
 
 @include keyframes(shadow) {
-  0%    { @include background-size(auto, 100%); }
-  100%  { @include background-size(auto, 8000%); }
+  0%    { top: 80%; }
+  100%  { top: -20%; }
 }
 
 /* ----------------------------------------------------------------------------
    shadow-shadow-park-and-shadow */
 
 #shadow-shadow-park-and-shadow {
-  @include page-animation(shadow 60s linear infinite alternate both);
-  @include background($noise-layer, $bg-grad);
+  @extend %center-content;
   position: relative;
   overflow: hidden;
 
   [role="main"] {
     @extend %transition-main;
     @include rhythm-padding(2);
-    @include pagepad(15 3 2)
+  }
+
+  .shadow {
+    @include stretch-x;
+    @include animation(shadow 30s linear infinite alternate both);
+    @include background($noise-layer, $bg-grad);
+    bottom: 0;
   }
 
   .puddle {

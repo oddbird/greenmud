@@ -22,8 +22,8 @@
 #his-shirt-is-wet-and [role="main"] blockquote cite { font-style: normal; }
 #his-shirt-is-wet-and [role="main"] blockquote :last-child { margin-bottom: 0rem; }
 
-#titlepage, #once-upon-a-sunday, #johnny-john-goes-sitting-on-a { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
-#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+#titlepage, #once-upon-a-sunday, #johnny-john-goes-sitting-on-a, #shadow-shadow-park-and-shadow { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
 #titlepage { overflow-x: hidden; }
 #titlepage [role="main"] { max-width: 15rem; margin-top: 3.75rem; margin-bottom: 3.75rem; position: relative; margin-left: auto; margin-right: auto; padding: 1.875rem 1rem; text-align: center; }
@@ -46,7 +46,7 @@
 
 #titlepage [role="main"]::before, #titlepage [role="main"]::after, #titlepage h1, #titlepage h2, #once-upon-a-sunday blockquote, #once-upon-a-sunday blockquote span, #johnny-john-goes-sitting-on-a .words, #shadow-shadow-park-and-shadow p { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
-#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"], #his-shirt-is-wet-and [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
+#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
 .enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
 
@@ -116,6 +116,7 @@ html { background: #fafaea; }
 #johnny-john-goes-sitting-on-a .words { position: relative; float: right; padding-left: 5rem; text-align: right; z-index: 10; }
 #johnny-john-goes-sitting-on-a span { display: block; }
 #johnny-john-goes-sitting-on-a .swing { position: absolute; bottom: 5.625rem; left: 0; height: 30rem; width: 6.875rem; background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/swing.svg?1360532308') no-repeat scroll; z-index: 10; }
+#johnny-john-goes-sitting-on-a .grass { position: absolute; left: 0; right: 0; bottom: 0; height: 6.25rem; background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/grass.svg?1362113036') no-repeat top right; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 #johnny-john-goes-sitting-on-a .rain { position: absolute; top: -27.90698%; bottom: 0; left: -27.90698%; right: 55.81395%; -webkit-transition: right 300ms; -moz-transition: right 300ms; -o-transition: right 300ms; transition: right 300ms; background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/rainish.svg?1360535294') no-repeat right; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 #johnny-john-goes-sitting-on-a .leaves { position: absolute; left: 0; right: 0; background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/leaves.svg?1360531609') no-repeat bottom; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; top: 0; height: 30%; }
 #johnny-john-goes-sitting-on-a .trunk { position: absolute; top: 0; bottom: 0; -webkit-transition: left 300ms, right 300ms; -moz-transition: left 300ms, right 300ms; -o-transition: left 300ms, right 300ms; transition: left 300ms, right 300ms; background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/trunk.svg?1360537883') no-repeat right; -webkit-background-size: auto 100%; -moz-background-size: auto 100%; -o-background-size: auto 100%; background-size: auto 100%; left: 0; right: 46.51163%; }
@@ -135,26 +136,22 @@ html { background: #fafaea; }
 @keyframes drops { 0%, 24% { top: -20%; }
   75%, 100% { top: 100%; } }
 
-@-moz-keyframes shadow { 0% { -moz-background-size: auto, 100%; background-size: auto, 100%; }
-  100% { -moz-background-size: auto, 8000%; background-size: auto, 8000%; } }
+@-moz-keyframes shadow { 0% { top: 80%; }
+  100% { top: -20%; } }
 
-@-webkit-keyframes shadow { 0% { -webkit-background-size: auto, 100%; background-size: auto, 100%; }
-  100% { -webkit-background-size: auto, 8000%; background-size: auto, 8000%; } }
+@-webkit-keyframes shadow { 0% { top: 80%; }
+  100% { top: -20%; } }
 
-@-o-keyframes shadow { 0% { -o-background-size: auto, 100%; background-size: auto, 100%; }
-  100% { -o-background-size: auto, 8000%; background-size: auto, 8000%; } }
+@-o-keyframes shadow { 0% { top: 80%; }
+  100% { top: -20%; } }
 
-@keyframes shadow { 0% { background-size: auto, 100%; }
-  100% { background-size: auto, 8000%; } }
+@keyframes shadow { 0% { top: 80%; }
+  100% { top: -20%; } }
 
 /* ---------------------------------------------------------------------------- shadow-shadow-park-and-shadow */
-#shadow-shadow-park-and-shadow { -webkit-animation: shadow 60s linear infinite alternate both; -moz-animation: shadow 60s linear infinite alternate both; -o-animation: shadow 60s linear infinite alternate both; animation: shadow 60s linear infinite alternate both; background: url('../../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(280deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 80%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right; background: url('../../../images/noise.png?1347221205') repeat, -moz-linear-gradient(280deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 80%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right; background: url('../../../images/noise.png?1347221205') repeat, -o-linear-gradient(280deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 80%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(170deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 80%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right; position: relative; overflow: hidden; }
-#shadow-shadow-park-and-shadow.enter-prev { -webkit-animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; -moz-animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; -o-animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; }
-#shadow-shadow-park-and-shadow.enter-next { -webkit-animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; -moz-animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; -o-animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; animation: fadeIn 2s ease backwards, shadow 60s linear infinite alternate both; }
-#shadow-shadow-park-and-shadow.exit-prev { -webkit-animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; -moz-animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; -o-animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; }
-#shadow-shadow-park-and-shadow.exit-next { -webkit-animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; -moz-animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; -o-animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; animation: fadeOut 600ms ease forwards, shadow 60s linear infinite alternate both; }
+#shadow-shadow-park-and-shadow { position: relative; overflow: hidden; }
 #shadow-shadow-park-and-shadow [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-@media (min-height: 18.75em) { #shadow-shadow-park-and-shadow [role="main"] { padding-top: 3.75rem; padding-bottom: 2; } }
+#shadow-shadow-park-and-shadow .shadow { position: absolute; left: 0; right: 0; -webkit-animation: shadow 30s linear infinite alternate both; -moz-animation: shadow 30s linear infinite alternate both; -o-animation: shadow 30s linear infinite alternate both; animation: shadow 30s linear infinite alternate both; background: url('../../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(280deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 60%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right no-repeat; background: url('../../../images/noise.png?1347221205') repeat, -moz-linear-gradient(280deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 60%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right no-repeat; background: url('../../../images/noise.png?1347221205') repeat, -o-linear-gradient(280deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 60%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right no-repeat; background: url('../../../images/noise.png?1347221205') repeat, linear-gradient(170deg, rgba(166, 128, 89, 0), rgba(166, 128, 89, 0) 60%, rgba(166, 128, 89, 0.25), rgba(166, 128, 89, 0.75)) bottom right no-repeat; bottom: 0; }
 #shadow-shadow-park-and-shadow .puddle { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; position: relative; padding-bottom: 5rem; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-far.png?1347255590') no-repeat bottom; }
 #shadow-shadow-park-and-shadow .puddle:after { content: ""; display: table; clear: both; }
 #shadow-shadow-park-and-shadow .puddle::before { position: absolute; left: 0; right: 0; bottom: 0; content: " "; height: 5rem; background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/puddle-close.png?1347255570') no-repeat bottom; z-index: 500; }
@@ -174,8 +171,25 @@ html { background: #fafaea; }
 .drop:nth-child(6) { -webkit-animation-duration: 24s; -moz-animation-duration: 24s; -o-animation-duration: 24s; animation-duration: 24s; background-position: 100% 0; left: 60%; top: 75%; padding-top: 2.5rem; padding-right: 1.875rem; }
 .drop:nth-child(7) { -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; background-position: 100% -360px; right: 81.66667%; top: 10.41667%; padding-bottom: 2.5rem; padding-right: 1.25rem; }
 
-/* ---------------------------------------------------------------------------- his-shirt-is-wet-and */
-#his-shirt-is-wet-and [role="main"] { max-width: 15rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 3.75rem; padding-bottom: 5rem; }
-#his-shirt-is-wet-and [role="main"]:after { content: ""; display: table; clear: both; }
+@-moz-keyframes bigdrop { 0% { bottom: 100%; }
+  100% { bottom: -20rem; } }
+
+@-webkit-keyframes bigdrop { 0% { bottom: 100%; }
+  100% { bottom: -20rem; } }
+
+@-o-keyframes bigdrop { 0% { bottom: 100%; }
+  100% { bottom: -20rem; } }
+
+@keyframes bigdrop { 0% { bottom: 100%; }
+  100% { bottom: -20rem; } }
+
+#his-shirt-is-wet-and { padding-top: 8.75rem; position: relative; overflow: hidden; }
+#his-shirt-is-wet-and [role="main"] { overflow: hidden; border-top-width: 0.08333rem; border-top-style: solid; padding-top: 1.16667rem; margin-bottom: -200%; padding-bottom: 200%; text-align: center; background: rgba(204, 128, 51, 0.5); border-color: black; }
+#his-shirt-is-wet-and p { -webkit-transition: opacity 1s; -moz-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s; margin-bottom: 0rem; position: relative; float: left; width: 100%; margin-right: -100%; opacity: 0; z-index: 10; }
+#his-shirt-is-wet-and .raindrop { -webkit-animation: bigdrop 60s infinite both; -moz-animation: bigdrop 60s infinite both; -o-animation: bigdrop 60s infinite both; animation: bigdrop 60s infinite both; -webkit-transition: opacity 800ms; -moz-transition: opacity 800ms; -o-transition: opacity 800ms; transition: opacity 800ms; position: absolute; bottom: 100%; right: 60%; width: 15rem; height: 20rem; background: rgba(255, 0, 0, 0.5); }
+#his-shirt-is-wet-and[data-page-state="1"] p:first-of-type { -webkit-transition-delay: 1s; -moz-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; opacity: 1; }
+#his-shirt-is-wet-and[data-page-state="1"] .raindrop { opacity: 0; }
+#his-shirt-is-wet-and[data-page-state="2"] p:last-of-type { -webkit-transition-delay: 1s; -moz-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; opacity: 1; }
+#his-shirt-is-wet-and[data-page-state="2"] .raindrop { opacity: 1; }
 
 /* ---------------------------------------------------------------------------- titlepage */

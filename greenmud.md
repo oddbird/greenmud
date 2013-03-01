@@ -124,6 +124,7 @@ exit_duration : 600
 body_class:
 -->
 
+<div class="grass"></div>
 <div class="rain"></div>
 <div class="leaves"></div>
 <div class="trunk"></div>
@@ -146,9 +147,9 @@ body_class:
 
 <!-- meta
 body_class:
-page_states:
 -->
 
+<div class="shadow"></div>
 <div class="puddle">
 
 Shadow, shadow, park and shadow.
@@ -173,14 +174,19 @@ in the puddles before.
 
 <!-- meta
 body_class:
+page_states: 2
 -->
 
+<div class="scribble"></div>
+
 His shirt is wet,
-and the darkest black hole is his heart.
+and the darkest black hole is his heart.<br />
 Sad like a toothache.
 
-The rain falls slow, and the leaves fall too.
+The rain falls slow, and the leaves fall too.<br />
 (JJ watches the trees)
+
+<div class="raindrop"></div>
 
 ------
 

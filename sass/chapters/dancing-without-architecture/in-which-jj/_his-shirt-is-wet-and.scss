@@ -6,14 +6,64 @@ $total-columns: 4;
 // ----------------------------------------------------------------------------
 // animation
 
-/* ----------------------------------------------------------------------------
-   his-shirt-is-wet-and */
+@include keyframes(bigdrop) {
+  0% { bottom: 100%; }
+  100% { bottom: rhythm(-16); }
+}
+
+// ----------------------------------------------------------------------------
+// his-shirt-is-wet-and
 
 #his-shirt-is-wet-and {
+  @include padding-leader(7);
+  position: relative;
+  overflow: hidden;
+
   [role="main"] {
-    @extend %transition-main;
     @extend %type;
-    @include container;
-    @include rhythm-padding(3,4);
+    @include clearfix;
+    @include leading-border(2px,1);
+    @include bleed(200%, bottom);
+    text-align: center;
+    background: color($faded $orange,.5);
+    border-color: black;
   }
+
+  p {
+    @include transition(opacity 1s);
+    @include trailer(0);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  .raindrop {
+    @include animation(bigdrop 60s infinite both);
+    @include transition(opacity 800ms);
+    position: absolute;
+    bottom: 100%;
+    right: 60%;
+    width: rhythm(12);
+    height: rhythm(16);
+    background: color($red,.5);
+  }
+
+  &[data-page-state="1"] {
+    p:first-of-type {
+      @include transition-delay(1s);
+      opacity: 1;
+    }
+    .raindrop { opacity: 0; }
+  }
+  &[data-page-state="2"] {
+    p:last-of-type {
+      @include transition-delay(1s);
+      opacity: 1;
+    }
+    .raindrop { opacity: 1; }
+  }
+
 }

@@ -5,6 +5,7 @@ $total-columns  : 11;
 
 $pg             : '#{$ch}johnny-john-goes-sitting-on-a/';
 $swing          : '#{$pg}swing.svg';
+$grass          : '#{$pg}grass.svg';
 $trunk          : '#{$pg}trunk.svg';
 $leaves         : '#{$pg}leaves.svg';
 $rainish        : '#{$pg}rainish.svg';
@@ -61,6 +62,14 @@ $swing-height   : px-to-rhythm(714px);
 
   // --------------------------------------------------------------------------
   // tree
+
+  .grass {
+    @include stretch-x;
+    bottom: 0;
+    height: rhythm(5);
+    @include background(image-url($grass) no-repeat top right);
+    @include background-size(cover);
+  }
 
   .rain {
     @include stretch(space(-4), space(6), 0, space(-4));
