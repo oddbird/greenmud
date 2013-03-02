@@ -29,8 +29,8 @@
 #contents li { counter-increment: toc; }
 #contents li a:before { content: counter(toc, decimal-leading-zero) ". "; }
 
-#title, #copyright, #dedication, #contents, #about, #fourohfour { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
-#title [role="main"], #copyright [role="main"], #dedication [role="main"], #contents [role="main"], #about [role="main"], #fourohfour [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+#title, #copyright, #dedication, #contents, #epigraph, #about, #fourohfour { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+#title [role="main"], #copyright [role="main"], #dedication [role="main"], #contents [role="main"], #epigraph [role="main"], #about [role="main"], #fourohfour [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
 #dedication h1, #contents .book { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
@@ -169,6 +169,8 @@ html { background: #eef6ee; }
 #title.exit-prev [class*="-left"], #title.exit-next [class*="-left"] { -webkit-animation-name: slideOutLeft; -moz-animation-name: slideOutLeft; -o-animation-name: slideOutLeft; animation-name: slideOutLeft; }
 #title.exit-prev [class*="-right"], #title.exit-next [class*="-right"] { -webkit-animation-name: slideOutRight; -moz-animation-name: slideOutRight; -o-animation-name: slideOutRight; animation-name: slideOutRight; }
 
+body.copyright { -webkit-transition-delay: 800ms; -moz-transition-delay: 800ms; -o-transition-delay: 800ms; transition-delay: 800ms; background: #ffcc99; }
+
 #copyright { background: #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-linear-gradient(top, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, linear-gradient(to bottom, rgba(206, 163, 163, 0.375), rgba(206, 163, 163, 0)), #7c4343; color: #f6eeee; border: 2px solid #202020; overflow: hidden; }
 #copyright [role="main"] { max-width: 31rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; padding-bottom: 0rem; text-shadow: #7f0000 1px 1px 0; -webkit-animation: fadeIn 3s 1 ease backwards; -moz-animation: fadeIn 3s 1 ease backwards; -o-animation: fadeIn 3s 1 ease backwards; animation: fadeIn 3s 1 ease backwards; text-align: center; }
 #copyright [role="main"]:after { content: ""; display: table; clear: both; }
@@ -182,14 +184,16 @@ html { background: #eef6ee; }
 #copyright.enter-prev, #copyright.enter-next { -webkit-animation: fadeInDownBig 600ms linear backwards; -moz-animation: fadeInDownBig 600ms linear backwards; -o-animation: fadeInDownBig 600ms linear backwards; animation: fadeInDownBig 600ms linear backwards; }
 #copyright.exit-prev, #copyright.exit-next { -webkit-animation: fadeOutUpBig 800ms ease forwards; -moz-animation: fadeOutUpBig 800ms ease forwards; -o-animation: fadeOutUpBig 800ms ease forwards; animation: fadeOutUpBig 800ms ease forwards; }
 
-#dedication { background: #ffcc99; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972), #ffcc99; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972), #ffcc99; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972), #ffcc99; background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972), #ffcc99; }
+body.dedication { background: #ffcc99; }
+
+#dedication { background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -webkit-radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972); background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -moz-radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972); background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, -o-radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972); background: url('../../images/frontmatter/scribble.png?1347221205') no-repeat -4.375rem -4.375rem, url('../../images/noise.png?1347221205') repeat, radial-gradient(center 7.5rem, #ffdfbf, #ffcc99, #ffb972); }
 #dedication [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; padding-bottom: 2.5rem; }
 #dedication [role="main"]:after { content: ""; display: table; clear: both; }
 @media (min-height: 18.75em) { #dedication [role="main"] { padding-top: 3.75rem; padding-bottom: 3.75rem; } }
 #dedication h1 { font-weight: bold; color: #202020; }
 #dedication p { font-size: 0.79167rem; line-height: 1.25rem; margin-bottom: 1.25rem; }
 #dedication.enter-prev, #dedication.enter-next { -webkit-animation: fadeIn 4s 1 ease backwards; -moz-animation: fadeIn 4s 1 ease backwards; -o-animation: fadeIn 4s 1 ease backwards; animation: fadeIn 4s 1 ease backwards; }
-#dedication.exit-prev, #dedication.exit-next { -webkit-animation: fadeOut 600ms 1 ease forwards; -moz-animation: fadeOut 600ms 1 ease forwards; -o-animation: fadeOut 600ms 1 ease forwards; animation: fadeOut 600ms 1 ease forwards; }
+#dedication.exit-prev, #dedication.exit-next { -webkit-animation: fadeOut 300ms 1 ease forwards; -moz-animation: fadeOut 300ms 1 ease forwards; -o-animation: fadeOut 300ms 1 ease forwards; animation: fadeOut 300ms 1 ease forwards; }
 
 @-moz-keyframes shadeIn { 0% { max-height: 0; }
   100% { max-height: 62.5rem; } }
@@ -311,7 +315,7 @@ html { background: #eef6ee; }
 #epigraph .lightning, #epigraph .blue { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
 #epigraph .lightning { -webkit-animation: lightning 10s steps(1, end) infinite; -moz-animation: lightning 10s steps(1, end) infinite; -o-animation: lightning 10s steps(1, end) infinite; animation: lightning 10s steps(1, end) infinite; background: url('../../images/noise.png?1347221205') repeat, url('../../images/frontmatter/epigraph/lightning.png?1347221205') no-repeat scroll -123.75rem -123.75rem; }
 #epigraph .blue { background: -webkit-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: -moz-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: -o-linear-gradient(320deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); background: linear-gradient(130deg, rgba(238, 238, 246, 0), rgba(238, 238, 246, 0) 50%, rgba(238, 238, 246, 0.9) 50%, rgba(238, 238, 246, 0.9)); }
-#epigraph blockquote { font-size: 0.79167rem; line-height: 1.25rem; position: relative; padding: 1.875rem 1.25rem; color: #b9b9b9; }
+#epigraph blockquote { font-size: 0.79167rem; line-height: 1.25rem; position: relative; padding: 1.25rem; color: #b9b9b9; }
 #epigraph p { margin-bottom: 1.25rem; }
 #epigraph.enter-prev, #epigraph.enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
 #epigraph.enter-prev .gray, #epigraph.enter-next .gray { -webkit-animation: fadeIn 2s ease backwards; -moz-animation: fadeIn 2s ease backwards; -o-animation: fadeIn 2s ease backwards; animation: fadeIn 2s ease backwards; }
