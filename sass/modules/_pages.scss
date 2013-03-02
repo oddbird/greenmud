@@ -12,10 +12,11 @@ body { @include transition(background 600ms); }
 }
 
 .inner-body {
+  @extend %hwaccel;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
+  // -webkit-overflow-scrolling: touch;
 }
 
 .page { min-height: 100%; }

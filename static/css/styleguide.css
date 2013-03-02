@@ -48,9 +48,9 @@ html { font-size: 150%; line-height: 1.25em; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(to top, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee; font-family: "GreenMudNarrator", serif; color: #404040; text-rendering: optimizeLegibility; }
+html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(to top, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee; position: fixed; top: 0; right: 0; bottom: 0; left: 0; font-family: "GreenMudNarrator", serif; text-rendering: optimizeLegibility; color: #404040; overflow: hidden; }
 
-html, body { height: 100%; overflow-x: hidden; }
+body { height: 100%; overflow: hidden; }
 
 .jj { font-family: "GreenMudJJ", sans-serif; }
 

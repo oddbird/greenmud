@@ -12,14 +12,20 @@
 html {
   @include baseline-grid-background($base-line-height);
   @include back;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   font-family: $narrator-stack;
-  color: $base;
   text-rendering: optimizeLegibility;
+  color: $base;
+  overflow: hidden;
 }
 
-html, body {
+body {
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .jj { font-family: $jj-stack; }

@@ -18,3 +18,5 @@
 // Animations
 
 @include animate($keyframes: false);
+
+%hwaccel { @include translateZ(0); }

@@ -76,6 +76,7 @@ $control-focus-color  : $white;
 // controls
 
 .controls {
+  @extend %hwaccel;
   @include clearfix;
   @include adjust-font-size-to($xsmallpx);
   @include text-shadow(color($darkest,.75) 0 1px 0);
@@ -89,7 +90,7 @@ $control-focus-color  : $white;
   color: $control-text-color;
   font-family: $narrator-stack;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  // -webkit-overflow-scrolling: touch;
   z-index: 900;
 
   a {
