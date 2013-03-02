@@ -187,18 +187,28 @@ The rain falls slow, and the leaves fall too.<br />
 (JJ watches the trees)
 
 <div class="raindrop"></div>
+<div class="rainup"></div>
 
 ------
 
+<!-- meta
+body_class:
+page_states: 2
+-->
+
 The park bench sings a little song.
+
+<div class="musicstaff"></div>
+
 JJ sits and sings along.
 
 ------
 
-Shadow, shadow, park and shadow.
-JJ sits beneath the trees and sings his song.
-All along. All along.
-In the park that made him strong.
+<!-- meta
+body_class:
+-->
+
+[the park]
 
 ------
 

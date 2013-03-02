@@ -3,6 +3,8 @@
 
 $total-columns  : 8;
 
+$bodybg         : color($orange $lighter);
+
 $bg             : color($off $red $dark);
 $highlight      : color($off $red $light);
 $color          : color($off $red $hint);
@@ -15,6 +17,11 @@ $bg-grad        : linear-gradient($bg-angle, $bg-details);
 
 $scribble-pos   : rhythm(-3.5) rhythm(-3.5);
 $scribble-layer : image-url($scribble) no-repeat $scribble-pos;
+
+body.copyright {
+  @include transition-delay(800ms);
+  @include back($bodybg);
+}
 
 // ----------------------------------------------------------------------------
 // copyright

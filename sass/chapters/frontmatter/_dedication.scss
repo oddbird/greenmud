@@ -10,13 +10,16 @@ $bg-grad          : radial-gradient( center rhythm(6),
                       color($orange $light)
                     );
 
+body.dedication {
+  @include back($bg);
+}
+
 // ----------------------------------------------------------------------------
 // dedication
 
 #dedication {
   @extend %center-content;
-  @include back($bg);
-  @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
+  @include background($scribble-layer, $noise-layer, $bg-grad);
 
   [role="main"] {
     @extend %transition-main;
@@ -43,5 +46,5 @@ $bg-grad          : radial-gradient( center rhythm(6),
   // pageturn
 
   @include enter { @include animation(fadeIn 4s 1 ease backwards); }
-  @include exit { @include animation(fadeOut 600ms 1 ease forwards); }
+  @include exit { @include animation(fadeOut 300ms 1 ease forwards); }
 }

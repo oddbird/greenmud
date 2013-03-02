@@ -22,8 +22,8 @@
 #his-shirt-is-wet-and [role="main"] blockquote cite { font-style: normal; }
 #his-shirt-is-wet-and [role="main"] blockquote :last-child { margin-bottom: 0rem; }
 
-#titlepage, #once-upon-a-sunday, #johnny-john-goes-sitting-on-a, #shadow-shadow-park-and-shadow { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
-#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+#titlepage, #once-upon-a-sunday, #johnny-john-goes-sitting-on-a, #shadow-shadow-park-and-shadow, #the-park-bench-sings-a, #the-park { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"], #the-park-bench-sings-a [role="main"], #the-park [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
 #titlepage { overflow-x: hidden; }
 #titlepage [role="main"] { max-width: 15rem; margin-top: 3.75rem; margin-bottom: 3.75rem; position: relative; margin-left: auto; margin-right: auto; padding: 1.875rem 1rem; text-align: center; }
@@ -171,6 +171,8 @@ html { background: #fafaea; }
 .drop:nth-child(6) { -webkit-animation-duration: 24s; -moz-animation-duration: 24s; -o-animation-duration: 24s; animation-duration: 24s; background-position: 100% 0; left: 60%; top: 75%; padding-top: 2.5rem; padding-right: 1.875rem; }
 .drop:nth-child(7) { -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; background-position: 100% -360px; right: 81.66667%; top: 10.41667%; padding-bottom: 2.5rem; padding-right: 1.25rem; }
 
+body.his-shirt-is-wet-and { -webkit-transition-duration: 3s; -moz-transition-duration: 3s; -o-transition-duration: 3s; transition-duration: 3s; -webkit-transition-delay: 600ms; -moz-transition-delay: 600ms; -o-transition-delay: 600ms; transition-delay: 600ms; background: #eaeafa url('../../../images/noise.png?1347221205'); }
+
 @-moz-keyframes bigdrop { 0% { bottom: 100%; }
   100% { bottom: -20rem; } }
 
@@ -183,13 +185,38 @@ html { background: #fafaea; }
 @keyframes bigdrop { 0% { bottom: 100%; }
   100% { bottom: -20rem; } }
 
-#his-shirt-is-wet-and { padding-top: 8.75rem; position: relative; overflow: hidden; }
-#his-shirt-is-wet-and [role="main"] { overflow: hidden; border-top-width: 0.08333rem; border-top-style: solid; padding-top: 1.16667rem; margin-bottom: -200%; padding-bottom: 200%; text-align: center; background: rgba(204, 128, 51, 0.5); border-color: black; }
-#his-shirt-is-wet-and p { -webkit-transition: opacity 1s; -moz-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s; margin-bottom: 0rem; position: relative; float: left; width: 100%; margin-right: -100%; opacity: 0; z-index: 10; }
-#his-shirt-is-wet-and .raindrop { -webkit-animation: bigdrop 60s infinite both; -moz-animation: bigdrop 60s infinite both; -o-animation: bigdrop 60s infinite both; animation: bigdrop 60s infinite both; -webkit-transition: opacity 800ms; -moz-transition: opacity 800ms; -o-transition: opacity 800ms; transition: opacity 800ms; position: absolute; bottom: 100%; right: 60%; width: 15rem; height: 20rem; background: rgba(255, 0, 0, 0.5); }
+@-moz-keyframes updrop { 0% { bottom: -20rem; }
+  100% { bottom: 100%; } }
+
+@-webkit-keyframes updrop { 0% { bottom: -20rem; }
+  100% { bottom: 100%; } }
+
+@-o-keyframes updrop { 0% { bottom: -20rem; }
+  100% { bottom: 100%; } }
+
+@keyframes updrop { 0% { bottom: -20rem; }
+  100% { bottom: 100%; } }
+
+#his-shirt-is-wet-and { position: relative; overflow: hidden; }
+#his-shirt-is-wet-and [role="main"] { text-align: center; }
+#his-shirt-is-wet-and .scribble { background: url('../../../images/frontmatter/scribble.png?1347221205') no-repeat center; height: 11.25rem; background-color: #fafaea; }
+#his-shirt-is-wet-and p { padding-top: 2.5rem; padding-bottom: 2.5rem; -webkit-transition: opacity 1s; -moz-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s; position: relative; float: left; width: 100%; margin-right: -100%; opacity: 0; z-index: 10; }
+#his-shirt-is-wet-and .raindrop, #his-shirt-is-wet-and .rainup { -webkit-transition: opacity 3s; -webkit-transition-delay: 1.5s; -moz-transition: opacity 3s 1.5s; -o-transition: opacity 3s 1.5s; transition: opacity 3s 1.5s; position: absolute; width: 15rem; height: 20rem; }
+#his-shirt-is-wet-and .raindrop { -webkit-animation: bigdrop 90s linear infinite both; -moz-animation: bigdrop 90s linear infinite both; -o-animation: bigdrop 90s linear infinite both; animation: bigdrop 90s linear infinite both; right: 60%; background: rgba(255, 0, 0, 0.5); bottom: 100%; }
+#his-shirt-is-wet-and .rainup { -webkit-animation: updrop 80s 8s linear infinite both; -moz-animation: updrop 80s 8s linear infinite both; -o-animation: updrop 80s 8s linear infinite both; animation: updrop 80s 8s linear infinite both; left: 60%; background: rgba(255, 255, 0, 0.5); bottom: -20rem; }
 #his-shirt-is-wet-and[data-page-state="1"] p:first-of-type { -webkit-transition-delay: 1s; -moz-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; opacity: 1; }
-#his-shirt-is-wet-and[data-page-state="1"] .raindrop { opacity: 0; }
+#his-shirt-is-wet-and[data-page-state="1"] .raindrop, #his-shirt-is-wet-and[data-page-state="1"] .rainup { opacity: 0; }
 #his-shirt-is-wet-and[data-page-state="2"] p:last-of-type { -webkit-transition-delay: 1s; -moz-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; opacity: 1; }
-#his-shirt-is-wet-and[data-page-state="2"] .raindrop { opacity: 1; }
+#his-shirt-is-wet-and[data-page-state="2"] .raindrop, #his-shirt-is-wet-and[data-page-state="2"] .rainup { opacity: 1; }
+
+body.the-park-bench-sings-a { background: #eaeafa url('../../../images/noise.png?1347221205'); }
+
+#the-park-bench-sings-a p { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
+#the-park-bench-sings-a p:first-child { margin: 0 1.25rem; }
+#the-park-bench-sings-a p:last-child { overflow: hidden; float: left; width: 40%; margin-right: -100%; padding-left: 0.625rem; }
+#the-park-bench-sings-a .musicstaff { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; float: left; width: 158%; height: 7.5rem; background: rgba(185, 185, 185, 0.25); }
+#the-park-bench-sings-a[data-page-state="2"] .musicstaff, #the-park-bench-sings-a[data-page-state="2"] p:first-child { margin-left: -100%; }
+
+#the-park { text-align: center; }
 
 /* ---------------------------------------------------------------------------- titlepage */

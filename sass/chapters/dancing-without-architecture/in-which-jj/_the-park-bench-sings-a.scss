@@ -1,0 +1,39 @@
+// ----------------------------------------------------------------------------
+// settings
+
+body.the-park-bench-sings-a {
+  background: color($faded $blue lightest) $noise;
+}
+
+// ----------------------------------------------------------------------------
+// the park bench sings a
+
+#the-park-bench-sings-a {
+  @extend %center-content;
+
+  p {
+    @include transition(all 1s);
+    &:first-child { margin: 0 rhythm(1); }
+    &:last-child {
+      @include clearfix;
+      float: left;
+      width: 40%;
+      margin-right: -100%;
+      padding-left: rhythm(.5);
+    }
+  }
+
+  .musicstaff {
+    @include transition(all 1s);
+    float: left;
+    width: 158%;
+    height: rhythm(6);
+    background: color(light,.25);
+  }
+
+  &[data-page-state="2"] {
+    .musicstaff, p:first-child {
+      margin-left: -100%;
+    }
+  }
+}

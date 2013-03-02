@@ -3,6 +3,14 @@
 
 $total-columns: 4;
 
+$scribble           : 'frontmatter/scribble.png';
+
+body.his-shirt-is-wet-and {
+  @include transition-duration(3s);
+  @include transition-delay(600ms);
+  background: color($faded $blue lightest) $noise;
+}
+
 // ----------------------------------------------------------------------------
 // animation
 
@@ -11,27 +19,33 @@ $total-columns: 4;
   100% { bottom: rhythm(-16); }
 }
 
+@include keyframes(updrop) {
+  0% { bottom: rhythm(-16); }
+  100% { bottom: 100%; }
+}
+
 // ----------------------------------------------------------------------------
 // his-shirt-is-wet-and
 
 #his-shirt-is-wet-and {
-  @include padding-leader(7);
   position: relative;
   overflow: hidden;
 
   [role="main"] {
     @extend %type;
-    @include clearfix;
-    @include leading-border(2px,1);
-    @include bleed(200%, bottom);
     text-align: center;
-    background: color($faded $orange,.5);
-    border-color: black;
+  }
+
+  .scribble {
+    @include background(image-url($scribble) no-repeat center);
+    // @include background-size(contain);
+    height: rhythm(9);
+    background-color: color($faded $yellow lightest);
   }
 
   p {
+    @include rhythm-padding(2);
     @include transition(opacity 1s);
-    @include trailer(0);
     position: relative;
     float: left;
     width: 100%;
@@ -40,15 +54,25 @@ $total-columns: 4;
     z-index: 10;
   }
 
-  .raindrop {
-    @include animation(bigdrop 60s infinite both);
-    @include transition(opacity 800ms);
+  .raindrop, .rainup {
+    @include transition(opacity 3s 1.5s);
     position: absolute;
-    bottom: 100%;
-    right: 60%;
     width: rhythm(12);
     height: rhythm(16);
+  }
+
+  .raindrop {
+    @include animation(bigdrop 90s linear infinite both);
+    right: 60%;
     background: color($red,.5);
+    bottom: 100%;
+  }
+
+  .rainup {
+    @include animation(updrop 80s 8s linear infinite both);
+    left: 60%;
+    background: color($yellow,.5);
+    bottom: rhythm(-16);
   }
 
   &[data-page-state="1"] {
@@ -56,14 +80,14 @@ $total-columns: 4;
       @include transition-delay(1s);
       opacity: 1;
     }
-    .raindrop { opacity: 0; }
+    .raindrop, .rainup { opacity: 0; }
   }
   &[data-page-state="2"] {
     p:last-of-type {
       @include transition-delay(1s);
       opacity: 1;
     }
-    .raindrop { opacity: 1; }
+    .raindrop, .rainup { opacity: 1; }
   }
 
 }

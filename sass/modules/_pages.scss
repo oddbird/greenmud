@@ -1,6 +1,8 @@
 /* ----------------------------------------------------------------------------
   page */
 
+body { @include transition(background 600ms); }
+
 .novel {
   @include transition(margin-right 300ms ease);
   position: relative;
