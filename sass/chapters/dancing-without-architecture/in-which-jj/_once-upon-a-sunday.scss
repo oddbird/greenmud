@@ -41,7 +41,8 @@ $pitpot-deg   : 6deg;
    once-upon-a-sunday */
 
 #once-upon-a-sunday {
-  @extend %center-content;
+  // triggers firefox bug
+  // @extend %center-content;
   @include page-animation($rain-anim);
   @include background($bg $rain-layer);
   @include background($rain-layer $layer1-start, $rain-layer $layer2-start, $noise-layer $bg);
@@ -51,8 +52,7 @@ $pitpot-deg   : 6deg;
   [role="main"] {
     @extend %transition-main;
     @include container;
-    @include rhythm-padding(2,1);
-    @include pagepad(15 3 3);
+    @include rhythm-padding(3,3);
     position: relative;
 
     @include at-breakpoint($break) { @include set-container-width; }
@@ -79,6 +79,7 @@ $pitpot-deg   : 6deg;
   }
 
   .pitpot {
+    @extend %ellipsis;
     @include rotate($pitpot-deg);
     margin: 0 -200%;
     background: color($off $orange,.75);

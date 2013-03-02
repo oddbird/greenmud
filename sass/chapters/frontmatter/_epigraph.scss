@@ -56,6 +56,7 @@ $lightning-animation: lightning 10s steps(1,end) infinite;
    epigraph: cocorosie */
 
 #epigraph {
+  @extend %center-content;
   @include text-shadow($bg 0 1px 0);
   background: $bg;
 
@@ -75,7 +76,7 @@ $lightning-animation: lightning 10s steps(1,end) infinite;
   blockquote {
     @include adjust-font-size-to($smallpx);
     position: relative;
-    padding: rhythm(1.5) rhythm(1);
+    padding: rhythm(1);
     color: color($light);
   }
   p { @include trailer; }

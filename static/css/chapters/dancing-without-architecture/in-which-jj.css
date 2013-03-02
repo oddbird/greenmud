@@ -7,6 +7,8 @@
 
 #titlepage h2 { text-transform: uppercase; }
 
+#once-upon-a-sunday .pitpot { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
 #once-upon-a-sunday blockquote span { font-size: 0.79167rem; line-height: 1.25rem; }
 @media (min-width: 35em) { #once-upon-a-sunday blockquote span { font-size: inherit; line-height: inherit; } }
 
@@ -22,8 +24,8 @@
 #his-shirt-is-wet-and [role="main"] blockquote cite { font-style: normal; }
 #his-shirt-is-wet-and [role="main"] blockquote :last-child { margin-bottom: 0rem; }
 
-#titlepage, #once-upon-a-sunday, #johnny-john-goes-sitting-on-a, #shadow-shadow-park-and-shadow, #the-park-bench-sings-a, #the-park { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
-#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"], #the-park-bench-sings-a [role="main"], #the-park [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+#titlepage, #johnny-john-goes-sitting-on-a, #shadow-shadow-park-and-shadow, #the-park-bench-sings-a, #the-park { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+#titlepage [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"], #the-park-bench-sings-a [role="main"], #the-park [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
 #titlepage { overflow-x: hidden; }
 #titlepage [role="main"] { max-width: 15rem; margin-top: 3.75rem; margin-bottom: 3.75rem; position: relative; margin-left: auto; margin-right: auto; padding: 1.875rem 1rem; text-align: center; }
@@ -90,9 +92,8 @@ html { background: #fafaea; }
 #once-upon-a-sunday.enter-next { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
 #once-upon-a-sunday.exit-prev { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
 #once-upon-a-sunday.exit-next { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
-#once-upon-a-sunday [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; padding-bottom: 1.25rem; position: relative; }
+#once-upon-a-sunday [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 3.75rem; padding-bottom: 3.75rem; position: relative; }
 #once-upon-a-sunday [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-height: 18.75em) { #once-upon-a-sunday [role="main"] { padding-top: 3.75rem; padding-bottom: 3; } }
 @media (min-width: 46.5em) { #once-upon-a-sunday [role="main"] { max-width: 47rem; } }
 #once-upon-a-sunday blockquote { font-style: italic; }
 #once-upon-a-sunday blockquote p { margin-bottom: 1.25rem; }
