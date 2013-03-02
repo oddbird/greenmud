@@ -26,13 +26,9 @@
   <meta http-equiv="cleartype" content="on">
   <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-
   <!-- https://gist.github.com/burin/3840737 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" id="vp" content="initial-scale=1.0" media="(device-height: 568px)" />
+  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
 
   <!--iOS. Delete if not required -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -46,8 +42,7 @@
         sizes="57x57"
         rel="apple-touch-icon-precomposed">
   <link href="../media/images/favicons/apple-touch-startup-image-320x460.png"
-        media="(device-width: 320px) and (device-height: 480px)
-           and (-webkit-device-pixel-ratio: 1)"
+        media="screen and (device-aspect-ratio: 2/3) and not (-webkit-min-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image">
 
   <!-- iPhone (Retina) -->
@@ -55,14 +50,12 @@
         sizes="114x114"
         rel="apple-touch-icon-precomposed">
   <link href="../media/images/favicons/apple-touch-startup-image-640x920.png"
-        media="(device-width: 320px) and (device-height: 480px)
-           and (-webkit-device-pixel-ratio: 2)"
+        media="screen and (device-aspect-ratio: 2/3) and (-webkit-min-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image">
 
   <!-- iPhone 5 -->
   <link href="../media/images/favicons/apple-touch-startup-image-640x1096.png"
-        media="(device-width: 320px) and (device-height: 568px)
-           and (-webkit-device-pixel-ratio: 2)"
+        media="screen and (device-aspect-ratio: 40/71) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image">
 
   <!-- iPad -->

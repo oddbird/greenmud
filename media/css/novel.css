@@ -78,6 +78,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .exit-next { -webkit-animation-name: fadeOutRight; -moz-animation-name: fadeOutRight; -o-animation-name: fadeOutRight; animation-name: fadeOutRight; }
 
+.controls, .inner-body { -webkit-transform: translateZ(0); -moz-transform: translateZ(0); -ms-transform: translateZ(0); -o-transform: translateZ(0); transform: translateZ(0); }
+
 /* ---------------------------------------------------------------------------- fonts */
 @font-face { font-family: "greenmud"; src: url('../fonts/icomoon/greenmud.woff') format('woff'), url('../fonts/icomoon/greenmud.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 
@@ -104,9 +106,9 @@ html { font-size: 150%; line-height: 1.25em; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(to top, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee; font-family: "GreenMudNarrator", serif; color: #404040; text-rendering: optimizeLegibility; }
+html { background-image: -webkit-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); background-image: linear-gradient(to top, rgba(64, 64, 64, 0.25) 5%, rgba(64, 64, 64, 0) 5%); -webkit-background-size: 100% 30px; -moz-background-size: 100% 30px; -o-background-size: 100% 30px; background-size: 100% 30px; background-position: left top; background: #eef6ee; position: fixed; top: 0; right: 0; bottom: 0; left: 0; font-family: "GreenMudNarrator", serif; text-rendering: optimizeLegibility; color: #404040; overflow: hidden; }
 
-html, body { height: 100%; overflow-x: hidden; }
+body { height: 100%; overflow: hidden; }
 
 .jj { font-family: "GreenMudJJ", sans-serif; }
 
@@ -1105,7 +1107,7 @@ a:hover, a:focus, a:active { color: #0000bf; }
 #toggle { line-height: 1.875rem; text-shadow: #404040 0 0 0.15625rem; position: absolute; top: 0; left: 0; color: white; cursor: pointer; z-index: 950; }
 .no-touch #toggle:hover, .no-touch #toggle:focus, .no-touch #toggle:active { text-shadow: #202020 0 0 3px; }
 
-.controls { overflow: hidden; font-size: 0.66667rem; line-height: 1.25rem; text-shadow: rgba(32, 32, 32, 0.75) 0 1px 0; width: 80%; width: -webkit-calc(100% - 1.875rem); width: -moz-calc(100% - 1.875rem); width: -o-calc(100% - 1.875rem); width: calc(100% - 1.875rem); position: relative; float: left; height: 100%; margin-left: -100%; max-width: 15rem; background: #404040; color: #b9b9b9; font-family: "GreenMudNarrator", serif; overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 900; -webkit-transition: margin-left 300ms ease; -moz-transition: margin-left 300ms ease; -o-transition: margin-left 300ms ease; transition: margin-left 300ms ease; }
+.controls { overflow: hidden; font-size: 0.66667rem; line-height: 1.25rem; text-shadow: rgba(32, 32, 32, 0.75) 0 1px 0; width: 80%; width: -webkit-calc(100% - 1.875rem); width: -moz-calc(100% - 1.875rem); width: -o-calc(100% - 1.875rem); width: calc(100% - 1.875rem); position: relative; float: left; height: 100%; margin-left: -100%; max-width: 15rem; background: #404040; color: #b9b9b9; font-family: "GreenMudNarrator", serif; overflow-y: auto; z-index: 900; -webkit-transition: margin-left 300ms ease; -moz-transition: margin-left 300ms ease; -o-transition: margin-left 300ms ease; transition: margin-left 300ms ease; }
 .controls a:before { display: inline-block; min-width: 0.9375rem; margin-right: 0.3125rem; color: gray; text-align: right; }
 .controls.active { margin-left: 0; border-right: 1px solid #606060; }
 .controls.active + .novel { margin-right: -100%; }
@@ -1132,7 +1134,7 @@ body { -webkit-transition: background 600ms; -moz-transition: background 600ms; 
 
 .novel { -webkit-transition: margin-right 300ms ease; -moz-transition: margin-right 300ms ease; -o-transition: margin-right 300ms ease; transition: margin-right 300ms ease; position: relative; float: left; width: 100%; height: 100%; }
 
-.inner-body { height: 100%; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+.inner-body { height: 100%; overflow-y: auto; overflow-x: hidden; }
 
 .page { min-height: 100%; }
 
