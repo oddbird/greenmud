@@ -32,10 +32,9 @@ $fonts: $icomoon,
     $name,
     font-files(
       '#{$location}.woff', 'woff',
-      '#{$location}.ttf', 'truetype',
-      '#{$location}.svg##{$name}', 'svg'
+      '#{$location}.ttf', 'truetype'
     ),
-    '#{$location}.eot',
+    false,
     $weight,
     $style
   );

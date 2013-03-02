@@ -14,11 +14,13 @@ html {
   @include back;
   font-family: $narrator-stack;
   color: $base;
-  overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
 
 .jj { font-family: $jj-stack; }
 .susy {

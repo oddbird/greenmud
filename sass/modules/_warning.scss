@@ -2,11 +2,12 @@
    browser warning */
 
 .warning {
+  @include stretch;
   display: none;
-  padding: 1.5em;
-  background: color($red lighter);
+  padding: 3em 1.5em;
   border: 3px solid $red;
-  font-family: helvetica, arial, sans-serif;
+  background: color($red lighter,.95);
+  text-align: center;
   z-index: 900;
   h2, p {
     max-width: 800px;
@@ -21,5 +22,6 @@
   .no-js &,
   .no-cssanimations &,
   .no-cssgradients &,
-  .no-multiplebgs & { display: block; }
+  .no-multiplebgs &,
+  .no-backgroundsize & { display: block; }
 }

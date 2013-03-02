@@ -7,7 +7,6 @@
 #titlepage [role="main"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
 #titlepage [role="main"] { padding-top: 3.75rem; padding-bottom: 3.75rem; text-align: center; text-transform: uppercase; color: #404040; }
-@media (min-height: 18.75em) { .no-flexbox #titlepage [role="main"] { padding-top: 7.5rem; padding-bottom: 1; } }
 #titlepage h1 { font-size: 1.5rem; line-height: 1.875rem; }
 @media (min-width: 40em) { #titlepage h1 { font-size: 1.95833rem; line-height: 2.5rem; }
   #titlepage h2 { margin-bottom: 0.625rem; } }
