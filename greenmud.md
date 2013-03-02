@@ -204,8 +204,13 @@ page_states: 2
 The park bench sings a little song.
 
 <div class="musicstaff"></div>
-
-JJ sits and sings along.
+<p>
+  <span>JJ</span>
+  <span>sits</span>
+  <span>and</span>
+  <span>sings</span>
+  <span>along.</span>
+</p>
 
 ------
 
