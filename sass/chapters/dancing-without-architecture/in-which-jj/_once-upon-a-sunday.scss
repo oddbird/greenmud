@@ -38,9 +38,9 @@ $pitpot-deg   : 6deg;
 }
 
 /* ----------------------------------------------------------------------------
-   once-upon-a-sunday */
+   once-upon-a-sunday-raining */
 
-#once-upon-a-sunday {
+#once-upon-a-sunday-raining {
   // triggers firefox bug
   // @extend %center-content;
   @include page-animation($rain-anim);

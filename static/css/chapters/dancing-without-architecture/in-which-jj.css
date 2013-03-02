@@ -7,10 +7,10 @@
 
 #titlepage h2 { text-transform: uppercase; }
 
-#once-upon-a-sunday .pitpot { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+#once-upon-a-sunday-raining .pitpot { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 
-#once-upon-a-sunday blockquote span { font-size: 0.79167rem; line-height: 1.25rem; }
-@media (min-width: 35em) { #once-upon-a-sunday blockquote span { font-size: inherit; line-height: inherit; } }
+#once-upon-a-sunday-raining blockquote span { font-size: 0.79167rem; line-height: 1.25rem; }
+@media (min-width: 35em) { #once-upon-a-sunday-raining blockquote span { font-size: inherit; line-height: inherit; } }
 
 #his-shirt-is-wet-and [role="main"] h1 { font-size: 1.5rem; line-height: 1.875rem; }
 #his-shirt-is-wet-and [role="main"] h1, #his-shirt-is-wet-and [role="main"] h2, #his-shirt-is-wet-and [role="main"] h3, #his-shirt-is-wet-and [role="main"] h4 { font-weight: bold; color: #404040; }
@@ -45,9 +45,9 @@
   #titlepage h1 { margin-right: -2.12766%; }
   #titlepage h2 { margin-right: 2.12766%; } }
 
-#titlepage [role="main"]::before, #titlepage [role="main"]::after, #titlepage h1, #titlepage h2, #once-upon-a-sunday blockquote, #once-upon-a-sunday blockquote span, #johnny-john-goes-sitting-on-a .words, #shadow-shadow-park-and-shadow p { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
+#titlepage [role="main"]::before, #titlepage [role="main"]::after, #titlepage h1, #titlepage h2, #once-upon-a-sunday-raining blockquote, #once-upon-a-sunday-raining blockquote span, #johnny-john-goes-sitting-on-a .words, #shadow-shadow-park-and-shadow p { -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms; transition: all 300ms; }
 
-#titlepage [role="main"], #once-upon-a-sunday [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
+#titlepage [role="main"], #once-upon-a-sunday-raining [role="main"], #johnny-john-goes-sitting-on-a [role="main"], #shadow-shadow-park-and-shadow [role="main"] { -webkit-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -moz-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; -o-transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; transition: padding 300ms, margin 300ms, font-size 300ms, line-height 300ms, width 300ms, background 300ms; }
 
 .enter-prev, .enter-next { -webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
 
@@ -86,29 +86,29 @@ html { background: #fafaea; }
 @keyframes pitpotIn { 0% { transform: translateY(150px) rotate(16deg); }
   100% { transform: translateY(0) rotate(6deg); } }
 
-/* ---------------------------------------------------------------------------- once-upon-a-sunday */
-#once-upon-a-sunday { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: #53402c url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat #53402c; position: relative; overflow: hidden; }
-#once-upon-a-sunday.enter-prev { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
-#once-upon-a-sunday.enter-next { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
-#once-upon-a-sunday.exit-prev { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
-#once-upon-a-sunday.exit-next { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
-#once-upon-a-sunday [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 3.75rem; padding-bottom: 3.75rem; position: relative; }
-#once-upon-a-sunday [role="main"]:after { content: ""; display: table; clear: both; }
-@media (min-width: 46.5em) { #once-upon-a-sunday [role="main"] { max-width: 47rem; } }
-#once-upon-a-sunday blockquote { font-style: italic; }
-#once-upon-a-sunday blockquote p { margin-bottom: 1.25rem; }
-#once-upon-a-sunday blockquote span { display: inline-block; padding: 0.15625rem 0.3125rem 0.15625rem; margin-bottom: -0.15625rem; background: rgba(255, 255, 191, 0.75); }
-@media (min-width: 46.5em) { #once-upon-a-sunday blockquote { padding-left: 51.06383%; } }
-#once-upon-a-sunday .pitpot { -webkit-transform: rotate(6deg); -moz-transform: rotate(6deg); -ms-transform: rotate(6deg); -o-transform: rotate(6deg); transform: rotate(6deg); margin: 0 -200%; background: rgba(166, 128, 89, 0.75); color: #202020; text-align: center; text-transform: uppercase; }
-#once-upon-a-sunday .pitpot::before { content: "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot "; }
-#once-upon-a-sunday .raindrop { display: none; }
-@media (min-width: 46.5em) { #once-upon-a-sunday .raindrop { background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/raindrop.png?1347221205') no-repeat scroll right; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; display: block; position: absolute; top: 1.25rem; bottom: -1.25rem; left: 0; width: 40.42553%; } }
-#once-upon-a-sunday.enter-prev blockquote p, #once-upon-a-sunday.enter-next blockquote p { -webkit-animation: fadeIn 4s 3s backwards; -moz-animation: fadeIn 4s 3s backwards; -o-animation: fadeIn 4s 3s backwards; animation: fadeIn 4s 3s backwards; }
-#once-upon-a-sunday.enter-prev .pitpot, #once-upon-a-sunday.enter-next .pitpot { -webkit-animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; -moz-animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; -o-animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; }
-#once-upon-a-sunday.enter-prev .raindrop, #once-upon-a-sunday.enter-next .raindrop { -webkit-animation: fadeInDownBig 6s 4s backwards; -moz-animation: fadeInDownBig 6s 4s backwards; -o-animation: fadeInDownBig 6s 4s backwards; animation: fadeInDownBig 6s 4s backwards; }
-#once-upon-a-sunday.exit-prev blockquote p, #once-upon-a-sunday.exit-next blockquote p { -webkit-animation: fadeOut 400ms forwards; -moz-animation: fadeOut 400ms forwards; -o-animation: fadeOut 400ms forwards; animation: fadeOut 400ms forwards; }
-#once-upon-a-sunday.exit-prev .pitpot, #once-upon-a-sunday.exit-next .pitpot { -webkit-animation: fadeOut 600ms forwards; -moz-animation: fadeOut 600ms forwards; -o-animation: fadeOut 600ms forwards; animation: fadeOut 600ms forwards; }
-#once-upon-a-sunday.exit-prev .raindrop, #once-upon-a-sunday.exit-next .raindrop { -webkit-animation: fadeOutDownBig 1s forwards; -moz-animation: fadeOutDownBig 1s forwards; -o-animation: fadeOutDownBig 1s forwards; animation: fadeOutDownBig 1s forwards; }
+/* ---------------------------------------------------------------------------- once-upon-a-sunday-raining */
+#once-upon-a-sunday-raining { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: #53402c url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat #53402c; position: relative; overflow: hidden; }
+#once-upon-a-sunday-raining.enter-prev { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
+#once-upon-a-sunday-raining.enter-next { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
+#once-upon-a-sunday-raining.exit-prev { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
+#once-upon-a-sunday-raining.exit-next { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
+#once-upon-a-sunday-raining [role="main"] { max-width: 23rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 3.75rem; padding-bottom: 3.75rem; position: relative; }
+#once-upon-a-sunday-raining [role="main"]:after { content: ""; display: table; clear: both; }
+@media (min-width: 46.5em) { #once-upon-a-sunday-raining [role="main"] { max-width: 47rem; } }
+#once-upon-a-sunday-raining blockquote { font-style: italic; }
+#once-upon-a-sunday-raining blockquote p { margin-bottom: 1.25rem; }
+#once-upon-a-sunday-raining blockquote span { display: inline-block; padding: 0.15625rem 0.3125rem 0.15625rem; margin-bottom: -0.15625rem; background: rgba(255, 255, 191, 0.75); }
+@media (min-width: 46.5em) { #once-upon-a-sunday-raining blockquote { padding-left: 51.06383%; } }
+#once-upon-a-sunday-raining .pitpot { -webkit-transform: rotate(6deg); -moz-transform: rotate(6deg); -ms-transform: rotate(6deg); -o-transform: rotate(6deg); transform: rotate(6deg); margin: 0 -200%; background: rgba(166, 128, 89, 0.75); color: #202020; text-align: center; text-transform: uppercase; }
+#once-upon-a-sunday-raining .pitpot::before { content: "pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot "; }
+#once-upon-a-sunday-raining .raindrop { display: none; }
+@media (min-width: 46.5em) { #once-upon-a-sunday-raining .raindrop { background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/raindrop.png?1347221205') no-repeat scroll right; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; display: block; position: absolute; top: 1.25rem; bottom: -1.25rem; left: 0; width: 40.42553%; } }
+#once-upon-a-sunday-raining.enter-prev blockquote p, #once-upon-a-sunday-raining.enter-next blockquote p { -webkit-animation: fadeIn 4s 3s backwards; -moz-animation: fadeIn 4s 3s backwards; -o-animation: fadeIn 4s 3s backwards; animation: fadeIn 4s 3s backwards; }
+#once-upon-a-sunday-raining.enter-prev .pitpot, #once-upon-a-sunday-raining.enter-next .pitpot { -webkit-animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; -moz-animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; -o-animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; animation: pitpotIn 2s 2s backwards, fadeIn 2s 2s backwards; }
+#once-upon-a-sunday-raining.enter-prev .raindrop, #once-upon-a-sunday-raining.enter-next .raindrop { -webkit-animation: fadeInDownBig 6s 4s backwards; -moz-animation: fadeInDownBig 6s 4s backwards; -o-animation: fadeInDownBig 6s 4s backwards; animation: fadeInDownBig 6s 4s backwards; }
+#once-upon-a-sunday-raining.exit-prev blockquote p, #once-upon-a-sunday-raining.exit-next blockquote p { -webkit-animation: fadeOut 400ms forwards; -moz-animation: fadeOut 400ms forwards; -o-animation: fadeOut 400ms forwards; animation: fadeOut 400ms forwards; }
+#once-upon-a-sunday-raining.exit-prev .pitpot, #once-upon-a-sunday-raining.exit-next .pitpot { -webkit-animation: fadeOut 600ms forwards; -moz-animation: fadeOut 600ms forwards; -o-animation: fadeOut 600ms forwards; animation: fadeOut 600ms forwards; }
+#once-upon-a-sunday-raining.exit-prev .raindrop, #once-upon-a-sunday-raining.exit-next .raindrop { -webkit-animation: fadeOutDownBig 1s forwards; -moz-animation: fadeOutDownBig 1s forwards; -o-animation: fadeOutDownBig 1s forwards; animation: fadeOutDownBig 1s forwards; }
 
 #johnny-john-goes-sitting-on-a { background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/burst.svg?1360540162') no-repeat bottom, -webkit-linear-gradient(left, #f0f0c1, rgba(240, 240, 193, 0)); background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/burst.svg?1360540162') no-repeat bottom, -moz-linear-gradient(left, #f0f0c1, rgba(240, 240, 193, 0)); background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/burst.svg?1360540162') no-repeat bottom, -o-linear-gradient(left, #f0f0c1, rgba(240, 240, 193, 0)); background: url('../../../images/dancing/in-which-jj/johnny-john-goes-sitting-on-a/burst.svg?1360540162') no-repeat bottom, linear-gradient(to right, #f0f0c1, rgba(240, 240, 193, 0)); -webkit-background-size: cover, auto; -moz-background-size: cover, auto; -o-background-size: cover, auto; background-size: cover, auto; position: relative; }
 #johnny-john-goes-sitting-on-a [role="main"] { max-width: 43rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 10rem; padding-bottom: 1.25rem; max-width: 100%; }

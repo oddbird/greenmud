@@ -104,17 +104,22 @@ body_class    :
 exit_duration : 600
 -->
 
-> <span> Once upon a Sunday raining afternoon       </span><br />
-  <span> stood a me without a spoon,                </span><br />
-  <span> and seeing what my hands be free           </span><br />
-  <span> I double-dare and climb a tree!            </span>
-
-> <span> A simple song so sing along!               </span>
-
-> <span> Oh la la and la again,                     </span><br />
-  <span> surely squirrelly be my friend             </span><br />
-  <span> and that’s just how this song must end.    </span>
-
+<blockquote>
+  <p>
+    <span> Once upon a Sunday raining afternoon       </span><br />
+    <span> stood a me without a spoon,                </span><br />
+    <span> and seeing what my hands be free           </span><br />
+    <span> I double-dare and climb a tree!            </span>
+  </p>
+  <p>
+    <span> A simple song so sing along!               </span>
+  </p>
+  <p>
+    <span> Oh la la and la again,                     </span><br />
+    <span> surely squirrelly be my friend             </span><br />
+    <span> and that’s just how this song must end.    </span>
+  </p>
+</blockquote>
 <p class="pitpot">pit pitpit pit pot pitpot pit pit potpit pit potpitpitpot</p>
 <div class="raindrop"></div>
 
