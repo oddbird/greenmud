@@ -22,7 +22,6 @@ $swing-height   : px-to-rhythm(714px);
 // johnny-john-goes-sitting-on-a
 
 #johnny-john-goes-sitting-on-a {
-  @extend %center-content;
   @include background(
     image-url($burst) no-repeat bottom,
     linear-gradient(to right, color($faded $yellow lighter), color($faded $yellow lighter,0))

@@ -56,7 +56,6 @@ $lightning-animation: lightning 10s steps(1,end) infinite;
    epigraph: cocorosie */
 
 #epigraph {
-  @extend %center-content;
   @include text-shadow($bg 0 1px 0);
   background: $bg;
 

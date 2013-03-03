@@ -27,7 +27,6 @@ body.copyright {
 // copyright
 
 #copyright {
-  @extend %center-content;
   @include back($bg);
   @include background($scribble-layer, $noise-layer, $bg-grad, $bg);
   color: $color;

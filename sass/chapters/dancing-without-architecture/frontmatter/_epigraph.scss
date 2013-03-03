@@ -52,7 +52,6 @@ $lennon-angle   : -8deg;
 // epigraph: john lennon
 
 #epigraph {
-  @extend %center-content;
   @include background($bg-grad no-repeat $bg-pos);
 
   [role="main"] {

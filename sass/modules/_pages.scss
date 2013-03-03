@@ -19,7 +19,12 @@ body { @include transition(background 600ms); }
   // -webkit-overflow-scrolling: touch;
 }
 
-.page { min-height: 100%; }
+.page {
+  .flexbox & { @extend %center-content; }
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+}
 
 // ----------------------------------------------------------------------------
 // temporary page styles

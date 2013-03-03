@@ -2,7 +2,7 @@
 
 {% block main %}
 <section id="{{ resource.meta.slug }}" class="page {{ resource.meta.voice }} {{ resource.meta.demo }}" data-url="{{ resource.meta.url }}" data-body-class="{{ resource.meta.slug }}{% if resource.meta.body_class %} {{ resource.meta.body_class }}{% endif %}" data-internal-pages="{{ resource.meta.page_states }}" data-page-state="1" data-exit-duration="{{ resource.meta.exit_duration }}">
-
+<div class="pagewrap">
   <div class="content"  role="main">
     {% if resource.meta.slug == 'contents' %}
     {% include "novel/_toc-lists.j2" %}
@@ -18,5 +18,6 @@
   </div>
 
   <span class="prevnext"></span>
+</div>
 </section>
 {% endblock main %}

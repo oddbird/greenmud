@@ -14,7 +14,7 @@
 
 @mixin vertical-center(
   $container  : '&',
-  $page: '[role="main"]'
+  $page: '.pagewrap'
 ) {
   $container  : unquote($container);
   $page: unquote($page);
@@ -23,7 +23,10 @@
     @include display-flex;
     @include align-items(center);
   }
-  #{$page} { @include flex(1); }
+  #{$page} {
+    @include flex(1);
+    width: 100%;
+  }
 }
 
 %center-content {

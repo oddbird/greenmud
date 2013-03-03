@@ -2,8 +2,6 @@
 // Book Titles
 
 %booktitle {
-  @extend %center-content;
-
   [role="main"] {
     @extend %transition-main;
     @include rhythm-padding(3);
@@ -43,7 +41,6 @@ $ch-title-narrow  : .5deg;
 }
 
 %chaptertitle {
-  @extend %center-content;
   overflow-x: hidden;
 
   [role="main"] {

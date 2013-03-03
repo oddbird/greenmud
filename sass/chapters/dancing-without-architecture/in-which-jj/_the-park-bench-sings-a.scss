@@ -9,8 +9,6 @@ body.the-park-bench-sings-a {
 // the park bench sings a
 
 #the-park-bench-sings-a {
-  @extend %center-content;
-
   [role="main"] { @include clearfix; }
 
   p {

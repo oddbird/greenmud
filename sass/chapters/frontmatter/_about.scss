@@ -11,8 +11,6 @@ $faces          : '#{$pg}faces.png';
 // about
 
 #about {
-  @extend %center-content;
-
   [role="main"] {
     @include container;
     @include padding-leader(9.5);
