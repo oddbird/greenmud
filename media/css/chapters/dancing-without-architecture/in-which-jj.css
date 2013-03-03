@@ -211,6 +211,7 @@ body.his-shirt-is-wet-and { -webkit-transition-duration: 3s; -moz-transition-dur
 
 body.the-park-bench-sings-a { background: #eaeafa url('../../../images/noise.png?1347221205'); }
 
+#the-park-bench-sings-a [role="main"] { overflow: hidden; }
 #the-park-bench-sings-a p { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
 #the-park-bench-sings-a p:first-child { width: 100%; padding: 0 0.625rem; }
 #the-park-bench-sings-a p:last-child { overflow: hidden; float: left; width: 40%; margin-right: -100%; padding-left: 0.625rem; }
