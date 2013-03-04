@@ -42,10 +42,8 @@ $pitpot-deg   : 6deg;
 
 #once-upon-a-sunday-raining {
   @include page-animation($rain-anim);
-  @include background($bg $rain-layer);
   @include background($rain-layer $layer1-start, $rain-layer $layer2-start, $noise-layer $bg);
   position: relative;
-  overflow: hidden;
 
   [role="main"] {
     @extend %transition-main;

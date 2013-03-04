@@ -1,7 +1,7 @@
 /* ----------------------------------------------------------------------------
   page */
 
-body { @include transition(background 600ms); }
+body { @include transition(background-color 600ms); }
 
 .novel {
   @include transition(margin-right 300ms ease);

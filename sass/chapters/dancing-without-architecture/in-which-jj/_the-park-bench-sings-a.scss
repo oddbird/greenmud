@@ -9,7 +9,10 @@ body.the-park-bench-sings-a {
 // the park bench sings a
 
 #the-park-bench-sings-a {
-  [role="main"] { @include clearfix; }
+  [role="main"] {
+    @include rhythm-padding(2);
+    @include clearfix;
+  }
 
   p {
     @include transition(all 1s);

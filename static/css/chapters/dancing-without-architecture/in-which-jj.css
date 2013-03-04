@@ -84,7 +84,7 @@ html { background: #fafaea; }
   100% { transform: translateY(0) rotate(6deg); } }
 
 /* ---------------------------------------------------------------------------- once-upon-a-sunday-raining */
-#once-upon-a-sunday-raining { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: #53402c url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat #53402c; position: relative; overflow: hidden; }
+#once-upon-a-sunday-raining { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat #53402c; position: relative; }
 #once-upon-a-sunday-raining.enter-prev { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
 #once-upon-a-sunday-raining.enter-next { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
 #once-upon-a-sunday-raining.exit-prev { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
@@ -208,7 +208,7 @@ body.his-shirt-is-wet-and { -webkit-transition-duration: 3s; -moz-transition-dur
 
 body.the-park-bench-sings-a { background: #eaeafa url('../../../images/noise.png?1347221205'); }
 
-#the-park-bench-sings-a [role="main"] { overflow: hidden; }
+#the-park-bench-sings-a [role="main"] { padding-top: 2.5rem; padding-bottom: 2.5rem; overflow: hidden; }
 #the-park-bench-sings-a p { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
 #the-park-bench-sings-a p:first-child { width: 100%; padding: 0 0.625rem; }
 #the-park-bench-sings-a p:last-child { overflow: hidden; float: left; width: 40%; margin-right: -100%; padding-left: 0.625rem; }
@@ -216,6 +216,25 @@ body.the-park-bench-sings-a { background: #eaeafa url('../../../images/noise.png
 #the-park-bench-sings-a .musicstaff { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; float: left; width: 158%; height: 7.5rem; background: rgba(185, 185, 185, 0.25); }
 #the-park-bench-sings-a[data-page-state="2"] .musicstaff, #the-park-bench-sings-a[data-page-state="2"] p:first-child { margin-left: -100%; }
 
-#the-park { text-align: center; }
+@-moz-keyframes sunset { 0% { background-position: 0 100%; }
+  100% { background-position: 0 0; } }
+
+@-webkit-keyframes sunset { 0% { background-position: 0 100%; }
+  100% { background-position: 0 0; } }
+
+@-o-keyframes sunset { 0% { background-position: 0 100%; }
+  100% { background-position: 0 0; } }
+
+@keyframes sunset { 0% { background-position: 0 100%; }
+  100% { background-position: 0 0; } }
+
+body.the-park { -webkit-animation: sunset 10s ease 1 both; -moz-animation: sunset 10s ease 1 both; -o-animation: sunset 10s ease 1 both; animation: sunset 10s ease 1 both; background: -webkit-linear-gradient(top, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; background: -moz-linear-gradient(top, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; background: -o-linear-gradient(top, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; background: linear-gradient(to bottom, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; }
+
+#the-park { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat; position: relative; text-align: center; }
+#the-park.enter-prev { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
+#the-park.enter-next { -webkit-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -moz-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; -o-animation: fadeIn 2s ease backwards, rain 60s linear infinite both; animation: fadeIn 2s ease backwards, rain 60s linear infinite both; }
+#the-park.exit-prev { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
+#the-park.exit-next { -webkit-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -moz-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; -o-animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; animation: fadeOut 600ms ease forwards, rain 60s linear infinite both; }
+#the-park [role="main"] { text-indent: -119988px; overflow: hidden; text-align: left; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; max-height: 15rem; background: #334c33; }
 
 /* ---------------------------------------------------------------------------- titlepage */

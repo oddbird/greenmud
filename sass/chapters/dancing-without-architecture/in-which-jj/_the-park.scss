@@ -1,10 +1,42 @@
 // ----------------------------------------------------------------------------
+// animation
+
+@include keyframes(sunset) {
+  0% { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
+
+// ----------------------------------------------------------------------------
 // settings
 
+body.the-park {
+  @include animation(sunset 10s ease 1 both);
+  @include background(
+    linear-gradient(
+      to bottom,
+      color($pink dark, 0),
+      color($pink dark, .5)
+    )
+    color($off $blue lighter) no-repeat scroll
+  );
+  @include background-size(100% 100%);
+}
 
 // ----------------------------------------------------------------------------
 // The Park
 
 #the-park {
+  @include page-animation($rain-anim);
+  @include background($rain-layer $layer1-start, $rain-layer $layer2-start, $noise-layer);
+  position: relative;
   text-align: center;
+
+  [role="main"] {
+    @include hide-text;
+    @include stretch-x;
+    bottom: 0;
+    height: 30%;
+    max-height: rhythm(12);
+    background: color(-80% $green darker);
+  }
 }
