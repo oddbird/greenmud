@@ -26,10 +26,17 @@ body.the-park {
 // The Park
 
 #the-park {
-  @include page-animation($rain-anim);
-  @include background($rain-layer $layer1-start, $rain-layer $layer2-start, $noise-layer);
-  position: relative;
-  text-align: center;
+  display: block;
+  height: 100%;
+
+  .pagewrap {
+    @include animation($rain-anim);
+    @include background($rain-layer $layer1-start, $rain-layer $layer2-start, $noise-layer);
+    position: relative;
+    display: block;
+    height: 100%;
+    text-align: center;
+  }
 
   [role="main"] {
     @include hide-text;

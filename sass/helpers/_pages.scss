@@ -14,7 +14,7 @@
 
 @mixin vertical-center(
   $container  : '&',
-  $page: '.pagewrap'
+  $page: '[class="pagewrap"]'
 ) {
   $container  : unquote($container);
   $page: unquote($page);

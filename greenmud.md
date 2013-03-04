@@ -222,7 +222,14 @@ body_class:
 
 ------
 
-Monday: Clear skies. Unearth the little bugger.
+<!-- meta
+body_class:
+page_states: 3
+-->
+
+<p class="monday">Monday:</p>
+<p class="skies">Clear skies.</p>
+<p class="bugger">Unearth the little bugger.</p>
 
 ------
 

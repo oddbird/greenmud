@@ -70,8 +70,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .menu-toc li { counter-increment: toc; }
 .menu-toc li a:before { content: counter(toc, decimal-leading-zero) ". "; }
 
-.flexbox .page { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
-.flexbox .page .pagewrap { -webkit-flex: 1; -ms-flex: 1; flex: 1; width: 100%; }
+[class="flexbox"] [class="page"] { display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+[class="flexbox"] [class="page"] [class="pagewrap"] { -webkit-flex: 1; -ms-flex: 1; flex: 1; width: 100%; }
 
 .enter-prev { -webkit-animation-name: fadeInLeft; -moz-animation-name: fadeInLeft; -o-animation-name: fadeInLeft; animation-name: fadeInLeft; }
 
@@ -1139,7 +1139,7 @@ body { -webkit-transition: background-color 600ms; -moz-transition: background-c
 
 .inner-body { height: 100%; overflow-y: auto; overflow-x: hidden; }
 
-.page { position: relative; min-height: 100%; overflow: hidden; }
+[class="page"] { position: relative; min-height: 100%; overflow: hidden; }
 
 .demo [role="main"] { max-width: 25rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; padding-top: 2.5rem; position: relative; }
 .demo [role="main"]:after { content: ""; display: table; clear: both; }

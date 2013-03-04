@@ -1,0 +1,50 @@
+
+
+body.monday-clear-skies-unearth-the {
+  background-color: color($off $blue lightest);
+}
+
+#monday-clear-skies-unearth-the {
+  display: block;
+  height: 100%;
+
+  .pagewrap, [role="main"] {
+    height: 100%;
+    display: block;
+  }
+
+  .monday, .skies, .bugger {
+    @include rhythm-padding(2);
+    width: 50%;
+    text-align: center;
+  }
+
+  .monday {
+    @include animation(fadeInDownBig 500ms 300ms 1 linear backwards);
+    float: left;
+    height: 100%;
+    background: color($off $yellow lightest);
+  }
+
+  .skies, .bugger {
+    @include transition(all 200ms linear);
+    overflow: hidden;
+    height: 50%;
+  }
+
+  .skies {
+    background: color($off $blue lighter);
+  }
+
+  .bugger {
+    background: color($off $orange lightest);
+  }
+
+  &[data-page-state="1"] {
+    .skies, .bugger { @include translateX(100%); }
+  }
+  &[data-page-state="2"] {
+    .bugger { @include translateX(100%); }
+  }
+
+}

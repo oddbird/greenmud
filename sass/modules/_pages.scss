@@ -19,8 +19,8 @@ body { @include transition(background-color 600ms); }
   // -webkit-overflow-scrolling: touch;
 }
 
-.page {
-  .flexbox & { @extend %center-content; }
+[class="page"] {
+  [class="flexbox"] & { @extend %center-content; }
   position: relative;
   min-height: 100%;
   overflow: hidden;
