@@ -247,4 +247,43 @@ body.monday-clear-skies-unearth-the { background-color: #eeeef6; }
 #monday-clear-skies-unearth-the[data-page-state="1"] .skies, #monday-clear-skies-unearth-the[data-page-state="1"] .bugger { -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%); transform: translateX(100%); }
 #monday-clear-skies-unearth-the[data-page-state="2"] .bugger { -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%); transform: translateX(100%); }
 
+body.christmas-is-just-around-the { background-color: #eeeef6; }
+
+#christmas-is-just-around-the .lights { -webkit-transition: margin 300ms; -moz-transition: margin 300ms; -o-transition: margin 300ms; transition: margin 300ms; position: absolute; left: 0; right: -100%; background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.5)); background: -moz-linear-gradient(right, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.5)); background: -o-linear-gradient(right, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.5)); background: linear-gradient(to left, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.5)); top: 0; height: 6.25rem; }
+#christmas-is-just-around-the [role="main"] { overflow: hidden; }
+#christmas-is-just-around-the .p1, #christmas-is-just-around-the .p2 { -webkit-transition: margin 300ms; -moz-transition: margin 300ms; -o-transition: margin 300ms; transition: margin 300ms; float: left; width: 100%; }
+[class~="no-flexbox"] #christmas-is-just-around-the .p1, [class~="no-flexbox"] #christmas-is-just-around-the .p2 { margin-top: 8.75rem; }
+#christmas-is-just-around-the .pinner { max-width: 19rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; }
+#christmas-is-just-around-the .pinner:after { content: ""; display: table; clear: both; }
+#christmas-is-just-around-the p { margin-bottom: 1.25rem; }
+#christmas-is-just-around-the .p2 .pinner { padding-top: 1.25rem; padding-bottom: 1.25rem; background: rgba(124, 96, 67, 0.5); }
+#christmas-is-just-around-the .tv { margin-right: 21.05263%; padding: 0.625rem; background: white; }
+#christmas-is-just-around-the[data-page-state="1"] .p2 { margin-right: -100%; }
+#christmas-is-just-around-the[data-page-state="2"] .p1, #christmas-is-just-around-the[data-page-state="2"] .lights { margin-left: -100%; }
+
+body.with-an-umbrella-this-time { background-color: #eeeef6; }
+
+#with-an-umbrella-this-time { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#with-an-umbrella-this-time [role="main"] { max-width: 15rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; position: relative; text-align: center; overflow: hidden; }
+#with-an-umbrella-this-time [role="main"]:after { content: ""; display: table; clear: both; }
+#with-an-umbrella-this-time .umbrella { position: relative; height: 0; padding-top: 133.33333%; width: 100%; background: rgba(206, 163, 206, 0.5); }
+#with-an-umbrella-this-time .umbrella > * { display: block; position: absolute; width: 100%; height: 100%; top: 0; margin: 0; padding: 0; }
+
+body.he-doesnt-buy-anything-in { background-color: #eeeef6; }
+
+#he-doesnt-buy-anything-in { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#he-doesnt-buy-anything-in [role="main"] { max-width: 27rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; }
+#he-doesnt-buy-anything-in [role="main"]:after { content: ""; display: table; clear: both; }
+#he-doesnt-buy-anything-in .icecream { width: 55.55556%; float: left; margin-right: 3.7037%; position: relative; height: 0; padding-top: 74.07407%; width: 55.55556%; background: rgba(206, 191, 163, 0.5); }
+#he-doesnt-buy-anything-in .icecream > * { display: block; position: absolute; width: 100%; height: 100%; top: 0; margin: 0; padding: 0; }
+#he-doesnt-buy-anything-in p { overflow: hidden; }
+
+body.it-doesnt-rain-every-day { background-color: #eeeef6; }
+
+#it-doesnt-rain-every-day { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#it-doesnt-rain-every-day [role="main"] { max-width: 27rem; padding-left: 1rem; padding-right: 1rem; margin-left: auto; margin-right: auto; }
+#it-doesnt-rain-every-day [role="main"]:after { content: ""; display: table; clear: both; }
+#it-doesnt-rain-every-day .cloud { margin-bottom: 1.25rem; position: relative; height: 0; padding-top: 37.5%; width: 100%; background: rgba(255, 255, 255, 0.5); }
+#it-doesnt-rain-every-day .cloud > * { display: block; position: absolute; width: 100%; height: 100%; top: 0; margin: 0; padding: 0; }
+
 /* ---------------------------------------------------------------------------- titlepage */

@@ -1,0 +1,54 @@
+// ----------------------------------------------------------------------------
+// settings
+
+$total-columns: 5;
+
+body.christmas-is-just-around-the {
+  background-color: color($off $blue lightest);
+}
+
+// ----------------------------------------------------------------------------
+// christmas-is-just-around-the
+
+#christmas-is-just-around-the {
+  .lights {
+    @include transition(margin 300ms);
+    @include stretch-x(0,-100%);
+    @include background(linear-gradient(to left, color($red,.25), color($red,.5)));
+    top: 0;
+    height: rhythm(5);
+  }
+
+  [role="main"] { @include clearfix; }
+
+  .p1, .p2 {
+    @include transition(margin 300ms);
+    float: left;
+    width: 100%;
+    [class~="no-flexbox"] & { @include leader(7); }
+  }
+  .pinner {
+    @include container;
+  }
+  p { @include trailer; }
+
+  .p2 {
+    .pinner {
+      @include rhythm-padding(1);
+      background: color($off $orange dark,.5);
+    }
+  }
+  .tv {
+    @include post(1);
+    padding: rhythm(.5);
+    background: white;
+  }
+
+  &[data-page-state="1"] {
+    .p2 { margin-right: -100%; }
+  }
+  &[data-page-state="2"] {
+    .p1, .lights { margin-left: -100%; }
+  }
+
+}

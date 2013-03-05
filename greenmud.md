@@ -233,21 +233,56 @@ page_states: 3
 
 ------
 
-Christmas is just around the corner
-and JJ can’t complain,
-much to his chagrin.
-When the TV comes on it’s all tinsel and tinseltown,
-snowstorms and snowstormstown -
-white and white and white and whiter.
-Teeth and smiles and babies in strollers.
+<!-- meta
+body_class:
+page_states: 2
+-->
 
-JJ goes for a walk instead.
+<div class="lights"></div>
+<div class="p1">
+<div class="pinner">
+  <p>
+    Christmas is just around the corner
+    and JJ can’t complain,
+    much to his chagrin.
+  </p>
+</div>
+</div>
+<div class="p2">
+<div class="pinner">
+<div class="tv">
+  <p>
+    When the TV comes on it’s all tinsel and tinseltown,
+    snowstorms and snowstormstown -
+    white and white and white and whiter.
+    Teeth and smiles and babies in strollers.
+  </p>
+  <p>
+    JJ goes for a walk instead.
+  </p>
+</div>
+</div>
+</div>
 
 ------
+
+<!-- meta
+body_class:
+-->
+
+<div class="umbrella"></div>
+<div class="drop"></div>
+<div class="drop"></div>
 
 (with an umbrella this time)
 
 ------
+
+<!-- meta
+body_class:
+-->
+
+<div class="icecream"></div>
 
 He doesn’t buy anything in the shop windows,
 or sit in the park bench under the shade of the shadows.
@@ -259,6 +294,12 @@ but a little bit louder.
 It’s Thursday after all.
 
 ------
+
+<!-- meta
+body_class:
+-->
+
+<div class="cloud"></div>
 
 It doesn't rain every day in the life of JJ,
 and next Tuesday is one of those days.

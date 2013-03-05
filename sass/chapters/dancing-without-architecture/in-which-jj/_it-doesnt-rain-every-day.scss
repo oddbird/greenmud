@@ -1,0 +1,15 @@
+
+
+body.it-doesnt-rain-every-day {
+  background-color: color($off $blue lightest);
+}
+
+#it-doesnt-rain-every-day {
+  @include rhythm-padding(2);
+  [role="main"] { @include container; }
+  .cloud {
+    @include trailer;
+    @include fluid-ratio(2/.75);
+    background: color(white,.5);
+  }
+}

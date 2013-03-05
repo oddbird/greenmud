@@ -1,0 +1,17 @@
+
+$total-columns: 7;
+
+body.he-doesnt-buy-anything-in {
+  background-color: color($off $blue lightest);
+}
+
+#he-doesnt-buy-anything-in {
+  @include rhythm-padding(2);
+  [role="main"] { @include container; }
+  .icecream {
+    @include span-columns(4);
+    @include fluid-ratio(3/4,columns(4));
+    background: color($off orange light, .5);
+  }
+  p { overflow: hidden; }
+}

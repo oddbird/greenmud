@@ -1,0 +1,21 @@
+
+$total-columns: 4;
+
+body.with-an-umbrella-this-time {
+  background-color: color($off $blue lightest);
+}
+
+#with-an-umbrella-this-time {
+  @include rhythm-padding(2);
+
+  [role="main"] {
+    @include container;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+  .umbrella {
+    @include fluid-ratio(3/4);
+    background: color($off $pink light,.5);
+  }
+}
