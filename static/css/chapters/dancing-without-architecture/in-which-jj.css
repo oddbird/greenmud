@@ -194,10 +194,11 @@ body.his-shirt-is-wet-and { -webkit-transition-duration: 3s; -moz-transition-dur
 @keyframes updrop { 0% { bottom: -20rem; }
   100% { bottom: 100%; } }
 
-#his-shirt-is-wet-and { position: relative; overflow: hidden; }
+#his-shirt-is-wet-and { position: relative; display: block; height: 100%; overflow: hidden; }
+#his-shirt-is-wet-and [class~="pagewrap"], #his-shirt-is-wet-and [role="main"] { height: 100%; }
 #his-shirt-is-wet-and [role="main"] { text-align: center; }
-#his-shirt-is-wet-and .scribble { background: url('../../../images/frontmatter/scribble.png?1347221205') no-repeat center; height: 11.25rem; background-color: #fafaea; }
-#his-shirt-is-wet-and p { padding-top: 2.5rem; padding-bottom: 2.5rem; -webkit-transition: opacity 1s; -moz-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s; position: relative; float: left; width: 100%; margin-right: -100%; opacity: 0; z-index: 10; }
+#his-shirt-is-wet-and .scribble { background: url('../../../images/frontmatter/scribble.png?1347221205') no-repeat center 80%; height: 60%; background-color: #fafaea; }
+#his-shirt-is-wet-and p { padding-top: 1.25rem; padding-bottom: 1.25rem; -webkit-transition: opacity 1s; -moz-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s; position: relative; float: left; width: 100%; margin-right: -100%; opacity: 0; z-index: 10; }
 #his-shirt-is-wet-and .raindrop, #his-shirt-is-wet-and .rainup { -webkit-transition: opacity 3s; -webkit-transition-delay: 1.5s; -moz-transition: opacity 3s 1.5s; -o-transition: opacity 3s 1.5s; transition: opacity 3s 1.5s; position: absolute; width: 15rem; height: 20rem; }
 #his-shirt-is-wet-and .raindrop { -webkit-animation: bigdrop 90s linear infinite both; -moz-animation: bigdrop 90s linear infinite both; -o-animation: bigdrop 90s linear infinite both; animation: bigdrop 90s linear infinite both; right: 60%; background: rgba(255, 0, 0, 0.5); bottom: 100%; }
 #his-shirt-is-wet-and .rainup { -webkit-animation: updrop 80s 8s linear infinite both; -moz-animation: updrop 80s 8s linear infinite both; -o-animation: updrop 80s 8s linear infinite both; animation: updrop 80s 8s linear infinite both; left: 60%; background: rgba(255, 255, 0, 0.5); bottom: -20rem; }
@@ -216,19 +217,19 @@ body.the-park-bench-sings-a { background: #eaeafa url('../../../images/noise.png
 #the-park-bench-sings-a .musicstaff { -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; float: left; width: 158%; height: 7.5rem; background: rgba(185, 185, 185, 0.25); }
 #the-park-bench-sings-a[data-page-state="2"] .musicstaff, #the-park-bench-sings-a[data-page-state="2"] p:first-child { margin-left: -100%; }
 
-@-moz-keyframes sunset { 0% { background-position: 0 100%; }
+@-moz-keyframes sunset { 0% { background-position: 0 56.25rem; }
   100% { background-position: 0 0; } }
 
-@-webkit-keyframes sunset { 0% { background-position: 0 100%; }
+@-webkit-keyframes sunset { 0% { background-position: 0 56.25rem; }
   100% { background-position: 0 0; } }
 
-@-o-keyframes sunset { 0% { background-position: 0 100%; }
+@-o-keyframes sunset { 0% { background-position: 0 56.25rem; }
   100% { background-position: 0 0; } }
 
-@keyframes sunset { 0% { background-position: 0 100%; }
+@keyframes sunset { 0% { background-position: 0 56.25rem; }
   100% { background-position: 0 0; } }
 
-body.the-park { -webkit-animation: sunset 10s ease 1 both; -moz-animation: sunset 10s ease 1 both; -o-animation: sunset 10s ease 1 both; animation: sunset 10s ease 1 both; background: -webkit-linear-gradient(top, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; background: -moz-linear-gradient(top, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; background: -o-linear-gradient(top, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; background: linear-gradient(to bottom, rgba(191, 0, 191, 0), rgba(191, 0, 191, 0.5)) #cdcde4 no-repeat scroll; -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; }
+body.the-park { -webkit-animation: sunset 8s ease 1 both; -moz-animation: sunset 8s ease 1 both; -o-animation: sunset 8s ease 1 both; animation: sunset 8s ease 1 both; background: -webkit-linear-gradient(top, rgba(191, 96, 0, 0), #bf00bf) #cdcde4 no-repeat scroll; background: -moz-linear-gradient(top, rgba(191, 96, 0, 0), #bf00bf) #cdcde4 no-repeat scroll; background: -o-linear-gradient(top, rgba(191, 96, 0, 0), #bf00bf) #cdcde4 no-repeat scroll; background: linear-gradient(to bottom, rgba(191, 96, 0, 0), #bf00bf) #cdcde4 no-repeat scroll; }
 
 #the-park { display: block; height: 100%; }
 #the-park .pagewrap { -webkit-animation: rain 60s linear infinite both; -moz-animation: rain 60s linear infinite both; -o-animation: rain 60s linear infinite both; animation: rain 60s linear infinite both; background: url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 0 -850px, url('../../../images/dancing/in-which-jj/once-upon-a-sunday/rain.png?1347221204') repeat scroll 425px -850px, url('../../../images/noise.png?1347221205') repeat; position: relative; display: block; height: 100%; text-align: center; }

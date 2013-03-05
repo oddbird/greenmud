@@ -2,7 +2,7 @@
 // animation
 
 @include keyframes(sunset) {
-  0% { background-position: 0 100%; }
+  0% { background-position: 0 rhythm(45); }
   100% { background-position: 0 0; }
 }
 
@@ -10,16 +10,15 @@
 // settings
 
 body.the-park {
-  @include animation(sunset 10s ease 1 both);
+  @include animation(sunset 8s ease 1 both);
   @include background(
     linear-gradient(
       to bottom,
-      color($pink dark, 0),
-      color($pink dark, .5)
+      color($orange dark, 0),
+      color($pink dark)
     )
     color($off $blue lighter) no-repeat scroll
   );
-  @include background-size(100% 100%);
 }
 
 // ----------------------------------------------------------------------------

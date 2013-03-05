@@ -19,11 +19,16 @@ body { @include transition(background-color 600ms); }
   // -webkit-overflow-scrolling: touch;
 }
 
-[class="page"] {
-  [class="flexbox"] & { @extend %center-content; }
+[class~="page"] {
+  [class~="flexbox"] & { @extend %vertical-container; }
   position: relative;
   min-height: 100%;
   overflow: hidden;
+}
+
+[class~="pagewrap"] {
+  [class~="flexbox"] & { @extend %vertical-center; }
+  [class~="no-flexbox"] & { min-height: 100%; }
 }
 
 // ----------------------------------------------------------------------------

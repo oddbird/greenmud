@@ -12,25 +12,14 @@
 // ----------------------------------------------------------------------------
 // vertical center
 
-@mixin vertical-center(
-  $container  : '&',
-  $page: '[class="pagewrap"]'
-) {
-  $container  : unquote($container);
-  $page: unquote($page);
-
-  #{$container} {
-    @include display-flex;
-    @include align-items(center);
-  }
-  #{$page} {
-    @include flex(1);
-    width: 100%;
-  }
+%vertical-container {
+  @include display-flex;
+  @include align-items(center);
 }
 
-%center-content {
-  @include vertical-center;
+%vertical-center {
+  @include flex(1);
+  width: 100%;
 }
 
 // ----------------------------------------------------------------------------

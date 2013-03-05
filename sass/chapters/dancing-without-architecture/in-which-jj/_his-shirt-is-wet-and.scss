@@ -29,7 +29,13 @@ body.his-shirt-is-wet-and {
 
 #his-shirt-is-wet-and {
   position: relative;
+  display: block;
+  height: 100%;
   overflow: hidden;
+
+  [class~="pagewrap"], [role="main"] {
+    height: 100%;
+  }
 
   [role="main"] {
     @extend %type;
@@ -37,14 +43,13 @@ body.his-shirt-is-wet-and {
   }
 
   .scribble {
-    @include background(image-url($scribble) no-repeat center);
-    // @include background-size(contain);
-    height: rhythm(9);
+    @include background(image-url($scribble) no-repeat center 80%);
+    height: 60%;
     background-color: color($faded $yellow lightest);
   }
 
   p {
-    @include rhythm-padding(2);
+    @include rhythm-padding(1);
     @include transition(opacity 1s);
     position: relative;
     float: left;
