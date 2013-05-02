@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 gem "sass", '~> 3.2.3'
-gem "compass", :git => "git://github.com/chriseppstein/compass", :branch => "gradients"
+gem "compass", :git => "git://github.com/chriseppstein/compass", :branch => "master"
 gem "susy", :git => "git://github.com/ericam/susy", :branch => "master"
 
 gem "animate", :git => "git://github.com/ericam/compass-animate", :branch => "master"

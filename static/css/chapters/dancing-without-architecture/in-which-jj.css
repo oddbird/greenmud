@@ -155,7 +155,7 @@ html { background: #fafaea; }
 #shadow-shadow-park-and-shadow p { padding-left: 17.3913%; padding-right: 17.3913%; }
 @media (min-width: 22.5em) { #shadow-shadow-park-and-shadow p { padding-left: 34.28571%; padding-right: 34.28571%; } }
 
-.-s-raindrops-sprite, .drop:nth-child(1), .drop:nth-child(2), .drop:nth-child(3), .drop:nth-child(4), .drop:nth-child(5), .drop:nth-child(6), .drop:nth-child(7) { background: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/-s-raindrops-sb157f1a851.png') no-repeat; }
+.-s-raindrops-sprite, .drop:nth-child(1), .drop:nth-child(2), .drop:nth-child(3), .drop:nth-child(4), .drop:nth-child(5), .drop:nth-child(6), .drop:nth-child(7) { background-image: url('../../../images/dancing/in-which-jj/shadow-shadow-park-and-shadow/-s-raindrops-sb157f1a851.png'); background-repeat: no-repeat; }
 
 .drop { -webkit-animation: drops 15s linear infinite both; -moz-animation: drops 15s linear infinite both; -o-animation: drops 15s linear infinite both; animation: drops 15s linear infinite both; position: absolute; top: 0; }
 .drop::before { font-size: 0.79167rem; line-height: 1.25rem; content: "pit"; padding: 0 0.3125rem; background: rgba(255, 0, 0, 0.25); }

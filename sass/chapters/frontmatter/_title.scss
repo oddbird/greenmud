@@ -189,6 +189,10 @@ $slideOut: fadeOut 300ms 1 forwards;
     }
   }
 
+  .draft {
+    @include adjust-font-size-to($xsmallpx);
+  }
+
   // --------------------------------------------------------------------------
   // pageturns
 
