@@ -149,6 +149,7 @@ html { background: #eef6ee; }
 #title .publishers li:after { content: " | "; }
 #title .publishers li:last-child:after { content: ""; }
 #title .publishers a { color: inherit; text-transform: uppercase; }
+#title .draft { font-size: 0.66667rem; line-height: 1.25rem; }
 #title.enter-prev, #title.enter-next { -webkit-animation: gradientIn 800ms 1 backwards; -moz-animation: gradientIn 800ms 1 backwards; -o-animation: gradientIn 800ms 1 backwards; animation: gradientIn 800ms 1 backwards; }
 #title.enter-prev .line, #title.enter-next .line { -webkit-animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; -moz-animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; -o-animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; animation: fadeIn 1s 600ms backwards, lineLeft 40s linear infinite; }
 #title.enter-prev .scribble, #title.enter-next .scribble { -webkit-animation: fadeIn 1s 600ms backwards; -moz-animation: fadeIn 1s 600ms backwards; -o-animation: fadeIn 1s 600ms backwards; animation: fadeIn 1s 600ms backwards; }
@@ -272,7 +273,7 @@ body.dedication { background: #ffcc99; }
 #thanks .collaborators ul li:after { content: ';'; }
 #thanks .collaborators ul li:last-child:after { content: '.'; }
 
-.-s-balloons-sprite, .balloon:nth-child(1), .balloon:nth-child(2), .balloon:nth-child(3), .balloon:nth-child(4), .balloon:nth-child(5), .balloon:nth-child(6), .balloon:nth-child(7) { background: url('../../images/frontmatter/thanks/-s-balloons-se6bd73b499.png') no-repeat; }
+.-s-balloons-sprite, .balloon:nth-child(1), .balloon:nth-child(2), .balloon:nth-child(3), .balloon:nth-child(4), .balloon:nth-child(5), .balloon:nth-child(6), .balloon:nth-child(7) { background-image: url('../../images/frontmatter/thanks/-s-balloons-se6bd73b499.png'); background-repeat: no-repeat; }
 
 .balloon:nth-child(1) { background-position: 0 -1800px; -webkit-animation-delay: 2s; -moz-animation-delay: 2s; -o-animation-delay: 2s; animation-delay: 2s; -webkit-animation-duration: 18s; -moz-animation-duration: 18s; -o-animation-duration: 18s; animation-duration: 18s; top: 1.25rem; left: 80%; }
 .balloon:nth-child(2) { background-position: 0 -1080px; -webkit-animation-delay: 0s; -moz-animation-delay: 0s; -o-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: 10s; -moz-animation-duration: 10s; -o-animation-duration: 10s; animation-duration: 10s; top: 10rem; right: 87%; }
