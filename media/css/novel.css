@@ -26,7 +26,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .social [href*="github"]:before { content: "\e004"; }
 
-.social [href*="andmeyer"]:before { content: "\e005"; }
+.social [href*="mirisuzanne"]:before { content: "\e005"; }
 
 .menu-toc .book a:before { content: "\e006"; }
 
