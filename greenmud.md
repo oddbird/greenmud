@@ -1,5 +1,5 @@
 <!-- meta
-description   : 'Title Page: "Into the Green Green Mud" by Eric A. Meyer.'
+description   : 'Title Page: "Into the Green Green Mud" by Miriam Suzanne.'
 slug          : title
 url           : index.html
 body_class    :
@@ -12,7 +12,7 @@ next:
 <h2 class="tagline">a novel (with pictures)</h2>
 <div class="line"></div>
 <div class="scribble"></div>
-<p class="vcard">by <a href="about.html" class="fn">Eric A. Meyer</a></p>
+<p class="vcard">by <a href="about.html" class="fn">Miriam Suzanne</a></p>
 <ul class="publishers">
   <li class="publish"><a href="about.html">Teacup Gorilla</a></li>
   <li class="publish"><a href="about.html">OddBird</a></li>
